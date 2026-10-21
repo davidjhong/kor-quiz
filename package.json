@@ -1,0 +1,29 @@
+{
+  "name": "korean-quiz-videos",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Phase 1: a local Korean quiz video rendered with Remotion.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "remotion studio src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && remotion bundle src/index.ts build",
+    "browser:ensure": "remotion browser ensure",
+    "render": "remotion render src/index.ts KoreanSample out/korean-sample.mp4 --codec=h264 --pixel-format=yuv420p --color-space=bt709 --crf=18 --concurrency=2",
+    "inspect": "remotion ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,width,height,pix_fmt,avg_frame_rate,nb_frames:format=duration,size -of json out/korean-sample.mp4"
+  },
+  "dependencies": {
+    "@fontsource/noto-sans-kr": "5.3.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.537"
+  },
+  "devDependencies": {
+    "@remotion/cli": "4.0.537",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "5.9.3"
+  }
+}
