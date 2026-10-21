@@ -1,4 +1,65 @@
-# Korean quiz videos — Phase 1
+# Korean quiz videos
+
+## Phase 2, checkpoint 1: typed content and one reusable scene
+
+`CafeQuestion` renders **only the first question**, using the new `QuestionScene` component. The original `KoreanSample` composition, source, output path, and commands remain available for comparison. Dependencies, lockfile, and encoding settings are unchanged.
+
+### Separation of responsibilities
+
+- `src/QuizQuestion.ts`: compile-time content contract. A readonly tuple requires exactly three choices; `0 | 1 | 2` restricts the correct-answer index. IDs are stable identifiers, independent of array position. This type does not validate runtime JSON or prove linguistic accuracy.
+- `src/content/cafeQuestions.ts`: three hardcoded questions with no rendering logic. These are drafts pending human linguistic review.
+- `src/questionTiming.ts`: 30 FPS, reading/countdown/reveal durations, animation durations, derived frame boundaries, and a pure function calculating scene state.
+- `src/QuestionScene.tsx`: presentation only. Receives `question` as props, reads the Remotion frame, and displays the question, choices, countdown, and explanation. It uses the existing local fonts and visual palette.
+- `src/Root.tsx`: registers both compositions and supplies the first question to `CafeQuestion`. The new composition gets its frame count and FPS from the timing module.
+- `tests/question-timing.test.mjs`: tests phase boundaries, one-second countdown digits, ring progress, and scene duration using Node's built-in test runner.
+- `package.json`: adds `test`, `render:question`, and `inspect:question`; all original commands remain intact.
+
+No timers, randomness, network requests, or content generation occur in the scene. Reuse the component with different typed content by passing a different `question` prop. Arbitrary long-content fitting and runtime validation are later checkpoints; this checkpoint checks the first question's layout visually.
+
+### Questions for linguistic review
+
+| ID / scenario | English prompt | A | B | C | Correct |
+| --- | --- | --- | --- | --- | --- |
+| `cafe-request-water` / At a cafe counter | Ask the barista to give you water. | 물 있어요. | 물 주세요. | 물 마셔요. | B |
+| `cafe-takeaway` / Choosing takeaway | You want your drink to go. What do you say? | 여기서 마실게요. | 다 마셨어요. | 포장해 주세요. | C |
+| `cafe-without-ice` / Customizing your drink | Order your drink without ice. What do you say? | 얼음 빼 주세요. | 얼음 더 주세요. | 얼음 넣어 주세요. | A |
+
+The stored explanations are:
+
+1. 물 주세요 means “Water, please.” 주세요 politely asks someone to give you something.
+2. 포장해 주세요 asks for takeaway. 여기서 마실게요 means you will drink it here.
+3. 얼음 빼 주세요 asks to leave out the ice. 빼 주세요 asks for something to be removed or omitted.
+
+The prompts specify the desired action; the distractors express different actions rather than competing levels of politeness. Other natural phrasings can exist outside these choices. Review the Korean wording and explanations before treating the content as approved. Questions two and three are stored but are not rendered in this checkpoint.
+
+### Run this checkpoint in PowerShell
+
+```powershell
+Set-Location 'C:\Users\david\Documents\kor-vids'
+npm run typecheck
+npm test
+npm run render:question
+npm run inspect:question
+Invoke-Item .\out\cafe-question.mp4
+```
+
+No installation or lockfile update is required. Tests use Node 22's `--experimental-strip-types` flag to import the pure TypeScript timing module; an experimental-feature warning is expected on Node 22.13.1. Node may also report that it detected ES module syntax in that file. Neither warning is a test failure. Type stripping executes the module but does not typecheck it, so run `typecheck` as well.
+
+The render command retains H.264, `yuv420p`, BT.709, CRF 18, concurrency 2, and 1080 × 1920 at 30 FPS. Expected FFprobe output: **390 frames**, **13.000000 seconds**, `h264`, `yuv420p`, `1080` / `1920`, and `30/1`.
+
+| Period | Frames (inclusive) | Behavior |
+| --- | --- | --- |
+| Reading | 0–89 | All three choices appear; timer displays `?` |
+| Countdown | 90–239 | 5, 4, 3, 2, 1; each lasts 30 frames |
+| Reveal / explanation | 240–389 | B turns green; A and C dim; explanation fades in over 12 frames |
+
+`durationInFrames` is calculated from the sum of reading, countdown, and reveal durations; it is not separately hardcoded in the composition. Animation fade durations are also centralized. In Studio (`npm run dev`), select `CafeQuestion` and compare **frame 239** (countdown `1`, no highlighted choice), **frame 240** (B highlighted, explanation starts fading), and **frame 252** (explanation fully visible). Check Hangul, line wrapping, and the final frame 389. Play the full MP4 to assess readability and pacing on your phone.
+
+For the original sample, continue to use `npm run render`, `npm run inspect`, and `out/korean-sample.mp4`. Stop after reviewing this one-question scene before assembling a full quiz.
+
+Checkpoint verification completed: typechecking and all five timing tests passed; the new composition rendered successfully; FFprobe reported the expected codec, pixel format, dimensions, FPS, 390 frames, and 13-second duration. A full FFmpeg decode completed without errors. Frames extracted from the MP4 during reading, before/at reveal, after the explanation fade, and at the end showed legible Hangul, no visible clipping, and B highlighted at reveal. The original sample source and lockfile are unchanged. Human linguistic review and full playback for mobile readability/pacing remain outstanding.
+
+## Phase 1 reference
 
 A single, silent, 12-second video rendered locally: 1080 × 1920, 30 FPS, H.264 MP4 with the broadly supported `yuv420p` pixel format. It asks how to request water at a cafe, counts down, and highlights **물 주세요.** (“Water, please.”).
 
@@ -107,7 +168,7 @@ FFprobe confirms media metadata, not readability. Playing the video and checking
 - **Output file is locked:** close the video player before rerendering the same filename.
 - **Source text looks garbled in an editor or terminal:** save source files as UTF-8. For PowerShell inspection use `Get-Content -Encoding UTF8`.
 
-Stop here and inspect this sample before starting the three-question template.
+This section documents the original Phase 1 sample for comparison.
 
 ## Official references
 
