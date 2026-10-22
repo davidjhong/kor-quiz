@@ -4,6 +4,8 @@
     "lib": ["ES2022", "DOM"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
     "jsx": "react-jsx",
     "strict": true,
     "noEmit": true,
@@ -11,5 +13,5 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src"]
+  "include": ["src", "scripts"]
 }

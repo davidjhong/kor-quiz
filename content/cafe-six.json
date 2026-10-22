@@ -1,0 +1,90 @@
+{
+  "videoId": "cafe-six-comment-challenge",
+  "episodeTitle": "Can you order in Korean?",
+  "openingSubtitle": "Easy to hard",
+  "endingMode": "comment-challenge",
+  "minimumDurationSeconds": 65,
+  "backgroundAssetId": "korean-cafe-illustrated-v1",
+  "showRomanization": true,
+  "questions": [
+    {
+      "id": "cafe-request-water", "difficulty": "easy",
+      "scenario": "At the counter", "context": "Ask the café staff politely.",
+      "prompt": "You need water. What do you say?",
+      "choices": [
+        {"hangul": "물 있어요.", "romanization": "mul isseoyo."},
+        {"hangul": "물 주세요.", "romanization": "mul juseyo."},
+        {"hangul": "물 마셔요.", "romanization": "mul masyeoyo."}
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "물 주세요 means “Water, please.” 주세요 politely asks someone to give you something.",
+      "reveal": {"translation": "Water, please.", "teachingPoint": "주세요 = please give me"}
+    },
+    {
+      "id": "cafe-ask-price", "difficulty": "easy",
+      "scenario": "Paying", "context": "You are ready to pay for your drink.",
+      "prompt": "Ask how much your drink costs.",
+      "choices": [
+        {"hangul": "얼마예요?", "romanization": "eolmayeyo?"},
+        {"hangul": "괜찮아요.", "romanization": "gwaenchanayo."},
+        {"hangul": "감사합니다.", "romanization": "gamsahamnida."}
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "얼마예요? means “How much is it?” 얼마 asks about price. 감사합니다 means “Thank you.”",
+      "reveal": {"translation": "How much is it?", "teachingPoint": "얼마 asks about the price."}
+    },
+    {
+      "id": "cafe-takeaway", "difficulty": "medium",
+      "scenario": "Choosing takeaway", "context": "You are leaving the café.",
+      "prompt": "You want your drink to go. What do you say?",
+      "choices": [
+        {"hangul": "여기서 마실게요.", "romanization": "yeogiseo masilgeyo."},
+        {"hangul": "다 마셨어요.", "romanization": "da masyeosseoyo."},
+        {"hangul": "포장해 주세요.", "romanization": "pojanghae juseyo."}
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "포장해 주세요 asks for takeaway. 여기서 마실게요 means “I will drink it here,” which does not fit leaving the café.",
+      "reveal": {"translation": "To go, please.", "teachingPoint": "포장 asks for takeaway; 여기서 means here."}
+    },
+    {
+      "id": "cafe-without-ice", "difficulty": "medium",
+      "scenario": "Customizing a drink", "context": "Ordering a cold drink.",
+      "prompt": "Order your drink without ice. What do you say?",
+      "choices": [
+        {"hangul": "얼음 빼 주세요.", "romanization": "eoreum ppae juseyo."},
+        {"hangul": "얼음 더 주세요.", "romanization": "eoreum deo juseyo."},
+        {"hangul": "얼음 넣어 주세요.", "romanization": "eoreum neoeo juseyo."}
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "얼음 빼 주세요 means “No ice, please.” 빼 주세요 asks to leave something out; 더 주세요 asks for more.",
+      "reveal": {"translation": "No ice, please.", "teachingPoint": "빼 주세요 = leave it out; 더 주세요 = give more"}
+    },
+    {
+      "id": "cafe-replace-wrong-drink", "difficulty": "hard",
+      "scenario": "Fixing an order", "context": "You ordered tea, but received coffee.",
+      "prompt": "Ask to replace the coffee with tea.",
+      "choices": [
+        {"hangul": "커피로 바꿔 주세요.", "romanization": "keopiro bakkwo juseyo."},
+        {"hangul": "차로 바꿔 주세요.", "romanization": "charo bakkwo juseyo."},
+        {"hangul": "차 한 잔 더 주세요.", "romanization": "cha han jan deo juseyo."}
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "차로 바꿔 주세요 asks to replace it with tea. 커피로 changes it to coffee; 차 한 잔 더 주세요 asks for an extra cup of tea.",
+      "reveal": {"translation": "Please change it to tea.", "teachingPoint": "차로 = to tea; 더 asks for more."}
+    },
+    {
+      "id": "cafe-sold-out-alternative", "difficulty": "hard",
+      "scenario": "Choosing an alternative", "context": "Your first choice is sold out. No drink is served.",
+      "prompt": "Ask for an Americano instead.",
+      "choices": [
+        {"hangul": "아메리카노도 주세요.", "romanization": "amerikanodo juseyo."},
+        {"hangul": "아메리카노 더 주세요.", "romanization": "amerikano deo juseyo."},
+        {"hangul": "아메리카노로 주세요.", "romanization": "amerikanoro juseyo."}
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "로 marks the replacement choice. 도 means “also”; 더 means “more.” Here you are switching your order, not adding another drink.",
+      "reveal": {"translation": "An Americano instead, please.", "teachingPoint": "로 marks the new choice; 도 = also; 더 = more."},
+      "suggestedComment": "C: 아메리카노로 주세요. = An Americano instead, please. 로 marks the replacement; 도 means also and 더 means more."
+    }
+  ]
+}

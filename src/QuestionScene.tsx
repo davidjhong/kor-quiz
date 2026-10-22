@@ -1,16 +1,18 @@
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import type {QuizQuestion} from './QuizQuestion';
+import {getChoiceHangul, getChoiceRomanization} from './quizSchema';
 import {getQuestionState} from './questionTiming';
+import {FittedText} from './FittedText';
 import '@fontsource/noto-sans-kr/400.css';
 import '@fontsource/noto-sans-kr/700.css';
 
-type QuestionSceneProps = {question: QuizQuestion};
+type QuestionSceneProps = {question: QuizQuestion; showRomanization?: boolean};
 
 const mint = '#b9f48a';
 const choiceLabels = ['A', 'B', 'C'] as const;
 const ringCircumference = 2 * Math.PI * 49;
 
-export const QuestionScene = ({question}: QuestionSceneProps) => {
+export const QuestionScene = ({question, showRomanization = false}: QuestionSceneProps) => {
   const frame = useCurrentFrame();
   const state = getQuestionState(frame);
   const revealed = state.phase === 'reveal';
@@ -40,12 +42,12 @@ export const QuestionScene = ({question}: QuestionSceneProps) => {
           transform: `translateY(${(1 - state.entranceProgress) * 24}px)`,
         }}
       >
-        <div style={{fontSize: 28, color: '#a6bbb5', marginBottom: 22}}>
-          {question.scenario}
+        <div style={{color: '#a6bbb5', marginBottom: 22}}>
+          <FittedText text={question.scenario} label={`${question.id}.scenario`}
+            height={42} fontSize={28} minFontSize={24} lineHeight={1.5} />
         </div>
-        <div style={{fontSize: 54, fontWeight: 700, lineHeight: 1.3, letterSpacing: -1}}>
-          {question.prompt}
-        </div>
+        <FittedText text={question.prompt} label={`${question.id}.prompt`}
+          height={186} fontSize={54} minFontSize={40} fontWeight={700} lineHeight={1.3} letterSpacing={-1} />
       </div>
 
       <div style={{display: 'flex', flexDirection: 'column', gap: 20, marginTop: 32}}>
@@ -55,7 +57,7 @@ export const QuestionScene = ({question}: QuestionSceneProps) => {
             <div
               key={`${question.id}-${index}`}
               style={{
-                minHeight: 144,
+                minHeight: showRomanization ? 168 : 144,
                 boxSizing: 'border-box',
                 borderRadius: 26,
                 border: `2px solid ${correct ? mint : '#3b514f'}`,
@@ -70,10 +72,14 @@ export const QuestionScene = ({question}: QuestionSceneProps) => {
               }}
             >
               <span style={{fontSize: 28, fontWeight: 700}}>{choiceLabels[index]}</span>
-              <span lang="ko" style={{fontSize: 48, fontWeight: 700, lineHeight: 1.4, wordBreak: 'keep-all', overflowWrap: 'break-word', minWidth: 0}}>
-                {choice}
-              </span>
-              {correct ? <span style={{fontSize: 24, marginLeft: 'auto', flexShrink: 0}}>YES!</span> : null}
+              <div style={{flex: 1, minWidth: 0}}>
+                <FittedText text={getChoiceHangul(choice)} label={`${question.id}.choices[${index}]`}
+                  height={showRomanization ? 68 : 100} fontSize={48} minFontSize={32} fontWeight={700} lineHeight={1.4} center lang="ko" />
+                {showRomanization ? <FittedText text={getChoiceRomanization(choice)!}
+                  label={`${question.id}.choices[${index}].romanization`} height={42}
+                  fontSize={29} minFontSize={26} lineHeight={1.4} /> : null}
+              </div>
+              <span style={{fontSize: 24, width: 64, flexShrink: 0, visibility: correct ? 'visible' : 'hidden'}}>YES!</span>
             </div>
           );
         })}
@@ -85,8 +91,9 @@ export const QuestionScene = ({question}: QuestionSceneProps) => {
             <div style={{fontSize: 34, fontWeight: 700, color: mint}}>
               Answer {choiceLabels[question.correctAnswerIndex]}
             </div>
-            <div style={{fontSize: 29, lineHeight: 1.6, marginTop: 16, color: '#c6d5cf', overflowWrap: 'break-word'}}>
-              {question.explanation}
+            <div style={{marginTop: 16, color: '#c6d5cf'}}>
+              <FittedText text={question.explanation} label={`${question.id}.explanation`}
+                height={174} fontSize={29} minFontSize={26} lineHeight={1.6} />
             </div>
           </div>
         ) : (

@@ -9,10 +9,14 @@
   "scripts": {
     "dev": "remotion studio src/index.ts",
     "typecheck": "tsc --noEmit",
-    "test": "node --experimental-strip-types --test tests/question-timing.test.mjs",
+    "test": "node --experimental-strip-types --test tests/question-timing.test.mjs tests/quiz-schema.test.mjs tests/quiz-timeline.test.mjs tests/render-cli.test.mjs tests/media-inspection.test.mjs tests/assets-preview.test.mjs tests/romanization.test.mjs tests/ending-modes.test.mjs",
     "build": "npm run typecheck && remotion bundle src/index.ts build",
     "browser:ensure": "remotion browser ensure",
-    "render": "remotion render src/index.ts KoreanSample out/korean-sample.mp4 --codec=h264 --pixel-format=yuv420p --color-space=bt709 --crf=18 --concurrency=2",
+    "render": "node --experimental-strip-types scripts/render.ts",
+    "render:preview": "node --experimental-strip-types scripts/render.ts --preview",
+    "render:illustrated-preview": "node --experimental-strip-types scripts/render.ts --illustrated-preview",
+    "render:cafe": "node --experimental-strip-types scripts/render.ts --illustrated",
+    "render:sample": "remotion render src/index.ts KoreanSample out/korean-sample.mp4 --codec=h264 --pixel-format=yuv420p --color-space=bt709 --crf=18 --concurrency=2",
     "inspect": "remotion ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,width,height,pix_fmt,avg_frame_rate,nb_frames:format=duration,size -of json out/korean-sample.mp4",
     "render:question": "remotion render src/index.ts CafeQuestion out/cafe-question.mp4 --codec=h264 --pixel-format=yuv420p --color-space=bt709 --crf=18 --concurrency=2",
     "inspect:question": "remotion ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,width,height,pix_fmt,avg_frame_rate,nb_frames:format=duration,size -of json out/cafe-question.mp4"
@@ -21,10 +25,12 @@
     "@fontsource/noto-sans-kr": "5.3.1",
     "react": "19.3.1",
     "react-dom": "19.3.1",
-    "remotion": "4.0.537"
+    "remotion": "4.0.537",
+    "zod": "4.5.4"
   },
   "devDependencies": {
     "@remotion/cli": "4.0.537",
+    "@types/node": "26.6.5",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "typescript": "5.9.3"

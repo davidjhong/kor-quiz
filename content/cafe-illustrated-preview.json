@@ -1,0 +1,45 @@
+{
+  "videoId": "cafe-illustrated-preview",
+  "backgroundAssetId": "korean-cafe-illustrated-v1",
+  "showRomanization": true,
+  "questions": [
+    {
+      "id": "cafe-request-water",
+      "scenario": "AT A KOREAN CAFÉ",
+      "context": "Ask the café staff politely.",
+      "prompt": "You need water. What do you say?",
+      "choices": [
+        {"hangul": "물 있어요.", "romanization": "mul isseoyo."},
+        {"hangul": "물 주세요.", "romanization": "mul juseyo."},
+        {"hangul": "물 마셔요.", "romanization": "mul masyeoyo."}
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "물 주세요 means “Water, please.” 주세요 politely asks someone to give you something.",
+      "reveal": {"translation": "Water, please.", "teachingPoint": "주세요 = please give me"}
+    },
+    {
+      "id": "cafe-takeaway",
+      "scenario": "Choosing takeaway",
+      "prompt": "You want your drink to go. What do you say?",
+      "choices": [
+        {"hangul": "여기서 마실게요.", "romanization": "yeogiseo masilgeyo."},
+        {"hangul": "다 마셨어요.", "romanization": "da masyeosseoyo."},
+        {"hangul": "포장해 주세요.", "romanization": "pojanghae juseyo."}
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "포장해 주세요 asks for takeaway. 여기서 마실게요 means you will drink it here."
+    },
+    {
+      "id": "cafe-without-ice",
+      "scenario": "Customizing your drink",
+      "prompt": "Order your drink without ice. What do you say?",
+      "choices": [
+        {"hangul": "얼음 빼 주세요.", "romanization": "eoreum ppae juseyo."},
+        {"hangul": "얼음 더 주세요.", "romanization": "eoreum deo juseyo."},
+        {"hangul": "얼음 넣어 주세요.", "romanization": "eoreum neoeo juseyo."}
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "얼음 빼 주세요 asks to leave out the ice. 빼 주세요 asks for something to be removed or omitted."
+    }
+  ]
+}

@@ -8,38 +8,53 @@ export const QUESTION_SECONDS = {
   revealFade: 0.4,
 } as const;
 
-const readingFrames = Math.round(QUESTION_SECONDS.reading * QUIZ_FPS);
-const countdownFrames = Math.round(QUESTION_SECONDS.countdown * QUIZ_FPS);
-const revealFrames = Math.round(QUESTION_SECONDS.reveal * QUIZ_FPS);
+type QuestionSeconds = {reading: number; countdown: number; reveal: number; entrance: number; revealFade: number};
 
-export const QUESTION_TIMELINE = {
-  countdownStart: readingFrames,
-  revealStart: readingFrames + countdownFrames,
-  durationInFrames: readingFrames + countdownFrames + revealFrames,
-  countdownFrames,
-  entranceFrames: Math.round(QUESTION_SECONDS.entrance * QUIZ_FPS),
-  revealFadeFrames: Math.round(QUESTION_SECONDS.revealFade * QUIZ_FPS),
-} as const;
+export const createQuestionTimeline = (seconds: QuestionSeconds) => {
+  const readingFrames = Math.round(seconds.reading * QUIZ_FPS);
+  const countdownFrames = Math.round(seconds.countdown * QUIZ_FPS);
+  const revealFrames = Math.round(seconds.reveal * QUIZ_FPS);
+  return {
+    countdownStart: readingFrames,
+    revealStart: readingFrames + countdownFrames,
+    durationInFrames: readingFrames + countdownFrames + revealFrames,
+    countdownFrames,
+    entranceFrames: Math.round(seconds.entrance * QUIZ_FPS),
+    revealFadeFrames: Math.round(seconds.revealFade * QUIZ_FPS),
+  };
+};
+
+export const QUESTION_TIMELINE = createQuestionTimeline(QUESTION_SECONDS);
+export const PREVIEW_QUESTION_SECONDS = {...QUESTION_SECONDS, reading: 4, countdown: 5, reveal: 4} as const;
+export const PREVIEW_QUESTION_TIMELINE = createQuestionTimeline(PREVIEW_QUESTION_SECONDS);
 
 const clampProgress = (value: number) => Math.min(1, Math.max(0, value));
 
 /** Receives a scene-local Remotion frame; no clocks, side effects, or React state. */
-export const getQuestionState = (frame: number) => {
-  const phase = frame < QUESTION_TIMELINE.countdownStart
+export const getQuestionState = (frame: number, timeline = QUESTION_TIMELINE) => {
+  const phase = frame < timeline.countdownStart
     ? 'reading'
-    : frame < QUESTION_TIMELINE.revealStart ? 'countdown' : 'reveal';
+    : frame < timeline.revealStart ? 'countdown' : 'reveal';
 
   return {
     phase,
     secondsRemaining: phase === 'countdown'
-      ? Math.ceil((QUESTION_TIMELINE.revealStart - frame) / QUIZ_FPS)
+      ? Math.ceil((timeline.revealStart - frame) / QUIZ_FPS)
       : null,
     countdownProgress: clampProgress(
-      (frame - QUESTION_TIMELINE.countdownStart) / QUESTION_TIMELINE.countdownFrames,
+      (frame - timeline.countdownStart) / timeline.countdownFrames,
     ),
-    entranceProgress: clampProgress(frame / QUESTION_TIMELINE.entranceFrames),
+    entranceProgress: clampProgress(frame / timeline.entranceFrames),
     revealProgress: clampProgress(
-      (frame - QUESTION_TIMELINE.revealStart) / QUESTION_TIMELINE.revealFadeFrames,
+      (frame - timeline.revealStart) / timeline.revealFadeFrames,
     ),
   };
+};
+
+/** A bonus never enters a reveal state, including frames beyond its planned hold. */
+export const getIllustratedQuestionState = (frame: number, bonus: boolean) => {
+  const state = getQuestionState(frame, PREVIEW_QUESTION_TIMELINE);
+  if (!bonus) return state;
+  return {...state, phase: state.phase === 'reveal' ? 'comment' as const : state.phase,
+    revealProgress: 0};
 };
