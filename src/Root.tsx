@@ -12,6 +12,10 @@ import previewContent from '../content/cafe-preview.json';
 import illustratedContent from '../content/cafe-illustrated-preview.json';
 import {IllustratedQuestionPreview} from './IllustratedQuestionPreview';
 import cafeEpisodeContent from '../content/cafe-six.json';
+import narratedContent from '../content/cafe-narrated-preview.json';
+import {NarratedQuestionPreview} from './NarratedQuestionPreview';
+import {preparedNarrationSchema} from './narration';
+import {getNarratedTimeline} from './narrationTiming';
 
 const previewQuiz = parseQuizInput(previewContent);
 const illustratedQuiz = parseQuizInput(illustratedContent);
@@ -90,5 +94,21 @@ export const Root = () => (
           durationInFrames: getIllustratedEpisodeTimeline(quiz).durationInFrames};
       }}
     />
+    <Composition id="CafeNarratedPreview" component={NarratedQuestionPreview}
+      defaultProps={{quiz: parseQuizInput(narratedContent), narration: null}}
+      width={1080} height={1920} fps={QUIZ_FPS} durationInFrames={90}
+      calculateMetadata={({props}) => {
+        const narration = preparedNarrationSchema.parse(props.narration);
+        const quiz = parseQuizInput(props.quiz);
+        return {props: {quiz, narration}, durationInFrames: getNarratedTimeline(narration, quiz).durationInFrames};
+      }} />
+    <Composition id="CafeNarratedQuiz" component={NarratedQuestionPreview}
+      defaultProps={{quiz: cafeEpisode, narration: null}}
+      width={1080} height={1920} fps={QUIZ_FPS} durationInFrames={90}
+      calculateMetadata={({props}) => {
+        const narration = preparedNarrationSchema.parse(props.narration);
+        const quiz = parseQuizInput(props.quiz);
+        return {props: {quiz, narration}, durationInFrames: getNarratedTimeline(narration, quiz).durationInFrames};
+      }} />
   </>
 );

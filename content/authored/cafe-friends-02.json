@@ -1,0 +1,116 @@
+{
+  "quiz": {
+    "videoId": "cafe-friends-02",
+    "episodeTitle": "Can you order in Korean?",
+    "openingSubtitle": "Easy to hard",
+    "endingMode": "comment-challenge",
+    "minimumDurationSeconds": 65,
+    "backgroundAssetId": "korean-cafe-illustrated-v1",
+    "showRomanization": true,
+    "questions": [
+      {
+        "id": "cafe-greet-staff", "difficulty": "easy", "scenario": "Arriving at the café",
+        "prompt": "Greet the café staff politely.", "context": "Say hello as you enter.",
+        "choices": [
+          {"hangul": "안녕하세요.", "romanization": "annyeonghaseyo."},
+          {"hangul": "안녕히 가세요.", "romanization": "annyeonghi gaseyo."},
+          {"hangul": "잘 먹겠습니다.", "romanization": "jal meokgetseumnida."}
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "안녕하세요 is a polite greeting. Use it to say hello to the café staff.",
+        "reveal": {"translation": "Hello.", "teachingPoint": "안녕하세요 = a polite hello"}
+      },
+      {
+        "id": "cafe-order-one-coffee", "difficulty": "easy", "scenario": "Ordering a drink",
+        "prompt": "Order one cup of coffee.", "context": "Ask for exactly one coffee, not tea.",
+        "choices": [
+          {"hangul": "커피 두 잔 주세요.", "romanization": "keopi du jan juseyo."},
+          {"hangul": "차 한 잔 주세요.", "romanization": "cha han jan juseyo."},
+          {"hangul": "커피 한 잔 주세요.", "romanization": "keopi han jan juseyo."}
+        ],
+        "correctAnswerIndex": 2,
+        "explanation": "커피 한 잔 주세요 asks for one cup of coffee. 한 잔 is one cup; 두 잔 is two cups.",
+        "reveal": {"translation": "One coffee, please.", "teachingPoint": "한 잔 = one cup; 두 잔 = two cups"}
+      },
+      {
+        "id": "cafe-order-hot-coffee", "difficulty": "medium", "scenario": "Choosing a temperature",
+        "prompt": "Order a hot coffee.", "context": "You do not want a cold drink or tea.",
+        "choices": [
+          {"hangul": "차가운 커피 주세요.", "romanization": "chagaun keopi juseyo."},
+          {"hangul": "따뜻한 커피 주세요.", "romanization": "ttatteuthan keopi juseyo."},
+          {"hangul": "따뜻한 차 주세요.", "romanization": "ttatteuthan cha juseyo."}
+        ],
+        "correctAnswerIndex": 1,
+        "explanation": "따뜻한 커피 주세요 requests warm or hot coffee. 차가운 means cold; 차 is tea.",
+        "reveal": {"translation": "Hot coffee, please.", "teachingPoint": "따뜻한 = warm; 차가운 = cold"}
+      },
+      {
+        "id": "cafe-add-milk", "difficulty": "medium", "scenario": "Adding milk",
+        "prompt": "Ask for milk in your coffee.", "context": "Add milk, rather than sugar.",
+        "choices": [
+          {"hangul": "설탕 넣어 주세요.", "romanization": "seoltang neoeo juseyo."},
+          {"hangul": "우유 빼 주세요.", "romanization": "uyu ppae juseyo."},
+          {"hangul": "우유 넣어 주세요.", "romanization": "uyu neoeo juseyo."}
+        ],
+        "correctAnswerIndex": 2,
+        "explanation": "우유 is milk. 넣어 주세요 asks to add it; 빼 주세요 asks to leave it out.",
+        "reveal": {"translation": "Add milk, please.", "teachingPoint": "우유 = milk; 넣어 주세요 = please add"}
+      },
+      {
+        "id": "cafe-place-empty-cup", "difficulty": "hard", "scenario": "Clearing your table",
+        "prompt": "Ask where to put your empty cup.", "context": "You have finished your drink.",
+        "choices": [
+          {"hangul": "컵은 어디에 놓으면 돼요?", "romanization": "keobeun eodie noeumyeon dwaeyo?"},
+          {"hangul": "컵은 얼마예요?", "romanization": "keobeun eolmayeyo?"},
+          {"hangul": "컵을 하나 더 주세요.", "romanization": "keobeul hana deo juseyo."}
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "어디에 asks where to put something. 놓으면 돼요? asks whether putting it there is okay.",
+        "reveal": {"translation": "Where should I put the cup?", "teachingPoint": "어디에 = where; 놓으면 돼요? = is it okay to put it?"}
+      },
+      {
+        "id": "cafe-charge-phone", "difficulty": "hard", "scenario": "Requesting permission",
+        "prompt": "Ask if you may charge your phone.", "context": "Request permission to use the café outlet.",
+        "choices": [
+          {"hangul": "여기서 사진 찍어도 돼요?", "romanization": "yeogiseo sajin jjigeodo dwaeyo?"},
+          {"hangul": "여기서 충전해도 돼요?", "romanization": "yeogiseo chungjeonhaedo dwaeyo?"},
+          {"hangul": "여기서 전화해도 돼요?", "romanization": "yeogiseo jeonhwahaedo dwaeyo?"}
+        ]
+      }
+    ]
+  },
+  "bonusAnswerKey": {
+    "questionId": "cafe-charge-phone", "correctAnswerIndex": 1,
+    "translation": "May I charge my phone here?",
+    "explanation": "충전 means charging. 해도 돼요? asks permission. The other choices ask about taking photos or making a call.",
+    "teachingPoint": "충전해도 돼요? asks permission to charge."
+  },
+  "narration": {
+    "version": 1,
+    "profile": {
+      "provider": "google-cloud-tts", "model": "chirp3-hd",
+      "voices": {"en-US": "en-US-Chirp3-HD-Kore", "ko-KR": "ko-KR-Chirp3-HD-Kore"},
+      "outputFormat": "LINEAR16", "sampleRateHertz": 24000, "speakingRate": 1
+    },
+    "segments": [
+      {"id": "friends-hook-en", "contentId": "cafe-friends-02", "role": "hook", "language": "en-US", "text": "Can you order in Korean?"},
+      {"id": "friends-greet-question", "contentId": "cafe-greet-staff", "role": "question", "language": "en-US", "text": "Greet the café staff politely. Say hello as you enter."},
+      {"id": "friends-greet-answer", "contentId": "cafe-greet-staff", "role": "answer", "language": "ko-KR", "text": "안녕하세요."},
+      {"id": "friends-greet-explanation", "contentId": "cafe-greet-staff", "role": "explanation", "language": "en-US", "text": "Hello. Use this polite greeting when you arrive."},
+      {"id": "friends-one-question", "contentId": "cafe-order-one-coffee", "role": "question", "language": "en-US", "text": "Order one cup of coffee. Ask for exactly one coffee, not tea."},
+      {"id": "friends-one-answer", "contentId": "cafe-order-one-coffee", "role": "answer", "language": "ko-KR", "text": "커피 한 잔 주세요."},
+      {"id": "friends-one-explanation", "contentId": "cafe-order-one-coffee", "role": "explanation", "language": "en-US", "text": "One coffee, please. This asks for one cup of coffee."},
+      {"id": "friends-hot-question", "contentId": "cafe-order-hot-coffee", "role": "question", "language": "en-US", "text": "Order a hot coffee. You do not want a cold drink or tea."},
+      {"id": "friends-hot-answer", "contentId": "cafe-order-hot-coffee", "role": "answer", "language": "ko-KR", "text": "따뜻한 커피 주세요."},
+      {"id": "friends-hot-explanation", "contentId": "cafe-order-hot-coffee", "role": "explanation", "language": "en-US", "text": "Hot coffee, please. This requests warm coffee rather than a cold drink."},
+      {"id": "friends-milk-question", "contentId": "cafe-add-milk", "role": "question", "language": "en-US", "text": "Ask for milk in your coffee. Add milk, rather than sugar."},
+      {"id": "friends-milk-answer", "contentId": "cafe-add-milk", "role": "answer", "language": "ko-KR", "text": "우유 넣어 주세요."},
+      {"id": "friends-milk-explanation", "contentId": "cafe-add-milk", "role": "explanation", "language": "en-US", "text": "Add milk, please. This asks the staff to add milk to your coffee."},
+      {"id": "friends-cup-question", "contentId": "cafe-place-empty-cup", "role": "question", "language": "en-US", "text": "Ask where to put your empty cup. You have finished your drink."},
+      {"id": "friends-cup-answer", "contentId": "cafe-place-empty-cup", "role": "answer", "language": "ko-KR", "text": "컵은 어디에 놓으면 돼요?"},
+      {"id": "friends-cup-explanation", "contentId": "cafe-place-empty-cup", "role": "explanation", "language": "en-US", "text": "Where should I put the cup? Use this to ask where to leave your empty cup."},
+      {"id": "friends-bonus-question", "contentId": "cafe-charge-phone", "role": "question", "language": "en-US", "text": "Ask if you may charge your phone. Request permission to use the café outlet."},
+      {"id": "friends-bonus-comment", "contentId": "cafe-charge-phone", "role": "comment", "language": "en-US", "text": "What do you think? Comment A, B, or C below!"}
+    ]
+  }
+}

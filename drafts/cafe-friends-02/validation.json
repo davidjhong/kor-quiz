@@ -1,0 +1,11 @@
+{
+  "valid": true,
+  "contentHash": "01106069479357e54e096724b7a4b6046e83418b99098b7b0826d766087dd111",
+  "errors": [],
+  "warnings": [
+    "Structural validation does not establish Korean accuracy, naturalness, difficulty or semantic answer uniqueness. Human review is required."
+  ],
+  "linguisticReviewRequired": true,
+  "generationEstimatedCostUSD": 0,
+  "reportedGenerationUsage": null
+}

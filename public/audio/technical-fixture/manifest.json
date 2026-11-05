@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "quizFingerprint": "7b778425db4bc40aedfb4e936f664cc2d8c6637ec65da55472692f272195c285",
+  "profile": {
+    "provider": "google-cloud-tts",
+    "model": "chirp3-hd",
+    "voices": {
+      "en-US": "en-US-Chirp3-HD-Kore",
+      "ko-KR": "ko-KR-Chirp3-HD-Kore"
+    },
+    "outputFormat": "LINEAR16",
+    "sampleRateHertz": 24000,
+    "speakingRate": 1
+  },
+  "processing": "loudnorm-I-16-TP-1.5-LRA-11-mono-24000-v1",
+  "clips": [
+    {
+      "id": "water-hook-en",
+      "contentId": "cafe-technical-audio-fixture",
+      "role": "hook",
+      "language": "en-US",
+      "text": "Technical test tones. No narration.",
+      "recordingId": "technical-tone-not-speech-0",
+      "cacheKey": "49c794527b4d019fe9292e9cc84a25a28b6a1ae6f901a8e58398f7139a120df8",
+      "file": "audio/cache/49c794527b4d019fe9292e9cc84a25a28b6a1ae6f901a8e58398f7139a120df8.wav",
+      "sha256": "b4761f88daadd0301e5786af8a446336a7b6804749d0b29f7ceee9deacee2e1b",
+      "durationSeconds": 1,
+      "sourceKind": "local",
+      "sourceChecksum": "a5e31c00c4c115026e0f603a562fcf950500ef6d487e4a3b35a53d40739658c6",
+      "peakDbFS": -12.2168514228854
+    },
+    {
+      "id": "water-question-en",
+      "contentId": "cafe-request-water",
+      "role": "question",
+      "language": "en-US",
+      "text": "You need water. What do you say? Ask the café staff politely.",
+      "recordingId": "technical-tone-not-speech-1",
+      "cacheKey": "7eac0918f09b707961a56fb56d6d8b8e4ca262368235ed9568be9efa9c936049",
+      "file": "audio/cache/7eac0918f09b707961a56fb56d6d8b8e4ca262368235ed9568be9efa9c936049.wav",
+      "sha256": "75ac15c2531d173ce985460f02279ef82f3e7b10c6ee34c25770c25dec1f30d8",
+      "durationSeconds": 1,
+      "sourceKind": "local",
+      "sourceChecksum": "f6c01a5354c36c3b7e6e24dde1f40a48bc8283767a095597b89d452de897d7b2",
+      "peakDbFS": -12.315871093081647
+    },
+    {
+      "id": "water-answer-ko",
+      "contentId": "cafe-request-water",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "물 주세요.",
+      "recordingId": "technical-tone-not-speech-2",
+      "cacheKey": "d8950c56a9559c860f288698b7b84dcc0f2d80948a61cf9b392aa6a7e99dd109",
+      "file": "audio/cache/d8950c56a9559c860f288698b7b84dcc0f2d80948a61cf9b392aa6a7e99dd109.wav",
+      "sha256": "7fe76b1135b1a85a44ca5d2dc482ea5135359fdc989bd05c5b25011c5893df37",
+      "durationSeconds": 1,
+      "sourceKind": "local",
+      "sourceChecksum": "4cb209b1823ac1ff4cf70d95893045ae40343cf679f63fa4a25166d45c101c6c",
+      "peakDbFS": -12.314776807771466
+    },
+    {
+      "id": "water-explanation-en",
+      "contentId": "cafe-request-water",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Water, please. This is a polite way to ask someone to give you water.",
+      "recordingId": "technical-tone-not-speech-3",
+      "cacheKey": "0405a8669f322369f66d412ef56edbc317efb1bae75ae5b0750f45d8f617f4b1",
+      "file": "audio/cache/0405a8669f322369f66d412ef56edbc317efb1bae75ae5b0750f45d8f617f4b1.wav",
+      "sha256": "3acd7b34e228e608936f4cbd4b123fb0f55fc925577c980f3dad6b5cbbabd69e",
+      "durationSeconds": 1,
+      "sourceKind": "local",
+      "sourceChecksum": "0035f3da7b6051c6c56ea69201cdbd4075dd5d100e39c279873411e30bcb7089",
+      "peakDbFS": -12.412712117528343
+    }
+  ]
+}

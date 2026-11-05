@@ -18,14 +18,15 @@ type IllustratedQuestionSceneProps = {
   settleFrames?: number;
   embedded?: boolean;
   contentOpacity?: number;
+  questionTimeline?: typeof PREVIEW_QUESTION_TIMELINE;
 };
 const labels = ['A', 'B', 'C'] as const;
 
 export const IllustratedQuestionScene = ({question, questionIndex, questionCount,
   showRomanization = false, exitFrames = 0, bonus = false, settleFrames = 0,
-  embedded = false, contentOpacity = 1}: IllustratedQuestionSceneProps) => {
+  embedded = false, contentOpacity = 1, questionTimeline = PREVIEW_QUESTION_TIMELINE}: IllustratedQuestionSceneProps) => {
   const frame = useCurrentFrame();
-  const state = getIllustratedQuestionState(frame - settleFrames, bonus);
+  const state = getIllustratedQuestionState(frame - settleFrames, bonus, questionTimeline);
   const revealed = state.phase === 'reveal';
   const {colors, panel, slots, answers} = ILLUSTRATED_THEME;
   const slot = (top: number) => ({position: 'absolute' as const, top,
@@ -110,6 +111,6 @@ export const IllustratedQuestionScene = ({question, questionIndex, questionCount
   </>;
   if (embedded) return <div style={{position: 'absolute', inset: 0, opacity: contentOpacity}}>{content}</div>;
   return <IllustratedPanel opacity={state.entranceProgress
-    * getPanelExitOpacity(frame, PREVIEW_QUESTION_TIMELINE.durationInFrames, exitFrames)}
+    * getPanelExitOpacity(frame, questionTimeline.durationInFrames, exitFrames)}
     translateY={(1 - state.entranceProgress) * 12}>{content}</IllustratedPanel>;
 };

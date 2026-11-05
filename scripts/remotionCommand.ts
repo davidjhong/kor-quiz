@@ -12,7 +12,7 @@ const manifestPath = require.resolve('@remotion/cli/package.json');
 const manifest = JSON.parse(readFileSync(manifestPath, 'utf8')) as {bin: {remotion: string}};
 const cli = join(dirname(manifestPath), manifest.bin.remotion);
 
-export const runRemotion = (args: string[], capture = false): Promise<string> => new Promise((resolve, reject) => {
+export const runRemotion = (args: string[], capture = false, timeoutMs = 0): Promise<string> => new Promise((resolve, reject) => {
   const child = spawn(process.execPath, [cli, ...args], {
     cwd: PROJECT_ROOT,
     shell: false,
@@ -21,6 +21,10 @@ export const runRemotion = (args: string[], capture = false): Promise<string> =>
   });
   let output = '';
   let errors = '';
+  const timeout = timeoutMs > 0 ? setTimeout(() => {
+    child.kill();
+    reject(new Error(`Remotion ${args[0]} exceeded ${timeoutMs}ms`));
+  }, timeoutMs) : undefined;
   child.stdout?.on('data', (chunk: Buffer) => {
     output += chunk.toString();
     if (output.length > 2 * 1024 * 1024) {
@@ -32,8 +36,9 @@ export const runRemotion = (args: string[], capture = false): Promise<string> =>
     errors = (errors + chunk.toString()).slice(-8192);
     if (!capture) process.stderr.write(chunk);
   });
-  child.on('error', reject);
+  child.on('error', (error) => { clearTimeout(timeout); reject(error); });
   child.on('close', (code, signal) => {
+    clearTimeout(timeout);
     if (code !== 0) reject(new Error(`Remotion ${args[0]} failed (${signal ?? `exit ${code}`}): ${errors.trim()}`));
     else resolve(output);
   });

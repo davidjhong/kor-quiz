@@ -1,0 +1,19 @@
+{
+  "videoId": "cafe-water-narrated-preview",
+  "episodeTitle": "Can you order in Korean?",
+  "endingMode": "standard",
+  "backgroundAssetId": "korean-cafe-illustrated-v1",
+  "showRomanization": true,
+  "questions": [{
+    "id": "cafe-request-water", "scenario": "AT A KOREAN CAFÉ",
+    "context": "Ask the café staff politely.", "prompt": "You need water. What do you say?",
+    "choices": [
+      {"hangul": "물 있어요.", "romanization": "mul isseoyo."},
+      {"hangul": "물 주세요.", "romanization": "mul juseyo."},
+      {"hangul": "물 마셔요.", "romanization": "mul masyeoyo."}
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Water, please. This is a polite way to ask someone to give you water.",
+    "reveal": {"translation": "Water, please.", "teachingPoint": "주세요 = please give me"}
+  }]
+}

@@ -64,3 +64,24 @@ export const inspectVideo = async (outputPath: string, expectedFrames: number, m
   catch { throw new Error(`FFprobe returned invalid JSON for ${outputPath}`); }
   return validateProbeMetadata(metadata, expectedFrames, minimumDurationSeconds);
 };
+
+export const validateNarratedProbeMetadata = (input: unknown, expectedFrames: number, lastSpeechEndFrame: number, minimumDurationSeconds?: number) => {
+  const parsed = z.object({streams: z.array(z.object({codec_type: z.string(), codec_name: z.string()}).passthrough()),
+    format: z.object({duration: z.string()})}).parse(input);
+  const videos = parsed.streams.filter((stream) => stream.codec_type === 'video');
+  const audios = parsed.streams.filter((stream) => stream.codec_type === 'audio');
+  if (parsed.streams.length !== 2 || audios.length !== 1 || audios[0].codec_name !== 'aac') throw new Error('Narrated output must have exactly H.264 video and one AAC audio stream');
+  const metadata = validateProbeMetadata({streams: videos, format: parsed.format}, expectedFrames, minimumDurationSeconds);
+  const duration = Number(audios[0].duration);
+  if (!Number.isFinite(duration) || duration + 0.001 < lastSpeechEndFrame / QUIZ_FPS) throw new Error('Audio stream ends before scheduled speech finishes');
+  if (duration > expectedFrames / QUIZ_FPS + DURATION_TOLERANCE_SECONDS) throw new Error('Audio stream extends beyond the episode');
+  return metadata;
+};
+
+export const inspectNarratedVideo = async (file: string, frames: number, speechEnd: number, minimumDurationSeconds?: number) => {
+  const info = await stat(file);
+  if (!info.isFile() || info.size === 0) throw new Error('Narrated output is missing or empty');
+  const result = await runRemotion(['ffprobe', '-v', 'error', '-show_entries',
+    'stream=codec_name,codec_type,width,height,pix_fmt,avg_frame_rate,nb_frames,duration:format=duration', '-of', 'json', file], true, 30000);
+  return validateNarratedProbeMetadata(JSON.parse(result), frames, speechEnd, minimumDurationSeconds);
+};

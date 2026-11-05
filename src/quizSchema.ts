@@ -41,9 +41,9 @@ export const quizQuestionSchema = z.strictObject({
     .superRefine((choices, context) => {
       const seen = new Set<string>();
       choices.forEach((choice, index) => {
-        const hangul = getChoiceHangul(choice);
+        const hangul = getChoiceHangul(choice).replace(/\s+/gu, '');
         if (seen.has(hangul)) {
-          context.addIssue({code: 'custom', path: [index], message: 'Duplicate choice after trimming and NFKC normalization'});
+          context.addIssue({code: 'custom', path: [index], message: 'Duplicate choice after whitespace and NFKC normalization'});
         }
         seen.add(hangul);
       });
@@ -76,11 +76,8 @@ export const quizInputSchema = z.strictObject({
     if (quiz.questions.length < 2) {
       context.addIssue({code: 'custom', path: ['questions'], message: 'Comment-challenge mode requires at least two questions'});
     }
-    const lastIndex = quiz.questions.length - 1;
-    if (lastIndex >= 0 && !quiz.questions[lastIndex].reveal) {
-      context.addIssue({code: 'custom', path: ['questions', lastIndex, 'reveal'],
-        message: 'The bonus must retain its translation and teaching point in source data'});
-    }
+    // Phase 5 keeps the private bonus answer in a separate key. Legacy source
+    // files with a reveal remain compatible, but renderers never display it.
   }
   const seen = new Set<string>();
   quiz.questions.forEach((question, index) => {

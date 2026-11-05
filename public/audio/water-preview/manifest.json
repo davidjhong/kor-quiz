@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "quizFingerprint": "6fc36230e9af67087cbfe18532f2e153d1fb10739274281454e8a307cf9cb38f",
+  "profile": {
+    "provider": "google-cloud-tts",
+    "model": "chirp3-hd",
+    "voices": {
+      "en-US": "en-US-Chirp3-HD-Kore",
+      "ko-KR": "ko-KR-Chirp3-HD-Kore"
+    },
+    "outputFormat": "LINEAR16",
+    "sampleRateHertz": 24000,
+    "speakingRate": 1
+  },
+  "processing": "loudnorm-I-16-TP-1.5-LRA-11-mono-24000-v1",
+  "clips": [
+    {
+      "id": "water-hook-en",
+      "contentId": "cafe-water-narrated-preview",
+      "role": "hook",
+      "language": "en-US",
+      "text": "Can you order in Korean?",
+      "cacheKey": "28280c953f006e59d87561cc228d77f5f485bdaf59a599c48833a130a3221c21",
+      "file": "audio/cache/28280c953f006e59d87561cc228d77f5f485bdaf59a599c48833a130a3221c21.wav",
+      "sha256": "469f76ffc13a3cabcdc08244ae5060f89a03542897fb00bee6091710be25f074",
+      "durationSeconds": 1.64,
+      "sourceKind": "google-cloud-tts",
+      "sourceChecksum": "614d32ab5ef0237da54e241151ca10c252ac0e7df8fd90add97158fd86430e22",
+      "peakDbFS": -2.577592665175778
+    },
+    {
+      "id": "water-question-en",
+      "contentId": "cafe-request-water",
+      "role": "question",
+      "language": "en-US",
+      "text": "You need water. What do you say? Ask the café staff politely.",
+      "cacheKey": "953d42c9d2edc8bd040fe568852ae10ab999ffaa62d000b287643ecc8c1a77f0",
+      "file": "audio/cache/953d42c9d2edc8bd040fe568852ae10ab999ffaa62d000b287643ecc8c1a77f0.wav",
+      "sha256": "551d449f9f5ff29db99e7ddfc4cde36316c1b8abeeb9f37495d1bb77c206711b",
+      "durationSeconds": 4.64,
+      "sourceKind": "google-cloud-tts",
+      "sourceChecksum": "e94f8c40f6981987c300383dbbe343419e770fcb290fb07edeba305488488555",
+      "peakDbFS": -1.4952240617511858
+    },
+    {
+      "id": "water-answer-ko",
+      "contentId": "cafe-request-water",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "물 주세요.",
+      "cacheKey": "a6a04eaecd5f4c52425fe32ea65dd16b2a295b7bf35b23ba31b4670011212691",
+      "file": "audio/cache/a6a04eaecd5f4c52425fe32ea65dd16b2a295b7bf35b23ba31b4670011212691.wav",
+      "sha256": "840b24987ff65e8bf9f5b1f5d54b7c5361ead77029a5405b5698bf60c211c9b6",
+      "durationSeconds": 1.68,
+      "sourceKind": "google-cloud-tts",
+      "sourceChecksum": "dd178cede612050e64af6298974c9cf4543afe90eca2bb8d8a657559d5a3c1bf",
+      "peakDbFS": -2.4948878746669405
+    },
+    {
+      "id": "water-explanation-en",
+      "contentId": "cafe-request-water",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Water, please. This is a polite way to ask someone to give you water.",
+      "cacheKey": "30b7dc8f91f903a9d1fde5f5177726b96fdf980f19767c8fbfe50e8fb65078ce",
+      "file": "audio/cache/30b7dc8f91f903a9d1fde5f5177726b96fdf980f19767c8fbfe50e8fb65078ce.wav",
+      "sha256": "ce2df23a31e2532ff9938bd221d7d8b4cfd21101e563e3edd6911de1cf03c229",
+      "durationSeconds": 4.2,
+      "sourceKind": "google-cloud-tts",
+      "sourceChecksum": "71250939f7b1cde201531b1828ec67745068c2817a5da20d36c29fa6359c2738",
+      "peakDbFS": -1.4920759737032185
+    }
+  ]
+}

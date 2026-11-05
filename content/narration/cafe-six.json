@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "profile": {
+    "provider": "google-cloud-tts", "model": "chirp3-hd",
+    "voices": {"en-US": "en-US-Chirp3-HD-Kore", "ko-KR": "ko-KR-Chirp3-HD-Kore"},
+    "outputFormat": "LINEAR16", "sampleRateHertz": 24000, "speakingRate": 1
+  },
+  "segments": [
+    {"id": "cafe-hook-en", "contentId": "cafe-six-comment-challenge", "role": "hook", "language": "en-US", "text": "Can you order in Korean?"},
+    {"id": "water-question-en", "contentId": "cafe-request-water", "role": "question", "language": "en-US", "text": "You need water. What do you say? Ask the café staff politely."},
+    {"id": "water-answer-ko", "contentId": "cafe-request-water", "role": "answer", "language": "ko-KR", "text": "물 주세요."},
+    {"id": "water-explanation-en", "contentId": "cafe-request-water", "role": "explanation", "language": "en-US", "text": "Water, please. This is a polite way to ask someone to give you water."},
+    {"id": "price-question-en", "contentId": "cafe-ask-price", "role": "question", "language": "en-US", "text": "Ask how much your drink costs. You are ready to pay for your drink."},
+    {"id": "price-answer-ko", "contentId": "cafe-ask-price", "role": "answer", "language": "ko-KR", "text": "얼마예요?"},
+    {"id": "price-explanation-en", "contentId": "cafe-ask-price", "role": "explanation", "language": "en-US", "text": "How much is it? Use this to ask the price."},
+    {"id": "takeaway-question-en", "contentId": "cafe-takeaway", "role": "question", "language": "en-US", "text": "You want your drink to go. What do you say? You are leaving the café."},
+    {"id": "takeaway-answer-ko", "contentId": "cafe-takeaway", "role": "answer", "language": "ko-KR", "text": "포장해 주세요."},
+    {"id": "takeaway-explanation-en", "contentId": "cafe-takeaway", "role": "explanation", "language": "en-US", "text": "To go, please. This asks for takeaway."},
+    {"id": "ice-question-en", "contentId": "cafe-without-ice", "role": "question", "language": "en-US", "text": "Order your drink without ice. What do you say? Ordering a cold drink."},
+    {"id": "ice-answer-ko", "contentId": "cafe-without-ice", "role": "answer", "language": "ko-KR", "text": "얼음 빼 주세요."},
+    {"id": "ice-explanation-en", "contentId": "cafe-without-ice", "role": "explanation", "language": "en-US", "text": "No ice, please. This asks to leave the ice out."},
+    {"id": "replace-question-en", "contentId": "cafe-replace-wrong-drink", "role": "question", "language": "en-US", "text": "Ask to replace the coffee with tea. You ordered tea, but received coffee."},
+    {"id": "replace-answer-ko", "contentId": "cafe-replace-wrong-drink", "role": "answer", "language": "ko-KR", "text": "차로 바꿔 주세요."},
+    {"id": "replace-explanation-en", "contentId": "cafe-replace-wrong-drink", "role": "explanation", "language": "en-US", "text": "Please change it to tea. This asks for a replacement."},
+    {"id": "bonus-question-en", "contentId": "cafe-sold-out-alternative", "role": "question", "language": "en-US", "text": "Ask for an Americano instead. Your first choice is sold out. No drink is served."},
+    {"id": "bonus-comment-en", "contentId": "cafe-sold-out-alternative", "role": "comment", "language": "en-US", "text": "What do you think? Comment A, B, or C below!"}
+  ]
+}

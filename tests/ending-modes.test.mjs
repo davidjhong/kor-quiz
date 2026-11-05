@@ -32,11 +32,12 @@ test('legacy input remains unchanged and standard mode scores/reveals every ques
   assert.equal(getScorePrompt(3, false), 'How many did you get right?');
 });
 
-test('comment challenge rejects fewer than two questions and missing source translation', () => {
+test('comment challenge rejects fewer than two questions; private bonus reveal data is optional in renderer input', () => {
   assert.throws(() => parseQuizInput({...six, questions: [six.questions[0]]}), /at least two/u);
   const missing = structuredClone(six);
   delete missing.questions.at(-1).reveal;
-  assert.throws(() => parseQuizInput(missing), /Question 6.*reveal.*translation/u);
+  assert.doesNotThrow(() => parseQuizInput(missing));
+  assert.throws(() => createBonusAnswerKey(missing), /source translation/u);
   assert.throws(() => parseQuizInput({...six, endingMode: 'random'}), /endingMode/u);
 });
 

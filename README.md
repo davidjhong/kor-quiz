@@ -1,5 +1,196 @@
 # Korean quiz videos
 
+## Phase 5 checkpoint 1: local draft, validation and human review
+
+The new café episode is **unapproved** and has not entered audio preparation or
+rendering. Review [the private review document](drafts/cafe-friends-02/review.md),
+[draft JSON](drafts/cafe-friends-02/draft.json),
+[separate bonus key](drafts/cafe-friends-02/answer-key.json), and
+[validation report](drafts/cafe-friends-02/validation.json).
+
+The local workflow is brief + authored JSON → imported draft → deterministic
+validation → human review → separate hash-bound approval → existing audio cache →
+existing renderer. No generation API is used. Exact commands, architecture,
+repetition tracking and future spending requirements are in
+[the Phase 5 checkpoint guide](docs/phase5-checkpoint.md).
+
+```powershell
+npm.cmd run draft -- import --source content/authored/cafe-friends-02.json --brief content/briefs/cafe-friends-02.json --out drafts/cafe-friends-02
+npm.cmd run draft -- validate --draft drafts/cafe-friends-02
+npm.cmd run draft -- review --draft drafts/cafe-friends-02
+npm.cmd run audio:prepare -- --draft drafts/cafe-friends-02 --output public/audio/cafe-friends-02/manifest.json --estimate
+```
+
+The estimate/dry-run operation makes no paid calls or manifest writes. Actual
+preparation and narrated rendering require explicit human approval of the current
+hash. New synthesis additionally requires a new scoped spending approval. Any
+content, narration, private-key or brief/provenance field change invalidates
+approval. Existing demo narration is pinned by hash; silent visual-review tools
+remain available. No new dependency versions were introduced.
+
+## Final Phase 4 ending fix
+
+[Updated MP4](out/cafe-six-narrated-ending.mp4) ·
+[authoritative narration/timeline data](out/cafe-six-narrated-ending.timeline.json) ·
+[verification and inspected ending frames](out/phase4-ending-review/verification.json).
+The bonus countdown is now followed by the spoken neutral comment invitation,
+with the choices visible through narration plus a one-second pause. Only the new
+44-character English segment was synthesized: 17 cache hits, one request,
+estimated $0.00132 before any eligible free allowance, within a $0.003 sub-cap of
+the previously approved $0.03 episode budget. The updated runtime is
+**3302 frames / 110.067 seconds**. The 80–95-second target is advisory; the
+65-second minimum and media/timing checks still apply.
+
+## Phase 4: complete narrated café episode
+
+The complete six-question episode uses the approved illustration, layout,
+romanization and fixed English/Korean Kore voices. Questions 1–5 reveal their
+answers; question 6 ends with the neutral comment invitation. Its answer is saved
+in a separate `.answer-key.txt`, never narrated or highlighted. The opening says
+**6 questions · Easy to hard**. There is no score interstitial or music.
+
+[Full narrated MP4](out/cafe-six-narrated.mp4) ·
+[verification, measurements, timeline and review checklist](docs/phase4-episode.md).
+
+```powershell
+Set-Location 'C:\Users\david\Documents\kor-vids'
+npm.cmd run typecheck
+npm.cmd test
+
+# Unchanged inputs: cache only, no new synthesis or TTS cost.
+npm.cmd run audio:prepare -- --input content/cafe-six.json --script content/narration/cafe-six.json --output public/audio/cafe-six/manifest.json
+npm.cmd run render:narrated -- --input content/cafe-six.json --audio-manifest public/audio/cafe-six/manifest.json --output out/cafe-six-narrated.mp4 --overwrite
+Invoke-Item .\out\cafe-six-narrated.mp4
+
+# Cost estimate only; no requests or manifest writes.
+npm.cmd run audio:prepare -- --input content/cafe-six.json --script content/narration/cafe-six.json --output public/audio/cafe-six/manifest.json --estimate
+
+npx.cmd remotion ffprobe -v error -show_entries stream=codec_name,codec_type,width,height,pix_fmt,avg_frame_rate,nb_frames,duration,sample_rate,channels:format=duration,size -of json out/cafe-six-narrated.mp4
+```
+
+Audio timing uses measured durations rounded **up** to frames. Every question gets
+at least four seconds of reading after the panel settles, its complete question
+narration and a half-second pause, then exactly five silent countdown seconds.
+Reveals play Korean, a short pause, then English, followed by a reading hold.
+The natural full runtime is **3263 frames / 108.767 seconds**: above the 65-second
+minimum but outside the 80–95-second target. Speech and holds were not shortened
+to force the target, and no empty padding was added.
+
+The separately approved full-episode preparation cap was **$0.03**. It reused four
+clips and made 13 new requests for 570 characters, estimated **$0.0171** before
+any eligible free allowance. A second preparation reused all 17 clips with zero
+requests. Render commands only accept prepared local audio; missing, corrupt or
+stale assets fail before rendering. Cache keys include exact text, language,
+provider/model, voice, settings, output format/sample rate and processing version.
+No additional dependencies or version changes were needed for this expansion.
+
+### Earlier checkpoint: one narrated water-question audition
+
+[Narrated MP4](out/cafe-water-narrated-preview.mp4) ·
+[playable clips](out/water-voice-audition/index.html) ·
+[voice comparison, sources, costs, timing and listening checks](docs/phase4-voices.md).
+This earlier checkpoint narrated one standard question. Its preview and all
+silent inputs remain available for comparison; the completed episode is above.
+
+```powershell
+Set-Location 'C:\Users\david\Documents\kor-vids'
+npm.cmd run typecheck
+npm.cmd test
+
+# Reuse the accepted cached clips. This command cannot synthesize or incur TTS cost.
+npm.cmd run audio:prepare -- --input content/cafe-narrated-preview.json --script content/narration/water.json --output public/audio/water-preview/manifest.json
+npm.cmd run render:narrated -- --input content/cafe-narrated-preview.json --audio-manifest public/audio/water-preview/manifest.json --output out/cafe-water-narrated-preview.mp4 --overwrite
+Invoke-Item .\out\cafe-water-narrated-preview.mp4
+
+# Separate metadata report
+npx.cmd remotion ffprobe -v error -show_entries stream=codec_name,codec_type,width,height,pix_fmt,avg_frame_rate,nb_frames,duration,sample_rate,channels:format=duration -of json out/cafe-water-narrated-preview.mp4
+```
+
+On macOS use `npm`/`npx` rather than `npm.cmd`/`npx.cmd`, omit `Set-Location`, and
+use `open out/cafe-water-narrated-preview.mp4`. The TypeScript scripts use Node
+path/subprocess APIs and Remotion's bundled media tools on either OS.
+
+### Preparation, credentials and accepted files
+
+The approved provider is Google Cloud **Chirp 3 HD**, using the fixed stock pair
+`en-US-Chirp3-HD-Kore` / `ko-KR-Chirp3-HD-Kore`, normal pace 1.0 and LINEAR16
+24 kHz WAV. The official client library uses **Application Default Credentials**;
+keep `GOOGLE_CLOUD_PROJECT` in the ignored `.env` or environment. No manually
+copied access-token variable is needed. For a fresh host, configure your own
+billing-enabled project/TTS API and local ADC (`gcloud auth application-default
+login`); `.env.example` documents configuration without containing credentials.
+Do not put ADC files, tokens, or API keys in public assets or JSON.
+
+The owner approved **at most $0.02 for this four-clip audition**, which used 160
+characters: estimated $0.0048 before the eligible free allowance, not actual billed
+cost. To prepare uncached speech in that scope, the explicit command is:
+
+```powershell
+npm.cmd run audio:prepare -- --input content/cafe-narrated-preview.json --script content/narration/water.json --output public/audio/water-preview/manifest.json --synthesize --max-cost-usd 0.02
+```
+
+`--synthesize` is opt-in and requires an explicit budget. Existing accepted clips
+are reused even with that flag. SDK retries are disabled; one rate-limit retry is
+bounded. Uncertain outcomes are not automatically repeated and leave a pending
+marker. `--retry-uncertain` explicitly acknowledges possible duplicate charges;
+prior uncertain charges are excluded from a new invocation's usage estimate.
+Review them before using that flag. Never clear pending state just to bypass it.
+
+`content/narration/water.json` contains the four ordered texts and voice profile,
+separate from quiz content and layout. Use a copy of
+`content/narration/water.local.example.json` with `localFile` and `recordingId`
+for your approved recordings, then prepare without `--synthesize`. Local paths are
+relative to the repository and must stay within it. Mixed local/generated clips
+are supported. Romanization is never used for Korean synthesis.
+
+Original audio and per-clip synthesis metadata live in ignored `.audio-cache/`;
+accepted processed WAVs live in `public/audio/cache/`. The public manifest records
+identities, voice configuration, measured durations, source/final checksums and
+peak levels. Preserve the accepted clips and manifest for reproducibility. Cache
+keys include exact text, language, provider/model/voice, speech settings, format,
+sample rate and processing version (plus recording checksum/ID for local audio).
+Styling changes do not regenerate speech; one segment change invalidates that
+segment only. Corrupt cache entries fail rather than silently spending on replacements.
+Temporary audio is decoded/processed/validated before finalization; saved original
+responses can recover interrupted processing without another paid request.
+
+### Timeline, rendering and protection
+
+`src/narrationTiming.ts` converts measured durations with `ceil(seconds × FPS)`.
+It centralizes opening/reading/reveal minimums, settle/pause/gap lengths, the exact
+five-second countdown, transition and final fade. For this accepted audio the
+countdown is **8.767–13.767 s**, Korean **13.967–15.667 s**, English explanation
+**16.000–20.200 s**, then reading hold and fade to **21.600 s / 648 frames**.
+Container duration is **21.611 s** due to AAC padding, within the existing tolerance.
+The renderer reads local audio only; no network or TTS request occurs during it.
+
+`buildNarrationPlan` excludes a comment-bonus answer/explanation before any cache
+lookup or synthesis. It validates content IDs/order, prompt/context agreement,
+and Hangul answers. Preparation/render CLIs now accept up to six validated
+questions. Bonus answer/explanation roles are excluded before preparation and
+rejected outright in prepared rendering props. The private answer key remains
+separate from narration.
+
+Changed files: `src/narration.ts`, `src/narrationTiming.ts`,
+`src/NarratedQuestionPreview.tsx`, the shared scene/timing's optional timeline,
+`src/Root.tsx`; `scripts/googleTts.ts`, `scripts/narrationFiles.ts`,
+`scripts/prepareAudio.ts`, `scripts/renderNarrated.ts`, `scripts/audioArguments.ts`,
+media inspection and subprocess timeout support; new content/script/examples,
+tests, `.env.example`, cache ignore rule and this documentation. The requested ADC
+client adds pinned `@google-cloud/text-to-speech` **7.2.0**, requiring a lockfile
+update; existing direct dependency versions were preserved. The installation's
+audit report concerns the existing pinned Remotion/Zod tree, not the added Google
+client; no forced dependency upgrades were applied.
+
+Verification: typechecking, the extended Node tests, real cached clip preparation,
+the H.264/AAC render, metadata inspection, full decode and representative-frame
+inspection passed. Cache-only preparation was rerun with synthesis disabled.
+Level measurements and the complete source-linked comparison are in
+`docs/phase4-voices.md`. The labeled technical test-tone render is a pipeline test,
+not a voice audition. Pronunciation, perceived balance, audible artifacts and
+full-speed pacing still require your listening review. Full-episode verification
+is documented above. Phase 5 has not started.
+
 ## Final Phase 3.5: six-question café comment challenge
 
 The current Studio default is the complete **six-question** episode in

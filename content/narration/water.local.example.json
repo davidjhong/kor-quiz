@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "profile": {
+    "provider": "google-cloud-tts",
+    "model": "chirp3-hd",
+    "voices": {
+      "en-US": "en-US-Chirp3-HD-Kore",
+      "ko-KR": "ko-KR-Chirp3-HD-Kore"
+    },
+    "outputFormat": "LINEAR16",
+    "sampleRateHertz": 24000,
+    "speakingRate": 1
+  },
+  "segments": [
+    {
+      "id": "water-hook-en",
+      "contentId": "cafe-water-narrated-preview",
+      "role": "hook",
+      "language": "en-US",
+      "text": "Can you order in Korean?",
+      "localFile": "audio/recordings/water-hook-en.wav",
+      "recordingId": "water-hook-en-recording-v1"
+    },
+    {
+      "id": "water-question-en",
+      "contentId": "cafe-request-water",
+      "role": "question",
+      "language": "en-US",
+      "text": "You need water. What do you say? Ask the café staff politely.",
+      "localFile": "audio/recordings/water-question-en.wav",
+      "recordingId": "water-question-en-recording-v1"
+    },
+    {
+      "id": "water-answer-ko",
+      "contentId": "cafe-request-water",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "물 주세요.",
+      "localFile": "audio/recordings/water-answer-ko.wav",
+      "recordingId": "water-answer-ko-recording-v1"
+    },
+    {
+      "id": "water-explanation-en",
+      "contentId": "cafe-request-water",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Water, please. This is a polite way to ask someone to give you water.",
+      "localFile": "audio/recordings/water-explanation-en.wav",
+      "recordingId": "water-explanation-en-recording-v1"
+    }
+  ]
+}

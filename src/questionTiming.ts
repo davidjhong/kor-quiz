@@ -52,8 +52,8 @@ export const getQuestionState = (frame: number, timeline = QUESTION_TIMELINE) =>
 };
 
 /** A bonus never enters a reveal state, including frames beyond its planned hold. */
-export const getIllustratedQuestionState = (frame: number, bonus: boolean) => {
-  const state = getQuestionState(frame, PREVIEW_QUESTION_TIMELINE);
+export const getIllustratedQuestionState = (frame: number, bonus: boolean, timeline = PREVIEW_QUESTION_TIMELINE) => {
+  const state = getQuestionState(frame, timeline);
   if (!bonus) return state;
   return {...state, phase: state.phase === 'reveal' ? 'comment' as const : state.phase,
     revealProgress: 0};

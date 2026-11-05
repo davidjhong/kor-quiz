@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "note": "Pinned pre-Phase-5 demos only; new content requires separate human approval.",
+  "entries": [
+    {
+      "file": "content/sample.json",
+      "quizHash": "a4d16dd40f77150768f5963068961f673c0b368d9f4c0482bccab8b52eacf9c4",
+      "speechHashes": [],
+      "repetitionBaseline": false
+    },
+    {
+      "file": "content/short.json",
+      "quizHash": "2a575141243266a0ef10afb67bfb673344d3e9e1e6b4a6de61c54baef3360b0f",
+      "speechHashes": [],
+      "repetitionBaseline": false
+    },
+    {
+      "file": "content/cafe.json",
+      "quizHash": "d718d05d004f07309c2e30547d52813a33c149583a16d536c0191035bcc08595",
+      "speechHashes": [],
+      "repetitionBaseline": false
+    },
+    {
+      "file": "content/cafe-preview.json",
+      "quizHash": "691be2776b38305c3c321b2defc48458a8a83aaa966ec19a6967291f20066433",
+      "speechHashes": [],
+      "repetitionBaseline": false
+    },
+    {
+      "file": "content/cafe-illustrated-preview.json",
+      "quizHash": "971a2164c56c273a4aa66c028b1d74431c0603524caafd581e75e755b0359267",
+      "speechHashes": [],
+      "repetitionBaseline": false
+    },
+    {
+      "file": "content/cafe-narrated-preview.json",
+      "quizHash": "9b76d8a622b253a4c2e1ee93fc1abbf621dfb3dbee4c24162d3442f1e7463008",
+      "speechHashes": [
+        "6c061211406a728b44df09215f8dc201fa747f72b0fa705988936a77fd09e41b"
+      ],
+      "repetitionBaseline": false
+    },
+    {
+      "file": "content/cafe-six.json",
+      "quizHash": "3f59e4ad67655c06e203f1b2b0013db3f786840ed8545a87b075ba337419c304",
+      "speechHashes": [
+        "3790bc2da3c9a896b9b218db8f862b0597bf95f514803565bf8567bb6d17f89d",
+        "a961c7082f1dcc021b2d0e2f7f01b6a3e186f398b797e0b3a030e74ae3ec76f1"
+      ],
+      "repetitionBaseline": true
+    }
+  ]
+}
