@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "kind": "generation-cost-estimate",
+  "budgetId": "phase5b-smoke-01",
+  "authorizedTotalUSD": 0.15,
+  "pricingSource": "https://developers.openai.com/api/docs/models/gpt-5-nano",
+  "pricingDate": "2026-11-04",
+  "invoiceInspected": false,
+  "scope": "OpenAI generation only; no TTS or images",
+  "id": "cafe-dessert-03",
+  "requests": 2,
+  "usage": {
+    "inputTokens": 3987,
+    "outputTokens": 4353,
+    "reasoningTokens": 1984,
+    "cachedInputTokens": 0
+  },
+  "estimatedCostUSD": 0.00194055,
+  "attempts": [
+    {
+      "number": 1,
+      "state": "invalid",
+      "reservedUnits": 24800000,
+      "chargedUnits": 1111850,
+      "startedAt": "2026-11-05T05:58:44.017Z",
+      "usage": {
+        "inputTokens": 1325,
+        "outputTokens": 2614,
+        "totalTokens": 3939,
+        "reasoningTokens": 1344,
+        "cachedInputTokens": 0
+      },
+      "requestId": "req_f9e63305e51e4b7abe35fa4781e9a7d8",
+      "returnedModel": "gpt-5-nano-2025-08-07",
+      "errors": [
+        "quiz.questions: Too big: expected array to have <=6 items",
+        "quiz.questions.0.scenario: Must contain at most 40 Unicode code points",
+        "quiz.questions.5: Unrecognized keys: \"correctAnswerIndex\", \"explanation\", \"reveal\"",
+        "narration.segments.19.text: Too small: expected string to have >=1 characters",
+        "narration.segments.19.text: Must not be blank",
+        "narration.segments: Too big: expected array to have <=19 items"
+      ]
+    },
+    {
+      "number": 2,
+      "state": "invalid",
+      "reservedUnits": 24800000,
+      "chargedUnits": 828700,
+      "startedAt": "2026-11-05T05:59:02.172Z",
+      "usage": {
+        "inputTokens": 2662,
+        "outputTokens": 1739,
+        "totalTokens": 4401,
+        "reasoningTokens": 640,
+        "cachedInputTokens": 0
+      },
+      "requestId": "req_09d9b91fc96f445397d51ce7600c544f",
+      "returnedModel": "gpt-5-nano-2025-08-07",
+      "errors": [
+        "quiz.questions.0.scenario: Must contain at most 40 Unicode code points",
+        "quiz.questions.5.spokenPrompt: Must not be empty or whitespace-only",
+        "narration.segments.16.text: Too small: expected string to have >=1 characters",
+        "narration.segments.16.text: Must not be blank"
+      ]
+    }
+  ]
+}

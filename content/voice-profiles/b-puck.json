@@ -1,0 +1,7 @@
+{
+  "id": "b-puck",
+  "label": "B — Conversational Puck pair",
+  "profile": {"provider": "google-cloud-tts", "model": "chirp3-hd",
+    "voices": {"en-US": "en-US-Chirp3-HD-Puck", "ko-KR": "ko-KR-Chirp3-HD-Puck"},
+    "outputFormat": "LINEAR16", "sampleRateHertz": 24000, "speakingRate": 1}
+}

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "kind": "user-generation-spending-authorization",
+  "experimentHash": "40a229f9def7aa3ab269d4894b03e1c305f9605327eefd9ee305060b46165415",
+  "budgetId": "phase5b-quality-02",
+  "model": "gpt-6-luna",
+  "capUSD": 0.12,
+  "maximumRequests": 6,
+  "source": "User reply: Approve this experiment, up to $0.12",
+  "recordedAt": "2026-11-05T06:47:00.061Z",
+  "excludes": [
+    "content approval",
+    "TTS",
+    "images",
+    "rendering",
+    "stronger models"
+  ]
+}

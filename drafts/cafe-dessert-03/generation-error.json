@@ -1,0 +1,6 @@
+{
+  "valid": false,
+  "errors": [
+    "Generation did not validate within the two-request limit. Inspect C:\\Users\\david\\Documents\\kor-vids\\drafts\\cafe-dessert-03\\generation and generation-error.json. No draft approved."
+  ]
+}

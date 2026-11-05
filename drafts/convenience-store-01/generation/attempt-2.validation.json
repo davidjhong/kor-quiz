@@ -1,0 +1,6 @@
+{
+  "valid": false,
+  "errors": [
+    "quiz.questions.5.prompt: Must contain at most 100 Unicode code points"
+  ]
+}

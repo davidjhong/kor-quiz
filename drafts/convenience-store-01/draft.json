@@ -1,0 +1,357 @@
+{
+  "version": 1,
+  "brief": {
+    "scenario": "Buying a snack and a ready meal at a convenience store: ask for a shopping bag, request chopsticks, ask staff to heat food, ask whether card payment is possible, locate an item, and ask whether a smaller size is available. Each question should make the requested item or service explicit. Use distinct tasks, and make the last permission or availability question the hard comment bonus.",
+    "audience": "English-speaking adults learning practical beginner Korean",
+    "level": "Beginner: progress from short polite requests to location and availability questions; two easy, two medium, two hard",
+    "backgroundAssetId": null,
+    "scenarioType": "convenience-store"
+  },
+  "provenance": {
+    "method": "openai-responses",
+    "provider": "openai",
+    "model": "gpt-5-nano-2025-08-07",
+    "requestedModel": "gpt-5-nano-2025-08-07",
+    "returnedModel": "gpt-5-nano-2025-08-07",
+    "promptVersion": "phase5b-v2",
+    "schemaVersion": "phase5b-education-v2",
+    "generatedAt": "2026-11-05T06:04:14.643Z",
+    "sourceHash": "ea0ff7dc4b90de6c96ffcd0a1bfd75d7993eb9f97ee5a7598dff3f9897c7d5b7",
+    "requestId": "req_11d8bed20cbc439f81566d3851c39667",
+    "responseId": "resp_0d9bf74f21d6d186016aec1c5f052887d096a2f4d4612c0738",
+    "reportedUsage": {
+      "inputTokens": 2964,
+      "outputTokens": 1965,
+      "totalTokens": 4929,
+      "reasoningTokens": 704,
+      "cachedInputTokens": 0
+    },
+    "estimatedCostUSD": 0.0017171,
+    "attempts": 2,
+    "pricingSource": "https://developers.openai.com/api/docs/models/gpt-5-nano",
+    "pricingDate": "2026-11-04",
+    "generationId": "phase5b-smoke-01"
+  },
+  "quiz": {
+    "videoId": "convenience-store-01",
+    "episodeTitle": "Can you say it in Korean?",
+    "openingSubtitle": "Easy to hard",
+    "endingMode": "comment-challenge",
+    "minimumDurationSeconds": 65,
+    "backgroundAssetId": null,
+    "showRomanization": true,
+    "questions": [
+      {
+        "id": "convenience-store-01-q1",
+        "difficulty": "easy",
+        "scenario": "Buying a snack and a ready meal at a 편의점",
+        "prompt": "Please ask for a shopping bag at the counter.",
+        "context": "You have two items and want a bag.",
+        "spokenPrompt": "How would you ask for a bag to put your items in?",
+        "choices": [
+          {
+            "hangul": "봉투 주세요.",
+            "romanization": "bongtu juseyo."
+          },
+          {
+            "hangul": "봉투로 포장해 주세요.",
+            "romanization": "bongturo pojanghae juseyo."
+          },
+          {
+            "hangul": "가방 주세요.",
+            "romanization": "gabang juseyo."
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": " 주세요 = please give me; 봉투 is bag, 포장해 주세요 asks for packaging.",
+        "reveal": {
+          "translation": "A bag, please.",
+          "teachingPoint": "주세요 = please give me; choose the brief, correct way to request a bag."
+        }
+      },
+      {
+        "id": "convenience-store-01-q2",
+        "difficulty": "easy",
+        "scenario": "Buying a snack and a ready meal at a 편의점",
+        "prompt": "What do you say to ask for chopsticks?",
+        "context": "You want chopsticks to eat your meal.",
+        "spokenPrompt": "How would you ask staff for chopsticks?",
+        "choices": [
+          {
+            "hangul": "젓가락 주세요.",
+            "romanization": "jeotgarak juseyo."
+          },
+          {
+            "hangul": "젓가락으로 주세요.",
+            "romanization": "jeotgarakseu juseyo."
+          },
+          {
+            "hangul": "젓가락이 있어요?",
+            "romanization": "jeotgaraki isseoyo?"
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": " 주세요 새로 주세요 is incorrect; 젓가락 주세요 is the natural request.",
+        "reveal": {
+          "translation": "Chopsticks, please.",
+          "teachingPoint": "주세요 + item name is the standard pattern for a polite request."
+        }
+      },
+      {
+        "id": "convenience-store-01-q3",
+        "difficulty": "medium",
+        "scenario": "Buying a snack and a ready meal at a 편의점",
+        "prompt": "Please have the staff heat your food.",
+        "context": "The ready meal is cold when you pick it up.",
+        "spokenPrompt": "How would you ask to heat your meal?",
+        "choices": [
+          {
+            "hangul": "데우고 주세요.",
+            "romanization": "deugo juseyo."
+          },
+          {
+            "hangul": "따뜻하게 데워 주세요.",
+            "romanization": "ttatteuthage dewo juseyo."
+          },
+          {
+            "hangul": "음식 데워 주세요.",
+            "romanization": "eumsik dewo juseyo."
+          }
+        ],
+        "correctAnswerIndex": 2,
+        "explanation": " 음식 데워 주세요 is natural in context; 데워 주세요 is common shorthand.",
+        "reveal": {
+          "translation": "Please heat the food.",
+          "teachingPoint": "데워 주세요 = please heat it up; position the verb appropriately."
+        }
+      },
+      {
+        "id": "convenience-store-01-q4",
+        "difficulty": "medium",
+        "scenario": "Buying a snack and a ready meal at a 편의점",
+        "prompt": "Can I pay with a card?",
+        "context": "You want to know if card payment is possible.",
+        "spokenPrompt": "Is card payment available here?",
+        "choices": [
+          {
+            "hangul": "카드로 결제할 수 있어요?",
+            "romanization": "kadeuro gyeolje halssoeyo?"
+          },
+          {
+            "hangul": "카드로 결제돼요?",
+            "romanization": "kadeuro gyeoljedoen?"
+          },
+          {
+            "hangul": "현금으로만 계산해 주세요.",
+            "romanization": "hyeongeumeu manually juseyo."
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": " 카드로 결제할 수 있어요? is the natural question about card payment.",
+        "reveal": {
+          "translation": "Can I pay by card?",
+          "teachingPoint": "카드로 결제할 수 있어요? = Can I pay with a card?"
+        }
+      },
+      {
+        "id": "convenience-store-01-q5",
+        "difficulty": "hard",
+        "scenario": "Buying a snack and a ready meal at a 편의점",
+        "prompt": "Could you help me locate a specific item in the aisle?",
+        "context": "You are looking for a particular snack.",
+        "spokenPrompt": "Where is the oolong tea in this section?",
+        "choices": [
+          {
+            "hangul": "이쪽에 있나요?",
+            "romanization": "ijjoge innayo?"
+          },
+          {
+            "hangul": "저쪽에 있어요?",
+            "romanization": "jeojjoge isseoyo?"
+          },
+          {
+            "hangul": "이 품목은 어디에 있어요?",
+            "romanization": "i pummok-eun eodi-e isseoyo?"
+          }
+        ],
+        "correctAnswerIndex": 2,
+        "explanation": " 어디에 있어요? means where is it, with item reference.",
+        "reveal": {
+          "translation": "Where is this item?",
+          "teachingPoint": "어디에 있어요? = where is it; use when asking for location of a specific item."
+        }
+      },
+      {
+        "id": "convenience-store-01-q6",
+        "difficulty": "hard",
+        "scenario": "Bonus hard question (public)",
+        "prompt": "In this store, is there a smaller size available for this ready meal, and can I pay with a card if I want to buy it in that size?",
+        "context": "You want a smaller portion and wonder about payment.",
+        "spokenPrompt": "Is a smaller size available, and can I pay by card if you choose that size?",
+        "choices": [
+          {
+            "hangul": "작은 사이즈 있어요? 카드로 결제해도 돼요?",
+            "romanization": "jakeun saijeu isseoyo? kadeuro gyeoljehaedo dwaeyo?"
+          },
+          {
+            "hangul": "작게 포장돼요? 현금으로만 돼요?",
+            "romanization": "jage pojangdo? hyeongeumeuroman dwaeyo?"
+          },
+          {
+            "hangul": "소용량 있어요? 카드로 결제해도 돼요?",
+            "romanization": "soyongnyang isseoyo? kadeuro gyeoljehaedo dwaeyo?"
+          }
+        ]
+      }
+    ]
+  },
+  "narration": {
+    "version": 1,
+    "profile": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Kore",
+        "ko-KR": "ko-KR-Chirp3-HD-Kore"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "segments": [
+      {
+        "id": "convenience-store-01-hook",
+        "contentId": "convenience-store-01",
+        "role": "hook",
+        "language": "en-US",
+        "text": "Can you say it in Korean?"
+      },
+      {
+        "id": "convenience-store-01-q1-question",
+        "contentId": "convenience-store-01-q1",
+        "role": "question",
+        "language": "en-US",
+        "text": "How would you ask for a bag to put your items in?"
+      },
+      {
+        "id": "convenience-store-01-q1-answer",
+        "contentId": "convenience-store-01-q1",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "봉투 주세요."
+      },
+      {
+        "id": "convenience-store-01-q1-explanation",
+        "contentId": "convenience-store-01-q1",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "A simple polite request using 주세요 is common for items like bags."
+      },
+      {
+        "id": "convenience-store-01-q2-question",
+        "contentId": "convenience-store-01-q2",
+        "role": "question",
+        "language": "en-US",
+        "text": "How would you ask staff for chopsticks?"
+      },
+      {
+        "id": "convenience-store-01-q2-answer",
+        "contentId": "convenience-store-01-q2",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "젓가락 주세요."
+      },
+      {
+        "id": "convenience-store-01-q2-explanation",
+        "contentId": "convenience-store-01-q2",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "Requesting utensils often uses the item followed by 주세요."
+      },
+      {
+        "id": "convenience-store-01-q3-question",
+        "contentId": "convenience-store-01-q3",
+        "role": "question",
+        "language": "en-US",
+        "text": "How would you ask to heat your meal?"
+      },
+      {
+        "id": "convenience-store-01-q3-answer",
+        "contentId": "convenience-store-01-q3",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "음식 데워 주세요."
+      },
+      {
+        "id": "convenience-store-01-q3-explanation",
+        "contentId": "convenience-store-01-q3",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "Polite request to heat food should clearly reference the item."
+      },
+      {
+        "id": "convenience-store-01-q4-question",
+        "contentId": "convenience-store-01-q4",
+        "role": "question",
+        "language": "en-US",
+        "text": "Is card payment available here?"
+      },
+      {
+        "id": "convenience-store-01-q4-answer",
+        "contentId": "convenience-store-01-q4",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "카드로 결제할 수 있어요?"
+      },
+      {
+        "id": "convenience-store-01-q4-explanation",
+        "contentId": "convenience-store-01-q4",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "Ask about payment methods politely before paying."
+      },
+      {
+        "id": "convenience-store-01-q5-question",
+        "contentId": "convenience-store-01-q5",
+        "role": "question",
+        "language": "en-US",
+        "text": "Where is the oolong tea in this section?"
+      },
+      {
+        "id": "convenience-store-01-q5-answer",
+        "contentId": "convenience-store-01-q5",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "이 품목은 어디에 있어요?"
+      },
+      {
+        "id": "convenience-store-01-q5-explanation",
+        "contentId": "convenience-store-01-q5",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "Location questions help you find items efficiently."
+      },
+      {
+        "id": "convenience-store-01-q6-question",
+        "contentId": "convenience-store-01-q6",
+        "role": "question",
+        "language": "en-US",
+        "text": "Is a smaller size available, and can I pay by card if you choose that size?"
+      },
+      {
+        "id": "convenience-store-01-q6-comment",
+        "contentId": "convenience-store-01-q6",
+        "role": "comment",
+        "language": "en-US",
+        "text": "What do you think? Comment your answer!"
+      },
+      {
+        "id": "convenience-store-01-q6-follow",
+        "contentId": "convenience-store-01-q6",
+        "role": "follow",
+        "language": "en-US",
+        "text": "Follow for more Korean!"
+      }
+    ]
+  }
+}

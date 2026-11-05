@@ -18,12 +18,16 @@ export const canonical = (value: unknown): string => {
 };
 export const quizSpeechFingerprint = (quiz: QuizInput) => sha256(canonical({videoId: quiz.videoId, title: quiz.episodeTitle,
   endingMode: quiz.endingMode ?? 'standard', questions: quiz.questions.map((question) => ({id: question.id,
-    prompt: question.prompt, context: question.context, choices: question.choices.map((choice) => typeof choice === 'string' ? choice : choice.hangul),
+    prompt: question.prompt, context: question.context,
+    ...(question.spokenPrompt !== undefined ? {spokenPrompt: question.spokenPrompt} : {}),
+    choices: question.choices.map((choice) => typeof choice === 'string' ? choice : choice.hangul),
     correctAnswerIndex: question.correctAnswerIndex, explanation: question.explanation, reveal: question.reveal}))}));
 export const synthesisIdentity = (segment: NarrationSegment, profile: NarrationScript['profile'], localChecksum?: string) => ({
   text: segment.text, language: segment.language, provider: localChecksum ? 'local-recording' : profile.provider,
   model: localChecksum ? 'recording' : profile.model, voiceId: localChecksum ? segment.recordingId ?? 'local-recording' : profile.voices[segment.language],
-  settings: {speakingRate: profile.speakingRate}, outputFormat: profile.outputFormat, sampleRateHertz: profile.sampleRateHertz,
+  settings: {speakingRate: profile.speakingRate,
+    ...(profile.model === 'gemini-2.5-flash-tts' ? {stylePrompt: profile.stylePrompts[segment.language]} : {})},
+  outputFormat: profile.outputFormat, sampleRateHertz: profile.sampleRateHertz,
   ...(localChecksum ? {localChecksum} : {}), processing: AUDIO_PROCESSING,
 });
 export const audioCacheKey = (segment: NarrationSegment, profile: NarrationScript['profile'], localChecksum?: string) =>

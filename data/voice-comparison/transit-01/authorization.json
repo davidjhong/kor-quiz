@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "source": "User reply: Approve audition, up to $2.04",
+  "scope": "Phase 5C transit comparison excerpt only; six clips each for a-baseline, b-puck, c-achird; no full episode or content generation",
+  "contentHash": "194914b5a3f37cae33226de035954d6cc6a4bab831c4b5e6eb5b96bc3546fdd0",
+  "capUSD": 2.04,
+  "maximumRequestsPerCacheKey": 2,
+  "retryPolicy": "one retry only for explicit rate limits; no retries for uncertain outcomes",
+  "maximumNewChirpCharactersIncludingRetries": 584,
+  "maximumNewGeminiRequestsIncludingRetries": 12,
+  "geminiMaximumInputTokensPerRequest": 8192,
+  "geminiMaximumAudioTokensPerRequest": 16384,
+  "pricesChecked": "2026-11-05",
+  "pricingSource": "https://cloud.google.com/text-to-speech/pricing",
+  "fullEpisodeSynthesisAuthorized": false
+}

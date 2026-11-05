@@ -1,0 +1,24 @@
+{
+  "valid": false,
+  "contentHash": "852b9e625443da31b551517285997444768f00bb242aa6454780f89eca3bb44c",
+  "errors": [
+    "quiz.questions.0.scenario: Must contain at most 40 Unicode code points",
+    "quiz.questions.5.spokenPrompt: Must not be empty or whitespace-only",
+    "narration.segments.16.text: Too small: expected string to have >=1 characters",
+    "narration.segments.16.text: Must not be blank"
+  ],
+  "warnings": [
+    "Structural validation does not establish Korean accuracy, naturalness, difficulty or semantic answer uniqueness. Human review is required."
+  ],
+  "linguisticReviewRequired": true,
+  "generationEstimatedCostUSD": 0.00194055,
+  "reportedGenerationUsage": {
+    "inputTokens": 2662,
+    "outputTokens": 1739,
+    "totalTokens": 4401,
+    "reasoningTokens": 640,
+    "cachedInputTokens": 0
+  },
+  "renderReady": false,
+  "renderBlockers": []
+}

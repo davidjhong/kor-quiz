@@ -1,0 +1,7 @@
+{
+  "scenario": "Buying a snack and a ready meal at a convenience store: ask for a shopping bag, request chopsticks, ask staff to heat food, ask whether card payment is possible, locate an item, and ask whether a smaller size is available. Each question should make the requested item or service explicit. Use distinct tasks, and make the last permission or availability question the hard comment bonus.",
+  "audience": "English-speaking adults learning practical beginner Korean",
+  "level": "Beginner: progress from short polite requests to location and availability questions; two easy, two medium, two hard",
+  "scenarioType": "convenience-store",
+  "backgroundAssetId": null
+}

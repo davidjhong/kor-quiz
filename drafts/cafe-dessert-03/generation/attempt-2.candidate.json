@@ -1,0 +1,366 @@
+{
+  "draft": {
+    "version": 1,
+    "brief": {
+      "scenario": "At a café dessert counter: ask for a menu, order a slice of cake, request a fork, request an extra plate for sharing, ask whether a dessert contains nuts, and ask which desserts are available without milk. Avoid tasks from previous café episodes: greetings, coffee quantities or temperature, adding milk, takeaway, water, ice, cup return, phone charging, prices and drink replacement. Make each context explicit and keep the final task a hard beginner comment bonus.",
+      "audience": "English-speaking adults learning practical beginner Korean",
+      "level": "Beginner: two easy, two medium and two relatively hard questions, with polite requests and simple ingredient questions",
+      "backgroundAssetId": "korean-cafe-illustrated-v1",
+      "scenarioType": "cafe"
+    },
+    "provenance": {
+      "method": "openai-responses",
+      "provider": "openai",
+      "model": "gpt-5-nano-2025-08-07",
+      "requestedModel": "gpt-5-nano-2025-08-07",
+      "returnedModel": "gpt-5-nano-2025-08-07",
+      "promptVersion": "phase5b-v1",
+      "schemaVersion": "phase5b-education-v1",
+      "generatedAt": "2026-11-05T05:59:02.172Z",
+      "sourceHash": "6e243011d83d10ee140e3b11da53d1ddc5492ca70d528d0b8c49f7c97f8e36ed",
+      "requestId": "req_09d9b91fc96f445397d51ce7600c544f",
+      "responseId": "resp_06559ed2bfa09898016aec1b26964487d0bd3a8b13f51074b6",
+      "reportedUsage": {
+        "inputTokens": 2662,
+        "outputTokens": 1739,
+        "totalTokens": 4401,
+        "reasoningTokens": 640,
+        "cachedInputTokens": 0
+      },
+      "estimatedCostUSD": 0.00194055,
+      "attempts": 2,
+      "pricingSource": "https://developers.openai.com/api/docs/models/gpt-5-nano",
+      "pricingDate": "2026-11-04",
+      "generationId": "phase5b-smoke-01"
+    },
+    "quiz": {
+      "videoId": "cafe-dessert-03",
+      "episodeTitle": "Can you say it in Korean?",
+      "openingSubtitle": "Easy to hard",
+      "endingMode": "comment-challenge",
+      "minimumDurationSeconds": 65,
+      "backgroundAssetId": "korean-cafe-illustrated-v1",
+      "showRomanization": true,
+      "questions": [
+        {
+          "id": "cafe-dessert-03-q1",
+          "difficulty": "easy",
+          "scenario": "At a café dessert counter, you want to start by politely asking for the menu.",
+          "prompt": "Ask for the menu politely.",
+          "context": "In a café, you want to see what sweet options are available.",
+          "spokenPrompt": "메뉴 좀 보여 주세요.",
+          "choices": [
+            {
+              "hangul": "메뉴 좀 보여 주세요.",
+              "romanization": "menyu jom boyeojuseyo."
+            },
+            {
+              "hangul": "메뉴 주세요.",
+              "romanization": "menyu juseyo."
+            },
+            {
+              "hangul": "메뉴 있어요?",
+              "romanization": "menyu isseoyo?"
+            }
+          ],
+          "correctAnswerIndex": 0,
+          "explanation": "주세요 = please give me",
+          "reveal": {
+            "translation": "Please show me the menu.",
+            "teachingPoint": "주세요 = please give me"
+          }
+        },
+        {
+          "id": "cafe-dessert-03-q2",
+          "difficulty": "easy",
+          "scenario": "At the counter",
+          "prompt": "Order a slice of cake.",
+          "context": "You want a single piece of cake.",
+          "spokenPrompt": "케이크 한 조각 주세요.",
+          "choices": [
+            {
+              "hangul": "케이크 한 조각 주세요.",
+              "romanization": "keikeu han jogak juseyo."
+            },
+            {
+              "hangul": "케이크 주세요.",
+              "romanization": "keikeu juseyo."
+            },
+            {
+              "hangul": "케이크 맛있어요?",
+              "romanization": "keikeu masisseoyo?"
+            }
+          ],
+          "correctAnswerIndex": 0,
+          "explanation": "한 조각 = one piece",
+          "reveal": {
+            "translation": "One slice of cake, please.",
+            "teachingPoint": "한 조각 주세요 shows quantity"
+          }
+        },
+        {
+          "id": "cafe-dessert-03-q3",
+          "difficulty": "medium",
+          "scenario": "At the counter",
+          "prompt": "Ask whether the dessert contains nuts.",
+          "context": "You have an allergy to nuts and need to check ingredients.",
+          "spokenPrompt": "이 디저트에 견과류가 들어 있나요?",
+          "choices": [
+            {
+              "hangul": "이 디저트에 견과류가 들어 있나요?",
+              "romanization": "i dijeoteue gyeongwa-ryuga deureo innayo?"
+            },
+            {
+              "hangul": "견과류 있어요?",
+              "romanization": "gyeongwa-ryu isseoyo?"
+            },
+            {
+              "hangul": "견과류 빼 주세요.",
+              "romanization": "gyeongwa-ryu ppae juseyo."
+            }
+          ],
+          "correctAnswerIndex": 0,
+          "explanation": "견과류 = nuts",
+          "reveal": {
+            "translation": "Are there nuts in this dessert?",
+            "teachingPoint": "Ask ingredient questions clearly"
+          }
+        },
+        {
+          "id": "cafe-dessert-03-q4",
+          "difficulty": "medium",
+          "scenario": "At the counter",
+          "prompt": "Ask which desserts are available without milk.",
+          "context": "You want dairy-free options.",
+          "spokenPrompt": "우유 없이 가능한 디저트가 어떤 게 있어요?",
+          "choices": [
+            {
+              "hangul": "우유 없이 가능한 디저트가 어떤 게 있어요?",
+              "romanization": "uyu eopsi ganeunghan dijeoteuga eotteon ge isseoyo?"
+            },
+            {
+              "hangul": "우유 들어간 디저트 있어요?",
+              "romanization": "uyu deureogan dijeoteu isseoyo?"
+            },
+            {
+              "hangul": "우유 빼고 주세요.",
+              "romanization": "uyu ppaego juseyo."
+            }
+          ],
+          "correctAnswerIndex": 0,
+          "explanation": "우유 없이 = without milk",
+          "reveal": {
+            "translation": "Which desserts are dairy-free?",
+            "teachingPoint": "Ask about dairy-free options"
+          }
+        },
+        {
+          "id": "cafe-dessert-03-q5",
+          "difficulty": "hard",
+          "scenario": "At the counter",
+          "prompt": "You want to discuss sharing and request an extra plate for sharing.",
+          "context": "You plan to share a dessert with a friend.",
+          "spokenPrompt": "나눠 먹을 접시 하나 더 주세요.",
+          "choices": [
+            {
+              "hangul": "나눠 먹을 접시 하나 더 주세요.",
+              "romanization": "nanwo meogeul jeopsi hana deo juseyo."
+            },
+            {
+              "hangul": "접시 하나 주세요.",
+              "romanization": "jeopsi hana juseyo."
+            },
+            {
+              "hangul": "포크 하나 더 주세요.",
+              "romanization": "pokeu hana deo juseyo."
+            }
+          ],
+          "correctAnswerIndex": 0,
+          "explanation": "하나 더 주세요 = one more plate",
+          "reveal": {
+            "translation": "Please give me one more plate for sharing.",
+            "teachingPoint": "Request an extra plate for sharing"
+          }
+        },
+        {
+          "id": "cafe-dessert-03-q6",
+          "difficulty": "hard",
+          "scenario": "Bonus hard task: private review item.",
+          "prompt": "Determine a private answer index and rationale for creator review only.",
+          "context": "No public hints, for creator use.",
+          "spokenPrompt": "",
+          "choices": [
+            {
+              "hangul": "나눠 먹을 접시 하나 더 주세요.",
+              "romanization": "nanwo meogeul jeopsi hana deo juseyo."
+            },
+            {
+              "hangul": "메뉴 오늘 다 팔려요?",
+              "romanization": "menyu oneul daryeoyo?"
+            },
+            {
+              "hangul": "케이크가 남았나요?",
+              "romanization": "keikeuga namannayo?"
+            }
+          ]
+        }
+      ]
+    },
+    "narration": {
+      "version": 1,
+      "profile": {
+        "provider": "google-cloud-tts",
+        "model": "chirp3-hd",
+        "voices": {
+          "en-US": "en-US-Chirp3-HD-Kore",
+          "ko-KR": "ko-KR-Chirp3-HD-Kore"
+        },
+        "outputFormat": "LINEAR16",
+        "sampleRateHertz": 24000,
+        "speakingRate": 1
+      },
+      "segments": [
+        {
+          "id": "cafe-dessert-03-hook",
+          "contentId": "cafe-dessert-03",
+          "role": "hook",
+          "language": "en-US",
+          "text": "Can you say it in Korean?"
+        },
+        {
+          "id": "cafe-dessert-03-q1-question",
+          "contentId": "cafe-dessert-03-q1",
+          "role": "question",
+          "language": "en-US",
+          "text": "메뉴 좀 보여 주세요."
+        },
+        {
+          "id": "cafe-dessert-03-q1-answer",
+          "contentId": "cafe-dessert-03-q1",
+          "role": "answer",
+          "language": "ko-KR",
+          "text": "메뉴 좀 보여 주세요."
+        },
+        {
+          "id": "cafe-dessert-03-q1-explanation",
+          "contentId": "cafe-dessert-03-q1",
+          "role": "explanation",
+          "language": "en-US",
+          "text": "Use a polite request to show interest in options."
+        },
+        {
+          "id": "cafe-dessert-03-q2-question",
+          "contentId": "cafe-dessert-03-q2",
+          "role": "question",
+          "language": "en-US",
+          "text": "케이크 한 조각 주세요."
+        },
+        {
+          "id": "cafe-dessert-03-q2-answer",
+          "contentId": "cafe-dessert-03-q2",
+          "role": "answer",
+          "language": "ko-KR",
+          "text": "케이크 한 조각 주세요."
+        },
+        {
+          "id": "cafe-dessert-03-q2-explanation",
+          "contentId": "cafe-dessert-03-q2",
+          "role": "explanation",
+          "language": "en-US",
+          "text": "A precise request helps staff prepare the right amount."
+        },
+        {
+          "id": "cafe-dessert-03-q3-question",
+          "contentId": "cafe-dessert-03-q3",
+          "role": "question",
+          "language": "en-US",
+          "text": "이 디저트에 견과류가 들어 있나요?"
+        },
+        {
+          "id": "cafe-dessert-03-q3-answer",
+          "contentId": "cafe-dessert-03-q3",
+          "role": "answer",
+          "language": "ko-KR",
+          "text": "이 디저트에 견과류가 들어 있나요?"
+        },
+        {
+          "id": "cafe-dessert-03-q3-explanation",
+          "contentId": "cafe-dessert-03-q3",
+          "role": "explanation",
+          "language": "en-US",
+          "text": "Ask about ingredients to avoid allergens."
+        },
+        {
+          "id": "cafe-dessert-03-q4-question",
+          "contentId": "cafe-dessert-03-q4",
+          "role": "question",
+          "language": "en-US",
+          "text": "우유 없이 가능한 디저트가 어떤 게 있어요?"
+        },
+        {
+          "id": "cafe-dessert-03-q4-answer",
+          "contentId": "cafe-dessert-03-q4",
+          "role": "answer",
+          "language": "ko-KR",
+          "text": "우유 없이 가능한 디저트가 어떤 게 있어요?"
+        },
+        {
+          "id": "cafe-dessert-03-q4-explanation",
+          "contentId": "cafe-dessert-03-q4",
+          "role": "explanation",
+          "language": "en-US",
+          "text": "Identify dairy-free desserts before choosing."
+        },
+        {
+          "id": "cafe-dessert-03-q5-question",
+          "contentId": "cafe-dessert-03-q5",
+          "role": "question",
+          "language": "en-US",
+          "text": "나눠 먹을 접시 하나 더 주세요."
+        },
+        {
+          "id": "cafe-dessert-03-q5-answer",
+          "contentId": "cafe-dessert-03-q5",
+          "role": "answer",
+          "language": "ko-KR",
+          "text": "나눠 먹을 접시 하나 더 주세요."
+        },
+        {
+          "id": "cafe-dessert-03-q5-explanation",
+          "contentId": "cafe-dessert-03-q5",
+          "role": "explanation",
+          "language": "en-US",
+          "text": "Use polite phrasing to plan sharing."
+        },
+        {
+          "id": "cafe-dessert-03-q6-question",
+          "contentId": "cafe-dessert-03-q6",
+          "role": "question",
+          "language": "en-US",
+          "text": ""
+        },
+        {
+          "id": "cafe-dessert-03-q6-comment",
+          "contentId": "cafe-dessert-03-q6",
+          "role": "comment",
+          "language": "en-US",
+          "text": "What do you think? Comment your answer!"
+        },
+        {
+          "id": "cafe-dessert-03-q6-follow",
+          "contentId": "cafe-dessert-03-q6",
+          "role": "follow",
+          "language": "en-US",
+          "text": "Follow for more Korean!"
+        }
+      ]
+    }
+  },
+  "key": {
+    "questionId": "cafe-dessert-03-q6",
+    "correctAnswerIndex": 0,
+    "explanation": "This item is used for creator review to confirm difficulty level and teaching point alignment.",
+    "translation": "Please give one more plate for sharing (private answer).",
+    "teachingPoint": "Private review note for content quality and alignment."
+  }
+}

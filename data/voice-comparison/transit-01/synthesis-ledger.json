@@ -1,0 +1,133 @@
+{
+  "planHash": "dd85ba10ed0e21045617ac21a57fac9e8cff75e0905b3e831e3feaf569edbd13",
+  "state": "ready",
+  "attempts": [
+    {
+      "cacheKey": "c394da4b6f6b0bbde259dc90635f2817320754299fb240ce474341eaf25a062f",
+      "profileId": "b-puck",
+      "model": "chirp3-hd",
+      "characters": 25,
+      "reservedUSD": 0.00075,
+      "chargedEstimateUSD": 0.00075,
+      "status": "prepared-local-audio"
+    },
+    {
+      "cacheKey": "e0be0be4991ada6a0e248fa5096bc0a6e6bbbc0a019beb63598c3df9f59c858b",
+      "profileId": "b-puck",
+      "model": "chirp3-hd",
+      "characters": 74,
+      "reservedUSD": 0.00222,
+      "chargedEstimateUSD": 0.00222,
+      "status": "prepared-local-audio"
+    },
+    {
+      "cacheKey": "566370f465cba1ea85b3fe4c4df11da7e6d963c6be965bb1dfce9e87a40f3067",
+      "profileId": "b-puck",
+      "model": "chirp3-hd",
+      "characters": 11,
+      "reservedUSD": 0.00033,
+      "chargedEstimateUSD": 0.00033,
+      "status": "prepared-local-audio"
+    },
+    {
+      "cacheKey": "8a198769b5d2f59b3f73a9a570dc7de1f33b9c6ea1371b25b0baba9f26d7ca47",
+      "profileId": "b-puck",
+      "model": "chirp3-hd",
+      "characters": 120,
+      "reservedUSD": 0.0036,
+      "chargedEstimateUSD": 0.0036,
+      "status": "prepared-local-audio"
+    },
+    {
+      "cacheKey": "77c76fe19651b3b6f05ebbe408cf430b07ae072437b95d699eed489a12b8e4c4",
+      "profileId": "b-puck",
+      "model": "chirp3-hd",
+      "characters": 39,
+      "reservedUSD": 0.00117,
+      "chargedEstimateUSD": 0.00117,
+      "status": "prepared-local-audio"
+    },
+    {
+      "cacheKey": "922ca91a056f02794ef88184fd705551b40b4379108d01857298d839da0d3ce5",
+      "profileId": "b-puck",
+      "model": "chirp3-hd",
+      "characters": 23,
+      "reservedUSD": 0.00069,
+      "chargedEstimateUSD": 0.00069,
+      "status": "prepared-local-audio"
+    },
+    {
+      "cacheKey": "250cb51dd59da27d9e4524c25a4776a5753c314f734b5271a04c0dc6d666ec96",
+      "profileId": "c-achird",
+      "model": "gemini-2.5-flash-tts",
+      "characters": 25,
+      "reservedUSD": 0.167936,
+      "chargedEstimateUSD": 0.167936,
+      "status": "permission-rejected-reservation-retained"
+    },
+    {
+      "cacheKey": "b03314a1a056b827307ce797080d4b15544d9502a7f510a176d151da28c98eb8",
+      "profileId": "c-achird",
+      "model": "chirp3-hd",
+      "characters": 25,
+      "reservedUSD": 0.00075,
+      "chargedEstimateUSD": 0.00075,
+      "status": "prepared-local-audio"
+    },
+    {
+      "cacheKey": "d4be89e3a0bd26b17aef4a80c7a02e70208a81122f5a56a16603ef5d8436af8a",
+      "profileId": "c-achird",
+      "model": "chirp3-hd",
+      "characters": 74,
+      "reservedUSD": 0.00222,
+      "chargedEstimateUSD": 0.00222,
+      "status": "prepared-local-audio"
+    },
+    {
+      "cacheKey": "b2b779c9430701e127b6ae35e2b8d4d4ea93a898edfb25f31c420234028f5f03",
+      "profileId": "c-achird",
+      "model": "chirp3-hd",
+      "characters": 11,
+      "reservedUSD": 0.00033,
+      "chargedEstimateUSD": 0.00033,
+      "status": "prepared-local-audio"
+    },
+    {
+      "cacheKey": "2ccd5ee90c2ca567e3583f3dc0a67fb753b41d379b890760c8d2b565954f0412",
+      "profileId": "c-achird",
+      "model": "chirp3-hd",
+      "characters": 120,
+      "reservedUSD": 0.0036,
+      "chargedEstimateUSD": 0.0036,
+      "status": "prepared-local-audio"
+    },
+    {
+      "cacheKey": "06907980bfef420ffd5fd752cb4b2dfb593bf7c3dfe3c18f58e475b76b2b3e29",
+      "profileId": "c-achird",
+      "model": "chirp3-hd",
+      "characters": 39,
+      "reservedUSD": 0.00117,
+      "chargedEstimateUSD": 0.00117,
+      "status": "prepared-local-audio"
+    },
+    {
+      "cacheKey": "b74615011f68405c3b6b89258ba612b99feea34931e3f82d1544b981836fe18a",
+      "profileId": "c-achird",
+      "model": "chirp3-hd",
+      "characters": 23,
+      "reservedUSD": 0.00069,
+      "chargedEstimateUSD": 0.00069,
+      "status": "prepared-local-audio"
+    }
+  ],
+  "scopeRevisions": [
+    {
+      "kind": "user-authorized-chirp-fallback",
+      "source": "User reply: Use Chirp Achird fallback within existing cap",
+      "fromPlanHash": "8dbe8a1e61e526aa31a023857302af3b1bf61eb67f93f03804b3244cfd7e94ca",
+      "toPlanHash": "dd85ba10ed0e21045617ac21a57fac9e8cff75e0905b3e831e3feaf569edbd13",
+      "contentHash": "194914b5a3f37cae33226de035954d6cc6a4bab831c4b5e6eb5b96bc3546fdd0",
+      "capUSD": 2.04
+    }
+  ]
+}

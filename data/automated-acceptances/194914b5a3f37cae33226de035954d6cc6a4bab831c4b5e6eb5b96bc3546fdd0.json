@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "kind": "automated-content-acceptance",
+  "status": "accepted",
+  "humanReviewed": false,
+  "contentHash": "194914b5a3f37cae33226de035954d6cc6a4bab831c4b5e6eb5b96bc3546fdd0",
+  "sourceContentHash": "194914b5a3f37cae33226de035954d6cc6a4bab831c4b5e6eb5b96bc3546fdd0",
+  "episodeId": "public-transit-02",
+  "acceptedAt": "2026-11-05T20:47:34.471Z",
+  "reviewerModel": "gpt-6-luna",
+  "reviewPromptVersion": "phase5b-automated-review-v1",
+  "verificationPromptVersion": null,
+  "correctionPromptVersion": null,
+  "reviewRequestIds": [
+    "req_9f47687534fa48368d88dcc8836917a7"
+  ],
+  "independence": "Separate requests to the configured model; not independent proof of Korean correctness.",
+  "finalFindings": {
+    "questions": [
+      {
+        "questionId": "public-transit-02-q1",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "public-transit-02-q2",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "public-transit-02-q3",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "public-transit-02-q4",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "public-transit-02-q5",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "public-transit-02-q6",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      }
+    ],
+    "resolutions": []
+  },
+  "verifiedFindingIds": [],
+  "revisions": [
+    {
+      "kind": "developer-background-selection",
+      "recordedAt": "2026-11-05T20:29:32.831Z",
+      "beforeHash": "399899ccb71ee6597783f75fac00b8237f192197c3d8c8a8fde64c078fecd4e8",
+      "afterHash": "194914b5a3f37cae33226de035954d6cc6a4bab831c4b5e6eb5b96bc3546fdd0",
+      "changes": [
+        {
+          "field": "quiz.backgroundAssetId",
+          "before": null,
+          "after": "korean-transit-illustrated-dev-v1"
+        },
+        {
+          "field": "brief.backgroundAssetId",
+          "before": null,
+          "after": "korean-transit-illustrated-dev-v1"
+        }
+      ],
+      "humanApproved": false
+    }
+  ],
+  "asset": {
+    "id": "korean-transit-illustrated-dev-v1",
+    "sha256": "3051c21c2dac0a5821849d27a16e1e717d6fd7e8e6790da526565f0f239adea7",
+    "selection": "developer-selected"
+  }
+}

@@ -12,15 +12,16 @@
     "openingSubtitle": "Easy to hard",
     "endingMode": "comment-challenge",
     "minimumDurationSeconds": 65,
-    "showRomanization": true,
     "backgroundAssetId": "korean-cafe-illustrated-v1",
+    "showRomanization": true,
     "questions": [
       {
         "id": "cafe-greet-staff",
-        "scenario": "Arriving at the café",
         "difficulty": "easy",
-        "context": "Say hello as you enter.",
+        "scenario": "Arriving at the café",
         "prompt": "Greet the café staff politely.",
+        "context": "Say hello as you enter.",
+        "spokenPrompt": "How would you greet the café staff?",
         "choices": [
           {
             "hangul": "안녕하세요.",
@@ -44,10 +45,11 @@
       },
       {
         "id": "cafe-order-one-coffee",
-        "scenario": "Ordering a drink",
         "difficulty": "easy",
-        "context": "Ask for exactly one coffee, not tea.",
+        "scenario": "Ordering a drink",
         "prompt": "Order one cup of coffee.",
+        "context": "Ask for exactly one coffee, not tea.",
+        "spokenPrompt": "How would you order one coffee?",
         "choices": [
           {
             "hangul": "커피 두 잔 주세요.",
@@ -71,10 +73,11 @@
       },
       {
         "id": "cafe-order-hot-coffee",
-        "scenario": "Choosing a temperature",
         "difficulty": "medium",
-        "context": "You do not want a cold drink or tea.",
+        "scenario": "Choosing a temperature",
         "prompt": "Order a hot coffee.",
+        "context": "You do not want a cold drink or tea.",
+        "spokenPrompt": "How would you ask for a hot coffee?",
         "choices": [
           {
             "hangul": "차가운 커피 주세요.",
@@ -98,10 +101,11 @@
       },
       {
         "id": "cafe-add-milk",
-        "scenario": "Adding milk",
         "difficulty": "medium",
-        "context": "Add milk, rather than sugar.",
+        "scenario": "Adding milk",
         "prompt": "Ask for milk in your coffee.",
+        "context": "Add milk, rather than sugar.",
+        "spokenPrompt": "How would you ask them to add milk?",
         "choices": [
           {
             "hangul": "설탕 넣어 주세요.",
@@ -125,10 +129,11 @@
       },
       {
         "id": "cafe-place-empty-cup",
-        "scenario": "Clearing your table",
         "difficulty": "hard",
-        "context": "You have finished your drink.",
+        "scenario": "Clearing your table",
         "prompt": "Ask where to put your empty cup.",
+        "context": "You have finished your drink.",
+        "spokenPrompt": "You’ve finished your drink. How would you ask where to leave your cup?",
         "choices": [
           {
             "hangul": "컵은 어디에 놓으면 돼요?",
@@ -144,18 +149,19 @@
           }
         ],
         "correctAnswerIndex": 0,
-        "explanation": "어디에 asks where to put something. 놓으면 돼요? asks whether putting it there is okay.",
+        "explanation": "어디에 means ‘where.’ The full question asks where you should put the cup.",
         "reveal": {
           "translation": "Where should I put the cup?",
-          "teachingPoint": "어디에 = where; 놓으면 돼요? = is it okay to put it?"
+          "teachingPoint": "어디에 = where; 컵은 어디에 놓으면 돼요? = Where should I put the cup?"
         }
       },
       {
         "id": "cafe-charge-phone",
-        "scenario": "Requesting permission",
         "difficulty": "hard",
-        "context": "Request permission to use the café outlet.",
+        "scenario": "Requesting permission",
         "prompt": "Ask if you may charge your phone.",
+        "context": "Request permission to use the café outlet.",
+        "spokenPrompt": "How would you ask permission to charge your phone here?",
         "choices": [
           {
             "hangul": "여기서 사진 찍어도 돼요?",
@@ -199,7 +205,7 @@
         "contentId": "cafe-greet-staff",
         "role": "question",
         "language": "en-US",
-        "text": "Greet the café staff politely. Say hello as you enter."
+        "text": "How would you greet the café staff?"
       },
       {
         "id": "friends-greet-answer",
@@ -213,14 +219,14 @@
         "contentId": "cafe-greet-staff",
         "role": "explanation",
         "language": "en-US",
-        "text": "Hello. Use this polite greeting when you arrive."
+        "text": "Hello. A polite greeting when you enter."
       },
       {
         "id": "friends-one-question",
         "contentId": "cafe-order-one-coffee",
         "role": "question",
         "language": "en-US",
-        "text": "Order one cup of coffee. Ask for exactly one coffee, not tea."
+        "text": "How would you order one coffee?"
       },
       {
         "id": "friends-one-answer",
@@ -234,14 +240,14 @@
         "contentId": "cafe-order-one-coffee",
         "role": "explanation",
         "language": "en-US",
-        "text": "One coffee, please. This asks for one cup of coffee."
+        "text": "One coffee, please. Use this counter when ordering cups of a drink."
       },
       {
         "id": "friends-hot-question",
         "contentId": "cafe-order-hot-coffee",
         "role": "question",
         "language": "en-US",
-        "text": "Order a hot coffee. You do not want a cold drink or tea."
+        "text": "How would you ask for a hot coffee?"
       },
       {
         "id": "friends-hot-answer",
@@ -255,14 +261,14 @@
         "contentId": "cafe-order-hot-coffee",
         "role": "explanation",
         "language": "en-US",
-        "text": "Hot coffee, please. This requests warm coffee rather than a cold drink."
+        "text": "Hot coffee, please. This specifies the drink’s temperature."
       },
       {
         "id": "friends-milk-question",
         "contentId": "cafe-add-milk",
         "role": "question",
         "language": "en-US",
-        "text": "Ask for milk in your coffee. Add milk, rather than sugar."
+        "text": "How would you ask them to add milk?"
       },
       {
         "id": "friends-milk-answer",
@@ -276,14 +282,14 @@
         "contentId": "cafe-add-milk",
         "role": "explanation",
         "language": "en-US",
-        "text": "Add milk, please. This asks the staff to add milk to your coffee."
+        "text": "Add milk, please. You can use this request to customize your drink."
       },
       {
         "id": "friends-cup-question",
         "contentId": "cafe-place-empty-cup",
         "role": "question",
         "language": "en-US",
-        "text": "Ask where to put your empty cup. You have finished your drink."
+        "text": "You’ve finished your drink. How would you ask where to leave your cup?"
       },
       {
         "id": "friends-cup-answer",
@@ -297,21 +303,28 @@
         "contentId": "cafe-place-empty-cup",
         "role": "explanation",
         "language": "en-US",
-        "text": "Where should I put the cup? Use this to ask where to leave your empty cup."
+        "text": "Where should I put the cup? A useful question when clearing your table."
       },
       {
         "id": "friends-bonus-question",
         "contentId": "cafe-charge-phone",
         "role": "question",
         "language": "en-US",
-        "text": "Ask if you may charge your phone. Request permission to use the café outlet."
+        "text": "How would you ask permission to charge your phone here?"
       },
       {
         "id": "friends-bonus-comment",
         "contentId": "cafe-charge-phone",
         "role": "comment",
         "language": "en-US",
-        "text": "What do you think? Comment A, B, or C below!"
+        "text": "What do you think? Comment your answer!"
+      },
+      {
+        "id": "friends-bonus-follow",
+        "contentId": "cafe-charge-phone",
+        "role": "follow",
+        "language": "en-US",
+        "text": "Follow for more Korean!"
       }
     ]
   },
@@ -320,8 +333,8 @@
     "provider": "local-authoring",
     "model": null,
     "promptVersion": "phase5-local-v1",
-    "generatedAt": "2026-11-05T01:19:27.868Z",
-    "sourceHash": "e203cb4016ee620917d7e5502a616304f6593d37d7ba7073dfa08afd2304e34f",
+    "generatedAt": "2026-11-05T01:50:21.157Z",
+    "sourceHash": "9031014802dfe91c1fad092f4b188c7741910befb50100f2fac6e8da22f8d632",
     "reportedUsage": null,
     "estimatedCostUSD": 0
   }

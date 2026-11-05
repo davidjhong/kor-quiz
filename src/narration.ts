@@ -3,21 +3,31 @@ import {getChoiceHangul, type QuizInput} from './quizSchema.ts';
 import {getEpisodePolicy} from './episodePolicy.ts';
 
 const nonblank = z.string().min(1).max(1000).refine((value) => value.trim().length > 0, 'Must not be blank');
-export const BONUS_CTA_TEXT = 'What do you think? Comment A, B, or C below!';
+export const LEGACY_BONUS_CTA_TEXT = 'What do you think? Comment A, B, or C below!';
+export const BONUS_CTA_TEXT = 'What do you think? Comment your answer!';
+export const BONUS_FOLLOW_TEXT = 'Follow for more Korean!';
+export const BONUS_CTA_LABELS = {comment: 'Comment your answer 💬', follow: 'Follow for more Korean ✨'} as const;
+export type BonusCtaState = 'legacy-comment' | keyof typeof BONUS_CTA_LABELS;
 export const narrationSegmentSchema = z.strictObject({
   id: z.string().regex(/^[a-z0-9][a-z0-9-]{0,63}$/u),
   contentId: nonblank,
-  role: z.enum(['hook', 'question', 'answer', 'explanation', 'comment']),
+  role: z.enum(['hook', 'question', 'answer', 'explanation', 'comment', 'follow']),
   language: z.enum(['en-US', 'ko-KR']),
   text: nonblank,
   localFile: nonblank.optional(),
   recordingId: nonblank.optional(),
 });
-export const voiceProfileSchema = z.strictObject({
+const chirpProfileSchema = z.strictObject({
   provider: z.literal('google-cloud-tts'), model: z.literal('chirp3-hd'),
-  voices: z.strictObject({'en-US': z.literal('en-US-Chirp3-HD-Kore'), 'ko-KR': z.literal('ko-KR-Chirp3-HD-Kore')}),
+  voices: z.strictObject({'en-US': z.enum(['en-US-Chirp3-HD-Kore', 'en-US-Chirp3-HD-Puck', 'en-US-Chirp3-HD-Achird']),
+    'ko-KR': z.enum(['ko-KR-Chirp3-HD-Kore', 'ko-KR-Chirp3-HD-Puck', 'ko-KR-Chirp3-HD-Achird'])}),
   outputFormat: z.literal('LINEAR16'), sampleRateHertz: z.literal(24000), speakingRate: z.literal(1),
 });
+const geminiProfileSchema = z.strictObject({provider: z.literal('google-cloud-tts'), model: z.literal('gemini-2.5-flash-tts'),
+  voices: z.strictObject({'en-US': z.literal('Achird'), 'ko-KR': z.literal('Achird')}),
+  stylePrompts: z.strictObject({'en-US': nonblank, 'ko-KR': nonblank}),
+  outputFormat: z.literal('LINEAR16'), sampleRateHertz: z.literal(24000), speakingRate: z.literal(1)});
+export const voiceProfileSchema = z.discriminatedUnion('model', [chirpProfileSchema, geminiProfileSchema]);
 export const narrationScriptSchema = z.strictObject({
   version: z.literal(1), profile: voiceProfileSchema,
   segments: z.array(narrationSegmentSchema).min(1).max(19),
@@ -57,8 +67,11 @@ export const buildNarrationPlan = (quiz: QuizInput, script: NarrationScript): Na
     const entry = questions.get(segment.contentId);
     if (!entry) throw new Error(`Unknown narration content ID: ${segment.contentId}`);
     if (policy.isBonus(entry.index) && (segment.role === 'answer' || segment.role === 'explanation')) return false;
-    if (segment.role === 'comment' && (!policy.isBonus(entry.index) || segment.language !== 'en-US'
-      || segment.text !== BONUS_CTA_TEXT)) throw new Error(`${segment.id}: bonus CTA must use the fixed neutral invitation`);
+    if ((segment.role === 'comment' || segment.role === 'follow') && (!policy.isBonus(entry.index) || segment.language !== 'en-US'
+      || (segment.role === 'follow' ? segment.text !== BONUS_FOLLOW_TEXT
+        : segment.text !== BONUS_CTA_TEXT && segment.text !== LEGACY_BONUS_CTA_TEXT))) {
+      throw new Error(`${segment.id}: bonus CTA must use the fixed neutral invitation and follow text`);
+    }
     if (segment.role === 'answer') {
       if (segment.language !== 'ko-KR' || !/[가-힣]/u.test(segment.text)
         || segment.text !== getChoiceHangul(entry.question.choices[entry.question.correctAnswerIndex])) {
@@ -66,8 +79,8 @@ export const buildNarrationPlan = (quiz: QuizInput, script: NarrationScript): Na
       }
     } else if (segment.language !== 'en-US') throw new Error(`${segment.id}: expected English narration`);
     if (segment.role === 'question') {
-      const expected = `${entry.question.prompt}${entry.question.context ? ` ${entry.question.context}` : ''}`;
-      if (segment.text !== expected) throw new Error(`${segment.id}: question narration must match prompt and context`);
+      const expected = entry.question.spokenPrompt ?? `${entry.question.prompt}${entry.question.context ? ` ${entry.question.context}` : ''}`;
+      if (segment.text !== expected) throw new Error(`${segment.id}: question narration must match spokenPrompt, or the legacy prompt and context`);
     }
     return true;
   });
@@ -75,7 +88,11 @@ export const buildNarrationPlan = (quiz: QuizInput, script: NarrationScript): Na
   quiz.questions.forEach((question, index) => {
     expected.push(`${question.id}:question`);
     if (!policy.isBonus(index)) expected.push(`${question.id}:answer`, `${question.id}:explanation`);
-    else if (script.segments.some((segment) => segment.role === 'comment')) expected.push(`${question.id}:comment`);
+    else {
+      const comment = script.segments.find((segment) => segment.role === 'comment');
+      if (comment) expected.push(`${question.id}:comment`);
+      if (comment?.text === BONUS_CTA_TEXT) expected.push(`${question.id}:follow`);
+    }
   });
   if (JSON.stringify(filtered.map((segment) => `${segment.contentId}:${segment.role}`)) !== JSON.stringify(expected)) {
     throw new Error('Narration segments must be ordered: hook, then each question, Hangul answer, English explanation (bonus answers excluded)');

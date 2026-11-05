@@ -5,11 +5,16 @@ export class UncertainSynthesisError extends Error {}
 export const synthesizeGoogle = async (segment: NarrationSegment, profile: NarrationScript['profile'],
   configuration: {project: string; onRequest?: () => void}, injectedClient?: Pick<TextToSpeechClient, 'synthesizeSpeech'>,
   pause = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms))) => {
+  if (Buffer.byteLength(segment.text, 'utf8') > 4000 || (profile.model === 'gemini-2.5-flash-tts'
+    && Buffer.byteLength(profile.stylePrompts[segment.language], 'utf8') > 4000)) throw new Error('TTS text/prompt exceeds the verified 4,000-byte input limit; no request made');
   // ADC is resolved by the official library. No token is read, printed, or saved by project code.
   const ownedClient = injectedClient ? undefined : new TextToSpeechClient({projectId: configuration.project, fallback: true});
   const client = injectedClient ?? ownedClient!;
-  const request = {input: {text: segment.text}, voice: {languageCode: segment.language, name: profile.voices[segment.language]},
-    audioConfig: {audioEncoding: profile.outputFormat, sampleRateHertz: profile.sampleRateHertz, speakingRate: profile.speakingRate}};
+  const gemini = profile.model === 'gemini-2.5-flash-tts';
+  const request = {input: {text: segment.text, ...(gemini ? {prompt: profile.stylePrompts[segment.language]} : {})},
+    voice: {languageCode: segment.language, name: profile.voices[segment.language], ...(gemini ? {modelName: profile.model} : {})},
+    audioConfig: {audioEncoding: profile.outputFormat, sampleRateHertz: profile.sampleRateHertz,
+      ...(!gemini ? {speakingRate: profile.speakingRate} : {})}};
   try {
     for (let attempt = 0; attempt < 2; attempt++) {
       let audioContent: Uint8Array | string | null | undefined;

@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "kind": "generation-cost-estimate",
+  "budgetId": "phase5b-smoke-01",
+  "authorizedTotalUSD": 0.15,
+  "pricingSource": "https://developers.openai.com/api/docs/models/gpt-5-nano",
+  "pricingDate": "2026-11-04",
+  "invoiceInspected": false,
+  "scope": "OpenAI generation only; no TTS or images",
+  "id": "convenience-store-01",
+  "requests": 2,
+  "usage": {
+    "inputTokens": 4646,
+    "outputTokens": 3712,
+    "reasoningTokens": 1152,
+    "cachedInputTokens": 0
+  },
+  "estimatedCostUSD": 0.0017171,
+  "attempts": [
+    {
+      "number": 1,
+      "state": "invalid",
+      "reservedUnits": 24800000,
+      "chargedUnits": 782900,
+      "startedAt": "2026-11-05T06:04:01.372Z",
+      "usage": {
+        "inputTokens": 1682,
+        "outputTokens": 1747,
+        "totalTokens": 3429,
+        "reasoningTokens": 448,
+        "cachedInputTokens": 0
+      },
+      "requestId": "req_bcd114895ee042ceb9314e8af30b0bd1",
+      "returnedModel": "gpt-5-nano-2025-08-07",
+      "errors": [
+        "quiz.questions.5.prompt: Must contain at most 100 Unicode code points"
+      ]
+    },
+    {
+      "number": 2,
+      "state": "invalid",
+      "reservedUnits": 24800000,
+      "chargedUnits": 934200,
+      "startedAt": "2026-11-05T06:04:14.643Z",
+      "usage": {
+        "inputTokens": 2964,
+        "outputTokens": 1965,
+        "totalTokens": 4929,
+        "reasoningTokens": 704,
+        "cachedInputTokens": 0
+      },
+      "requestId": "req_11d8bed20cbc439f81566d3851c39667",
+      "returnedModel": "gpt-5-nano-2025-08-07",
+      "errors": [
+        "quiz.questions.5.prompt: Must contain at most 100 Unicode code points"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "file": "audio/music/subtle-bass-loop.wav",
+  "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+  "durationSeconds": 60.390375,
+  "title": "Subtle Bass",
+  "creator": "TinyWorlds",
+  "license": "CC0-1.0",
+  "sourceURL": "https://opengameart.org/content/subtle-bass",
+  "downloadURL": "https://opengameart.org/sites/default/files/bassy_tune.ogg",
+  "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attributionRequired": false,
+  "suggestedCredit": "Subtle Bass by TinyWorlds (CC0), via OpenGameArt.org",
+  "originalSha256": "2739e35bbf2dd29e8b1cfba7d322698f6682795f5377a2cfcf1df3fbf62832ce",
+  "processing": "loudnorm-I-20-TP-3-LRA-11-stereo-48000; 250ms linear loop crossfade",
+  "preparedAt": "2026-11-05T22:54:29.016Z"
+}

@@ -1,0 +1,9 @@
+{
+  "valid": false,
+  "errors": [
+    "quiz.questions.0.scenario: Must contain at most 40 Unicode code points",
+    "quiz.questions.5.spokenPrompt: Must not be empty or whitespace-only",
+    "narration.segments.16.text: Too small: expected string to have >=1 characters",
+    "narration.segments.16.text: Must not be blank"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "directory": "C:\\Users\\david\\Documents\\kor-vids\\drafts\\public-transit-02-candidate",
+  "sourceHash": "194914b5a3f37cae33226de035954d6cc6a4bab831c4b5e6eb5b96bc3546fdd0",
+  "model": "gpt-6-luna",
+  "promptVersion": "phase5b-automated-review-v1",
+  "capUnits": 56400000,
+  "state": "accepted",
+  "attempts": [
+    {
+      "phase": "review",
+      "state": "complete",
+      "reservedUnits": 18800000,
+      "chargedUnits": 1109250,
+      "usage": {
+        "inputTokens": 2930,
+        "outputTokens": 1486,
+        "totalTokens": 4416,
+        "reasoningTokens": 1164,
+        "cachedInputTokens": 0
+      },
+      "requestId": "req_9f47687534fa48368d88dcc8836917a7",
+      "returnedModel": "gpt-6-luna",
+      "startedAt": "2026-11-05T20:47:17.962Z"
+    }
+  ],
+  "finalHash": "194914b5a3f37cae33226de035954d6cc6a4bab831c4b5e6eb5b96bc3546fdd0"
+}

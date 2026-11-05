@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "experimentId": "phase5b-quality-02",
+  "budgetId": "phase5b-quality-02",
+  "model": "gpt-6-luna",
+  "maxOutputTokens": 12000,
+  "maxCostUSD": 0.12,
+  "scenarios": [
+    {"episodeId": "cafe-dessert-04", "briefFile": "content/briefs/cafe-dessert-03.json", "output": "drafts/cafe-dessert-04", "baseline": "drafts/cafe-dessert-03"},
+    {"episodeId": "convenience-store-02", "briefFile": "content/briefs/convenience-store-01.json", "output": "drafts/convenience-store-02", "baseline": "drafts/convenience-store-01"},
+    {"episodeId": "public-transit-02", "briefFile": "content/briefs/public-transit-01.json", "output": "drafts/public-transit-02", "baseline": "drafts/public-transit-01"}
+  ]
+}

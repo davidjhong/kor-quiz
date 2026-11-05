@@ -1,0 +1,366 @@
+{
+  "draft": {
+    "version": 1,
+    "brief": {
+      "scenario": "At a café dessert counter: ask for a menu, order a slice of cake, request a fork, request an extra plate for sharing, ask whether a dessert contains nuts, and ask which desserts are available without milk. Avoid tasks from previous café episodes: greetings, coffee quantities or temperature, adding milk, takeaway, water, ice, cup return, phone charging, prices and drink replacement. Make each context explicit and keep the final task a hard beginner comment bonus.",
+      "audience": "English-speaking adults learning practical beginner Korean",
+      "level": "Beginner: two easy, two medium and two relatively hard questions, with polite requests and simple ingredient questions",
+      "backgroundAssetId": "korean-cafe-illustrated-v1",
+      "scenarioType": "cafe"
+    },
+    "provenance": {
+      "method": "openai-responses",
+      "provider": "openai",
+      "model": "gpt-6-luna",
+      "requestedModel": "gpt-6-luna",
+      "returnedModel": "gpt-6-luna",
+      "promptVersion": "phase5b-quality-v1",
+      "schemaVersion": "phase5b-quality-education-v1",
+      "generatedAt": "2026-11-05T06:48:44.141Z",
+      "sourceHash": "e109619ef98e251851f4ee1941e80b89047c6cce24671a32a16c8887adc4d5bf",
+      "requestId": "req_baeb6b45c9d6448b9301d50ff302b3ae",
+      "responseId": "resp_08813acfb5d98ac0016aec26cd390c87d0b615a70fd02bf248",
+      "reportedUsage": {
+        "inputTokens": 2177,
+        "outputTokens": 4134,
+        "totalTokens": 6311,
+        "reasoningTokens": 2588,
+        "cachedInputTokens": 0
+      },
+      "estimatedCostUSD": 0.002339125,
+      "attempts": 1,
+      "pricingSource": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+      "pricingDate": "2026-11-04",
+      "generationId": "phase5b-quality-02"
+    },
+    "quiz": {
+      "videoId": "cafe-dessert-04",
+      "episodeTitle": "Can you say it in Korean?",
+      "openingSubtitle": "Easy to hard",
+      "endingMode": "comment-challenge",
+      "minimumDurationSeconds": 65,
+      "backgroundAssetId": "korean-cafe-illustrated-v1",
+      "showRomanization": true,
+      "questions": [
+        {
+          "id": "cafe-dessert-04-q1",
+          "difficulty": "easy",
+          "scenario": "At a dessert counter",
+          "prompt": "Ask the server for a menu.",
+          "context": "You want to look at the dessert list.",
+          "spokenPrompt": "How would you ask to see the menu?",
+          "choices": [
+            {
+              "hangul": "메뉴판 좀 주세요.",
+              "romanization": "menyupan jom juseyo."
+            },
+            {
+              "hangul": "포크 좀 주세요.",
+              "romanization": "pokeu jom juseyo."
+            },
+            {
+              "hangul": "케이크 좀 주세요.",
+              "romanization": "keikeu jom juseyo."
+            }
+          ],
+          "correctAnswerIndex": 0,
+          "explanation": "This is a polite request for the menu. 주세요 is a useful way to ask someone to give you something.",
+          "reveal": {
+            "translation": "The menu, please.",
+            "teachingPoint": "메뉴판 = menu; 주세요 = please give me"
+          }
+        },
+        {
+          "id": "cafe-dessert-04-q2",
+          "difficulty": "easy",
+          "scenario": "Ordering cake",
+          "prompt": "Order one slice of cake.",
+          "context": "You want exactly one slice, not a whole cake.",
+          "spokenPrompt": "What would you ask for?",
+          "choices": [
+            {
+              "hangul": "케이크 한 조각 주세요.",
+              "romanization": "keikeu han jojak juseyo."
+            },
+            {
+              "hangul": "쿠키 한 개 주세요.",
+              "romanization": "kuki han gae juseyo."
+            },
+            {
+              "hangul": "케이크 두 조각 주세요.",
+              "romanization": "keikeu du jojak juseyo."
+            }
+          ],
+          "correctAnswerIndex": 0,
+          "explanation": "This asks for one slice of cake. 한 조각 means one piece or slice.",
+          "reveal": {
+            "translation": "One slice of cake, please.",
+            "teachingPoint": "한 조각 = one slice; 주세요 = please give me"
+          }
+        },
+        {
+          "id": "cafe-dessert-04-q3",
+          "difficulty": "medium",
+          "scenario": "Eating cake",
+          "prompt": "Ask for a fork.",
+          "context": "You need a fork to eat your cake.",
+          "spokenPrompt": "How can you politely request a fork?",
+          "choices": [
+            {
+              "hangul": "포크 하나 주세요.",
+              "romanization": "pokeu hana juseyo."
+            },
+            {
+              "hangul": "숟가락 하나 주세요.",
+              "romanization": "sutgarak hana juseyo."
+            },
+            {
+              "hangul": "냅킨 하나 주세요.",
+              "romanization": "naepkin hana juseyo."
+            }
+          ],
+          "correctAnswerIndex": 0,
+          "explanation": "This politely requests one fork. 하나 means one when counting an item.",
+          "reveal": {
+            "translation": "One fork, please.",
+            "teachingPoint": "포크 = fork; 하나 = one; 주세요 = please give me"
+          }
+        },
+        {
+          "id": "cafe-dessert-04-q4",
+          "difficulty": "medium",
+          "scenario": "Sharing dessert",
+          "prompt": "Ask for one extra plate.",
+          "context": "You are sharing a cake slice and need another plate.",
+          "spokenPrompt": "What would you ask the server to bring?",
+          "choices": [
+            {
+              "hangul": "접시 하나 더 주세요.",
+              "romanization": "jeopsi hana deo juseyo."
+            },
+            {
+              "hangul": "포크 하나 더 주세요.",
+              "romanization": "pokeu hana deo juseyo."
+            },
+            {
+              "hangul": "냅킨 하나 더 주세요.",
+              "romanization": "naepkin hana deo juseyo."
+            }
+          ],
+          "correctAnswerIndex": 0,
+          "explanation": "This requests an additional plate. 하나 더 means one more.",
+          "reveal": {
+            "translation": "One more plate, please.",
+            "teachingPoint": "접시 = plate; 하나 더 = one more"
+          }
+        },
+        {
+          "id": "cafe-dessert-04-q5",
+          "difficulty": "hard",
+          "scenario": "Checking ingredients",
+          "prompt": "Ask whether this dessert contains nuts.",
+          "context": "You have chosen a dessert and want to check its ingredients.",
+          "spokenPrompt": "How would you check if nuts are in this dessert?",
+          "choices": [
+            {
+              "hangul": "이 디저트에 견과류가 들어가요?",
+              "romanization": "i dijeoteue gyeongwallyuga deureogayo?"
+            },
+            {
+              "hangul": "이 디저트에 우유가 들어가요?",
+              "romanization": "i dijeoteue uyuga deureogayo?"
+            },
+            {
+              "hangul": "이 디저트에 달걀이 들어가요?",
+              "romanization": "i dijeoteue dalgyari deureogayo?"
+            }
+          ],
+          "correctAnswerIndex": 0,
+          "explanation": "This asks whether the dessert contains nuts. The question pattern can be used to check whether an ingredient is included.",
+          "reveal": {
+            "translation": "Does this dessert contain nuts?",
+            "teachingPoint": "견과류 = nuts; 들어가요? = is it included?"
+          }
+        },
+        {
+          "id": "cafe-dessert-04-q6",
+          "difficulty": "hard",
+          "scenario": "Choosing a dessert",
+          "prompt": "Ask which desserts are available without milk.",
+          "context": "You want a dessert made without milk and want to know the options.",
+          "spokenPrompt": "What could you ask to find the dessert options?",
+          "choices": [
+            {
+              "hangul": "우유가 안 들어간 디저트는 뭐가 있어요?",
+              "romanization": "uyuga an deureogan dijeoteuneun mwoga isseoyo?"
+            },
+            {
+              "hangul": "견과류 없는 디저트 있어요?",
+              "romanization": "gyeongwallyu eomneun dijeoteu isseoyo?"
+            },
+            {
+              "hangul": "초콜릿 디저트 있어요?",
+              "romanization": "chokollit dijeoteu isseoyo?"
+            }
+          ]
+        }
+      ]
+    },
+    "narration": {
+      "version": 1,
+      "profile": {
+        "provider": "google-cloud-tts",
+        "model": "chirp3-hd",
+        "voices": {
+          "en-US": "en-US-Chirp3-HD-Kore",
+          "ko-KR": "ko-KR-Chirp3-HD-Kore"
+        },
+        "outputFormat": "LINEAR16",
+        "sampleRateHertz": 24000,
+        "speakingRate": 1
+      },
+      "segments": [
+        {
+          "id": "cafe-dessert-04-hook",
+          "contentId": "cafe-dessert-04",
+          "role": "hook",
+          "language": "en-US",
+          "text": "Can you say it in Korean?"
+        },
+        {
+          "id": "cafe-dessert-04-q1-question",
+          "contentId": "cafe-dessert-04-q1",
+          "role": "question",
+          "language": "en-US",
+          "text": "How would you ask to see the menu?"
+        },
+        {
+          "id": "cafe-dessert-04-q1-answer",
+          "contentId": "cafe-dessert-04-q1",
+          "role": "answer",
+          "language": "ko-KR",
+          "text": "메뉴판 좀 주세요."
+        },
+        {
+          "id": "cafe-dessert-04-q1-explanation",
+          "contentId": "cafe-dessert-04-q1",
+          "role": "explanation",
+          "language": "en-US",
+          "text": "This is a polite way to ask for the menu. The ending means you’re asking someone to give you something."
+        },
+        {
+          "id": "cafe-dessert-04-q2-question",
+          "contentId": "cafe-dessert-04-q2",
+          "role": "question",
+          "language": "en-US",
+          "text": "What would you ask for?"
+        },
+        {
+          "id": "cafe-dessert-04-q2-answer",
+          "contentId": "cafe-dessert-04-q2",
+          "role": "answer",
+          "language": "ko-KR",
+          "text": "케이크 한 조각 주세요."
+        },
+        {
+          "id": "cafe-dessert-04-q2-explanation",
+          "contentId": "cafe-dessert-04-q2",
+          "role": "explanation",
+          "language": "en-US",
+          "text": "This asks for one slice of cake. The counting phrase means one piece or slice."
+        },
+        {
+          "id": "cafe-dessert-04-q3-question",
+          "contentId": "cafe-dessert-04-q3",
+          "role": "question",
+          "language": "en-US",
+          "text": "How can you politely request a fork?"
+        },
+        {
+          "id": "cafe-dessert-04-q3-answer",
+          "contentId": "cafe-dessert-04-q3",
+          "role": "answer",
+          "language": "ko-KR",
+          "text": "포크 하나 주세요."
+        },
+        {
+          "id": "cafe-dessert-04-q3-explanation",
+          "contentId": "cafe-dessert-04-q3",
+          "role": "explanation",
+          "language": "en-US",
+          "text": "This asks for one fork. The word for one comes before the polite request."
+        },
+        {
+          "id": "cafe-dessert-04-q4-question",
+          "contentId": "cafe-dessert-04-q4",
+          "role": "question",
+          "language": "en-US",
+          "text": "What would you ask the server to bring?"
+        },
+        {
+          "id": "cafe-dessert-04-q4-answer",
+          "contentId": "cafe-dessert-04-q4",
+          "role": "answer",
+          "language": "ko-KR",
+          "text": "접시 하나 더 주세요."
+        },
+        {
+          "id": "cafe-dessert-04-q4-explanation",
+          "contentId": "cafe-dessert-04-q4",
+          "role": "explanation",
+          "language": "en-US",
+          "text": "This asks for one additional plate. The phrase for “one more” is useful when requesting an extra item."
+        },
+        {
+          "id": "cafe-dessert-04-q5-question",
+          "contentId": "cafe-dessert-04-q5",
+          "role": "question",
+          "language": "en-US",
+          "text": "How would you check if nuts are in this dessert?"
+        },
+        {
+          "id": "cafe-dessert-04-q5-answer",
+          "contentId": "cafe-dessert-04-q5",
+          "role": "answer",
+          "language": "ko-KR",
+          "text": "이 디저트에 견과류가 들어가요?"
+        },
+        {
+          "id": "cafe-dessert-04-q5-explanation",
+          "contentId": "cafe-dessert-04-q5",
+          "role": "explanation",
+          "language": "en-US",
+          "text": "This asks whether the dessert contains nuts. The question pattern is useful for checking whether an ingredient is included."
+        },
+        {
+          "id": "cafe-dessert-04-q6-question",
+          "contentId": "cafe-dessert-04-q6",
+          "role": "question",
+          "language": "en-US",
+          "text": "What could you ask to find the dessert options?"
+        },
+        {
+          "id": "cafe-dessert-04-q6-comment",
+          "contentId": "cafe-dessert-04-q6",
+          "role": "comment",
+          "language": "en-US",
+          "text": "What do you think? Comment your answer!"
+        },
+        {
+          "id": "cafe-dessert-04-q6-follow",
+          "contentId": "cafe-dessert-04-q6",
+          "role": "follow",
+          "language": "en-US",
+          "text": "Follow for more Korean!"
+        }
+      ]
+    }
+  },
+  "key": {
+    "questionId": "cafe-dessert-04-q6",
+    "correctAnswerIndex": 0,
+    "explanation": "This asks what desserts are available that do not contain milk. 안 들어간 describes something that is not included.",
+    "translation": "Which desserts are available without milk?",
+    "teachingPoint": "우유가 안 들어간 = without milk; 뭐가 있어요? = what options are there?"
+  }
+}

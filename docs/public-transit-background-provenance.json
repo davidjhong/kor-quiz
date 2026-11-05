@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "assetId": "korean-transit-illustrated-dev-v1",
+  "selection": "developer-selected",
+  "humanApproved": false,
+  "createdAt": "2026-11-05T20:29:32.833Z",
+  "provider": "built-in imagegen tool",
+  "model": "not exposed by tool",
+  "source": "C:/Users/david/.codex/generated_images/01a15c72-28aa-7961-aa9b-a6de35a503cd/exec-dc2a7e72-9b62-403f-8f2c-dc3d7df5e90e.png",
+  "localFile": "public/backgrounds/korean-transit-illustrated-dev-v1.png",
+  "sha256": "3051c21c2dac0a5821849d27a16e1e717d6fd7e8e6790da526565f0f239adea7",
+  "nativeWidth": 916,
+  "nativeHeight": 1717,
+  "framing": {
+    "scale": 1.02,
+    "origin": "50% 0%"
+  },
+  "generationBrief": "docs/public-transit-background-brief.md",
+  "inspection": "Coding assistant inspected the original image and actual template preflight Q1 reading, Q4 reveal and Q6 reading frames: coherent architecture, blank displays, one complete worker face visible below the panel, no obvious text/route/answer clues. All 13 silent layout preflight frames passed the existing text fitter. Final narrated video inspection is recorded separately in out/transit-development/verification.json.",
+  "separatelyBilledImageAPICalls": 0,
+  "builtinToolCost": "not reported"
+}

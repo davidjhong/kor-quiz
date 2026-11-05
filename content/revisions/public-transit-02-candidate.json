@@ -1,0 +1,19 @@
+{
+  "sourceDirectory": "drafts/public-transit-02",
+  "sourceContentHash": "5824a3b5d7a0ab035459f435d2e120ce376ee47e52a38909c95bb34d0fedcfbc",
+  "outputDirectory": "drafts/public-transit-02-candidate",
+  "edits": [
+    {"path": ["draft", "quiz", "questions", 1, "choices", 2, "romanization"], "after": "maepyosoneun eodiyeyo?", "reason": "Correct the mismatched consonant in 매표소는; retain the project learner-romanization style. Human review remains required."},
+    {"path": ["draft", "quiz", "questions", 1, "explanation"], "after": "This asks where the platform is. The topic marker 은 introduces the platform as the topic of the question.", "reason": "Describe the topic marker without equating it with a grammatical subject."},
+    {"path": ["draft", "quiz", "questions", 5, "choices"], "after": [
+      {"hangul": "시청은 몇 번 출구예요?", "romanization": "sicheongeun myeot beon chulguyeyo?"},
+      {"hangul": "공원은 몇 번 출구예요?", "romanization": "gongwoneun myeot beon chulguyeyo?"},
+      {"hangul": "은행은 몇 번 출구예요?", "romanization": "eunhaengeun myeot beon chulguyeyo?"}
+    ], "reason": "Propose shorter COMPLETE exit questions and matching romanization for the fixed answer-row slots. Keep City Hall versus park/bank meanings distinct; seek human naturalness review."},
+    {"path": ["key", "translation"], "after": "Which exit is for City Hall?", "reason": "Match the shorter proposed City Hall question in the PRIVATE key only."},
+    {"path": ["key", "explanation"], "after": "With City Hall as the topic, this asks which exit number to use. 몇 번 asks for a number.", "reason": "Update the private explanation to the proposed wording; this is never narrated or revealed."},
+    {"path": ["key", "teachingPoint"], "after": "시청은 = as for City Hall; 몇 번 출구 = which exit number", "reason": "Keep the private teaching point consistent with the revised bonus phrase."}
+  ],
+  "choiceOrders": [[1, 0, 2], [1, 2, 0], [0, 1, 2], [2, 0, 1], [0, 1, 2], [1, 2, 0]],
+  "choiceOrderReason": "The original API draft put all six answers at A. Redistribute positions while keeping Hangul/romanization pairs and first-five Korean answer narration intact. Update the separate bonus key; no letter or bonus answer is spoken or highlighted."
+}

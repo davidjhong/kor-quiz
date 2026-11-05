@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "kind": "generation-cost-estimate",
+  "budgetId": "phase5b-smoke-01",
+  "authorizedTotalUSD": 0.15,
+  "pricingSource": "https://developers.openai.com/api/docs/models/gpt-5-nano",
+  "pricingDate": "2026-11-04",
+  "invoiceInspected": false,
+  "scope": "OpenAI generation only; no TTS or images",
+  "id": "public-transit-01",
+  "requests": 2,
+  "usage": {
+    "inputTokens": 4814,
+    "outputTokens": 4106,
+    "reasoningTokens": 1344,
+    "cachedInputTokens": 0
+  },
+  "estimatedCostUSD": 0.0018831,
+  "attempts": [
+    {
+      "number": 1,
+      "state": "valid",
+      "reservedUnits": 24800000,
+      "chargedUnits": 948950,
+      "startedAt": "2026-11-05T06:06:20.261Z",
+      "usage": {
+        "inputTokens": 1699,
+        "outputTokens": 2160,
+        "totalTokens": 3859,
+        "reasoningTokens": 768,
+        "cachedInputTokens": 0
+      },
+      "requestId": "req_3839ca52f5684f27ae180ed29dc26ed7",
+      "returnedModel": "gpt-5-nano-2025-08-07",
+      "errors": []
+    },
+    {
+      "number": 2,
+      "state": "valid",
+      "reservedUnits": 24800000,
+      "chargedUnits": 934150,
+      "startedAt": "2026-11-05T06:08:57.169Z",
+      "usage": {
+        "inputTokens": 3115,
+        "outputTokens": 1946,
+        "totalTokens": 5061,
+        "reasoningTokens": 576,
+        "cachedInputTokens": 0
+      },
+      "requestId": "req_20cf833c14384774b63de1a0e9ff2dd5",
+      "returnedModel": "gpt-5-nano-2025-08-07",
+      "errors": []
+    }
+  ]
+}

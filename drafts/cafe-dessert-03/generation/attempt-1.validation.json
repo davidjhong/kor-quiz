@@ -1,0 +1,11 @@
+{
+  "valid": false,
+  "errors": [
+    "quiz.questions: Too big: expected array to have <=6 items",
+    "quiz.questions.0.scenario: Must contain at most 40 Unicode code points",
+    "quiz.questions.5: Unrecognized keys: \"correctAnswerIndex\", \"explanation\", \"reveal\"",
+    "narration.segments.19.text: Too small: expected string to have >=1 characters",
+    "narration.segments.19.text: Must not be blank",
+    "narration.segments: Too big: expected array to have <=19 items"
+  ]
+}

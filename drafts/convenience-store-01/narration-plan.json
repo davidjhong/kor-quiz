@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "kind": "narration-review-plan",
+  "valid": false,
+  "contentHash": "a55bcb2157895da6f48a89ac54d23587acf7c74f608789e5f77328f4527d2027",
+  "timingRules": {
+    "fps": 30,
+    "openingMinimum": 90,
+    "readingMinimum": 120,
+    "countdown": 150,
+    "revealMinimum": 120,
+    "settlePause": 6,
+    "afterHook": 15,
+    "afterQuestion": 15,
+    "answerGap": 10,
+    "afterExplanation": 30,
+    "transition": 12,
+    "finalFade": 12,
+    "commentHold": 120,
+    "afterComment": 45,
+    "afterFollow": 30
+  },
+  "endingDisplay": {
+    "comment": "Comment your answer 💬",
+    "follow": "Follow for more Korean ✨"
+  },
+  "timingStatus": "Absolute frames require measured audio; this is not a prepared render manifest.",
+  "segments": []
+}

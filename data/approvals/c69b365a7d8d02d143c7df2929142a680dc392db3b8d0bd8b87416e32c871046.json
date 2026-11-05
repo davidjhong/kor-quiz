@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "kind": "human-content-approval",
+  "contentHash": "c69b365a7d8d02d143c7df2929142a680dc392db3b8d0bd8b87416e32c871046",
+  "episodeId": "cafe-friends-02",
+  "reviewer": "David",
+  "approvedAt": "2026-11-05T02:16:50.290Z",
+  "checklistAcknowledged": true,
+  "scenario": "Visit a café with a friend: greet staff, order coffee, customize a drink, clear your cup, and request permission to charge a phone.",
+  "questions": [
+    {
+      "id": "cafe-greet-staff",
+      "scenario": "Arriving at the café",
+      "normalizedText": "greet the café staff politely say hello as you enter",
+      "phrase": "안녕하세요"
+    },
+    {
+      "id": "cafe-order-one-coffee",
+      "scenario": "Ordering a drink",
+      "normalizedText": "order one cup of coffee ask for exactly one coffee not tea",
+      "phrase": "커피한잔주세요"
+    },
+    {
+      "id": "cafe-order-hot-coffee",
+      "scenario": "Choosing a temperature",
+      "normalizedText": "order a hot coffee you do not want a cold drink or tea",
+      "phrase": "따뜻한커피주세요"
+    },
+    {
+      "id": "cafe-add-milk",
+      "scenario": "Adding milk",
+      "normalizedText": "ask for milk in your coffee add milk rather than sugar",
+      "phrase": "우유넣어주세요"
+    },
+    {
+      "id": "cafe-place-empty-cup",
+      "scenario": "Clearing your table",
+      "normalizedText": "ask where to put your empty cup you have finished your drink",
+      "phrase": "컵은어디에놓으면돼요"
+    },
+    {
+      "id": "cafe-charge-phone",
+      "scenario": "Requesting permission",
+      "normalizedText": "ask if you may charge your phone request permission to use the café outlet",
+      "phrase": "여기서충전해도돼요"
+    }
+  ]
+}

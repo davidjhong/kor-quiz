@@ -6,7 +6,7 @@ import {tmpdir} from 'node:os';
 import {join, dirname, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import test from 'node:test';
-import {BONUS_CTA_TEXT} from '../src/narration.ts';
+import {BONUS_CTA_TEXT, BONUS_FOLLOW_TEXT} from '../src/narration.ts';
 import {draftToQuiz} from '../src/draftSchema.ts';
 import {approveDraft, assertHumanApproval, contentHash, importDraft, inspectDraft, loadProductionDraft,
   normalizeQuestion, priorRecords, readDraft, writeReview} from '../scripts/draftWorkflow.ts';
@@ -34,7 +34,7 @@ test('local import yields six validated questions and separate private key, with
   const {root, directory} = await fixture(context);
   const bundle = await readDraft(directory, root);
   assert.equal(bundle.quiz.questions.length, 6);
-  assert.equal(bundle.draft.narration.segments.length, 18);
+  assert.equal(bundle.draft.narration.segments.length, 19);
   assert.equal(bundle.draft.provenance.provider, 'local-authoring');
   assert.equal(bundle.draft.provenance.model, null);
   assert.equal(bundle.draft.provenance.estimatedCostUSD, 0);
@@ -43,8 +43,15 @@ test('local import yields six validated questions and separate private key, with
   assert.equal(renderedBonus.reveal, undefined);
   assert.notEqual(renderedBonus.explanation, bundle.key.explanation);
   assert.notEqual(renderedBonus.correctAnswerIndex, bundle.key.correctAnswerIndex);
-  assert.deepEqual(bundle.draft.narration.segments.filter((s) => s.contentId === bundle.key.questionId).map((s) => s.role), ['question', 'comment']);
-  assert.equal(bundle.draft.narration.segments.at(-1).text, BONUS_CTA_TEXT);
+  assert.deepEqual(bundle.draft.narration.segments.filter((s) => s.contentId === bundle.key.questionId).map((s) => s.role), ['question', 'comment', 'follow']);
+  assert.equal(bundle.draft.narration.segments.at(-2).text, BONUS_CTA_TEXT);
+  assert.equal(bundle.draft.narration.segments.at(-1).text, BONUS_FOLLOW_TEXT);
+  const plan = await json(join(directory, 'narration-plan.json'));
+  assert.equal(plan.contentHash, bundle.contentHash);
+  assert.equal(plan.segments.length, 19);
+  assert.equal(plan.timingRules.afterComment, 45);
+  assert.ok(plan.segments.every((s) => s.durationSeconds === null));
+  assert.notEqual(plan.segments.at(-2).cacheKey, plan.segments.at(-1).cacheKey);
   assert.equal(existsSync(join(root, 'data/approvals')), false);
   const review = await readFile(join(directory, 'review.md'), 'utf8');
   assert.match(review, /PRIVATE content review/u);
@@ -73,6 +80,8 @@ test('untrusted drafts reject invalid references, normalized duplicates, missing
     [(d) => {d.quiz.questions[5].correctAnswerIndex = 1;}, /correctAnswerIndex/u],
     [(d) => {d.quiz.questions[5].context = 'The correct answer is B.';}, /answer-letter hint/u],
     [(d) => {d.quiz.questions[5].context = d.quiz.questions[5].choices[1].hangul;}, /Hangul answer/u],
+    [(d) => {d.quiz.questions[5].spokenPrompt = d.quiz.questions[5].choices[1].hangul;}, /Hangul answer/u],
+    [(d) => {d.narration.segments.at(-2).text = 'Comment B to win!';}, /neutral invitation/u],
     [(d) => {d.narration.segments.at(-1).text = 'Answer B is correct.';}, /neutral invitation/u],
     [(d) => {d.narration.segments.at(-1).role = 'explanation';}, /no bonus answer/u],
     [(d) => {d.approved = true;}, /approved/u],
@@ -88,7 +97,10 @@ test('untrusted drafts reject invalid references, normalized duplicates, missing
   assert.equal((await inspectDraft(original, badKey, root)).valid, false);
   assert.equal((await inspectDraft(original, {...key, questionId: 'wrong-question'}, root)).valid, false);
   await rm(join(root, 'public/backgrounds/korean-cafe-illustrated-v1.png'));
-  assert.match((await inspectDraft(original, key, root)).errors.join('\n'), /missing or invalid/u);
+  const missingAsset = await inspectDraft(original, key, root);
+  assert.equal(missingAsset.valid, true);
+  assert.equal(missingAsset.renderReady, false);
+  assert.match(missingAsset.renderBlockers.join('\n'), /missing or invalid/u);
 });
 
 test('question normalization rejects exact duplicates within an episode but prior repeats/near duplicates remain review warnings', async (context) => {
@@ -99,7 +111,7 @@ test('question normalization rejects exact duplicates within an episode but prio
   duplicate.quiz.questions[1].prompt = duplicate.quiz.questions[0].prompt.toUpperCase();
   duplicate.quiz.questions[1].context = duplicate.quiz.questions[0].context;
   const s = duplicate.narration.segments.find((s) => s.contentId === duplicate.quiz.questions[1].id && s.role === 'question');
-  s.text = `${duplicate.quiz.questions[1].prompt} ${duplicate.quiz.questions[1].context}`;
+  s.text = duplicate.quiz.questions[1].spokenPrompt ?? `${duplicate.quiz.questions[1].prompt} ${duplicate.quiz.questions[1].context}`;
   assert.match((await inspectDraft(duplicate, bundle.key, root)).errors.join('\n'), /exact duplicate question text/u);
   // Test-only human approval record in an isolated temporary workspace, never the real draft.
   await approveDraft(directory, 'Fixture human', bundle.contentHash, true, {root});
@@ -109,7 +121,7 @@ test('question normalization rejects exact duplicates within an episode but prio
   next.quiz.questions[0].id += '-next';
   for (const segment of next.narration.segments) if (segment.contentId === bundle.quiz.questions[0].id) segment.contentId = next.quiz.questions[0].id;
   next.quiz.questions[0].context += ' In the café.';
-  next.narration.segments[1].text = `${next.quiz.questions[0].prompt} ${next.quiz.questions[0].context}`;
+  next.narration.segments[1].text = next.quiz.questions[0].spokenPrompt ?? `${next.quiz.questions[0].prompt} ${next.quiz.questions[0].context}`;
   const result = await inspectDraft(next, bundle.key, root);
   assert.equal(result.valid, true);
   assert.match(result.warnings.join('\n'), /exact ID\/text repeat/u);
@@ -128,6 +140,7 @@ test('approval is separate and any content, narration, voice/profile or private-
   for (const change of [(d) => {d.quiz.questions[0].explanation += ' Revised.';},
     (d) => {d.narration.segments[3].text += ' Revised.';},
     (d) => {d.quiz.questions[0].choices[0].romanization += '!';},
+    (d) => {d.quiz.questions[0].spokenPrompt += ' Please.'; d.narration.segments[1].text = d.quiz.questions[0].spokenPrompt;},
     (d) => {d.brief.audience += ' Revised.';}]) {
     const draft = structuredClone(bundle.draft); change(draft);
     assert.notEqual(contentHash(draft, bundle.key), bundle.contentHash);
@@ -182,6 +195,7 @@ test('dry runs do not write; resumed imports preserve edits; invalid drafts are 
   assert.match(report.errors.join('\n'), /questions.0.correctAnswerIndex/u);
   assert.match(await readFile(join(badFolder, 'review.md'), 'utf8'), /FAIL/u);
   assert.equal((await json(join(badFolder, 'validation.json'))).valid, false);
+  assert.deepEqual((await json(join(badFolder, 'narration-plan.json'))).segments, []);
   const fakeApproval = structuredClone(source); fakeApproval.approved = true;
   await assert.rejects(importDraft(fakeApproval, brief, join(root, 'fake'), {root}), /approved/u);
 });

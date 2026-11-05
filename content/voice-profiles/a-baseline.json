@@ -1,0 +1,7 @@
+{
+  "id": "a-baseline",
+  "label": "A — Current Kore baseline",
+  "profile": {"provider": "google-cloud-tts", "model": "chirp3-hd",
+    "voices": {"en-US": "en-US-Chirp3-HD-Kore", "ko-KR": "ko-KR-Chirp3-HD-Kore"},
+    "outputFormat": "LINEAR16", "sampleRateHertz": 24000, "speakingRate": 1}
+}

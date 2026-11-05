@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "intentHash": "276a0d82708b9c6c418262a66a22642ca33518a842f908018ccac285aac8ce1c",
+  "inputsHash": "ffbd85d015806fa2d999a8e7f3bc76ecf0628fad81d8abeac739a087146657b6",
+  "budgetId": "phase5b-quality-02",
+  "episodeId": "cafe-dessert-04",
+  "experimentHash": "40a229f9def7aa3ab269d4894b03e1c305f9605327eefd9ee305060b46165415",
+  "promptVersion": "phase5b-quality-v1",
+  "schemaVersion": "phase5b-quality-education-v1",
+  "initialContentHash": "5c8a733d903330b9b8c5ee36209de541804f50744c2c95f3ad8812a9f89fb6a8",
+  "status": "valid",
+  "requestedModel": "gpt-6-luna",
+  "returnedModel": "gpt-6-luna",
+  "attempts": 1
+}

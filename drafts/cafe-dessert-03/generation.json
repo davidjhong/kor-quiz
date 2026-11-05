@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "intentHash": "62517a5b89b389322a01891ce53bbade33e8da4b2003c2ee66426d2c5eb16eb0",
+  "budgetId": "phase5b-smoke-01",
+  "episodeId": "cafe-dessert-03",
+  "initialContentHash": "852b9e625443da31b551517285997444768f00bb242aa6454780f89eca3bb44c",
+  "status": "invalid",
+  "requestedModel": "gpt-5-nano-2025-08-07",
+  "returnedModel": "gpt-5-nano-2025-08-07",
+  "attempts": 2
+}

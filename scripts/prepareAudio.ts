@@ -5,18 +5,22 @@ import {loadQuizFile} from './input.ts';
 import {PROJECT_ROOT} from './remotionCommand.ts';
 import {assertNarratedCheckpoint, buildNarrationPlan, narrationScriptSchema, preparedNarrationSchema} from '../src/narration.ts';
 import {AUDIO_PROCESSING, audioCacheKey, getClipCacheLocation, prepareClip, quizSpeechFingerprint, readJsonFile, requireWithin} from './narrationFiles.ts';
-import {assertLegacyDemo, loadProductionDraft} from './draftWorkflow.ts';
+import {assertLegacyDemo, atomicJson, loadProductionDraft, parseReviewMode} from './draftWorkflow.ts';
 
 const main = async () => {
-  const args = namedArguments(process.argv.slice(2), ['--input', '--script', '--draft', '--output', '--max-cost-usd'],
+  const args = namedArguments(process.argv.slice(2), ['--input', '--script', '--draft', '--output', '--max-cost-usd', '--report', '--review-mode', '--usage-report'],
     ['--synthesize', '--retry-uncertain', '--estimate', '--dry-run']);
   const dryRun = args.flags.has('--estimate') || args.flags.has('--dry-run');
+  if (args.values.has('--report') && !dryRun) throw new Error('--report is available only with --estimate or --dry-run');
   const draftPath = args.values.get('--draft');
+  const reviewMode = parseReviewMode(args.values.get('--review-mode'));
+  if (reviewMode === 'automated' && !draftPath) throw new Error('Automated mode requires --draft');
   if (draftPath && (args.values.has('--input') || args.values.has('--script'))) throw new Error('Choose --draft or the legacy --input/--script pair');
-  const draft = draftPath ? await loadProductionDraft(resolve(draftPath), !dryRun) : undefined;
+  const draft = draftPath ? await loadProductionDraft(resolve(draftPath), !dryRun, PROJECT_ROOT, reviewMode) : undefined;
   const quiz = draft?.quiz ?? await loadQuizFile(resolve(args.required('--input')));
   assertNarratedCheckpoint(quiz);
   const script = draft?.script ?? narrationScriptSchema.parse(await readJsonFile(resolve(args.required('--script'))));
+  if (script.profile.model !== 'chirp3-hd') throw new Error('This command has a Chirp character budget. Use voice:compare for the separately budgeted Gemini audition; no request made.');
   const plan = buildNarrationPlan(quiz, script);
   if (!draft && !dryRun) await assertLegacyDemo(quiz, script);
   const output = resolve(args.required('--output'));
@@ -34,9 +38,18 @@ const main = async () => {
   const estimate = missingCharacters * 0.00003;
   const maximumWithOneRetry = estimate * 2;
   if (dryRun) {
-    console.log(JSON.stringify({segments: plan.length, reusable: plan.length - missing.length,
+    const report = {contentHash: draft?.contentHash, segments: plan.length, reusable: plan.length - missing.length,
       uncachedSegments: missing, uncachedCharacters: missingCharacters, estimatedSynthesisCostUSD: estimate,
-      estimatedMaximumWithOneRetryUSD: maximumWithOneRetry, approvalRequired: Boolean(draft)}, null, 2));
+      estimatedMaximumWithOneRetryUSD: maximumWithOneRetry, reviewMode, acceptanceRequired: Boolean(draft), approvalRequired: Boolean(draft) && reviewMode === 'manual'};
+    const reportPath = args.values.get('--report');
+    if (reportPath) {
+      const destination = resolve(reportPath);
+      requireWithin(PROJECT_ROOT, destination);
+      if (!destination.endsWith('.json')) throw new Error('--report must be a local JSON file');
+      if (destination === output) throw new Error('Cost report must differ from the audio manifest output');
+      await atomicJson(destination, report);
+    }
+    console.log(JSON.stringify(report, null, 2));
     return;
   }
   if (missing.length && !args.flags.has('--synthesize')) {
@@ -81,5 +94,9 @@ const main = async () => {
   await rename(temporary, output);
   console.log(`Saved validated audio manifest: ${output}`);
   console.log(`Audio preparation summary: ${JSON.stringify(usage)}`);
+  if (args.values.has('--usage-report')) {
+    const report = resolve(args.required('--usage-report')); requireWithin(PROJECT_ROOT, report);
+    await atomicJson(report, {contentHash: draft?.contentHash, reviewMode, ...usage});
+  }
 };
 main().catch((error: unknown) => { console.error(error instanceof Error ? error.message : String(error)); process.exitCode = 1; });

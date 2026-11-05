@@ -12,7 +12,7 @@ const manifestPath = require.resolve('@remotion/cli/package.json');
 const manifest = JSON.parse(readFileSync(manifestPath, 'utf8')) as {bin: {remotion: string}};
 const cli = join(dirname(manifestPath), manifest.bin.remotion);
 
-export const runRemotion = (args: string[], capture = false, timeoutMs = 0): Promise<string> => new Promise((resolve, reject) => {
+export const runRemotion = (args: string[], capture = false, timeoutMs = 0, captureStderr = false): Promise<string> => new Promise((resolve, reject) => {
   const child = spawn(process.execPath, [cli, ...args], {
     cwd: PROJECT_ROOT,
     shell: false,
@@ -40,6 +40,6 @@ export const runRemotion = (args: string[], capture = false, timeoutMs = 0): Pro
   child.on('close', (code, signal) => {
     clearTimeout(timeout);
     if (code !== 0) reject(new Error(`Remotion ${args[0]} failed (${signal ?? `exit ${code}`}): ${errors.trim()}`));
-    else resolve(output);
+    else resolve(captureStderr ? errors : output);
   });
 });

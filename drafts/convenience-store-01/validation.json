@@ -1,0 +1,23 @@
+{
+  "valid": false,
+  "contentHash": "a55bcb2157895da6f48a89ac54d23587acf7c74f608789e5f77328f4527d2027",
+  "errors": [
+    "quiz.questions.5.prompt: Must contain at most 100 Unicode code points"
+  ],
+  "warnings": [
+    "Structural validation does not establish Korean accuracy, naturalness, difficulty or semantic answer uniqueness. Human review is required."
+  ],
+  "linguisticReviewRequired": true,
+  "generationEstimatedCostUSD": 0.0017171,
+  "reportedGenerationUsage": {
+    "inputTokens": 2964,
+    "outputTokens": 1965,
+    "totalTokens": 4929,
+    "reasoningTokens": 704,
+    "cachedInputTokens": 0
+  },
+  "renderReady": false,
+  "renderBlockers": [
+    "Matching approved background missing for convenience-store; content review may proceed"
+  ]
+}

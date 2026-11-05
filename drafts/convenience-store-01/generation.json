@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "intentHash": "5380a28f50baec176f5f08d6bfc868717c97d608eedbe5a27d68d7ed1427304e",
+  "budgetId": "phase5b-smoke-01",
+  "episodeId": "convenience-store-01",
+  "initialContentHash": "a55bcb2157895da6f48a89ac54d23587acf7c74f608789e5f77328f4527d2027",
+  "status": "invalid",
+  "requestedModel": "gpt-5-nano-2025-08-07",
+  "returnedModel": "gpt-5-nano-2025-08-07",
+  "attempts": 2
+}

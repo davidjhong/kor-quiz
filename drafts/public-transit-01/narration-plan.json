@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "kind": "narration-review-plan",
+  "valid": true,
+  "contentHash": "da7dadc5ea01626898092490c11408bcd37590eed4b53c6e5c680608a6beb7e2",
+  "profile": {
+    "provider": "google-cloud-tts",
+    "model": "chirp3-hd",
+    "voices": {
+      "en-US": "en-US-Chirp3-HD-Kore",
+      "ko-KR": "ko-KR-Chirp3-HD-Kore"
+    },
+    "outputFormat": "LINEAR16",
+    "sampleRateHertz": 24000,
+    "speakingRate": 1
+  },
+  "timingRules": {
+    "fps": 30,
+    "openingMinimum": 90,
+    "readingMinimum": 120,
+    "countdown": 150,
+    "revealMinimum": 120,
+    "settlePause": 6,
+    "afterHook": 15,
+    "afterQuestion": 15,
+    "answerGap": 10,
+    "afterExplanation": 30,
+    "transition": 12,
+    "finalFade": 12,
+    "commentHold": 120,
+    "afterComment": 45,
+    "afterFollow": 30
+  },
+  "endingDisplay": {
+    "comment": "Comment your answer 💬",
+    "follow": "Follow for more Korean ✨"
+  },
+  "timingStatus": "Absolute frames require measured audio; this is not a prepared render manifest.",
+  "segments": [
+    {
+      "id": "public-transit-01-hook",
+      "contentId": "public-transit-01",
+      "role": "hook",
+      "language": "en-US",
+      "text": "Can you say it in Korean?",
+      "cacheKey": "67c6f6d501aa28f3432ddac35b5a558d24f7440a6f4e938668b1d1e2b8d50268",
+      "file": "audio/cache/67c6f6d501aa28f3432ddac35b5a558d24f7440a6f4e938668b1d1e2b8d50268.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q1-question",
+      "contentId": "public-transit-01-q1",
+      "role": "question",
+      "language": "en-US",
+      "text": "How would you ask where the subway entrance is?",
+      "cacheKey": "5f4e225774f21cc7c3dd8226be67d0c8a5c5fb622ff9a004a182e996f5112abc",
+      "file": "audio/cache/5f4e225774f21cc7c3dd8226be67d0c8a5c5fb622ff9a004a182e996f5112abc.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q1-answer",
+      "contentId": "public-transit-01-q1",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "지하철 입구가 어디예요?",
+      "cacheKey": "162464c2572344e64a3170ebb4b0b690c7b0f1dfcf2ed3a2b84cc9f3e31acd76",
+      "file": "audio/cache/162464c2572344e64a3170ebb4b0b690c7b0f1dfcf2ed3a2b84cc9f3e31acd76.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q1-explanation",
+      "contentId": "public-transit-01-q1",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Ask for the location of a place using a standard location question with polite ending.",
+      "cacheKey": "49e3197d2d5139c5c3b21eff66a376254c65669cefbcb2f492801710975d2e51",
+      "file": "audio/cache/49e3197d2d5139c5c3b21eff66a376254c65669cefbcb2f492801710975d2e51.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q2-question",
+      "contentId": "public-transit-01-q2",
+      "role": "question",
+      "language": "en-US",
+      "text": "Where can I buy a subway ticket?",
+      "cacheKey": "b6a3283897097f0686e983071a8ffe884b1a29d33f2c2d82ddba68d3fd509f4a",
+      "file": "audio/cache/b6a3283897097f0686e983071a8ffe884b1a29d33f2c2d82ddba68d3fd509f4a.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q2-answer",
+      "contentId": "public-transit-01-q2",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "표를 어디서 사요?",
+      "cacheKey": "e0529558344faeca7289a1219842edaf48dad98ee8817c7d0c1d60b383bc272d",
+      "file": "audio/cache/e0529558344faeca7289a1219842edaf48dad98ee8817c7d0c1d60b383bc272d.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q2-explanation",
+      "contentId": "public-transit-01-q2",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Ask where tickets are sold in a polite way without using Korean words in the narration.",
+      "cacheKey": "b6fbf56c8b513e1fa5d6be5fe7beb7463b8b034177112337f963b3715f1e7b8f",
+      "file": "audio/cache/b6fbf56c8b513e1fa5d6be5fe7beb7463b8b034177112337f963b3715f1e7b8f.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q3-question",
+      "contentId": "public-transit-01-q3",
+      "role": "question",
+      "language": "en-US",
+      "text": "Which platform should I go to for the next train to City Center?",
+      "cacheKey": "071e775f1c6bb0f10d7499b7b5699b46c794c71b1a4cbbe073431401a63e3d29",
+      "file": "audio/cache/071e775f1c6bb0f10d7499b7b5699b46c794c71b1a4cbbe073431401a63e3d29.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q3-answer",
+      "contentId": "public-transit-01-q3",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "다음 열차는 도시센터로 가는 플랫폼이 어디예",
+      "cacheKey": "af829a8fdf8f201a96c352f33eddc77fea7cb350a697ec69cc9c94e7d190ca6d",
+      "file": "audio/cache/af829a8fdf8f201a96c352f33eddc77fea7cb350a697ec69cc9c94e7d190ca6d.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q3-explanation",
+      "contentId": "public-transit-01-q3",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Ask which platform to avoid missing the train.",
+      "cacheKey": "0b63de5833c902b1797ed1b6d75ff4479fd2a60a8310ed4419d0b51da5669d42",
+      "file": "audio/cache/0b63de5833c902b1797ed1b6d75ff4479fd2a60a8310ed4419d0b51da5669d42.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q4-question",
+      "contentId": "public-transit-01-q4",
+      "role": "question",
+      "language": "en-US",
+      "text": "Does this train go to Seoul Station?",
+      "cacheKey": "6671dfaef751bb4428472db555b5a97da6ba58e6396445f561f4a9d6db33494c",
+      "file": "audio/cache/6671dfaef751bb4428472db555b5a97da6ba58e6396445f561f4a9d6db33494c.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q4-answer",
+      "contentId": "public-transit-01-q4",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "이 열차가 서울역으로 가나요?",
+      "cacheKey": "ebb21f151cf932eb478f4bf1d2a300b53fdcdc9d55923becd68edbf7c3c324e2",
+      "file": "audio/cache/ebb21f151cf932eb478f4bf1d2a300b53fdcdc9d55923becd68edbf7c3c324e2.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q4-explanation",
+      "contentId": "public-transit-01-q4",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Check the train’s final stop to confirm your destination.",
+      "cacheKey": "9bb7da160a22038f5beea1405a131229dcdc685d62ecc6ed63a98b267bd07dee",
+      "file": "audio/cache/9bb7da160a22038f5beea1405a131229dcdc685d62ecc6ed63a98b267bd07dee.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q5-question",
+      "contentId": "public-transit-01-q5",
+      "role": "question",
+      "language": "en-US",
+      "text": "Where should I transfer to reach my next destination?",
+      "cacheKey": "d826def8e04acc35861fc4e894c33c4504a06e72cc81c698728cc1e83072de7c",
+      "file": "audio/cache/d826def8e04acc35861fc4e894c33c4504a06e72cc81c698728cc1e83072de7c.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q5-answer",
+      "contentId": "public-transit-01-q5",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "다음 목적지로 가려면 어디에서 환승해요?",
+      "cacheKey": "828f5b0d83f3c49b661564a67a71a5d856f0156b7c8aac5169a674640b8ede26",
+      "file": "audio/cache/828f5b0d83f3c49b661564a67a71a5d856f0156b7c8aac5169a674640b8ede26.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q5-explanation",
+      "contentId": "public-transit-01-q5",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Ask for the transfer point to continue your journey efficiently.",
+      "cacheKey": "37167d2d154ebdf8cde34e0b1607efae9d633a89fd20e63de02cc79b3cc3887e",
+      "file": "audio/cache/37167d2d154ebdf8cde34e0b1607efae9d633a89fd20e63de02cc79b3cc3887e.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q6-question",
+      "contentId": "public-transit-01-q6",
+      "role": "question",
+      "language": "en-US",
+      "text": "Which exit should I take to reach City Hall?",
+      "cacheKey": "d50b7e73652b7d07d3358eaf00707cd597180855b4d34da403782079d4487c02",
+      "file": "audio/cache/d50b7e73652b7d07d3358eaf00707cd597180855b4d34da403782079d4487c02.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q6-comment",
+      "contentId": "public-transit-01-q6",
+      "role": "comment",
+      "language": "en-US",
+      "text": "What do you think? Comment your answer!",
+      "cacheKey": "4d5c462cb17eb8ca4e9f4c6c79f0c0d36f84a90560989b2bcf2003880ccb616a",
+      "file": "audio/cache/4d5c462cb17eb8ca4e9f4c6c79f0c0d36f84a90560989b2bcf2003880ccb616a.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-01-q6-follow",
+      "contentId": "public-transit-01-q6",
+      "role": "follow",
+      "language": "en-US",
+      "text": "Follow for more Korean!",
+      "cacheKey": "ae849836b3b094d2c6fac3058c7132d4e0ac90646bd3b1835aa087412dbf2c02",
+      "file": "audio/cache/ae849836b3b094d2c6fac3058c7132d4e0ac90646bd3b1835aa087412dbf2c02.wav",
+      "durationSeconds": null
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "intentHash": "18bb6165bc270276e62bb4b45601628cdb15c8ec8b297c72090456d2abb59346",
+  "inputsHash": "38b2723feebd40f9014cecef8309db37997a6f0cb9870b512a360dd6a7de3511",
+  "budgetId": "phase5b-quality-02",
+  "episodeId": "convenience-store-02",
+  "experimentHash": "40a229f9def7aa3ab269d4894b03e1c305f9605327eefd9ee305060b46165415",
+  "promptVersion": "phase5b-quality-v1",
+  "schemaVersion": "phase5b-quality-education-v1",
+  "initialContentHash": "069b7be1600f41ea9b78e58dd34a59f968d53837993c276455317000d53f806a",
+  "status": "valid",
+  "requestedModel": "gpt-6-luna",
+  "returnedModel": "gpt-6-luna",
+  "attempts": 1
+}

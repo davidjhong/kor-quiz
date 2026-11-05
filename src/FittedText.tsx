@@ -13,11 +13,12 @@ type FittedTextProps = {
   center?: boolean;
   lang?: string;
   balance?: boolean;
+  onFit?: (height: number) => void;
 };
 
 /** Fit local-font text within a fixed slot, or fail instead of clipping it. */
 export const FittedText = ({text, label, height, fontSize, minFontSize, lineHeight,
-  fontWeight = 400, letterSpacing = 0, center = false, lang, balance = false}: FittedTextProps) => {
+  fontWeight = 400, letterSpacing = 0, center = false, lang, balance = false, onFit}: FittedTextProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const {delayRender, continueRender, cancelRender} = useDelayRender();
 
@@ -45,13 +46,14 @@ export const FittedText = ({text, label, height, fontSize, minFontSize, lineHeig
       if (element.scrollHeight > height || element.scrollWidth > element.clientWidth) {
         throw new Error(`${label}: text does not fit at ${minFontSize}px; shorten this field`);
       }
+      onFit?.(element.getBoundingClientRect().height);
       finish();
     }).catch((error: unknown) => {
       if (active) cancelRender(error instanceof Error ? error : new Error(String(error)));
     });
     return () => { active = false; finish(); };
   }, [text, label, height, fontSize, minFontSize, fontWeight, lineHeight, letterSpacing,
-    balance, delayRender, continueRender, cancelRender]);
+    balance, onFit, delayRender, continueRender, cancelRender]);
 
   return <div style={{height, width: '100%', minWidth: 0, display: 'flex', alignItems: center ? 'center' : 'flex-start'}}>
     <div ref={ref} lang={lang} style={{width: '100%', fontSize, fontWeight, lineHeight,

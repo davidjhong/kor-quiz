@@ -6,8 +6,9 @@ import {tmpdir} from 'node:os';
 import {dirname, join, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import test from 'node:test';
-import {assertNarratedCheckpoint, BONUS_CTA_TEXT, buildNarrationPlan, narrationScriptSchema, preparedNarrationSchema, validatePreparedNarrationPlan} from '../src/narration.ts';
-import {audioDurationToFrames, getNarratedTimeline, NARRATION_TIMING} from '../src/narrationTiming.ts';
+import {assertNarratedCheckpoint, BONUS_CTA_LABELS, BONUS_CTA_TEXT, BONUS_FOLLOW_TEXT, LEGACY_BONUS_CTA_TEXT, buildNarrationPlan, narrationScriptSchema, preparedNarrationSchema, validatePreparedNarrationPlan} from '../src/narration.ts';
+import {audioDurationToFrames, getBonusCtaState, getNarratedTimeline, NARRATION_TIMING} from '../src/narrationTiming.ts';
+import {draftToQuiz} from '../src/draftSchema.ts';
 import {getIllustratedQuestionState} from '../src/questionTiming.ts';
 import {getChoiceHangul, parseQuizInput} from '../src/quizSchema.ts';
 import {AUDIO_PROCESSING, audioCacheKey, loadPreparedNarration, prepareClip, quizSpeechFingerprint, sha256, validateAudioFile} from '../scripts/narrationFiles.ts';
@@ -160,7 +161,7 @@ test('neutral CTA starts only after the bonus countdown, extends the ending, and
   clips.at(-1).durationSeconds = 6.001;
   const timeline = getNarratedTimeline({...fakeManifest(), clips}, episode);
   const bonus = timeline.questions.at(-1), cta = timeline.audio.at(-1);
-  assert.equal(cta.text, BONUS_CTA_TEXT);
+  assert.equal(cta.text, LEGACY_BONUS_CTA_TEXT);
   assert.equal(cta.language, 'en-US');
   assert.equal(cta.start, bonus.revealStart + NARRATION_TIMING.settlePause);
   assert.equal(cta.end - cta.start, 181);
@@ -173,6 +174,63 @@ test('neutral CTA starts only after the bonus countdown, extends the ending, and
   const bad = structuredClone(episodeScript);
   bad.segments.at(-1).text = 'The correct answer is C.';
   assert.throws(() => buildNarrationPlan(episode, bad), /fixed neutral/u);
+});
+
+test('spokenPrompt separates narration from visible context and remains bound to content and audio fingerprints', () => {
+  const customized = structuredClone(quiz);
+  customized.questions[0].spokenPrompt = 'How would you ask for water?';
+  const customizedScript = structuredClone(script);
+  customizedScript.segments[1].text = customized.questions[0].spokenPrompt;
+  assert.doesNotThrow(() => buildNarrationPlan(customized, customizedScript));
+  assert.equal(customized.questions[0].context, quiz.questions[0].context);
+  assert.equal(customized.questions[0].prompt, quiz.questions[0].prompt);
+  assert.notEqual(quizSpeechFingerprint(customized), quizSpeechFingerprint(quiz));
+  assert.notEqual(audioCacheKey(customizedScript.segments[1], script.profile), audioCacheKey(script.segments[1], script.profile));
+  assert.throws(() => buildNarrationPlan(customized, script), /must match spokenPrompt/u);
+});
+
+test('legacy prepared narration fingerprints stay valid when spokenPrompt is absent', () => {
+  for (const [input, manifest] of [['content/cafe-narrated-preview.json', 'public/audio/water-preview/manifest.json'],
+    ['content/cafe-six.json', 'public/audio/cafe-six/manifest.json']]) {
+    assert.equal(quizSpeechFingerprint(parseQuizInput(read(input))), read(manifest).quizFingerprint);
+  }
+});
+
+test('comment and follow use separate measured clips, an exact 45-frame pause, then 30-frame hold and the existing fade', () => {
+  const source = read('content/authored/cafe-friends-02.json');
+  const nextQuiz = draftToQuiz({quiz: source.quiz});
+  const nextScript = narrationScriptSchema.parse(source.narration);
+  const clips = nextScript.segments.map((segment) => ({...fakeManifest().clips[0], ...segment, durationSeconds: 1}));
+  clips.at(-2).durationSeconds = 1.001;
+  clips.at(-1).durationSeconds = 2.001;
+  const timeline = getNarratedTimeline({...fakeManifest(), clips}, nextQuiz);
+  const bonus = timeline.questions.at(-1), comment = timeline.audio.at(-2), follow = timeline.audio.at(-1);
+  assert.equal(comment.text, BONUS_CTA_TEXT);
+  assert.equal(follow.text, BONUS_FOLLOW_TEXT);
+  assert.equal(comment.start, bonus.revealStart + NARRATION_TIMING.settlePause);
+  assert.equal(comment.end - comment.start, 31);
+  assert.equal(follow.end - follow.start, 61);
+  assert.equal(follow.start - comment.end, 45);
+  assert.equal(bonus.end - follow.end, 30);
+  assert.equal(timeline.durationInFrames - bonus.end, NARRATION_TIMING.finalFade);
+  assert.notEqual(audioCacheKey(clips.at(-2), nextScript.profile), audioCacheKey(clips.at(-1), nextScript.profile));
+  assert.equal(getBonusCtaState(bonus.revealStart - 1, bonus), null);
+  assert.equal(getBonusCtaState(bonus.revealStart, bonus), 'comment');
+  assert.equal(getBonusCtaState(follow.start - 1, bonus), 'comment');
+  assert.equal(getBonusCtaState(follow.start, bonus), 'follow');
+  assert.equal(getBonusCtaState(bonus.end - 1, bonus), 'follow');
+  assert.equal(BONUS_CTA_LABELS.comment, 'Comment your answer 💬');
+  assert.equal(BONUS_CTA_LABELS.follow, 'Follow for more Korean ✨');
+  for (let frame = bonus.revealStart; frame < timeline.durationInFrames; frame++) {
+    const state = getIllustratedQuestionState(frame - bonus.start, true, bonus.questionTimeline);
+    assert.equal(state.phase, 'comment'); assert.equal(state.revealProgress, 0);
+  }
+  assert.deepEqual(timeline.audio.filter((clip) => clip.contentId === bonus.id).map((clip) => clip.role), ['question', 'comment', 'follow']);
+  const bad = structuredClone(nextScript);
+  bad.segments.at(-1).text = 'Follow and choose B!';
+  assert.throws(() => buildNarrationPlan(nextQuiz, bad), /fixed neutral/u);
+  const missingFollow = {...nextScript, segments: nextScript.segments.slice(0, -1)};
+  assert.throws(() => buildNarrationPlan(nextQuiz, missingFollow), /ordered/u);
 });
 
 test('Google ADC client disables SDK retries and retries only one explicit rate limit, never auth/input/uncertain failures', async () => {

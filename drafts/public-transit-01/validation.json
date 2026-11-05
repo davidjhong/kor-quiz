@@ -1,0 +1,21 @@
+{
+  "valid": true,
+  "contentHash": "da7dadc5ea01626898092490c11408bcd37590eed4b53c6e5c680608a6beb7e2",
+  "errors": [],
+  "warnings": [
+    "Structural validation does not establish Korean accuracy, naturalness, difficulty or semantic answer uniqueness. Human review is required."
+  ],
+  "linguisticReviewRequired": true,
+  "generationEstimatedCostUSD": 0.0018831,
+  "reportedGenerationUsage": {
+    "inputTokens": 3115,
+    "outputTokens": 1946,
+    "totalTokens": 5061,
+    "reasoningTokens": 576,
+    "cachedInputTokens": 0
+  },
+  "renderReady": false,
+  "renderBlockers": [
+    "Matching approved background missing for public-transit; content review may proceed"
+  ]
+}

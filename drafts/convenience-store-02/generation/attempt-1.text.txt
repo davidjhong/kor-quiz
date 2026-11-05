@@ -1,0 +1,153 @@
+{
+  "questions": [
+    {
+      "scenario": "At the checkout",
+      "prompt": "You need one shopping bag. What do you say?",
+      "context": "You are paying and want the cashier to give you a bag.",
+      "spokenPrompt": "You need a bag for your purchases. How would you ask for one?",
+      "choices": [
+        {
+          "hangul": "봉투 하나 주세요.",
+          "romanization": "beontu hana juseyo."
+        },
+        {
+          "hangul": "젓가락 하나 주세요.",
+          "romanization": "jjeotgarak hana juseyo."
+        },
+        {
+          "hangul": "물 한 병 주세요.",
+          "romanization": "mul han byeong juseyo."
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "One shopping bag, please.",
+      "explanation": "This politely asks for one shopping bag. 하나 means “one,” and 주세요 is a polite way to ask for something.",
+      "teachingPoint": "봉투 = bag; 하나 = one; 주세요 = please give me",
+      "explanationNarration": "This means, “One shopping bag, please.” The word for “one” comes before the item, and the ending makes it a polite request."
+    },
+    {
+      "scenario": "With a ready meal",
+      "prompt": "You need chopsticks for your meal. What do you say?",
+      "context": "You have a ready meal but no chopsticks.",
+      "spokenPrompt": "Your meal has no chopsticks. What could you ask the staff for?",
+      "choices": [
+        {
+          "hangul": "젓가락 주세요.",
+          "romanization": "jjeotgarak juseyo."
+        },
+        {
+          "hangul": "숟가락 주세요.",
+          "romanization": "sutgarak juseyo."
+        },
+        {
+          "hangul": "냅킨 주세요.",
+          "romanization": "naepkin juseyo."
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "Chopsticks, please.",
+      "explanation": "This asks for chopsticks. 숟가락 means “spoon,” while 냅킨 means “napkin”; 주세요 politely asks for the item.",
+      "teachingPoint": "젓가락 = chopsticks; 주세요 = please give me",
+      "explanationNarration": "This means, “Chopsticks, please.” You can put the item you want before a polite phrase for asking someone to give it to you."
+    },
+    {
+      "scenario": "Heating a lunchbox",
+      "prompt": "Ask the staff to heat your lunchbox. What do you say?",
+      "context": "You bought a ready-to-eat lunchbox and want it warmed.",
+      "spokenPrompt": "You want your lunchbox warmed before you eat. How would you ask?",
+      "choices": [
+        {
+          "hangul": "이 도시락 데워 주세요.",
+          "romanization": "i dosirak dewo juseyo."
+        },
+        {
+          "hangul": "이 도시락 포장해 주세요.",
+          "romanization": "i dosirak pojanghae juseyo."
+        },
+        {
+          "hangul": "이 도시락 하나 더 주세요.",
+          "romanization": "i dosirak hana deo juseyo."
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "Please heat this lunchbox.",
+      "explanation": "This asks the staff to heat the lunchbox. 데워 means “heat” here, and 주세요 turns the request into a polite one.",
+      "teachingPoint": "이 도시락 = this lunchbox; 데워 주세요 = please heat it",
+      "explanationNarration": "This means, “Please heat this lunchbox.” The verb “heat” comes before the polite request ending."
+    },
+    {
+      "scenario": "At the register",
+      "prompt": "Ask if you can pay by card. What do you say?",
+      "context": "You are ready to pay and want to know if the store accepts cards.",
+      "spokenPrompt": "You are at the register and want to check whether card payment is possible. What would you ask?",
+      "choices": [
+        {
+          "hangul": "카드로 결제해도 돼요?",
+          "romanization": "kadeuro gyeoljehaedo dwaeyo?"
+        },
+        {
+          "hangul": "현금으로 결제해도 돼요?",
+          "romanization": "hyeongeumeuro gyeoljehaedo dwaeyo?"
+        },
+        {
+          "hangul": "카드로 결제할게요.",
+          "romanization": "kadeuro gyeoljehalgeyo."
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "Can I pay by card?",
+      "explanation": "This asks whether paying by card is allowed. The question ending asks about possibility or permission; the cash option asks about a different payment method.",
+      "teachingPoint": "카드로 = by card; 결제해도 돼요? = is it okay to pay?",
+      "explanationNarration": "This means, “Can I pay by card?” The question asks whether an action is okay, rather than simply stating what you plan to do."
+    },
+    {
+      "scenario": "Finding an item",
+      "prompt": "Ask where the ramen is. What do you say?",
+      "context": "You are in the store and cannot find the ramen on the shelves.",
+      "spokenPrompt": "You cannot spot the ramen. How would you ask where it is?",
+      "choices": [
+        {
+          "hangul": "라면은 어디에 있어요?",
+          "romanization": "ramyeoneun eodie isseoyo?"
+        },
+        {
+          "hangul": "과자는 어디에 있어요?",
+          "romanization": "gwajaneun eodie isseoyo?"
+        },
+        {
+          "hangul": "음료는 어디에 있어요?",
+          "romanization": "eumnyoneun eodie isseoyo?"
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "Where is the ramen?",
+      "explanation": "This asks where the ramen is. 어디에 있어요? means “Where is it?”; the first word names the item you are looking for.",
+      "teachingPoint": "라면은 = as for the ramen; 어디에 있어요? = where is it?",
+      "explanationNarration": "This means, “Where is the ramen?” The question phrase means “Where is it?” Put the item you are looking for first."
+    }
+  ],
+  "bonus": {
+    "scenario": "Choosing a snack size",
+    "prompt": "Ask if this snack comes in a smaller size. What do you say?",
+    "context": "The package is too large, and you want a smaller size of the same snack.",
+    "spokenPrompt": "This package is too big for you. How would you ask whether there is a smaller size?",
+    "choices": [
+      {
+        "hangul": "더 작은 사이즈도 있어요?",
+        "romanization": "deo jageun saijeudo isseoyo?"
+      },
+      {
+        "hangul": "더 큰 사이즈도 있어요?",
+        "romanization": "deo keun saijeudo isseoyo?"
+      },
+      {
+        "hangul": "다른 맛도 있어요?",
+        "romanization": "dareun matdo isseoyo?"
+      }
+    ],
+    "correctAnswerIndex": 0,
+    "translation": "Do you also have a smaller size?",
+    "explanation": "This asks whether the same snack is available in a smaller size. 더 작은 means “smaller,” and 있어요? asks whether something is available.",
+    "teachingPoint": "더 작은 = smaller; 사이즈도 있어요? = is there also a size?"
+  }
+}

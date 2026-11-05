@@ -1,0 +1,224 @@
+{
+  "version": 1,
+  "kind": "coding-assistant-content-revision",
+  "sourceDirectory": "drafts/public-transit-02",
+  "sourceContentHash": "5824a3b5d7a0ab035459f435d2e120ce376ee47e52a38909c95bb34d0fedcfbc",
+  "revisedContentHash": "399899ccb71ee6597783f75fac00b8237f192197c3d8c8a8fde64c078fecd4e8",
+  "recordedAt": "2026-11-05T06:59:56.913Z",
+  "changes": [
+    {
+      "field": "draft.quiz.questions.1.choices.2.romanization",
+      "before": "maepyosomeun eodiyeyo?",
+      "after": "maepyosoneun eodiyeyo?",
+      "reason": "Correct the mismatched consonant in 매표소는; retain the project learner-romanization style. Human review remains required."
+    },
+    {
+      "field": "draft.quiz.questions.1.explanation",
+      "before": "This asks where the platform is. The topic marker 은 attaches to 승강장 to make it the subject of the question.",
+      "after": "This asks where the platform is. The topic marker 은 introduces the platform as the topic of the question.",
+      "reason": "Describe the topic marker without equating it with a grammatical subject."
+    },
+    {
+      "field": "draft.quiz.questions.5.choices",
+      "before": [
+        {
+          "hangul": "시청에 가려면 몇 번 출구로 나가요?",
+          "romanization": "sicheong-e garyeomyeon myeot beon chulguro nagayo?"
+        },
+        {
+          "hangul": "공원에 가려면 몇 번 출구로 나가요?",
+          "romanization": "gongwon-e garyeomyeon myeot beon chulguro nagayo?"
+        },
+        {
+          "hangul": "은행에 가려면 몇 번 출구로 나가요?",
+          "romanization": "eunhaeng-e garyeomyeon myeot beon chulguro nagayo?"
+        }
+      ],
+      "after": [
+        {
+          "hangul": "시청은 몇 번 출구예요?",
+          "romanization": "sicheongeun myeot beon chulguyeyo?"
+        },
+        {
+          "hangul": "공원은 몇 번 출구예요?",
+          "romanization": "gongwoneun myeot beon chulguyeyo?"
+        },
+        {
+          "hangul": "은행은 몇 번 출구예요?",
+          "romanization": "eunhaengeun myeot beon chulguyeyo?"
+        }
+      ],
+      "reason": "Propose shorter COMPLETE exit questions and matching romanization for the fixed answer-row slots. Keep City Hall versus park/bank meanings distinct; seek human naturalness review."
+    },
+    {
+      "field": "key.translation",
+      "before": "Which exit should I take to get to City Hall?",
+      "after": "Which exit is for City Hall?",
+      "reason": "Match the shorter proposed City Hall question in the PRIVATE key only."
+    },
+    {
+      "field": "key.explanation",
+      "before": "This asks which exit to use to get to City Hall. 가려면 means “if you want to go,” and 몇 번 asks for a number.",
+      "after": "With City Hall as the topic, this asks which exit number to use. 몇 번 asks for a number.",
+      "reason": "Update the private explanation to the proposed wording; this is never narrated or revealed."
+    },
+    {
+      "field": "key.teachingPoint",
+      "before": "시청에 = to City Hall; 몇 번 출구 = which exit number; 나가요? = do I exit?",
+      "after": "시청은 = as for City Hall; 몇 번 출구 = which exit number",
+      "reason": "Keep the private teaching point consistent with the revised bonus phrase."
+    },
+    {
+      "field": "draft.quiz.questions.0.choices",
+      "before": [
+        {
+          "hangul": "지하철 입구가 어디예요?",
+          "romanization": "jihacheol ipguga eodiyeyo?"
+        },
+        {
+          "hangul": "화장실은 어디예요?",
+          "romanization": "hwajangsireun eodiyeyo?"
+        },
+        {
+          "hangul": "출구는 어디예요?",
+          "romanization": "chulguneun eodiyeyo?"
+        }
+      ],
+      "after": [
+        {
+          "hangul": "화장실은 어디예요?",
+          "romanization": "hwajangsireun eodiyeyo?"
+        },
+        {
+          "hangul": "지하철 입구가 어디예요?",
+          "romanization": "jihacheol ipguga eodiyeyo?"
+        },
+        {
+          "hangul": "출구는 어디예요?",
+          "romanization": "chulguneun eodiyeyo?"
+        }
+      ],
+      "reason": "The original API draft put all six answers at A. Redistribute positions while keeping Hangul/romanization pairs and first-five Korean answer narration intact. Update the separate bonus key; no letter or bonus answer is spoken or highlighted."
+    },
+    {
+      "field": "draft.quiz.questions.0.correctAnswerIndex",
+      "before": 0,
+      "after": 1,
+      "reason": "The original API draft put all six answers at A. Redistribute positions while keeping Hangul/romanization pairs and first-five Korean answer narration intact. Update the separate bonus key; no letter or bonus answer is spoken or highlighted."
+    },
+    {
+      "field": "draft.quiz.questions.1.choices",
+      "before": [
+        {
+          "hangul": "승강장은 어디예요?",
+          "romanization": "seunggangjangeun eodiyeyo?"
+        },
+        {
+          "hangul": "출구는 어디예요?",
+          "romanization": "chulguneun eodiyeyo?"
+        },
+        {
+          "hangul": "매표소는 어디예요?",
+          "romanization": "maepyosoneun eodiyeyo?"
+        }
+      ],
+      "after": [
+        {
+          "hangul": "출구는 어디예요?",
+          "romanization": "chulguneun eodiyeyo?"
+        },
+        {
+          "hangul": "매표소는 어디예요?",
+          "romanization": "maepyosoneun eodiyeyo?"
+        },
+        {
+          "hangul": "승강장은 어디예요?",
+          "romanization": "seunggangjangeun eodiyeyo?"
+        }
+      ],
+      "reason": "The original API draft put all six answers at A. Redistribute positions while keeping Hangul/romanization pairs and first-five Korean answer narration intact. Update the separate bonus key; no letter or bonus answer is spoken or highlighted."
+    },
+    {
+      "field": "draft.quiz.questions.1.correctAnswerIndex",
+      "before": 0,
+      "after": 2,
+      "reason": "The original API draft put all six answers at A. Redistribute positions while keeping Hangul/romanization pairs and first-five Korean answer narration intact. Update the separate bonus key; no letter or bonus answer is spoken or highlighted."
+    },
+    {
+      "field": "draft.quiz.questions.3.choices",
+      "before": [
+        {
+          "hangul": "이 열차는 서울역에 가요?",
+          "romanization": "i yeolchaneun seoullyeoge gayo?"
+        },
+        {
+          "hangul": "이 열차는 부산에 가요?",
+          "romanization": "i yeolchaneun busane gayo?"
+        },
+        {
+          "hangul": "이 열차는 공항에 가요?",
+          "romanization": "i yeolchaneun gonghange gayo?"
+        }
+      ],
+      "after": [
+        {
+          "hangul": "이 열차는 공항에 가요?",
+          "romanization": "i yeolchaneun gonghange gayo?"
+        },
+        {
+          "hangul": "이 열차는 서울역에 가요?",
+          "romanization": "i yeolchaneun seoullyeoge gayo?"
+        },
+        {
+          "hangul": "이 열차는 부산에 가요?",
+          "romanization": "i yeolchaneun busane gayo?"
+        }
+      ],
+      "reason": "The original API draft put all six answers at A. Redistribute positions while keeping Hangul/romanization pairs and first-five Korean answer narration intact. Update the separate bonus key; no letter or bonus answer is spoken or highlighted."
+    },
+    {
+      "field": "draft.quiz.questions.3.correctAnswerIndex",
+      "before": 0,
+      "after": 1,
+      "reason": "The original API draft put all six answers at A. Redistribute positions while keeping Hangul/romanization pairs and first-five Korean answer narration intact. Update the separate bonus key; no letter or bonus answer is spoken or highlighted."
+    },
+    {
+      "field": "draft.quiz.questions.5.choices",
+      "before": [
+        {
+          "hangul": "시청은 몇 번 출구예요?",
+          "romanization": "sicheongeun myeot beon chulguyeyo?"
+        },
+        {
+          "hangul": "공원은 몇 번 출구예요?",
+          "romanization": "gongwoneun myeot beon chulguyeyo?"
+        },
+        {
+          "hangul": "은행은 몇 번 출구예요?",
+          "romanization": "eunhaengeun myeot beon chulguyeyo?"
+        }
+      ],
+      "after": [
+        {
+          "hangul": "공원은 몇 번 출구예요?",
+          "romanization": "gongwoneun myeot beon chulguyeyo?"
+        },
+        {
+          "hangul": "은행은 몇 번 출구예요?",
+          "romanization": "eunhaengeun myeot beon chulguyeyo?"
+        },
+        {
+          "hangul": "시청은 몇 번 출구예요?",
+          "romanization": "sicheongeun myeot beon chulguyeyo?"
+        }
+      ],
+      "reason": "The original API draft put all six answers at A. Redistribute positions while keeping Hangul/romanization pairs and first-five Korean answer narration intact. Update the separate bonus key; no letter or bonus answer is spoken or highlighted."
+    },
+    {
+      "field": "key.correctAnswerIndex",
+      "before": 0,
+      "after": 2,
+      "reason": "The original API draft put all six answers at A. Redistribute positions while keeping Hangul/romanization pairs and first-five Korean answer narration intact. Update the separate bonus key; no letter or bonus answer is spoken or highlighted."
+    }
+  ]
+}

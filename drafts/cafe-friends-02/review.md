@@ -1,6 +1,6 @@
 # PRIVATE content review — unapproved draft
 
-Content hash: `01106069479357e54e096724b7a4b6046e83418b99098b7b0826d766087dd111`
+Content hash: `c69b365a7d8d02d143c7df2929142a680dc392db3b8d0bd8b87416e32c871046`
 
 Structural validation: **PASS**. Linguistic approval: **NOT GRANTED**.
 
@@ -88,8 +88,8 @@ Context: You have finished your drink.
 
 Private correct answer: **A**
 Meaning: Where should I put the cup?
-Explanation: 어디에 asks where to put something. 놓으면 돼요? asks whether putting it there is okay.
-Teaching point: 어디에 = where; 놓으면 돼요? = is it okay to put it?
+Explanation: 어디에 means ‘where.’ The full question asks where you should put the cup.
+Teaching point: 어디에 = where; 컵은 어디에 놓으면 돼요? = Where should I put the cup?
 
 ## 6. cafe-charge-phone — hard — COMMENT BONUS
 
@@ -113,26 +113,35 @@ English voice: en-US-Chirp3-HD-Kore; Korean voice: ko-KR-Chirp3-HD-Kore
 Settings: rate 1, LINEAR16, 24000 Hz
 
 Draft provenance: local-authoring / model none; prompt phase5-local-v1
-Generated: 2026-11-05T01:19:27.868Z; additional generation API cost estimate: $0; reported API usage: none
+Generated: 2026-11-05T01:50:21.157Z; additional generation API cost estimate: $0; reported API usage: none
 
 - friends-hook-en / hook / en-US: Can you order in Korean?
-- friends-greet-question / question / en-US: Greet the café staff politely. Say hello as you enter.
+- friends-greet-question / question / en-US: How would you greet the café staff?
 - friends-greet-answer / answer / ko-KR: 안녕하세요.
-- friends-greet-explanation / explanation / en-US: Hello. Use this polite greeting when you arrive.
-- friends-one-question / question / en-US: Order one cup of coffee. Ask for exactly one coffee, not tea.
+- friends-greet-explanation / explanation / en-US: Hello. A polite greeting when you enter.
+- friends-one-question / question / en-US: How would you order one coffee?
 - friends-one-answer / answer / ko-KR: 커피 한 잔 주세요.
-- friends-one-explanation / explanation / en-US: One coffee, please. This asks for one cup of coffee.
-- friends-hot-question / question / en-US: Order a hot coffee. You do not want a cold drink or tea.
+- friends-one-explanation / explanation / en-US: One coffee, please. Use this counter when ordering cups of a drink.
+- friends-hot-question / question / en-US: How would you ask for a hot coffee?
 - friends-hot-answer / answer / ko-KR: 따뜻한 커피 주세요.
-- friends-hot-explanation / explanation / en-US: Hot coffee, please. This requests warm coffee rather than a cold drink.
-- friends-milk-question / question / en-US: Ask for milk in your coffee. Add milk, rather than sugar.
+- friends-hot-explanation / explanation / en-US: Hot coffee, please. This specifies the drink’s temperature.
+- friends-milk-question / question / en-US: How would you ask them to add milk?
 - friends-milk-answer / answer / ko-KR: 우유 넣어 주세요.
-- friends-milk-explanation / explanation / en-US: Add milk, please. This asks the staff to add milk to your coffee.
-- friends-cup-question / question / en-US: Ask where to put your empty cup. You have finished your drink.
+- friends-milk-explanation / explanation / en-US: Add milk, please. You can use this request to customize your drink.
+- friends-cup-question / question / en-US: You’ve finished your drink. How would you ask where to leave your cup?
 - friends-cup-answer / answer / ko-KR: 컵은 어디에 놓으면 돼요?
-- friends-cup-explanation / explanation / en-US: Where should I put the cup? Use this to ask where to leave your empty cup.
-- friends-bonus-question / question / en-US: Ask if you may charge your phone. Request permission to use the café outlet.
-- friends-bonus-comment / comment / en-US: What do you think? Comment A, B, or C below\!
+- friends-cup-explanation / explanation / en-US: Where should I put the cup? A useful question when clearing your table.
+- friends-bonus-question / question / en-US: How would you ask permission to charge your phone here?
+- friends-bonus-comment / comment / en-US: What do you think? Comment your answer\!
+- friends-bonus-follow / follow / en-US: Follow for more Korean\!
+
+## Deterministic bonus ending
+
+After the countdown, display Comment your answer 💬 while the comment clip plays. Keep all choices neutral and visible.
+After that clip finishes, pause 1.5 seconds (45 frames).
+At follow narration start, display Follow for more Korean ✨. Hold 1 second (30 frames) after it finishes, then use the existing 12-frame fade.
+Clip durations and absolute scene frames await measured audio preparation; no duration is invented for this review.
+
 
 ## Human review checklist
 

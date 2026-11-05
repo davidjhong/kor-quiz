@@ -5,9 +5,13 @@ export const CONTENT_LIMITS = {
   id: 64,
   scenario: 40,
   prompt: 100,
+  context: 80,
+  spokenPrompt: 180,
   choice: 24,
   romanization: 72,
   explanation: 180,
+  translation: 80,
+  teachingPoint: 100,
   questions: 6,
 } as const;
 
@@ -35,8 +39,9 @@ export const quizQuestionSchema = z.strictObject({
   id: text(CONTENT_LIMITS.id),
   scenario: text(CONTENT_LIMITS.scenario),
   difficulty: z.enum(['easy', 'medium', 'hard']).optional(),
-  context: text(80).optional(),
+  context: text(CONTENT_LIMITS.context).optional(),
   prompt: text(CONTENT_LIMITS.prompt),
+  spokenPrompt: text(CONTENT_LIMITS.spokenPrompt).optional(),
   choices: z.tuple([quizChoiceSchema, quizChoiceSchema, quizChoiceSchema])
     .superRefine((choices, context) => {
       const seen = new Set<string>();
@@ -54,8 +59,8 @@ export const quizQuestionSchema = z.strictObject({
   explanation: text(CONTENT_LIMITS.explanation),
   suggestedComment: text(220).optional(),
   reveal: z.strictObject({
-    translation: text(80),
-    teachingPoint: text(100),
+    translation: text(CONTENT_LIMITS.translation),
+    teachingPoint: text(CONTENT_LIMITS.teachingPoint),
   }).optional(),
 });
 

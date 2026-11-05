@@ -10,6 +10,8 @@ episode. It has not been synthesized or rendered. The Phase 4 ending fix is comp
   choices, romanization, private correct answers, meanings, explanations, warnings,
   exact spoken text, voice settings and a linguistic-review checklist.
 - [Validation report](../drafts/cafe-friends-02/validation.json)
+- [Narration review plan](../drafts/cafe-friends-02/narration-plan.json), with separate cache identities for comment/follow clips and pending measured durations
+- [Cost estimate](../drafts/cafe-friends-02/cost-estimate.json), bound to the revised content hash
 - [Separate bonus answer key](../drafts/cafe-friends-02/answer-key.json)
 - [Scenario brief](../content/briefs/cafe-friends-02.json)
 - [Locally authored import source](../content/authored/cafe-friends-02.json)
@@ -27,6 +29,13 @@ The authored source contains quiz data, a narration script and a separate privat
 bonus-key object. Import writes the key to its own file; `draft.json` contains no
 bonus answer reference, explanation, reveal or suggested-comment data.
 
+The wording revision keeps all visible questions, contexts, choices, romanizations
+and correct-answer references. Optional validated `spokenPrompt` fields contain
+the exact shorter question narration, so useful context is not automatically read
+aloud. The five English explanations contain no romanized Korean; Korean answers
+remain separate `ko-KR` segments using the existing Korean voice. Q5's written
+explanation and full-question teaching point are corrected in both source and draft.
+
 `src/draftSchema.ts` reuses existing question, choice, length, narration and asset-ID
 schemas. Validation enforces six questions, ordered easy/easy/medium/medium/hard/hard,
 three choices, integer answer references 0/1/2 (displayed as A/B/C), required paired
@@ -34,14 +43,23 @@ romanization, meanings/teaching points for questions 1–5, matching approved ba
 IDs and a separate valid key for question 6. Choices compare NFKC-normalized Hangul
 without whitespace, so spacing variants do not become fake distractors.
 
-The bonus's permitted narration roles are only `question` and `comment`. Its CTA
-must equal the fixed neutral invitation. Any answer/explanation segment, bonus
+The revised bonus permits only `question`, `comment` and `follow` narration, in that
+order. The last two texts must be exactly “What do you think? Comment your answer!”
+and “Follow for more Korean!” Any answer/explanation segment, bonus
 reveal data or extra model-supplied `approved` field fails validation. The renderer
 adapter supplies fixed unused placeholders for legacy-required bonus fields; the
 actual bonus answer and teaching explanation never enter video props. Its correct
 choice still appears normally among the three unmarked choices.
 Explicit answer-letter hints and Hangul answer text in the English bonus prompt
 are rejected as well; semantic hints still require the human checklist.
+
+After the countdown, show “Comment your answer 💬” during comment narration and
+the following **45-frame / 1.5-second pause**. At the follow clip's start, switch to
+“Follow for more Korean ✨”. After that clip finishes, hold for **30 frames / one
+second**, then use the existing 12-frame fade. Choices stay visible and neutral.
+Both clips have separate cache keys and will receive measured durations during
+future approved preparation. No new durations or absolute frames are fabricated
+for this review. Existing demo endings remain compatible with their cached audio.
 
 **Structural validation cannot prove Korean accuracy/naturalness, appropriate
 politeness, romanization pronunciation, difficulty or semantic answer uniqueness.**
@@ -93,6 +111,8 @@ Get-Content -Raw -Encoding UTF8 .\drafts\cafe-friends-02\review.md
 
 # Unapproved drafts may be cost-estimated, but cannot prepare/render production audio.
 npm.cmd run audio:prepare -- --draft drafts/cafe-friends-02 --output public/audio/cafe-friends-02/manifest.json --estimate
+# Save the same estimate as a review artifact (no audio preparation):
+npm.cmd run audio:prepare -- --draft drafts/cafe-friends-02 --output public/audio/cafe-friends-02/manifest.json --estimate --report drafts/cafe-friends-02/cost-estimate.json
 ```
 
 Only a human who has completed the review checklist should run the approval command
@@ -134,10 +154,10 @@ The saved provenance records local import, provider `local-authoring`, no API mo
 prompt version `phase5-local-v1`, timestamp/source hash, null reported API usage and
 zero **additional generation API** cost. No LLM provider is implemented or called.
 
-The new draft's cost-only run found two reusable clips (hook/CTA) and 16 missing
-segments totaling **728 characters**. At the existing Google Chirp 3 HD
+The revised draft's cost-only run found one reusable clip (the hook) and 18 missing
+segments totaling **679 characters**. At the existing Google Chirp 3 HD
 [$0.00003/character rate](https://cloud.google.com/text-to-speech/pricing), that is
-**$0.02184**, or **$0.04368** allowing one rate-limit retry per missing segment,
+**$0.02037**, or **$0.04074** allowing one rate-limit retry per missing segment,
 before any eligible free allowance. These are estimates, not reported billed usage.
 The earlier episode/audition scopes do not authorize this new episode's synthesis.
 
@@ -182,13 +202,17 @@ Inspected frames before the comment, during speech and at the final hold: choice
 stay neutral/visible, the comment invitation fits, and no bonus answer is exposed.
 Actual listening/phone playback remains human review.
 
-Typecheck passed. The full existing runner passed **73 tests**, including focused
+Typecheck passed. The current full runner passed **76 tests**, including focused
 draft tests for invalid answer references, Unicode/spacing duplicates, bonus
 disclosure, hash invalidation, unapproved production CLI blocking, local history,
 dry-run/resume and saved invalid reports. Existing mocks/local fixtures cover
-network/retry failures and audio-cache corruption/missing/stale data. A **25-test
-focused regression run** passed after final whitespace/review changes. No heavyweight
-test framework or dependency version change was introduced.
+network/retry failures and audio-cache corruption/missing/stale data. The wording
+revision additionally verifies independent spoken prompts, unchanged legacy audio
+fingerprints, separate comment/follow cache keys, exact 45-frame and 30-frame gaps,
+CTA text boundaries and a neutral bonus through the final hold. All **69 existing
+audio/cache files** have the same combined content hash before and after this work.
+No synthesis or video render was performed for the revision. No heavyweight test
+framework or dependency version change was introduced.
 
 Changed code is limited to the new local draft schema/workflow/CLI, approval and
 baseline JSON, the new authored draft/brief/review artifacts, CTA/timeline additions,

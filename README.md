@@ -1,12 +1,97 @@
 # Korean quiz videos
 
-## Phase 5 checkpoint 1: local draft, validation and human review
+## Phase 5C comparison checkpoint — choose a voice
+
+Three comparable narrated excerpts use the same transit question, compact spacing,
+exact explanation captions and licensed quiet music bed. The original transit
+episode and production default remain intact. Full Phase 5C completion awaits
+voice selection and one full polished transit render.
+
+- [A — current Kore](out/phase5c/a-baseline.mp4)
+- [B — conversational Puck](out/phase5c/b-puck.mp4)
+- [C — Achird male English/Korean fallback pair](out/phase5c/c-achird.mp4)
+- [Comparison, costs, limitations and exact PowerShell commands](docs/phase5c-voice-comparison.md)
+
+## Current Phase 5B development workflow
+
+Automated linguistic review is now an explicit alternative to manual review.
+It records a hash-bound **automated acceptance**, never a human approval. The
+transit development episode uses the existing template and Kore voices with a
+new, developer-selected local subway illustration. Publishing remains outside
+this workflow.
+
+- [Automated mode, bounded review calls, costs and reproduction commands](docs/phase5b-automated-development.md)
+- [Transit automated review](drafts/public-transit-02-candidate/review.md)
+- [Transit video](out/public-transit-02-automated.mp4)
+
+The sections below describe earlier checkpoints and their original approval
+requirements. Manual mode still uses those requirements; automated development
+mode uses the separate acceptance path documented above.
+
+## Phase 5B: controlled quality retry and non-café review candidate
+
+The frozen GPT-6 Luna experiment produced three structurally valid drafts on
+their first requests, with zero repairs. The conservative ledger estimate is
+**$0.007120125** under the separately approved **$0.12** cap. Korean/romanization
+and pedagogical review remain necessary. All original API results are preserved.
+
+- [Full side-by-side quality comparison](docs/phase5b-quality-comparison.md)
+- [Café review](drafts/cafe-dessert-04/review.md)
+- [Store review](drafts/convenience-store-02/review.md)
+- [Transit source review](drafts/public-transit-02/review.md)
+- [Recommended transit candidate: complete private review](drafts/public-transit-02-candidate/review.md)
+- [Frozen configuration, costs and exact commands](docs/phase5b-quality-experiment.md)
+
+The recommended candidate contains separately documented coding-assistant
+corrections and a new hash; it is unapproved and has no matching background yet.
+No TTS, image generation or production rendering ran. Review content and the
+manual background brief before the next production step. Phase 5B remains open.
+
+## Phase 5B: LLM drafts through the existing review workflow
+
+`draft generate` now uses the official OpenAI Responses SDK with Structured
+Outputs, explicit paid opt-in, a persistent shared budget, at most two requests
+per scenario, raw-output retention and saved-draft reuse. Existing import,
+hash-bound human approval, Google ADC audio preparation and local render paths
+remain available. All previous dependency versions are retained; only the pinned
+OpenAI SDK was added.
+
+The authorized three-scenario smoke test used six requests, estimated **$0.00554075**
+under the **$0.15** cap. Café/store drafts failed validation after their allowed
+repair; transit passed structurally but has linguistic review flags. All three
+remain unapproved. No TTS, image generation or production render ran.
+
+- [Café dessert review](drafts/cafe-dessert-03/review.md)
+- [Convenience-store review](drafts/convenience-store-01/review.md)
+- [Public-transit review](drafts/public-transit-01/review.md)
+- [Actual results, costs and content flags](docs/phase5b-smoke-results.md)
+- [Architecture and exact PowerShell commands](docs/phase5b-generation.md)
+- [Manual transit-background brief](docs/public-transit-background-brief.md)
+
+```powershell
+npm.cmd run draft -- generate --brief content/briefs/public-transit-01.json --id public-transit-01 --out drafts/public-transit-01 --dry-run
+npm.cmd run draft -- review --draft drafts/public-transit-01
+```
+
+New paid generation requires locally configured `OPENAI_API_KEY` in ignored `.env`
+and separately scoped spending approval. The three smoke-test scenarios have
+exhausted their request limits. Non-café production also requires a matching
+approved local background. Phase 5B is not complete until a human-reviewed,
+approved non-café episode succeeds through audio preparation and rendering.
+
+## Earlier Phase 5 checkpoint 1: local draft, validation and human review
 
 The new café episode is **unapproved** and has not entered audio preparation or
 rendering. Review [the private review document](drafts/cafe-friends-02/review.md),
 [draft JSON](drafts/cafe-friends-02/draft.json),
 [separate bonus key](drafts/cafe-friends-02/answer-key.json), and
 [validation report](drafts/cafe-friends-02/validation.json).
+The revised exact narration and two-part ending are recorded in the
+[narration plan](drafts/cafe-friends-02/narration-plan.json) and
+[cost estimate](drafts/cafe-friends-02/cost-estimate.json). Spoken prompts are
+separate from visible context. The comment and follow clips use a deterministic
+1.5-second pause between them, followed by a one-second hold and the existing fade.
+This wording revision remains unapproved and has not been synthesized or rendered.
 
 The local workflow is brief + authored JSON → imported draft → deterministic
 validation → human review → separate hash-bound approval → existing audio cache →
@@ -19,6 +104,8 @@ npm.cmd run draft -- import --source content/authored/cafe-friends-02.json --bri
 npm.cmd run draft -- validate --draft drafts/cafe-friends-02
 npm.cmd run draft -- review --draft drafts/cafe-friends-02
 npm.cmd run audio:prepare -- --draft drafts/cafe-friends-02 --output public/audio/cafe-friends-02/manifest.json --estimate
+# Explicitly save a review-only estimate, without writing an audio manifest:
+npm.cmd run audio:prepare -- --draft drafts/cafe-friends-02 --output public/audio/cafe-friends-02/manifest.json --estimate --report drafts/cafe-friends-02/cost-estimate.json
 ```
 
 The estimate/dry-run operation makes no paid calls or manifest writes. Actual

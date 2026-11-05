@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "kind": "narration-review-plan",
+  "valid": true,
+  "contentHash": "5824a3b5d7a0ab035459f435d2e120ce376ee47e52a38909c95bb34d0fedcfbc",
+  "profile": {
+    "provider": "google-cloud-tts",
+    "model": "chirp3-hd",
+    "voices": {
+      "en-US": "en-US-Chirp3-HD-Kore",
+      "ko-KR": "ko-KR-Chirp3-HD-Kore"
+    },
+    "outputFormat": "LINEAR16",
+    "sampleRateHertz": 24000,
+    "speakingRate": 1
+  },
+  "timingRules": {
+    "fps": 30,
+    "openingMinimum": 90,
+    "readingMinimum": 120,
+    "countdown": 150,
+    "revealMinimum": 120,
+    "settlePause": 6,
+    "afterHook": 15,
+    "afterQuestion": 15,
+    "answerGap": 10,
+    "afterExplanation": 30,
+    "transition": 12,
+    "finalFade": 12,
+    "commentHold": 120,
+    "afterComment": 45,
+    "afterFollow": 30
+  },
+  "endingDisplay": {
+    "comment": "Comment your answer 💬",
+    "follow": "Follow for more Korean ✨"
+  },
+  "timingStatus": "Absolute frames require measured audio; this is not a prepared render manifest.",
+  "segments": [
+    {
+      "id": "public-transit-02-hook",
+      "contentId": "public-transit-02",
+      "role": "hook",
+      "language": "en-US",
+      "text": "Can you say it in Korean?",
+      "cacheKey": "67c6f6d501aa28f3432ddac35b5a558d24f7440a6f4e938668b1d1e2b8d50268",
+      "file": "audio/cache/67c6f6d501aa28f3432ddac35b5a558d24f7440a6f4e938668b1d1e2b8d50268.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q1-question",
+      "contentId": "public-transit-02-q1",
+      "role": "question",
+      "language": "en-US",
+      "text": "You’re at the station. How would you ask where to enter the subway?",
+      "cacheKey": "cb33f6c4e12e420e8630436ae24e89746b8621d028986bd5ad6f03aad650e4f0",
+      "file": "audio/cache/cb33f6c4e12e420e8630436ae24e89746b8621d028986bd5ad6f03aad650e4f0.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q1-answer",
+      "contentId": "public-transit-02-q1",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "지하철 입구가 어디예요?",
+      "cacheKey": "162464c2572344e64a3170ebb4b0b690c7b0f1dfcf2ed3a2b84cc9f3e31acd76",
+      "file": "audio/cache/162464c2572344e64a3170ebb4b0b690c7b0f1dfcf2ed3a2b84cc9f3e31acd76.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q1-explanation",
+      "contentId": "public-transit-02-q1",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This asks where the subway entrance is. Use this polite question pattern when you need to locate a place.",
+      "cacheKey": "0ad75ffe3909a38553e9f13814529980791939521f07522b6eb3456dfad6dae4",
+      "file": "audio/cache/0ad75ffe3909a38553e9f13814529980791939521f07522b6eb3456dfad6dae4.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q2-question",
+      "contentId": "public-transit-02-q2",
+      "role": "question",
+      "language": "en-US",
+      "text": "You’re ready to board, but need directions. What would you ask?",
+      "cacheKey": "43e555d64dba5b88c599d834c68ecf67c3e12be555a41e39fb739d260de0aa43",
+      "file": "audio/cache/43e555d64dba5b88c599d834c68ecf67c3e12be555a41e39fb739d260de0aa43.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q2-answer",
+      "contentId": "public-transit-02-q2",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "승강장은 어디예요?",
+      "cacheKey": "a26825b93da6ad9111da21019eaf649da97051d2fda9965607340ab04f6043bb",
+      "file": "audio/cache/a26825b93da6ad9111da21019eaf649da97051d2fda9965607340ab04f6043bb.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q2-explanation",
+      "contentId": "public-transit-02-q2",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This asks where the platform is. The ending is a polite way to ask about the location of a place.",
+      "cacheKey": "cf86ceff13e987039b3d119a6b94b417b57657cd5c30b6caf8911c63d4d6b3b1",
+      "file": "audio/cache/cf86ceff13e987039b3d119a6b94b417b57657cd5c30b6caf8911c63d4d6b3b1.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q3-question",
+      "contentId": "public-transit-02-q3",
+      "role": "question",
+      "language": "en-US",
+      "text": "You need a ticket before traveling. What would you ask the station worker?",
+      "cacheKey": "8b6cf5450e8b56d581cc1f1c2c04df626d670451071173fe6755e1268050c374",
+      "file": "audio/cache/8b6cf5450e8b56d581cc1f1c2c04df626d670451071173fe6755e1268050c374.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q3-answer",
+      "contentId": "public-transit-02-q3",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "표는 어디에서 사요?",
+      "cacheKey": "69e8dbd5746c64e4cc2b0478808b7358b47fc30209d24f8a6eb6b51a5447f036",
+      "file": "audio/cache/69e8dbd5746c64e4cc2b0478808b7358b47fc30209d24f8a6eb6b51a5447f036.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q3-explanation",
+      "contentId": "public-transit-02-q3",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This asks where you can buy a ticket. The verb here means “buy,” so it’s useful when asking where to purchase something.",
+      "cacheKey": "fc974cbb961a8e7d52803bf43e8f1385a830b0ca27d878a1a63e74e7346568d5",
+      "file": "audio/cache/fc974cbb961a8e7d52803bf43e8f1385a830b0ca27d878a1a63e74e7346568d5.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q4-question",
+      "contentId": "public-transit-02-q4",
+      "role": "question",
+      "language": "en-US",
+      "text": "You’re not sure about the destination. How would you check where this train goes?",
+      "cacheKey": "badea4f28611ae865d6f1db8d5d117b0a340646eb9514c8183475ca63553416b",
+      "file": "audio/cache/badea4f28611ae865d6f1db8d5d117b0a340646eb9514c8183475ca63553416b.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q4-answer",
+      "contentId": "public-transit-02-q4",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "이 열차는 서울역에 가요?",
+      "cacheKey": "041daaeb3c0d57a404b8622547e14dccc2db1d328b5da8ebc9fe48559fc341d0",
+      "file": "audio/cache/041daaeb3c0d57a404b8622547e14dccc2db1d328b5da8ebc9fe48559fc341d0.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q4-explanation",
+      "contentId": "public-transit-02-q4",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This asks whether the train goes to Seoul Station. The particle after a place name can mark the destination.",
+      "cacheKey": "9e375257a8510bf46f2bd71717e82bc7eabf8ee9980fd65a685ce623d34b47ff",
+      "file": "audio/cache/9e375257a8510bf46f2bd71717e82bc7eabf8ee9980fd65a685ce623d34b47ff.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q5-question",
+      "contentId": "public-transit-02-q5",
+      "role": "question",
+      "language": "en-US",
+      "text": "You need to change trains along the way. How would you ask which station to use?",
+      "cacheKey": "993d041537927e1e2620975c7e1dec250c782b96445be8d1675d582d49b3e33e",
+      "file": "audio/cache/993d041537927e1e2620975c7e1dec250c782b96445be8d1675d582d49b3e33e.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q5-answer",
+      "contentId": "public-transit-02-q5",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "어느 역에서 갈아타요?",
+      "cacheKey": "d3d4980acdacaa5f9c937926ada38d0fbc62bf494df599f73189b7d5a6d703f7",
+      "file": "audio/cache/d3d4980acdacaa5f9c937926ada38d0fbc62bf494df599f73189b7d5a6d703f7.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q5-explanation",
+      "contentId": "public-transit-02-q5",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This asks which station you should transfer at. The verb means to change from one train to another.",
+      "cacheKey": "74c1d7cc3e33fa3f5b3c771d167c9ec980a701d8de0543d831ae59b1d66d240f",
+      "file": "audio/cache/74c1d7cc3e33fa3f5b3c771d167c9ec980a701d8de0543d831ae59b1d66d240f.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q6-question",
+      "contentId": "public-transit-02-q6",
+      "role": "question",
+      "language": "en-US",
+      "text": "You’re heading to City Hall. How would you ask which exit to take?",
+      "cacheKey": "b3d6c50496a19afc71cc63aeb3096540481301f3ee1ef80e7f506f12e08597b5",
+      "file": "audio/cache/b3d6c50496a19afc71cc63aeb3096540481301f3ee1ef80e7f506f12e08597b5.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q6-comment",
+      "contentId": "public-transit-02-q6",
+      "role": "comment",
+      "language": "en-US",
+      "text": "What do you think? Comment your answer!",
+      "cacheKey": "4d5c462cb17eb8ca4e9f4c6c79f0c0d36f84a90560989b2bcf2003880ccb616a",
+      "file": "audio/cache/4d5c462cb17eb8ca4e9f4c6c79f0c0d36f84a90560989b2bcf2003880ccb616a.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "public-transit-02-q6-follow",
+      "contentId": "public-transit-02-q6",
+      "role": "follow",
+      "language": "en-US",
+      "text": "Follow for more Korean!",
+      "cacheKey": "ae849836b3b094d2c6fac3058c7132d4e0ac90646bd3b1835aa087412dbf2c02",
+      "file": "audio/cache/ae849836b3b094d2c6fac3058c7132d4e0ac90646bd3b1835aa087412dbf2c02.wav",
+      "durationSeconds": null
+    }
+  ]
+}

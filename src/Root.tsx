@@ -16,6 +16,8 @@ import narratedContent from '../content/cafe-narrated-preview.json';
 import {NarratedQuestionPreview} from './NarratedQuestionPreview';
 import {preparedNarrationSchema} from './narration';
 import {getNarratedTimeline} from './narrationTiming';
+import {VoiceComparisonPreview} from './VoiceComparisonPreview';
+import {comparisonPropsSchema, getComparisonTimeline, type ComparisonProps} from './comparison';
 
 const previewQuiz = parseQuizInput(previewContent);
 const illustratedQuiz = parseQuizInput(illustratedContent);
@@ -23,6 +25,13 @@ const cafeEpisode = parseQuizInput(cafeEpisodeContent);
 
 export const Root = () => (
   <>
+    <Composition id="VoiceComparisonExcerpt" component={VoiceComparisonPreview}
+      defaultProps={{quiz: cafeEpisode, questionIndex: 0, narration: null, presentation: {compactSpacing: true, synchronizedCaptions: true, backgroundAudio: true}, music: null} as unknown as ComparisonProps}
+      width={1080} height={1920} fps={QUIZ_FPS} durationInFrames={90}
+      calculateMetadata={({props}) => {
+        const parsed = comparisonPropsSchema.parse(props);
+        return {props: parsed, durationInFrames: getComparisonTimeline(parsed.quiz, parsed.questionIndex, parsed.narration).durationInFrames};
+      }} />
     <Composition
       id="KoreanSample"
       component={KoreanSample}

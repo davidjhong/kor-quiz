@@ -77,7 +77,7 @@ export const getIllustratedEpisodeTimeline = (quiz: QuizInput) => {
 };
 
 /** Only one scene's text exists at any frame; the underlying cream panel stays opaque. */
-export const getEpisodeSceneOpacity = (frame: number, scene: EpisodeScene) => {
+export const getEpisodeSceneOpacity = (frame: number, scene: Pick<EpisodeScene, 'start' | 'end' | 'sequenceStart' | 'sequenceEnd'>) => {
   if (frame < scene.start) return Math.min(1, (frame - scene.sequenceStart + 1) / (scene.start - scene.sequenceStart));
   if (frame >= scene.end && scene.sequenceEnd > scene.end) return Math.max(0, 1 - (frame - scene.end + 1) / (scene.sequenceEnd - scene.end + 1));
   return 1;

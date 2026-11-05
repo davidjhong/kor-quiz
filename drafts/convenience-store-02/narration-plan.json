@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "kind": "narration-review-plan",
+  "valid": true,
+  "contentHash": "069b7be1600f41ea9b78e58dd34a59f968d53837993c276455317000d53f806a",
+  "profile": {
+    "provider": "google-cloud-tts",
+    "model": "chirp3-hd",
+    "voices": {
+      "en-US": "en-US-Chirp3-HD-Kore",
+      "ko-KR": "ko-KR-Chirp3-HD-Kore"
+    },
+    "outputFormat": "LINEAR16",
+    "sampleRateHertz": 24000,
+    "speakingRate": 1
+  },
+  "timingRules": {
+    "fps": 30,
+    "openingMinimum": 90,
+    "readingMinimum": 120,
+    "countdown": 150,
+    "revealMinimum": 120,
+    "settlePause": 6,
+    "afterHook": 15,
+    "afterQuestion": 15,
+    "answerGap": 10,
+    "afterExplanation": 30,
+    "transition": 12,
+    "finalFade": 12,
+    "commentHold": 120,
+    "afterComment": 45,
+    "afterFollow": 30
+  },
+  "endingDisplay": {
+    "comment": "Comment your answer 💬",
+    "follow": "Follow for more Korean ✨"
+  },
+  "timingStatus": "Absolute frames require measured audio; this is not a prepared render manifest.",
+  "segments": [
+    {
+      "id": "convenience-store-02-hook",
+      "contentId": "convenience-store-02",
+      "role": "hook",
+      "language": "en-US",
+      "text": "Can you say it in Korean?",
+      "cacheKey": "67c6f6d501aa28f3432ddac35b5a558d24f7440a6f4e938668b1d1e2b8d50268",
+      "file": "audio/cache/67c6f6d501aa28f3432ddac35b5a558d24f7440a6f4e938668b1d1e2b8d50268.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q1-question",
+      "contentId": "convenience-store-02-q1",
+      "role": "question",
+      "language": "en-US",
+      "text": "You need a bag for your purchases. How would you ask for one?",
+      "cacheKey": "af10a9545f5d06c3201a87072babff31d1cdebc73a55511c6f3370cfb19c8ae2",
+      "file": "audio/cache/af10a9545f5d06c3201a87072babff31d1cdebc73a55511c6f3370cfb19c8ae2.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q1-answer",
+      "contentId": "convenience-store-02-q1",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "봉투 하나 주세요.",
+      "cacheKey": "88c92b588a8fa9aa6b4fa84660acc41fadc248ad3ff7f1a2ef0f54bfb6877590",
+      "file": "audio/cache/88c92b588a8fa9aa6b4fa84660acc41fadc248ad3ff7f1a2ef0f54bfb6877590.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q1-explanation",
+      "contentId": "convenience-store-02-q1",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This means, “One shopping bag, please.” The word for “one” comes before the item, and the ending makes it a polite request.",
+      "cacheKey": "88143323e571d7765556fe4f2540fa87b1b703b3b777e2f2b4c01a43d3f6fc3a",
+      "file": "audio/cache/88143323e571d7765556fe4f2540fa87b1b703b3b777e2f2b4c01a43d3f6fc3a.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q2-question",
+      "contentId": "convenience-store-02-q2",
+      "role": "question",
+      "language": "en-US",
+      "text": "Your meal has no chopsticks. What could you ask the staff for?",
+      "cacheKey": "d7c46f98d9e5a6fce2889639fe9c966e3f1d54acf70baa65aeb7f473183fdeda",
+      "file": "audio/cache/d7c46f98d9e5a6fce2889639fe9c966e3f1d54acf70baa65aeb7f473183fdeda.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q2-answer",
+      "contentId": "convenience-store-02-q2",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "젓가락 주세요.",
+      "cacheKey": "2be39080eaaf781570866c9a53558ce3eb5af2555b8833d0280cfb4be3878b6a",
+      "file": "audio/cache/2be39080eaaf781570866c9a53558ce3eb5af2555b8833d0280cfb4be3878b6a.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q2-explanation",
+      "contentId": "convenience-store-02-q2",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This means, “Chopsticks, please.” You can put the item you want before a polite phrase for asking someone to give it to you.",
+      "cacheKey": "c80a448a724b06e153a2ef899cf6ec2b7f8980b48c5a08b4083e94ad5808f4a7",
+      "file": "audio/cache/c80a448a724b06e153a2ef899cf6ec2b7f8980b48c5a08b4083e94ad5808f4a7.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q3-question",
+      "contentId": "convenience-store-02-q3",
+      "role": "question",
+      "language": "en-US",
+      "text": "You want your lunchbox warmed before you eat. How would you ask?",
+      "cacheKey": "d522073a2d009ea8c8f94168f2fec1d12c5a2ce23a28d9dcf99bc738abd14360",
+      "file": "audio/cache/d522073a2d009ea8c8f94168f2fec1d12c5a2ce23a28d9dcf99bc738abd14360.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q3-answer",
+      "contentId": "convenience-store-02-q3",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "이 도시락 데워 주세요.",
+      "cacheKey": "e4b0ba81f2daf41ec5b12e8615e6fe6e09454fdc94da705e45bf43b1ea7f7bc0",
+      "file": "audio/cache/e4b0ba81f2daf41ec5b12e8615e6fe6e09454fdc94da705e45bf43b1ea7f7bc0.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q3-explanation",
+      "contentId": "convenience-store-02-q3",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This means, “Please heat this lunchbox.” The verb “heat” comes before the polite request ending.",
+      "cacheKey": "6cc6ce8751ac17457851d18df3d3d85a740e37937f78b0c2b90d875e4b908376",
+      "file": "audio/cache/6cc6ce8751ac17457851d18df3d3d85a740e37937f78b0c2b90d875e4b908376.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q4-question",
+      "contentId": "convenience-store-02-q4",
+      "role": "question",
+      "language": "en-US",
+      "text": "You are at the register and want to check whether card payment is possible. What would you ask?",
+      "cacheKey": "e81f5081de3a7223d279b9ed632c0b800941a23325536932c8a68aea84156216",
+      "file": "audio/cache/e81f5081de3a7223d279b9ed632c0b800941a23325536932c8a68aea84156216.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q4-answer",
+      "contentId": "convenience-store-02-q4",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "카드로 결제해도 돼요?",
+      "cacheKey": "170dd9bd0b7b5c88b0a6b24118c35b547170c67e3c3800f0d5e58d9e3768f789",
+      "file": "audio/cache/170dd9bd0b7b5c88b0a6b24118c35b547170c67e3c3800f0d5e58d9e3768f789.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q4-explanation",
+      "contentId": "convenience-store-02-q4",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This means, “Can I pay by card?” The question asks whether an action is okay, rather than simply stating what you plan to do.",
+      "cacheKey": "061647ee0cbf315cd23a64578f5d57d12ed1a90310072eb6c71ac4d4ae99570e",
+      "file": "audio/cache/061647ee0cbf315cd23a64578f5d57d12ed1a90310072eb6c71ac4d4ae99570e.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q5-question",
+      "contentId": "convenience-store-02-q5",
+      "role": "question",
+      "language": "en-US",
+      "text": "You cannot spot the ramen. How would you ask where it is?",
+      "cacheKey": "f7cc35aa35a26ad38812a9fd1b1e249fe975382e999466ad38672f941fcffba8",
+      "file": "audio/cache/f7cc35aa35a26ad38812a9fd1b1e249fe975382e999466ad38672f941fcffba8.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q5-answer",
+      "contentId": "convenience-store-02-q5",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "라면은 어디에 있어요?",
+      "cacheKey": "0ede33c33ad56475bfced199e9c266e7b571fa82228bce8c98b3b2d971d39b6b",
+      "file": "audio/cache/0ede33c33ad56475bfced199e9c266e7b571fa82228bce8c98b3b2d971d39b6b.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q5-explanation",
+      "contentId": "convenience-store-02-q5",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This means, “Where is the ramen?” The question phrase means “Where is it?” Put the item you are looking for first.",
+      "cacheKey": "ce5d05dfe74ccf6b5c2d9975c8774d13f630598c5f0dcbb19c1f37e616d85991",
+      "file": "audio/cache/ce5d05dfe74ccf6b5c2d9975c8774d13f630598c5f0dcbb19c1f37e616d85991.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q6-question",
+      "contentId": "convenience-store-02-q6",
+      "role": "question",
+      "language": "en-US",
+      "text": "This package is too big for you. How would you ask whether there is a smaller size?",
+      "cacheKey": "425207d2c6b864befbc1ac975c6ec0d3a0b5051a90ac8ac0599859930708fc9a",
+      "file": "audio/cache/425207d2c6b864befbc1ac975c6ec0d3a0b5051a90ac8ac0599859930708fc9a.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q6-comment",
+      "contentId": "convenience-store-02-q6",
+      "role": "comment",
+      "language": "en-US",
+      "text": "What do you think? Comment your answer!",
+      "cacheKey": "4d5c462cb17eb8ca4e9f4c6c79f0c0d36f84a90560989b2bcf2003880ccb616a",
+      "file": "audio/cache/4d5c462cb17eb8ca4e9f4c6c79f0c0d36f84a90560989b2bcf2003880ccb616a.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "convenience-store-02-q6-follow",
+      "contentId": "convenience-store-02-q6",
+      "role": "follow",
+      "language": "en-US",
+      "text": "Follow for more Korean!",
+      "cacheKey": "ae849836b3b094d2c6fac3058c7132d4e0ac90646bd3b1835aa087412dbf2c02",
+      "file": "audio/cache/ae849836b3b094d2c6fac3058c7132d4e0ac90646bd3b1835aa087412dbf2c02.wav",
+      "durationSeconds": null
+    }
+  ]
+}

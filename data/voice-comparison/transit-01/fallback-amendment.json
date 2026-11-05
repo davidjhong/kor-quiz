@@ -1,0 +1,16 @@
+{
+  "kind": "user-authorized-chirp-fallback",
+  "source": "User reply: Use Chirp Achird fallback within existing cap",
+  "fromPlanHash": "8dbe8a1e61e526aa31a023857302af3b1bf61eb67f93f03804b3244cfd7e94ca",
+  "toPlanHash": "dd85ba10ed0e21045617ac21a57fac9e8cff75e0905b3e831e3feaf569edbd13",
+  "contentHash": "194914b5a3f37cae33226de035954d6cc6a4bab831c4b5e6eb5b96bc3546fdd0",
+  "capUSD": 2.04,
+  "scope": "C only: Chirp 3 HD Achird English/Korean locale pair; six exact excerpt segments, one explicit rate-limit retry maximum per clip",
+  "englishVoice": "en-US-Chirp3-HD-Achird",
+  "koreanVoice": "ko-KR-Chirp3-HD-Achird",
+  "newCharacters": 292,
+  "estimatedCostUSD": 0.00876,
+  "maximumIncludingOneRetryUSD": 0.01752,
+  "originalGeminiAttempt": "Permission code 7, no audio returned; no retry. Preserve the full $0.167936 reservation because billing was not inspected.",
+  "noGeminiRetryAuthorized": true
+}

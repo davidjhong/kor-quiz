@@ -1,0 +1,106 @@
+{
+  "sourceContentHash": "194914b5a3f37cae33226de035954d6cc6a4bab831c4b5e6eb5b96bc3546fdd0",
+  "planHash": "dd85ba10ed0e21045617ac21a57fac9e8cff75e0905b3e831e3feaf569edbd13",
+  "narration": {
+    "version": 1,
+    "quizFingerprint": "7eb244e2b6977eade708f9f14424562f93a3fdcce338da554d50f6229405a855",
+    "profile": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Puck",
+        "ko-KR": "ko-KR-Chirp3-HD-Puck"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "processing": "loudnorm-I-16-TP-1.5-LRA-11-mono-24000-v1",
+    "clips": [
+      {
+        "id": "public-transit-02-hook",
+        "contentId": "public-transit-02",
+        "role": "hook",
+        "language": "en-US",
+        "text": "Can you say it in Korean?",
+        "cacheKey": "c394da4b6f6b0bbde259dc90635f2817320754299fb240ce474341eaf25a062f",
+        "file": "audio/cache/c394da4b6f6b0bbde259dc90635f2817320754299fb240ce474341eaf25a062f.wav",
+        "sha256": "f0eb7db0abe6f31042aae18c1006260ef3373880bdd59d1f5234a2053e647c88",
+        "durationSeconds": 1.24,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "e81f0e2911a984a9a98edbd3bf88e5a1cf0ba9e3e73f6c723e106c6053ddb493",
+        "peakDbFS": -2.9999878172428627
+      },
+      {
+        "id": "public-transit-02-q3-question",
+        "contentId": "public-transit-02-q3",
+        "role": "question",
+        "language": "en-US",
+        "text": "You need a ticket before traveling. What would you ask the station worker?",
+        "cacheKey": "e0be0be4991ada6a0e248fa5096bc0a6e6bbbc0a019beb63598c3df9f59c858b",
+        "file": "audio/cache/e0be0be4991ada6a0e248fa5096bc0a6e6bbbc0a019beb63598c3df9f59c858b.wav",
+        "sha256": "eaa10edddec50daeebde85e78d22c5ea436c290334144c3ab144d7b115a7b92e",
+        "durationSeconds": 3.64,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "080237427835c23f52623b37bda8d9253ca9673ac7d4551dd394f5b87e1d04b9",
+        "peakDbFS": -1.48829977352575
+      },
+      {
+        "id": "public-transit-02-q3-answer",
+        "contentId": "public-transit-02-q3",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "표는 어디에서 사요?",
+        "cacheKey": "566370f465cba1ea85b3fe4c4df11da7e6d963c6be965bb1dfce9e87a40f3067",
+        "file": "audio/cache/566370f465cba1ea85b3fe4c4df11da7e6d963c6be965bb1dfce9e87a40f3067.wav",
+        "sha256": "de9de6c72bbdf119442f08c2b23c1fc462dd97fa1153b28379a284e07559a580",
+        "durationSeconds": 1.92,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "8bed6a3633061dbd35ec691ed0d00bed81446818938f7d42259d1be5ba7797cf",
+        "peakDbFS": -1.5128744713277533
+      },
+      {
+        "id": "public-transit-02-q3-explanation",
+        "contentId": "public-transit-02-q3",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "This asks where you can buy a ticket. The verb here means “buy,” so it’s useful when asking where to purchase something.",
+        "cacheKey": "8a198769b5d2f59b3f73a9a570dc7de1f33b9c6ea1371b25b0baba9f26d7ca47",
+        "file": "audio/cache/8a198769b5d2f59b3f73a9a570dc7de1f33b9c6ea1371b25b0baba9f26d7ca47.wav",
+        "sha256": "20e40892f2a0368f9cd9c09e1e6c85fd2f10f6c353e48d0adb5c49a388ba83eb",
+        "durationSeconds": 6.88,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "b95937d31e1c08b61109950defeb079bcc1d6e1b6dcee64384388c23d571e3ea",
+        "peakDbFS": -1.4776094464678926
+      },
+      {
+        "id": "public-transit-02-q6-comment",
+        "contentId": "public-transit-02-q6",
+        "role": "comment",
+        "language": "en-US",
+        "text": "What do you think? Comment your answer!",
+        "cacheKey": "77c76fe19651b3b6f05ebbe408cf430b07ae072437b95d699eed489a12b8e4c4",
+        "file": "audio/cache/77c76fe19651b3b6f05ebbe408cf430b07ae072437b95d699eed489a12b8e4c4.wav",
+        "sha256": "144a4ba39c6254b714f27e87c630c271554af70726beead8e59c1b295d942f43",
+        "durationSeconds": 2.2,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "08eec2b76d77b2149f9a24b2cd804b66c91b93b42820f93cde56f9043a22ade8",
+        "peakDbFS": -1.6428847250318999
+      },
+      {
+        "id": "public-transit-02-q6-follow",
+        "contentId": "public-transit-02-q6",
+        "role": "follow",
+        "language": "en-US",
+        "text": "Follow for more Korean!",
+        "cacheKey": "922ca91a056f02794ef88184fd705551b40b4379108d01857298d839da0d3ce5",
+        "file": "audio/cache/922ca91a056f02794ef88184fd705551b40b4379108d01857298d839da0d3ce5.wav",
+        "sha256": "2c1764d2c8a7817071984fb5c877edbaa9ce6f0321471fa5102f3f0f8d00b105",
+        "durationSeconds": 1.36,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "4c948e6a05732408bcef2c5febadc9ad2ebc95a79f39c3297009a4693a559a78",
+        "peakDbFS": -1.6121936332428854
+      }
+    ]
+  }
+}

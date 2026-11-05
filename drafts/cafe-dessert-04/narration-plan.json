@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "kind": "narration-review-plan",
+  "valid": true,
+  "contentHash": "5c8a733d903330b9b8c5ee36209de541804f50744c2c95f3ad8812a9f89fb6a8",
+  "profile": {
+    "provider": "google-cloud-tts",
+    "model": "chirp3-hd",
+    "voices": {
+      "en-US": "en-US-Chirp3-HD-Kore",
+      "ko-KR": "ko-KR-Chirp3-HD-Kore"
+    },
+    "outputFormat": "LINEAR16",
+    "sampleRateHertz": 24000,
+    "speakingRate": 1
+  },
+  "timingRules": {
+    "fps": 30,
+    "openingMinimum": 90,
+    "readingMinimum": 120,
+    "countdown": 150,
+    "revealMinimum": 120,
+    "settlePause": 6,
+    "afterHook": 15,
+    "afterQuestion": 15,
+    "answerGap": 10,
+    "afterExplanation": 30,
+    "transition": 12,
+    "finalFade": 12,
+    "commentHold": 120,
+    "afterComment": 45,
+    "afterFollow": 30
+  },
+  "endingDisplay": {
+    "comment": "Comment your answer 💬",
+    "follow": "Follow for more Korean ✨"
+  },
+  "timingStatus": "Absolute frames require measured audio; this is not a prepared render manifest.",
+  "segments": [
+    {
+      "id": "cafe-dessert-04-hook",
+      "contentId": "cafe-dessert-04",
+      "role": "hook",
+      "language": "en-US",
+      "text": "Can you say it in Korean?",
+      "cacheKey": "67c6f6d501aa28f3432ddac35b5a558d24f7440a6f4e938668b1d1e2b8d50268",
+      "file": "audio/cache/67c6f6d501aa28f3432ddac35b5a558d24f7440a6f4e938668b1d1e2b8d50268.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q1-question",
+      "contentId": "cafe-dessert-04-q1",
+      "role": "question",
+      "language": "en-US",
+      "text": "How would you ask to see the menu?",
+      "cacheKey": "a58e7e04e07d402dba01fbfdca994d55debace5388de4b99c14595a0469ec064",
+      "file": "audio/cache/a58e7e04e07d402dba01fbfdca994d55debace5388de4b99c14595a0469ec064.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q1-answer",
+      "contentId": "cafe-dessert-04-q1",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "메뉴판 좀 주세요.",
+      "cacheKey": "20abc2021665949aff20127a2bcfac9e6adf054e7fc3394fe911ce42ec2517d6",
+      "file": "audio/cache/20abc2021665949aff20127a2bcfac9e6adf054e7fc3394fe911ce42ec2517d6.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q1-explanation",
+      "contentId": "cafe-dessert-04-q1",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This is a polite way to ask for the menu. The ending means you’re asking someone to give you something.",
+      "cacheKey": "65bb25244cbd29f6d0b36121099d54e301926c42d7e7ee3239399355ea295797",
+      "file": "audio/cache/65bb25244cbd29f6d0b36121099d54e301926c42d7e7ee3239399355ea295797.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q2-question",
+      "contentId": "cafe-dessert-04-q2",
+      "role": "question",
+      "language": "en-US",
+      "text": "What would you ask for?",
+      "cacheKey": "92a9c0718ade79e41d6d8f9bc4530abec1f4d93d91b1e9c86d00db5543909144",
+      "file": "audio/cache/92a9c0718ade79e41d6d8f9bc4530abec1f4d93d91b1e9c86d00db5543909144.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q2-answer",
+      "contentId": "cafe-dessert-04-q2",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "케이크 한 조각 주세요.",
+      "cacheKey": "cd9c2b5e095a68f95d9ec86f9acbf90a00401e9ab6760de88eef18e1c8a53f18",
+      "file": "audio/cache/cd9c2b5e095a68f95d9ec86f9acbf90a00401e9ab6760de88eef18e1c8a53f18.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q2-explanation",
+      "contentId": "cafe-dessert-04-q2",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This asks for one slice of cake. The counting phrase means one piece or slice.",
+      "cacheKey": "f218720020502ebc49addb8111acf36d1247fa4053aad2eac4c0373c38c68238",
+      "file": "audio/cache/f218720020502ebc49addb8111acf36d1247fa4053aad2eac4c0373c38c68238.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q3-question",
+      "contentId": "cafe-dessert-04-q3",
+      "role": "question",
+      "language": "en-US",
+      "text": "How can you politely request a fork?",
+      "cacheKey": "e9e548a6414f3916f11e441ba9f8ae96bdd69bafada8449874f8ff93fd293a70",
+      "file": "audio/cache/e9e548a6414f3916f11e441ba9f8ae96bdd69bafada8449874f8ff93fd293a70.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q3-answer",
+      "contentId": "cafe-dessert-04-q3",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "포크 하나 주세요.",
+      "cacheKey": "656a1a9f31b437e7d7bc8bdfc3503f2631d3c4ee1ef8ee5837d8243fd679da6c",
+      "file": "audio/cache/656a1a9f31b437e7d7bc8bdfc3503f2631d3c4ee1ef8ee5837d8243fd679da6c.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q3-explanation",
+      "contentId": "cafe-dessert-04-q3",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This asks for one fork. The word for one comes before the polite request.",
+      "cacheKey": "991c4ccb7e191802d13b109a14eaf137d9016303d4676007e6f9fa6e5eb20307",
+      "file": "audio/cache/991c4ccb7e191802d13b109a14eaf137d9016303d4676007e6f9fa6e5eb20307.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q4-question",
+      "contentId": "cafe-dessert-04-q4",
+      "role": "question",
+      "language": "en-US",
+      "text": "What would you ask the server to bring?",
+      "cacheKey": "3f2186b9f3cef4159c0079fb3e36f447b0221e0f8a926ce931696caeaa307097",
+      "file": "audio/cache/3f2186b9f3cef4159c0079fb3e36f447b0221e0f8a926ce931696caeaa307097.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q4-answer",
+      "contentId": "cafe-dessert-04-q4",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "접시 하나 더 주세요.",
+      "cacheKey": "294ddf51b18947c7d2ba6bbd353e2669e26e4feb51da4642535b3446b605f17f",
+      "file": "audio/cache/294ddf51b18947c7d2ba6bbd353e2669e26e4feb51da4642535b3446b605f17f.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q4-explanation",
+      "contentId": "cafe-dessert-04-q4",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This asks for one additional plate. The phrase for “one more” is useful when requesting an extra item.",
+      "cacheKey": "97b205bee2c1442e72b54af7aafb2973d0cdddc8b7e21dde6e6c902caba6c8df",
+      "file": "audio/cache/97b205bee2c1442e72b54af7aafb2973d0cdddc8b7e21dde6e6c902caba6c8df.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q5-question",
+      "contentId": "cafe-dessert-04-q5",
+      "role": "question",
+      "language": "en-US",
+      "text": "How would you check if nuts are in this dessert?",
+      "cacheKey": "5d619ff1d7b418c9d3aa0727d49e92d06362c619bd30ee533f368d50866f36fd",
+      "file": "audio/cache/5d619ff1d7b418c9d3aa0727d49e92d06362c619bd30ee533f368d50866f36fd.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q5-answer",
+      "contentId": "cafe-dessert-04-q5",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "이 디저트에 견과류가 들어가요?",
+      "cacheKey": "abf91f5e3c6e47d3436e117f9d2bd109820a29fa74ca9178ee04e99c8483ea44",
+      "file": "audio/cache/abf91f5e3c6e47d3436e117f9d2bd109820a29fa74ca9178ee04e99c8483ea44.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q5-explanation",
+      "contentId": "cafe-dessert-04-q5",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This asks whether the dessert contains nuts. The question pattern is useful for checking whether an ingredient is included.",
+      "cacheKey": "f54426f12030aa6405da14443041db1e3f3a4fd3291052e42c8234bd87df1500",
+      "file": "audio/cache/f54426f12030aa6405da14443041db1e3f3a4fd3291052e42c8234bd87df1500.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q6-question",
+      "contentId": "cafe-dessert-04-q6",
+      "role": "question",
+      "language": "en-US",
+      "text": "What could you ask to find the dessert options?",
+      "cacheKey": "f9b0ca23a913be5f79025cabf57025e36c0da77e15c5039292b270eeb9634b9c",
+      "file": "audio/cache/f9b0ca23a913be5f79025cabf57025e36c0da77e15c5039292b270eeb9634b9c.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q6-comment",
+      "contentId": "cafe-dessert-04-q6",
+      "role": "comment",
+      "language": "en-US",
+      "text": "What do you think? Comment your answer!",
+      "cacheKey": "4d5c462cb17eb8ca4e9f4c6c79f0c0d36f84a90560989b2bcf2003880ccb616a",
+      "file": "audio/cache/4d5c462cb17eb8ca4e9f4c6c79f0c0d36f84a90560989b2bcf2003880ccb616a.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "cafe-dessert-04-q6-follow",
+      "contentId": "cafe-dessert-04-q6",
+      "role": "follow",
+      "language": "en-US",
+      "text": "Follow for more Korean!",
+      "cacheKey": "ae849836b3b094d2c6fac3058c7132d4e0ac90646bd3b1835aa087412dbf2c02",
+      "file": "audio/cache/ae849836b3b094d2c6fac3058c7132d4e0ac90646bd3b1835aa087412dbf2c02.wav",
+      "durationSeconds": null
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "questions": [
+    {
+      "scenario": "At the subway entrance",
+      "prompt": "Ask where the subway entrance is.",
+      "context": "You are at the station and need to enter the subway.",
+      "spokenPrompt": "You’re at the station. How would you ask where to enter the subway?",
+      "choices": [
+        {
+          "hangul": "지하철 입구가 어디예요?",
+          "romanization": "jihacheol ipguga eodiyeyo?"
+        },
+        {
+          "hangul": "화장실은 어디예요?",
+          "romanization": "hwajangsireun eodiyeyo?"
+        },
+        {
+          "hangul": "출구는 어디예요?",
+          "romanization": "chulguneun eodiyeyo?"
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "Where is the subway entrance?",
+      "explanation": "This asks where the subway entrance is. 어디예요? is a polite way to ask where something is.",
+      "teachingPoint": "지하철 입구 = subway entrance; 어디예요? = where is it?",
+      "explanationNarration": "This asks where the subway entrance is. Use this polite question pattern when you need to locate a place."
+    },
+    {
+      "scenario": "Finding the platform",
+      "prompt": "Ask where the platform is.",
+      "context": "You need to find the platform before boarding.",
+      "spokenPrompt": "You’re ready to board, but need directions. What would you ask?",
+      "choices": [
+        {
+          "hangul": "승강장은 어디예요?",
+          "romanization": "seunggangjangeun eodiyeyo?"
+        },
+        {
+          "hangul": "출구는 어디예요?",
+          "romanization": "chulguneun eodiyeyo?"
+        },
+        {
+          "hangul": "매표소는 어디예요?",
+          "romanization": "maepyosomeun eodiyeyo?"
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "Where is the platform?",
+      "explanation": "This asks where the platform is. The topic marker 은 attaches to 승강장 to make it the subject of the question.",
+      "teachingPoint": "승강장 = platform; 은 어디예요? = where is it?",
+      "explanationNarration": "This asks where the platform is. The ending is a polite way to ask about the location of a place."
+    },
+    {
+      "scenario": "Buying a ticket",
+      "prompt": "Ask where you can buy a ticket.",
+      "context": "You need to buy a ticket at the station.",
+      "spokenPrompt": "You need a ticket before traveling. What would you ask the station worker?",
+      "choices": [
+        {
+          "hangul": "표는 어디에서 사요?",
+          "romanization": "pyoneun eodieseo sayo?"
+        },
+        {
+          "hangul": "표는 어디에서 받아요?",
+          "romanization": "pyoneun eodieseo badayo?"
+        },
+        {
+          "hangul": "표는 어디에서 확인해요?",
+          "romanization": "pyoneun eodieseo hwaginhaeyo?"
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "Where can I buy a ticket?",
+      "explanation": "This asks where to buy a ticket. 사요 means “buy,” while 받아요 means “receive.”",
+      "teachingPoint": "표 = ticket; 어디에서 = where; 사요 = buy",
+      "explanationNarration": "This asks where you can buy a ticket. The verb here means “buy,” so it’s useful when asking where to purchase something."
+    },
+    {
+      "scenario": "Checking a train's destination",
+      "prompt": "Ask if this train goes to Seoul Station.",
+      "context": "You need to confirm whether this train goes to Seoul Station.",
+      "spokenPrompt": "You’re not sure about the destination. How would you check where this train goes?",
+      "choices": [
+        {
+          "hangul": "이 열차는 서울역에 가요?",
+          "romanization": "i yeolchaneun seoullyeoge gayo?"
+        },
+        {
+          "hangul": "이 열차는 부산에 가요?",
+          "romanization": "i yeolchaneun busane gayo?"
+        },
+        {
+          "hangul": "이 열차는 공항에 가요?",
+          "romanization": "i yeolchaneun gonghange gayo?"
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "Does this train go to Seoul Station?",
+      "explanation": "This asks whether the train goes to Seoul Station. 에 marks the destination in this sentence.",
+      "teachingPoint": "서울역에 = to Seoul Station; 가요? = does it go?",
+      "explanationNarration": "This asks whether the train goes to Seoul Station. The particle after a place name can mark the destination."
+    },
+    {
+      "scenario": "Changing trains",
+      "prompt": "Ask which station to transfer at.",
+      "context": "Your route requires a train change, and you need the station name.",
+      "spokenPrompt": "You need to change trains along the way. How would you ask which station to use?",
+      "choices": [
+        {
+          "hangul": "어느 역에서 갈아타요?",
+          "romanization": "eoneu yeogeseo garatayo?"
+        },
+        {
+          "hangul": "어느 역에서 내려요?",
+          "romanization": "eoneu yeogeseo naeryeoyo?"
+        },
+        {
+          "hangul": "어느 역에서 타요?",
+          "romanization": "eoneu yeogeseo tayo?"
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "Which station do I transfer at?",
+      "explanation": "This asks which station to transfer at. 갈아타요 means to change or transfer to another train.",
+      "teachingPoint": "어느 역에서 = at which station; 갈아타요 = transfer",
+      "explanationNarration": "This asks which station you should transfer at. The verb means to change from one train to another."
+    }
+  ],
+  "bonus": {
+    "scenario": "Choosing a station exit",
+    "prompt": "Ask which exit to use for City Hall.",
+    "context": "You are going to City Hall and want to know which exit to use.",
+    "spokenPrompt": "You’re heading to City Hall. How would you ask which exit to take?",
+    "choices": [
+      {
+        "hangul": "시청에 가려면 몇 번 출구로 나가요?",
+        "romanization": "sicheong-e garyeomyeon myeot beon chulguro nagayo?"
+      },
+      {
+        "hangul": "공원에 가려면 몇 번 출구로 나가요?",
+        "romanization": "gongwon-e garyeomyeon myeot beon chulguro nagayo?"
+      },
+      {
+        "hangul": "은행에 가려면 몇 번 출구로 나가요?",
+        "romanization": "eunhaeng-e garyeomyeon myeot beon chulguro nagayo?"
+      }
+    ],
+    "correctAnswerIndex": 0,
+    "translation": "Which exit should I take to get to City Hall?",
+    "explanation": "This asks which exit to use to get to City Hall. 가려면 means “if you want to go,” and 몇 번 asks for a number.",
+    "teachingPoint": "시청에 = to City Hall; 몇 번 출구 = which exit number; 나가요? = do I exit?"
+  }
+}

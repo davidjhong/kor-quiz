@@ -1,0 +1,21 @@
+[
+  {
+    "kind": "developer-background-selection",
+    "recordedAt": "2026-11-05T20:29:32.831Z",
+    "beforeHash": "399899ccb71ee6597783f75fac00b8237f192197c3d8c8a8fde64c078fecd4e8",
+    "afterHash": "194914b5a3f37cae33226de035954d6cc6a4bab831c4b5e6eb5b96bc3546fdd0",
+    "changes": [
+      {
+        "field": "quiz.backgroundAssetId",
+        "before": null,
+        "after": "korean-transit-illustrated-dev-v1"
+      },
+      {
+        "field": "brief.backgroundAssetId",
+        "before": null,
+        "after": "korean-transit-illustrated-dev-v1"
+      }
+    ],
+    "humanApproved": false
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "questionId": "convenience-store-01-q6",
+  "correctAnswerIndex": 0,
+  "explanation": "Private: correct answer supports both availability and card payment.",
+  "translation": "Is the small size available, and can I pay by card?",
+  "teachingPoint": "Availability first, then payment method in a combined question."
+}

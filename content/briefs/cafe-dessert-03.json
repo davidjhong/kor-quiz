@@ -1,0 +1,7 @@
+{
+  "scenario": "At a café dessert counter: ask for a menu, order a slice of cake, request a fork, request an extra plate for sharing, ask whether a dessert contains nuts, and ask which desserts are available without milk. Avoid tasks from previous café episodes: greetings, coffee quantities or temperature, adding milk, takeaway, water, ice, cup return, phone charging, prices and drink replacement. Make each context explicit and keep the final task a hard beginner comment bonus.",
+  "audience": "English-speaking adults learning practical beginner Korean",
+  "level": "Beginner: two easy, two medium and two relatively hard questions, with polite requests and simple ingredient questions",
+  "scenarioType": "cafe",
+  "backgroundAssetId": "korean-cafe-illustrated-v1"
+}

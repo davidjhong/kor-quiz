@@ -1,0 +1,30 @@
+{
+  "contentHash": "194914b5a3f37cae33226de035954d6cc6a4bab831c4b5e6eb5b96bc3546fdd0",
+  "segments": 19,
+  "reusable": 2,
+  "uncachedSegments": [
+    "public-transit-02-hook",
+    "public-transit-02-q1-question",
+    "public-transit-02-q1-answer",
+    "public-transit-02-q1-explanation",
+    "public-transit-02-q2-question",
+    "public-transit-02-q2-answer",
+    "public-transit-02-q2-explanation",
+    "public-transit-02-q3-question",
+    "public-transit-02-q3-answer",
+    "public-transit-02-q3-explanation",
+    "public-transit-02-q4-question",
+    "public-transit-02-q4-answer",
+    "public-transit-02-q4-explanation",
+    "public-transit-02-q5-question",
+    "public-transit-02-q5-answer",
+    "public-transit-02-q5-explanation",
+    "public-transit-02-q6-question"
+  ],
+  "uncachedCharacters": 1045,
+  "estimatedSynthesisCostUSD": 0.03135,
+  "estimatedMaximumWithOneRetryUSD": 0.0627,
+  "reviewMode": "automated",
+  "acceptanceRequired": true,
+  "approvalRequired": false
+}

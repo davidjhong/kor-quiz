@@ -1,6 +1,6 @@
 import {QUIZ_FPS, PREVIEW_QUESTION_TIMELINE} from './questionTiming.ts';
 import type {PreparedNarration} from './narration.ts';
-import {validatePreparedNarrationPlan} from './narration.ts';
+import {validatePreparedNarrationPlan, type BonusCtaState} from './narration.ts';
 import type {QuizInput} from './quizSchema.ts';
 import {getEpisodePolicy} from './episodePolicy.ts';
 import type {EpisodeScene} from './quizTimeline.ts';
@@ -10,6 +10,7 @@ export const NARRATION_TIMING = {
   countdown: 5 * QUIZ_FPS, revealMinimum: 4 * QUIZ_FPS,
   settlePause: 6, afterHook: 15, afterQuestion: 15, answerGap: 10,
   afterExplanation: 30, transition: 12, finalFade: 12, commentHold: 4 * QUIZ_FPS,
+  afterComment: 1.5 * QUIZ_FPS, afterFollow: QUIZ_FPS,
 } as const;
 export const audioDurationToFrames = (seconds: number) => {
   if (!Number.isFinite(seconds) || seconds <= 0) throw new Error('Audio duration must be finite and positive');
@@ -38,21 +39,32 @@ export const getNarratedTimeline = (narration: PreparedNarration, quiz?: QuizInp
     const revealStart = countdownStart + rules.countdown;
     const bonus = policy.isBonus(questionIndex);
     let speechEnd = questionAudioEnd;
+    let commentStart: number | undefined;
+    let commentEnd: number | undefined;
+    let followStart: number | undefined;
     if (!bonus) {
       const answerStart = revealStart + rules.settlePause;
       const explanationStart = answerStart + frames(clipIndex++) + rules.answerGap;
       speechEnd = explanationStart + frames(clipIndex++);
       starts.push(answerStart, explanationStart);
     } else if (narration.clips[clipIndex]?.role === 'comment') {
-      const commentStart = revealStart + rules.settlePause;
+      commentStart = revealStart + rules.settlePause;
       starts.push(commentStart);
-      speechEnd = commentStart + frames(clipIndex++);
+      commentEnd = commentStart + frames(clipIndex++);
+      speechEnd = commentEnd;
+      if (narration.clips[clipIndex]?.role === 'follow') {
+        followStart = commentEnd + rules.afterComment;
+        starts.push(followStart);
+        speechEnd = followStart + frames(clipIndex++);
+      }
     }
-    const end = bonus ? Math.max(revealStart + rules.commentHold, speechEnd + rules.afterExplanation)
+    const end = bonus ? followStart !== undefined ? speechEnd + rules.afterFollow
+      : Math.max(revealStart + rules.commentHold, speechEnd + rules.afterExplanation)
       : Math.max(revealStart + rules.revealMinimum, speechEnd + rules.afterExplanation);
     const last = questionIndex === questionIds.length - 1;
     cursor = end + (last ? rules.finalFade : rules.transition);
     return {kind: 'question' as const, id, questionIndex, bonus, start, end, countdownStart, revealStart, speechEnd,
+      commentStart, commentEnd, followStart,
       sequenceStart: start - rules.transition / 2,
       sequenceEnd: end + (last ? rules.finalFade : rules.transition / 2),
       questionTimeline: {...PREVIEW_QUESTION_TIMELINE, countdownStart: countdownStart - start,
@@ -71,4 +83,11 @@ export const getNarratedTimeline = (narration: PreparedNarration, quiz?: QuizInp
     questionStart: first.start, countdownStart: first.countdownStart, revealStart: first.revealStart,
     revealEnd: first.end, questionTimeline: first.questionTimeline,
   };
+};
+
+/** Episode-frame boundaries shared with the audio schedule; no independent CTA timer. */
+export const getBonusCtaState = (frame: number, question: {bonus: boolean; revealStart: number; followStart?: number}): BonusCtaState | null => {
+  if (!question.bonus || frame < question.revealStart) return null;
+  if (question.followStart === undefined) return 'legacy-comment';
+  return frame < question.followStart ? 'comment' : 'follow';
 };

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "kind": "development-paid-usage-summary",
+  "episode": "public-transit-02",
+  "authorization": "transit-auto-01.authorization.json",
+  "contentHash": "194914b5a3f37cae33226de035954d6cc6a4bab831c4b5e6eb5b96bc3546fdd0",
+  "review": {
+    "model": "gpt-6-luna",
+    "requests": 1,
+    "correctionRequests": 0,
+    "verificationRequests": 0,
+    "inputTokens": 2930,
+    "outputTokens": 1486,
+    "reasoningTokensIncludedInOutput": 1164,
+    "cachedInputTokens": 0,
+    "estimatedConservativeCostUSD": 0.00110925,
+    "estimatedStandardInputCostUSD": 0.001036,
+    "ledger": "data/automated-review-budgets/transit-auto-review-01.json"
+  },
+  "tts": {
+    "provider": "google-cloud-tts",
+    "newRequests": 17,
+    "newCharacters": 1045,
+    "cacheHitsDuringPreparation": 2,
+    "retries": 0,
+    "estimatedCostBeforeEligibleFreeAllowanceUSD": 0.03135,
+    "cacheOnlyRerunHits": 19,
+    "cacheOnlyRerunNewRequests": 0,
+    "usageReport": "out/transit-development/audio-preparation.json"
+  },
+  "combinedConservativeEstimateUSD": 0.03245925,
+  "combinedCapUSD": 0.2,
+  "providerInvoiceInspected": false,
+  "builtInImage": {
+    "generations": 1,
+    "separatelyBilledImageAPICalls": 0,
+    "toolUsageAndDollarCost": "not exposed"
+  },
+  "paidFailureTestRequests": 0,
+  "publishingActions": 0
+}

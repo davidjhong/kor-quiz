@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "budgetId": "phase5b-quality-02",
+  "capUnits": 120000000,
+  "createdAt": "2026-11-05T06:48:44.138Z",
+  "pricing": "gpt-6-luna-2026-11-04",
+  "contractHash": "40a229f9def7aa3ab269d4894b03e1c305f9605327eefd9ee305060b46165415",
+  "scenarios": {
+    "cafe-dessert-04": {
+      "intentHash": "276a0d82708b9c6c418262a66a22642ca33518a842f908018ccac285aac8ce1c",
+      "directory": "C:\\Users\\david\\Documents\\kor-vids\\drafts\\cafe-dessert-04",
+      "attempts": [
+        {
+          "number": 1,
+          "state": "valid",
+          "reservedUnits": 18800000,
+          "chargedUnits": 2339125,
+          "startedAt": "2026-11-05T06:48:44.141Z",
+          "usage": {
+            "inputTokens": 2177,
+            "outputTokens": 4134,
+            "totalTokens": 6311,
+            "reasoningTokens": 2588,
+            "cachedInputTokens": 0
+          },
+          "requestId": "req_baeb6b45c9d6448b9301d50ff302b3ae",
+          "returnedModel": "gpt-6-luna",
+          "errors": []
+        }
+      ]
+    },
+    "convenience-store-02": {
+      "intentHash": "18bb6165bc270276e62bb4b45601628cdb15c8ec8b297c72090456d2abb59346",
+      "directory": "C:\\Users\\david\\Documents\\kor-vids\\drafts\\convenience-store-02",
+      "attempts": [
+        {
+          "number": 1,
+          "state": "valid",
+          "reservedUnits": 18800000,
+          "chargedUnits": 1900875,
+          "startedAt": "2026-11-05T06:49:52.136Z",
+          "usage": {
+            "inputTokens": 2163,
+            "outputTokens": 3261,
+            "totalTokens": 5424,
+            "reasoningTokens": 1509,
+            "cachedInputTokens": 1370
+          },
+          "requestId": "req_3222629f3937495e8b41a09b8d7b9189",
+          "returnedModel": "gpt-6-luna",
+          "errors": []
+        }
+      ]
+    },
+    "public-transit-02": {
+      "intentHash": "8281ca6da6e7d53c6b248112f5a4f79821f32edd16ed9eeff7f5d882c386799b",
+      "directory": "C:\\Users\\david\\Documents\\kor-vids\\drafts\\public-transit-02",
+      "attempts": [
+        {
+          "number": 1,
+          "state": "valid",
+          "reservedUnits": 18800000,
+          "chargedUnits": 2880125,
+          "startedAt": "2026-11-05T06:52:47.447Z",
+          "usage": {
+            "inputTokens": 2161,
+            "outputTokens": 5220,
+            "totalTokens": 7381,
+            "reasoningTokens": 3491,
+            "cachedInputTokens": 1370
+          },
+          "requestId": "req_7354966aa34c41de8e08666b76cf591d",
+          "returnedModel": "gpt-6-luna",
+          "errors": []
+        }
+      ]
+    }
+  }
+}

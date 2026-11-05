@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "intentHash": "8281ca6da6e7d53c6b248112f5a4f79821f32edd16ed9eeff7f5d882c386799b",
+  "inputsHash": "eee6e118bf24d7d2c8e8068adc672a6b10d884d7e6ac4afd6bca5a572a64e6c6",
+  "budgetId": "phase5b-quality-02",
+  "episodeId": "public-transit-02",
+  "experimentHash": "40a229f9def7aa3ab269d4894b03e1c305f9605327eefd9ee305060b46165415",
+  "promptVersion": "phase5b-quality-v1",
+  "schemaVersion": "phase5b-quality-education-v1",
+  "initialContentHash": "5824a3b5d7a0ab035459f435d2e120ce376ee47e52a38909c95bb34d0fedcfbc",
+  "status": "valid",
+  "requestedModel": "gpt-6-luna",
+  "returnedModel": "gpt-6-luna",
+  "attempts": 1
+}

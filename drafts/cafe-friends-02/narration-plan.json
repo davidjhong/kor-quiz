@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "kind": "narration-review-plan",
+  "valid": true,
+  "contentHash": "c69b365a7d8d02d143c7df2929142a680dc392db3b8d0bd8b87416e32c871046",
+  "profile": {
+    "provider": "google-cloud-tts",
+    "model": "chirp3-hd",
+    "voices": {
+      "en-US": "en-US-Chirp3-HD-Kore",
+      "ko-KR": "ko-KR-Chirp3-HD-Kore"
+    },
+    "outputFormat": "LINEAR16",
+    "sampleRateHertz": 24000,
+    "speakingRate": 1
+  },
+  "timingRules": {
+    "fps": 30,
+    "openingMinimum": 90,
+    "readingMinimum": 120,
+    "countdown": 150,
+    "revealMinimum": 120,
+    "settlePause": 6,
+    "afterHook": 15,
+    "afterQuestion": 15,
+    "answerGap": 10,
+    "afterExplanation": 30,
+    "transition": 12,
+    "finalFade": 12,
+    "commentHold": 120,
+    "afterComment": 45,
+    "afterFollow": 30
+  },
+  "endingDisplay": {
+    "comment": "Comment your answer 💬",
+    "follow": "Follow for more Korean ✨"
+  },
+  "timingStatus": "Absolute frames require measured audio; this is not a prepared render manifest.",
+  "segments": [
+    {
+      "id": "friends-hook-en",
+      "contentId": "cafe-friends-02",
+      "role": "hook",
+      "language": "en-US",
+      "text": "Can you order in Korean?",
+      "cacheKey": "28280c953f006e59d87561cc228d77f5f485bdaf59a599c48833a130a3221c21",
+      "file": "audio/cache/28280c953f006e59d87561cc228d77f5f485bdaf59a599c48833a130a3221c21.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-greet-question",
+      "contentId": "cafe-greet-staff",
+      "role": "question",
+      "language": "en-US",
+      "text": "How would you greet the café staff?",
+      "cacheKey": "268841e3a70f8aadd8c37b61bc06a3d2bebbc6855c909d310ef01fab322d71fb",
+      "file": "audio/cache/268841e3a70f8aadd8c37b61bc06a3d2bebbc6855c909d310ef01fab322d71fb.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-greet-answer",
+      "contentId": "cafe-greet-staff",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "안녕하세요.",
+      "cacheKey": "4eb84b2bd88baca00a2aa8c69f5cc9777264f1c37605573d98ca3241a990da31",
+      "file": "audio/cache/4eb84b2bd88baca00a2aa8c69f5cc9777264f1c37605573d98ca3241a990da31.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-greet-explanation",
+      "contentId": "cafe-greet-staff",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Hello. A polite greeting when you enter.",
+      "cacheKey": "6d58dcc0d3c880133a15a82b8a66c252999f51bba09cfb52fc5aefa40cd2208f",
+      "file": "audio/cache/6d58dcc0d3c880133a15a82b8a66c252999f51bba09cfb52fc5aefa40cd2208f.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-one-question",
+      "contentId": "cafe-order-one-coffee",
+      "role": "question",
+      "language": "en-US",
+      "text": "How would you order one coffee?",
+      "cacheKey": "7fa457a64a1faed89834779c59ce5ea3df501d1eff8e7ae484a42e9154a671a1",
+      "file": "audio/cache/7fa457a64a1faed89834779c59ce5ea3df501d1eff8e7ae484a42e9154a671a1.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-one-answer",
+      "contentId": "cafe-order-one-coffee",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "커피 한 잔 주세요.",
+      "cacheKey": "70aa03f81091b80002ed13e6dabd47d7068a2f39535fa4b0f09dafbcdbed2500",
+      "file": "audio/cache/70aa03f81091b80002ed13e6dabd47d7068a2f39535fa4b0f09dafbcdbed2500.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-one-explanation",
+      "contentId": "cafe-order-one-coffee",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "One coffee, please. Use this counter when ordering cups of a drink.",
+      "cacheKey": "1f83bb0fda3ac0416e430b19dd82791bda305427dc634aae47f5485cc31eae08",
+      "file": "audio/cache/1f83bb0fda3ac0416e430b19dd82791bda305427dc634aae47f5485cc31eae08.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-hot-question",
+      "contentId": "cafe-order-hot-coffee",
+      "role": "question",
+      "language": "en-US",
+      "text": "How would you ask for a hot coffee?",
+      "cacheKey": "54d002fd282a69b24ce4d53bad7882abfe0cda425faf0e3d34cb5ef47f7460d3",
+      "file": "audio/cache/54d002fd282a69b24ce4d53bad7882abfe0cda425faf0e3d34cb5ef47f7460d3.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-hot-answer",
+      "contentId": "cafe-order-hot-coffee",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "따뜻한 커피 주세요.",
+      "cacheKey": "2af25e9a41bdf9b216720b90f72f212087becd050585e0535fa45dcac1aaef1d",
+      "file": "audio/cache/2af25e9a41bdf9b216720b90f72f212087becd050585e0535fa45dcac1aaef1d.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-hot-explanation",
+      "contentId": "cafe-order-hot-coffee",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Hot coffee, please. This specifies the drink’s temperature.",
+      "cacheKey": "1039da93fcfc23acc3af4b45e48af1b6b569efc1d76b97a42fe365097b21348f",
+      "file": "audio/cache/1039da93fcfc23acc3af4b45e48af1b6b569efc1d76b97a42fe365097b21348f.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-milk-question",
+      "contentId": "cafe-add-milk",
+      "role": "question",
+      "language": "en-US",
+      "text": "How would you ask them to add milk?",
+      "cacheKey": "e1e0903e7ac69c7a25fcdefda63d836900cb78734724e63366a63b34a0c33f55",
+      "file": "audio/cache/e1e0903e7ac69c7a25fcdefda63d836900cb78734724e63366a63b34a0c33f55.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-milk-answer",
+      "contentId": "cafe-add-milk",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "우유 넣어 주세요.",
+      "cacheKey": "af0f919ade31d9d33a3dfaa965f4c544b9db221859c17be4593757fb8b582f18",
+      "file": "audio/cache/af0f919ade31d9d33a3dfaa965f4c544b9db221859c17be4593757fb8b582f18.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-milk-explanation",
+      "contentId": "cafe-add-milk",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Add milk, please. You can use this request to customize your drink.",
+      "cacheKey": "8ff34dfbcfa07c5babf01716f55cec68dabdaaf9237d3e7b9e82781c59f6a19f",
+      "file": "audio/cache/8ff34dfbcfa07c5babf01716f55cec68dabdaaf9237d3e7b9e82781c59f6a19f.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-cup-question",
+      "contentId": "cafe-place-empty-cup",
+      "role": "question",
+      "language": "en-US",
+      "text": "You’ve finished your drink. How would you ask where to leave your cup?",
+      "cacheKey": "1c15194720a4ade16bed9638ae6d31c00e3594b8c2e8c211d9c43194d12238dc",
+      "file": "audio/cache/1c15194720a4ade16bed9638ae6d31c00e3594b8c2e8c211d9c43194d12238dc.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-cup-answer",
+      "contentId": "cafe-place-empty-cup",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "컵은 어디에 놓으면 돼요?",
+      "cacheKey": "eab7850741185e1ec3d968cc5f077dc41435c708b7d830947e64ac3d35689489",
+      "file": "audio/cache/eab7850741185e1ec3d968cc5f077dc41435c708b7d830947e64ac3d35689489.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-cup-explanation",
+      "contentId": "cafe-place-empty-cup",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Where should I put the cup? A useful question when clearing your table.",
+      "cacheKey": "59f18f3a4828acf1f362da118bf8b45951d3212023c5c6947452f1b1709eb8af",
+      "file": "audio/cache/59f18f3a4828acf1f362da118bf8b45951d3212023c5c6947452f1b1709eb8af.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-bonus-question",
+      "contentId": "cafe-charge-phone",
+      "role": "question",
+      "language": "en-US",
+      "text": "How would you ask permission to charge your phone here?",
+      "cacheKey": "03c99af94b4bfafaf7c38bb36b1ffbe8a88c1fdb3bf7101c23be6b74dc698e8b",
+      "file": "audio/cache/03c99af94b4bfafaf7c38bb36b1ffbe8a88c1fdb3bf7101c23be6b74dc698e8b.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-bonus-comment",
+      "contentId": "cafe-charge-phone",
+      "role": "comment",
+      "language": "en-US",
+      "text": "What do you think? Comment your answer!",
+      "cacheKey": "4d5c462cb17eb8ca4e9f4c6c79f0c0d36f84a90560989b2bcf2003880ccb616a",
+      "file": "audio/cache/4d5c462cb17eb8ca4e9f4c6c79f0c0d36f84a90560989b2bcf2003880ccb616a.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "friends-bonus-follow",
+      "contentId": "cafe-charge-phone",
+      "role": "follow",
+      "language": "en-US",
+      "text": "Follow for more Korean!",
+      "cacheKey": "ae849836b3b094d2c6fac3058c7132d4e0ac90646bd3b1835aa087412dbf2c02",
+      "file": "audio/cache/ae849836b3b094d2c6fac3058c7132d4e0ac90646bd3b1835aa087412dbf2c02.wav",
+      "durationSeconds": null
+    }
+  ]
+}

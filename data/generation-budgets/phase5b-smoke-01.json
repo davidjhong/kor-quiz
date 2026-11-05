@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "budgetId": "phase5b-smoke-01",
+  "capUnits": 150000000,
+  "createdAt": "2026-11-05T05:58:44.014Z",
+  "pricing": "gpt-5-nano-2026-11-04",
+  "scenarios": {
+    "cafe-dessert-03": {
+      "intentHash": "62517a5b89b389322a01891ce53bbade33e8da4b2003c2ee66426d2c5eb16eb0",
+      "directory": "C:\\Users\\david\\Documents\\kor-vids\\drafts\\cafe-dessert-03",
+      "attempts": [
+        {
+          "number": 1,
+          "state": "invalid",
+          "reservedUnits": 24800000,
+          "chargedUnits": 1111850,
+          "startedAt": "2026-11-05T05:58:44.017Z",
+          "usage": {
+            "inputTokens": 1325,
+            "outputTokens": 2614,
+            "totalTokens": 3939,
+            "reasoningTokens": 1344,
+            "cachedInputTokens": 0
+          },
+          "requestId": "req_f9e63305e51e4b7abe35fa4781e9a7d8",
+          "returnedModel": "gpt-5-nano-2025-08-07",
+          "errors": [
+            "quiz.questions: Too big: expected array to have <=6 items",
+            "quiz.questions.0.scenario: Must contain at most 40 Unicode code points",
+            "quiz.questions.5: Unrecognized keys: \"correctAnswerIndex\", \"explanation\", \"reveal\"",
+            "narration.segments.19.text: Too small: expected string to have >=1 characters",
+            "narration.segments.19.text: Must not be blank",
+            "narration.segments: Too big: expected array to have <=19 items"
+          ]
+        },
+        {
+          "number": 2,
+          "state": "invalid",
+          "reservedUnits": 24800000,
+          "chargedUnits": 828700,
+          "startedAt": "2026-11-05T05:59:02.172Z",
+          "usage": {
+            "inputTokens": 2662,
+            "outputTokens": 1739,
+            "totalTokens": 4401,
+            "reasoningTokens": 640,
+            "cachedInputTokens": 0
+          },
+          "requestId": "req_09d9b91fc96f445397d51ce7600c544f",
+          "returnedModel": "gpt-5-nano-2025-08-07",
+          "errors": [
+            "quiz.questions.0.scenario: Must contain at most 40 Unicode code points",
+            "quiz.questions.5.spokenPrompt: Must not be empty or whitespace-only",
+            "narration.segments.16.text: Too small: expected string to have >=1 characters",
+            "narration.segments.16.text: Must not be blank"
+          ]
+        }
+      ]
+    },
+    "convenience-store-01": {
+      "intentHash": "5380a28f50baec176f5f08d6bfc868717c97d608eedbe5a27d68d7ed1427304e",
+      "directory": "C:\\Users\\david\\Documents\\kor-vids\\drafts\\convenience-store-01",
+      "attempts": [
+        {
+          "number": 1,
+          "state": "invalid",
+          "reservedUnits": 24800000,
+          "chargedUnits": 782900,
+          "startedAt": "2026-11-05T06:04:01.372Z",
+          "usage": {
+            "inputTokens": 1682,
+            "outputTokens": 1747,
+            "totalTokens": 3429,
+            "reasoningTokens": 448,
+            "cachedInputTokens": 0
+          },
+          "requestId": "req_bcd114895ee042ceb9314e8af30b0bd1",
+          "returnedModel": "gpt-5-nano-2025-08-07",
+          "errors": [
+            "quiz.questions.5.prompt: Must contain at most 100 Unicode code points"
+          ]
+        },
+        {
+          "number": 2,
+          "state": "invalid",
+          "reservedUnits": 24800000,
+          "chargedUnits": 934200,
+          "startedAt": "2026-11-05T06:04:14.643Z",
+          "usage": {
+            "inputTokens": 2964,
+            "outputTokens": 1965,
+            "totalTokens": 4929,
+            "reasoningTokens": 704,
+            "cachedInputTokens": 0
+          },
+          "requestId": "req_11d8bed20cbc439f81566d3851c39667",
+          "returnedModel": "gpt-5-nano-2025-08-07",
+          "errors": [
+            "quiz.questions.5.prompt: Must contain at most 100 Unicode code points"
+          ]
+        }
+      ]
+    },
+    "public-transit-01": {
+      "intentHash": "7a83cf74abf9018d8e8f8cf5bc19afe8bf46ec51ec4d76f4e1e5bb58166fb0d4",
+      "directory": "C:\\Users\\david\\Documents\\kor-vids\\drafts\\public-transit-01",
+      "attempts": [
+        {
+          "number": 1,
+          "state": "valid",
+          "reservedUnits": 24800000,
+          "chargedUnits": 948950,
+          "startedAt": "2026-11-05T06:06:20.261Z",
+          "usage": {
+            "inputTokens": 1699,
+            "outputTokens": 2160,
+            "totalTokens": 3859,
+            "reasoningTokens": 768,
+            "cachedInputTokens": 0
+          },
+          "requestId": "req_3839ca52f5684f27ae180ed29dc26ed7",
+          "returnedModel": "gpt-5-nano-2025-08-07",
+          "errors": []
+        },
+        {
+          "number": 2,
+          "state": "valid",
+          "reservedUnits": 24800000,
+          "chargedUnits": 934150,
+          "startedAt": "2026-11-05T06:08:57.169Z",
+          "usage": {
+            "inputTokens": 3115,
+            "outputTokens": 1946,
+            "totalTokens": 5061,
+            "reasoningTokens": 576,
+            "cachedInputTokens": 0
+          },
+          "requestId": "req_20cf833c14384774b63de1a0e9ff2dd5",
+          "returnedModel": "gpt-5-nano-2025-08-07",
+          "errors": []
+        }
+      ]
+    }
+  }
+}

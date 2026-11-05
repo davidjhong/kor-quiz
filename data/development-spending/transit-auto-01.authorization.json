@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "kind": "user-paid-development-authorization",
+  "recordedAt": "2026-11-05T20:46:22.376Z",
+  "source": "User reply: Approve review and transit TTS, up to $0.20",
+  "totalCapUSD": 0.2,
+  "episode": "public-transit-02",
+  "review": {
+    "model": "gpt-6-luna",
+    "maximumRequests": 3,
+    "maximumOutputTokens": 12000,
+    "maximumCostUSD": 0.0564
+  },
+  "tts": {
+    "provider": "google-cloud-tts",
+    "voices": [
+      "en-US-Chirp3-HD-Kore",
+      "ko-KR-Chirp3-HD-Kore"
+    ],
+    "maximumCostUSD": 0.14,
+    "currentUncachedCharacters": 1045,
+    "currentEstimateUSD": 0.03135,
+    "currentMaximumWithOneRetryUSD": 0.0627
+  },
+  "humanContentApprovalRequired": false,
+  "builtInImageCreated": true,
+  "separatelyBilledImageAPICalls": 0,
+  "publishingAuthorized": false
+}

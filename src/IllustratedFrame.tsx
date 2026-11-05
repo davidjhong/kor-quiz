@@ -10,9 +10,10 @@ import type {QuizInput} from './quizSchema';
 export const IllustratedBackground = ({assetId}: {assetId: QuizInput['backgroundAssetId']}) => {
   const asset = getBackgroundAsset(assetId);
   const {background, colors} = ILLUSTRATED_THEME;
+  const framing = asset?.framing ?? background;
   return <AbsoluteFill style={{background: colors.background}}>
     {asset ? <Img src={staticFile(asset.file)} style={{width: '100%', height: '100%', objectFit: 'cover',
-      transform: `scale(${background.scale})`, transformOrigin: background.origin}} /> : null}
+      transform: `scale(${framing.scale})`, transformOrigin: framing.origin}} /> : null}
   </AbsoluteFill>;
 };
 

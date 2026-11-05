@@ -3,7 +3,7 @@ import {IllustratedBackground, IllustratedBookend, IllustratedPanel} from './Ill
 import {IllustratedQuestionScene} from './IllustratedQuestionScene';
 import type {QuizInput} from './quizSchema';
 import type {PreparedNarration} from './narration';
-import {getNarratedTimeline, NARRATION_TIMING} from './narrationTiming';
+import {getBonusCtaState, getNarratedTimeline, NARRATION_TIMING} from './narrationTiming';
 import {getEpisodeSceneOpacity} from './quizTimeline';
 
 export type NarratedQuestionPreviewProps = {quiz: QuizInput; narration: PreparedNarration | null};
@@ -27,6 +27,7 @@ export const NarratedQuestionPreview = ({quiz, narration}: NarratedQuestionPrevi
           name={question ? quiz.questions[question.questionIndex].id : 'opening'}>
           {question ? <IllustratedQuestionScene question={quiz.questions[question.questionIndex]}
             questionIndex={question.questionIndex} questionCount={quiz.questions.length} bonus={question.bonus}
+            bonusCta={getBonusCtaState(frame, question) ?? undefined}
             showRomanization={quiz.showRomanization} embedded contentOpacity={opacity}
             settleFrames={question.start - question.sequenceStart} questionTimeline={question.questionTimeline} />
             : <IllustratedBookend title={quiz.episodeTitle!} embedded contentOpacity={opacity} subtitle={subtitle} />}

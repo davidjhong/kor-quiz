@@ -1,0 +1,48 @@
+{
+  "id": "public-transit-02",
+  "requests": 1,
+  "usage": {
+    "inputTokens": 2161,
+    "outputTokens": 5220,
+    "reasoningTokens": 3491,
+    "cachedInputTokens": 1370
+  },
+  "conservativeEstimatedCostUSD": 0.002880125,
+  "cacheAwareStandardEstimateUSD": 0.0027028,
+  "invoiceInspected": false,
+  "firstStructuralPass": true,
+  "repairRequests": 0,
+  "finalStructuralPass": true,
+  "hash": "5824a3b5d7a0ab035459f435d2e120ce376ee47e52a38909c95bb34d0fedcfbc",
+  "reuseCalls": 0,
+  "approved": false,
+  "repetitionWarnings": [],
+  "renderBlockers": [
+    "Matching approved background missing for public-transit; content review may proceed"
+  ],
+  "kind": "generation-cost-estimate",
+  "budgetId": "phase5b-quality-02",
+  "pricingSource": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+  "pricingDate": "2026-11-04",
+  "conservativeAssumption": "All input at $0.125/M cache-write upper rate; output $0.50/M. No cache discounts assumed in ledger.",
+  "standardEstimateAssumption": "$0.10/M uncached input, $0.01/M reported cached input, $0.50/M output; excludes any separately billed cache writes or other charges.",
+  "attempts": [
+    {
+      "number": 1,
+      "state": "valid",
+      "reservedUnits": 18800000,
+      "chargedUnits": 2880125,
+      "startedAt": "2026-11-05T06:52:47.447Z",
+      "usage": {
+        "inputTokens": 2161,
+        "outputTokens": 5220,
+        "totalTokens": 7381,
+        "reasoningTokens": 3491,
+        "cachedInputTokens": 1370
+      },
+      "requestId": "req_7354966aa34c41de8e08666b76cf591d",
+      "returnedModel": "gpt-6-luna",
+      "errors": []
+    }
+  ]
+}

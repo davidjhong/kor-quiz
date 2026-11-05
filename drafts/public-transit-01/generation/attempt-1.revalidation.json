@@ -1,0 +1,24 @@
+{
+  "validator": "phase5b-v4",
+  "valid": false,
+  "contentHash": "00c10568bd6a2464a2b89fe8d4fd9c3bcb10c2b03420ae8dd84942d6771711f8",
+  "errors": [
+    "public-transit-01-q1-explanation: English narration must not speak Hangul or romanized Korean answers"
+  ],
+  "warnings": [
+    "Structural validation does not establish Korean accuracy, naturalness, difficulty or semantic answer uniqueness. Human review is required."
+  ],
+  "linguisticReviewRequired": true,
+  "generationEstimatedCostUSD": 0.00094895,
+  "reportedGenerationUsage": {
+    "inputTokens": 1699,
+    "outputTokens": 2160,
+    "totalTokens": 3859,
+    "reasoningTokens": 768,
+    "cachedInputTokens": 0
+  },
+  "renderReady": false,
+  "renderBlockers": [
+    "Matching approved background missing for public-transit; content review may proceed"
+  ]
+}

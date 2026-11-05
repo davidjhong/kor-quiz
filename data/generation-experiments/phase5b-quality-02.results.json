@@ -1,0 +1,76 @@
+{
+  "experimentHash": "40a229f9def7aa3ab269d4894b03e1c305f9605327eefd9ee305060b46165415",
+  "capUSD": 0.12,
+  "requests": 3,
+  "conservativeEstimatedCostUSD": 0.007120125,
+  "cacheAwareStandardEstimateUSD": 0.006711,
+  "rows": [
+    {
+      "id": "cafe-dessert-04",
+      "requests": 1,
+      "usage": {
+        "inputTokens": 2177,
+        "outputTokens": 4134,
+        "reasoningTokens": 2588,
+        "cachedInputTokens": 0
+      },
+      "conservativeEstimatedCostUSD": 0.002339125,
+      "cacheAwareStandardEstimateUSD": 0.0022847,
+      "invoiceInspected": false,
+      "firstStructuralPass": true,
+      "repairRequests": 0,
+      "finalStructuralPass": true,
+      "hash": "5c8a733d903330b9b8c5ee36209de541804f50744c2c95f3ad8812a9f89fb6a8",
+      "reuseCalls": 0,
+      "approved": false,
+      "repetitionWarnings": [],
+      "renderBlockers": []
+    },
+    {
+      "id": "convenience-store-02",
+      "requests": 1,
+      "usage": {
+        "inputTokens": 2163,
+        "outputTokens": 3261,
+        "reasoningTokens": 1509,
+        "cachedInputTokens": 1370
+      },
+      "conservativeEstimatedCostUSD": 0.001900875,
+      "cacheAwareStandardEstimateUSD": 0.0017235,
+      "invoiceInspected": false,
+      "firstStructuralPass": true,
+      "repairRequests": 0,
+      "finalStructuralPass": true,
+      "hash": "069b7be1600f41ea9b78e58dd34a59f968d53837993c276455317000d53f806a",
+      "reuseCalls": 0,
+      "approved": false,
+      "repetitionWarnings": [],
+      "renderBlockers": [
+        "Matching approved background missing for convenience-store; content review may proceed"
+      ]
+    },
+    {
+      "id": "public-transit-02",
+      "requests": 1,
+      "usage": {
+        "inputTokens": 2161,
+        "outputTokens": 5220,
+        "reasoningTokens": 3491,
+        "cachedInputTokens": 1370
+      },
+      "conservativeEstimatedCostUSD": 0.002880125,
+      "cacheAwareStandardEstimateUSD": 0.0027028,
+      "invoiceInspected": false,
+      "firstStructuralPass": true,
+      "repairRequests": 0,
+      "finalStructuralPass": true,
+      "hash": "5824a3b5d7a0ab035459f435d2e120ce376ee47e52a38909c95bb34d0fedcfbc",
+      "reuseCalls": 0,
+      "approved": false,
+      "repetitionWarnings": [],
+      "renderBlockers": [
+        "Matching approved background missing for public-transit; content review may proceed"
+      ]
+    }
+  ]
+}

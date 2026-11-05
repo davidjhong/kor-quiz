@@ -1,0 +1,29 @@
+{
+  "contentHash": "c69b365a7d8d02d143c7df2929142a680dc392db3b8d0bd8b87416e32c871046",
+  "segments": 19,
+  "reusable": 1,
+  "uncachedSegments": [
+    "friends-greet-question",
+    "friends-greet-answer",
+    "friends-greet-explanation",
+    "friends-one-question",
+    "friends-one-answer",
+    "friends-one-explanation",
+    "friends-hot-question",
+    "friends-hot-answer",
+    "friends-hot-explanation",
+    "friends-milk-question",
+    "friends-milk-answer",
+    "friends-milk-explanation",
+    "friends-cup-question",
+    "friends-cup-answer",
+    "friends-cup-explanation",
+    "friends-bonus-question",
+    "friends-bonus-comment",
+    "friends-bonus-follow"
+  ],
+  "uncachedCharacters": 679,
+  "estimatedSynthesisCostUSD": 0.02037,
+  "estimatedMaximumWithOneRetryUSD": 0.04074,
+  "approvalRequired": true
+}

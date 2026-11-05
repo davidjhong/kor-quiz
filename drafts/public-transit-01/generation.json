@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "intentHash": "7a83cf74abf9018d8e8f8cf5bc19afe8bf46ec51ec4d76f4e1e5bb58166fb0d4",
+  "inputsHash": "8dd59d1e2c99bd9eadca91a4b327c4588ceb31d0a92e6bc6f9afdb37db6bd416",
+  "budgetId": "phase5b-smoke-01",
+  "episodeId": "public-transit-01",
+  "initialContentHash": "da7dadc5ea01626898092490c11408bcd37590eed4b53c6e5c680608a6beb7e2",
+  "status": "valid",
+  "requestedModel": "gpt-5-nano-2025-08-07",
+  "returnedModel": "gpt-5-nano-2025-08-07",
+  "attempts": 2
+}
