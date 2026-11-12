@@ -13,8 +13,8 @@ export const MODEL_PROFILES = {
   [QUALITY_DRAFT_MODEL]: {id: 'gpt-6-luna-2026-11-04', model: QUALITY_DRAFT_MODEL,
     aliases: [QUALITY_DRAFT_MODEL], returnedModels: [QUALITY_DRAFT_MODEL], reasoning: 'medium' as const,
     inputUSDPerMillion: 0.10, reservedInputUSDPerMillion: 0.125, outputUSDPerMillion: 0.50,
-    source: 'https://developers.openai.com/api/docs/models/gpt-6-luna', checked,
-    verifyAgainBy: '2026-11-11', shutdown: null, contextTokens: 1050000,
+    source: 'https://developers.openai.com/api/docs/models/gpt-6-luna', checked:'2026-11-10',
+    verifyAgainBy: '2026-11-17', shutdown: null, contextTokens: 1050000,
     // Full bounded request bytes + generous framing overhead; below the 272K long-input threshold.
     reservedInputTokens: MAX_REQUEST_BYTES + REQUEST_TOKEN_OVERHEAD},
 } as const;
@@ -30,7 +30,7 @@ export const modelChargeUnits = (model: string, input: number, output: number) =
 };
 export const generationCostBound = (maxOutputTokens = 12000, model = LEGACY_DRAFT_MODEL, now = new Date()) => {
   const p = modelProfile(model);
-  if (now.toISOString().slice(0, 10) >= p.verifyAgainBy) throw new Error('Generation pricing/availability must be reverified before paid calls; saved pricing is out of date.');
+  if (now.toISOString().slice(0, 10) >= p.verifyAgainBy) throw new Error(`OpenAI ${p.model} generation/review pricing/availability expired; must be reverified before paid calls: ${p.source}; scripts/generationModels.ts MODEL_PROFILES[${p.model}].verifyAgainBy=${p.verifyAgainBy}. Do not just extend the date.`);
   if (!Number.isInteger(maxOutputTokens) || maxOutputTokens < 2048 || maxOutputTokens > 16000) throw new Error('--max-output-tokens must be an integer from 2048 to 16000');
   return modelChargeUnits(model, p.reservedInputTokens, maxOutputTokens);
 };

@@ -1,0 +1,35 @@
+{
+  "kind": "automated-question-preview-acceptance",
+  "humanReviewed": false,
+  "contentHash": "a66dcf6ad2538e9ff4d517474a765bf3116d0e665a0f7246e443e89cba48535a",
+  "model": "gpt-6-luna",
+  "promptVersion": "phase6-question-excerpt-review-v1",
+  "findings": {
+    "questions": [
+      {
+        "questionId": "restaurant-menu",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      }
+    ],
+    "resolutions": []
+  },
+  "revisions": [],
+  "usage": {
+    "inputTokens": 644,
+    "outputTokens": 230,
+    "totalTokens": 874,
+    "reasoningTokens": 165,
+    "cachedInputTokens": 0
+  },
+  "requestId": "req_e059077fed494481b8148ed23c4146a8",
+  "independence": "Separate economical-model request; not independent proof of Korean correctness.",
+  "acceptedAt": "2026-11-12T05:32:53.915Z"
+}

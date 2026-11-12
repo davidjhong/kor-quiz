@@ -4,6 +4,7 @@ import {validatePreparedNarrationPlan, type BonusCtaState} from './narration.ts'
 import type {QuizInput} from './quizSchema.ts';
 import {getEpisodePolicy} from './episodePolicy.ts';
 import type {EpisodeScene} from './quizTimeline.ts';
+import type {TimingSettings} from './productionPresets.ts';
 
 export const NARRATION_TIMING = {
   fps: QUIZ_FPS, openingMinimum: 3 * QUIZ_FPS, readingMinimum: 4 * QUIZ_FPS,
@@ -16,8 +17,7 @@ export const audioDurationToFrames = (seconds: number) => {
   if (!Number.isFinite(seconds) || seconds <= 0) throw new Error('Audio duration must be finite and positive');
   return Math.ceil(seconds * QUIZ_FPS);
 };
-export const getNarratedTimeline = (narration: PreparedNarration, quiz?: QuizInput) => {
-  const rules = NARRATION_TIMING;
+export const getNarratedTimeline = (narration: PreparedNarration, quiz?: QuizInput, rules:TimingSettings=NARRATION_TIMING) => {
   if (quiz) validatePreparedNarrationPlan(quiz, narration);
   else if (JSON.stringify(narration.clips.map((clip) => clip.role)) !== JSON.stringify(['hook', 'question', 'answer', 'explanation'])) {
     throw new Error('Multi-question narration requires the validated quiz');
@@ -36,8 +36,9 @@ export const getNarratedTimeline = (narration: PreparedNarration, quiz?: QuizInp
     starts.push(questionAudioStart);
     const questionAudioEnd = questionAudioStart + frames(clipIndex++);
     const countdownStart = Math.max(start + rules.readingMinimum, questionAudioEnd + rules.afterQuestion);
-    const revealStart = countdownStart + rules.countdown;
     const bonus = policy.isBonus(questionIndex);
+    const countdownFrames=(bonus||quiz?.questions[questionIndex].difficulty==='hard')?(rules.countdownHard??rules.countdown):rules.countdown;
+    const revealStart = countdownStart + countdownFrames;
     let speechEnd = questionAudioEnd;
     let commentStart: number | undefined;
     let commentEnd: number | undefined;
@@ -68,7 +69,7 @@ export const getNarratedTimeline = (narration: PreparedNarration, quiz?: QuizInp
       sequenceStart: start - rules.transition / 2,
       sequenceEnd: end + (last ? rules.finalFade : rules.transition / 2),
       questionTimeline: {...PREVIEW_QUESTION_TIMELINE, countdownStart: countdownStart - start,
-        revealStart: revealStart - start, durationInFrames: end - start},
+        revealStart: revealStart - start, countdownFrames, durationInFrames: end - start},
     };
   });
   const audio = narration.clips.map((clip, index) => ({id: clip.id, file: clip.file, role: clip.role,

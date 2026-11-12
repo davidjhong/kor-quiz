@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "kind": "automated-content-acceptance",
+  "status": "accepted",
+  "humanReviewed": false,
+  "contentHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+  "sourceContentHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+  "episodeId": "production-hotel-01",
+  "acceptedAt": "2026-11-11T09:05:09.047Z",
+  "reviewerModel": "gpt-6-luna",
+  "reviewPromptVersion": "phase5b-automated-review-v1",
+  "verificationPromptVersion": null,
+  "correctionPromptVersion": null,
+  "reviewRequestIds": [
+    "req_dccb30d4d9d24bfa915f0910ead92bd2"
+  ],
+  "independence": "Separate requests to the configured model; not independent proof of Korean correctness.",
+  "finalFindings": {
+    "questions": [
+      {
+        "questionId": "production-hotel-01-q1",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-hotel-01-q2",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-hotel-01-q3",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-hotel-01-q4",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-hotel-01-q5",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-hotel-01-q6",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      }
+    ],
+    "resolutions": []
+  },
+  "verifiedFindingIds": [],
+  "revisions": [],
+  "asset": {
+    "id": "korean-hotel-illustrated-v1",
+    "sha256": "8b58c68bb61b3480461764b1ba403069723300e087c725b3da7809cf04d0d9f8",
+    "selection": "developer-selected"
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "id": "resp_004c006785f00853016af54f80f8a087d091716659c11bb40a",
+  "object": "response",
+  "created_at": 1794461568,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "openai"
+  },
+  "completed_at": 1794461572,
+  "error": null,
+  "frequency_penalty": 0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 12000,
+  "max_tool_calls": null,
+  "model": "gpt-6-luna",
+  "moderation": null,
+  "output": [
+    {
+      "id": "rs_004c006785f00853016af54f81ffdc87d09488b979ab4911d0",
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABq9U-EMuJ1Yw-iK1h6-h4UsBfIBehko_vJ0kPtXaNygHGo9wqCU4TpjSwuN3U4--uuzo2qZRqEwZLrBYNkpCXCzzXXeTQCcXGoUYRn7LgzfNVY3nmD33PyoVwYYXQj2PJNsI4I1FRHAVB3bufYNEujp2cSke1ZeXbOF1ZHm0JWZt5GGT2EpI9w3AI8t5sgneM8Pcy0O0SGPek59rdv_zXDqFKa9iHkk0zEjj50QTQ0nbxSv-l63SADg5bBRbp_5GTnBQfBUNk0HSteFEkitJcXQKCPbx8t3DVzEyJLYJYnoEr6JL5lRyOPpyhxLplioHhq4r4-l54-3qabcPp_HEXfb9MgHRuMghT8T0j135g--jmiWBwsP58LEQxjYMW2XIWOGxALMzxMG_hJnWeb5N4sLdiPbB3N6p5_eOHQGKS7YY0_fdxPtt54d8_IaqlCITLhE_S-B_ecnG6a8wVWCVt_BlnttfFY30uCXM55wKXUnB4Ezl7s5OCXUXydSpwSnQ33HrmGN8vOAhhrdq7e24UI9o28O1dsjwiQ_v9Mr9D6covZEt542j77B0wVTLPaElTUQSGnk15rbz0jhtlXTEiaEKCuWGWTol0rG3N1oVFesef_n9ct5-VNZMuKgbiGhBIHE-HpGovwH9-IqMPTxNr4v02_uqeGGqGujOJU8cDrL-NYsDH92NsNOoIGIGhR_CxGRW9j9VrfCPIS77Sk0ZYdxldHhtv36ikAVBApF64A7ND8kBQN7zaNxwhD5WHZTThzdh9B_2b8sLs_Z4z8v18BUB032mMpgsPOGT3kBPGrv3jridIU3tfKQIlg98oUZoEu0oYHcxtgyjnkLCtXusPofMrXzLHnx0dtWxFbVlwojOROFMLPLYf9SdCyH0nSIA6HrJjixgFDb5xUjI15okD732rerq-Xed5DxCFkRU4MMYorjpi4WRspcfoyAV3JTa7rFRmIXlFWGx5Igoet0SvEI6WSc7lLtBzxSkOvgsfRlN1tL9wFWj01n2Y6NRORYGT1dGF16jy_8e0X_snng0VLHsjfzUjpW8YkLXXHauZIOY4LxMJrntM_2hdQ8vgSO0Vn-9hC0fMnMBbh1graqdr-hF03yr89zAAKaXRyw3ULtmTE5dcwqzBk13EvfBj-WKYTSF_7hodkoo4TuqXFwIWx-quRWxkNAb-2YaZktLmDoxdEjkCa9mFurA9FvQBkTUo0tj1OMZlgk74lUPubDdggIRr18yDlXCZ_bQO39KTZP3VhXJmxeQAnn4eiDl41ccvL-qULwL_TlK8ndbPZ5RdLKeiYGYcWn0By4LLVyFzYjHOTsRbTZJIRsK9GLxSiABnje3NXz6KRKv0q3RKQ-C19oS9GwIr9X7oBd105y7J5wB8gDdp_GwApwiha6Z6216-fhgkfPX_RbaKRPuQYXWm8O7GwOwI0lZ1WcmFyqVkP06Hb2Ep8p43KOXBGbUDI6t1Zx_Us-OGDjQhikg5OdfUbLSKw45MChquhUNPLuin9uE0iOX_5A9818Y3-quTuR0bcj9FojnVq-kvNjml392UJNpU0yndcsfvKhI0rYl0msDj-KKy_x1P7ZzurLJ24kc1lfFj9deHzh8AxF60jIYp-ZkWuAzbkQhfOeLgtnUiYiLfXAFBzmk6yfKLygo0vDiira1Y638H_4y2RqBruwo9V0PtBdFG81N3jAUnDXfbBKMyALaXDhOID3t8n0lMBVts4ACPJ0BGHAr8FqJdXi7Iqinkfxitwsse6CDKKpf_Mk7lP8TRJCkZEsHqzYj6S7voIPwokPdoDe_Vtjp2og4gktqdFOhCBZl851ojlZVjGisR2Xe2UEjkDfHTmzgPIMKjguDLaeU8Nc0W0xhHyMvuAvcjK3WzhOWTsRYIbdUZIyMszer-T_nvnpe-KMsPH5You2a517lIcnMQdW36m8QSF3McwNU-6vpV8Rjfv7RwJbAGISznB_UH23jpNV4TGEacHZdUbUbbAxmUXJiPslGqFeaHhcgVmgmWgOdws_zJjZBQMNz7aWBvRzrRniNLlOMsv6Tq4r6lM_MIAm1MCBWM7KNeKZWLdQF8qk50UDtYfxywDl7bY9HSnwfrCpit5v88DSUJLrVipz9ppsdJSJgKuktpE0ik-sGEAmO4hSn2XHWkrK8zBlNOIl6_l8FY2P8gCfRy7WNc9DOXy8XfPCKwe3SQoEN-Sdqo-vPuKQxu0IguGkzBsOwdJka66LUWRRCwBjsymz3jD0SkJr47XxBQlIAVA5PtCg_dlpQ0548vT3j_scbzEeLuF_PtImB6bITMjSINVGhmCqn76TNpqOP3D_7QgE5PcQvA9vqpkhlNqLe1x8GTY_r51hN7U_ASD6kFGOZpb-ms06UmY3_muLkprO64m7bPopLbyVVq-POb5SuCZUuPbSM6aSdYkbCmnFAsoyU3LNaaS_cvg6VhImGcJCv_VtlpzeZXE8bJ4AWeKOyrrdSM8EgE6kZV50JYn-u35R1aPSQmRlUR9baOwQ19oB0HsZgOEYuYqjoYPm9XW9hWtWPvooNmIjzy0ynIPoI6Z0EOSNkkQECOxeBzwDvj9VHKm7OveKL1j7QWWGIkhkDULen-qpYt6CrYlDt9siimkZ07rqAlx8NOcE3H6Im_slqMhCqwI-Umiu04wiOflTcH6Yo9Ef9z4jrey-xrgxqyltBgz9jV3wsjf-XTCXNZRw5zctM0ha43-6c1yjcTRDJy-De_-yjSthICUneB98va7rbigOPyxSjDDtT72wEYovuY8xrV9YQur7L0aX02KocRl0EujDPx7k0CRFvvzBpyhbgpcKSLAY_Jtk2YeS45Ne1nln-P8n0mo2yK5Ai0WUbrl23UkAbOQ2zlg_uLPKQcIQZw1INEkNsGBLdLuUwrGSyPAEeYti9UtsuWQHkhxXcPKwuQLrvs9IHW8rfFgA_8HPRc8ZgChXfHqJ8cj5WagkJNn7xYlvgHwKImPul8D2FHr7Esn02MtonbWEMZvJVFpSj31Yeo06a5MU96D2B05pGRGdb-qmLjL4bFzQnOIOTu-iRZnIDVvBruH40IKBRBGhRzVKe1XE--pPr2TiUhqnuPXt7FxWm4kp3rgwDnrYmiPzhBMK9sj8Ky3vYOfomhE--ZLHaNaF16fdAenmwL-yD3oEG_bYxSg9iurX0PLw-9lrvxSJfKuVfJOTNjOXiG9pW2xHgVjFFUy821b0ymVIDgrCw2H7p65Q-ud7oUw5GBeQPVN_wMvxCaYl0LDXboKe58-AM9XMtRrmQ6S1MVoWLwUpFuwZRLPcAj_a7CRQxdk9OIsAktklY8Sj1y3yyBFvVWpsEaTb5mrIul847nQ82sjHbhIlB0Zu6u3WDH8QJq7Hpowm5VPmWv8WsXiM2H-CXj9Bbn8KJlb7PV1V1HoCZwntE5wFzK58xdH7kchWOlwvpMFV0umgduxYXdMIUqIFk8N0kP0zi2oI8KmV5LPnVjTNp1rQTtQHu-J-xgnXmIUrXnGOJecZkYY6fh6T6EUUpTP91X0RBLhoT0CVLs7c28vyBVfRPN-WtGO8Du3rdVHBvsEKGFlmyqkPotw-iBbDFL3fPs8wEd1tr5bld102alSJd5VEuwK3ipqBVrgaocC6nPb4ayRG_f-qxOdAfP106_H25IcHFduPlcmKKei3I113A==",
+      "summary": []
+    },
+    {
+      "id": "msg_004c006785f00853016af54f83a00c87d0aa7076bb8b7e9f34",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"questions\":[{\"questionId\":\"restaurant-menu\",\"checks\":{\"naturalKorean\":\"pass\",\"uniqueAnswer\":\"pass\",\"romanization\":\"pass\",\"meaningExplanation\":\"pass\",\"englishNarration\":\"pass\",\"bonusIsolation\":\"pass\"},\"findings\":[]}],\"resolutions\":[]}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "medium",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "single_question_review",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "questions": {
+            "minItems": 1,
+            "maxItems": 1,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "questionId": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 64
+                },
+                "checks": {
+                  "type": "object",
+                  "properties": {
+                    "naturalKorean": {
+                      "type": "string",
+                      "enum": [
+                        "pass",
+                        "warning",
+                        "blocking"
+                      ]
+                    },
+                    "uniqueAnswer": {
+                      "type": "string",
+                      "enum": [
+                        "pass",
+                        "warning",
+                        "blocking"
+                      ]
+                    },
+                    "romanization": {
+                      "type": "string",
+                      "enum": [
+                        "pass",
+                        "warning",
+                        "blocking"
+                      ]
+                    },
+                    "meaningExplanation": {
+                      "type": "string",
+                      "enum": [
+                        "pass",
+                        "warning",
+                        "blocking"
+                      ]
+                    },
+                    "englishNarration": {
+                      "type": "string",
+                      "enum": [
+                        "pass",
+                        "warning",
+                        "blocking"
+                      ]
+                    },
+                    "bonusIsolation": {
+                      "type": "string",
+                      "enum": [
+                        "pass",
+                        "warning",
+                        "blocking"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "naturalKorean",
+                    "uniqueAnswer",
+                    "romanization",
+                    "meaningExplanation",
+                    "englishNarration",
+                    "bonusIsolation"
+                  ],
+                  "additionalProperties": false
+                },
+                "findings": {
+                  "maxItems": 16,
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 100
+                      },
+                      "category": {
+                        "type": "string",
+                        "enum": [
+                          "naturalKorean",
+                          "uniqueAnswer",
+                          "romanization",
+                          "meaningExplanation",
+                          "englishNarration",
+                          "bonusIsolation"
+                        ]
+                      },
+                      "field": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 100
+                      },
+                      "severity": {
+                        "type": "string",
+                        "enum": [
+                          "warning",
+                          "blocking"
+                        ]
+                      },
+                      "message": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 1200
+                      },
+                      "suggestion": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 1200
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "category",
+                      "field",
+                      "severity",
+                      "message",
+                      "suggestion"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "questionId",
+                "checks",
+                "findings"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "resolutions": {
+            "maxItems": 96,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "findingId": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "resolved",
+                    "unresolved"
+                  ]
+                },
+                "details": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1200
+                }
+              },
+              "required": [
+                "findingId",
+                "status",
+                "details"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "questions",
+          "resolutions"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 644,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 230,
+    "output_tokens_details": {
+      "reasoning_tokens": 165
+    },
+    "total_tokens": 874
+  },
+  "user": null,
+  "metadata": {},
+  "output_text": "{\"questions\":[{\"questionId\":\"restaurant-menu\",\"checks\":{\"naturalKorean\":\"pass\",\"uniqueAnswer\":\"pass\",\"romanization\":\"pass\",\"meaningExplanation\":\"pass\",\"englishNarration\":\"pass\",\"bonusIsolation\":\"pass\"},\"findings\":[]}],\"resolutions\":[]}",
+  "_request_id": "req_e059077fed494481b8148ed23c4146a8"
+}

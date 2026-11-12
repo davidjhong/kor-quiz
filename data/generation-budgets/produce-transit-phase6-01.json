@@ -1,0 +1,118 @@
+{
+  "version": 2,
+  "kind": "production-budget",
+  "jobId": "transit-phase6-01",
+  "capUnits": 50000000,
+  "authorization": "Explicit --allow-paid and total --max-cost-usd for this production job",
+  "allocations": {
+    "tts-e32e01214713000255b2c75f": {
+      "stage": "tts",
+      "inputHash": "e32e01214713000255b2c75f451cb26e7256ac381fffe3d7b24753381e03a72d",
+      "allocatedUnits": 48900000,
+      "chargedUnits": 24450002,
+      "state": "settled",
+      "childBudgetId": "p6-eef87ba2be3e89fecbd0-tts",
+      "requests": [
+        {
+          "key": "0e86d8df7aaf48e06d5b6408f50ecfa2830248a50045e65491253de008ab306c",
+          "state": "received",
+          "units": 2010000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\transit-phase6-01\\tts-responses\\0e86d8df7aaf48e06d5b6408f50ecfa2830248a50045e65491253de008ab306c.wav",
+          "sha256": "9ca94cedecd811660e107ecbafe510bcd1a0160b660bd93741cec093d746eafc"
+        },
+        {
+          "key": "ff2d3743114f80cdc5212a543e9fc23041434a0c88fed169e0899173837b9df3",
+          "state": "received",
+          "units": 390000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\transit-phase6-01\\tts-responses\\ff2d3743114f80cdc5212a543e9fc23041434a0c88fed169e0899173837b9df3.wav",
+          "sha256": "ab4ff013c294e3094476c5c0f06b7743a27e4a4186bd0e915d5067835e923ee6"
+        },
+        {
+          "key": "50396ecdd5d09ca6120f02fd609c34c7cb3ac9e0f523b2ee38103d43b7a0d3ec",
+          "state": "received",
+          "units": 3150000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\transit-phase6-01\\tts-responses\\50396ecdd5d09ca6120f02fd609c34c7cb3ac9e0f523b2ee38103d43b7a0d3ec.wav",
+          "sha256": "7d559d1f2fb40602ff1cda1ef7d346a0f90b97878068cfeea912a5fbe2028eac"
+        },
+        {
+          "key": "14ae967bc5c1550faf58426139d357c88652c671077aad4defb2b5530bbb9575",
+          "state": "received",
+          "units": 1890000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\transit-phase6-01\\tts-responses\\14ae967bc5c1550faf58426139d357c88652c671077aad4defb2b5530bbb9575.wav",
+          "sha256": "7f4c788e0a324bb9714c4c02a275a3784fd6e8a9250a0934dac6e8ab6e6a4338"
+        },
+        {
+          "key": "774c2ff6c361736b987bb8127d6d3c109f35ecde6cc45de36fdc23350e75cb0c",
+          "state": "received",
+          "units": 300000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\transit-phase6-01\\tts-responses\\774c2ff6c361736b987bb8127d6d3c109f35ecde6cc45de36fdc23350e75cb0c.wav",
+          "sha256": "b81c1664dc022fb69a10193a7a56a381f08cc3d6e77580a872a35bbf749158a1"
+        },
+        {
+          "key": "b9c0d31b279e02f48bab3abf1607b45efbcec77432d28b3438c927cc89ca861a",
+          "state": "received",
+          "units": 2910001,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\transit-phase6-01\\tts-responses\\b9c0d31b279e02f48bab3abf1607b45efbcec77432d28b3438c927cc89ca861a.wav",
+          "sha256": "c40a84f518fa781cfd45f882fc0312c69bafcdd7f1accdde00add9efbdb7d6ad"
+        },
+        {
+          "key": "96a6813671167b6775b859514d5108470c27f1f81fa6dde386ac7ffb504e5024",
+          "state": "received",
+          "units": 2430000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\transit-phase6-01\\tts-responses\\96a6813671167b6775b859514d5108470c27f1f81fa6dde386ac7ffb504e5024.wav",
+          "sha256": "97f0461645a2a60efb49334f73129fc9daad911cf99c86433615fcbd55e72e28"
+        },
+        {
+          "key": "49dccb942a0340a48fb85eca7b238702a0229b47f74539253537f34cf8c40338",
+          "state": "received",
+          "units": 420000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\transit-phase6-01\\tts-responses\\49dccb942a0340a48fb85eca7b238702a0229b47f74539253537f34cf8c40338.wav",
+          "sha256": "5edc5db0bd78b93e36e81464d63bdf596de8836a85bcb34ba6d7ae0bd6ca9d74"
+        },
+        {
+          "key": "cece8b7d829b2ee63df5cd3aedea9100cae4720f2b92fef189ec6d89bbfbfc60",
+          "state": "received",
+          "units": 3240001,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\transit-phase6-01\\tts-responses\\cece8b7d829b2ee63df5cd3aedea9100cae4720f2b92fef189ec6d89bbfbfc60.wav",
+          "sha256": "3ac6cd57b2ab0bae4a4aa2ce535e8dd384959a0cf979ca9a8f14bfb10ad2364a"
+        },
+        {
+          "key": "ed546c2d9cf861ed3718b7021d9123265c294e40d0fdc529510dcbd831b8335d",
+          "state": "received",
+          "units": 2400000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\transit-phase6-01\\tts-responses\\ed546c2d9cf861ed3718b7021d9123265c294e40d0fdc529510dcbd831b8335d.wav",
+          "sha256": "b8afa8e81ef3e8e0388c353dd7a6c37a35589d20729b2e3cc7d945ba151b2e8e"
+        },
+        {
+          "key": "6ad9123553fbf831eccf0c1ed7301463376edb2a5905c23d49628dfc7898e23e",
+          "state": "received",
+          "units": 360000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\transit-phase6-01\\tts-responses\\6ad9123553fbf831eccf0c1ed7301463376edb2a5905c23d49628dfc7898e23e.wav",
+          "sha256": "118c7a1e14605399acd4ffa5867786034fa96a494053d4863f54967175f7c1c4"
+        },
+        {
+          "key": "4cd9a427533a3e94d920149c242cb270e844ea08e0934a4081d6d352cf9f097a",
+          "state": "received",
+          "units": 2970000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\transit-phase6-01\\tts-responses\\4cd9a427533a3e94d920149c242cb270e844ea08e0934a4081d6d352cf9f097a.wav",
+          "sha256": "b7412cf5c7289009075484590c9d4886523b5f1c6e62926fb1f8604348b743f5"
+        },
+        {
+          "key": "70c11f31cb4a30671c753d7372a4767a3fba41975e0f948f4148e5fb79040802",
+          "state": "received",
+          "units": 1980000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\transit-phase6-01\\tts-responses\\70c11f31cb4a30671c753d7372a4767a3fba41975e0f948f4148e5fb79040802.wav",
+          "sha256": "6c0386d7c6f10623b0e68bf7c97ec789beffd467e70ac2a222bd52eee90ae931"
+        }
+      ],
+      "usage": {
+        "cacheHits": 6,
+        "recoveredOriginals": 0,
+        "localPrepared": 0,
+        "newSynthesisRequests": 13,
+        "newSynthesisCharacters": 815,
+        "estimated": true
+      }
+    }
+  }
+}

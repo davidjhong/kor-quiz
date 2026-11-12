@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "source": "dd8be1f08238f28ceb561e540f742fb39ce0083e6f4f92437f2c4bc5c56dba83",
+  "contentHash": null,
+  "brief": {
+    "status": "seed-only; objectives/context await the existing generation request",
+    "value": {
+      "scenario": "Beginner Korean at a café",
+      "audience": "English-speaking adults learning practical beginner Korean for travel",
+      "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+      "backgroundAssetId": "korean-cafe-illustrated-v1",
+      "scenarioType": "cafe"
+    }
+  },
+  "acceptance": {
+    "valid": false,
+    "kind": "automated"
+  },
+  "assets": {
+    "background": {
+      "id": "korean-cafe-illustrated-v1",
+      "sha256": "cc00225e1c491e322ddc51e9b055f03e83bbc3643e10008bc44a3f7523a804f0",
+      "selection": "human-approved",
+      "file": "backgrounds/korean-cafe-illustrated-v1.png"
+    },
+    "music": {
+      "file": "audio/music/subtle-bass-loop.wav",
+      "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+      "durationSeconds": 60.390375
+    }
+  },
+  "hashes": {
+    "content": "dd8be1f08238f28ceb561e540f742fb39ce0083e6f4f92437f2c4bc5c56dba83",
+    "speech": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "voice": "db17474cb6961bf1aba4e883daf7739a7cdcdf99a5bbc83d4505cc48a2c01635",
+    "presentation": "f5dc9016c31e265bd56204c16af843aced2af92389cd518c44e51e1a1ecb4acb",
+    "audioProcessing": "037433f06cfa6357591ebb0e3a67ea084fbc8766a3e0bbc16588e93b607985e1",
+    "alignment": "bbe38a4ca7157f14d348a966649537f6613ac5b4d8db490ef592a236c2b89d2c",
+    "grouping": "d47898d1270485c704be003be4f13d4734d50175367b345a80a10f7c734fde0e",
+    "background": "cc00225e1c491e322ddc51e9b055f03e83bbc3643e10008bc44a3f7523a804f0",
+    "music": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40"
+  },
+  "blockers": [],
+  "inventory": [],
+  "verifiedCacheHits": 0,
+  "alignmentCacheHits": 0,
+  "stages": {
+    "generation": {
+      "wouldRun": true,
+      "provider": "OpenAI",
+      "maximumRequests": 2,
+      "conservativeBoundUSD": 0.0376,
+      "derivesBriefInSameRequest": true,
+      "separateBriefPlanningCalls": 0
+    },
+    "review": {
+      "wouldRun": true,
+      "provider": "OpenAI",
+      "maximumRequests": 3,
+      "conservativeBoundUSD": 0.0564
+    },
+    "tts": {
+      "wouldRun": null,
+      "provider": "Google Cloud Chirp 3 HD",
+      "maximumRequests": 38,
+      "exactUncachedCharacters": null,
+      "estimatedNewSynthesisUSD": null,
+      "conservativeBoundUSD": 0.13122,
+      "basis": "Conditional schema text-length ceiling; exact narration and cache availability do not exist yet"
+    },
+    "alignment": {
+      "wouldRun": true,
+      "provider": null,
+      "costUSD": 0
+    },
+    "render": {
+      "wouldRun": true,
+      "provider": null,
+      "costUSD": 0
+    }
+  },
+  "conservativeTotalUSD": 0.22522,
+  "pricing": {
+    "checked": "2026-11-10",
+    "verifyAgainBy": "2026-11-17",
+    "chirpUSDPerCharacter": 0.00003,
+    "googleSource": "https://cloud.google.com/text-to-speech/pricing",
+    "openaiSource": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+  },
+  "providerCalls": 0,
+  "note": "Dry run: no generation, synthesis, alignment or render. Cache hits require checksum, identity, duration and decode checks; estimates for ungenerated content are conditional."
+}

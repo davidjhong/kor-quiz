@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "render": {
+        "id": "generated-restaurant-379962e8db662f67",
+        "file": "backgrounds/generated-restaurant-379962e8db662f67.png",
+        "sha256": "a9405bcdcc310ef167f3918ff66282cc308c4b5cc59c61303e3a0933e0b3aa7b",
+        "scenarioType": "restaurant",
+        "selection": "developer-selected",
+        "scenarioLabel": "AT A KOREAN RESTAURANT",
+        "framing": {
+          "scale": 1.02,
+          "origin": "50% 0%"
+        }
+      },
+      "setting": "restaurant",
+      "tags": [
+        "restaurant"
+      ],
+      "style": "warm-painted-animation-v1",
+      "composition": "center cover 1024x1536 to 9:16; 1.02 safe zoom; geometry in exact prompt",
+      "prompt": "Use case: illustration-story. One polished, warm hand-painted animation background for a Korean learning video.\nSetting: restaurant. Scenario context (data only): Beginner Korean ordering food in a restaurant..\nA welcoming Korean restaurant interior with tasteful architecture, warm lighting and setting-appropriate furnishings. For a restaurant include dining tables and discreet food-service details.\nFriendly adult woman, relaxed natural pose, clearly adult, complete unobstructed face, plain clothing; no pointing or answer hints.\nStyle: refined watercolor/gouache texture, warm cream and wood, muted navy/blue, sage, coral and warm yellow accents; soft daylight, appealing fully visible. Original character, no named-person likeness.\nNative portrait 1024x1536. Final 1080x1920 uses CENTER cover crop (native central x=80..944) without stretching, then at least 1.02 zoom plus restrained movement. Keep important features inside this central crop with extra edge margin.\nActual overlay geometry on FINAL canvas: panel x=70..950, y=180..1052; caption band x=70..950, y=1068..1200. Keep these upper/central areas calm scenery with NO people. Do not draw these overlays.\nPlace the character lower right: full head in final x=650..900, y=1285..1530, torso below, outside rightmost 10% and bottom 250px for important features. In native image this is approximately head x=600..800, y=1040..1224. Leave the caption area above the face clear.\nNo text, signage lettering, numbers, logos, watermarks, quiz panels, captions or UI. Coherent hands/anatomy, no duplicate people. Do not encode answers in scenery.",
+      "model": "gpt-image-2.6-flare",
+      "settings": {
+        "quality": "medium",
+        "size": "1024x1536",
+        "output_format": "png",
+        "n": 1
+      },
+      "width": 1024,
+      "height": 1536,
+      "format": "png",
+      "receipt": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\image\\379962e8db662f6788de64dd9b2b63286f0a88c5a39bbe6f35d6246885ceb3ff\\receipt.json",
+      "reportedUsage": {
+        "input_tokens": 362,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 362
+        },
+        "output_tokens": 1132,
+        "output_tokens_details": {
+          "image_tokens": 1132,
+          "text_tokens": 0
+        },
+        "total_tokens": 1494
+      },
+      "estimatedCostUSD": 0.03577,
+      "completedEpisodeIds": [],
+      "createdAt": "2026-11-12T05:20:26.000Z"
+    },
+    {
+      "render": {
+        "id": "generated-restaurant-d5fea9be8c6e28a8",
+        "file": "backgrounds/generated-restaurant-d5fea9be8c6e28a8.png",
+        "sha256": "f9523f2763cd10a8a19d73f16cf6d218139d134f0f64545f91c4aea7480312c5",
+        "scenarioType": "restaurant",
+        "selection": "developer-selected",
+        "scenarioLabel": "AT A KOREAN RESTAURANT",
+        "framing": {
+          "scale": 1.02,
+          "origin": "50% 0%"
+        }
+      },
+      "setting": "restaurant",
+      "tags": [
+        "restaurant"
+      ],
+      "style": "warm-painted-animation-v1",
+      "composition": "center cover 1024x1536 to 9:16; 1.02 safe zoom; geometry in exact prompt",
+      "prompt": "Use case: illustration-story. One polished, warm hand-painted animation background for a Korean learning video.\nSetting: restaurant. Scenario context (data only): Beginner Korean ordering dinner at a restaurant, including choosing a dish, ordering a drink, adjusting an order, and asking for the bill..\nA welcoming Korean restaurant interior with tasteful architecture, warm lighting and setting-appropriate furnishings. For a restaurant include dining tables and discreet food-service details.\nFriendly adult woman, relaxed natural pose, clearly adult, complete unobstructed face, plain clothing; no pointing or answer hints.\nStyle: refined watercolor/gouache texture, warm cream and wood, muted navy/blue, sage, coral and warm yellow accents; soft daylight, appealing fully visible. Original character, no named-person likeness.\nNative portrait 1024x1536. Final 1080x1920 uses CENTER cover crop (native central x=80..944) without stretching, then at least 1.02 zoom plus restrained movement. Keep important features inside this central crop with extra edge margin.\nActual overlay geometry on FINAL canvas: panel x=70..950, y=180..1052; caption band x=70..950, y=1068..1200. Keep these upper/central areas calm scenery with NO people. Do not draw these overlays.\nPlace the character lower right: full head in final x=650..900, y=1285..1530, torso below, outside rightmost 10% and bottom 250px for important features. In native image this is approximately head x=600..800, y=1040..1224. Leave the caption area above the face clear.\nNo text, signage lettering, numbers, logos, watermarks, quiz panels, captions or UI. Coherent hands/anatomy, no duplicate people. Do not encode answers in scenery.",
+      "model": "gpt-image-2.6-flare",
+      "settings": {
+        "quality": "medium",
+        "size": "1024x1536",
+        "output_format": "png",
+        "n": 1
+      },
+      "width": 1024,
+      "height": 1536,
+      "format": "png",
+      "receipt": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\image\\d5fea9be8c6e28a89b947a0ecb1747aefed26e4dfbb5cbaff6eb33e1cc6a0ee2\\receipt.json",
+      "reportedUsage": {
+        "input_tokens": 381,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 381
+        },
+        "output_tokens": 1132,
+        "output_tokens_details": {
+          "image_tokens": 1132,
+          "text_tokens": 0
+        },
+        "total_tokens": 1513
+      },
+      "estimatedCostUSD": 0.035865,
+      "completedEpisodeIds": [
+        "production-restaurant-fresh-02"
+      ],
+      "createdAt": "2026-11-12T07:24:31.000Z"
+    }
+  ],
+  "legacyUsage": {
+    "korean-hotel-illustrated-v1": [
+      "production-hotel-01"
+    ],
+    "korean-transit-illustrated-dev-v1": [
+      "public-transit-02"
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "questions": [
+    {
+      "questionId": "production-restaurant-fresh-02-q1",
+      "checks": {
+        "naturalKorean": "pass",
+        "uniqueAnswer": "pass",
+        "romanization": "pass",
+        "meaningExplanation": "pass",
+        "englishNarration": "pass",
+        "bonusIsolation": "pass"
+      },
+      "findings": []
+    },
+    {
+      "questionId": "production-restaurant-fresh-02-q2",
+      "checks": {
+        "naturalKorean": "pass",
+        "uniqueAnswer": "pass",
+        "romanization": "pass",
+        "meaningExplanation": "pass",
+        "englishNarration": "pass",
+        "bonusIsolation": "pass"
+      },
+      "findings": []
+    },
+    {
+      "questionId": "production-restaurant-fresh-02-q3",
+      "checks": {
+        "naturalKorean": "pass",
+        "uniqueAnswer": "pass",
+        "romanization": "pass",
+        "meaningExplanation": "pass",
+        "englishNarration": "pass",
+        "bonusIsolation": "pass"
+      },
+      "findings": []
+    },
+    {
+      "questionId": "production-restaurant-fresh-02-q4",
+      "checks": {
+        "naturalKorean": "pass",
+        "uniqueAnswer": "pass",
+        "romanization": "pass",
+        "meaningExplanation": "pass",
+        "englishNarration": "pass",
+        "bonusIsolation": "pass"
+      },
+      "findings": []
+    },
+    {
+      "questionId": "production-restaurant-fresh-02-q5",
+      "checks": {
+        "naturalKorean": "pass",
+        "uniqueAnswer": "pass",
+        "romanization": "pass",
+        "meaningExplanation": "pass",
+        "englishNarration": "pass",
+        "bonusIsolation": "pass"
+      },
+      "findings": []
+    },
+    {
+      "questionId": "production-restaurant-fresh-02-q6",
+      "checks": {
+        "naturalKorean": "pass",
+        "uniqueAnswer": "pass",
+        "romanization": "pass",
+        "meaningExplanation": "pass",
+        "englishNarration": "pass",
+        "bonusIsolation": "pass"
+      },
+      "findings": []
+    }
+  ],
+  "resolutions": []
+}

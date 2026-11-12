@@ -6,13 +6,16 @@ import {mkdir, open, readFile, unlink, writeFile} from 'node:fs/promises';
 import {join, relative, resolve, sep} from 'node:path';
 import {briefSchema, tokenUsageSchema, type Draft} from '../src/draftSchema.ts';
 import {assembleGeneratedDraft, episodeIdSchema, generationOutputSchema, generationPrompt,
-  PROMPT_VERSION, SCHEMA_VERSION} from './generationContent.ts';
+  PROMPT_VERSION, SCHEMA_VERSION,scenarioGenerationOutputSchema,SCENARIO_PROMPT_VERSION,SCENARIO_SCHEMA_VERSION,defaultVoiceProfile} from './generationContent.ts';
 import {atomicJson, contentHash, inspectDraft, writeReview} from './draftWorkflow.ts';
 import {canonical, readJsonFile, requireWithin, sha256} from './narrationFiles.ts';
 import {PROJECT_ROOT} from './remotionCommand.ts';
 import {generationCostBound, LEGACY_DRAFT_MODEL, MAX_REQUEST_BYTES, modelChargeUnits, modelProfile,
   REQUEST_TOKEN_OVERHEAD, QUALITY_DRAFT_MODEL} from './generationModels.ts';
 import {checkGenerationExperiment, loadGenerationExperiment} from './generationExperiment.ts';
+import {assertProductionReservation,type ProductionReservation} from './productionBudget.ts';
+import {CONCISE_INSTRUCTION,CONCISE_PROMPT_VERSION,CONCISE_SCHEMA_VERSION} from './generationContent.ts';
+import {checkCancellation} from './cancellation.ts';
 export {generationCostBound} from './generationModels.ts';
 
 export const DEFAULT_DRAFT_MODEL = LEGACY_DRAFT_MODEL;
@@ -27,13 +30,12 @@ const ledgerSchema = z.object({version: z.literal(1), budgetId: z.string(), capU
   createdAt: z.string(), pricing: z.enum(['gpt-5-nano-2026-11-04', 'gpt-6-luna-2026-11-04']),
   contractHash: z.string().optional(), scenarios: z.record(z.string(), scenarioSchema)});
 type Ledger = z.infer<typeof ledgerSchema>;
-type Attempt = z.infer<typeof attemptSchema>;
 type Snapshot = Pick<Response, 'id' | 'model' | 'status' | 'output' | 'usage' | 'incomplete_details'> & {_request_id?: string | null};
 export type GenerationClient = {create: (body: ResponseCreateParamsNonStreaming) => Promise<Snapshot>};
 export type GenerateOptions = {brief: unknown; episodeId: string; output: string; model?: string; maxOutputTokens?: number;
   allowPaid?: boolean; maxCostUSD?: number; budgetId?: string; dryRun?: boolean; regenerate?: boolean; root?: string;
-  experiment?: string; client?: GenerationClient; prompt?: {system: string; user: string; exampleCount: number; historyCount: number};
-  pause?: (ms: number) => Promise<void>; now?: Date; afterResponseSaved?: () => Promise<void>};
+  experiment?: string; contentPolicy?:'concise-explanations-v1';client?: GenerationClient; prompt?: {system: string; user: string; exampleCount: number; historyCount: number};
+  pause?: (ms: number) => Promise<void>; now?: Date; afterResponseSaved?: () => Promise<void>;productionReservation?:ProductionReservation;deriveBrief?:boolean};
 const maybeJson = async (path: string) => readJsonFile(path).catch((e: NodeJS.ErrnoException) => {if (e.code === 'ENOENT') return null; throw e;});
 const dollars = (units: number) => units / 1e9;
 export const normalizedUsage = (raw: Snapshot['usage']) => {
@@ -92,14 +94,20 @@ export const recordGenerationEdits = async (directory: string) => {
 
 export const generateDraft = async (options: GenerateOptions) => {
   const root = resolve(options.root ?? PROJECT_ROOT), directory = resolve(options.output), brief = briefSchema.parse(options.brief);
-  if (!brief.scenarioType) throw new Error('Generated briefs require scenarioType: cafe, convenience-store or public-transit, so background matching can be checked.');
+  if (!brief.scenarioType) throw new Error('Generated briefs require a known scenarioType so background matching can be checked.');
   episodeIdSchema.parse(options.episodeId);
   requireWithin(root, directory);
   if (relative(root, directory).split(sep)[0] === 'public') throw new Error('Private generated drafts must stay outside public assets');
   const model = options.model ?? DEFAULT_DRAFT_MODEL, maxOutput = options.maxOutputTokens ?? 12000;
-  const inputs = {brief, episodeId: options.episodeId, model, maxOutput};
+  if(options.contentPolicy&&options.experiment)throw new Error('A concise content policy cannot modify a frozen experiment');
+  const promptVersion=options.contentPolicy?CONCISE_PROMPT_VERSION+(options.deriveBrief?'-scenario':''):options.deriveBrief?SCENARIO_PROMPT_VERSION:PROMPT_VERSION;
+  const schemaVersion=options.contentPolicy?CONCISE_SCHEMA_VERSION+(options.deriveBrief?'-scenario':''):options.deriveBrief?SCENARIO_SCHEMA_VERSION:SCHEMA_VERSION;
+  const baseSchema=options.deriveBrief?scenarioGenerationOutputSchema:generationOutputSchema;
+  const outputSchema=options.contentPolicy?baseSchema.describe(CONCISE_INSTRUCTION):baseSchema;
+  if(options.deriveBrief&&options.experiment)throw new Error('Scenario planning uses its own versioned contract; do not change a frozen three-scenario experiment');
+  const inputs = {brief, episodeId: options.episodeId, model, maxOutput,...(options.deriveBrief?{deriveBrief:true}:{}),...(options.contentPolicy?{contentPolicy:options.contentPolicy}:{})};
   const inputsHash = sha256(canonical(inputs));
-  let intentHash = sha256(canonical({...inputs, PROMPT_VERSION, SCHEMA_VERSION}));
+  let intentHash = sha256(canonical({...inputs, PROMPT_VERSION:promptVersion, SCHEMA_VERSION:schemaVersion}));
   const existing = await maybeJson(join(directory, 'generation.json')) as {intentHash: string; inputsHash?: string; initialContentHash?: string; experimentHash?: string} | null;
   if (existing) {
     if (options.experiment && existing.experimentHash !== (await loadGenerationExperiment(resolve(root, options.experiment))).hash) {
@@ -122,16 +130,17 @@ export const generateDraft = async (options: GenerateOptions) => {
   const experiment = options.experiment ? await checkGenerationExperiment(options.experiment, {
     root, brief, episodeId: options.episodeId, output: directory, model, maxOutput,
     budgetId: options.budgetId, maxCostUSD: options.maxCostUSD}) : undefined;
-  if (pricing.model === QUALITY_DRAFT_MODEL && !experiment && !options.dryRun) throw new Error('The upgrade model requires a frozen experiment. Run draft freeze, then pass --experiment; a new budget ID is not approval.');
-  const prompt = experiment?.prompt ?? options.prompt ?? await generationPrompt(brief, root);
+  if(options.productionReservation&&!options.dryRun)await assertProductionReservation(options.productionReservation,root,options.budgetId!,reservedUnits*2);
+  if (pricing.model === QUALITY_DRAFT_MODEL && !experiment && !options.dryRun&&!options.productionReservation) throw new Error('The upgrade model requires a frozen experiment or a reserved production job. A new budget ID is not approval.');
+  const prompt = experiment?.prompt ?? options.prompt ?? await generationPrompt(brief, root,options.deriveBrief,options.contentPolicy);
   const baseRequest: ResponseCreateParamsNonStreaming = {model, store: false, service_tier: 'default', reasoning: {effort: pricing.reasoning},
     max_output_tokens: maxOutput, input: [{role: 'system', content: prompt.system}, {role: 'user', content: prompt.user}],
-    text: {format: zodTextFormat(generationOutputSchema, 'korean_quiz_education')}};
+    text: {format: zodTextFormat(outputSchema, options.deriveBrief?'korean_scenario_quiz':'korean_quiz_education')}};
   const estimatedInputTokens = Buffer.byteLength(JSON.stringify(baseRequest), 'utf8') + REQUEST_TOKEN_OVERHEAD;
   const dryReport = {model, scenario: brief.scenario, audience: brief.audience, level: brief.level,
     backgroundAssetId: brief.backgroundAssetId, examples: prompt.exampleCount, priorQuestions: prompt.historyCount,
     estimatedInputTokens, reservedInputTokenCeiling: pricing.reservedInputTokens, maxOutputTokens: maxOutput,
-    reasoningEffort: pricing.reasoning, promptVersion: PROMPT_VERSION, schemaVersion: SCHEMA_VERSION,
+    reasoningEffort: pricing.reasoning, promptVersion, schemaVersion,
     experimentHash: experiment?.hash, reasoningIncludedInOutputLimit: true, maximumAttempts: 2, sdkRetries: 0, pricing,
     estimatedMaximumPerRequestUSD: dollars(reservedUnits), estimatedMaximumScenarioUSD: dollars(reservedUnits * 2),
     authorizationRequired: true};
@@ -192,13 +201,13 @@ export const generateDraft = async (options: GenerateOptions) => {
         attempt = {number: scenario.attempts.length + 1, state: 'pending', reservedUnits, chargedUnits: reservedUnits,
           startedAt: new Date().toISOString(), usage: null, requestId: null, returnedModel: null, errors: []};
         scenario.attempts.push(attempt);
-        await atomicJson(join(directory, 'generation', `attempt-${attempt.number}.request.json`), {promptVersion: PROMPT_VERSION,
-          schemaVersion: SCHEMA_VERSION, experimentHash: experiment?.hash,
+        await atomicJson(join(directory, 'generation', `attempt-${attempt.number}.request.json`), {promptVersion,
+          schemaVersion, experimentHash: experiment?.hash,
           inputTokenEstimate: Buffer.byteLength(JSON.stringify(body), 'utf8') + REQUEST_TOKEN_OVERHEAD,
           reservedInputTokens: pricing.reservedInputTokens, request: body});
         await atomicJson(ledgerFile, ledger); // Charge/reserve BEFORE the request; crashes cannot reset spending.
         try {
-          calls++;
+          checkCancellation();calls++;
           raw = redactSnapshot(await client.create(body));
         } catch (error) {
           const failure = classifyGenerationError(error);
@@ -229,14 +238,15 @@ export const generateDraft = async (options: GenerateOptions) => {
       else if (raw.status !== 'completed') {attempt!.state = 'incomplete'; feedback = [`Response is ${raw.status ?? 'unknown'}; do not use truncated content.`];}
       else {
         try {
-          const education = generationOutputSchema.parse(JSON.parse(previousText));
+          const education = outputSchema.parse(JSON.parse(previousText));
           const provenance: Draft['provenance'] = {method: 'openai-responses', provider: 'openai', model: raw.model,
-            requestedModel: model, returnedModel: raw.model, promptVersion: PROMPT_VERSION, schemaVersion: SCHEMA_VERSION,
+            requestedModel: model, returnedModel: raw.model, promptVersion, schemaVersion,
             generatedAt: attempt!.startedAt, sourceHash: sha256(canonical(education)), requestId: attempt!.requestId,
             responseId: raw.id, reportedUsage: attempt!.usage, estimatedCostUSD: dollars(scenario.attempts.reduce((n, a) => n + a.chargedUnits, 0)),
             attempts: scenario.attempts.length, pricingSource: pricing.source, pricingDate: pricing.checked, generationId: budgetId};
-          const candidate = assembleGeneratedDraft(education, brief, options.episodeId, provenance);
+          const candidate = assembleGeneratedDraft(education, brief, options.episodeId, provenance,defaultVoiceProfile,options.deriveBrief,options.contentPolicy);
           await atomicJson(join(directory, 'generation', `attempt-${attempt!.number}.candidate.json`), candidate);
+          if(options.deriveBrief)await atomicJson(join(directory,'generation',`attempt-${attempt!.number}.brief.json`),candidate.draft.brief);
           const report = await inspectDraft(candidate.draft, candidate.key, root);
           feedback = report.errors;
           const prior = await maybeJson(join(directory, 'generation.json')) as {initialContentHash?: string} | null;
@@ -248,8 +258,9 @@ export const generateDraft = async (options: GenerateOptions) => {
           }
           await atomicJson(join(directory, 'answer-key.json'), candidate.key);
           await atomicJson(join(directory, 'draft.json'), candidate.draft);
+          if(options.deriveBrief)await atomicJson(join(directory,'brief.json'),candidate.draft.brief);
           await atomicJson(join(directory, 'generation.json'), {version: 1, intentHash, inputsHash, budgetId, episodeId: options.episodeId,
-            experimentHash: experiment?.hash, promptVersion: PROMPT_VERSION, schemaVersion: SCHEMA_VERSION,
+            experimentHash: experiment?.hash, promptVersion, schemaVersion,...(options.deriveBrief?{deriveBrief:true}:{}),
             initialContentHash: contentHash(candidate.draft, candidate.key), status: feedback.length ? 'invalid' : 'valid',
             requestedModel: model, returnedModel: raw.model, attempts: scenario.attempts.length});
           await writeReview(directory, root);

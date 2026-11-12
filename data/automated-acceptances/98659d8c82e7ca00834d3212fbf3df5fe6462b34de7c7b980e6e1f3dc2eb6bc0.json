@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "kind": "automated-content-acceptance",
+  "status": "accepted",
+  "humanReviewed": false,
+  "contentHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+  "sourceContentHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+  "episodeId": "production-restaurant-fresh-02",
+  "acceptedAt": "2026-11-12T07:25:45.731Z",
+  "reviewerModel": "gpt-6-luna",
+  "reviewPromptVersion": "phase5b-automated-review-v1",
+  "verificationPromptVersion": null,
+  "correctionPromptVersion": null,
+  "reviewRequestIds": [
+    "req_e4d3eac4485d4ecca5fe048a78a0d0c9"
+  ],
+  "independence": "Separate requests to the configured model; not independent proof of Korean correctness.",
+  "finalFindings": {
+    "questions": [
+      {
+        "questionId": "production-restaurant-fresh-02-q1",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-restaurant-fresh-02-q2",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-restaurant-fresh-02-q3",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-restaurant-fresh-02-q4",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-restaurant-fresh-02-q5",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-restaurant-fresh-02-q6",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      }
+    ],
+    "resolutions": []
+  },
+  "verifiedFindingIds": [],
+  "revisions": [],
+  "asset": {
+    "id": "generated-restaurant-d5fea9be8c6e28a8",
+    "sha256": "f9523f2763cd10a8a19d73f16cf6d218139d134f0f64545f91c4aea7480312c5",
+    "selection": "developer-selected"
+  }
+}

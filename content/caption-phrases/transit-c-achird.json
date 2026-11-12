@@ -1,0 +1,8 @@
+{
+  "public-transit-02-hook": ["Can you say it", "in Korean?"],
+  "public-transit-02-q3-question": ["You need a ticket", "before traveling.", "What would you ask", "the station worker?"],
+  "public-transit-02-q3-answer": ["표는 어디에서 사요?"],
+  "public-transit-02-q3-explanation": ["This asks where", "you can buy a ticket.", "The verb here", "means “buy,”", "so it’s useful", "when asking where", "to purchase something."],
+  "public-transit-02-q6-comment": ["What do you think?", "Comment your answer!"],
+  "public-transit-02-q6-follow": ["Follow for more Korean!"]
+}

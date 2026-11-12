@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "jobId": "scenario-cafe-check",
+  "config": {
+    "source": {
+      "kind": "scenario",
+      "text": "Beginner Korean at a café",
+      "defaultsVersion": "phase6-scenario-defaults-v1",
+      "brief": {
+        "scenario": "Beginner Korean at a café",
+        "audience": "English-speaking adults learning practical beginner Korean for travel",
+        "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+        "backgroundAssetId": null,
+        "scenarioType": "cafe"
+      }
+    },
+    "output": "C:\\Users\\david\\Documents\\kor-vids\\out\\scenario-cafe-check.mp4",
+    "reviewMode": "automated",
+    "voiceFile": "content/voice-profiles/selected-default.json",
+    "presentationFile": "content/production/default.json",
+    "noMusic": false,
+    "model": "gpt-6-luna",
+    "maxOutputTokens": 12000
+  },
+  "state": "planned",
+  "stages": {
+    "generation": {
+      "status": "planned",
+      "inputHash": "dd8be1f08238f28ceb561e540f742fb39ce0083e6f4f92437f2c4bc5c56dba83",
+      "outputs": [],
+      "details": {}
+    },
+    "import": {
+      "status": "planned",
+      "inputHash": "dd8be1f08238f28ceb561e540f742fb39ce0083e6f4f92437f2c4bc5c56dba83",
+      "outputs": [],
+      "details": {}
+    },
+    "validation": {
+      "status": "planned",
+      "inputHash": "dd8be1f08238f28ceb561e540f742fb39ce0083e6f4f92437f2c4bc5c56dba83",
+      "outputs": [],
+      "details": {}
+    },
+    "review": {
+      "status": "planned",
+      "inputHash": "dd8be1f08238f28ceb561e540f742fb39ce0083e6f4f92437f2c4bc5c56dba83",
+      "outputs": [],
+      "details": {
+        "wouldRun": true
+      }
+    },
+    "audio": {
+      "status": "planned",
+      "inputHash": "dd8be1f08238f28ceb561e540f742fb39ce0083e6f4f92437f2c4bc5c56dba83",
+      "outputs": [],
+      "details": {}
+    },
+    "alignment": {
+      "status": "planned",
+      "inputHash": "dd8be1f08238f28ceb561e540f742fb39ce0083e6f4f92437f2c4bc5c56dba83",
+      "outputs": [],
+      "details": {}
+    },
+    "captions": {
+      "status": "planned",
+      "inputHash": "dd8be1f08238f28ceb561e540f742fb39ce0083e6f4f92437f2c4bc5c56dba83",
+      "outputs": [],
+      "details": {}
+    },
+    "render": {
+      "status": "planned",
+      "inputHash": "dd8be1f08238f28ceb561e540f742fb39ce0083e6f4f92437f2c4bc5c56dba83",
+      "outputs": [],
+      "details": {}
+    },
+    "verification": {
+      "status": "planned",
+      "inputHash": "dd8be1f08238f28ceb561e540f742fb39ce0083e6f4f92437f2c4bc5c56dba83",
+      "outputs": [],
+      "details": {}
+    }
+  },
+  "history": [],
+  "revisions": [],
+  "paidOptIn": false,
+  "createdAt": "2026-11-11T08:46:37.990Z",
+  "updatedAt": "2026-11-11T08:46:38.029Z",
+  "sourceIdentity": "dd8be1f08238f28ceb561e540f742fb39ce0083e6f4f92437f2c4bc5c56dba83",
+  "configuration": {
+    "voice": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Achird",
+        "ko-KR": "ko-KR-Chirp3-HD-Achird"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "presentation": {
+      "compactSpacing": true,
+      "synchronizedCaptions": true,
+      "backgroundAudio": true,
+      "musicGain": 1.25,
+      "captionStyle": "phrases",
+      "bookendStyle": "display"
+    },
+    "alignment": {
+      "version": "phrase-alignment-v1",
+      "engine": "stable-ts",
+      "engineVersion": "2.19.1",
+      "whisperVersion": "20250625",
+      "torchVersion": "2.8.0+cpu",
+      "model": "base",
+      "modelSha256": "ed3a0b6b1c0edf879ad9b11b1af5a0e6ab5db9205f891f668f8b0e6c6326e34e",
+      "device": "cpu",
+      "sampleRate": 16000,
+      "threads": 4,
+      "fp16": false,
+      "regroup": false,
+      "suppressSilence": true,
+      "vad": false,
+      "fastMode": false
+    },
+    "grouping": {
+      "version": "automatic-phrases-v1",
+      "englishWords": 4,
+      "maximumWords": 5,
+      "maximumCharacters": 36,
+      "koreanWholeUtterance": true
+    },
+    "audioProcessing": "loudnorm-I-16-TP-1.5-LRA-11-mono-24000-v1"
+  },
+  "narration": null,
+  "assets": {
+    "background": {
+      "id": "korean-cafe-illustrated-v1",
+      "sha256": "cc00225e1c491e322ddc51e9b055f03e83bbc3643e10008bc44a3f7523a804f0",
+      "selection": "human-approved",
+      "file": "backgrounds/korean-cafe-illustrated-v1.png"
+    },
+    "music": {
+      "file": "audio/music/subtle-bass-loop.wav",
+      "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+      "durationSeconds": 60.390375
+    }
+  }
+}

@@ -1,0 +1,1055 @@
+{
+  "quiz": {
+    "videoId": "production-hotel-01",
+    "episodeTitle": "Can you say it in Korean?",
+    "openingSubtitle": "Easy to hard",
+    "endingMode": "comment-challenge",
+    "minimumDurationSeconds": 65,
+    "showRomanization": true,
+    "backgroundAssetId": "korean-hotel-illustrated-v1",
+    "questions": [
+      {
+        "id": "production-hotel-01-q1",
+        "scenario": "At hotel check-in",
+        "difficulty": "easy",
+        "context": "You have a reservation and are speaking to the front desk on arrival.",
+        "prompt": "Tell the front desk you want to begin your stay. What would you say?",
+        "spokenPrompt": "What could you say to let the front desk know you’re ready to start your stay?",
+        "choices": [
+          {
+            "hangul": "체크인하고 싶어요.",
+            "romanization": "chekeuinhago sipeoyo."
+          },
+          {
+            "hangul": "체크아웃하고 싶어요.",
+            "romanization": "chekeuaut hago sipeoyo."
+          },
+          {
+            "hangul": "엘리베이터가 어디예요?",
+            "romanization": "ellibeiteoga eodiyeyo?"
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "This politely expresses that you want to check in. 싶어요 means “want to” or “would like to.”",
+        "reveal": {
+          "translation": "I'd like to check in.",
+          "teachingPoint": "체크인하고 싶어요 = I'd like to check in. 싶어요 = would like to"
+        }
+      },
+      {
+        "id": "production-hotel-01-q2",
+        "scenario": "In your room",
+        "difficulty": "easy",
+        "context": "You are in your room and need one more towel.",
+        "prompt": "Ask hotel staff for one additional towel.",
+        "spokenPrompt": "How would you politely ask for an extra towel?",
+        "choices": [
+          {
+            "hangul": "수건 하나 더 주세요.",
+            "romanization": "sugeon hana deo juseyo."
+          },
+          {
+            "hangul": "물 하나 더 주세요.",
+            "romanization": "mul hana deo juseyo."
+          },
+          {
+            "hangul": "담요 하나 더 주세요.",
+            "romanization": "damyo hana deo juseyo."
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "This asks politely for an additional towel. 더 means “more,” and 주세요 makes it a polite request.",
+        "reveal": {
+          "translation": "One more towel, please.",
+          "teachingPoint": "수건 = towel; 하나 더 = one more; 주세요 = please give me"
+        }
+      },
+      {
+        "id": "production-hotel-01-q3",
+        "scenario": "Connecting to Wi-Fi",
+        "difficulty": "medium",
+        "context": "You want to connect your phone to the hotel Wi-Fi but need its password.",
+        "prompt": "Ask for the Wi-Fi password.",
+        "spokenPrompt": "What would you ask when you need the password to get online?",
+        "choices": [
+          {
+            "hangul": "와이파이 비밀번호가 뭐예요?",
+            "romanization": "waipai bimilbeonhoga mwoyeyo?"
+          },
+          {
+            "hangul": "조식은 몇 시예요?",
+            "romanization": "josigeun myeot siyeyo?"
+          },
+          {
+            "hangul": "엘리베이터는 어디예요?",
+            "romanization": "ellibeiteoneun eodiyeyo?"
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "This asks for the Wi-Fi password. 뭐예요 means “what is it?” and 비밀번호 means “password.”",
+        "reveal": {
+          "translation": "What is the Wi-Fi password?",
+          "teachingPoint": "와이파이 비밀번호 = Wi-Fi password; 뭐예요? = What is it?"
+        }
+      },
+      {
+        "id": "production-hotel-01-q4",
+        "scenario": "Finding the elevator",
+        "difficulty": "medium",
+        "context": "You are leaving your room and need to find the elevator.",
+        "prompt": "Ask where the elevator is.",
+        "spokenPrompt": "How would you ask someone to point you to the elevator?",
+        "choices": [
+          {
+            "hangul": "엘리베이터가 어디예요?",
+            "romanization": "ellibeiteoga eodiyeyo?"
+          },
+          {
+            "hangul": "식당이 어디예요?",
+            "romanization": "sigdangi eodiyeyo?"
+          },
+          {
+            "hangul": "방이 몇 층이에요?",
+            "romanization": "bangi myeot cheungieyo?"
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "This asks for the elevator's location. 어디예요 means “where is it?”",
+        "reveal": {
+          "translation": "Where is the elevator?",
+          "teachingPoint": "엘리베이터 = elevator; 어디예요? = Where is it?"
+        }
+      },
+      {
+        "id": "production-hotel-01-q5",
+        "scenario": "A key card problem",
+        "difficulty": "hard",
+        "context": "Your room door will not unlock with your key card.",
+        "prompt": "Tell the front desk your key card won't open the door and ask for help.",
+        "spokenPrompt": "What could you say to report the card problem and ask staff to check it?",
+        "choices": [
+          {
+            "hangul": "카드키가 안 돼요. 확인해 주세요.",
+            "romanization": "kadeukiga an dwaeyo. hwaginhae juseyo."
+          },
+          {
+            "hangul": "카드키를 잃어버렸어요.",
+            "romanization": "kadeukireul ireobeoryeosseoyo."
+          },
+          {
+            "hangul": "수건을 더 주세요.",
+            "romanization": "sugeoneul deo juseyo."
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "This reports that the key card is not working and politely asks staff to check it. 확인해 주세요 means “please check.”",
+        "reveal": {
+          "translation": "The key card doesn't work. Please check it.",
+          "teachingPoint": "안 돼요 = doesn't work; 확인해 주세요 = please check"
+        }
+      },
+      {
+        "id": "production-hotel-01-q6",
+        "scenario": "After checkout",
+        "difficulty": "hard",
+        "context": "You have checked out and want to ask the front desk about leaving your luggage.",
+        "prompt": "Ask whether you may leave your luggage at the hotel after checking out.",
+        "spokenPrompt": "How would you ask the front desk if you may leave your bags there after checkout?",
+        "choices": [
+          {
+            "hangul": "체크아웃 후에 짐을 맡겨도 돼요?",
+            "romanization": "chekeuaut hue jimeul matgyeodo dwaeyo?"
+          },
+          {
+            "hangul": "체크아웃 시간을 바꿔도 돼요?",
+            "romanization": "chekeuaut siganeul bakkwodo dwaeyo?"
+          },
+          {
+            "hangul": "짐을 방으로 옮겨 주세요.",
+            "romanization": "jimeul bang-euro omgyeo juseyo."
+          }
+        ]
+      }
+    ]
+  },
+  "narration": {
+    "version": 1,
+    "quizFingerprint": "724438ec2e81db768cd5e214f33aba60b5484b0d77da92026c631bb848904501",
+    "profile": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Achird",
+        "ko-KR": "ko-KR-Chirp3-HD-Achird"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "processing": "loudnorm-I-16-TP-1.5-LRA-11-mono-24000-v1",
+    "clips": [
+      {
+        "id": "production-hotel-01-hook",
+        "contentId": "production-hotel-01",
+        "role": "hook",
+        "language": "en-US",
+        "text": "Can you say it in Korean?",
+        "cacheKey": "b03314a1a056b827307ce797080d4b15544d9502a7f510a176d151da28c98eb8",
+        "file": "audio/cache/b03314a1a056b827307ce797080d4b15544d9502a7f510a176d151da28c98eb8.wav",
+        "sha256": "f8ce1b50333e31bd9c5ff42ef5dd307a7530cb93ecef3d47ed748bfcf601c5e0",
+        "durationSeconds": 2.04,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "99b8db0cf0e76714f5c30068afd66ee5c37de4f641680491d53fafb1275aff56",
+        "peakDbFS": -1.5002633770788842
+      },
+      {
+        "id": "production-hotel-01-q1-question",
+        "contentId": "production-hotel-01-q1",
+        "role": "question",
+        "language": "en-US",
+        "text": "What could you say to let the front desk know you’re ready to start your stay?",
+        "cacheKey": "3582c25883f850f6f24d2f266c9f8594d5cb3985ccb3aa21af550f26ec1d163b",
+        "file": "audio/cache/3582c25883f850f6f24d2f266c9f8594d5cb3985ccb3aa21af550f26ec1d163b.wav",
+        "sha256": "5c0c4a30290bb661576454b566bae5b8dc5ab6d71e741399a7a87acf69a581de",
+        "durationSeconds": 3.68,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "3580c7919f27b11026926f8ba92961895a60a8d6894ab4b4470fce93857d6fc8",
+        "peakDbFS": -1.4939646896106493
+      },
+      {
+        "id": "production-hotel-01-q1-answer",
+        "contentId": "production-hotel-01-q1",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "체크인하고 싶어요.",
+        "cacheKey": "9717129477089ecbb94f72d8450cf45a511284321161883e1c7afb5b60b4abec",
+        "file": "audio/cache/9717129477089ecbb94f72d8450cf45a511284321161883e1c7afb5b60b4abec.wav",
+        "sha256": "c4848e578b263ee094b636339c85e2c864803687b40f321efd6f9226c5de05ca",
+        "durationSeconds": 1.68,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "ab2f5a74a907d26cb784f223dc9513519f66aeb0f39bf09ea850164823543adb",
+        "peakDbFS": -1.5245560577570298
+      },
+      {
+        "id": "production-hotel-01-q1-explanation",
+        "contentId": "production-hotel-01-q1",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "I'd like to check in. This is a polite way to tell someone what you want to do.",
+        "cacheKey": "1da491a360acb43d0d9e5704d1ec3324d821877544b848b917bdef790b8dd3df",
+        "file": "audio/cache/1da491a360acb43d0d9e5704d1ec3324d821877544b848b917bdef790b8dd3df.wav",
+        "sha256": "4924567ef8b46416292e1b3b6fb4d8d14328d0170db28d9a9ff4219cc09c9492",
+        "durationSeconds": 3.8,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "3a4c4cd7f5ea740825d0d05c1be0fe363224cf996f42eb2d29588f0aafab0b29",
+        "peakDbFS": -1.4791807284487084
+      },
+      {
+        "id": "production-hotel-01-q2-question",
+        "contentId": "production-hotel-01-q2",
+        "role": "question",
+        "language": "en-US",
+        "text": "How would you politely ask for an extra towel?",
+        "cacheKey": "d96a77d9602818d52165625b80b698b713c7e1e1be05f540b07f1f3b6caa583d",
+        "file": "audio/cache/d96a77d9602818d52165625b80b698b713c7e1e1be05f540b07f1f3b6caa583d.wav",
+        "sha256": "e0e3a3e6ec40718f366eb9a43ee13f663f4f1c77999eabd8dc7ddb7bd902a7a6",
+        "durationSeconds": 2.6,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "89612831369566ffe5deed59e0bcf1e50d6ee9d8434e503167cf0a99ef916c47",
+        "peakDbFS": -1.4990032741261357
+      },
+      {
+        "id": "production-hotel-01-q2-answer",
+        "contentId": "production-hotel-01-q2",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "수건 하나 더 주세요.",
+        "cacheKey": "d92ffd0adb938e1ef822a7b48e523033b9e788ee0ee047438e2275b6d4d93ea2",
+        "file": "audio/cache/d92ffd0adb938e1ef822a7b48e523033b9e788ee0ee047438e2275b6d4d93ea2.wav",
+        "sha256": "c0c7366ee78b07749f7341dc7ec40e8b49392a5d76ec0fe28e1a2b43d127cdd5",
+        "durationSeconds": 1.96,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "a27d5a61823087d20ac7dd6357630e2796e419bc247c963c8467699a8e4525fe",
+        "peakDbFS": -1.4974284024669582
+      },
+      {
+        "id": "production-hotel-01-q2-explanation",
+        "contentId": "production-hotel-01-q2",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "One more towel, please. The phrase for “one more” specifies that you need an additional towel.",
+        "cacheKey": "c7aeead22785bc6aaf82c418c88a6092edaf0003d4ceddc5ec868843ab543542",
+        "file": "audio/cache/c7aeead22785bc6aaf82c418c88a6092edaf0003d4ceddc5ec868843ab543542.wav",
+        "sha256": "3d2fb9fb219ca67922d96885c80fe37bac8722d1849ae20f5bdef3f954df35a5",
+        "durationSeconds": 6.24,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "94429aead1bb1a6a18b7e423157ee75f0e7aea163a6c184b29f959f4e7ab0579",
+        "peakDbFS": -1.5005784313830617
+      },
+      {
+        "id": "production-hotel-01-q3-question",
+        "contentId": "production-hotel-01-q3",
+        "role": "question",
+        "language": "en-US",
+        "text": "What would you ask when you need the password to get online?",
+        "cacheKey": "f1291f79cbc69bb42fb2cea9040d917b7936eb11bc81ac8974896ac39d3b8f3b",
+        "file": "audio/cache/f1291f79cbc69bb42fb2cea9040d917b7936eb11bc81ac8974896ac39d3b8f3b.wav",
+        "sha256": "24e64e9c9319cf10f6254c5c5b83b3d5906641b19954da2db82054cdf280870e",
+        "durationSeconds": 2.48,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "628e8079cbbc1f69dc75912b7ba5239624aa8c2170a8eefeb21a0ba1a5281380",
+        "peakDbFS": -1.729465928936702
+      },
+      {
+        "id": "production-hotel-01-q3-answer",
+        "contentId": "production-hotel-01-q3",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "와이파이 비밀번호가 뭐예요?",
+        "cacheKey": "ce28522e2324085e2ef8e531ba67275fa67d6ae580bde0bde909f6f915b576bf",
+        "file": "audio/cache/ce28522e2324085e2ef8e531ba67275fa67d6ae580bde0bde909f6f915b576bf.wav",
+        "sha256": "3a6c3572b6d62ef0e0d9933a68dad4ed856ad531d091a199d7c8c18121956ff8",
+        "durationSeconds": 2.32,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "039bd46a6e490b2eb609c891536714048c7de4b85ffc0c718a8e3cc8e91fd9bf",
+        "peakDbFS": -1.6717564485949614
+      },
+      {
+        "id": "production-hotel-01-q3-explanation",
+        "contentId": "production-hotel-01-q3",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "What is the Wi-Fi password? This question asks for the password, rather than the network name.",
+        "cacheKey": "19bd1e6216ffd69f36e6bcdb54a2c83fa701588d7c172259d1649bf7ab0507fa",
+        "file": "audio/cache/19bd1e6216ffd69f36e6bcdb54a2c83fa701588d7c172259d1649bf7ab0507fa.wav",
+        "sha256": "27494c8e7ac3bc2ca633f25200722a3203eb3e99dd97ebc47360247f38c68d8d",
+        "durationSeconds": 6.04,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "b29ddf00e086915f4711ea60f712e8fa279b4e67c879ad5043e437ce1d275445",
+        "peakDbFS": -1.4936498751042424
+      },
+      {
+        "id": "production-hotel-01-q4-question",
+        "contentId": "production-hotel-01-q4",
+        "role": "question",
+        "language": "en-US",
+        "text": "How would you ask someone to point you to the elevator?",
+        "cacheKey": "413e47558a72e99c56ee06642139de5f6d6e62d34fc37248e75beb08dcc607f1",
+        "file": "audio/cache/413e47558a72e99c56ee06642139de5f6d6e62d34fc37248e75beb08dcc607f1.wav",
+        "sha256": "edffa798837430906ee1834af39cf21e5744e58f659a6ced04de7e93a175698d",
+        "durationSeconds": 2.68,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "af56a4c7664517323b34fe1be28f90d0bdefb0d246ec7b069027b82e8f351c11",
+        "peakDbFS": -1.503099277296077
+      },
+      {
+        "id": "production-hotel-01-q4-answer",
+        "contentId": "production-hotel-01-q4",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "엘리베이터가 어디예요?",
+        "cacheKey": "1e3a3b2d410334cdee6111f02dcaa78784618de88a988a87b49248ca8d5c9c2b",
+        "file": "audio/cache/1e3a3b2d410334cdee6111f02dcaa78784618de88a988a87b49248ca8d5c9c2b.wav",
+        "sha256": "9b3842aeb8a17aa3c911356124b70417fe0eb070641e35b25bd2078eb0cc2a7a",
+        "durationSeconds": 2.08,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "34f86c984fd857c7a85e4033fb29755ffd9183bd5b49e5abf5039dbb549e2d59",
+        "peakDbFS": -1.5157144926693833
+      },
+      {
+        "id": "production-hotel-01-q4-explanation",
+        "contentId": "production-hotel-01-q4",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "Where is the elevator? The question ending turns a location phrase into a polite question.",
+        "cacheKey": "52b52bc02546851a6640f935f3e17b2ee0da41246b8300ae3683dffcf7605ae3",
+        "file": "audio/cache/52b52bc02546851a6640f935f3e17b2ee0da41246b8300ae3683dffcf7605ae3.wav",
+        "sha256": "60ec8a11cd5bc1c57ba230cf499e90c3dbc576015fe959e1fe1e2f91e7d9c4b0",
+        "durationSeconds": 6.6,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "97a4ef574155cae0c2976893dd96b4f9deebf40b0a721b366ad9269fa6b16fbe",
+        "peakDbFS": -1.5053056177766493
+      },
+      {
+        "id": "production-hotel-01-q5-question",
+        "contentId": "production-hotel-01-q5",
+        "role": "question",
+        "language": "en-US",
+        "text": "What could you say to report the card problem and ask staff to check it?",
+        "cacheKey": "d9c17b440d63744a8d90bc1aa77aa46b43ba94510cf6f5e9524c9b2fb95f1015",
+        "file": "audio/cache/d9c17b440d63744a8d90bc1aa77aa46b43ba94510cf6f5e9524c9b2fb95f1015.wav",
+        "sha256": "78219d4dca8d244b9c7fecf01010e6376dc2aa61ace9f39aa8afe697313b54c7",
+        "durationSeconds": 4.44,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "f61d39d1797760e3f5319af43bfed07d16c063fa4c2ed1aa229e3f75e89a460d",
+        "peakDbFS": -1.4955389333191844
+      },
+      {
+        "id": "production-hotel-01-q5-answer",
+        "contentId": "production-hotel-01-q5",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "카드키가 안 돼요. 확인해 주세요.",
+        "cacheKey": "ccd3f80aec6971e41a87215c98a9a9166abd591867b5810f713c75900f3d7771",
+        "file": "audio/cache/ccd3f80aec6971e41a87215c98a9a9166abd591867b5810f713c75900f3d7771.wav",
+        "sha256": "f86fde1ba603d44549990cf525f8c9e3bdcf9dddf12dfe3365def45556a25e31",
+        "durationSeconds": 1.88,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "f9427b2fed9379c076cd7d2db2ddde4acaccd96da04e920fd0f135ebcb466a4b",
+        "peakDbFS": -1.579066873284248
+      },
+      {
+        "id": "production-hotel-01-q5-explanation",
+        "contentId": "production-hotel-01-q5",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "The key card doesn't work. Please check it. This combines a polite problem report with a request for help.",
+        "cacheKey": "6956f362c4cc2baf0cddde93e211a6207d0a3014293e358e2d85e59e89a5fc2f",
+        "file": "audio/cache/6956f362c4cc2baf0cddde93e211a6207d0a3014293e358e2d85e59e89a5fc2f.wav",
+        "sha256": "00325bf652a35ae50bf190d29739f577e26fde547c0ab364a69f8a22014ade7d",
+        "durationSeconds": 6.68,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "a1958d81fa84f2f90880f9ba8841e9b2c761ce1077b6869b7ad0e23c779a92ea",
+        "peakDbFS": -1.453134180398976
+      },
+      {
+        "id": "production-hotel-01-q6-question",
+        "contentId": "production-hotel-01-q6",
+        "role": "question",
+        "language": "en-US",
+        "text": "How would you ask the front desk if you may leave your bags there after checkout?",
+        "cacheKey": "c06f8d6985e2f61b043e8cd95b6d486ddb4970e660d2c1c3c94481fa9a133d11",
+        "file": "audio/cache/c06f8d6985e2f61b043e8cd95b6d486ddb4970e660d2c1c3c94481fa9a133d11.wav",
+        "sha256": "83603743939f37eee289d531d7743637a11d4cd4b2c1848d94fc8e52950370b7",
+        "durationSeconds": 4.12,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "6237f915e475abb5faf4a3e1a2ceb80f12a9c1a77b44c3d4bbe1a10cd47fb72d",
+        "peakDbFS": -1.4927055000407337
+      },
+      {
+        "id": "production-hotel-01-q6-comment",
+        "contentId": "production-hotel-01-q6",
+        "role": "comment",
+        "language": "en-US",
+        "text": "What do you think? Comment your answer!",
+        "cacheKey": "06907980bfef420ffd5fd752cb4b2dfb593bf7c3dfe3c18f58e475b76b2b3e29",
+        "file": "audio/cache/06907980bfef420ffd5fd752cb4b2dfb593bf7c3dfe3c18f58e475b76b2b3e29.wav",
+        "sha256": "621ff14a1a69ebbf9d1ac9a09ea2a1eb022b5d76f300258de3f05d83203de9b2",
+        "durationSeconds": 2.2,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "c6a5de9563f4869116cff2649b6bac91fe5575112dc18e70453ee9f07dd8b42d",
+        "peakDbFS": -1.5647722467027196
+      },
+      {
+        "id": "production-hotel-01-q6-follow",
+        "contentId": "production-hotel-01-q6",
+        "role": "follow",
+        "language": "en-US",
+        "text": "Follow for more Korean!",
+        "cacheKey": "b74615011f68405c3b6b89258ba612b99feea34931e3f82d1544b981836fe18a",
+        "file": "audio/cache/b74615011f68405c3b6b89258ba612b99feea34931e3f82d1544b981836fe18a.wav",
+        "sha256": "5daaed3b2bf5e19ae7fe9bd854c6a38c294413fc8b38c315cd2b09e4acd38338",
+        "durationSeconds": 1.2,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "e5fe01dc4f10b80e27e524680645a10dc6cb13cb318a574a7321bfa03a4290b8",
+        "peakDbFS": -1.5141365883944995
+      }
+    ]
+  },
+  "presentation": {
+    "compactSpacing": true,
+    "synchronizedCaptions": true,
+    "backgroundAudio": true,
+    "musicGain": 1.25,
+    "captionStyle": "phrases",
+    "bookendStyle": "display"
+  },
+  "phraseCaptions": [
+    {
+      "clipId": "production-hotel-01-hook",
+      "contentId": "production-hotel-01",
+      "role": "hook",
+      "language": "en-US",
+      "text": "Can you say it",
+      "start": 18,
+      "end": 38,
+      "emphasis": false,
+      "alignmentKey": "730c2711c776bad33d84535b4182d90390bb7ff98d18430ffae0c92a57488773"
+    },
+    {
+      "clipId": "production-hotel-01-hook",
+      "contentId": "production-hotel-01",
+      "role": "hook",
+      "language": "en-US",
+      "text": "in Korean?",
+      "start": 38,
+      "end": 57,
+      "emphasis": true,
+      "alignmentKey": "730c2711c776bad33d84535b4182d90390bb7ff98d18430ffae0c92a57488773"
+    },
+    {
+      "clipId": "production-hotel-01-q1-question",
+      "contentId": "production-hotel-01-q1",
+      "role": "question",
+      "language": "en-US",
+      "text": "What could you say",
+      "start": 119,
+      "end": 140,
+      "emphasis": false,
+      "alignmentKey": "3f51c099ef71a1aa769e854c1dd5f4e082925679a8f328aa13646f340bda2ff0"
+    },
+    {
+      "clipId": "production-hotel-01-q1-question",
+      "contentId": "production-hotel-01-q1",
+      "role": "question",
+      "language": "en-US",
+      "text": "to let the front",
+      "start": 140,
+      "end": 163,
+      "emphasis": true,
+      "alignmentKey": "3f51c099ef71a1aa769e854c1dd5f4e082925679a8f328aa13646f340bda2ff0"
+    },
+    {
+      "clipId": "production-hotel-01-q1-question",
+      "contentId": "production-hotel-01-q1",
+      "role": "question",
+      "language": "en-US",
+      "text": "desk know you’re ready",
+      "start": 163,
+      "end": 188,
+      "emphasis": false,
+      "alignmentKey": "3f51c099ef71a1aa769e854c1dd5f4e082925679a8f328aa13646f340bda2ff0"
+    },
+    {
+      "clipId": "production-hotel-01-q1-question",
+      "contentId": "production-hotel-01-q1",
+      "role": "question",
+      "language": "en-US",
+      "text": "to start your stay?",
+      "start": 188,
+      "end": 215,
+      "emphasis": false,
+      "alignmentKey": "3f51c099ef71a1aa769e854c1dd5f4e082925679a8f328aa13646f340bda2ff0"
+    },
+    {
+      "clipId": "production-hotel-01-q1-answer",
+      "contentId": "production-hotel-01-q1",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "체크인하고 싶어요.",
+      "start": 402,
+      "end": 434,
+      "emphasis": false,
+      "alignmentKey": "e6175a190a14834635671dc86442d3a83ac24a33cb907be83a0c0a142d99369c"
+    },
+    {
+      "clipId": "production-hotel-01-q1-explanation",
+      "contentId": "production-hotel-01-q1",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "I'd like to check in.",
+      "start": 454,
+      "end": 481,
+      "emphasis": false,
+      "alignmentKey": "46ff78c046b0352b8a1bd5def16c41458556b655af37fa577d4497be5a06ed5e"
+    },
+    {
+      "clipId": "production-hotel-01-q1-explanation",
+      "contentId": "production-hotel-01-q1",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This is a polite",
+      "start": 493,
+      "end": 511,
+      "emphasis": true,
+      "alignmentKey": "46ff78c046b0352b8a1bd5def16c41458556b655af37fa577d4497be5a06ed5e"
+    },
+    {
+      "clipId": "production-hotel-01-q1-explanation",
+      "contentId": "production-hotel-01-q1",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "way to tell someone",
+      "start": 511,
+      "end": 540,
+      "emphasis": false,
+      "alignmentKey": "46ff78c046b0352b8a1bd5def16c41458556b655af37fa577d4497be5a06ed5e"
+    },
+    {
+      "clipId": "production-hotel-01-q1-explanation",
+      "contentId": "production-hotel-01-q1",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "what you want to do.",
+      "start": 540,
+      "end": 565,
+      "emphasis": false,
+      "alignmentKey": "46ff78c046b0352b8a1bd5def16c41458556b655af37fa577d4497be5a06ed5e"
+    },
+    {
+      "clipId": "production-hotel-01-q2-question",
+      "contentId": "production-hotel-01-q2",
+      "role": "question",
+      "language": "en-US",
+      "text": "How would you politely",
+      "start": 615,
+      "end": 643,
+      "emphasis": false,
+      "alignmentKey": "a4d19e72ca3e8cc8de61ccadd93c9274ec4bb4317259e314fa799d8fd1904502"
+    },
+    {
+      "clipId": "production-hotel-01-q2-question",
+      "contentId": "production-hotel-01-q2",
+      "role": "question",
+      "language": "en-US",
+      "text": "ask for an extra towel?",
+      "start": 643,
+      "end": 685,
+      "emphasis": true,
+      "alignmentKey": "a4d19e72ca3e8cc8de61ccadd93c9274ec4bb4317259e314fa799d8fd1904502"
+    },
+    {
+      "clipId": "production-hotel-01-q2-answer",
+      "contentId": "production-hotel-01-q2",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "수건 하나 더 주세요.",
+      "start": 905,
+      "end": 937,
+      "emphasis": false,
+      "alignmentKey": "33a0fe8e8de68c86e643dd6de4c8097dd3ea22ed7bc2ca5462f430ff213ce80b"
+    },
+    {
+      "clipId": "production-hotel-01-q2-explanation",
+      "contentId": "production-hotel-01-q2",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "One more towel,",
+      "start": 966,
+      "end": 985,
+      "emphasis": false,
+      "alignmentKey": "6315f297246add2066874a64ba49dfb84488bdfd807ca4cd2be69f6c95b6e5c1"
+    },
+    {
+      "clipId": "production-hotel-01-q2-explanation",
+      "contentId": "production-hotel-01-q2",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "please. The phrase",
+      "start": 990,
+      "end": 1028,
+      "emphasis": true,
+      "alignmentKey": "6315f297246add2066874a64ba49dfb84488bdfd807ca4cd2be69f6c95b6e5c1"
+    },
+    {
+      "clipId": "production-hotel-01-q2-explanation",
+      "contentId": "production-hotel-01-q2",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "for “one more” specifies",
+      "start": 1028,
+      "end": 1074,
+      "emphasis": false,
+      "alignmentKey": "6315f297246add2066874a64ba49dfb84488bdfd807ca4cd2be69f6c95b6e5c1"
+    },
+    {
+      "clipId": "production-hotel-01-q2-explanation",
+      "contentId": "production-hotel-01-q2",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "that you need",
+      "start": 1074,
+      "end": 1096,
+      "emphasis": false,
+      "alignmentKey": "6315f297246add2066874a64ba49dfb84488bdfd807ca4cd2be69f6c95b6e5c1"
+    },
+    {
+      "clipId": "production-hotel-01-q2-explanation",
+      "contentId": "production-hotel-01-q2",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "an additional towel.",
+      "start": 1096,
+      "end": 1129,
+      "emphasis": true,
+      "alignmentKey": "6315f297246add2066874a64ba49dfb84488bdfd807ca4cd2be69f6c95b6e5c1"
+    },
+    {
+      "clipId": "production-hotel-01-q3-question",
+      "contentId": "production-hotel-01-q3",
+      "role": "question",
+      "language": "en-US",
+      "text": "What would you ask",
+      "start": 1188,
+      "end": 1209,
+      "emphasis": false,
+      "alignmentKey": "da9a8add9bb347424b2d4ed837bf4a8dcb81104e7874454ac8c22854d498e4da"
+    },
+    {
+      "clipId": "production-hotel-01-q3-question",
+      "contentId": "production-hotel-01-q3",
+      "role": "question",
+      "language": "en-US",
+      "text": "when you need",
+      "start": 1210,
+      "end": 1220,
+      "emphasis": true,
+      "alignmentKey": "da9a8add9bb347424b2d4ed837bf4a8dcb81104e7874454ac8c22854d498e4da"
+    },
+    {
+      "clipId": "production-hotel-01-q3-question",
+      "contentId": "production-hotel-01-q3",
+      "role": "question",
+      "language": "en-US",
+      "text": "the password to get online?",
+      "start": 1220,
+      "end": 1260,
+      "emphasis": false,
+      "alignmentKey": "da9a8add9bb347424b2d4ed837bf4a8dcb81104e7874454ac8c22854d498e4da"
+    },
+    {
+      "clipId": "production-hotel-01-q3-answer",
+      "contentId": "production-hotel-01-q3",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "와이파이 비밀번호가 뭐예요?",
+      "start": 1472,
+      "end": 1520,
+      "emphasis": false,
+      "alignmentKey": "d9baaa012fdc2514a7761ab7c24fee2e7c85143de1514b43aaa56fb4cf6f8ab9"
+    },
+    {
+      "clipId": "production-hotel-01-q3-explanation",
+      "contentId": "production-hotel-01-q3",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "What is the Wi-Fi password?",
+      "start": 1545,
+      "end": 1592,
+      "emphasis": false,
+      "alignmentKey": "8c92d83209ca8bfe564a7ecf1aa8ec5925ec13dd15063cd0a82f741066228829"
+    },
+    {
+      "clipId": "production-hotel-01-q3-explanation",
+      "contentId": "production-hotel-01-q3",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This question asks",
+      "start": 1613,
+      "end": 1639,
+      "emphasis": true,
+      "alignmentKey": "8c92d83209ca8bfe564a7ecf1aa8ec5925ec13dd15063cd0a82f741066228829"
+    },
+    {
+      "clipId": "production-hotel-01-q3-explanation",
+      "contentId": "production-hotel-01-q3",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "for the password,",
+      "start": 1639,
+      "end": 1665,
+      "emphasis": false,
+      "alignmentKey": "8c92d83209ca8bfe564a7ecf1aa8ec5925ec13dd15063cd0a82f741066228829"
+    },
+    {
+      "clipId": "production-hotel-01-q3-explanation",
+      "contentId": "production-hotel-01-q3",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "rather than the network name.",
+      "start": 1675,
+      "end": 1707,
+      "emphasis": false,
+      "alignmentKey": "8c92d83209ca8bfe564a7ecf1aa8ec5925ec13dd15063cd0a82f741066228829"
+    },
+    {
+      "clipId": "production-hotel-01-q4-question",
+      "contentId": "production-hotel-01-q4",
+      "role": "question",
+      "language": "en-US",
+      "text": "How would you ask",
+      "start": 1772,
+      "end": 1790,
+      "emphasis": false,
+      "alignmentKey": "d762da86c1313409d841886f8c71fc1c53d2495fdce482216eca05399ce2cdd4"
+    },
+    {
+      "clipId": "production-hotel-01-q4-question",
+      "contentId": "production-hotel-01-q4",
+      "role": "question",
+      "language": "en-US",
+      "text": "someone to point",
+      "start": 1790,
+      "end": 1815,
+      "emphasis": true,
+      "alignmentKey": "d762da86c1313409d841886f8c71fc1c53d2495fdce482216eca05399ce2cdd4"
+    },
+    {
+      "clipId": "production-hotel-01-q4-question",
+      "contentId": "production-hotel-01-q4",
+      "role": "question",
+      "language": "en-US",
+      "text": "you to the elevator?",
+      "start": 1815,
+      "end": 1843,
+      "emphasis": false,
+      "alignmentKey": "d762da86c1313409d841886f8c71fc1c53d2495fdce482216eca05399ce2cdd4"
+    },
+    {
+      "clipId": "production-hotel-01-q4-answer",
+      "contentId": "production-hotel-01-q4",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "엘리베이터가 어디예요?",
+      "start": 2061,
+      "end": 2094,
+      "emphasis": false,
+      "alignmentKey": "01692e1ea9581e680a531bf2fe3d698c3add282e738056f1da97b5522e787be3"
+    },
+    {
+      "clipId": "production-hotel-01-q4-explanation",
+      "contentId": "production-hotel-01-q4",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Where is the elevator?",
+      "start": 2117,
+      "end": 2153,
+      "emphasis": false,
+      "alignmentKey": "e68cce63fd707b96f9ac94c71a23f449f297bd5ede0607c8d3527eb00351f288"
+    },
+    {
+      "clipId": "production-hotel-01-q4-explanation",
+      "contentId": "production-hotel-01-q4",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "The question ending turns",
+      "start": 2183,
+      "end": 2221,
+      "emphasis": true,
+      "alignmentKey": "e68cce63fd707b96f9ac94c71a23f449f297bd5ede0607c8d3527eb00351f288"
+    },
+    {
+      "clipId": "production-hotel-01-q4-explanation",
+      "contentId": "production-hotel-01-q4",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "a location phrase into",
+      "start": 2221,
+      "end": 2267,
+      "emphasis": false,
+      "alignmentKey": "e68cce63fd707b96f9ac94c71a23f449f297bd5ede0607c8d3527eb00351f288"
+    },
+    {
+      "clipId": "production-hotel-01-q4-explanation",
+      "contentId": "production-hotel-01-q4",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "a polite question.",
+      "start": 2267,
+      "end": 2300,
+      "emphasis": false,
+      "alignmentKey": "e68cce63fd707b96f9ac94c71a23f449f297bd5ede0607c8d3527eb00351f288"
+    },
+    {
+      "clipId": "production-hotel-01-q5-question",
+      "contentId": "production-hotel-01-q5",
+      "role": "question",
+      "language": "en-US",
+      "text": "What could you say",
+      "start": 2368,
+      "end": 2389,
+      "emphasis": false,
+      "alignmentKey": "21e2d99fa28a51b173780bb1521da14916d341c3cb2d13af133aae2d007d905c"
+    },
+    {
+      "clipId": "production-hotel-01-q5-question",
+      "contentId": "production-hotel-01-q5",
+      "role": "question",
+      "language": "en-US",
+      "text": "to report the card",
+      "start": 2389,
+      "end": 2415,
+      "emphasis": true,
+      "alignmentKey": "21e2d99fa28a51b173780bb1521da14916d341c3cb2d13af133aae2d007d905c"
+    },
+    {
+      "clipId": "production-hotel-01-q5-question",
+      "contentId": "production-hotel-01-q5",
+      "role": "question",
+      "language": "en-US",
+      "text": "problem and ask staff",
+      "start": 2415,
+      "end": 2456,
+      "emphasis": false,
+      "alignmentKey": "21e2d99fa28a51b173780bb1521da14916d341c3cb2d13af133aae2d007d905c"
+    },
+    {
+      "clipId": "production-hotel-01-q5-question",
+      "contentId": "production-hotel-01-q5",
+      "role": "question",
+      "language": "en-US",
+      "text": "to check it?",
+      "start": 2456,
+      "end": 2477,
+      "emphasis": false,
+      "alignmentKey": "21e2d99fa28a51b173780bb1521da14916d341c3cb2d13af133aae2d007d905c"
+    },
+    {
+      "clipId": "production-hotel-01-q5-answer",
+      "contentId": "production-hotel-01-q5",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "카드키가 안 돼요. 확인해 주세요.",
+      "start": 2665,
+      "end": 2717,
+      "emphasis": false,
+      "alignmentKey": "c59cd25edae11c5ae644497e0f659a8e92d6a8610f4583e9400e6605bc7544c9"
+    },
+    {
+      "clipId": "production-hotel-01-q5-explanation",
+      "contentId": "production-hotel-01-q5",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "The key card doesn't work.",
+      "start": 2740,
+      "end": 2776,
+      "emphasis": false,
+      "alignmentKey": "0d4daadd48d49eaf8947f3bd7734141fee6b6859c4b840c20c0f9ff5421cfb8c"
+    },
+    {
+      "clipId": "production-hotel-01-q5-explanation",
+      "contentId": "production-hotel-01-q5",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Please check it.",
+      "start": 2795,
+      "end": 2810,
+      "emphasis": true,
+      "alignmentKey": "0d4daadd48d49eaf8947f3bd7734141fee6b6859c4b840c20c0f9ff5421cfb8c"
+    },
+    {
+      "clipId": "production-hotel-01-q5-explanation",
+      "contentId": "production-hotel-01-q5",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This combines a polite",
+      "start": 2829,
+      "end": 2857,
+      "emphasis": false,
+      "alignmentKey": "0d4daadd48d49eaf8947f3bd7734141fee6b6859c4b840c20c0f9ff5421cfb8c"
+    },
+    {
+      "clipId": "production-hotel-01-q5-explanation",
+      "contentId": "production-hotel-01-q5",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "problem report with",
+      "start": 2857,
+      "end": 2892,
+      "emphasis": false,
+      "alignmentKey": "0d4daadd48d49eaf8947f3bd7734141fee6b6859c4b840c20c0f9ff5421cfb8c"
+    },
+    {
+      "clipId": "production-hotel-01-q5-explanation",
+      "contentId": "production-hotel-01-q5",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "a request for help.",
+      "start": 2892,
+      "end": 2921,
+      "emphasis": true,
+      "alignmentKey": "0d4daadd48d49eaf8947f3bd7734141fee6b6859c4b840c20c0f9ff5421cfb8c"
+    },
+    {
+      "clipId": "production-hotel-01-q6-question",
+      "contentId": "production-hotel-01-q6",
+      "role": "question",
+      "language": "en-US",
+      "text": "How would you ask",
+      "start": 2988,
+      "end": 3009,
+      "emphasis": false,
+      "alignmentKey": "100e0d13194b766872a2b19dd730a6f6b90a34ba47b23eb2431b5271e435874d"
+    },
+    {
+      "clipId": "production-hotel-01-q6-question",
+      "contentId": "production-hotel-01-q6",
+      "role": "question",
+      "language": "en-US",
+      "text": "the front desk if",
+      "start": 3011,
+      "end": 3038,
+      "emphasis": true,
+      "alignmentKey": "100e0d13194b766872a2b19dd730a6f6b90a34ba47b23eb2431b5271e435874d"
+    },
+    {
+      "clipId": "production-hotel-01-q6-question",
+      "contentId": "production-hotel-01-q6",
+      "role": "question",
+      "language": "en-US",
+      "text": "you may leave your",
+      "start": 3038,
+      "end": 3055,
+      "emphasis": false,
+      "alignmentKey": "100e0d13194b766872a2b19dd730a6f6b90a34ba47b23eb2431b5271e435874d"
+    },
+    {
+      "clipId": "production-hotel-01-q6-question",
+      "contentId": "production-hotel-01-q6",
+      "role": "question",
+      "language": "en-US",
+      "text": "bags there after checkout?",
+      "start": 3055,
+      "end": 3091,
+      "emphasis": false,
+      "alignmentKey": "100e0d13194b766872a2b19dd730a6f6b90a34ba47b23eb2431b5271e435874d"
+    },
+    {
+      "clipId": "production-hotel-01-q6-comment",
+      "contentId": "production-hotel-01-q6",
+      "role": "comment",
+      "language": "en-US",
+      "text": "What do you think?",
+      "start": 3275,
+      "end": 3290,
+      "emphasis": false,
+      "alignmentKey": "5c50280c30a64910357484ceef8f1a6dbd7c919e2987593084e93d6aec16ca58"
+    },
+    {
+      "clipId": "production-hotel-01-q6-comment",
+      "contentId": "production-hotel-01-q6",
+      "role": "comment",
+      "language": "en-US",
+      "text": "Comment your answer!",
+      "start": 3313,
+      "end": 3336,
+      "emphasis": true,
+      "alignmentKey": "5c50280c30a64910357484ceef8f1a6dbd7c919e2987593084e93d6aec16ca58"
+    },
+    {
+      "clipId": "production-hotel-01-q6-follow",
+      "contentId": "production-hotel-01-q6",
+      "role": "follow",
+      "language": "en-US",
+      "text": "Follow for more Korean!",
+      "start": 3387,
+      "end": 3416,
+      "emphasis": false,
+      "alignmentKey": "33966cd15617f5d9ba55a29200730bac3b000b07bdd102ba2f5a31bec73c1fd5"
+    }
+  ],
+  "displayCues": {
+    "sayItStart": 26,
+    "inStart": 38,
+    "koreanStart": 41,
+    "commentPromptStart": 3275,
+    "commentInvitationStart": 3313,
+    "followMoreStart": 3398,
+    "followKoreanStart": 3403
+  },
+  "music": {
+    "file": "audio/music/subtle-bass-loop.wav",
+    "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+    "durationSeconds": 60.390375
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "scenario": "Beginner Korean ordering food in a restaurant.",
+  "scenarioType": "restaurant",
+  "question": {
+    "id": "restaurant-menu",
+    "scenario": "At a Korean restaurant",
+    "difficulty": "easy",
+    "context": "You want to see the available dishes before ordering.",
+    "prompt": "How would you ask for the menu?",
+    "choices": [
+      {"hangul": "메뉴 좀 주세요.", "romanization": "menyu jom juseyo."},
+      {"hangul": "물 좀 주세요.", "romanization": "mul jom juseyo."},
+      {"hangul": "계산서 좀 주세요.", "romanization": "gyesanseo jom juseyo."}
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "The menu, please. This is a polite way to ask for it.",
+    "reveal": {"translation": "The menu, please.", "teachingPoint": "메뉴 = menu; 좀 주세요 = please give me"}
+  },
+  "explanationNarration": "The menu, please. This is a polite way to ask for it."
+}

@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "intentHash": "a5e5e49e4407f6e4631fe211deaefb4f1db8d4e29f82d335b92476e8557ce589",
+  "inputsHash": "fc8e1bd2449491c6cc82d2127e94b84fed0aa52cf829542c95862f31d57db1db",
+  "budgetId": "p6-cb438007b8bb72aaf0c5-generation",
+  "episodeId": "production-hotel-01",
+  "promptVersion": "phase6-scenario-generation-v1",
+  "schemaVersion": "phase6-scenario-education-v1",
+  "deriveBrief": true,
+  "initialContentHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+  "status": "valid",
+  "requestedModel": "gpt-6-luna",
+  "returnedModel": "gpt-6-luna",
+  "attempts": 1
+}

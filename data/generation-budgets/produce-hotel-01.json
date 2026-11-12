@@ -1,0 +1,183 @@
+{
+  "version": 2,
+  "kind": "production-budget",
+  "jobId": "hotel-01",
+  "capUnits": 230000000,
+  "authorization": "Explicit --allow-paid and total --max-cost-usd for this production job",
+  "allocations": {
+    "generation-62ba9133d56b06cccd8ecedf": {
+      "stage": "generation",
+      "inputHash": "62ba9133d56b06cccd8ecedf4d478f29049dc137780115f50b029bd13cd21854",
+      "allocatedUnits": 37600000,
+      "chargedUnits": 2473625,
+      "state": "settled",
+      "childBudgetId": "p6-cb438007b8bb72aaf0c5-generation",
+      "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\generation-budgets\\p6-cb438007b8bb72aaf0c5-generation.json",
+      "requests": [],
+      "usage": [
+        {
+          "state": "valid",
+          "usage": {
+            "inputTokens": 2317,
+            "outputTokens": 4368,
+            "totalTokens": 6685,
+            "reasoningTokens": 2545,
+            "cachedInputTokens": 0
+          }
+        }
+      ]
+    },
+    "review-c519daeaf626938596b94890": {
+      "stage": "review",
+      "inputHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+      "allocatedUnits": 56400000,
+      "chargedUnits": 960875,
+      "state": "settled",
+      "childBudgetId": "p6-fa079361c74d8914feff-review",
+      "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-review-budgets\\p6-fa079361c74d8914feff-review.json",
+      "requests": [],
+      "usage": [
+        {
+          "state": "complete",
+          "usage": {
+            "inputTokens": 2951,
+            "outputTokens": 1184,
+            "totalTokens": 4135,
+            "reasoningTokens": 862,
+            "cachedInputTokens": 0
+          }
+        }
+      ]
+    },
+    "tts-34e5a18f345818c42016b435": {
+      "stage": "tts",
+      "inputHash": "34e5a18f345818c42016b435b8337616a7b0f0b6845df69e0dcce529c482ddaa",
+      "allocatedUnits": 55380000,
+      "chargedUnits": 27690000,
+      "state": "settled",
+      "childBudgetId": "p6-a1e169f550f8fbb5353b-tts",
+      "requests": [
+        {
+          "key": "3582c25883f850f6f24d2f266c9f8594d5cb3985ccb3aa21af550f26ec1d163b",
+          "state": "received",
+          "units": 2340000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\3582c25883f850f6f24d2f266c9f8594d5cb3985ccb3aa21af550f26ec1d163b.wav",
+          "sha256": "3580c7919f27b11026926f8ba92961895a60a8d6894ab4b4470fce93857d6fc8"
+        },
+        {
+          "key": "9717129477089ecbb94f72d8450cf45a511284321161883e1c7afb5b60b4abec",
+          "state": "received",
+          "units": 300000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\9717129477089ecbb94f72d8450cf45a511284321161883e1c7afb5b60b4abec.wav",
+          "sha256": "ab2f5a74a907d26cb784f223dc9513519f66aeb0f39bf09ea850164823543adb"
+        },
+        {
+          "key": "1da491a360acb43d0d9e5704d1ec3324d821877544b848b917bdef790b8dd3df",
+          "state": "received",
+          "units": 2370000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\1da491a360acb43d0d9e5704d1ec3324d821877544b848b917bdef790b8dd3df.wav",
+          "sha256": "3a4c4cd7f5ea740825d0d05c1be0fe363224cf996f42eb2d29588f0aafab0b29"
+        },
+        {
+          "key": "d96a77d9602818d52165625b80b698b713c7e1e1be05f540b07f1f3b6caa583d",
+          "state": "received",
+          "units": 1380000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\d96a77d9602818d52165625b80b698b713c7e1e1be05f540b07f1f3b6caa583d.wav",
+          "sha256": "89612831369566ffe5deed59e0bcf1e50d6ee9d8434e503167cf0a99ef916c47"
+        },
+        {
+          "key": "d92ffd0adb938e1ef822a7b48e523033b9e788ee0ee047438e2275b6d4d93ea2",
+          "state": "received",
+          "units": 360000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\d92ffd0adb938e1ef822a7b48e523033b9e788ee0ee047438e2275b6d4d93ea2.wav",
+          "sha256": "a27d5a61823087d20ac7dd6357630e2796e419bc247c963c8467699a8e4525fe"
+        },
+        {
+          "key": "c7aeead22785bc6aaf82c418c88a6092edaf0003d4ceddc5ec868843ab543542",
+          "state": "received",
+          "units": 2820000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\c7aeead22785bc6aaf82c418c88a6092edaf0003d4ceddc5ec868843ab543542.wav",
+          "sha256": "94429aead1bb1a6a18b7e423157ee75f0e7aea163a6c184b29f959f4e7ab0579"
+        },
+        {
+          "key": "f1291f79cbc69bb42fb2cea9040d917b7936eb11bc81ac8974896ac39d3b8f3b",
+          "state": "received",
+          "units": 1800000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\f1291f79cbc69bb42fb2cea9040d917b7936eb11bc81ac8974896ac39d3b8f3b.wav",
+          "sha256": "628e8079cbbc1f69dc75912b7ba5239624aa8c2170a8eefeb21a0ba1a5281380"
+        },
+        {
+          "key": "ce28522e2324085e2ef8e531ba67275fa67d6ae580bde0bde909f6f915b576bf",
+          "state": "received",
+          "units": 450000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\ce28522e2324085e2ef8e531ba67275fa67d6ae580bde0bde909f6f915b576bf.wav",
+          "sha256": "039bd46a6e490b2eb609c891536714048c7de4b85ffc0c718a8e3cc8e91fd9bf"
+        },
+        {
+          "key": "19bd1e6216ffd69f36e6bcdb54a2c83fa701588d7c172259d1649bf7ab0507fa",
+          "state": "received",
+          "units": 2820000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\19bd1e6216ffd69f36e6bcdb54a2c83fa701588d7c172259d1649bf7ab0507fa.wav",
+          "sha256": "b29ddf00e086915f4711ea60f712e8fa279b4e67c879ad5043e437ce1d275445"
+        },
+        {
+          "key": "413e47558a72e99c56ee06642139de5f6d6e62d34fc37248e75beb08dcc607f1",
+          "state": "received",
+          "units": 1650000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\413e47558a72e99c56ee06642139de5f6d6e62d34fc37248e75beb08dcc607f1.wav",
+          "sha256": "af56a4c7664517323b34fe1be28f90d0bdefb0d246ec7b069027b82e8f351c11"
+        },
+        {
+          "key": "1e3a3b2d410334cdee6111f02dcaa78784618de88a988a87b49248ca8d5c9c2b",
+          "state": "received",
+          "units": 360000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\1e3a3b2d410334cdee6111f02dcaa78784618de88a988a87b49248ca8d5c9c2b.wav",
+          "sha256": "34f86c984fd857c7a85e4033fb29755ffd9183bd5b49e5abf5039dbb549e2d59"
+        },
+        {
+          "key": "52b52bc02546851a6640f935f3e17b2ee0da41246b8300ae3683dffcf7605ae3",
+          "state": "received",
+          "units": 2700000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\52b52bc02546851a6640f935f3e17b2ee0da41246b8300ae3683dffcf7605ae3.wav",
+          "sha256": "97a4ef574155cae0c2976893dd96b4f9deebf40b0a721b366ad9269fa6b16fbe"
+        },
+        {
+          "key": "d9c17b440d63744a8d90bc1aa77aa46b43ba94510cf6f5e9524c9b2fb95f1015",
+          "state": "received",
+          "units": 2160000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\d9c17b440d63744a8d90bc1aa77aa46b43ba94510cf6f5e9524c9b2fb95f1015.wav",
+          "sha256": "f61d39d1797760e3f5319af43bfed07d16c063fa4c2ed1aa229e3f75e89a460d"
+        },
+        {
+          "key": "ccd3f80aec6971e41a87215c98a9a9166abd591867b5810f713c75900f3d7771",
+          "state": "received",
+          "units": 570000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\ccd3f80aec6971e41a87215c98a9a9166abd591867b5810f713c75900f3d7771.wav",
+          "sha256": "f9427b2fed9379c076cd7d2db2ddde4acaccd96da04e920fd0f135ebcb466a4b"
+        },
+        {
+          "key": "6956f362c4cc2baf0cddde93e211a6207d0a3014293e358e2d85e59e89a5fc2f",
+          "state": "received",
+          "units": 3180000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\6956f362c4cc2baf0cddde93e211a6207d0a3014293e358e2d85e59e89a5fc2f.wav",
+          "sha256": "a1958d81fa84f2f90880f9ba8841e9b2c761ce1077b6869b7ad0e23c779a92ea"
+        },
+        {
+          "key": "c06f8d6985e2f61b043e8cd95b6d486ddb4970e660d2c1c3c94481fa9a133d11",
+          "state": "received",
+          "units": 2430000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\c06f8d6985e2f61b043e8cd95b6d486ddb4970e660d2c1c3c94481fa9a133d11.wav",
+          "sha256": "6237f915e475abb5faf4a3e1a2ceb80f12a9c1a77b44c3d4bbe1a10cd47fb72d"
+        }
+      ],
+      "usage": {
+        "cacheHits": 19,
+        "recoveredOriginals": 0,
+        "localPrepared": 0,
+        "newSynthesisRequests": 0,
+        "newSynthesisCharacters": 0,
+        "estimated": true
+      }
+    }
+  }
+}

@@ -1,0 +1,522 @@
+{
+  "kind": "question-preview",
+  "jobId": "restaurant-preview-01",
+  "output": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-menu-preview.mp4",
+  "videoSha256": "cdc6367660aa8a6083d623d8802c0a3e828900e3690ad94eac84f2bf7fca8191",
+  "contentHash": "a66dcf6ad2538e9ff4d517474a765bf3116d0e665a0f7246e443e89cba48535a",
+  "background": {
+    "id": "generated-restaurant-379962e8db662f67",
+    "file": "backgrounds/generated-restaurant-379962e8db662f67.png",
+    "sha256": "a9405bcdcc310ef167f3918ff66282cc308c4b5cc59c61303e3a0933e0b3aa7b",
+    "scenarioType": "restaurant",
+    "selection": "developer-selected",
+    "scenarioLabel": "AT A KOREAN RESTAURANT",
+    "framing": {
+      "scale": 1.02,
+      "origin": "50% 0%"
+    }
+  },
+  "propsFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\artifacts\\2e58c86f59fbee5c7a5c3f34dddce3bae8bcdd709c25f9f04fca7c85d2f53fa4.props.json",
+  "timeline": {
+    "durationInFrames": 462,
+    "speechEnd": 420,
+    "end": 450,
+    "question": {
+      "countdownStart": 120,
+      "revealStart": 270
+    },
+    "questionTimeline": {
+      "countdownStart": 120,
+      "revealStart": 270,
+      "durationInFrames": 450,
+      "countdownFrames": 150,
+      "entranceFrames": 15,
+      "revealFadeFrames": 12
+    },
+    "audio": [
+      {
+        "id": "restaurant-menu-question",
+        "contentId": "restaurant-menu",
+        "role": "question",
+        "language": "en-US",
+        "text": "How would you ask for the menu?",
+        "cacheKey": "a1e4832fc5fa0a79e0bfb0f25e2041166f74b78dd020a1799d29792108ec17d2",
+        "file": "audio/cache/a1e4832fc5fa0a79e0bfb0f25e2041166f74b78dd020a1799d29792108ec17d2.wav",
+        "sha256": "a8a945d1ab2e0fa1541210413652d01d046bec242979e02f263e7d2bec46525f",
+        "durationSeconds": 1.44,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "9f9b2b8608963ddd987787e1906a22ca6ed5b3b71420e21efe96853218dd9984",
+        "peakDbFS": -1.5781131659390062,
+        "start": 6,
+        "end": 50
+      },
+      {
+        "id": "restaurant-menu-answer",
+        "contentId": "restaurant-menu",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "메뉴 좀 주세요.",
+        "cacheKey": "11358bc97627ccb154be8cadc8fdef88a64a0d3f63ce824207cfd84b226cb761",
+        "file": "audio/cache/11358bc97627ccb154be8cadc8fdef88a64a0d3f63ce824207cfd84b226cb761.wav",
+        "sha256": "f23de9f8cf0ce732556f57b7286bcf3c1d5ba571e171ca15114108513b7121aa",
+        "durationSeconds": 1,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "f3fdd8e68e6ab6b4192326156a2e02a9b3dd8b269c0d45de99ab875a494a5bb6",
+        "peakDbFS": -1.6675801539127533,
+        "start": 276,
+        "end": 306
+      },
+      {
+        "id": "restaurant-menu-explanation",
+        "contentId": "restaurant-menu",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "The menu, please. This is a polite way to ask for it.",
+        "cacheKey": "ebb520208afb5007d09851ef72a9b1ff2314fea2d41756e3e6ebdefaa9cc60f4",
+        "file": "audio/cache/ebb520208afb5007d09851ef72a9b1ff2314fea2d41756e3e6ebdefaa9cc60f4.wav",
+        "sha256": "6b94ac3e97a9081e94a188108751e580ecde9d43fbed62d8c76540c81cfcc9f4",
+        "durationSeconds": 3.44,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "3f82b3ca7d8c6d1bf33dbc2d28fa8f2e82ce7ce0fa503cb73f1c15ba6fac5322",
+        "peakDbFS": -1.4810666421069965,
+        "start": 316,
+        "end": 420
+      }
+    ]
+  },
+  "verification": {
+    "metadata": {
+      "frames": 462,
+      "duration": 15.4,
+      "width": 1080,
+      "height": 1920,
+      "fps": 30
+    },
+    "fullDecode": "PASS",
+    "rawMixedAudio": {
+      "integratedLUFS": -19.41,
+      "truePeakDbTP": -4.04,
+      "loudnessRangeLU": 14.8,
+      "raw": {
+        "input_i": "-19.41",
+        "input_tp": "-4.04",
+        "input_lra": "14.80",
+        "input_thresh": "-32.01",
+        "output_i": "-16.82",
+        "output_tp": "-2.00",
+        "output_lra": "7.60",
+        "output_thresh": "-27.93",
+        "normalization_type": "dynamic",
+        "target_offset": "0.82"
+      }
+    },
+    "finalMixedAudio": {
+      "integratedLUFS": -16.1,
+      "truePeakDbTP": -1.8,
+      "loudnessRangeLU": 7.1,
+      "raw": {
+        "input_i": "-16.10",
+        "input_tp": "-1.80",
+        "input_lra": "7.10",
+        "input_thresh": "-27.31",
+        "output_i": "-15.87",
+        "output_tp": "-2.00",
+        "output_lra": "5.60",
+        "output_thresh": "-26.71",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.13"
+      }
+    },
+    "zeroProviderCallsDuringRender": true
+  },
+  "reusedVerifiedRender": true,
+  "providerCallsThisResume": 0,
+  "audioPreparation": {
+    "cacheHits": 3,
+    "recoveredOriginals": 0,
+    "localPrepared": 0,
+    "newSynthesisRequests": 0,
+    "newSynthesisCharacters": 0
+  },
+  "alignment": {
+    "cacheHits": 3,
+    "newLocalAlignments": 0,
+    "providerCalls": 0,
+    "phraseAnchoredArticles": [
+      {
+        "clipId": "restaurant-menu-explanation",
+        "text": "The",
+        "atSeconds": 0.1
+      }
+    ]
+  },
+  "cost": {
+    "estimatedUSD": 0.0387555,
+    "capUSD": 0.53,
+    "allocations": {
+      "image-379962e8db662f6788de64dd": {
+        "stage": "image",
+        "inputHash": "379962e8db662f6788de64dd9b2b63286f0a88c5a39bbe6f35d6246885ceb3ff",
+        "allocatedUnits": 504655000,
+        "chargedUnits": 35770000,
+        "state": "settled",
+        "childBudgetId": "p6-8f5a7dd5a36e6c2a6e05-image",
+        "requests": [
+          {
+            "key": "379962e8db662f6788de64dd9b2b63286f0a88c5a39bbe6f35d6246885ceb3ff",
+            "state": "received",
+            "units": 504655000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\image\\379962e8db662f6788de64dd9b2b63286f0a88c5a39bbe6f35d6246885ceb3ff\\original.png",
+            "sha256": "a9405bcdcc310ef167f3918ff66282cc308c4b5cc59c61303e3a0933e0b3aa7b"
+          }
+        ],
+        "usage": {
+          "providerRequests": 1,
+          "usage": {
+            "input_tokens": 362,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 362
+            },
+            "output_tokens": 1132,
+            "output_tokens_details": {
+              "image_tokens": 1132,
+              "text_tokens": 0
+            },
+            "total_tokens": 1494
+          },
+          "costKnown": true,
+          "receipt": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\image\\379962e8db662f6788de64dd9b2b63286f0a88c5a39bbe6f35d6246885ceb3ff\\receipt.json"
+        }
+      },
+      "review-a66dcf6ad2538e9ff4d51747": {
+        "stage": "review",
+        "inputHash": "a66dcf6ad2538e9ff4d517474a765bf3116d0e665a0f7246e443e89cba48535a",
+        "allocatedUnits": 18800000,
+        "chargedUnits": 195500,
+        "state": "settled",
+        "childBudgetId": "p6-7afeabdbe81cf9a98643-review",
+        "requests": [
+          {
+            "key": "a66dcf6ad2538e9ff4d517474a765bf3116d0e665a0f7246e443e89cba48535a",
+            "state": "received",
+            "units": 18800000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\review\\response.json"
+          }
+        ],
+        "usage": [
+          {
+            "state": "complete",
+            "usage": {
+              "inputTokens": 644,
+              "outputTokens": 230,
+              "totalTokens": 874,
+              "reasoningTokens": 165,
+              "cachedInputTokens": 0
+            },
+            "requestId": "req_e059077fed494481b8148ed23c4146a8"
+          }
+        ]
+      },
+      "tts-db02c4f60cd46a24f0590104": {
+        "stage": "tts",
+        "inputHash": "db02c4f60cd46a24f0590104cae7af19419497799778a935e592d4aff15d6ef8",
+        "allocatedUnits": 5580000,
+        "chargedUnits": 2790000,
+        "state": "settled",
+        "childBudgetId": "p6-66e511f1a39700301e27-tts",
+        "requests": [
+          {
+            "key": "a1e4832fc5fa0a79e0bfb0f25e2041166f74b78dd020a1799d29792108ec17d2",
+            "state": "received",
+            "units": 930000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\tts-responses\\a1e4832fc5fa0a79e0bfb0f25e2041166f74b78dd020a1799d29792108ec17d2.wav",
+            "sha256": "9f9b2b8608963ddd987787e1906a22ca6ed5b3b71420e21efe96853218dd9984"
+          },
+          {
+            "key": "11358bc97627ccb154be8cadc8fdef88a64a0d3f63ce824207cfd84b226cb761",
+            "state": "received",
+            "units": 270000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\tts-responses\\11358bc97627ccb154be8cadc8fdef88a64a0d3f63ce824207cfd84b226cb761.wav",
+            "sha256": "f3fdd8e68e6ab6b4192326156a2e02a9b3dd8b269c0d45de99ab875a494a5bb6"
+          },
+          {
+            "key": "ebb520208afb5007d09851ef72a9b1ff2314fea2d41756e3e6ebdefaa9cc60f4",
+            "state": "received",
+            "units": 1590000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\tts-responses\\ebb520208afb5007d09851ef72a9b1ff2314fea2d41756e3e6ebdefaa9cc60f4.wav",
+            "sha256": "3f82b3ca7d8c6d1bf33dbc2d28fa8f2e82ce7ce0fa503cb73f1c15ba6fac5322"
+          }
+        ],
+        "usage": {
+          "cacheHits": 3,
+          "recoveredOriginals": 0,
+          "localPrepared": 0,
+          "newSynthesisRequests": 0,
+          "newSynthesisCharacters": 0,
+          "estimated": true
+        }
+      }
+    },
+    "invoiceInspected": false
+  },
+  "productionUsageConsumed": 0,
+  "notChecked": [
+    "subjective pronunciation/expressiveness/mix by listening",
+    "actual phone readability"
+  ],
+  "completedAt": "2026-11-12T05:54:35.672Z",
+  "visualInspection": {
+    "status": "PASS",
+    "framesActuallyInspected": 12,
+    "method": "Final labelled contact sheet plus full-size question and explanation frames.",
+    "observations": [
+      "One question only; no hook, bonus, CTA or 1/6 indicator.",
+      "Hangul, romanization, prompt and context fit. Answer rows remain fixed across reading/countdown/reveal.",
+      "No answer caption/English translation before reveal; A is first marked at f270, following f120–269 countdown.",
+      "Korean answer and all three English explanation phrases fit below the panel without obscuring facial features.",
+      "The menu, please. stays together; exact speech is preserved with acoustic phrase boundaries.",
+      "Warm restaurant illustration and adult woman remain visible; no obvious text/logos, anatomical defects or exposed edges observed in sampled frames.",
+      "Final hold and fade complete after speech; music gain remains 1.25."
+    ],
+    "subjectiveListeningPerformed": false,
+    "phonePlaybackPerformed": false,
+    "contactSheet": "out/restaurant-preview/contact-final.jpg"
+  },
+  "technicalInspection": {
+    "video": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-menu-preview.mp4",
+    "videoSha256": "cdc6367660aa8a6083d623d8802c0a3e828900e3690ad94eac84f2bf7fca8191",
+    "contentHash": "a66dcf6ad2538e9ff4d517474a765bf3116d0e665a0f7246e443e89cba48535a",
+    "nativeImage": {
+      "file": "backgrounds/generated-restaurant-379962e8db662f67.png",
+      "assetId": "generated-restaurant-379962e8db662f67",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "a9405bcdcc310ef167f3918ff66282cc308c4b5cc59c61303e3a0933e0b3aa7b"
+    },
+    "expectedFrames": 462,
+    "expectedSeconds": 15.4,
+    "metadata": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1920,
+          "pix_fmt": "yuv420p",
+          "avg_frame_rate": "30/1",
+          "duration": "15.400000",
+          "nb_frames": "462"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "channels": 2,
+          "avg_frame_rate": "0/0",
+          "duration": "15.400000",
+          "nb_frames": "719"
+        }
+      ],
+      "format": {
+        "duration": "15.400000",
+        "size": "7281771"
+      }
+    },
+    "timing": "PASS: measured clips and acoustic phrase bounds; full reading, countdown, reveal, answer gap, hold/fade",
+    "isolation": "PASS: no hook, bonus, private key or CTA roles; only normal-question answer/reveal captions",
+    "frames": [
+      {
+        "name": "first-frame",
+        "frame": 0,
+        "file": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-preview\\frames\\first-frame.png"
+      },
+      {
+        "name": "before-question-caption",
+        "frame": 8,
+        "file": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-preview\\frames\\before-question-caption.png"
+      },
+      {
+        "name": "question-caption",
+        "frame": 15,
+        "file": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-preview\\frames\\question-caption.png"
+      },
+      {
+        "name": "countdown-start",
+        "frame": 120,
+        "file": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-preview\\frames\\countdown-start.png"
+      },
+      {
+        "name": "before-reveal",
+        "frame": 269,
+        "file": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-preview\\frames\\before-reveal.png"
+      },
+      {
+        "name": "at-reveal",
+        "frame": 270,
+        "file": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-preview\\frames\\at-reveal.png"
+      },
+      {
+        "name": "korean-answer",
+        "frame": 287,
+        "file": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-preview\\frames\\korean-answer.png"
+      },
+      {
+        "name": "explanation-1",
+        "frame": 325,
+        "file": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-preview\\frames\\explanation-1.png"
+      },
+      {
+        "name": "explanation-2",
+        "frame": 374,
+        "file": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-preview\\frames\\explanation-2.png"
+      },
+      {
+        "name": "explanation-3",
+        "frame": 391,
+        "file": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-preview\\frames\\explanation-3.png"
+      },
+      {
+        "name": "final-hold",
+        "frame": 435,
+        "file": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-preview\\frames\\final-hold.png"
+      },
+      {
+        "name": "final-fade",
+        "frame": 461,
+        "file": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-preview\\frames\\final-fade.png"
+      }
+    ],
+    "visualInspection": {
+      "status": "PASS",
+      "framesActuallyInspected": 12,
+      "method": "Final labelled contact sheet plus full-size question and explanation frames.",
+      "observations": [
+        "One question only; no hook, bonus, CTA or 1/6 indicator.",
+        "Hangul, romanization, prompt and context fit. Answer rows remain fixed across reading/countdown/reveal.",
+        "No answer caption/English translation before reveal; A is first marked at f270, following f120–269 countdown.",
+        "Korean answer and all three English explanation phrases fit below the panel without obscuring facial features.",
+        "The menu, please. stays together; exact speech is preserved with acoustic phrase boundaries.",
+        "Warm restaurant illustration and adult woman remain visible; no obvious text/logos, anatomical defects or exposed edges observed in sampled frames.",
+        "Final hold and fade complete after speech; music gain remains 1.25."
+      ],
+      "subjectiveListeningPerformed": false,
+      "phonePlaybackPerformed": false,
+      "contactSheet": "out/restaurant-preview/contact-final.jpg"
+    },
+    "listeningPerformed": false
+  },
+  "tests": {
+    "typecheck": "PASS",
+    "fullRegression": {
+      "passed": 178,
+      "failed": 0,
+      "log": "out/phase6-background-complete-tests.log",
+      "note": "Followed by the final punctuation grouping fix and 58 affected checks below."
+    },
+    "finalFocused": {
+      "passed": 58,
+      "failed": 0,
+      "log": "out/phase6-background-final-caption-tests.log"
+    },
+    "finalRealResume": "PASS: zero providers and verified output reused"
+  },
+  "providerUsage": {
+    "images": {
+      "provider": "OpenAI direct Images API via official SDK",
+      "requestedModel": "gpt-image-2.6-flare",
+      "returnedModel": null,
+      "requests": 1,
+      "sdkRetries": 0,
+      "settings": {
+        "quality": "medium",
+        "size": "1024x1536",
+        "output_format": "png",
+        "n": 1
+      },
+      "reportedUsage": {
+        "input_tokens": 362,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 362
+        },
+        "output_tokens": 1132,
+        "output_tokens_details": {
+          "image_tokens": 1132,
+          "text_tokens": 0
+        },
+        "total_tokens": 1494
+      },
+      "estimatedCostUSD": 0.03577,
+      "receipt": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\image\\379962e8db662f6788de64dd9b2b63286f0a88c5a39bbe6f35d6246885ceb3ff\\receipt.json"
+    },
+    "contentGeneration": {
+      "requests": 0
+    },
+    "review": {
+      "requests": 1,
+      "model": "gpt-6-luna",
+      "promptVersion": "phase6-question-excerpt-review-v1",
+      "reportedUsage": {
+        "inputTokens": 644,
+        "outputTokens": 230,
+        "totalTokens": 874,
+        "reasoningTokens": 165,
+        "cachedInputTokens": 0
+      },
+      "findings": 0,
+      "corrections": 0,
+      "humanReviewed": false,
+      "estimatedCostUSD": 0.0001955
+    },
+    "tts": {
+      "provider": "Google Cloud Chirp 3 HD",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Achird",
+        "ko-KR": "ko-KR-Chirp3-HD-Achird"
+      },
+      "requests": 3,
+      "initialCacheHits": 0,
+      "inputCharacters": 93,
+      "retries": 0,
+      "estimatedCostUSD": 0.00279,
+      "providerReturnedUsage": null
+    },
+    "totalEstimatedCostUSD": 0.0387555,
+    "totalCapUSD": 0.53,
+    "invoiceInspected": false
+  },
+  "reuse": {
+    "renderReused": true,
+    "providerCalls": 0,
+    "verifiedVoiceCacheHits": 3,
+    "alignmentCacheHits": 3,
+    "newImageRequests": 0,
+    "newSynthesisRequests": 0,
+    "completedProductionEpisodeIds": [],
+    "log": "out/restaurant-preview-final-resume.log"
+  },
+  "baselineChecks": [
+    {
+      "file": "C:\\Users\\david\\Documents\\kor-vids\\out\\hotel-01.mp4",
+      "sha256": "ddeac381ecf54172543ef7f24e13cbfd93e8d60cedc0893c5c4460729cf8312e",
+      "unchanged": true
+    },
+    {
+      "file": "C:\\Users\\david\\Documents\\kor-vids\\out\\public-transit-02-production.mp4",
+      "sha256": "38cfcb9d7417ae3c71c00a1341693c7dbad42f31cf3118823f8cda9782e78b11",
+      "unchanged": true
+    }
+  ],
+  "focusedFixes": [
+    "Explicit rawvideo decoder output for the bundled FFmpeg PNG check.",
+    "Bounded 32 MiB private image response reader; ordinary content JSON stays at 256 KiB.",
+    "Retain collapsed English articles only inside acoustically anchored phrases; no invented word interval. Raw alignments/audio unchanged.",
+    "Keep short comma clauses with their closing word before the following sentence."
+  ],
+  "alignmentCaveat": "The aligner assigned The a zero-length interval at 0.1s. The complete phrase uses the actual positive menu/please intervals. No word-level timing or pronunciation accuracy is claimed.",
+  "unresolvedTechnicalBlockers": [],
+  "finalizedAt": "2026-11-12T05:58:51.962Z"
+}

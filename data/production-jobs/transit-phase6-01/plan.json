@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "source": "194914b5a3f37cae33226de035954d6cc6a4bab831c4b5e6eb5b96bc3546fdd0",
+  "contentHash": "194914b5a3f37cae33226de035954d6cc6a4bab831c4b5e6eb5b96bc3546fdd0",
+  "brief": {
+    "status": "validated-content",
+    "value": {
+      "scenario": "Ask a station worker for help using public transit: locate the subway entrance, ask where to buy a ticket, find a platform, check whether a train goes to Seoul Station, ask where to transfer, and ask which exit to use for a named destination. State destinations and context clearly without asserting real route information. Keep the final exit question as the hard beginner comment bonus.",
+      "audience": "English-speaking adults learning practical beginner Korean for travel",
+      "level": "Beginner: two easy location questions, two medium service or destination questions, two harder transfer or exit questions",
+      "backgroundAssetId": "korean-transit-illustrated-dev-v1",
+      "scenarioType": "public-transit"
+    }
+  },
+  "acceptance": {
+    "valid": true,
+    "kind": "automated"
+  },
+  "assets": {
+    "background": {
+      "id": "korean-transit-illustrated-dev-v1",
+      "sha256": "3051c21c2dac0a5821849d27a16e1e717d6fd7e8e6790da526565f0f239adea7",
+      "selection": "developer-selected",
+      "file": "backgrounds/korean-transit-illustrated-dev-v1.png"
+    },
+    "music": {
+      "file": "audio/music/subtle-bass-loop.wav",
+      "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+      "durationSeconds": 60.390375
+    }
+  },
+  "hashes": {
+    "content": "194914b5a3f37cae33226de035954d6cc6a4bab831c4b5e6eb5b96bc3546fdd0",
+    "speech": "a7cc58ba2bf77cdfc2fe9e21fe67597f47689f57ad85ef89bfff83c43219f816",
+    "voice": "db17474cb6961bf1aba4e883daf7739a7cdcdf99a5bbc83d4505cc48a2c01635",
+    "presentation": "f5dc9016c31e265bd56204c16af843aced2af92389cd518c44e51e1a1ecb4acb",
+    "audioProcessing": "037433f06cfa6357591ebb0e3a67ea084fbc8766a3e0bbc16588e93b607985e1",
+    "alignment": "bbe38a4ca7157f14d348a966649537f6613ac5b4d8db490ef592a236c2b89d2c",
+    "grouping": "d47898d1270485c704be003be4f13d4734d50175367b345a80a10f7c734fde0e",
+    "background": "3051c21c2dac0a5821849d27a16e1e717d6fd7e8e6790da526565f0f239adea7",
+    "music": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40"
+  },
+  "blockers": [],
+  "inventory": [
+    {
+      "id": "public-transit-02-hook",
+      "key": "b03314a1a056b827307ce797080d4b15544d9502a7f510a176d151da28c98eb8",
+      "characters": 25,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "8f52a2a13b697799973f7c45c2f5d83103a68de23f830ae6c63a1954e59a3741"
+    },
+    {
+      "id": "public-transit-02-q1-question",
+      "key": "0e86d8df7aaf48e06d5b6408f50ecfa2830248a50045e65491253de008ab306c",
+      "characters": 67,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "e9c410705e3f45245395f9c0522203c51d29175f97096140b1e715461ff4e10e"
+    },
+    {
+      "id": "public-transit-02-q1-answer",
+      "key": "ff2d3743114f80cdc5212a543e9fc23041434a0c88fed169e0899173837b9df3",
+      "characters": 13,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "4416427d682edd940cf5ff7291e6f26d5d811b3592a37fbabaf84562df7542ed"
+    },
+    {
+      "id": "public-transit-02-q1-explanation",
+      "key": "50396ecdd5d09ca6120f02fd609c34c7cb3ac9e0f523b2ee38103d43b7a0d3ec",
+      "characters": 105,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "cae002bf76a4d1af00cc6ab29a92df5722adc40368c6791e35f754f77affcc07"
+    },
+    {
+      "id": "public-transit-02-q2-question",
+      "key": "14ae967bc5c1550faf58426139d357c88652c671077aad4defb2b5530bbb9575",
+      "characters": 63,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "3c193254131b78e605fd0d7e2f0ac7cac18239daaf9b6c6f141339fe16464140"
+    },
+    {
+      "id": "public-transit-02-q2-answer",
+      "key": "774c2ff6c361736b987bb8127d6d3c109f35ecde6cc45de36fdc23350e75cb0c",
+      "characters": 10,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "d0fd400a05bebcd8212a2a80493afbaf1af70b14f519012fdb9677064999868a"
+    },
+    {
+      "id": "public-transit-02-q2-explanation",
+      "key": "b9c0d31b279e02f48bab3abf1607b45efbcec77432d28b3438c927cc89ca861a",
+      "characters": 97,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "fc31b8fa250e072a6058888b18945aad30846de6d57422b4f4e0fd93465a5777"
+    },
+    {
+      "id": "public-transit-02-q3-question",
+      "key": "d4be89e3a0bd26b17aef4a80c7a02e70208a81122f5a56a16603ef5d8436af8a",
+      "characters": 74,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "a92eec6f3c12b174f494b22cd7c1ce398c2bbf717a1a0b0eb459ea7161e66a4b"
+    },
+    {
+      "id": "public-transit-02-q3-answer",
+      "key": "b2b779c9430701e127b6ae35e2b8d4d4ea93a898edfb25f31c420234028f5f03",
+      "characters": 11,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "be3afb630defce9fee29f8db5e633dba0c28899846626e24c3d1f11c6b664f83"
+    },
+    {
+      "id": "public-transit-02-q3-explanation",
+      "key": "2ccd5ee90c2ca567e3583f3dc0a67fb753b41d379b890760c8d2b565954f0412",
+      "characters": 120,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "c80a6c25a2af01e2a041ded4461393f5e90cdff05ff7569f21d3bba72d0de0f8"
+    },
+    {
+      "id": "public-transit-02-q4-question",
+      "key": "96a6813671167b6775b859514d5108470c27f1f81fa6dde386ac7ffb504e5024",
+      "characters": 81,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "417c3d846f1c31d014f900b0e20a71754380a98674e49864493009d80f78e391"
+    },
+    {
+      "id": "public-transit-02-q4-answer",
+      "key": "49dccb942a0340a48fb85eca7b238702a0229b47f74539253537f34cf8c40338",
+      "characters": 14,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "083b3714a3888c9d1f6625d49b381511d6d33157fa3bc3c61009dd6a7fef3286"
+    },
+    {
+      "id": "public-transit-02-q4-explanation",
+      "key": "cece8b7d829b2ee63df5cd3aedea9100cae4720f2b92fef189ec6d89bbfbfc60",
+      "characters": 108,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "88e8b6fc91bbdb0b9271b9161ef1dabf969cb7dfc73649db45f92425d006ed2f"
+    },
+    {
+      "id": "public-transit-02-q5-question",
+      "key": "ed546c2d9cf861ed3718b7021d9123265c294e40d0fdc529510dcbd831b8335d",
+      "characters": 80,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "58b9957ceda3620a3aa668a1558dcb3220f68f8d6168b2a5db2816f70acf1114"
+    },
+    {
+      "id": "public-transit-02-q5-answer",
+      "key": "6ad9123553fbf831eccf0c1ed7301463376edb2a5905c23d49628dfc7898e23e",
+      "characters": 12,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "afb103ad076709d51d666ec34d89ea06a6773333952cc9ed035af65c8092b2bc"
+    },
+    {
+      "id": "public-transit-02-q5-explanation",
+      "key": "4cd9a427533a3e94d920149c242cb270e844ea08e0934a4081d6d352cf9f097a",
+      "characters": 99,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "338a1ec52a69b92d021b9cd3e7f74f05568fb0c91ed7655361bc05e5f350ce8d"
+    },
+    {
+      "id": "public-transit-02-q6-question",
+      "key": "70c11f31cb4a30671c753d7372a4767a3fba41975e0f948f4148e5fb79040802",
+      "characters": 66,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "7d9282df7b5ba6ac9f5d8be533d49a10e09a3546deb2109b00113735f2e2868f"
+    },
+    {
+      "id": "public-transit-02-q6-comment",
+      "key": "06907980bfef420ffd5fd752cb4b2dfb593bf7c3dfe3c18f58e475b76b2b3e29",
+      "characters": 39,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "4e4c9f2677a793f8ffd9a7956c593a7a19ec3b7b68ed1611533dddcedd5dae63"
+    },
+    {
+      "id": "public-transit-02-q6-follow",
+      "key": "b74615011f68405c3b6b89258ba612b99feea34931e3f82d1544b981836fe18a",
+      "characters": 23,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "dda4d38315e9ddf48624b48e0d9f8045fee955049492696aa69d72ed6e06d426"
+    }
+  ],
+  "verifiedCacheHits": 19,
+  "alignmentCacheHits": 19,
+  "stages": {
+    "generation": {
+      "wouldRun": false,
+      "provider": "OpenAI",
+      "maximumRequests": 0,
+      "conservativeBoundUSD": 0,
+      "derivesBriefInSameRequest": false,
+      "separateBriefPlanningCalls": 0
+    },
+    "review": {
+      "wouldRun": false,
+      "provider": "OpenAI",
+      "maximumRequests": 0,
+      "conservativeBoundUSD": 0
+    },
+    "tts": {
+      "wouldRun": false,
+      "provider": "Google Cloud Chirp 3 HD",
+      "maximumRequests": 0,
+      "exactUncachedCharacters": 0,
+      "estimatedNewSynthesisUSD": 0,
+      "conservativeBoundUSD": 0,
+      "basis": "Verified final narration and per-clip cache checks"
+    },
+    "alignment": {
+      "wouldRun": false,
+      "provider": null,
+      "costUSD": 0
+    },
+    "render": {
+      "wouldRun": false,
+      "provider": null,
+      "costUSD": 0
+    }
+  },
+  "conservativeTotalUSD": 0,
+  "pricing": {
+    "checked": "2026-11-10",
+    "verifyAgainBy": "2026-11-17",
+    "chirpUSDPerCharacter": 0.00003,
+    "googleSource": "https://cloud.google.com/text-to-speech/pricing",
+    "openaiSource": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+  },
+  "providerCalls": 0,
+  "note": "Dry run: no generation, synthesis, alignment or render. Cache hits require checksum, identity, duration and decode checks; estimates for ungenerated content are conditional."
+}

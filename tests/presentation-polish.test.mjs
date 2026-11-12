@@ -4,7 +4,12 @@ import {readFileSync} from 'node:fs';
 import {mkdtemp, mkdir, writeFile, rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
-import {getCompactQuestionLayout, getExplanationCaption, getSynchronizedCta, getMusicGain, MUSIC_MIX} from '../src/presentation.ts';
+import {getCompactQuestionLayout,COMPACT_PROMPT_HEIGHT, COUNTDOWN_ROW, getExplanationCaption, getNarrationCaption, getSynchronizedCta, getMusicGain, MUSIC_MIX, presentationSchema} from '../src/presentation.ts';
+import {productionSettings} from '../scripts/productionPlan.ts';
+import {NAMED_VOICE_PROFILES,resolveVoiceProfileFile} from '../scripts/voiceProfiles.ts';
+import {fileURLToPath} from 'node:url';
+import {CAPTION_BAND} from '../src/phraseCaptions.ts';
+import {defaultVoiceProfile} from '../scripts/generationContent.ts';
 import {getComparisonTimeline} from '../src/comparison.ts';
 import {draftToQuiz} from '../src/draftSchema.ts';
 import {preparedNarrationSchema, voiceProfileSchema} from '../src/narration.ts';
@@ -21,6 +26,37 @@ const selected = comparisonSegments(draft.narration, quiz.questions[2].id);
 const narration = {...full, clips: full.clips.filter((c) => selected.some((s) => s.id === c.id))};
 const t = getComparisonTimeline(quiz, 2, narration);
 
+test('countdown has padded room inside short, two-line and crowded panels without changing choice geometry',()=>{
+  for(const [prompt,context] of [[72.32,33.6],[144.64,33.6],[163,36],[163,62]]){
+    const g=getCompactQuestionLayout(prompt,context);
+    assert(g.feedbackDisplayHeight>=COUNTDOWN_ROW.minimumHeight);
+    assert(g.feedback+g.feedbackDisplayHeight<=CAPTION_BAND.panelHeight-COUNTDOWN_ROW.bottomGap);
+    assert(g.feedbackDisplayHeight-2*COUNTDOWN_ROW.padding>COUNTDOWN_ROW.barHeight);
+    assert.equal(g.feedback-g.answers,3*136+2*14+(prompt+context>200?8:prompt>150?12:24));
+  }
+  assert.equal(t.question.revealStart-t.question.countdownStart,150);
+});
+
+test('named voice overrides resolve to the exact tested profiles; Achird stays default',async()=>{
+  const root=fileURLToPath(new URL('../',import.meta.url));
+  for(const [name,file] of Object.entries(NAMED_VOICE_PROFILES)){
+    const settings=await productionSettings({voiceFile:name,presentationFile:'content/production/default.json',noMusic:true},root);
+    assert.deepEqual(settings.voice,json(file).profile);
+    assert.deepEqual(settings.voice, (await productionSettings({voiceFile:file,presentationFile:'content/production/default.json'},root)).voice);
+  }
+  assert.deepEqual(json('content/voice-profiles/selected-default.json').profile,json(NAMED_VOICE_PROFILES.achird).profile);
+  assert.equal(resolveVoiceProfileFile('custom/profile.json'),'custom/profile.json');
+});
+
+test('changing only the English voice invalidates English audio, preserves Korean audio, and ignores scenery',()=>{
+  const base=json(NAMED_VOICE_PROFILES.achird).profile,changed=structuredClone(base);
+  changed.voices['en-US']=json(NAMED_VOICE_PROFILES.kore).profile.voices['en-US'];
+  const en=selected.find(s=>s.language==='en-US'),ko=selected.find(s=>s.language==='ko-KR');
+  assert.notEqual(audioCacheKey(en,base),audioCacheKey(en,changed));
+  assert.equal(audioCacheKey(ko,base),audioCacheKey(ko,changed));
+  assert.equal(audioCacheKey({...en,backgroundAssetId:'some-other-image'},base),audioCacheKey(en,base));
+});
+
 test('compact geometry removes short-heading whitespace with fixed gaps and readable feedback space', () => {
   const short = getCompactQuestionLayout(72.32, 33.6), long = getCompactQuestionLayout(144.64, 33.6);
   assert.equal(short.answers - (short.context + 34), 20);
@@ -28,6 +64,20 @@ test('compact geometry removes short-heading whitespace with fixed gaps and read
   for (const layout of [short,long]) assert(layout.feedbackHeight >= 164);
   for (const phase of ['reading','countdown','reveal','comment']) assert.deepEqual(getCompactQuestionLayout(72.32,33.6), short, phase);
   assert.throws(() => getCompactQuestionLayout(350,36), /insufficient/u);
+});
+test('three-line headings retain font floors, fixed choice spacing and a countdown inside the compact panel',()=>{
+  assert(COMPACT_PROMPT_HEIGHT>=Math.ceil(48*1.13*3));
+  const geometry=getCompactQuestionLayout(Math.ceil(48*1.13*3),36);
+  assert.equal(geometry.answers-geometry.context-36,20);
+  assert(geometry.feedback+geometry.feedbackDisplayHeight<=CAPTION_BAND.panelHeight-12);
+  for(const phase of ['reading','countdown','reveal'])assert.deepEqual(getCompactQuestionLayout(163,36),geometry,phase);
+});
+test('a three-line heading plus two-line context fits above captions without shrinking the answer rows',()=>{
+  const layout=getCompactQuestionLayout(163,62);
+  assert.equal(layout.answers-layout.context-62,12);
+  assert.equal(layout.feedback-layout.answers,3*136+2*14+8);
+  assert(layout.feedback+layout.feedbackDisplayHeight<=CAPTION_BAND.panelHeight-12);
+  assert.equal(layout.feedbackDisplayHeight,72);
 });
 test('excerpt reuses complete timing and exact six source segments without the bonus question or private key', () => {
   assert.deepEqual(selected.map((c) => c.role), ['hook','question','answer','explanation','comment','follow']);
@@ -55,6 +105,36 @@ test('comment/follow visuals begin with corresponding audio, retaining neutral i
   assert.equal(getSynchronizedCta(t.ending.commentStart,t.audio,id),'comment');
   assert.equal(getSynchronizedCta(t.ending.followStart-1,t.audio,id),'comment');
   assert.equal(getSynchronizedCta(t.ending.followStart,t.audio,id),'follow');
+});
+
+test('all exact speech captions use measured boundaries and never return bonus answer/explanation text', () => {
+  for (const clip of t.audio) {
+    assert.notEqual(getNarrationCaption(clip.start-1,clip.contentId,t.audio)?.role,clip.role);
+    assert.equal(getNarrationCaption(clip.start,clip.contentId,t.audio)?.text,clip.text);
+    assert.equal(getNarrationCaption(clip.end-1,clip.contentId,t.audio)?.text,clip.text);
+    assert.notEqual(getNarrationCaption(clip.end,clip.contentId,t.audio)?.role,clip.role);
+    if (['answer','explanation'].includes(clip.role)) assert.equal(getNarrationCaption(clip.start,clip.contentId,t.audio,true),null);
+  }
+  const question = t.audio.find(c=>c.role==='question');
+  assert.notEqual(question.text,quiz.questions[2].prompt);
+  assert.equal(getNarrationCaption(t.question.countdownStart,question.contentId,t.audio),null);
+});
+
+test('configurable music multiplier raises every gain including ducking by exactly 25 percent', () => {
+  assert.equal(presentationSchema.parse({compactSpacing:true,synchronizedCaptions:true,backgroundAudio:true}).musicGain,1);
+  for(let f=0;f<t.durationInFrames;f++) {
+    const before=getMusicGain(f,t.durationInFrames,t.audio,[t.question]);
+    assert.equal(getMusicGain(f,t.durationInFrames,t.audio,[t.question],1.25),before*1.25);
+  }
+  assert(Math.abs(20*Math.log10(1.25)-1.9382)<0.001);
+  assert.equal(getMusicGain(0,t.durationInFrames,t.audio,[t.question],1.25),0);
+  assert.equal(getMusicGain(t.durationInFrames-1,t.durationInFrames,t.audio,[t.question],1.25),0);
+});
+
+test('Achird is the selected generation default without mutating existing accepted or manual voice profiles', () => {
+  assert.deepEqual(defaultVoiceProfile,profiles[2]);
+  assert.equal(draft.narration.profile.voices['en-US'],'en-US-Chirp3-HD-Kore');
+  voiceProfileSchema.parse(draft.narration.profile);
 });
 test('music uses smooth timeline ducking, quiet countdowns, and zero-gain composition boundaries', () => {
   const duration = t.durationInFrames, gain = (frame) => getMusicGain(frame,duration,t.audio,[t.question]);
@@ -134,3 +214,4 @@ test('comparison render preflight rejects missing/corrupt voice files before sta
   await writeFile(join(root,'public',narration.clips[0].file),'invalid fixture bytes');
   await assert.rejects(renderComparison(input,'a-baseline',false,root),/corrupt voice WAV/u);
 });
+

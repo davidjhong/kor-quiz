@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "jobId": "transit-phase6-01",
+  "source": "Explicit user reply: Approve transit production, up to $0.05",
+  "approvedOn": "2026-11-10",
+  "totalCapUSD": 0.05,
+  "scope": "13 missing Google Cloud Chirp 3 HD Achird EN/KO narration clips for the current full transit episode; 815 characters; at most one rate-limit retry per clip",
+  "estimatedNewSynthesisUSD": 0.02445,
+  "maximumSynthesisRequests": 26,
+  "conservativeBoundUSD": 0.0489,
+  "generationRequests": 0,
+  "reviewRequests": 0,
+  "excluded": ["other episodes", "new content/review calls", "Gemini", "images", "publishing"],
+  "dryRunReport": "out/phase6-dry-run.log"
+}

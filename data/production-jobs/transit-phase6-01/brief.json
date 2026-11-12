@@ -1,0 +1,7 @@
+{
+  "scenario": "Ask a station worker for help using public transit: locate the subway entrance, ask where to buy a ticket, find a platform, check whether a train goes to Seoul Station, ask where to transfer, and ask which exit to use for a named destination. State destinations and context clearly without asserting real route information. Keep the final exit question as the hard beginner comment bonus.",
+  "audience": "English-speaking adults learning practical beginner Korean for travel",
+  "level": "Beginner: two easy location questions, two medium service or destination questions, two harder transfer or exit questions",
+  "backgroundAssetId": "korean-transit-illustrated-dev-v1",
+  "scenarioType": "public-transit"
+}

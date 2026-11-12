@@ -1,5 +1,5 @@
 import {z} from 'zod';
-import {BACKGROUND_ASSET_IDS} from './assets/backgrounds.ts';
+import {backgroundIdSchema} from './assets/backgroundSchema.ts';
 
 export const CONTENT_LIMITS = {
   id: 64,
@@ -71,9 +71,7 @@ export const quizInputSchema = z.strictObject({
   endingMode: z.enum(['standard', 'comment-challenge']).optional(),
   minimumDurationSeconds: z.number().finite().positive().max(600).optional(),
   showRomanization: z.boolean().optional(),
-  backgroundAssetId: z.enum(BACKGROUND_ASSET_IDS, {
-    error: 'Unknown background asset ID; select an approved local manifest ID',
-  }).optional(),
+  backgroundAssetId: backgroundIdSchema.optional(),
   questions: z.array(quizQuestionSchema).min(1, 'At least one question is required')
     .max(CONTENT_LIMITS.questions, `At most ${CONTENT_LIMITS.questions} questions are supported`),
 }).superRefine((quiz, context) => {

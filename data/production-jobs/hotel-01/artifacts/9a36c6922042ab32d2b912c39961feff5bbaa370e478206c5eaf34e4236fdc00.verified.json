@@ -1,0 +1,52 @@
+{
+  "renderHash": "9a36c6922042ab32d2b912c39961feff5bbaa370e478206c5eaf34e4236fdc00",
+  "sha256": "ddeac381ecf54172543ef7f24e13cbfd93e8d60cedc0893c5c4460729cf8312e",
+  "temporary": "C:\\Users\\david\\Documents\\kor-vids\\out\\.production-render-PXQY1y\\normalized.mp4",
+  "verification": {
+    "metadata": {
+      "frames": 3462,
+      "duration": 115.4,
+      "width": 1080,
+      "height": 1920,
+      "fps": 30
+    },
+    "fullDecode": "PASS",
+    "rawMixedAudio": {
+      "integratedLUFS": -18.12,
+      "truePeakDbTP": -4,
+      "loudnessRangeLU": 17.8,
+      "raw": {
+        "input_i": "-18.12",
+        "input_tp": "-4.00",
+        "input_lra": "17.80",
+        "input_thresh": "-30.71",
+        "output_i": "-16.43",
+        "output_tp": "-2.00",
+        "output_lra": "13.40",
+        "output_thresh": "-28.27",
+        "normalization_type": "dynamic",
+        "target_offset": "0.43"
+      }
+    },
+    "finalMixedAudio": {
+      "integratedLUFS": -16.08,
+      "truePeakDbTP": -1.46,
+      "loudnessRangeLU": 13.2,
+      "raw": {
+        "input_i": "-16.08",
+        "input_tp": "-1.46",
+        "input_lra": "13.20",
+        "input_thresh": "-27.94",
+        "output_i": "-16.34",
+        "output_tp": "-2.00",
+        "output_lra": "9.50",
+        "output_thresh": "-27.70",
+        "normalization_type": "dynamic",
+        "target_offset": "0.34"
+      }
+    },
+    "zeroProviderCallsDuringRender": true
+  },
+  "propsFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\artifacts\\9a36c6922042ab32d2b912c39961feff5bbaa370e478206c5eaf34e4236fdc00.props.json",
+  "audioFile": "C:\\Users\\david\\Documents\\kor-vids\\public\\audio\\production\\hotel-01\\34e5a18f345818c42016b435b8337616a7b0f0b6845df69e0dcce529c482ddaa.json"
+}

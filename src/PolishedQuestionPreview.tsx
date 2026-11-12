@@ -1,4 +1,5 @@
 import {AbsoluteFill, Img, staticFile, useCurrentFrame} from 'remotion';
+import {CountdownRow} from './CountdownRow';
 import {getBackgroundAsset} from './assets/backgrounds';
 import {FittedText} from './FittedText';
 import {getQuestionState, PREVIEW_QUESTION_TIMELINE} from './questionTiming';
@@ -90,16 +91,9 @@ export const PolishedQuestionPreview = ({quiz}: PolishedQuestionPreviewProps) =>
         </div>
       </> : <FittedText text={question.explanation} label={`${question.id}.explanation`} height={190}
         fontSize={32} minFontSize={28} lineHeight={1.5} />}
-    </div> : <div style={{...slot(layout.feedbackTop), height: 106, display: 'flex', alignItems: 'center', gap: 28,
-      visibility: state.phase === 'countdown' ? 'visible' : 'hidden'}}>
-      <div style={{width: 88, fontSize: 84, fontWeight: 700, lineHeight: 1, color: green,
-        fontVariantNumeric: 'tabular-nums', visibility: state.phase === 'countdown' ? 'visible' : 'hidden'}}>
-        {state.secondsRemaining ?? ''}
-      </div>
-      <div style={{height: 12, flex: 1, background: '#4b5c4f', borderRadius: 8, overflow: 'hidden'}}>
-        <div style={{height: '100%', width: '100%', background: green,
-          transform: `scaleX(${1 - state.countdownProgress})`, transformOrigin: 'left center'}} />
-      </div>
+    </div> : <div style={slot(layout.feedbackTop)}>
+      <CountdownRow seconds={state.secondsRemaining} progress={state.countdownProgress} height={106} visible={state.phase==='countdown'}
+        color={green} accent={green} trackColor="#4b5c4f" fontSize={84} numberWidth={88}/>
     </div>}
   </AbsoluteFill>;
 };

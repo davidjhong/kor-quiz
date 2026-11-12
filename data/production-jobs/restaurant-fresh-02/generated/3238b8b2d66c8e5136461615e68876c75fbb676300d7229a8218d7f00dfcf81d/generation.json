@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "intentHash": "a61493c19b952edd9f13223a26149ad5c2da114fc3e5ce3bedbd35233811d73b",
+  "inputsHash": "42ce20e609036884f58dff31ef069284655da9bbffc37221a105fd39f9c46b17",
+  "budgetId": "p6-b11e3d5940535967ace5-generation",
+  "episodeId": "production-restaurant-fresh-02",
+  "promptVersion": "phase6-scenario-generation-v1",
+  "schemaVersion": "phase6-scenario-education-v1",
+  "deriveBrief": true,
+  "initialContentHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+  "status": "valid",
+  "requestedModel": "gpt-6-luna",
+  "returnedModel": "gpt-6-luna",
+  "attempts": 1
+}

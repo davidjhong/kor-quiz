@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "jobId": "hotel-01",
+  "approvedOn": "2026-11-11",
+  "source": "Explicit user instruction: authorize up to $0.23 TOTAL for this hotel-01 job's generation, automated review and TTS under the existing shared budget enforcement",
+  "totalCapUSD": 0.23,
+  "scope": ["Existing hotel-01 scenario generation", "Bounded automated review/correction/verification", "Missing Achird EN/KO Google TTS clips"],
+  "excluded": ["External image API spending", "Other episodes", "Publishing"],
+  "condition": "Proceed only after resumed dry run has no blockers and required conservative total bound is at most $0.23"
+}

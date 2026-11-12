@@ -1,0 +1,52 @@
+{
+  "renderHash": "a82333adb580f35065e404a8397ff3e94dc0680225e7f0dc2cd4aa7840a53128",
+  "sha256": "38cfcb9d7417ae3c71c00a1341693c7dbad42f31cf3118823f8cda9782e78b11",
+  "temporary": "C:\\Users\\david\\Documents\\kor-vids\\out\\.production-render-XM33tU\\normalized.mp4",
+  "verification": {
+    "metadata": {
+      "frames": 3603,
+      "duration": 120.1,
+      "width": 1080,
+      "height": 1920,
+      "fps": 30
+    },
+    "fullDecode": "PASS",
+    "rawMixedAudio": {
+      "integratedLUFS": -17.26,
+      "truePeakDbTP": -3.95,
+      "loudnessRangeLU": 19.2,
+      "raw": {
+        "input_i": "-17.26",
+        "input_tp": "-3.95",
+        "input_lra": "19.20",
+        "input_thresh": "-29.71",
+        "output_i": "-16.33",
+        "output_tp": "-2.00",
+        "output_lra": "13.70",
+        "output_thresh": "-28.27",
+        "normalization_type": "dynamic",
+        "target_offset": "0.33"
+      }
+    },
+    "finalMixedAudio": {
+      "integratedLUFS": -16.02,
+      "truePeakDbTP": -2,
+      "loudnessRangeLU": 13.7,
+      "raw": {
+        "input_i": "-16.02",
+        "input_tp": "-2.00",
+        "input_lra": "13.70",
+        "input_thresh": "-27.99",
+        "output_i": "-16.76",
+        "output_tp": "-2.00",
+        "output_lra": "8.70",
+        "output_thresh": "-28.20",
+        "normalization_type": "dynamic",
+        "target_offset": "0.76"
+      }
+    },
+    "zeroProviderCallsDuringRender": true
+  },
+  "propsFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\transit-phase6-01\\artifacts\\a82333adb580f35065e404a8397ff3e94dc0680225e7f0dc2cd4aa7840a53128.props.json",
+  "audioFile": "C:\\Users\\david\\Documents\\kor-vids\\public\\audio\\production\\transit-phase6-01\\e32e01214713000255b2c75f451cb26e7256ac381fffe3d7b24753381e03a72d.json"
+}

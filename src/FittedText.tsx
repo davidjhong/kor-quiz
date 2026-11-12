@@ -1,4 +1,4 @@
-import {useLayoutEffect, useRef} from 'react';
+import {useLayoutEffect, useRef, type ReactNode} from 'react';
 import {useDelayRender} from 'remotion';
 
 type FittedTextProps = {
@@ -14,11 +14,12 @@ type FittedTextProps = {
   lang?: string;
   balance?: boolean;
   onFit?: (height: number) => void;
+  children?: ReactNode;
 };
 
 /** Fit local-font text within a fixed slot, or fail instead of clipping it. */
 export const FittedText = ({text, label, height, fontSize, minFontSize, lineHeight,
-  fontWeight = 400, letterSpacing = 0, center = false, lang, balance = false, onFit}: FittedTextProps) => {
+  fontWeight = 400, letterSpacing = 0, center = false, lang, balance = false, onFit, children}: FittedTextProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const {delayRender, continueRender, cancelRender} = useDelayRender();
 
@@ -44,7 +45,7 @@ export const FittedText = ({text, label, height, fontSize, minFontSize, lineHeig
         element.style.fontSize = `${size}px`;
       }
       if (element.scrollHeight > height || element.scrollWidth > element.clientWidth) {
-        throw new Error(`${label}: text does not fit at ${minFontSize}px; shorten this field`);
+        throw new Error(`${label}: text does not fit at ${minFontSize}px; measured ${element.scrollWidth}x${element.scrollHeight} in ${element.clientWidth}x${height}px; shorten this field`);
       }
       onFit?.(element.getBoundingClientRect().height);
       finish();
@@ -58,7 +59,7 @@ export const FittedText = ({text, label, height, fontSize, minFontSize, lineHeig
   return <div style={{height, width: '100%', minWidth: 0, display: 'flex', alignItems: center ? 'center' : 'flex-start'}}>
     <div ref={ref} lang={lang} style={{width: '100%', fontSize, fontWeight, lineHeight,
       letterSpacing, overflowWrap: 'anywhere', wordBreak: lang === 'ko' ? 'keep-all' : 'normal', textWrap: balance ? 'balance' : 'wrap'}}>
-      {text}
+      {children ?? text}
     </div>
   </div>;
 };

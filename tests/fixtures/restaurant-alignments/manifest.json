@@ -1,0 +1,29 @@
+{
+  "kind": "actual-saved-alignment-fixtures",
+  "entries": [
+    {
+      "file": "337a1575cb82ea4e1601347da2db338954fd4677adf83cb305ec7f1efc9fb1cb.json",
+      "source": ".audio-cache/caption-alignments/337a1575cb82ea4e1601347da2db338954fd4677adf83cb305ec7f1efc9fb1cb.json",
+      "sha256": "e08c0ba713ff723645f864232b85fc6a425a736b7bf7cef6af60c030055a0e98",
+      "zeroWord": "finished"
+    },
+    {
+      "file": "51f74b04fc5946f07d21bb530341a82cd365add3fc534abc716cefd612c18c8c.json",
+      "source": ".audio-cache/caption-alignments/51f74b04fc5946f07d21bb530341a82cd365add3fc534abc716cefd612c18c8c.json",
+      "sha256": "36362d12e45b640f7ea11f69f562dbc2e19500361c33160fcaf1aa1ad2fc770c",
+      "zeroWord": "Your"
+    },
+    {
+      "file": "ac22eaf618bfa5e63d1c511ed5548d1d567fba86f5e4335df5414efdce28679e.json",
+      "source": ".audio-cache/caption-alignments/ac22eaf618bfa5e63d1c511ed5548d1d567fba86f5e4335df5414efdce28679e.json",
+      "sha256": "4bce8e6bd647b5426e5dba306f0b48432c605113a37a53d59533214bdfe07819",
+      "zeroWord": "chosen"
+    },
+    {
+      "file": "edc479448c1923fa820624a575630700ef36f72e242ef0edcf7c45ff8372039c.json",
+      "source": ".audio-cache/caption-alignments/edc479448c1923fa820624a575630700ef36f72e242ef0edcf7c45ff8372039c.json",
+      "sha256": "99ac603f62316aacd2e8304e4c00ddfdab0ed52c777e4dd2c1c6d7929395553c",
+      "zeroWord": "but"
+    }
+  ]
+}

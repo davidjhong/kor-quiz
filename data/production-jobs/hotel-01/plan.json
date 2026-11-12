@@ -1,0 +1,254 @@
+{
+  "version": 1,
+  "source": "a5fae1db35113462af0f82b2dff4c4b485d35debe1ed01b4fcf11b5249917204",
+  "contentHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+  "brief": {
+    "status": "validated-content",
+    "value": {
+      "scenario": "Beginner Korean at a hotel",
+      "audience": "English-speaking adults learning practical beginner Korean for travel",
+      "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+      "backgroundAssetId": "korean-hotel-illustrated-v1",
+      "scenarioType": "hotel",
+      "context": "A traveler with a reservation checks in, makes simple requests, gets help with hotel facilities, and asks staff about a checkout-related need.",
+      "learningObjectives": [
+        "Tell hotel staff politely that you would like to check in.",
+        "Request one additional towel.",
+        "Ask for the hotel Wi-Fi password.",
+        "Ask where the elevator is.",
+        "Report a key card problem and ask staff to check it.",
+        "Ask permission to leave luggage after checking out."
+      ]
+    }
+  },
+  "acceptance": {
+    "valid": true,
+    "kind": "automated"
+  },
+  "assets": {
+    "background": {
+      "id": "korean-hotel-illustrated-v1",
+      "sha256": "8b58c68bb61b3480461764b1ba403069723300e087c725b3da7809cf04d0d9f8",
+      "selection": "developer-selected",
+      "file": "backgrounds/korean-hotel-illustrated-v1.png"
+    },
+    "music": {
+      "file": "audio/music/subtle-bass-loop.wav",
+      "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+      "durationSeconds": 60.390375
+    }
+  },
+  "hashes": {
+    "content": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+    "speech": "a96d365a65691202a2826f31317a20ab6e0d2e72eb2a4c01e65fd3ca956e542c",
+    "voice": "db17474cb6961bf1aba4e883daf7739a7cdcdf99a5bbc83d4505cc48a2c01635",
+    "presentation": "f5dc9016c31e265bd56204c16af843aced2af92389cd518c44e51e1a1ecb4acb",
+    "audioProcessing": "037433f06cfa6357591ebb0e3a67ea084fbc8766a3e0bbc16588e93b607985e1",
+    "alignment": "bbe38a4ca7157f14d348a966649537f6613ac5b4d8db490ef592a236c2b89d2c",
+    "grouping": "d47898d1270485c704be003be4f13d4734d50175367b345a80a10f7c734fde0e",
+    "background": "8b58c68bb61b3480461764b1ba403069723300e087c725b3da7809cf04d0d9f8",
+    "music": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40"
+  },
+  "blockers": [],
+  "inventory": [
+    {
+      "id": "production-hotel-01-hook",
+      "key": "b03314a1a056b827307ce797080d4b15544d9502a7f510a176d151da28c98eb8",
+      "characters": 25,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "8f52a2a13b697799973f7c45c2f5d83103a68de23f830ae6c63a1954e59a3741"
+    },
+    {
+      "id": "production-hotel-01-q1-question",
+      "key": "3582c25883f850f6f24d2f266c9f8594d5cb3985ccb3aa21af550f26ec1d163b",
+      "characters": 78,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "cfd30c02a5d50b5b7db424c92587db6268cd12fd58c37d0f01e8834233919920"
+    },
+    {
+      "id": "production-hotel-01-q1-answer",
+      "key": "9717129477089ecbb94f72d8450cf45a511284321161883e1c7afb5b60b4abec",
+      "characters": 10,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "cb75844500bd96eb088c76d29e9c262b53c3e1652afe471512747257de13ea91"
+    },
+    {
+      "id": "production-hotel-01-q1-explanation",
+      "key": "1da491a360acb43d0d9e5704d1ec3324d821877544b848b917bdef790b8dd3df",
+      "characters": 79,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "f5766e3f9a2a7d96bcd97359107a29b0acdc2fbb940844e38eebbed9a31e10aa"
+    },
+    {
+      "id": "production-hotel-01-q2-question",
+      "key": "d96a77d9602818d52165625b80b698b713c7e1e1be05f540b07f1f3b6caa583d",
+      "characters": 46,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "c685d22f016760669973c7d7490d73a9953400d0dc3a9a73271d8b6c2d29c850"
+    },
+    {
+      "id": "production-hotel-01-q2-answer",
+      "key": "d92ffd0adb938e1ef822a7b48e523033b9e788ee0ee047438e2275b6d4d93ea2",
+      "characters": 12,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "adf57f019dcba7df7ea05341b95136fea28a52c52760a42a73a8f9f7ea5e9360"
+    },
+    {
+      "id": "production-hotel-01-q2-explanation",
+      "key": "c7aeead22785bc6aaf82c418c88a6092edaf0003d4ceddc5ec868843ab543542",
+      "characters": 94,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "1946cbf0c15e708c6c04161db7cd363c1a61d6aa083bd986a4d738ac60266e4b"
+    },
+    {
+      "id": "production-hotel-01-q3-question",
+      "key": "f1291f79cbc69bb42fb2cea9040d917b7936eb11bc81ac8974896ac39d3b8f3b",
+      "characters": 60,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "29b8686e7cfa943a309f91016c2fb5cddc8f2e2398ebf99b0ae35895684d32cd"
+    },
+    {
+      "id": "production-hotel-01-q3-answer",
+      "key": "ce28522e2324085e2ef8e531ba67275fa67d6ae580bde0bde909f6f915b576bf",
+      "characters": 15,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "70737061d897d27fd9e1d262049807d4b9a1d9c99bc60de6f758278f3f4db199"
+    },
+    {
+      "id": "production-hotel-01-q3-explanation",
+      "key": "19bd1e6216ffd69f36e6bcdb54a2c83fa701588d7c172259d1649bf7ab0507fa",
+      "characters": 94,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "43c1d8ab6f209562fbf9958d66392566325386d06ca1837ff85f7047151887bf"
+    },
+    {
+      "id": "production-hotel-01-q4-question",
+      "key": "413e47558a72e99c56ee06642139de5f6d6e62d34fc37248e75beb08dcc607f1",
+      "characters": 55,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "87ab04fc2c5ad1184c8baa2dae339fce0d97333ba48672467b32e5875ad08db5"
+    },
+    {
+      "id": "production-hotel-01-q4-answer",
+      "key": "1e3a3b2d410334cdee6111f02dcaa78784618de88a988a87b49248ca8d5c9c2b",
+      "characters": 12,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "5d0b21b7c75179e8ca188d2062a7216115255f15073f5167bc9671b39df60c4d"
+    },
+    {
+      "id": "production-hotel-01-q4-explanation",
+      "key": "52b52bc02546851a6640f935f3e17b2ee0da41246b8300ae3683dffcf7605ae3",
+      "characters": 90,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "ed86d717dc73c5d9ee9ce98aa0f52c3f0f4b131c03648a101fd41e19af8339ef"
+    },
+    {
+      "id": "production-hotel-01-q5-question",
+      "key": "d9c17b440d63744a8d90bc1aa77aa46b43ba94510cf6f5e9524c9b2fb95f1015",
+      "characters": 72,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "5f3bc78a76885c1d34b43d37f0806d5803db96fee02c156a3159eda9634ff5a5"
+    },
+    {
+      "id": "production-hotel-01-q5-answer",
+      "key": "ccd3f80aec6971e41a87215c98a9a9166abd591867b5810f713c75900f3d7771",
+      "characters": 19,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "93d1be44c8d2edc20230be4a5e5be69e989297ffaad8318714878d3a0302ae01"
+    },
+    {
+      "id": "production-hotel-01-q5-explanation",
+      "key": "6956f362c4cc2baf0cddde93e211a6207d0a3014293e358e2d85e59e89a5fc2f",
+      "characters": 106,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "4fd9964da93c9ac3661b9b5a627cda979bfb48f1c586ec25bcaf1187914fd7d7"
+    },
+    {
+      "id": "production-hotel-01-q6-question",
+      "key": "c06f8d6985e2f61b043e8cd95b6d486ddb4970e660d2c1c3c94481fa9a133d11",
+      "characters": 81,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "e3c1141ad13c5b48aa4798e8b5762b702fb28cd208a6b4d10f0b5862274b388b"
+    },
+    {
+      "id": "production-hotel-01-q6-comment",
+      "key": "06907980bfef420ffd5fd752cb4b2dfb593bf7c3dfe3c18f58e475b76b2b3e29",
+      "characters": 39,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "4e4c9f2677a793f8ffd9a7956c593a7a19ec3b7b68ed1611533dddcedd5dae63"
+    },
+    {
+      "id": "production-hotel-01-q6-follow",
+      "key": "b74615011f68405c3b6b89258ba612b99feea34931e3f82d1544b981836fe18a",
+      "characters": 23,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "dda4d38315e9ddf48624b48e0d9f8045fee955049492696aa69d72ed6e06d426"
+    }
+  ],
+  "verifiedCacheHits": 19,
+  "alignmentCacheHits": 19,
+  "stages": {
+    "generation": {
+      "wouldRun": false,
+      "provider": "OpenAI",
+      "maximumRequests": 0,
+      "conservativeBoundUSD": 0,
+      "derivesBriefInSameRequest": false,
+      "separateBriefPlanningCalls": 0
+    },
+    "review": {
+      "wouldRun": false,
+      "provider": "OpenAI",
+      "maximumRequests": 0,
+      "conservativeBoundUSD": 0
+    },
+    "tts": {
+      "wouldRun": false,
+      "provider": "Google Cloud Chirp 3 HD",
+      "maximumRequests": 0,
+      "exactUncachedCharacters": 0,
+      "estimatedNewSynthesisUSD": 0,
+      "conservativeBoundUSD": 0,
+      "basis": "Verified final narration and per-clip cache checks"
+    },
+    "alignment": {
+      "wouldRun": false,
+      "provider": null,
+      "costUSD": 0
+    },
+    "render": {
+      "wouldRun": true,
+      "provider": null,
+      "costUSD": 0
+    }
+  },
+  "conservativeTotalUSD": 0,
+  "pricing": {
+    "checked": "2026-11-10",
+    "verifyAgainBy": "2026-11-17",
+    "chirpUSDPerCharacter": 0.00003,
+    "googleSource": "https://cloud.google.com/text-to-speech/pricing",
+    "openaiSource": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+  },
+  "providerCalls": 0,
+  "note": "Dry run: no generation, synthesis, alignment or render. Cache hits require checksum, identity, duration and decode checks; estimates for ungenerated content are conditional."
+}

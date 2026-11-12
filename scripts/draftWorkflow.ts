@@ -1,9 +1,10 @@
-import {mkdir, readFile, readdir, rename, writeFile} from 'node:fs/promises';
+import {mkdir, readdir, rename, writeFile} from 'node:fs/promises';
 import {dirname, join, resolve} from 'node:path';
 import {z} from 'zod';
 import {briefSchema, bonusAnswerKeySchema, draftSchema, validateDraftContent,
   type Draft, type BonusAnswerKey} from '../src/draftSchema.ts';
 import {getBackgroundAsset} from '../src/assets/backgrounds.ts';
+import {loadBackgroundCatalog} from './backgroundCatalog.ts';
 import {tokenUsageSchema} from '../src/draftSchema.ts';
 import {getChoiceHangul, type QuizInput} from '../src/quizSchema.ts';
 import {BONUS_CTA_LABELS, buildNarrationPlan, type NarrationScript} from '../src/narration.ts';
@@ -73,6 +74,7 @@ const messages = (error: unknown) => error instanceof z.ZodError
   ? error.issues.map((issue) => `${issue.path.join('.') || 'draft'}: ${issue.message}`)
   : [error instanceof Error ? error.message : String(error)];
 export const inspectDraft = async (raw: unknown, rawKey: unknown, root = PROJECT_ROOT): Promise<ValidationReport> => {
+  await loadBackgroundCatalog(root);
   const report: ValidationReport = {valid: false, contentHash: contentHash(raw, rawKey), errors: [], warnings: [
     'Structural validation does not establish Korean accuracy, naturalness, difficulty or semantic answer uniqueness. A separate manual or automated linguistic review is required.',
   ], linguisticReviewRequired: true, generationEstimatedCostUSD: 0, reportedGenerationUsage: null, renderReady: false, renderBlockers: []};
@@ -144,6 +146,9 @@ export const reviewMarkdown = (raw: unknown, rawKey: unknown, report: Validation
     `Render readiness: **${report.renderReady ? 'READY' : 'BLOCKED'}**`, ...report.renderBlockers.map((b) => `- ${safe(b)}`), '',
     '## Validation failures', '', ...report.errors.map((e) => `- ${safe(e)}`), ...(report.errors.length ? [] : ['None.']), '',
     '## Warnings and repetition/ambiguity review', '', ...report.warnings.map((w) => `- ${safe(w)}`), ''];
+  if(data.brief?.context||data.brief?.learningObjectives)lines.push('## Learning plan', '',
+    ...(data.brief.context?[`Context: ${safe(data.brief.context)}`,'']:[]),
+    ...(data.brief.learningObjectives??[]).map((objective,i)=>`${i+1}. ${safe(objective)}`),'');
   if (Array.isArray(data.quiz?.questions)) data.quiz.questions.forEach((q, i) => {
     if (!q || typeof q !== 'object') {lines.push(`Question ${i + 1}: invalid object; see validation failures.`, ''); return;}
     lines.push(`## ${i + 1}. ${safe(q.id)} — ${safe(q.difficulty)}${i === 5 ? ' — COMMENT BONUS' : ''}`, '',
@@ -236,7 +241,7 @@ export const writeReview = async (directory: string, root = PROJECT_ROOT, mode: 
   }
   return report;
 };
-export const importDraft = async (source: unknown, brief: unknown, directory: string, options: {dryRun?: boolean; replace?: boolean; root?: string} = {}) => {
+export const importDraft = async (source: unknown, brief: unknown, directory: string, options: {dryRun?: boolean; replace?: boolean; root?: string; generatedAt?:string} = {}) => {
   // Unknown fields such as model-supplied "approved" are rejected, never promoted to approvals.
   const input = z.strictObject({quiz: z.unknown(), narration: z.unknown(), bonusAnswerKey: z.unknown()}).parse(source);
   if (input.quiz === undefined || input.narration === undefined || input.bonusAnswerKey === undefined) throw new Error('Import requires quiz, narration and bonusAnswerKey fields');
@@ -251,7 +256,7 @@ export const importDraft = async (source: unknown, brief: unknown, directory: st
   }
   const draft = {version: 1, brief: parsedBrief, quiz: input.quiz, narration: input.narration,
     provenance: {method: 'local-import', provider: 'local-authoring', model: null, promptVersion: 'phase5-local-v1',
-      generatedAt: new Date().toISOString(), sourceHash, reportedUsage: null, estimatedCostUSD: 0}};
+      generatedAt: options.generatedAt ?? new Date().toISOString(), sourceHash, reportedUsage: null, estimatedCostUSD: 0}};
   const report = await inspectDraft(draft, input.bonusAnswerKey, options.root);
   if (options.dryRun) return report;
   await atomicJson(join(directory, 'answer-key.json'), input.bonusAnswerKey);

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "directory": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\generated\\a5fae1db35113462af0f82b2dff4c4b485d35debe1ed01b4fcf11b5249917204",
+  "sourceHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+  "model": "gpt-6-luna",
+  "promptVersion": "phase5b-automated-review-v1",
+  "capUnits": 56400000,
+  "state": "accepted",
+  "attempts": [
+    {
+      "phase": "review",
+      "state": "complete",
+      "reservedUnits": 18800000,
+      "chargedUnits": 960875,
+      "usage": {
+        "inputTokens": 2951,
+        "outputTokens": 1184,
+        "totalTokens": 4135,
+        "reasoningTokens": 862,
+        "cachedInputTokens": 0
+      },
+      "requestId": "req_dccb30d4d9d24bfa915f0910ead92bd2",
+      "returnedModel": "gpt-6-luna",
+      "startedAt": "2026-11-11T09:04:49.855Z"
+    }
+  ],
+  "finalHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d"
+}

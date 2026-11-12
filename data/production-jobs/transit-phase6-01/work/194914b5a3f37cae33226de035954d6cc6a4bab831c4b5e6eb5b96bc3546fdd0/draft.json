@@ -1,0 +1,357 @@
+{
+  "version": 1,
+  "brief": {
+    "scenario": "Ask a station worker for help using public transit: locate the subway entrance, ask where to buy a ticket, find a platform, check whether a train goes to Seoul Station, ask where to transfer, and ask which exit to use for a named destination. State destinations and context clearly without asserting real route information. Keep the final exit question as the hard beginner comment bonus.",
+    "audience": "English-speaking adults learning practical beginner Korean for travel",
+    "level": "Beginner: two easy location questions, two medium service or destination questions, two harder transfer or exit questions",
+    "backgroundAssetId": "korean-transit-illustrated-dev-v1",
+    "scenarioType": "public-transit"
+  },
+  "provenance": {
+    "method": "openai-responses",
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "requestedModel": "gpt-6-luna",
+    "returnedModel": "gpt-6-luna",
+    "promptVersion": "phase5b-quality-v1",
+    "schemaVersion": "phase5b-quality-education-v1",
+    "generatedAt": "2026-11-05T06:52:47.447Z",
+    "sourceHash": "c3134f803e5316a4f392b293806ea2be0908e6cc054155ac7c93922925e7f61f",
+    "requestId": "req_7354966aa34c41de8e08666b76cf591d",
+    "responseId": "resp_082861318ac73679016aec27c0132887d0ad46f518673f1b84",
+    "reportedUsage": {
+      "inputTokens": 2161,
+      "outputTokens": 5220,
+      "totalTokens": 7381,
+      "reasoningTokens": 3491,
+      "cachedInputTokens": 1370
+    },
+    "estimatedCostUSD": 0.002880125,
+    "attempts": 1,
+    "pricingSource": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+    "pricingDate": "2026-11-04",
+    "generationId": "phase5b-quality-02"
+  },
+  "quiz": {
+    "videoId": "public-transit-02",
+    "episodeTitle": "Can you say it in Korean?",
+    "openingSubtitle": "Easy to hard",
+    "endingMode": "comment-challenge",
+    "minimumDurationSeconds": 65,
+    "showRomanization": true,
+    "backgroundAssetId": "korean-transit-illustrated-dev-v1",
+    "questions": [
+      {
+        "id": "public-transit-02-q1",
+        "scenario": "At the subway entrance",
+        "difficulty": "easy",
+        "context": "You are at the station and need to enter the subway.",
+        "prompt": "Ask where the subway entrance is.",
+        "spokenPrompt": "You’re at the station. How would you ask where to enter the subway?",
+        "choices": [
+          {
+            "hangul": "화장실은 어디예요?",
+            "romanization": "hwajangsireun eodiyeyo?"
+          },
+          {
+            "hangul": "지하철 입구가 어디예요?",
+            "romanization": "jihacheol ipguga eodiyeyo?"
+          },
+          {
+            "hangul": "출구는 어디예요?",
+            "romanization": "chulguneun eodiyeyo?"
+          }
+        ],
+        "correctAnswerIndex": 1,
+        "explanation": "This asks where the subway entrance is. 어디예요? is a polite way to ask where something is.",
+        "reveal": {
+          "translation": "Where is the subway entrance?",
+          "teachingPoint": "지하철 입구 = subway entrance; 어디예요? = where is it?"
+        }
+      },
+      {
+        "id": "public-transit-02-q2",
+        "scenario": "Finding the platform",
+        "difficulty": "easy",
+        "context": "You need to find the platform before boarding.",
+        "prompt": "Ask where the platform is.",
+        "spokenPrompt": "You’re ready to board, but need directions. What would you ask?",
+        "choices": [
+          {
+            "hangul": "출구는 어디예요?",
+            "romanization": "chulguneun eodiyeyo?"
+          },
+          {
+            "hangul": "매표소는 어디예요?",
+            "romanization": "maepyosoneun eodiyeyo?"
+          },
+          {
+            "hangul": "승강장은 어디예요?",
+            "romanization": "seunggangjangeun eodiyeyo?"
+          }
+        ],
+        "correctAnswerIndex": 2,
+        "explanation": "This asks where the platform is. The topic marker 은 introduces the platform as the topic of the question.",
+        "reveal": {
+          "translation": "Where is the platform?",
+          "teachingPoint": "승강장 = platform; 은 어디예요? = where is it?"
+        }
+      },
+      {
+        "id": "public-transit-02-q3",
+        "scenario": "Buying a ticket",
+        "difficulty": "medium",
+        "context": "You need to buy a ticket at the station.",
+        "prompt": "Ask where you can buy a ticket.",
+        "spokenPrompt": "You need a ticket before traveling. What would you ask the station worker?",
+        "choices": [
+          {
+            "hangul": "표는 어디에서 사요?",
+            "romanization": "pyoneun eodieseo sayo?"
+          },
+          {
+            "hangul": "표는 어디에서 받아요?",
+            "romanization": "pyoneun eodieseo badayo?"
+          },
+          {
+            "hangul": "표는 어디에서 확인해요?",
+            "romanization": "pyoneun eodieseo hwaginhaeyo?"
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "This asks where to buy a ticket. 사요 means “buy,” while 받아요 means “receive.”",
+        "reveal": {
+          "translation": "Where can I buy a ticket?",
+          "teachingPoint": "표 = ticket; 어디에서 = where; 사요 = buy"
+        }
+      },
+      {
+        "id": "public-transit-02-q4",
+        "scenario": "Checking a train's destination",
+        "difficulty": "medium",
+        "context": "You need to confirm whether this train goes to Seoul Station.",
+        "prompt": "Ask if this train goes to Seoul Station.",
+        "spokenPrompt": "You’re not sure about the destination. How would you check where this train goes?",
+        "choices": [
+          {
+            "hangul": "이 열차는 공항에 가요?",
+            "romanization": "i yeolchaneun gonghange gayo?"
+          },
+          {
+            "hangul": "이 열차는 서울역에 가요?",
+            "romanization": "i yeolchaneun seoullyeoge gayo?"
+          },
+          {
+            "hangul": "이 열차는 부산에 가요?",
+            "romanization": "i yeolchaneun busane gayo?"
+          }
+        ],
+        "correctAnswerIndex": 1,
+        "explanation": "This asks whether the train goes to Seoul Station. 에 marks the destination in this sentence.",
+        "reveal": {
+          "translation": "Does this train go to Seoul Station?",
+          "teachingPoint": "서울역에 = to Seoul Station; 가요? = does it go?"
+        }
+      },
+      {
+        "id": "public-transit-02-q5",
+        "scenario": "Changing trains",
+        "difficulty": "hard",
+        "context": "Your route requires a train change, and you need the station name.",
+        "prompt": "Ask which station to transfer at.",
+        "spokenPrompt": "You need to change trains along the way. How would you ask which station to use?",
+        "choices": [
+          {
+            "hangul": "어느 역에서 갈아타요?",
+            "romanization": "eoneu yeogeseo garatayo?"
+          },
+          {
+            "hangul": "어느 역에서 내려요?",
+            "romanization": "eoneu yeogeseo naeryeoyo?"
+          },
+          {
+            "hangul": "어느 역에서 타요?",
+            "romanization": "eoneu yeogeseo tayo?"
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "This asks which station to transfer at. 갈아타요 means to change or transfer to another train.",
+        "reveal": {
+          "translation": "Which station do I transfer at?",
+          "teachingPoint": "어느 역에서 = at which station; 갈아타요 = transfer"
+        }
+      },
+      {
+        "id": "public-transit-02-q6",
+        "scenario": "Choosing a station exit",
+        "difficulty": "hard",
+        "context": "You are going to City Hall and want to know which exit to use.",
+        "prompt": "Ask which exit to use for City Hall.",
+        "spokenPrompt": "You’re heading to City Hall. How would you ask which exit to take?",
+        "choices": [
+          {
+            "hangul": "공원은 몇 번 출구예요?",
+            "romanization": "gongwoneun myeot beon chulguyeyo?"
+          },
+          {
+            "hangul": "은행은 몇 번 출구예요?",
+            "romanization": "eunhaengeun myeot beon chulguyeyo?"
+          },
+          {
+            "hangul": "시청은 몇 번 출구예요?",
+            "romanization": "sicheongeun myeot beon chulguyeyo?"
+          }
+        ]
+      }
+    ]
+  },
+  "narration": {
+    "version": 1,
+    "profile": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Kore",
+        "ko-KR": "ko-KR-Chirp3-HD-Kore"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "segments": [
+      {
+        "id": "public-transit-02-hook",
+        "contentId": "public-transit-02",
+        "role": "hook",
+        "language": "en-US",
+        "text": "Can you say it in Korean?"
+      },
+      {
+        "id": "public-transit-02-q1-question",
+        "contentId": "public-transit-02-q1",
+        "role": "question",
+        "language": "en-US",
+        "text": "You’re at the station. How would you ask where to enter the subway?"
+      },
+      {
+        "id": "public-transit-02-q1-answer",
+        "contentId": "public-transit-02-q1",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "지하철 입구가 어디예요?"
+      },
+      {
+        "id": "public-transit-02-q1-explanation",
+        "contentId": "public-transit-02-q1",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "This asks where the subway entrance is. Use this polite question pattern when you need to locate a place."
+      },
+      {
+        "id": "public-transit-02-q2-question",
+        "contentId": "public-transit-02-q2",
+        "role": "question",
+        "language": "en-US",
+        "text": "You’re ready to board, but need directions. What would you ask?"
+      },
+      {
+        "id": "public-transit-02-q2-answer",
+        "contentId": "public-transit-02-q2",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "승강장은 어디예요?"
+      },
+      {
+        "id": "public-transit-02-q2-explanation",
+        "contentId": "public-transit-02-q2",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "This asks where the platform is. The ending is a polite way to ask about the location of a place."
+      },
+      {
+        "id": "public-transit-02-q3-question",
+        "contentId": "public-transit-02-q3",
+        "role": "question",
+        "language": "en-US",
+        "text": "You need a ticket before traveling. What would you ask the station worker?"
+      },
+      {
+        "id": "public-transit-02-q3-answer",
+        "contentId": "public-transit-02-q3",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "표는 어디에서 사요?"
+      },
+      {
+        "id": "public-transit-02-q3-explanation",
+        "contentId": "public-transit-02-q3",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "This asks where you can buy a ticket. The verb here means “buy,” so it’s useful when asking where to purchase something."
+      },
+      {
+        "id": "public-transit-02-q4-question",
+        "contentId": "public-transit-02-q4",
+        "role": "question",
+        "language": "en-US",
+        "text": "You’re not sure about the destination. How would you check where this train goes?"
+      },
+      {
+        "id": "public-transit-02-q4-answer",
+        "contentId": "public-transit-02-q4",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "이 열차는 서울역에 가요?"
+      },
+      {
+        "id": "public-transit-02-q4-explanation",
+        "contentId": "public-transit-02-q4",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "This asks whether the train goes to Seoul Station. The particle after a place name can mark the destination."
+      },
+      {
+        "id": "public-transit-02-q5-question",
+        "contentId": "public-transit-02-q5",
+        "role": "question",
+        "language": "en-US",
+        "text": "You need to change trains along the way. How would you ask which station to use?"
+      },
+      {
+        "id": "public-transit-02-q5-answer",
+        "contentId": "public-transit-02-q5",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "어느 역에서 갈아타요?"
+      },
+      {
+        "id": "public-transit-02-q5-explanation",
+        "contentId": "public-transit-02-q5",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "This asks which station you should transfer at. The verb means to change from one train to another."
+      },
+      {
+        "id": "public-transit-02-q6-question",
+        "contentId": "public-transit-02-q6",
+        "role": "question",
+        "language": "en-US",
+        "text": "You’re heading to City Hall. How would you ask which exit to take?"
+      },
+      {
+        "id": "public-transit-02-q6-comment",
+        "contentId": "public-transit-02-q6",
+        "role": "comment",
+        "language": "en-US",
+        "text": "What do you think? Comment your answer!"
+      },
+      {
+        "id": "public-transit-02-q6-follow",
+        "contentId": "public-transit-02-q6",
+        "role": "follow",
+        "language": "en-US",
+        "text": "Follow for more Korean!"
+      }
+    ]
+  }
+}

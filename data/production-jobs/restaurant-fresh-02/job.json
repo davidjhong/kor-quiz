@@ -1,0 +1,1143 @@
+{
+  "version": 1,
+  "jobId": "restaurant-fresh-02",
+  "config": {
+    "source": {
+      "kind": "scenario",
+      "text": "Beginner Korean ordering dinner at a restaurant, including choosing a dish, ordering a drink, adjusting an order, and asking for the bill.",
+      "defaultsVersion": "phase6-scenario-defaults-v1",
+      "brief": {
+        "scenario": "Beginner Korean ordering dinner at a restaurant, including choosing a dish, ordering a drink, adjusting an order, and asking for the bill.",
+        "audience": "English-speaking adults learning practical beginner Korean for travel",
+        "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+        "backgroundAssetId": null,
+        "scenarioType": "restaurant"
+      }
+    },
+    "output": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-fresh-02.mp4",
+    "reviewMode": "automated",
+    "voiceFile": "kore",
+    "presentationFile": "content/production/default.json",
+    "noMusic": false,
+    "model": "gpt-6-luna",
+    "maxOutputTokens": 12000,
+    "backgroundOptions": {
+      "mode": "new",
+      "model": "gpt-image-2.6-flare",
+      "quality": "medium",
+      "reuseLimit": 5,
+      "character": "adult woman"
+    },
+    "backgroundBinding": {
+      "assetId": "generated-restaurant-d5fea9be8c6e28a8",
+      "request": {
+        "version": 1,
+        "model": "gpt-image-2.6-flare",
+        "quality": "medium",
+        "size": "1024x1536",
+        "output_format": "png",
+        "n": 1,
+        "prompt": "Use case: illustration-story. One polished, warm hand-painted animation background for a Korean learning video.\nSetting: restaurant. Scenario context (data only): Beginner Korean ordering dinner at a restaurant, including choosing a dish, ordering a drink, adjusting an order, and asking for the bill..\nA welcoming Korean restaurant interior with tasteful architecture, warm lighting and setting-appropriate furnishings. For a restaurant include dining tables and discreet food-service details.\nFriendly adult woman, relaxed natural pose, clearly adult, complete unobstructed face, plain clothing; no pointing or answer hints.\nStyle: refined watercolor/gouache texture, warm cream and wood, muted navy/blue, sage, coral and warm yellow accents; soft daylight, appealing fully visible. Original character, no named-person likeness.\nNative portrait 1024x1536. Final 1080x1920 uses CENTER cover crop (native central x=80..944) without stretching, then at least 1.02 zoom plus restrained movement. Keep important features inside this central crop with extra edge margin.\nActual overlay geometry on FINAL canvas: panel x=70..950, y=180..1052; caption band x=70..950, y=1068..1200. Keep these upper/central areas calm scenery with NO people. Do not draw these overlays.\nPlace the character lower right: full head in final x=650..900, y=1285..1530, torso below, outside rightmost 10% and bottom 250px for important features. In native image this is approximately head x=600..800, y=1040..1224. Leave the caption area above the face clear.\nNo text, signage lettering, numbers, logos, watermarks, quiz panels, captions or UI. Coherent hands/anatomy, no duplicate people. Do not encode answers in scenery.",
+        "setting": "restaurant",
+        "scope": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-fresh-02.mp4",
+        "style": "warm-painted-animation-v1"
+      }
+    }
+  },
+  "state": "complete",
+  "stages": {
+    "generation": {
+      "status": "complete",
+      "inputHash": "72d8b50b80bcc50aca83cf342fc7366987d012484ca2e41d88be917cd232696a",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\generated\\3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d\\draft.json",
+          "sha256": "f9b8a705065f021c436278b536175afd0a9fc88dba52a0b314da75fe5d415c89"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\generated\\3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d\\answer-key.json",
+          "sha256": "342083b85b5743c641c38c6285b329b937db72ff275b2ed0049cf368a4e7fe57"
+        }
+      ]
+    },
+    "import": {
+      "status": "planned",
+      "inputHash": "3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d",
+      "outputs": [],
+      "details": {}
+    },
+    "validation": {
+      "status": "complete",
+      "inputHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+      "outputs": [],
+      "details": {
+        "structural": "PASS",
+        "background": {
+          "id": "generated-restaurant-d5fea9be8c6e28a8",
+          "file": "backgrounds/generated-restaurant-d5fea9be8c6e28a8.png",
+          "sha256": "f9523f2763cd10a8a19d73f16cf6d218139d134f0f64545f91c4aea7480312c5",
+          "scenarioType": "restaurant",
+          "selection": "developer-selected",
+          "scenarioLabel": "AT A KOREAN RESTAURANT",
+          "framing": {
+            "scale": 1.02,
+            "origin": "50% 0%"
+          }
+        },
+        "acceptance": {
+          "valid": true,
+          "kind": "automated"
+        }
+      }
+    },
+    "review": {
+      "status": "complete",
+      "inputHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-acceptances\\98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0.json",
+          "sha256": "1b508399620e07c08c5892f1e2ba56b9f1824fd11871cf71a823f3903e3c8644"
+        }
+      ],
+      "details": {
+        "reusedAcceptance": true,
+        "humanReviewed": false
+      }
+    },
+    "audio": {
+      "status": "complete",
+      "inputHash": "98fd94697f6e79238534606cd1d8f32634b7d420d9a6fdca0faa3a6bc90f163d",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\public\\audio\\production\\restaurant-fresh-02\\98fd94697f6e79238534606cd1d8f32634b7d420d9a6fdca0faa3a6bc90f163d.json",
+          "sha256": "a655bdd1dbffe8c6a0f4d9d33890d9d0e07cfe7fde62fdc8acefed3faba65700"
+        }
+      ],
+      "details": {
+        "cacheHits": 19,
+        "recoveredOriginals": 0,
+        "localPrepared": 0,
+        "newSynthesisRequests": 0,
+        "newSynthesisCharacters": 0
+      }
+    },
+    "alignment": {
+      "status": "complete",
+      "inputHash": "4ab6c22c890b23476dd4e251a2f384c9e958d9069417c2c0002f0bf92f5453a0",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\e3c9d1ffd6b95003bfe74e91bfb5ad64064cb2312294725f8b5715b763c5aa4b.json",
+          "sha256": "26d9f9d41ba0373444d576f4d1e0909d5f9c6f6bd0f2d7732898ba4c9ab66904"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\ac22eaf618bfa5e63d1c511ed5548d1d567fba86f5e4335df5414efdce28679e.json",
+          "sha256": "4bce8e6bd647b5426e5dba306f0b48432c605113a37a53d59533214bdfe07819"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\375a653a22692181d66d4d800e289568e3933de4f6f93748119c355318599b40.json",
+          "sha256": "bc708b40fa7a02bf056bae99137c61dfdb0acb738ea4a3118ffb255c60ff064e"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\ae5f965aab1356a6b6b94ff66b3913427cf274b42911e89395d2ea858e17a432.json",
+          "sha256": "ebfb24feb208c8927568c4449233f5de77fffedb7141d73a1dd5aa3080fab2e3"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\25aca66b80848491bc13a87718398b11344cec7b35cf36ac340717906377a939.json",
+          "sha256": "b3810ae1a9a6bb4d384371e8b9443a67dc48852439675414c6ba4565c0288092"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\87f899cc21b4d9a9d4046f62bfe741a7e66f0e4e60775041b3853440849783a5.json",
+          "sha256": "d4aaa744dfd1161b15911f032373f5a2d23974ff75350b5fccf79dcad9636592"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\f2911e48c3c09a9307c468f6e988c51d7f03f86b2e947ebc567c5ef12405cf59.json",
+          "sha256": "627859d89e23804010c5f666819fa51765566890a407ec127b0fa84f13280fa0"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\edc479448c1923fa820624a575630700ef36f72e242ef0edcf7c45ff8372039c.json",
+          "sha256": "99ac603f62316aacd2e8304e4c00ddfdab0ed52c777e4dd2c1c6d7929395553c"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\dbe1db52209b49730221996cf96f188a9334fab4a144b29f1df95e36a742a6fd.json",
+          "sha256": "8a5b6ac7b0783aa33ba0f1c14cc4fc4bc8dd34f8bf774efa660457c3c6e00b8d"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\03a1f6b6de96dc29a62fb923d981d6f2269831774b877f76998a66dd107dcade.json",
+          "sha256": "086ec58d9c27390db511cc9952d2762e528e7b15ce2626ca515095e589bc2cfd"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\51f74b04fc5946f07d21bb530341a82cd365add3fc534abc716cefd612c18c8c.json",
+          "sha256": "36362d12e45b640f7ea11f69f562dbc2e19500361c33160fcaf1aa1ad2fc770c"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\49695ec6ee5791342c10c5acb0ee290423e4f097049648ee2e7b7797e999b3e4.json",
+          "sha256": "db50f92b97212a2ab9ccddcfb45d3de5a2d62406066a16776cb59677fb632e6f"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\7d62feeb0537834dd9f3c9d64c2fba7d3b1a42e009a98721dc17ba3274da1d5d.json",
+          "sha256": "8a6c05189531b6a7a968a5bd4e6c0e2c99465635b0c71cf971065e07df11e6d4"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\337a1575cb82ea4e1601347da2db338954fd4677adf83cb305ec7f1efc9fb1cb.json",
+          "sha256": "e08c0ba713ff723645f864232b85fc6a425a736b7bf7cef6af60c030055a0e98"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\48ab4df0f1f8c7a3bcdc76b7514125934ec89665186c7171c52ea8ba7a6cddd7.json",
+          "sha256": "ec0c70a28b14363c35a2cae05bb85c1257a10d7e2a9b32855bd849d0a8632b24"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\a4cd33ceeda35b7bc4db2b75aa072b94eaf8a66dcb25bd5fae301dfcb8cd6e14.json",
+          "sha256": "49561dc13c936f88bd0c4873cd7311541ea08a7fed6b57e7e70d2f85edd4b521"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\33c73c31649f843e9a95bb2525fafeb37c14518c870c8771df411c8dbd3a6ca3.json",
+          "sha256": "2227b67da66fd67fc4a16f0aa23e7f48040602addb818f4f8f25a696a5f5888f"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\dceeedf166d86ee585cbdd704c70d5bb55dd46056ebac885c7221e016dc2e069.json",
+          "sha256": "520f16adb318e8a4327c981f9440e61821eebb10b82a0917802f446379c2ae6b"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\cb0239125745312bab83ff8a6727d0cb88806e91aa57d83cfaec761b25731655.json",
+          "sha256": "98bf6c988a8b9ab62ae9972a5df8e6362bdb958dcc11b2919b637c27fb60296d"
+        }
+      ],
+      "details": {
+        "cacheHits": 19,
+        "newLocalAlignments": 0,
+        "providerCalls": 0,
+        "phraseAnchoredArticles": [
+          {
+            "clipId": "production-restaurant-fresh-02-q1-question",
+            "text": "chosen",
+            "atSeconds": 0.78
+          },
+          {
+            "clipId": "production-restaurant-fresh-02-q3-question",
+            "text": "but",
+            "atSeconds": 1.34
+          },
+          {
+            "clipId": "production-restaurant-fresh-02-q4-question",
+            "text": "Your",
+            "atSeconds": 0.52
+          },
+          {
+            "clipId": "production-restaurant-fresh-02-q5-question",
+            "text": "finished",
+            "atSeconds": 0.98
+          }
+        ]
+      }
+    },
+    "captions": {
+      "status": "complete",
+      "inputHash": "d8d2b1c99637bef7d9f75f6ebcdbdacbac68f34e27e13de475a983962016a92b",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\artifacts\\d8d2b1c99637bef7d9f75f6ebcdbdacbac68f34e27e13de475a983962016a92b.captions.json",
+          "sha256": "33a4fe72bdbfcb9cfb38c89e913aac972028056d6cfb1974b25fed5f2bf93845"
+        }
+      ]
+    },
+    "render": {
+      "status": "complete",
+      "inputHash": "a30ddbf85d3e01958db7aee491257f13ed30735178a8a106e207f987ae853d19",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-fresh-02.mp4",
+          "sha256": "49f54d91f759a33d955f4e74dc3aa0215e4eccfa00f37a74c871a4ec7f36b2ad"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\artifacts\\a30ddbf85d3e01958db7aee491257f13ed30735178a8a106e207f987ae853d19.props.json",
+          "sha256": "ea4c562aed70cf273eb5923a0f267925db543138ca1dd5c84b67d3ad7730a131"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\artifacts\\a30ddbf85d3e01958db7aee491257f13ed30735178a8a106e207f987ae853d19.verified.json",
+          "sha256": "9a8ec7168c63ffa4da091479b2506d943e1dd73ed61bbf5dd317814194561087"
+        }
+      ],
+      "details": {
+        "metadata": {
+          "frames": 3582,
+          "duration": 119.4,
+          "width": 1080,
+          "height": 1920,
+          "fps": 30
+        },
+        "fullDecode": "PASS",
+        "rawMixedAudio": {
+          "integratedLUFS": -17.21,
+          "truePeakDbTP": -3.93,
+          "loudnessRangeLU": 19.1,
+          "raw": {
+            "input_i": "-17.21",
+            "input_tp": "-3.93",
+            "input_lra": "19.10",
+            "input_thresh": "-29.97",
+            "output_i": "-16.46",
+            "output_tp": "-2.00",
+            "output_lra": "14.30",
+            "output_thresh": "-28.76",
+            "normalization_type": "dynamic",
+            "target_offset": "0.46"
+          }
+        },
+        "finalMixedAudio": {
+          "integratedLUFS": -16.07,
+          "truePeakDbTP": -2,
+          "loudnessRangeLU": 14.2,
+          "raw": {
+            "input_i": "-16.07",
+            "input_tp": "-2.00",
+            "input_lra": "14.20",
+            "input_thresh": "-28.35",
+            "output_i": "-16.47",
+            "output_tp": "-2.00",
+            "output_lra": "10.20",
+            "output_thresh": "-28.43",
+            "normalization_type": "dynamic",
+            "target_offset": "0.47"
+          }
+        },
+        "zeroProviderCallsDuringRender": true
+      }
+    },
+    "verification": {
+      "status": "complete",
+      "inputHash": "a30ddbf85d3e01958db7aee491257f13ed30735178a8a106e207f987ae853d19",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-fresh-02.verification.json",
+          "sha256": "5789ad9b40e74219cf2117aab744198c7032f90c004fe89436b7d4ce0e982f90"
+        }
+      ],
+      "details": {
+        "metadata": {
+          "frames": 3582,
+          "duration": 119.4,
+          "width": 1080,
+          "height": 1920,
+          "fps": 30
+        },
+        "fullDecode": "PASS",
+        "rawMixedAudio": {
+          "integratedLUFS": -17.21,
+          "truePeakDbTP": -3.93,
+          "loudnessRangeLU": 19.1,
+          "raw": {
+            "input_i": "-17.21",
+            "input_tp": "-3.93",
+            "input_lra": "19.10",
+            "input_thresh": "-29.97",
+            "output_i": "-16.46",
+            "output_tp": "-2.00",
+            "output_lra": "14.30",
+            "output_thresh": "-28.76",
+            "normalization_type": "dynamic",
+            "target_offset": "0.46"
+          }
+        },
+        "finalMixedAudio": {
+          "integratedLUFS": -16.07,
+          "truePeakDbTP": -2,
+          "loudnessRangeLU": 14.2,
+          "raw": {
+            "input_i": "-16.07",
+            "input_tp": "-2.00",
+            "input_lra": "14.20",
+            "input_thresh": "-28.35",
+            "output_i": "-16.47",
+            "output_tp": "-2.00",
+            "output_lra": "10.20",
+            "output_thresh": "-28.43",
+            "normalization_type": "dynamic",
+            "target_offset": "0.47"
+          }
+        },
+        "zeroProviderCallsDuringRender": true
+      }
+    },
+    "image": {
+      "status": "complete",
+      "inputHash": "f0a3a9626b3e44a1c3e9e847ef8ab3f2f86173e5695e404e09b0113f3726724e",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\public\\backgrounds\\generated-restaurant-d5fea9be8c6e28a8.png",
+          "sha256": "f9523f2763cd10a8a19d73f16cf6d218139d134f0f64545f91c4aea7480312c5"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\image\\d5fea9be8c6e28a89b947a0ecb1747aefed26e4dfbb5cbaff6eb33e1cc6a0ee2\\receipt.json",
+          "sha256": "8c792fb9aff891d69aff7fb6890d217675f4e61b5678928785cefc1ba3b1d105"
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "stage": "validation",
+      "previous": {
+        "status": "planned",
+        "inputHash": "3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-12T07:24:35.723Z"
+    },
+    {
+      "stage": "generation",
+      "previous": {
+        "status": "planned",
+        "inputHash": "3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-12T07:24:35.738Z"
+    },
+    {
+      "stage": "review",
+      "previous": {
+        "status": "planned",
+        "inputHash": "3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d",
+        "outputs": [],
+        "details": {
+          "wouldRun": true
+        }
+      },
+      "invalidatedAt": "2026-11-12T07:25:13.624Z"
+    },
+    {
+      "stage": "review",
+      "previous": {
+        "status": "complete",
+        "inputHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+        "outputs": [
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-acceptances\\98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0.json",
+            "sha256": "1b508399620e07c08c5892f1e2ba56b9f1824fd11871cf71a823f3903e3c8644"
+          }
+        ]
+      },
+      "invalidatedAt": "2026-11-12T07:25:55.563Z"
+    },
+    {
+      "stage": "audio",
+      "previous": {
+        "status": "planned",
+        "inputHash": "3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-12T07:25:55.566Z"
+    },
+    {
+      "stage": "alignment",
+      "previous": {
+        "status": "planned",
+        "inputHash": "3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-12T07:28:37.015Z"
+    },
+    {
+      "stage": "alignment",
+      "error": "production-restaurant-fresh-02-q1-question: unusable local alignment: Unusable word alignment",
+      "at": "2026-11-12T07:29:03.101Z"
+    },
+    {
+      "stage": "validation",
+      "previous": {
+        "status": "complete",
+        "inputHash": "3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d",
+        "outputs": [],
+        "details": {
+          "structural": "PASS",
+          "background": {
+            "id": "generated-restaurant-d5fea9be8c6e28a8",
+            "file": "backgrounds/generated-restaurant-d5fea9be8c6e28a8.png",
+            "sha256": "f9523f2763cd10a8a19d73f16cf6d218139d134f0f64545f91c4aea7480312c5",
+            "scenarioType": "restaurant",
+            "selection": "developer-selected",
+            "scenarioLabel": "AT A KOREAN RESTAURANT",
+            "framing": {
+              "scale": 1.02,
+              "origin": "50% 0%"
+            }
+          },
+          "acceptance": {
+            "valid": false,
+            "kind": "automated"
+          }
+        }
+      },
+      "invalidatedAt": "2026-11-12T07:33:13.052Z"
+    },
+    {
+      "stage": "review",
+      "previous": {
+        "status": "complete",
+        "inputHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+        "outputs": [
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-acceptances\\98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0.json",
+            "sha256": "1b508399620e07c08c5892f1e2ba56b9f1824fd11871cf71a823f3903e3c8644"
+          }
+        ],
+        "details": {
+          "reusedAcceptance": true,
+          "humanReviewed": false
+        }
+      },
+      "invalidatedAt": "2026-11-12T07:34:23.774Z"
+    },
+    {
+      "stage": "audio",
+      "previous": {
+        "status": "complete",
+        "inputHash": "98fd94697f6e79238534606cd1d8f32634b7d420d9a6fdca0faa3a6bc90f163d",
+        "outputs": [
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\public\\audio\\production\\restaurant-fresh-02\\98fd94697f6e79238534606cd1d8f32634b7d420d9a6fdca0faa3a6bc90f163d.json",
+            "sha256": "a655bdd1dbffe8c6a0f4d9d33890d9d0e07cfe7fde62fdc8acefed3faba65700"
+          }
+        ],
+        "details": {
+          "cacheHits": 3,
+          "recoveredOriginals": 0,
+          "localPrepared": 0,
+          "newSynthesisRequests": 16,
+          "newSynthesisCharacters": 933
+        }
+      },
+      "invalidatedAt": "2026-11-12T07:34:23.781Z"
+    },
+    {
+      "stage": "alignment",
+      "previous": {
+        "status": "failed",
+        "inputHash": "4ab6c22c890b23476dd4e251a2f384c9e958d9069417c2c0002f0bf92f5453a0",
+        "outputs": [],
+        "error": "production-restaurant-fresh-02-q1-question: unusable local alignment: Unusable word alignment"
+      },
+      "invalidatedAt": "2026-11-12T07:35:22.154Z"
+    },
+    {
+      "stage": "alignment",
+      "error": "production-restaurant-fresh-02-q1-question: unusable local alignment: Unusable word alignment",
+      "at": "2026-11-12T07:35:32.179Z"
+    },
+    {
+      "stage": "validation",
+      "previous": {
+        "status": "complete",
+        "inputHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+        "outputs": [],
+        "details": {
+          "structural": "PASS",
+          "background": {
+            "id": "generated-restaurant-d5fea9be8c6e28a8",
+            "file": "backgrounds/generated-restaurant-d5fea9be8c6e28a8.png",
+            "sha256": "f9523f2763cd10a8a19d73f16cf6d218139d134f0f64545f91c4aea7480312c5",
+            "scenarioType": "restaurant",
+            "selection": "developer-selected",
+            "scenarioLabel": "AT A KOREAN RESTAURANT",
+            "framing": {
+              "scale": 1.02,
+              "origin": "50% 0%"
+            }
+          },
+          "acceptance": {
+            "valid": true,
+            "kind": "automated"
+          }
+        }
+      },
+      "invalidatedAt": "2026-11-12T07:56:37.502Z"
+    },
+    {
+      "stage": "review",
+      "previous": {
+        "status": "complete",
+        "inputHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+        "outputs": [
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-acceptances\\98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0.json",
+            "sha256": "1b508399620e07c08c5892f1e2ba56b9f1824fd11871cf71a823f3903e3c8644"
+          }
+        ],
+        "details": {
+          "reusedAcceptance": true,
+          "humanReviewed": false
+        }
+      },
+      "invalidatedAt": "2026-11-12T07:57:52.187Z"
+    },
+    {
+      "stage": "audio",
+      "previous": {
+        "status": "complete",
+        "inputHash": "98fd94697f6e79238534606cd1d8f32634b7d420d9a6fdca0faa3a6bc90f163d",
+        "outputs": [
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\public\\audio\\production\\restaurant-fresh-02\\98fd94697f6e79238534606cd1d8f32634b7d420d9a6fdca0faa3a6bc90f163d.json",
+            "sha256": "a655bdd1dbffe8c6a0f4d9d33890d9d0e07cfe7fde62fdc8acefed3faba65700"
+          }
+        ],
+        "details": {
+          "cacheHits": 19,
+          "recoveredOriginals": 0,
+          "localPrepared": 0,
+          "newSynthesisRequests": 0,
+          "newSynthesisCharacters": 0
+        }
+      },
+      "invalidatedAt": "2026-11-12T07:57:52.190Z"
+    },
+    {
+      "stage": "validation",
+      "previous": {
+        "status": "complete",
+        "inputHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+        "outputs": [],
+        "details": {
+          "structural": "PASS",
+          "background": {
+            "id": "generated-restaurant-d5fea9be8c6e28a8",
+            "file": "backgrounds/generated-restaurant-d5fea9be8c6e28a8.png",
+            "sha256": "f9523f2763cd10a8a19d73f16cf6d218139d134f0f64545f91c4aea7480312c5",
+            "scenarioType": "restaurant",
+            "selection": "developer-selected",
+            "scenarioLabel": "AT A KOREAN RESTAURANT",
+            "framing": {
+              "scale": 1.02,
+              "origin": "50% 0%"
+            }
+          },
+          "acceptance": {
+            "valid": true,
+            "kind": "automated"
+          }
+        }
+      },
+      "invalidatedAt": "2026-11-12T08:05:50.110Z"
+    },
+    {
+      "stage": "review",
+      "previous": {
+        "status": "complete",
+        "inputHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+        "outputs": [
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-acceptances\\98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0.json",
+            "sha256": "1b508399620e07c08c5892f1e2ba56b9f1824fd11871cf71a823f3903e3c8644"
+          }
+        ],
+        "details": {
+          "reusedAcceptance": true,
+          "humanReviewed": false
+        }
+      },
+      "invalidatedAt": "2026-11-12T08:07:09.583Z"
+    },
+    {
+      "stage": "audio",
+      "previous": {
+        "status": "running",
+        "inputHash": "98fd94697f6e79238534606cd1d8f32634b7d420d9a6fdca0faa3a6bc90f163d",
+        "outputs": []
+      },
+      "invalidatedAt": "2026-11-12T08:07:09.591Z"
+    },
+    {
+      "stage": "alignment",
+      "previous": {
+        "status": "failed",
+        "inputHash": "4ab6c22c890b23476dd4e251a2f384c9e958d9069417c2c0002f0bf92f5453a0",
+        "outputs": [],
+        "error": "production-restaurant-fresh-02-q1-question: unusable local alignment: Unusable word alignment"
+      },
+      "invalidatedAt": "2026-11-12T08:08:15.783Z"
+    },
+    {
+      "stage": "captions",
+      "previous": {
+        "status": "planned",
+        "inputHash": "3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-12T08:08:15.923Z"
+    },
+    {
+      "stage": "render",
+      "previous": {
+        "status": "planned",
+        "inputHash": "3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-12T08:08:15.936Z"
+    },
+    {
+      "stage": "verification",
+      "previous": {
+        "status": "planned",
+        "inputHash": "3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-12T08:13:42.979Z"
+    }
+  ],
+  "revisions": [
+    {
+      "hash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+      "directory": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\revisions\\98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+      "sourceIdentity": "3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d"
+    }
+  ],
+  "paidOptIn": true,
+  "createdAt": "2026-11-12T07:24:13.223Z",
+  "updatedAt": "2026-11-12T08:13:42.981Z",
+  "sourceIdentity": "3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d",
+  "configuration": {
+    "voice": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Kore",
+        "ko-KR": "ko-KR-Chirp3-HD-Kore"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "presentation": {
+      "compactSpacing": true,
+      "synchronizedCaptions": true,
+      "backgroundAudio": true,
+      "musicGain": 1.25,
+      "captionStyle": "phrases",
+      "bookendStyle": "display"
+    },
+    "alignment": {
+      "version": "phrase-alignment-v1",
+      "engine": "stable-ts",
+      "engineVersion": "2.19.1",
+      "whisperVersion": "20250625",
+      "torchVersion": "2.8.0+cpu",
+      "model": "base",
+      "modelSha256": "ed3a0b6b1c0edf879ad9b11b1af5a0e6ab5db9205f891f668f8b0e6c6326e34e",
+      "device": "cpu",
+      "sampleRate": 16000,
+      "threads": 4,
+      "fp16": false,
+      "regroup": false,
+      "suppressSilence": true,
+      "vad": false,
+      "fastMode": false
+    },
+    "grouping": {
+      "version": "automatic-phrases-v3-sentence-anchors",
+      "englishWords": 4,
+      "maximumWords": 5,
+      "maximumCharacters": 36,
+      "koreanWholeUtterance": true
+    },
+    "audioProcessing": "loudnorm-I-16-TP-1.5-LRA-11-mono-24000-v1"
+  },
+  "narration": {
+    "version": 1,
+    "profile": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Kore",
+        "ko-KR": "ko-KR-Chirp3-HD-Kore"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "segments": [
+      {
+        "id": "production-restaurant-fresh-02-hook",
+        "contentId": "production-restaurant-fresh-02",
+        "role": "hook",
+        "language": "en-US",
+        "text": "Can you say it in Korean?"
+      },
+      {
+        "id": "production-restaurant-fresh-02-q1-question",
+        "contentId": "production-restaurant-fresh-02-q1",
+        "role": "question",
+        "language": "en-US",
+        "text": "You’ve chosen bibimbap for dinner. How would you order it?"
+      },
+      {
+        "id": "production-restaurant-fresh-02-q1-answer",
+        "contentId": "production-restaurant-fresh-02-q1",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "비빔밥 주세요."
+      },
+      {
+        "id": "production-restaurant-fresh-02-q1-explanation",
+        "contentId": "production-restaurant-fresh-02-q1",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "Bibimbap, please. Put the dish you want before the polite phrase used to ask for something."
+      },
+      {
+        "id": "production-restaurant-fresh-02-q2-question",
+        "contentId": "production-restaurant-fresh-02-q2",
+        "role": "question",
+        "language": "en-US",
+        "text": "You’d like a cup of barley tea with your meal. How do you order it?"
+      },
+      {
+        "id": "production-restaurant-fresh-02-q2-answer",
+        "contentId": "production-restaurant-fresh-02-q2",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "보리차 한 잔 주세요."
+      },
+      {
+        "id": "production-restaurant-fresh-02-q2-explanation",
+        "contentId": "production-restaurant-fresh-02-q2",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "One cup of barley tea, please. The phrase for one cup or glass comes after the drink name."
+      },
+      {
+        "id": "production-restaurant-fresh-02-q3-question",
+        "contentId": "production-restaurant-fresh-02-q3",
+        "role": "question",
+        "language": "en-US",
+        "text": "You enjoy the dish, but want less heat. How would you ask?"
+      },
+      {
+        "id": "production-restaurant-fresh-02-q3-answer",
+        "contentId": "production-restaurant-fresh-02-q3",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "덜 맵게 해 주세요."
+      },
+      {
+        "id": "production-restaurant-fresh-02-q3-explanation",
+        "contentId": "production-restaurant-fresh-02-q3",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "Please make it less spicy. The word for less can also be used with other descriptions, such as salty."
+      },
+      {
+        "id": "production-restaurant-fresh-02-q4-question",
+        "contentId": "production-restaurant-fresh-02-q4",
+        "role": "question",
+        "language": "en-US",
+        "text": "Your meal comes with onions, but you’d prefer none. What would you ask?"
+      },
+      {
+        "id": "production-restaurant-fresh-02-q4-answer",
+        "contentId": "production-restaurant-fresh-02-q4",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "양파 빼 주세요."
+      },
+      {
+        "id": "production-restaurant-fresh-02-q4-explanation",
+        "contentId": "production-restaurant-fresh-02-q4",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "Please leave out the onions. The verb in this request means to remove something or leave it out."
+      },
+      {
+        "id": "production-restaurant-fresh-02-q5-question",
+        "contentId": "production-restaurant-fresh-02-q5",
+        "role": "question",
+        "language": "en-US",
+        "text": "You’ve finished eating and are ready to settle up. What would you ask for?"
+      },
+      {
+        "id": "production-restaurant-fresh-02-q5-answer",
+        "contentId": "production-restaurant-fresh-02-q5",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "계산서 주세요."
+      },
+      {
+        "id": "production-restaurant-fresh-02-q5-explanation",
+        "contentId": "production-restaurant-fresh-02-q5",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "The bill, please. The first word means bill, and the ending turns it into a polite request."
+      },
+      {
+        "id": "production-restaurant-fresh-02-q6-question",
+        "contentId": "production-restaurant-fresh-02-q6",
+        "role": "question",
+        "language": "en-US",
+        "text": "You and your friend are paying for your own meals. How would you ask to handle the bill?"
+      },
+      {
+        "id": "production-restaurant-fresh-02-q6-comment",
+        "contentId": "production-restaurant-fresh-02-q6",
+        "role": "comment",
+        "language": "en-US",
+        "text": "What do you think? Comment your answer!"
+      },
+      {
+        "id": "production-restaurant-fresh-02-q6-follow",
+        "contentId": "production-restaurant-fresh-02-q6",
+        "role": "follow",
+        "language": "en-US",
+        "text": "Follow for more Korean!"
+      }
+    ]
+  },
+  "assets": {
+    "background": {
+      "id": "generated-restaurant-d5fea9be8c6e28a8",
+      "file": "backgrounds/generated-restaurant-d5fea9be8c6e28a8.png",
+      "sha256": "f9523f2763cd10a8a19d73f16cf6d218139d134f0f64545f91c4aea7480312c5",
+      "scenarioType": "restaurant",
+      "selection": "developer-selected",
+      "scenarioLabel": "AT A KOREAN RESTAURANT",
+      "framing": {
+        "scale": 1.02,
+        "origin": "50% 0%"
+      }
+    },
+    "music": {
+      "file": "audio/music/subtle-bass-loop.wav",
+      "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+      "durationSeconds": 60.390375
+    }
+  },
+  "maxCostUSD": 0.74,
+  "contentHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+  "budget": {
+    "ledger": "C:\\Users\\david\\Documents\\kor-vids\\data\\generation-budgets\\produce-restaurant-fresh-02.json",
+    "version": 2,
+    "kind": "production-budget",
+    "jobId": "restaurant-fresh-02",
+    "capUnits": 740000000,
+    "authorization": "Explicit --allow-paid and total --max-cost-usd for this production job",
+    "allocations": {
+      "image-d5fea9be8c6e28a89b947a0e": {
+        "stage": "image",
+        "inputHash": "d5fea9be8c6e28a89b947a0ecb1747aefed26e4dfbb5cbaff6eb33e1cc6a0ee2",
+        "allocatedUnits": 505115000,
+        "chargedUnits": 35865000,
+        "state": "settled",
+        "childBudgetId": "p6-509bdeb7a807a4f10013-image",
+        "requests": [
+          {
+            "key": "d5fea9be8c6e28a89b947a0ecb1747aefed26e4dfbb5cbaff6eb33e1cc6a0ee2",
+            "state": "received",
+            "units": 505115000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\image\\d5fea9be8c6e28a89b947a0ecb1747aefed26e4dfbb5cbaff6eb33e1cc6a0ee2\\original.png",
+            "sha256": "f9523f2763cd10a8a19d73f16cf6d218139d134f0f64545f91c4aea7480312c5"
+          }
+        ],
+        "usage": {
+          "providerRequests": 1,
+          "usage": {
+            "input_tokens": 381,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 381
+            },
+            "output_tokens": 1132,
+            "output_tokens_details": {
+              "image_tokens": 1132,
+              "text_tokens": 0
+            },
+            "total_tokens": 1513
+          },
+          "costKnown": true,
+          "receipt": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\image\\d5fea9be8c6e28a89b947a0ecb1747aefed26e4dfbb5cbaff6eb33e1cc6a0ee2\\receipt.json"
+        }
+      },
+      "generation-72d8b50b80bcc50aca83cf34": {
+        "stage": "generation",
+        "inputHash": "72d8b50b80bcc50aca83cf342fc7366987d012484ca2e41d88be917cd232696a",
+        "allocatedUnits": 37600000,
+        "chargedUnits": 1729750,
+        "state": "settled",
+        "childBudgetId": "p6-b11e3d5940535967ace5-generation",
+        "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\generation-budgets\\p6-b11e3d5940535967ace5-generation.json",
+        "requests": [],
+        "usage": [
+          {
+            "state": "valid",
+            "usage": {
+              "inputTokens": 2338,
+              "outputTokens": 2875,
+              "totalTokens": 5213,
+              "reasoningTokens": 1162,
+              "cachedInputTokens": 0
+            }
+          }
+        ]
+      },
+      "review-98659d8c82e7ca00834d3212": {
+        "stage": "review",
+        "inputHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+        "allocatedUnits": 56400000,
+        "chargedUnits": 1650750,
+        "state": "settled",
+        "childBudgetId": "p6-5ff0b7497afbbdcf3f7d-review",
+        "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-review-budgets\\p6-5ff0b7497afbbdcf3f7d-review.json",
+        "requests": [],
+        "usage": [
+          {
+            "state": "complete",
+            "usage": {
+              "inputTokens": 2938,
+              "outputTokens": 2567,
+              "totalTokens": 5505,
+              "reasoningTokens": 2233,
+              "cachedInputTokens": 0
+            }
+          }
+        ]
+      },
+      "tts-98fd94697f6e79238534606c": {
+        "stage": "tts",
+        "inputHash": "98fd94697f6e79238534606cd1d8f32634b7d420d9a6fdca0faa3a6bc90f163d",
+        "allocatedUnits": 55980000,
+        "chargedUnits": 27990000,
+        "state": "settled",
+        "childBudgetId": "p6-c0c5577b5e6c631754b1-tts",
+        "requests": [
+          {
+            "key": "177dca4a62b6037cb08196f6173818af38cde04c6b9f3e315f33c5705740a797",
+            "state": "received",
+            "units": 1740000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\tts-responses\\177dca4a62b6037cb08196f6173818af38cde04c6b9f3e315f33c5705740a797.wav",
+            "sha256": "30085d344333aac4982a8b08a101ea2f10ef9f3760a477d82ba4236ad1a714bc"
+          },
+          {
+            "key": "6bf797c307b9817d24154e0332c20442ac1ce1f028254136ec3ae640a22f8244",
+            "state": "received",
+            "units": 240000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\tts-responses\\6bf797c307b9817d24154e0332c20442ac1ce1f028254136ec3ae640a22f8244.wav",
+            "sha256": "f0810c05f70fb77fc61b18ea046c510f5c8a613e5406b61aa2b23a57d92f5df1"
+          },
+          {
+            "key": "e6d2f63aab02f591d5e514c63a2114e3aed539890ee142d4428c1e09ccc6c1e2",
+            "state": "received",
+            "units": 2730000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\tts-responses\\e6d2f63aab02f591d5e514c63a2114e3aed539890ee142d4428c1e09ccc6c1e2.wav",
+            "sha256": "301273056a137f600ad4177c35a6bf1b06f0699bd809b0f5b66ac15f42335ada"
+          },
+          {
+            "key": "87b5719fa78e7a0064c36975ad3f226b6b89e2962d79401967bd991483ab4e6e",
+            "state": "received",
+            "units": 2010000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\tts-responses\\87b5719fa78e7a0064c36975ad3f226b6b89e2962d79401967bd991483ab4e6e.wav",
+            "sha256": "c4662d1b977c9d9fe79879b50769114edb7b8bbb26e926ad40a892aa2e6556da"
+          },
+          {
+            "key": "1f71e7fa16da80250b841217a3a8117fe3de3e101e0148e10e91488212cde57a",
+            "state": "received",
+            "units": 360000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\tts-responses\\1f71e7fa16da80250b841217a3a8117fe3de3e101e0148e10e91488212cde57a.wav",
+            "sha256": "cf2fcb835a8d71f8a48bbe6164cf8824a53f1c4a94c33da354a36fb06189a057"
+          },
+          {
+            "key": "6c52cc677ed512abbce2e376bc7368aae6a398bd749af9f0facaaf9e49eeba83",
+            "state": "received",
+            "units": 2700000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\tts-responses\\6c52cc677ed512abbce2e376bc7368aae6a398bd749af9f0facaaf9e49eeba83.wav",
+            "sha256": "712bae380ea174f0d7fa417b13664404d631595694d6740aee4df031a8fab69a"
+          },
+          {
+            "key": "8793a3da54d35315c8d964fd4d54de1512fdbdb5b0d433c53da107417b0a7c06",
+            "state": "received",
+            "units": 1740000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\tts-responses\\8793a3da54d35315c8d964fd4d54de1512fdbdb5b0d433c53da107417b0a7c06.wav",
+            "sha256": "aa203b93bae664e78701bda939e03e15b863942730925d67034360239882396f"
+          },
+          {
+            "key": "c88cc1a151fa4945874f28c3bd7aebf20eaa738e859c67f9e92306e123d559de",
+            "state": "received",
+            "units": 330000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\tts-responses\\c88cc1a151fa4945874f28c3bd7aebf20eaa738e859c67f9e92306e123d559de.wav",
+            "sha256": "2d6a400302fe72c208f9ff408fe172bd09b82431e43eb57c40e7e612d53e6941"
+          },
+          {
+            "key": "0f19c0a6708cfd7525a6725d769c5ed856aecff74bf997abe2bcc8b636163baf",
+            "state": "received",
+            "units": 3030000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\tts-responses\\0f19c0a6708cfd7525a6725d769c5ed856aecff74bf997abe2bcc8b636163baf.wav",
+            "sha256": "a91d34f3b75616cbc300133a3e1a835ef5bf1858105815401babd1aacfb00777"
+          },
+          {
+            "key": "58bf70ee2ca677238db9bd58d07b8c97372d950f56823b9b4750ee9b736938a6",
+            "state": "received",
+            "units": 2130000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\tts-responses\\58bf70ee2ca677238db9bd58d07b8c97372d950f56823b9b4750ee9b736938a6.wav",
+            "sha256": "34442fef3f1e825d23563d5402186b9f3cd947c8d9fd94091f7f9a84a9b34775"
+          },
+          {
+            "key": "fbff9790bd122d047b2489b98a6402799df4858e9553777b7ef07feb27b48781",
+            "state": "received",
+            "units": 270000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\tts-responses\\fbff9790bd122d047b2489b98a6402799df4858e9553777b7ef07feb27b48781.wav",
+            "sha256": "77beddd51e7734b74f1e99b684117a13936e7278e6f7b82fda70495a29a8564b"
+          },
+          {
+            "key": "60ef423c4d0a00007c37468d1d0f7f66d02b3d33e7568720ecebe3560ed86745",
+            "state": "received",
+            "units": 2880000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\tts-responses\\60ef423c4d0a00007c37468d1d0f7f66d02b3d33e7568720ecebe3560ed86745.wav",
+            "sha256": "b48300158d3bc8d7770d4b7d427b4fc2d06f1e4bb5785868ddac3af2d2f51cd7"
+          },
+          {
+            "key": "77e61a46f2bfb8e288bb2c865af78c2455bdbee7bc4cb8864f4c93a5ae3ea854",
+            "state": "received",
+            "units": 2220000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\tts-responses\\77e61a46f2bfb8e288bb2c865af78c2455bdbee7bc4cb8864f4c93a5ae3ea854.wav",
+            "sha256": "93b29fc4186c58fb204d6464e7e49c09bbc3f54143df113bcaf733ee938b11fe"
+          },
+          {
+            "key": "834841bf38ba8dfe99df708d1a806eecfb67ee411491f46b1b75132fee69bd92",
+            "state": "received",
+            "units": 240000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\tts-responses\\834841bf38ba8dfe99df708d1a806eecfb67ee411491f46b1b75132fee69bd92.wav",
+            "sha256": "e0eb6dec3ec6567c582acddad5809f7efff20ab1cb65f24d76dd10f6d93d470c"
+          },
+          {
+            "key": "621d235ae56df1c8dd81be8586e86518dbcbfd0e79c897db30e675a8dba2afae",
+            "state": "received",
+            "units": 2730000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\tts-responses\\621d235ae56df1c8dd81be8586e86518dbcbfd0e79c897db30e675a8dba2afae.wav",
+            "sha256": "c097eed908afab148855bf63eea21547e22a269b28c68b1fcb0020f33fe7ed61"
+          },
+          {
+            "key": "889e0f7e0bf5b32322420253e66acb2b93bb439b5cdc5fb2f268fdf4fd7ee55d",
+            "state": "received",
+            "units": 2640000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\tts-responses\\889e0f7e0bf5b32322420253e66acb2b93bb439b5cdc5fb2f268fdf4fd7ee55d.wav",
+            "sha256": "c29af2db8358a92640435f7a9b6367a829ffc8b3b612aca39e520469bf7a175b"
+          }
+        ],
+        "usage": {
+          "cacheHits": 19,
+          "recoveredOriginals": 0,
+          "localPrepared": 0,
+          "newSynthesisRequests": 0,
+          "newSynthesisCharacters": 0,
+          "estimated": true
+        }
+      }
+    }
+  },
+  "workDirectory": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\generated\\3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d",
+  "renderCertificate": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\artifacts\\a30ddbf85d3e01958db7aee491257f13ed30735178a8a106e207f987ae853d19.verified.json",
+  "lastRenderHash": "a30ddbf85d3e01958db7aee491257f13ed30735178a8a106e207f987ae853d19",
+  "lastPlanHash": "bf819a7e94a96db5c28ea3b33b6cc6b538acd627cec2ae9510e3574d9b378bdc"
+}

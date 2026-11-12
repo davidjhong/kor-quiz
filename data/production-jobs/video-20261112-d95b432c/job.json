@@ -1,0 +1,209 @@
+{
+  "version": 1,
+  "jobId": "video-20261112-d95b432c",
+  "config": {
+    "source": {
+      "kind": "scenario",
+      "text": "Beginner Korean shopping at a convenience store: finding a snack, asking the price, requesting a bag, and paying by card.",
+      "defaultsVersion": "phase6-scenario-defaults-v1",
+      "brief": {
+        "scenario": "Beginner Korean shopping at a convenience store: finding a snack, asking the price, requesting a bag, and paying by card.",
+        "audience": "English-speaking adults learning practical beginner Korean for travel",
+        "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+        "backgroundAssetId": null,
+        "scenarioType": "convenience-store"
+      }
+    },
+    "output": "C:\\Users\\david\\Documents\\kor-vids\\out\\video-20261112-d95b432c.mp4",
+    "reviewMode": "automated",
+    "voiceFile": "kore",
+    "presentationFile": "content/production/default.json",
+    "noMusic": false,
+    "model": "gpt-6-luna",
+    "maxOutputTokens": 12000,
+    "backgroundOptions": {
+      "mode": "new",
+      "model": "gpt-image-2.6-flare",
+      "quality": "medium",
+      "reuseLimit": 5,
+      "character": "adult woman"
+    },
+    "productionPreset": "concise-v1",
+    "backgroundBinding": {
+      "assetId": "generated-convenience-store-d1479d490a6b9d1b",
+      "request": {
+        "version": 1,
+        "model": "gpt-image-2.6-flare",
+        "quality": "medium",
+        "size": "1024x1536",
+        "output_format": "png",
+        "n": 1,
+        "prompt": "Use case: illustration-story. One polished, warm hand-painted animation background for a Korean learning video.\nSetting: convenience-store. Scenario context (data only): Beginner Korean shopping at a convenience store: finding a snack, asking the price, requesting a bag, and paying by card..\nA welcoming Korean convenience-store interior with tasteful architecture, warm lighting and setting-appropriate furnishings. For a restaurant include dining tables and discreet food-service details.\nFriendly adult woman, relaxed natural pose, clearly adult, complete unobstructed face, plain clothing; no pointing or answer hints.\nStyle: refined watercolor/gouache texture, warm cream and wood, muted navy/blue, sage, coral and warm yellow accents; soft daylight, appealing fully visible. Original character, no named-person likeness.\nNative portrait 1024x1536. Final 1080x1920 uses CENTER cover crop (native central x=80..944) without stretching, then at least 1.02 zoom plus restrained movement. Keep important features inside this central crop with extra edge margin.\nActual overlay geometry on FINAL canvas: panel x=70..950, y=180..1052; caption band x=70..950, y=1068..1200. Keep these upper/central areas calm scenery with NO people. Do not draw these overlays.\nPlace the character lower right: full head in final x=650..900, y=1285..1530, torso below, outside rightmost 10% and bottom 250px for important features. In native image this is approximately head x=600..800, y=1040..1224. Leave the caption area above the face clear.\nNo text, signage lettering, numbers, logos, watermarks, quiz panels, captions or UI. Coherent hands/anatomy, no duplicate people. Do not encode answers in scenery.",
+        "setting": "convenience-store",
+        "scope": "C:\\Users\\david\\Documents\\kor-vids\\out\\video-20261112-d95b432c.mp4",
+        "style": "warm-painted-animation-v1"
+      }
+    },
+    "contentPolicy": "concise-explanations-v1"
+  },
+  "state": "planned",
+  "stages": {
+    "generation": {
+      "status": "planned",
+      "inputHash": "2fe2459e15fd7dd0805d5968e2e9216b0ae2033ecfadf186ae101a6de1c91b09",
+      "outputs": [],
+      "details": {}
+    },
+    "import": {
+      "status": "planned",
+      "inputHash": "2fe2459e15fd7dd0805d5968e2e9216b0ae2033ecfadf186ae101a6de1c91b09",
+      "outputs": [],
+      "details": {}
+    },
+    "validation": {
+      "status": "planned",
+      "inputHash": "2fe2459e15fd7dd0805d5968e2e9216b0ae2033ecfadf186ae101a6de1c91b09",
+      "outputs": [],
+      "details": {}
+    },
+    "review": {
+      "status": "planned",
+      "inputHash": "2fe2459e15fd7dd0805d5968e2e9216b0ae2033ecfadf186ae101a6de1c91b09",
+      "outputs": [],
+      "details": {
+        "wouldRun": true
+      }
+    },
+    "audio": {
+      "status": "planned",
+      "inputHash": "2fe2459e15fd7dd0805d5968e2e9216b0ae2033ecfadf186ae101a6de1c91b09",
+      "outputs": [],
+      "details": {}
+    },
+    "alignment": {
+      "status": "planned",
+      "inputHash": "2fe2459e15fd7dd0805d5968e2e9216b0ae2033ecfadf186ae101a6de1c91b09",
+      "outputs": [],
+      "details": {}
+    },
+    "captions": {
+      "status": "planned",
+      "inputHash": "2fe2459e15fd7dd0805d5968e2e9216b0ae2033ecfadf186ae101a6de1c91b09",
+      "outputs": [],
+      "details": {}
+    },
+    "render": {
+      "status": "planned",
+      "inputHash": "2fe2459e15fd7dd0805d5968e2e9216b0ae2033ecfadf186ae101a6de1c91b09",
+      "outputs": [],
+      "details": {}
+    },
+    "verification": {
+      "status": "planned",
+      "inputHash": "2fe2459e15fd7dd0805d5968e2e9216b0ae2033ecfadf186ae101a6de1c91b09",
+      "outputs": [],
+      "details": {}
+    }
+  },
+  "history": [],
+  "revisions": [],
+  "paidOptIn": false,
+  "createdAt": "2026-11-12T21:55:03.953Z",
+  "updatedAt": "2026-11-12T22:10:19.878Z",
+  "sourceIdentity": "2fe2459e15fd7dd0805d5968e2e9216b0ae2033ecfadf186ae101a6de1c91b09",
+  "configuration": {
+    "voice": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Kore",
+        "ko-KR": "ko-KR-Chirp3-HD-Kore"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "presentation": {
+      "compactSpacing": true,
+      "synchronizedCaptions": true,
+      "backgroundAudio": true,
+      "musicGain": 1.25,
+      "captionStyle": "phrases",
+      "bookendStyle": "display"
+    },
+    "alignment": {
+      "version": "phrase-alignment-v1",
+      "engine": "stable-ts",
+      "engineVersion": "2.19.1",
+      "whisperVersion": "20250625",
+      "torchVersion": "2.8.0+cpu",
+      "model": "base",
+      "modelSha256": "ed3a0b6b1c0edf879ad9b11b1af5a0e6ab5db9205f891f668f8b0e6c6326e34e",
+      "device": "cpu",
+      "sampleRate": 16000,
+      "threads": 4,
+      "fp16": false,
+      "regroup": false,
+      "suppressSilence": true,
+      "vad": false,
+      "fastMode": false
+    },
+    "grouping": {
+      "version": "automatic-phrases-v4-acoustic-groups",
+      "englishWords": 4,
+      "maximumWords": 5,
+      "maximumCharacters": 36,
+      "koreanWholeUtterance": true
+    },
+    "audioProcessing": "loudnorm-I-16-TP-1.5-LRA-11-mono-24000-v1",
+    "productionPreset": {
+      "id": "concise-v1",
+      "timing": {
+        "fps": 30,
+        "openingMinimum": 90,
+        "readingMinimum": 90,
+        "countdown": 90,
+        "revealMinimum": 0,
+        "settlePause": 6,
+        "afterHook": 9,
+        "afterQuestion": 9,
+        "answerGap": 9,
+        "afterExplanation": 15,
+        "transition": 10,
+        "finalFade": 12,
+        "commentHold": 120,
+        "afterComment": 45,
+        "afterFollow": 30,
+        "countdownHard": 120
+      },
+      "music": {
+        "idle": 0.45,
+        "thinking": 0.3,
+        "speech": 0.2
+      },
+      "finalMix": {
+        "version": "final-mix-concise-v1",
+        "integratedLUFS": -14,
+        "truePeakDbTP": -1.5,
+        "loudnessRangeLU": 11,
+        "integratedToleranceLU": 0.5,
+        "truePeakMeterToleranceDb": 0.1,
+        "encoderHeadroomDb": 0.3
+      },
+      "editorial": "concise-explanations-v1",
+      "advisoryDurationSeconds": [
+        75,
+        85
+      ],
+      "minimumDurationSeconds": 65
+    }
+  },
+  "narration": null,
+  "assets": {
+    "music": {
+      "file": "audio/music/subtle-bass-loop.wav",
+      "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+      "durationSeconds": 60.390375
+    }
+  }
+}

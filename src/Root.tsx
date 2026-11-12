@@ -18,6 +18,11 @@ import {preparedNarrationSchema} from './narration';
 import {getNarratedTimeline} from './narrationTiming';
 import {VoiceComparisonPreview} from './VoiceComparisonPreview';
 import {comparisonPropsSchema, getComparisonTimeline, type ComparisonProps} from './comparison';
+import {ProductionVideo} from './ProductionVideo';
+import {productionPropsSchema,runtimeQuiz,type ProductionProps} from './production';
+import {QuestionExcerpt} from './QuestionExcerpt';
+import {resolveProductionPreset} from './productionPresets';
+import {questionExcerptPropsSchema,getQuestionExcerptTimeline,type QuestionExcerptProps} from './questionExcerptModel';
 
 const previewQuiz = parseQuizInput(previewContent);
 const illustratedQuiz = parseQuizInput(illustratedContent);
@@ -25,12 +30,17 @@ const cafeEpisode = parseQuizInput(cafeEpisodeContent);
 
 export const Root = () => (
   <>
+    <Composition id="QuestionExcerpt" component={QuestionExcerpt} width={1080} height={1920} fps={30} durationInFrames={90}
+      defaultProps={{} as QuestionExcerptProps} calculateMetadata={({props})=>{const p=questionExcerptPropsSchema.parse(props);return {props:p,durationInFrames:getQuestionExcerptTimeline(p.narration).durationInFrames};}}/>
+    <Composition id="KoreanProduction" component={ProductionVideo} width={1080} height={1920} fps={30} durationInFrames={90}
+      defaultProps={{quiz:null,narration:null} as unknown as ProductionProps}
+      calculateMetadata={({props})=>{const p=productionPropsSchema.parse(props);return {props:p,durationInFrames:getNarratedTimeline(p.narration,runtimeQuiz(p.quiz),resolveProductionPreset(p.productionPreset,p.countdownSeconds).timing).durationInFrames};}}/>
     <Composition id="VoiceComparisonExcerpt" component={VoiceComparisonPreview}
       defaultProps={{quiz: cafeEpisode, questionIndex: 0, narration: null, presentation: {compactSpacing: true, synchronizedCaptions: true, backgroundAudio: true}, music: null} as unknown as ComparisonProps}
       width={1080} height={1920} fps={QUIZ_FPS} durationInFrames={90}
       calculateMetadata={({props}) => {
         const parsed = comparisonPropsSchema.parse(props);
-        return {props: parsed, durationInFrames: getComparisonTimeline(parsed.quiz, parsed.questionIndex, parsed.narration).durationInFrames};
+        return {props: parsed, durationInFrames: getComparisonTimeline(parsed.quiz, parsed.questionIndex, parsed.narration,parsed.bonusReadingFrames).durationInFrames};
       }} />
     <Composition
       id="KoreanSample"

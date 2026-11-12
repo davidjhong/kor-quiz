@@ -12,6 +12,7 @@ import {getQuestionState, PREVIEW_QUESTION_TIMELINE} from '../src/questionTiming
 import {parseRenderArguments} from '../scripts/arguments.ts';
 import {loadQuizFile} from '../scripts/input.ts';
 import {validateBackgroundAsset} from '../scripts/assets.ts';
+import {createHash} from 'node:crypto';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const preview = JSON.parse(readFileSync(join(root, 'content/cafe-preview.json'), 'utf8'));
@@ -55,6 +56,16 @@ test('approved local asset resolves and empty referenced files are rejected', as
   await assert.rejects(validateBackgroundAsset(parseQuizInput(preview), directory), /nonempty regular file/u);
   await copyFile(join(root, 'public', asset.file), file);
   await assert.doesNotReject(validateBackgroundAsset(parseQuizInput(preview), directory));
+});
+test('hotel asset is the real local PNG, checksum-bound and developer-selected with honest provenance',async()=>{
+  const asset=getBackgroundAsset('korean-hotel-illustrated-v1'),bytes=readFileSync(join(root,'public',asset.file));
+  assert.equal(asset.scenarioType,'hotel');assert.equal(asset.selection,'developer-selected');
+  assert.equal(bytes.subarray(0,8).toString('hex'),'89504e470d0a1a0a');
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256);
+  const record=JSON.parse(readFileSync(join(root,asset.provenance),'utf8'));
+  assert.equal(bytes.readUInt32BE(16),record.nativeWidth);assert.equal(bytes.readUInt32BE(20),record.nativeHeight);
+  assert.equal(record.humanApproved,false);assert.equal(record.model,null);assert.equal(record.builtinToolCostUSD,null);assert.equal(record.separatelyBilledImageAPICalls,0);
+  await validateBackgroundAsset({backgroundAssetId:'korean-hotel-illustrated-v1'},join(root,'public'));
 });
 
 test('preview content keeps the water choices and correct B mapping, with structured data for reveal', () => {

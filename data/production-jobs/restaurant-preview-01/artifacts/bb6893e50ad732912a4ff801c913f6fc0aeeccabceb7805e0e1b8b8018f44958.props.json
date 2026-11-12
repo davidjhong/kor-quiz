@@ -1,0 +1,199 @@
+{
+  "input": {
+    "version": 1,
+    "scenario": "Beginner Korean ordering food in a restaurant.",
+    "scenarioType": "restaurant",
+    "question": {
+      "id": "restaurant-menu",
+      "scenario": "At a Korean restaurant",
+      "difficulty": "easy",
+      "context": "You want to see the available dishes before ordering.",
+      "prompt": "How would you ask for the menu?",
+      "choices": [
+        {
+          "hangul": "메뉴 좀 주세요.",
+          "romanization": "menyu jom juseyo."
+        },
+        {
+          "hangul": "물 좀 주세요.",
+          "romanization": "mul jom juseyo."
+        },
+        {
+          "hangul": "계산서 좀 주세요.",
+          "romanization": "gyesanseo jom juseyo."
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The menu, please. This is a polite way to ask for it.",
+      "reveal": {
+        "translation": "The menu, please.",
+        "teachingPoint": "메뉴 = menu; 좀 주세요 = please give me"
+      }
+    },
+    "explanationNarration": "The menu, please. This is a polite way to ask for it."
+  },
+  "background": {
+    "id": "generated-restaurant-379962e8db662f67",
+    "file": "backgrounds/generated-restaurant-379962e8db662f67.png",
+    "sha256": "a9405bcdcc310ef167f3918ff66282cc308c4b5cc59c61303e3a0933e0b3aa7b",
+    "scenarioType": "restaurant",
+    "selection": "developer-selected",
+    "scenarioLabel": "AT A KOREAN RESTAURANT",
+    "framing": {
+      "scale": 1.02,
+      "origin": "50% 0%"
+    }
+  },
+  "narration": {
+    "version": 1,
+    "quizFingerprint": "75089995474f67143a4776bb3346c1e96a7074cc9af0811871f25c4daafd9e51",
+    "profile": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Achird",
+        "ko-KR": "ko-KR-Chirp3-HD-Achird"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "processing": "loudnorm-I-16-TP-1.5-LRA-11-mono-24000-v1",
+    "clips": [
+      {
+        "id": "restaurant-menu-question",
+        "contentId": "restaurant-menu",
+        "role": "question",
+        "language": "en-US",
+        "text": "How would you ask for the menu?",
+        "cacheKey": "a1e4832fc5fa0a79e0bfb0f25e2041166f74b78dd020a1799d29792108ec17d2",
+        "file": "audio/cache/a1e4832fc5fa0a79e0bfb0f25e2041166f74b78dd020a1799d29792108ec17d2.wav",
+        "sha256": "a8a945d1ab2e0fa1541210413652d01d046bec242979e02f263e7d2bec46525f",
+        "durationSeconds": 1.44,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "9f9b2b8608963ddd987787e1906a22ca6ed5b3b71420e21efe96853218dd9984",
+        "peakDbFS": -1.5781131659390062
+      },
+      {
+        "id": "restaurant-menu-answer",
+        "contentId": "restaurant-menu",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "메뉴 좀 주세요.",
+        "cacheKey": "11358bc97627ccb154be8cadc8fdef88a64a0d3f63ce824207cfd84b226cb761",
+        "file": "audio/cache/11358bc97627ccb154be8cadc8fdef88a64a0d3f63ce824207cfd84b226cb761.wav",
+        "sha256": "f23de9f8cf0ce732556f57b7286bcf3c1d5ba571e171ca15114108513b7121aa",
+        "durationSeconds": 1,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "f3fdd8e68e6ab6b4192326156a2e02a9b3dd8b269c0d45de99ab875a494a5bb6",
+        "peakDbFS": -1.6675801539127533
+      },
+      {
+        "id": "restaurant-menu-explanation",
+        "contentId": "restaurant-menu",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "The menu, please. This is a polite way to ask for it.",
+        "cacheKey": "ebb520208afb5007d09851ef72a9b1ff2314fea2d41756e3e6ebdefaa9cc60f4",
+        "file": "audio/cache/ebb520208afb5007d09851ef72a9b1ff2314fea2d41756e3e6ebdefaa9cc60f4.wav",
+        "sha256": "6b94ac3e97a9081e94a188108751e580ecde9d43fbed62d8c76540c81cfcc9f4",
+        "durationSeconds": 3.44,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "3f82b3ca7d8c6d1bf33dbc2d28fa8f2e82ce7ce0fa503cb73f1c15ba6fac5322",
+        "peakDbFS": -1.4810666421069965
+      }
+    ]
+  },
+  "presentation": {
+    "compactSpacing": true,
+    "synchronizedCaptions": true,
+    "backgroundAudio": true,
+    "musicGain": 1.25,
+    "captionStyle": "phrases",
+    "bookendStyle": "display"
+  },
+  "phraseCaptions": [
+    {
+      "clipId": "restaurant-menu-question",
+      "contentId": "restaurant-menu",
+      "role": "question",
+      "language": "en-US",
+      "text": "How would you ask",
+      "start": 9,
+      "end": 27,
+      "emphasis": false,
+      "alignmentKey": "2e92b5e4b0a9ee939fc9add70fb598f7225b415ddd082c75ad862176538c6f6f"
+    },
+    {
+      "clipId": "restaurant-menu-question",
+      "contentId": "restaurant-menu",
+      "role": "question",
+      "language": "en-US",
+      "text": "for the menu?",
+      "start": 27,
+      "end": 45,
+      "emphasis": true,
+      "alignmentKey": "2e92b5e4b0a9ee939fc9add70fb598f7225b415ddd082c75ad862176538c6f6f"
+    },
+    {
+      "clipId": "restaurant-menu-answer",
+      "contentId": "restaurant-menu",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "메뉴 좀 주세요.",
+      "start": 281,
+      "end": 293,
+      "emphasis": false,
+      "alignmentKey": "93be1d05f981eaae139c871d79a03cac530042b688463b0f6053e35980862919"
+    },
+    {
+      "clipId": "restaurant-menu-explanation",
+      "contentId": "restaurant-menu",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "The menu,",
+      "start": 319,
+      "end": 336,
+      "emphasis": false,
+      "alignmentKey": "afc5e47d9623d353cd69f4e084b752b077a877c0b5322c2f73e7ed19b41c366d"
+    },
+    {
+      "clipId": "restaurant-menu-explanation",
+      "contentId": "restaurant-menu",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "please. This is",
+      "start": 343,
+      "end": 374,
+      "emphasis": true,
+      "alignmentKey": "afc5e47d9623d353cd69f4e084b752b077a877c0b5322c2f73e7ed19b41c366d"
+    },
+    {
+      "clipId": "restaurant-menu-explanation",
+      "contentId": "restaurant-menu",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "a polite way",
+      "start": 374,
+      "end": 393,
+      "emphasis": false,
+      "alignmentKey": "afc5e47d9623d353cd69f4e084b752b077a877c0b5322c2f73e7ed19b41c366d"
+    },
+    {
+      "clipId": "restaurant-menu-explanation",
+      "contentId": "restaurant-menu",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "to ask for it.",
+      "start": 393,
+      "end": 418,
+      "emphasis": false,
+      "alignmentKey": "afc5e47d9623d353cd69f4e084b752b077a877c0b5322c2f73e7ed19b41c366d"
+    }
+  ],
+  "music": {
+    "file": "audio/music/subtle-bass-loop.wav",
+    "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+    "durationSeconds": 60.390375
+  }
+}

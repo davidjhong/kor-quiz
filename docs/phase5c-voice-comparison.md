@@ -1,10 +1,74 @@
 # Phase 5C — presentation and voice comparison checkpoint
 
-Status: **three comparison videos; full polished transit episode awaits the
-user's voice selection**. Phase 5B remains complete. The original transit MP4,
+Status: **Achird selected; final Phase 5C checkpoint is the revised C excerpt**
+under the user's 2026-11-10 scope. No full episode or Phase 6 work is included.
+Phase 5B remains complete. The original transit MP4,
 draft, private key, audio manifest and all 19 cached clips are byte-for-byte
 preserved by `data/voice-comparison/transit-01/baseline-preservation.json`.
-The default production voice remains Kore.
+The selected default for new drafts is now Achird EN/KO. Existing accepted drafts,
+their voice profiles, and manual overrides remain intact.
+
+## Final C revision
+
+**Latest:** [opening/bonus/follow excerpt and Phase 6 handoff](phase5c-bookends.md).
+The viewer-facing excerpt labels are removed; earlier versions remain available.
+
+**Current:** the [phrase-caption revision](phase5c-phrase-captions.md) supersedes
+the boxed style described below. Its output is `out/phase5c/c-achird-phrase-captions.mp4`.
+The earlier boxed MP4 is preserved for comparison.
+
+The original C MP4 was decoded again for inspection. Its English explanation was
+present as plain text in the feedback area during frames 480–705 (16.0–23.533 s),
+but the old implementation captioned only that segment. It incorrectly treated
+the shorter displayed question as equivalent to the spoken wording, and the
+ending displayed abbreviated invitation labels. There was no exact question
+caption or dedicated Korean speech caption. The prior report overstated coverage.
+
+The revision uses a white, teal-edged speech box in the reserved feedback area,
+below all three choices and their romanization. It displays the exact question,
+Korean answer and English explanation during their measured `[start, end)` spans,
+replacing the written teaching note during speech. The opening already matches
+the hook exactly. The ending now displays the full exact comment/follow wording,
+switching at the corresponding clip starts and retaining each invitation through
+its existing pause/hold. No timing, speech, answer or background asset changed.
+
+`content/voice-comparison/transit-01-c-revised.json` sets `musicGain: 1.25`:
+idle 0.3125, countdown 0.175, speech 0.125 (+1.938 dB versus prior settings).
+Attack/release/fades and narration source gain 1 are unchanged. Existing final
+mixed-track loudness processing remains in place. Set the multiplier to 1 to
+restore the old bed setting, or `backgroundAudio: false` to disable it.
+
+Only the revised C excerpt is rendered, to
+`out/phase5c/c-achird-captions-music.mp4`; all original comparison MP4s and their
+sidecars are preserved. New output sidecars use the new filename. Rendering
+validates and reuses the six prepared Achird clips; it makes no provider calls.
+`content/voice-profiles/selected-default.json` records the user's voice selection.
+New generated drafts use it; explicit validated profiles remain available.
+Automated content acceptance and optional manual review are unchanged.
+
+```powershell
+Set-Location 'C:\Users\david\Documents\kor-vids'
+npm.cmd run typecheck
+node --experimental-strip-types --test tests/presentation-polish.test.mjs tests/generation.test.mjs tests/automated-review.test.mjs
+npm.cmd run voice:compare -- render --config content/voice-comparison/transit-01-c-revised.json --profile c-achird --output out/phase5c/c-achird-captions-music.mp4
+Invoke-Item .\out\phase5c\c-achird-captions-music.mp4
+```
+
+The renderer refuses to replace an existing output unless `--overwrite` is added.
+This command renders C only. The earlier three-profile instructions below are
+historical comparison instructions, not part of the final revision checkpoint.
+
+Final verification: **31.433 s / 943 frames**, 1080 × 1920, 30 FPS, H.264/yuv420p
+with AAC. Full audio/video decode passed. Final mix: **−15.96 LUFS, −2.00 dBTP**;
+no clipping detected. Typecheck and **45 focused checks** passed. All 29 diagnostic
+frames were extracted by exact decoded frame index and visually inspected,
+including question/answer/explanation boundaries, countdown and both invitations.
+Captions fit without covering choices or romanization; notes are replaced during
+speech. The original three MP4s, prepared C manifest, spending ledger and original
+transit baseline all retained their checksums. Six cached clips reused, **zero new
+provider requests and $0 new synthesis cost**. No listening assessment was made;
+measurements do not establish an audible improvement or subjective mix balance.
+Evidence: [revision verification](../out/phase5c/c-revision/verification.json).
 
 ## Watch the comparable excerpts
 
@@ -160,5 +224,7 @@ Actual listening and phone playback are unavailable here. Pronunciation,
 expressiveness, accent quality, perceived English/Korean voice consistency,
 audible cut-off words and subjective mix balance remain unassessed. Metadata,
 complete measured speech spans and clipping checks do not establish those.
-Voice selection is the next intentional user decision. Phase 5C is complete only
-after one full polished transit episode is rendered with that selection.
+The original comparison checkpoint requested a voice selection and full episode.
+The user's 2026-11-10 instruction selected Achird and superseded that stopping
+point with the single revised C excerpt above. No full episode is required for
+this final Phase 5C checkpoint, and Phase 6 has not begun.

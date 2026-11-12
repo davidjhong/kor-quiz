@@ -1,0 +1,110 @@
+{
+  "key": "337a1575cb82ea4e1601347da2db338954fd4677adf83cb305ec7f1efc9fb1cb",
+  "audioSha256": "83ee03b269117601d79ded93cc5db719d46a3a8b9aea148254a6f5fdb6d6544c",
+  "transcript": "You’ve finished eating and are ready to settle up. What would you ask for?",
+  "language": "en-US",
+  "configuration": {
+    "version": "phrase-alignment-v1",
+    "engine": "stable-ts",
+    "engineVersion": "2.19.1",
+    "whisperVersion": "20250625",
+    "torchVersion": "2.8.0+cpu",
+    "model": "base",
+    "modelSha256": "ed3a0b6b1c0edf879ad9b11b1af5a0e6ab5db9205f891f668f8b0e6c6326e34e",
+    "device": "cpu",
+    "sampleRate": 16000,
+    "threads": 4,
+    "fp16": false,
+    "regroup": false,
+    "suppressSilence": true,
+    "vad": false,
+    "fastMode": false
+  },
+  "durationSeconds": 4.72,
+  "words": [
+    {
+      "text": " You’ve",
+      "start": 0.44,
+      "end": 0.98,
+      "probability": 0.02026090403227787
+    },
+    {
+      "text": " finished",
+      "start": 0.98,
+      "end": 0.98,
+      "probability": 0.9938982725143433
+    },
+    {
+      "text": " eating",
+      "start": 0.98,
+      "end": 1.26,
+      "probability": 0.9903737306594849
+    },
+    {
+      "text": " and",
+      "start": 1.26,
+      "end": 1.7,
+      "probability": 0.8759793043136597
+    },
+    {
+      "text": " are",
+      "start": 1.7,
+      "end": 1.82,
+      "probability": 0.9783275723457336
+    },
+    {
+      "text": " ready",
+      "start": 1.82,
+      "end": 2.06,
+      "probability": 0.9984667897224426
+    },
+    {
+      "text": " to",
+      "start": 2.06,
+      "end": 2.24,
+      "probability": 0.995314359664917
+    },
+    {
+      "text": " settle",
+      "start": 2.24,
+      "end": 2.5,
+      "probability": 0.9669989943504333
+    },
+    {
+      "text": " up.",
+      "start": 2.5,
+      "end": 2.78,
+      "probability": 0.8703656196594238
+    },
+    {
+      "text": " What",
+      "start": 3.6,
+      "end": 3.7,
+      "probability": 0.8334963917732239
+    },
+    {
+      "text": " would",
+      "start": 3.7,
+      "end": 3.82,
+      "probability": 0.991267740726471
+    },
+    {
+      "text": " you",
+      "start": 3.82,
+      "end": 3.94,
+      "probability": 0.996334433555603
+    },
+    {
+      "text": " ask",
+      "start": 3.94,
+      "end": 4.14,
+      "probability": 0.9930866360664368
+    },
+    {
+      "text": " for?",
+      "start": 4.14,
+      "end": 4.46,
+      "probability": 0.981619119644165
+    }
+  ]
+}

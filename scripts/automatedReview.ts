@@ -1,18 +1,21 @@
-import {mkdir, open, readFile, unlink} from 'node:fs/promises';
+import {mkdir, open, unlink} from 'node:fs/promises';
 import {join, resolve} from 'node:path';
 import {z} from 'zod';
+import {assertProductionReservation,type ProductionReservation} from './productionBudget.ts';
 import {zodTextFormat} from 'openai/helpers/zod';
 import type {ResponseCreateParamsNonStreaming} from 'openai/resources/responses/responses';
 import {automatedAcceptanceSchema, automatedFindingsSchema, automatedReviewAccepted,
   backgroundFingerprint, blockingFindingIds, validateAutomatedFindings, type AutomatedFindings} from './automatedAcceptance.ts';
 import {atomicJson, contentHash, inspectDraft, readDraft, writeReview} from './draftWorkflow.ts';
-import {canonical, readJsonFile, requireWithin, sha256} from './narrationFiles.ts';
+import {canonical, readJsonFile, requireWithin} from './narrationFiles.ts';
 import {classifyGenerationError, makeGenerationClient, normalizedUsage, type GenerationClient} from './openaiGeneration.ts';
 import {generationCostBound, MAX_REQUEST_BYTES, modelChargeUnits, modelProfile, QUALITY_DRAFT_MODEL} from './generationModels.ts';
 import {episodeIdSchema} from './generationContent.ts';
 import {CONTENT_LIMITS, getChoiceHangul} from '../src/quizSchema.ts';
 import {draftSchema, bonusAnswerKeySchema} from '../src/draftSchema.ts';
 import {PROJECT_ROOT} from './remotionCommand.ts';
+import {assertConciseNarration} from '../src/editorialPolicy.ts';
+import {checkCancellation} from './cancellation.ts';
 
 export const AUTOMATED_REVIEW_PROMPT = 'phase5b-automated-review-v1';
 export const AUTOMATED_CORRECTION_PROMPT = 'phase5b-automated-correction-v1';
@@ -83,7 +86,7 @@ type Attempt = {phase: Phase; state: string; reservedUnits: number; chargedUnits
 type Job = {version: 1; directory: string; sourceHash: string; proposedHash?: string; finalHash?: string;
   model: string; promptVersion: string; capUnits: number; state: string; attempts: Attempt[]};
 type Options = {directory: string; model?: string; budgetId?: string; maxCostUSD?: number; allowPaid?: boolean;
-  dryRun?: boolean; root?: string; now?: Date; client?: GenerationClient; afterResponseSaved?: () => Promise<void>};
+  dryRun?: boolean; root?: string; now?: Date; client?: GenerationClient; afterResponseSaved?: () => Promise<void>;productionReservation?:ProductionReservation;contentPolicy?:'concise-explanations-v1'};
 const payloadFor = (bundle: Awaited<ReturnType<typeof readDraft>>) => ({quiz: bundle.draft.quiz,
   narration: {segments: bundle.draft.narration.segments.map(({id, contentId, role, language, text}) => ({id, contentId, role, language, text}))},
   privateBonusAnswerKey: bundle.key}); // No generator response, reasoning, provenance or prior critique is sent.
@@ -109,6 +112,7 @@ export const runAutomatedReview = async (options: Options) => {
     maxOutputTokens, reservedInputTokens: profile.reservedInputTokens, maximumReviewCostUSD: reserve * 3 / 1e9,
     humanApprovalRequired: false, generatorReasoningIncluded: false, independence: 'Same configured model in separate requests; not independent proof of correctness.', asset};
   if (options.dryRun) return {status: 'estimate', calls: 0, ...dryReport};
+  if(options.productionReservation)await assertProductionReservation(options.productionReservation,root,options.budgetId!,reserve*3);
   if (!options.allowPaid || !Number.isFinite(options.maxCostUSD) || options.maxCostUSD! <= 0) throw new Error('Automated model review requires explicit --allow-paid, --budget-id and --max-cost-usd after scoped spending authorization');
   const budgetId = episodeIdSchema.parse(options.budgetId), capUnits = Math.floor(options.maxCostUSD! * 1e9);
   const folder = join(root, 'data/automated-review-budgets'); await mkdir(folder, {recursive: true});
@@ -149,7 +153,7 @@ export const runAutomatedReview = async (options: Options) => {
           promptVersion: phase === 'review' ? AUTOMATED_REVIEW_PROMPT : phase === 'correction' ? AUTOMATED_CORRECTION_PROMPT : AUTOMATED_VERIFICATION_PROMPT,
           generatorReasoningIncluded: false, request: body});
         await atomicJson(ledgerFile, job); // Reserve durably before any paid request.
-        try {calls++; raw = await client.create(body);}
+        try {checkCancellation();calls++; raw = await client.create(body);}
         catch (error) {
           const failure = classifyGenerationError(error); attempt.state = failure.state === 'uncertain' ? 'uncertain' : 'terminal';
           attempt.error = failure.message; attempt.requestId = failure.requestId;
@@ -182,6 +186,7 @@ export const runAutomatedReview = async (options: Options) => {
       const patches = await request('correction', CORRECTION_SYSTEM, {content: payloadFor(bundle), blockingReview: initial}, correctionSchema);
       const input = await readJsonFile(join(history, 'input.json')) as RawBundle;
       const proposed = applyReviewCorrections(input, patches, initial);
+      if(options.contentPolicy)assertConciseNarration(proposed.draft.narration.segments);
       const structure = await inspectDraft(proposed.draft, proposed.key, root);
       await atomicJson(join(history, 'proposed.json'), proposed);
       await atomicJson(join(history, 'correction-structural-validation.json'), structure);

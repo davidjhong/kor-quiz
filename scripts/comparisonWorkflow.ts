@@ -1,16 +1,18 @@
-import {access, mkdir, readFile, realpath, stat, writeFile} from 'node:fs/promises';
+import {access, mkdir, readFile, realpath, writeFile} from 'node:fs/promises';
 import {writeFileSync, renameSync} from 'node:fs';
-import {join, resolve} from 'node:path';
+import {extname, join, resolve} from 'node:path';
 import {z} from 'zod';
 import {loadProductionDraft, atomicJson} from './draftWorkflow.ts';
 import {PROJECT_ROOT, runRemotion} from './remotionCommand.ts';
-import {audioCacheKey, canonical, getClipCacheLocation, prepareClip, quizSpeechFingerprint, readJsonFile, requireWithin, sha256, loadPreparedNarration} from './narrationFiles.ts';
+import {audioCacheKey, canonical, getClipCacheLocation, prepareClip, quizSpeechFingerprint, readJsonFile, requireWithin, sha256} from './narrationFiles.ts';
 import {comparisonConfigSchema, auditionProfileSchema, comparisonPropsSchema, getComparisonTimeline} from '../src/comparison.ts';
 import {AUDIO_PROCESSING} from './narrationFiles.ts';
 import {preparedNarrationSchema, type NarrationScript, type PreparedClip} from '../src/narration.ts';
 import {inspectNarratedVideo} from './mediaInspection.ts';
 import {checkOutput, promoteOutput} from './output.ts';
 import {measureAudio} from './audioMeter.ts';
+import {loadAlignedPhrases,loadDisplayCues} from './captionAlignment.ts';
+import {audioDurationToFrames,NARRATION_TIMING} from '../src/narrationTiming.ts';
 
 export const GEMINI_REQUEST_BOUND_USD = 8192 * 0.50 / 1e6 + 16384 * 10 / 1e6;
 export const requestBound = (text: string, profile: NarrationScript['profile']) => profile.model === 'chirp3-hd'
@@ -33,7 +35,16 @@ export const loadComparison = async (configFile = 'content/voice-comparison/tran
   if (questionIndex < 0 || questionIndex >= 5) throw new Error('Comparison question must be an existing non-bonus question');
   const segments = comparisonSegments(bundle.script, config.questionId);
   const identity = {sourceContentHash: bundle.contentHash, questionId: config.questionId, profiles, segments};
-  return {config, bundle, profiles, questionIndex, segments, planHash: sha256(canonical(identity))};
+  let bonusReadingFrames:number|undefined;
+  if(config.bonusPreview){
+    const file=resolve(root,config.bonusPreview.readingTimingManifest);requireWithin(root,file);
+    const reference=preparedNarrationSchema.parse(await readJsonFile(file));
+    const id=bundle.quiz.questions.at(-1)!.id,clip=reference.clips.find(c=>c.contentId===id&&c.role==='question');
+    const source=bundle.script.segments.find(c=>c.contentId===id&&c.role==='question');
+    if(!clip || clip.text!==source?.text)throw new Error('Bonus reading timing must reference the same accepted prompt');
+    bonusReadingFrames=Math.max(NARRATION_TIMING.readingMinimum,NARRATION_TIMING.settlePause+audioDurationToFrames(clip.durationSeconds)+NARRATION_TIMING.afterQuestion);
+  }
+  return {config, bundle, profiles, questionIndex, segments, bonusReadingFrames,planHash: sha256(canonical(identity))};
 };
 
 export const verifyBaseline = async (root = PROJECT_ROOT) => {
@@ -162,7 +173,7 @@ export const prepareComparison = async (input: Awaited<ReturnType<typeof loadCom
   finally {await lock.close(); await unlink(lockPath);}
 };
 
-export const renderComparison = async (input: Awaited<ReturnType<typeof loadComparison>>, id: string, overwrite: boolean, root = PROJECT_ROOT) => {
+export const renderComparison = async (input: Awaited<ReturnType<typeof loadComparison>>, id: string, overwrite: boolean, root = PROJECT_ROOT, outputFile?: string) => {
   await verifyBaseline(root);
   const profile = input.profiles.find((p) => p.id === id); if (!profile) throw new Error('Unknown audition profile');
   const prepared = z.object({sourceContentHash: z.string(), planHash: z.string(), narration: preparedNarrationSchema}).parse(
@@ -184,10 +195,19 @@ export const renderComparison = async (input: Awaited<ReturnType<typeof loadComp
     wavPeakDbFS(await readFile(file));
   }
   const music = await loadMusic(input.config.presentation.backgroundAudio, root);
+  const t = getComparisonTimeline(input.bundle.quiz, input.questionIndex, prepared.narration,input.bonusReadingFrames);
+  const phraseCaptions = input.config.presentation.captionStyle === 'phrases'
+    ? await loadAlignedPhrases(prepared.narration.clips,t.audio,input.config.captionPhrases,t.question.revealStart,[prepared.narration.clips[4].contentId],root) : [];
+  const displayCues=input.config.presentation.bookendStyle==='display'
+    ? await loadDisplayCues(prepared.narration.clips,t.audio,root):undefined;
   const props = comparisonPropsSchema.parse({quiz: input.bundle.quiz, questionIndex: input.questionIndex,
-    narration: prepared.narration, presentation: input.config.presentation, music});
-  const t = getComparisonTimeline(props.quiz, props.questionIndex, props.narration);
-  const output = join(root, 'out/phase5c', `${id}.mp4`); await mkdir(join(root, 'out/phase5c'), {recursive: true});
+    narration: prepared.narration, presentation: input.config.presentation, music, phraseCaptions,
+    bonusReadingFrames:input.bonusReadingFrames,displayCues});
+  const output = outputFile ? resolve(root, outputFile) : join(root, 'out/phase5c', `${id}.mp4`);
+  requireWithin(join(root, 'out/phase5c'), output);
+  if (extname(output) !== '.mp4') throw new Error('Comparison output must be an MP4 in out/phase5c');
+  const artifact = output.slice(0, -4);
+  await mkdir(join(root, 'out/phase5c'), {recursive: true});
   await checkOutput(output, overwrite);
   const {mkdtemp, rm} = await import('node:fs/promises');
   const temporary = await mkdtemp(join(root, 'out/phase5c/.render-'));
@@ -206,9 +226,9 @@ export const renderComparison = async (input: Awaited<ReturnType<typeof loadComp
     const metadata = await inspectNarratedVideo(normalized, t.durationInFrames, t.speechEnd);
     await runRemotion(['ffmpeg', '-v', 'error', '-xerror', '-i', normalized, '-c:v', 'rawvideo', '-f', 'null', '-'], true, 60000);
     await promoteOutput(normalized, output, overwrite);
-    await atomicJson(join(root, 'out/phase5c', `${id}.timeline.json`), t);
-    await atomicJson(join(root, 'out/phase5c', `${id}.props.json`), props);
-    await atomicJson(join(root, 'out/phase5c', `${id}.render-check.json`), {metadata, fullDecode: 'PASS', sourceContentHash: input.bundle.contentHash,
+    await atomicJson(`${artifact}.timeline.json`, t);
+    await atomicJson(`${artifact}.props.json`, props);
+    await atomicJson(`${artifact}.render-check.json`, {metadata, fullDecode: 'PASS', sourceContentHash: input.bundle.contentHash,
       sourcePlanHash: input.planHash, zeroProviderCallsDuringRender: true, presentation: props.presentation, profile: props.narration.profile,
       rawMixedAudio: before, finalMixedAudio: after, mixProcessing:'identical two-pass loudnorm I=-16 TP=-2 LRA=11; H.264 copied; AAC 192k/48k; no time stretching'});
     await verifyBaseline(root); console.log(`Saved ${output}; ${t.durationInFrames / 30}s; local assets only.`);

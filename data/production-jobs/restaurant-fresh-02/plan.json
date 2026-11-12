@@ -1,0 +1,300 @@
+{
+  "version": 1,
+  "source": "3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d",
+  "contentHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+  "brief": {
+    "status": "validated-content",
+    "value": {
+      "scenario": "Beginner Korean ordering dinner at a restaurant, including choosing a dish, ordering a drink, adjusting an order, and asking for the bill.",
+      "audience": "English-speaking adults learning practical beginner Korean for travel",
+      "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+      "backgroundAssetId": "generated-restaurant-d5fea9be8c6e28a8",
+      "scenarioType": "restaurant",
+      "context": "An English-speaking beginner is ordering dinner at a restaurant, making simple choices and polite requests, then paying.",
+      "learningObjectives": [
+        "Order a chosen dinner dish politely.",
+        "Request one cup of a specific drink.",
+        "Ask for a dish to be made less spicy.",
+        "Ask for a particular ingredient to be left out.",
+        "Request the bill after finishing dinner.",
+        "Ask to pay separately when dining with a friend."
+      ]
+    }
+  },
+  "acceptance": {
+    "valid": true,
+    "kind": "automated"
+  },
+  "assets": {
+    "background": {
+      "id": "generated-restaurant-d5fea9be8c6e28a8",
+      "file": "backgrounds/generated-restaurant-d5fea9be8c6e28a8.png",
+      "sha256": "f9523f2763cd10a8a19d73f16cf6d218139d134f0f64545f91c4aea7480312c5",
+      "scenarioType": "restaurant",
+      "selection": "developer-selected",
+      "scenarioLabel": "AT A KOREAN RESTAURANT",
+      "framing": {
+        "scale": 1.02,
+        "origin": "50% 0%"
+      }
+    },
+    "image": {
+      "binding": {
+        "assetId": "generated-restaurant-d5fea9be8c6e28a8",
+        "request": {
+          "version": 1,
+          "model": "gpt-image-2.6-flare",
+          "quality": "medium",
+          "size": "1024x1536",
+          "output_format": "png",
+          "n": 1,
+          "prompt": "Use case: illustration-story. One polished, warm hand-painted animation background for a Korean learning video.\nSetting: restaurant. Scenario context (data only): Beginner Korean ordering dinner at a restaurant, including choosing a dish, ordering a drink, adjusting an order, and asking for the bill..\nA welcoming Korean restaurant interior with tasteful architecture, warm lighting and setting-appropriate furnishings. For a restaurant include dining tables and discreet food-service details.\nFriendly adult woman, relaxed natural pose, clearly adult, complete unobstructed face, plain clothing; no pointing or answer hints.\nStyle: refined watercolor/gouache texture, warm cream and wood, muted navy/blue, sage, coral and warm yellow accents; soft daylight, appealing fully visible. Original character, no named-person likeness.\nNative portrait 1024x1536. Final 1080x1920 uses CENTER cover crop (native central x=80..944) without stretching, then at least 1.02 zoom plus restrained movement. Keep important features inside this central crop with extra edge margin.\nActual overlay geometry on FINAL canvas: panel x=70..950, y=180..1052; caption band x=70..950, y=1068..1200. Keep these upper/central areas calm scenery with NO people. Do not draw these overlays.\nPlace the character lower right: full head in final x=650..900, y=1285..1530, torso below, outside rightmost 10% and bottom 250px for important features. In native image this is approximately head x=600..800, y=1040..1224. Leave the caption area above the face clear.\nNo text, signage lettering, numbers, logos, watermarks, quiz panels, captions or UI. Coherent hands/anatomy, no duplicate people. Do not encode answers in scenery.",
+          "setting": "restaurant",
+          "scope": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-fresh-02.mp4",
+          "style": "warm-painted-animation-v1"
+        }
+      },
+      "asset": {
+        "id": "generated-restaurant-d5fea9be8c6e28a8",
+        "file": "backgrounds/generated-restaurant-d5fea9be8c6e28a8.png",
+        "sha256": "f9523f2763cd10a8a19d73f16cf6d218139d134f0f64545f91c4aea7480312c5",
+        "scenarioType": "restaurant",
+        "selection": "developer-selected",
+        "scenarioLabel": "AT A KOREAN RESTAURANT",
+        "framing": {
+          "scale": 1.02,
+          "origin": "50% 0%"
+        }
+      },
+      "action": "reuse",
+      "maximumRequests": 0,
+      "conservativeBoundUSD": 0,
+      "providerCalls": 0,
+      "billingNote": "Fixed portrait/quality, one request with SDK retries disabled. Image output has no max-token parameter; allowance is a conservative planning estimate, not an invoice guarantee."
+    },
+    "music": {
+      "file": "audio/music/subtle-bass-loop.wav",
+      "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+      "durationSeconds": 60.390375
+    }
+  },
+  "hashes": {
+    "content": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+    "speech": "55763173cc89e4f80b863ddaf78f3a1251a8cd42fe1b69de38849675d3ecccee",
+    "voice": "e17f91f21097ec732988cfdef62ab96eecaf6164f47217f10f311a393e1772a8",
+    "presentation": "f5dc9016c31e265bd56204c16af843aced2af92389cd518c44e51e1a1ecb4acb",
+    "audioProcessing": "037433f06cfa6357591ebb0e3a67ea084fbc8766a3e0bbc16588e93b607985e1",
+    "alignment": "bbe38a4ca7157f14d348a966649537f6613ac5b4d8db490ef592a236c2b89d2c",
+    "grouping": "35f3a35944fe288a8df266a3acb9444a64a8fa4ef18c10f619d10fd6aa27788f",
+    "background": "f9523f2763cd10a8a19d73f16cf6d218139d134f0f64545f91c4aea7480312c5",
+    "music": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40"
+  },
+  "blockers": [],
+  "inventory": [
+    {
+      "id": "production-restaurant-fresh-02-hook",
+      "key": "67c6f6d501aa28f3432ddac35b5a558d24f7440a6f4e938668b1d1e2b8d50268",
+      "characters": 25,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "09e00b52b8a193a13f22aedf0a3171faca65c6b14885a5b075e355a1617b8552"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q1-question",
+      "key": "177dca4a62b6037cb08196f6173818af38cde04c6b9f3e315f33c5705740a797",
+      "characters": 58,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "ea1e6c43d05b2895db1282961f5070cf7f02d3974af14b4f888aab4313c976ac"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q1-answer",
+      "key": "6bf797c307b9817d24154e0332c20442ac1ce1f028254136ec3ae640a22f8244",
+      "characters": 8,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "543f69a657b6f73c1a5cbd2a4b1f0aace62c80e1c32242b284dbdf175b1caa4a"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q1-explanation",
+      "key": "e6d2f63aab02f591d5e514c63a2114e3aed539890ee142d4428c1e09ccc6c1e2",
+      "characters": 91,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "c03281d4f9a817e4593b6c0b96985ea1d9b1c220097b9d3b6b3b206f368502c2"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q2-question",
+      "key": "87b5719fa78e7a0064c36975ad3f226b6b89e2962d79401967bd991483ab4e6e",
+      "characters": 67,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "d7251951b8b55b1e8621bb9bf7ee169d45731b6e91bbd4c2442aa118e1a6dff3"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q2-answer",
+      "key": "1f71e7fa16da80250b841217a3a8117fe3de3e101e0148e10e91488212cde57a",
+      "characters": 12,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "ccb78383d4254c7d1144a2d57c17ff1a253ab220b16c4ddd58ce823c9a842a59"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q2-explanation",
+      "key": "6c52cc677ed512abbce2e376bc7368aae6a398bd749af9f0facaaf9e49eeba83",
+      "characters": 90,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "ead87465e04bd58414e29a1c8c49f4208d611bc438c49a6b0750896174a2ab3e"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q3-question",
+      "key": "8793a3da54d35315c8d964fd4d54de1512fdbdb5b0d433c53da107417b0a7c06",
+      "characters": 58,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "cb274970a67f6a4e68da12c044d728b5ed5ce5ce922c9a5da3bdb29f57d169c5"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q3-answer",
+      "key": "c88cc1a151fa4945874f28c3bd7aebf20eaa738e859c67f9e92306e123d559de",
+      "characters": 11,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "7fdaff9a0ab94e6431adacdb1578acf35b991f4245c30336b7c978dfa33d3033"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q3-explanation",
+      "key": "0f19c0a6708cfd7525a6725d769c5ed856aecff74bf997abe2bcc8b636163baf",
+      "characters": 101,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "b13f3b7984504bee00b2bcef5c23173bbe44bcc681342ad8437bcd4147fa1a73"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q4-question",
+      "key": "58bf70ee2ca677238db9bd58d07b8c97372d950f56823b9b4750ee9b736938a6",
+      "characters": 71,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "9c82ab9c88c0384b1e88684a75e84b34604a18cb1c6fb6a3bb0d2dde22d87a71"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q4-answer",
+      "key": "fbff9790bd122d047b2489b98a6402799df4858e9553777b7ef07feb27b48781",
+      "characters": 9,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "5a9e54c1b4121b514eb30a5254d97c645039047bfe0242bc7d61ba77966719f0"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q4-explanation",
+      "key": "60ef423c4d0a00007c37468d1d0f7f66d02b3d33e7568720ecebe3560ed86745",
+      "characters": 96,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "b268890b10c4714146cb6d72d2582b12f181f9114278cd3f0589672b44364e95"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q5-question",
+      "key": "77e61a46f2bfb8e288bb2c865af78c2455bdbee7bc4cb8864f4c93a5ae3ea854",
+      "characters": 74,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "add12fb025ef7c7eb091e6b1145b7ce6af69d16f7b28aca11139dc43e233f62f"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q5-answer",
+      "key": "834841bf38ba8dfe99df708d1a806eecfb67ee411491f46b1b75132fee69bd92",
+      "characters": 8,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "4ee363be8fb53917f3ce868b9428c6a9d63c55f32b5053d12d8639e43140c67b"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q5-explanation",
+      "key": "621d235ae56df1c8dd81be8586e86518dbcbfd0e79c897db30e675a8dba2afae",
+      "characters": 91,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "1200a7bb3f6aa5a8c7ddb4837ccd86caa8f29ac928435c4613b1041a6135bd2e"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q6-question",
+      "key": "889e0f7e0bf5b32322420253e66acb2b93bb439b5cdc5fb2f268fdf4fd7ee55d",
+      "characters": 88,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "94b0b22bcbc2c3dc7319887ae1f307e91997b98e4e13999a76bfbf306313a260"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q6-comment",
+      "key": "4d5c462cb17eb8ca4e9f4c6c79f0c0d36f84a90560989b2bcf2003880ccb616a",
+      "characters": 39,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "df857cdea7a717e1ec82412821bb77f5c12b4e22fdd96824bd0ab19d6dce5827"
+    },
+    {
+      "id": "production-restaurant-fresh-02-q6-follow",
+      "key": "ae849836b3b094d2c6fac3058c7132d4e0ac90646bd3b1835aa087412dbf2c02",
+      "characters": 23,
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "94b2cbeefb6264132dd4ffa19e837853b7694cdab5b66554f261f3f8161211b4"
+    }
+  ],
+  "verifiedCacheHits": 19,
+  "alignmentCacheHits": 19,
+  "stages": {
+    "image": {
+      "wouldRun": false,
+      "provider": "OpenAI Images",
+      "maximumRequests": 0,
+      "conservativeBoundUSD": 0
+    },
+    "generation": {
+      "wouldRun": false,
+      "provider": "OpenAI",
+      "maximumRequests": 0,
+      "conservativeBoundUSD": 0,
+      "derivesBriefInSameRequest": false,
+      "separateBriefPlanningCalls": 0
+    },
+    "review": {
+      "wouldRun": false,
+      "provider": "OpenAI",
+      "maximumRequests": 0,
+      "conservativeBoundUSD": 0
+    },
+    "tts": {
+      "wouldRun": false,
+      "provider": "Google Cloud Chirp 3 HD",
+      "maximumRequests": 0,
+      "exactUncachedCharacters": 0,
+      "estimatedNewSynthesisUSD": 0,
+      "conservativeBoundUSD": 0,
+      "basis": "Verified final narration and per-clip cache checks"
+    },
+    "alignment": {
+      "wouldRun": false,
+      "provider": null,
+      "costUSD": 0
+    },
+    "render": {
+      "wouldRun": true,
+      "provider": null,
+      "costUSD": 0
+    }
+  },
+  "conservativeTotalUSD": 0,
+  "pricing": {
+    "checked": "2026-11-10",
+    "verifyAgainBy": "2026-11-17",
+    "chirpUSDPerCharacter": 0.00003,
+    "googleSource": "https://cloud.google.com/text-to-speech/pricing",
+    "openaiSource": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+  },
+  "providerCalls": 0,
+  "note": "Dry run: no generation, synthesis, alignment or render. Cache hits require checksum, identity, duration and decode checks; estimates for ungenerated content are conditional."
+}

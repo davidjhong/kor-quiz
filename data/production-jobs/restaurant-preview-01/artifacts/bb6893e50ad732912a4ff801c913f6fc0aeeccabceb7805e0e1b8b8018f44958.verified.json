@@ -1,0 +1,51 @@
+{
+  "renderHash": "bb6893e50ad732912a4ff801c913f6fc0aeeccabceb7805e0e1b8b8018f44958",
+  "sha256": "55653200f0fbbdea6de012df52049c02d9e93007f299216bc7c5fd8742de815b",
+  "temporary": "C:\\Users\\david\\Documents\\kor-vids\\out\\.production-render-34KJP3\\normalized.mp4",
+  "verification": {
+    "metadata": {
+      "frames": 462,
+      "duration": 15.4,
+      "width": 1080,
+      "height": 1920,
+      "fps": 30
+    },
+    "fullDecode": "PASS",
+    "rawMixedAudio": {
+      "integratedLUFS": -19.41,
+      "truePeakDbTP": -4.04,
+      "loudnessRangeLU": 14.8,
+      "raw": {
+        "input_i": "-19.41",
+        "input_tp": "-4.04",
+        "input_lra": "14.80",
+        "input_thresh": "-32.01",
+        "output_i": "-16.82",
+        "output_tp": "-2.00",
+        "output_lra": "7.60",
+        "output_thresh": "-27.93",
+        "normalization_type": "dynamic",
+        "target_offset": "0.82"
+      }
+    },
+    "finalMixedAudio": {
+      "integratedLUFS": -16.1,
+      "truePeakDbTP": -1.8,
+      "loudnessRangeLU": 7.1,
+      "raw": {
+        "input_i": "-16.10",
+        "input_tp": "-1.80",
+        "input_lra": "7.10",
+        "input_thresh": "-27.31",
+        "output_i": "-15.87",
+        "output_tp": "-2.00",
+        "output_lra": "5.60",
+        "output_thresh": "-26.71",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.13"
+      }
+    },
+    "zeroProviderCallsDuringRender": true
+  },
+  "propsFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\artifacts\\bb6893e50ad732912a4ff801c913f6fc0aeeccabceb7805e0e1b8b8018f44958.props.json"
+}

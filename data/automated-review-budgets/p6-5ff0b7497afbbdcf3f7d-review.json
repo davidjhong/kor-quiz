@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "directory": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\generated\\3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d",
+  "sourceHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+  "model": "gpt-6-luna",
+  "promptVersion": "phase5b-automated-review-v1",
+  "capUnits": 56400000,
+  "state": "accepted",
+  "attempts": [
+    {
+      "phase": "review",
+      "state": "complete",
+      "reservedUnits": 18800000,
+      "chargedUnits": 1650750,
+      "usage": {
+        "inputTokens": 2938,
+        "outputTokens": 2567,
+        "totalTokens": 5505,
+        "reasoningTokens": 2233,
+        "cachedInputTokens": 0
+      },
+      "requestId": "req_e4d3eac4485d4ecca5fe048a78a0d0c9",
+      "returnedModel": "gpt-6-luna",
+      "startedAt": "2026-11-12T07:25:13.673Z"
+    }
+  ],
+  "finalHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0"
+}

@@ -4,8 +4,11 @@ import {isAbsolute, join, relative, resolve, sep} from 'node:path';
 import {getBackgroundAsset} from '../src/assets/backgrounds.ts';
 import type {QuizInput} from '../src/quizSchema.ts';
 import {PROJECT_ROOT} from './remotionCommand.ts';
+import {loadBackgroundCatalog} from './backgroundCatalog.ts';
+import {dirname} from 'node:path';
 
 export const validateBackgroundAsset = async (quiz: Pick<QuizInput, 'backgroundAssetId'>, publicDirectory = join(PROJECT_ROOT, 'public')) => {
+  await loadBackgroundCatalog(dirname(publicDirectory));
   const asset = getBackgroundAsset(quiz.backgroundAssetId);
   if (!asset) return;
   try {

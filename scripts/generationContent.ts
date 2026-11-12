@@ -1,11 +1,13 @@
 import {z} from 'zod';
 import {CONTENT_LIMITS, type QuizQuestion} from '../src/quizSchema.ts';
-import {briefSchema, ENGLISH_NARRATION_PATTERN, type Draft} from '../src/draftSchema.ts';
+import {briefSchema, briefLearningSchema, ENGLISH_NARRATION_PATTERN, type Draft} from '../src/draftSchema.ts';
 import {BONUS_CTA_TEXT, BONUS_FOLLOW_TEXT, narrationScriptSchema, voiceProfileSchema} from '../src/narration.ts';
 import {assertLegacyDemo, priorRecords} from './draftWorkflow.ts';
 import {readJsonFile} from './narrationFiles.ts';
 import {join} from 'node:path';
 import {PROJECT_ROOT} from './remotionCommand.ts';
+import {readFileSync} from 'node:fs';
+import {assertConciseExplanation,countEnglishWords} from '../src/editorialPolicy.ts';
 
 export const PROMPT_VERSION = 'phase5b-quality-v1';
 export const SCHEMA_VERSION = 'phase5b-quality-education-v1';
@@ -44,13 +46,23 @@ export const generationOutputSchema = z.strictObject({
   bonus: z.strictObject(educational).describe('Sixth public hard question. Only correctAnswerIndex/translation/explanation/teachingPoint are private; prompt/context/spokenPrompt are normal public English questions.'),
 });
 export type GeneratedEducation = z.infer<typeof generationOutputSchema>;
+export const SCENARIO_PROMPT_VERSION='phase6-scenario-generation-v1';
+export const SCENARIO_SCHEMA_VERSION='phase6-scenario-education-v1';
+export const CONCISE_PROMPT_VERSION='pipeline-concise-generation-v1';
+export const CONCISE_SCHEMA_VERSION='pipeline-concise-education-v1';
+export const CONCISE_INSTRUCTION='For each normal question, explanationNarration MUST be exactly one useful English sentence of at most 12 words: include the meaning and a specific learning point, not generic filler. Apostrophes stay within words; hyphens split words. Keep existing character limits separately. Do not shorten the Korean answer, accelerate speech or add filler. Code checks this after parsing. No bonus explanation narration.';
+export const scenarioGenerationOutputSchema=generationOutputSchema.extend({derivedBrief:briefLearningSchema});
+export const SCENARIO_PLANNING_INSTRUCTION=`The brief is an offline seed from one plain-language scenario, not a completed teaching plan. In THIS SAME RESPONSE, supply derivedBrief.context and exactly six distinct scenario-specific learningObjectives in question order, then write questions and the bonus that realize those objectives. Infer a realistic beginner interaction and useful concrete context from the scenario. Start with easy practical tasks and progress to medium and harder beginner tasks. Do not ask the user to author objectives. Do not add claims about real prices, routes, hotel policies or other unsupported facts. Keep the requested setting, audience and beginner level. derivedBrief contains educational context/objectives only: never assets, paths, voices, approvals, budgets or other settings. Do not make a separate planning request. These fields are private planning data, not additional narration. The existing automated review remains responsible for acceptance; do not claim human approval.`;
 export const episodeIdSchema = z.string().regex(/^[a-z0-9][a-z0-9-]{0,39}$/u);
-export const defaultVoiceProfile = voiceProfileSchema.parse({provider: 'google-cloud-tts', model: 'chirp3-hd',
-  voices: {'en-US': 'en-US-Chirp3-HD-Kore', 'ko-KR': 'ko-KR-Chirp3-HD-Kore'},
-  outputFormat: 'LINEAR16', sampleRateHertz: 24000, speakingRate: 1});
+export const defaultVoiceProfile = voiceProfileSchema.parse(JSON.parse(readFileSync(
+  new URL('../content/voice-profiles/selected-default.json', import.meta.url), 'utf8')).profile);
 
-export const assembleGeneratedDraft = (raw: unknown, rawBrief: unknown, episodeId: string, provenance: Draft['provenance']) => {
-  const data = generationOutputSchema.parse(raw), brief = briefSchema.parse(rawBrief);
+export const assembleGeneratedDraft = (raw: unknown, rawBrief: unknown, episodeId: string, provenance: Draft['provenance'],
+  profile: Draft['narration']['profile'] = defaultVoiceProfile, deriveBrief=false,contentPolicy?:'concise-explanations-v1') => {
+  const expanded=deriveBrief?scenarioGenerationOutputSchema.parse(raw):null;
+  const data = generationOutputSchema.parse(expanded?{questions:expanded.questions,bonus:expanded.bonus}:raw);
+  if(contentPolicy)for(const [i,q]of data.questions.entries())assertConciseExplanation(q.explanationNarration,`Question ${i+1}.explanationNarration`);
+  const brief = briefSchema.parse({...briefSchema.parse(rawBrief),...(expanded?.derivedBrief??{})});
   episodeIdSchema.parse(episodeId);
   const all = [...data.questions, data.bonus];
   const questions = all.map((q, index) => ({id: `${episodeId}-q${index + 1}`,
@@ -74,11 +86,11 @@ export const assembleGeneratedDraft = (raw: unknown, rawBrief: unknown, episodeI
   const draft = {version: 1, brief, provenance, quiz: {videoId: episodeId, episodeTitle: 'Can you say it in Korean?',
     openingSubtitle: 'Easy to hard', endingMode: 'comment-challenge', minimumDurationSeconds: 65,
     backgroundAssetId: brief.backgroundAssetId, showRomanization: true, questions},
-    narration: {version: 1, profile: defaultVoiceProfile, segments}};
+    narration: {version: 1, profile: voiceProfileSchema.parse(profile), segments}};
   return {draft, key};
 };
 
-export const generationPrompt = async (rawBrief: unknown, root = PROJECT_ROOT) => {
+export const generationPrompt = async (rawBrief: unknown, root = PROJECT_ROOT, deriveBrief=false,contentPolicy?:'concise-explanations-v1') => {
   const brief = briefSchema.parse(rawBrief);
   const {parseQuizInput} = await import('../src/quizSchema.ts');
   const exampleQuiz = parseQuizInput(await readJsonFile(join(root, 'content/cafe-six.json')));
@@ -89,11 +101,17 @@ export const generationPrompt = async (rawBrief: unknown, root = PROJECT_ROOT) =
     translation: q.reveal!.translation, teachingPoint: q.reveal!.teachingPoint,
     explanationNarration: exampleSpeech.segments.find((s) => s.contentId === q.id && s.role === 'explanation')!.text,
   }));
-  const keywords = brief.scenarioType === 'cafe' ? /caf[eé]/iu : brief.scenarioType === 'convenience-store' ? /store|buy|shop/iu : /transit|train|bus|subway/iu;
+  const keywords = contentPolicy&&brief.scenarioType==='restaurant'?/restaurant|dinner|menu|dish|bill/iu:brief.scenarioType === 'cafe' ? /caf[eé]/iu : brief.scenarioType === 'convenience-store' ? /store|buy|shop/iu
+    : brief.scenarioType === 'hotel' ? /hotel|room|check.?in|reception/iu : /transit|train|bus|subway/iu;
   const prior = (await priorRecords(root)).flatMap((episode) => episode.questions.map((q) => ({scenario: q.scenario,
     question: q.normalizedText.slice(0, 200), taughtPhrase: q.phrase.slice(0, 60), relevant: keywords.test(`${episode.episodeId} ${q.scenario} ${q.normalizedText}`)})))
     .sort((a, b) => Number(b.relevant) - Number(a.relevant)).slice(0, 12).map(({relevant: _relevant, ...q}) => q);
-  const system = GENERATION_SYSTEM_PROMPT;
-  return {system, user: JSON.stringify({brief: {scenario: brief.scenario, audience: brief.audience, level: brief.level,
-    scenarioType: brief.scenarioType}, approvedExamples: examples, relevantPriorQuestions: prior}), exampleCount: examples.length, historyCount: prior.length};
+  const system = deriveBrief?GENERATION_SYSTEM_PROMPT.replace('Human linguistic review is still required.',
+    'Separate automated or optional manual linguistic review follows generation.')+'\n'+SCENARIO_PLANNING_INSTRUCTION:GENERATION_SYSTEM_PROMPT;
+  const compatibleExamples=contentPolicy?examples.map(e=>{if(countEnglishWords(e.explanationNarration)<=12)return e;const {explanationNarration:_oldNarration,...rest}=e;return rest;}):examples;
+  return {system:(contentPolicy?system.replace('Human linguistic review is still required.','Separate automated or optional manual linguistic review follows generation.'):system)+(contentPolicy?'\n'+CONCISE_INSTRUCTION:''), user: JSON.stringify({brief: {scenario: brief.scenario, audience: brief.audience, level: brief.level,
+    scenarioType: brief.scenarioType,...(brief.context?{context:brief.context}:{}),
+    ...(brief.learningObjectives?{learningObjectives:brief.learningObjectives}:{})},
+    ...(deriveBrief?{briefExpansion:'Derive context and six objectives together with the quiz in this response; no separate planning call.'}:{}),
+    approvedExamples: compatibleExamples, relevantPriorQuestions: prior}), exampleCount: examples.length, historyCount: prior.length};
 };

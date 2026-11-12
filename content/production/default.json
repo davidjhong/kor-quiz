@@ -1,0 +1,8 @@
+{
+  "compactSpacing": true,
+  "synchronizedCaptions": true,
+  "backgroundAudio": true,
+  "musicGain": 1.25,
+  "captionStyle": "phrases",
+  "bookendStyle": "display"
+}

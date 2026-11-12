@@ -1,0 +1,112 @@
+{
+  "version": 2,
+  "kind": "production-budget",
+  "jobId": "restaurant-preview-01",
+  "capUnits": 530000000,
+  "authorization": "Explicit --allow-paid and total --max-cost-usd for this production job",
+  "allocations": {
+    "image-379962e8db662f6788de64dd": {
+      "stage": "image",
+      "inputHash": "379962e8db662f6788de64dd9b2b63286f0a88c5a39bbe6f35d6246885ceb3ff",
+      "allocatedUnits": 504655000,
+      "chargedUnits": 35770000,
+      "state": "settled",
+      "childBudgetId": "p6-8f5a7dd5a36e6c2a6e05-image",
+      "requests": [
+        {
+          "key": "379962e8db662f6788de64dd9b2b63286f0a88c5a39bbe6f35d6246885ceb3ff",
+          "state": "received",
+          "units": 504655000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\image\\379962e8db662f6788de64dd9b2b63286f0a88c5a39bbe6f35d6246885ceb3ff\\original.png",
+          "sha256": "a9405bcdcc310ef167f3918ff66282cc308c4b5cc59c61303e3a0933e0b3aa7b"
+        }
+      ],
+      "usage": {
+        "providerRequests": 1,
+        "usage": {
+          "input_tokens": 362,
+          "input_tokens_details": {
+            "image_tokens": 0,
+            "text_tokens": 362
+          },
+          "output_tokens": 1132,
+          "output_tokens_details": {
+            "image_tokens": 1132,
+            "text_tokens": 0
+          },
+          "total_tokens": 1494
+        },
+        "costKnown": true,
+        "receipt": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\image\\379962e8db662f6788de64dd9b2b63286f0a88c5a39bbe6f35d6246885ceb3ff\\receipt.json"
+      }
+    },
+    "review-a66dcf6ad2538e9ff4d51747": {
+      "stage": "review",
+      "inputHash": "a66dcf6ad2538e9ff4d517474a765bf3116d0e665a0f7246e443e89cba48535a",
+      "allocatedUnits": 18800000,
+      "chargedUnits": 195500,
+      "state": "settled",
+      "childBudgetId": "p6-7afeabdbe81cf9a98643-review",
+      "requests": [
+        {
+          "key": "a66dcf6ad2538e9ff4d517474a765bf3116d0e665a0f7246e443e89cba48535a",
+          "state": "received",
+          "units": 18800000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\review\\response.json"
+        }
+      ],
+      "usage": [
+        {
+          "state": "complete",
+          "usage": {
+            "inputTokens": 644,
+            "outputTokens": 230,
+            "totalTokens": 874,
+            "reasoningTokens": 165,
+            "cachedInputTokens": 0
+          },
+          "requestId": "req_e059077fed494481b8148ed23c4146a8"
+        }
+      ]
+    },
+    "tts-db02c4f60cd46a24f0590104": {
+      "stage": "tts",
+      "inputHash": "db02c4f60cd46a24f0590104cae7af19419497799778a935e592d4aff15d6ef8",
+      "allocatedUnits": 5580000,
+      "chargedUnits": 2790000,
+      "state": "settled",
+      "childBudgetId": "p6-66e511f1a39700301e27-tts",
+      "requests": [
+        {
+          "key": "a1e4832fc5fa0a79e0bfb0f25e2041166f74b78dd020a1799d29792108ec17d2",
+          "state": "received",
+          "units": 930000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\tts-responses\\a1e4832fc5fa0a79e0bfb0f25e2041166f74b78dd020a1799d29792108ec17d2.wav",
+          "sha256": "9f9b2b8608963ddd987787e1906a22ca6ed5b3b71420e21efe96853218dd9984"
+        },
+        {
+          "key": "11358bc97627ccb154be8cadc8fdef88a64a0d3f63ce824207cfd84b226cb761",
+          "state": "received",
+          "units": 270000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\tts-responses\\11358bc97627ccb154be8cadc8fdef88a64a0d3f63ce824207cfd84b226cb761.wav",
+          "sha256": "f3fdd8e68e6ab6b4192326156a2e02a9b3dd8b269c0d45de99ab875a494a5bb6"
+        },
+        {
+          "key": "ebb520208afb5007d09851ef72a9b1ff2314fea2d41756e3e6ebdefaa9cc60f4",
+          "state": "received",
+          "units": 1590000,
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\tts-responses\\ebb520208afb5007d09851ef72a9b1ff2314fea2d41756e3e6ebdefaa9cc60f4.wav",
+          "sha256": "3f82b3ca7d8c6d1bf33dbc2d28fa8f2e82ce7ce0fa503cb73f1c15ba6fac5322"
+        }
+      ],
+      "usage": {
+        "cacheHits": 3,
+        "recoveredOriginals": 0,
+        "localPrepared": 0,
+        "newSynthesisRequests": 0,
+        "newSynthesisCharacters": 0,
+        "estimated": true
+      }
+    }
+  }
+}

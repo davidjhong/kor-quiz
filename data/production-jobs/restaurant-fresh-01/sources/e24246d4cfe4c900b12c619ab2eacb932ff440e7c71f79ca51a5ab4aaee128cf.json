@@ -1,0 +1,24 @@
+{
+  "source": {
+    "kind": "scenario",
+    "text": "Beginner Korean ordering dinner at a restaurant, including choosing a dish, ordering a drink, adjusting an order, and asking for the bill.",
+    "defaultsVersion": "phase6-scenario-defaults-v1",
+    "brief": {
+      "scenario": "Beginner Korean ordering dinner at a restaurant, including choosing a dish, ordering a drink, adjusting an order, and asking for the bill.",
+      "audience": "English-speaking adults learning practical beginner Korean for travel",
+      "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+      "backgroundAssetId": null,
+      "scenarioType": "restaurant"
+    }
+  },
+  "identity": "e24246d4cfe4c900b12c619ab2eacb932ff440e7c71f79ca51a5ab4aaee128cf",
+  "seedBrief": {
+    "scenario": "Beginner Korean ordering dinner at a restaurant, including choosing a dish, ordering a drink, adjusting an order, and asking for the bill.",
+    "audience": "English-speaking adults learning practical beginner Korean for travel",
+    "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+    "backgroundAssetId": "generated-restaurant-5cbd8216bb56fdd7",
+    "scenarioType": "restaurant"
+  },
+  "learningPlan": "Pending: derived together with questions in the existing generation call",
+  "providerCalls": 0
+}

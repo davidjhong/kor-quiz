@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "budgetId": "p6-b11e3d5940535967ace5-generation",
+  "capUnits": 37600000,
+  "createdAt": "2026-11-12T07:24:35.772Z",
+  "pricing": "gpt-6-luna-2026-11-04",
+  "scenarios": {
+    "production-restaurant-fresh-02": {
+      "intentHash": "a61493c19b952edd9f13223a26149ad5c2da114fc3e5ce3bedbd35233811d73b",
+      "directory": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\generated\\3238b8b2d66c8e5136461615e68876c75fbb676300d7229a8218d7f00dfcf81d",
+      "attempts": [
+        {
+          "number": 1,
+          "state": "valid",
+          "reservedUnits": 18800000,
+          "chargedUnits": 1729750,
+          "startedAt": "2026-11-12T07:24:35.774Z",
+          "usage": {
+            "inputTokens": 2338,
+            "outputTokens": 2875,
+            "totalTokens": 5213,
+            "reasoningTokens": 1162,
+            "cachedInputTokens": 0
+          },
+          "requestId": "req_234dc2e7300b405d8cd73548ba067c76",
+          "returnedModel": "gpt-6-luna",
+          "errors": []
+        }
+      ]
+    }
+  }
+}

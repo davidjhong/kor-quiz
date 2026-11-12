@@ -49,6 +49,11 @@ export const preparedNarrationSchema = z.strictObject({
   clips: z.array(preparedClipSchema).min(4).max(19),
 });
 export type PreparedNarration = z.infer<typeof preparedNarrationSchema>;
+/** Dedicated three-clip excerpt contract; production's 4–19 clip schema is unchanged. */
+export const preparedQuestionExcerptSchema=preparedNarrationSchema.extend({clips:z.array(preparedClipSchema).length(3)}).superRefine((p,ctx)=>{
+  if(JSON.stringify(p.clips.map(c=>[c.role,c.language]))!==JSON.stringify([['question','en-US'],['answer','ko-KR'],['explanation','en-US']]))
+    ctx.addIssue({code:'custom',message:'Question excerpt requires English question, Korean answer and English explanation only'});
+});
 export type PreparedClip = z.infer<typeof preparedClipSchema>;
 
 /** Exclude hidden roles before any cache lookup or synthesis. No answer choice list is spoken. */

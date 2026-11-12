@@ -3,6 +3,7 @@ import {readFileSync} from 'node:fs';
 import {createRequire} from 'node:module';
 import {dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {checkCancellation,ownWorker} from './cancellation.ts';
 
 export const PROJECT_ROOT = fileURLToPath(new URL('../', import.meta.url));
 
@@ -13,12 +14,14 @@ const manifest = JSON.parse(readFileSync(manifestPath, 'utf8')) as {bin: {remoti
 const cli = join(dirname(manifestPath), manifest.bin.remotion);
 
 export const runRemotion = (args: string[], capture = false, timeoutMs = 0, captureStderr = false): Promise<string> => new Promise((resolve, reject) => {
+  checkCancellation();
   const child = spawn(process.execPath, [cli, ...args], {
     cwd: PROJECT_ROOT,
     shell: false,
     windowsHide: true,
     stdio: ['ignore', capture ? 'pipe' : 'inherit', 'pipe'],
   });
+  ownWorker(child);
   let output = '';
   let errors = '';
   const timeout = timeoutMs > 0 ? setTimeout(() => {

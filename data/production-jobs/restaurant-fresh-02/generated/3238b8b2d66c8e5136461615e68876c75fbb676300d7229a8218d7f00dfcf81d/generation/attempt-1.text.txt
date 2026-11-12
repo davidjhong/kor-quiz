@@ -1,0 +1,164 @@
+{
+  "questions": [
+    {
+      "scenario": "Choosing a dinner dish",
+      "prompt": "Choose bibimbap from the menu. What would you say?",
+      "context": "You have decided to order bibimbap for dinner.",
+      "spokenPrompt": "You’ve chosen bibimbap for dinner. How would you order it?",
+      "choices": [
+        {
+          "hangul": "비빔밥 주세요.",
+          "romanization": "bibimbap juseyo."
+        },
+        {
+          "hangul": "불고기 주세요.",
+          "romanization": "bulgogi juseyo."
+        },
+        {
+          "hangul": "김치찌개 주세요.",
+          "romanization": "gimchi-jjigae juseyo."
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "Bibimbap, please.",
+      "explanation": "This politely asks for bibimbap. The dish name comes before the request ending.",
+      "teachingPoint": "비빔밥 = bibimbap; 주세요 = please give me",
+      "explanationNarration": "Bibimbap, please. Put the dish you want before the polite phrase used to ask for something."
+    },
+    {
+      "scenario": "Ordering a drink",
+      "prompt": "Order one cup of barley tea. What would you say?",
+      "context": "You want one cup of barley tea with dinner.",
+      "spokenPrompt": "You’d like a cup of barley tea with your meal. How do you order it?",
+      "choices": [
+        {
+          "hangul": "보리차 한 잔 주세요.",
+          "romanization": "bori-cha han jan juseyo."
+        },
+        {
+          "hangul": "물 한 잔 주세요.",
+          "romanization": "mul han jan juseyo."
+        },
+        {
+          "hangul": "주스 한 잔 주세요.",
+          "romanization": "juseu han jan juseyo."
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "One cup of barley tea, please.",
+      "explanation": "This requests one cup of barley tea. The counter phrase 한 잔 is used for a cup or glass of a drink.",
+      "teachingPoint": "한 잔 = one cup/glass; 보리차 = barley tea",
+      "explanationNarration": "One cup of barley tea, please. The phrase for one cup or glass comes after the drink name."
+    },
+    {
+      "scenario": "Adjusting the spice level",
+      "prompt": "Ask for your dish to be less spicy. What would you say?",
+      "context": "The kitchen can make your dish less spicy.",
+      "spokenPrompt": "You enjoy the dish, but want less heat. How would you ask?",
+      "choices": [
+        {
+          "hangul": "덜 맵게 해 주세요.",
+          "romanization": "deol maepge hae juseyo."
+        },
+        {
+          "hangul": "더 맵게 해 주세요.",
+          "romanization": "deo maepge hae juseyo."
+        },
+        {
+          "hangul": "덜 짜게 해 주세요.",
+          "romanization": "deol jjage hae juseyo."
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "Please make it less spicy.",
+      "explanation": "This asks the kitchen to reduce the spice. 덜 means less, while 더 means more.",
+      "teachingPoint": "덜 맵게 = less spicy; 해 주세요 = please make/do",
+      "explanationNarration": "Please make it less spicy. The word for less can also be used with other descriptions, such as salty."
+    },
+    {
+      "scenario": "Requesting no onion",
+      "prompt": "Ask for the onions to be left out. What would you say?",
+      "context": "Your dish includes onions, and you do not want any.",
+      "spokenPrompt": "Your meal comes with onions, but you’d prefer none. What would you ask?",
+      "choices": [
+        {
+          "hangul": "양파 빼 주세요.",
+          "romanization": "yangpa ppae juseyo."
+        },
+        {
+          "hangul": "마늘 빼 주세요.",
+          "romanization": "maneul ppae juseyo."
+        },
+        {
+          "hangul": "고추 빼 주세요.",
+          "romanization": "gochu ppae juseyo."
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "Please leave out the onions.",
+      "explanation": "This asks for onions to be omitted. The verb 빼다 means to leave something out or remove it.",
+      "teachingPoint": "양파 = onion; 빼 주세요 = please leave out",
+      "explanationNarration": "Please leave out the onions. The verb in this request means to remove something or leave it out."
+    },
+    {
+      "scenario": "Asking for the bill",
+      "prompt": "You are ready to pay. Ask for the bill.",
+      "context": "You have finished dinner and have not paid yet.",
+      "spokenPrompt": "You’ve finished eating and are ready to settle up. What would you ask for?",
+      "choices": [
+        {
+          "hangul": "계산서 주세요.",
+          "romanization": "gyesanseo juseyo."
+        },
+        {
+          "hangul": "메뉴판 주세요.",
+          "romanization": "menyupan juseyo."
+        },
+        {
+          "hangul": "물 좀 주세요.",
+          "romanization": "mul jom juseyo."
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "The bill, please.",
+      "explanation": "This asks for the bill before payment. 주세요 makes the request polite.",
+      "teachingPoint": "계산서 = bill; 주세요 = please give me",
+      "explanationNarration": "The bill, please. The first word means bill, and the ending turns it into a polite request."
+    }
+  ],
+  "bonus": {
+    "scenario": "Splitting the bill",
+    "prompt": "You and your friend will pay separately. What would you say?",
+    "context": "You are dining together, and each person will pay for their own meal.",
+    "spokenPrompt": "You and your friend are paying for your own meals. How would you ask to handle the bill?",
+    "choices": [
+      {
+        "hangul": "따로 계산해 주세요.",
+        "romanization": "ttaro gyesanhae juseyo."
+      },
+      {
+        "hangul": "한 번에 계산해 주세요.",
+        "romanization": "han beone gyesanhae juseyo."
+      },
+      {
+        "hangul": "카드로 계산해 주세요.",
+        "romanization": "kadeuro gyesanhae juseyo."
+      }
+    ],
+    "correctAnswerIndex": 0,
+    "translation": "Please let us pay separately.",
+    "explanation": "This requests separate payment. 따로 means separately, and 계산해 주세요 is a polite request to handle the payment.",
+    "teachingPoint": "따로 = separately; 계산해 주세요 = please handle the payment"
+  },
+  "derivedBrief": {
+    "context": "An English-speaking beginner is ordering dinner at a restaurant, making simple choices and polite requests, then paying.",
+    "learningObjectives": [
+      "Order a chosen dinner dish politely.",
+      "Request one cup of a specific drink.",
+      "Ask for a dish to be made less spicy.",
+      "Ask for a particular ingredient to be left out.",
+      "Request the bill after finishing dinner.",
+      "Ask to pay separately when dining with a friend."
+    ]
+  }
+}

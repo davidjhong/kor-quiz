@@ -1,0 +1,16 @@
+{
+  "scenario": "Beginner Korean ordering dinner at a restaurant, including choosing a dish, ordering a drink, adjusting an order, and asking for the bill.",
+  "audience": "English-speaking adults learning practical beginner Korean for travel",
+  "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+  "backgroundAssetId": "generated-restaurant-d5fea9be8c6e28a8",
+  "scenarioType": "restaurant",
+  "context": "An English-speaking beginner is ordering dinner at a restaurant, making simple choices and polite requests, then paying.",
+  "learningObjectives": [
+    "Order a chosen dinner dish politely.",
+    "Request one cup of a specific drink.",
+    "Ask for a dish to be made less spicy.",
+    "Ask for a particular ingredient to be left out.",
+    "Request the bill after finishing dinner.",
+    "Ask to pay separately when dining with a friend."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "provider": "openai-images",
+  "requestId": "req_0f62b9ef611c4e6c8aea041f59b398cf",
+  "created": 1794460826,
+  "requestedModel": "gpt-image-2.6-flare",
+  "returnedModel": null,
+  "modelDisclosure": "Images response does not expose a returned model ID; requested model recorded.",
+  "settings": {
+    "quality": "medium",
+    "size": "1024x1536",
+    "n": 1,
+    "output_format": "png"
+  },
+  "usage": {
+    "input_tokens": 362,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 362
+    },
+    "output_tokens": 1132,
+    "output_tokens_details": {
+      "image_tokens": 1132,
+      "text_tokens": 0
+    },
+    "total_tokens": 1494
+  },
+  "estimatedCostUSD": 0.03577,
+  "invoiceInspected": false,
+  "sha256": "a9405bcdcc310ef167f3918ff66282cc308c4b5cc59c61303e3a0933e0b3aa7b"
+}

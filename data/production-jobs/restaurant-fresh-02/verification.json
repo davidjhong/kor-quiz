@@ -1,0 +1,261 @@
+{
+  "jobId": "restaurant-fresh-02",
+  "output": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-fresh-02.mp4",
+  "videoSha256": "49f54d91f759a33d955f4e74dc3aa0215e4eccfa00f37a74c871a4ec7f36b2ad",
+  "contentHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+  "reviewMode": "automated",
+  "voice": {
+    "provider": "google-cloud-tts",
+    "model": "chirp3-hd",
+    "voices": {
+      "en-US": "en-US-Chirp3-HD-Kore",
+      "ko-KR": "ko-KR-Chirp3-HD-Kore"
+    },
+    "outputFormat": "LINEAR16",
+    "sampleRateHertz": 24000,
+    "speakingRate": 1
+  },
+  "presentation": {
+    "compactSpacing": true,
+    "synchronizedCaptions": true,
+    "backgroundAudio": true,
+    "musicGain": 1.25,
+    "captionStyle": "phrases",
+    "bookendStyle": "display"
+  },
+  "timeline": {
+    "frames": 3582,
+    "durationSeconds": 119.4,
+    "questions": [
+      {
+        "id": "production-restaurant-fresh-02-q1",
+        "bonus": false,
+        "start": 102,
+        "countdownStart": 222,
+        "revealStart": 372,
+        "end": 647
+      },
+      {
+        "id": "production-restaurant-fresh-02-q2",
+        "bonus": false,
+        "start": 659,
+        "countdownStart": 805,
+        "revealStart": 955,
+        "end": 1256
+      },
+      {
+        "id": "production-restaurant-fresh-02-q3",
+        "bonus": false,
+        "start": 1268,
+        "countdownStart": 1394,
+        "revealStart": 1544,
+        "end": 1863
+      },
+      {
+        "id": "production-restaurant-fresh-02-q4",
+        "bonus": false,
+        "start": 1875,
+        "countdownStart": 2027,
+        "revealStart": 2177,
+        "end": 2457
+      },
+      {
+        "id": "production-restaurant-fresh-02-q5",
+        "bonus": false,
+        "start": 2469,
+        "countdownStart": 2632,
+        "revealStart": 2782,
+        "end": 3060
+      },
+      {
+        "id": "production-restaurant-fresh-02-q6",
+        "bonus": true,
+        "start": 3072,
+        "countdownStart": 3229,
+        "revealStart": 3379,
+        "end": 3570
+      }
+    ],
+    "commentPauseFrames": 45,
+    "followHoldFrames": 30,
+    "fadeFrames": 12
+  },
+  "verification": {
+    "metadata": {
+      "frames": 3582,
+      "duration": 119.4,
+      "width": 1080,
+      "height": 1920,
+      "fps": 30
+    },
+    "fullDecode": "PASS",
+    "rawMixedAudio": {
+      "integratedLUFS": -17.21,
+      "truePeakDbTP": -3.93,
+      "loudnessRangeLU": 19.1,
+      "raw": {
+        "input_i": "-17.21",
+        "input_tp": "-3.93",
+        "input_lra": "19.10",
+        "input_thresh": "-29.97",
+        "output_i": "-16.46",
+        "output_tp": "-2.00",
+        "output_lra": "14.30",
+        "output_thresh": "-28.76",
+        "normalization_type": "dynamic",
+        "target_offset": "0.46"
+      }
+    },
+    "finalMixedAudio": {
+      "integratedLUFS": -16.07,
+      "truePeakDbTP": -2,
+      "loudnessRangeLU": 14.2,
+      "raw": {
+        "input_i": "-16.07",
+        "input_tp": "-2.00",
+        "input_lra": "14.20",
+        "input_thresh": "-28.35",
+        "output_i": "-16.47",
+        "output_tp": "-2.00",
+        "output_lra": "10.20",
+        "output_thresh": "-28.43",
+        "normalization_type": "dynamic",
+        "target_offset": "0.47"
+      }
+    },
+    "zeroProviderCallsDuringRender": true
+  },
+  "bonusIsolation": "PASS: strict public bonus schema has no answer/reveal/explanation metadata; actual question audio required",
+  "audioPreparation": {
+    "cacheHits": 19,
+    "recoveredOriginals": 0,
+    "localPrepared": 0,
+    "newSynthesisRequests": 0,
+    "newSynthesisCharacters": 0
+  },
+  "alignment": {
+    "cacheHits": 19,
+    "newLocalAlignments": 0,
+    "providerCalls": 0,
+    "phraseAnchoredArticles": [
+      {
+        "clipId": "production-restaurant-fresh-02-q1-question",
+        "text": "chosen",
+        "atSeconds": 0.78
+      },
+      {
+        "clipId": "production-restaurant-fresh-02-q3-question",
+        "text": "but",
+        "atSeconds": 1.34
+      },
+      {
+        "clipId": "production-restaurant-fresh-02-q4-question",
+        "text": "Your",
+        "atSeconds": 0.52
+      },
+      {
+        "clipId": "production-restaurant-fresh-02-q5-question",
+        "text": "finished",
+        "atSeconds": 0.98
+      }
+    ]
+  },
+  "cacheAfterPreparation": {
+    "verifiedClips": 19,
+    "verifiedAlignments": 19
+  },
+  "costs": {
+    "estimatedUSD": 0.0672355,
+    "capUSD": 0.74,
+    "ledger": "C:\\Users\\david\\Documents\\kor-vids\\data\\generation-budgets\\produce-restaurant-fresh-02.json",
+    "allocations": [
+      {
+        "stage": "image",
+        "state": "settled",
+        "reservedUSD": 0.505115,
+        "chargedEstimateUSD": 0.035865,
+        "requests": 1,
+        "usage": {
+          "providerRequests": 1,
+          "usage": {
+            "input_tokens": 381,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 381
+            },
+            "output_tokens": 1132,
+            "output_tokens_details": {
+              "image_tokens": 1132,
+              "text_tokens": 0
+            },
+            "total_tokens": 1513
+          },
+          "costKnown": true,
+          "receipt": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\image\\d5fea9be8c6e28a89b947a0ecb1747aefed26e4dfbb5cbaff6eb33e1cc6a0ee2\\receipt.json"
+        }
+      },
+      {
+        "stage": "generation",
+        "state": "settled",
+        "reservedUSD": 0.0376,
+        "chargedEstimateUSD": 0.00172975,
+        "requests": 1,
+        "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\generation-budgets\\p6-b11e3d5940535967ace5-generation.json",
+        "usage": [
+          {
+            "state": "valid",
+            "usage": {
+              "inputTokens": 2338,
+              "outputTokens": 2875,
+              "totalTokens": 5213,
+              "reasoningTokens": 1162,
+              "cachedInputTokens": 0
+            }
+          }
+        ]
+      },
+      {
+        "stage": "review",
+        "state": "settled",
+        "reservedUSD": 0.0564,
+        "chargedEstimateUSD": 0.00165075,
+        "requests": 1,
+        "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-review-budgets\\p6-5ff0b7497afbbdcf3f7d-review.json",
+        "usage": [
+          {
+            "state": "complete",
+            "usage": {
+              "inputTokens": 2938,
+              "outputTokens": 2567,
+              "totalTokens": 5505,
+              "reasoningTokens": 2233,
+              "cachedInputTokens": 0
+            }
+          }
+        ]
+      },
+      {
+        "stage": "tts",
+        "state": "settled",
+        "reservedUSD": 0.05598,
+        "chargedEstimateUSD": 0.02799,
+        "requests": 16,
+        "usage": {
+          "cacheHits": 19,
+          "recoveredOriginals": 0,
+          "localPrepared": 0,
+          "newSynthesisRequests": 0,
+          "newSynthesisCharacters": 0,
+          "estimated": true
+        }
+      }
+    ],
+    "invoiceInspected": false
+  },
+  "viewing": {
+    "visualInspection": "not yet performed",
+    "listeningPerformed": false,
+    "phonePlaybackPerformed": false
+  },
+  "generatedAt": "2026-11-12T08:13:42.970Z"
+}

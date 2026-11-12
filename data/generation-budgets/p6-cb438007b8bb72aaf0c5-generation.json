@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "budgetId": "p6-cb438007b8bb72aaf0c5-generation",
+  "capUnits": 37600000,
+  "createdAt": "2026-11-11T09:03:55.273Z",
+  "pricing": "gpt-6-luna-2026-11-04",
+  "scenarios": {
+    "production-hotel-01": {
+      "intentHash": "a5e5e49e4407f6e4631fe211deaefb4f1db8d4e29f82d335b92476e8557ce589",
+      "directory": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\generated\\a5fae1db35113462af0f82b2dff4c4b485d35debe1ed01b4fcf11b5249917204",
+      "attempts": [
+        {
+          "number": 1,
+          "state": "valid",
+          "reservedUnits": 18800000,
+          "chargedUnits": 2473625,
+          "startedAt": "2026-11-11T09:03:55.276Z",
+          "usage": {
+            "inputTokens": 2317,
+            "outputTokens": 4368,
+            "totalTokens": 6685,
+            "reasoningTokens": 2545,
+            "cachedInputTokens": 0
+          },
+          "requestId": "req_f9cf48477d654cdca72b551b96a1e0d4",
+          "returnedModel": "gpt-6-luna",
+          "errors": []
+        }
+      ]
+    }
+  }
+}

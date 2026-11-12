@@ -1,0 +1,104 @@
+{
+  "key": "51f74b04fc5946f07d21bb530341a82cd365add3fc534abc716cefd612c18c8c",
+  "audioSha256": "eab0593126854af15893367698ad99ca4e5ea63512dcb6bab7a8418da597dc3d",
+  "transcript": "Your meal comes with onions, but you’d prefer none. What would you ask?",
+  "language": "en-US",
+  "configuration": {
+    "version": "phrase-alignment-v1",
+    "engine": "stable-ts",
+    "engineVersion": "2.19.1",
+    "whisperVersion": "20250625",
+    "torchVersion": "2.8.0+cpu",
+    "model": "base",
+    "modelSha256": "ed3a0b6b1c0edf879ad9b11b1af5a0e6ab5db9205f891f668f8b0e6c6326e34e",
+    "device": "cpu",
+    "sampleRate": 16000,
+    "threads": 4,
+    "fp16": false,
+    "regroup": false,
+    "suppressSilence": true,
+    "vad": false,
+    "fastMode": false
+  },
+  "durationSeconds": 4.36,
+  "words": [
+    {
+      "text": " Your",
+      "start": 0.52,
+      "end": 0.52,
+      "probability": 0.055701594799757004
+    },
+    {
+      "text": " meal",
+      "start": 0.52,
+      "end": 0.72,
+      "probability": 0.9913683533668518
+    },
+    {
+      "text": " comes",
+      "start": 0.72,
+      "end": 0.96,
+      "probability": 0.9959197044372559
+    },
+    {
+      "text": " with",
+      "start": 0.96,
+      "end": 1.18,
+      "probability": 0.9994090795516968
+    },
+    {
+      "text": " onions,",
+      "start": 1.18,
+      "end": 1.66,
+      "probability": 0.901998907327652
+    },
+    {
+      "text": " but",
+      "start": 1.86,
+      "end": 1.94,
+      "probability": 0.6574550271034241
+    },
+    {
+      "text": " you’d",
+      "start": 1.94,
+      "end": 2.16,
+      "probability": 0.2604367096240541
+    },
+    {
+      "text": " prefer",
+      "start": 2.16,
+      "end": 2.4,
+      "probability": 0.9682338833808899
+    },
+    {
+      "text": " none.",
+      "start": 2.4,
+      "end": 2.9,
+      "probability": 0.7315299808979034
+    },
+    {
+      "text": " What",
+      "start": 3.22,
+      "end": 3.32,
+      "probability": 0.6310665607452393
+    },
+    {
+      "text": " would",
+      "start": 3.32,
+      "end": 3.44,
+      "probability": 0.9877691864967346
+    },
+    {
+      "text": " you",
+      "start": 3.44,
+      "end": 3.58,
+      "probability": 0.9925774931907654
+    },
+    {
+      "text": " ask?",
+      "start": 3.58,
+      "end": 3.9,
+      "probability": 0.9497428238391876
+    }
+  ]
+}

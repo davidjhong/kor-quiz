@@ -1,0 +1,17 @@
+{
+  "questions": [
+    {
+      "questionId": "restaurant-menu",
+      "checks": {
+        "naturalKorean": "pass",
+        "uniqueAnswer": "pass",
+        "romanization": "pass",
+        "meaningExplanation": "pass",
+        "englishNarration": "pass",
+        "bonusIsolation": "pass"
+      },
+      "findings": []
+    }
+  ],
+  "resolutions": []
+}

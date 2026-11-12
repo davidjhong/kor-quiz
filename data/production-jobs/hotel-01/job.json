@@ -1,0 +1,1089 @@
+{
+  "version": 1,
+  "jobId": "hotel-01",
+  "config": {
+    "source": {
+      "kind": "scenario",
+      "text": "Beginner Korean at a hotel",
+      "defaultsVersion": "phase6-scenario-defaults-v1",
+      "brief": {
+        "scenario": "Beginner Korean at a hotel",
+        "audience": "English-speaking adults learning practical beginner Korean for travel",
+        "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+        "backgroundAssetId": null,
+        "scenarioType": "hotel"
+      }
+    },
+    "output": "C:\\Users\\david\\Documents\\kor-vids\\out\\hotel-01.mp4",
+    "reviewMode": "automated",
+    "voiceFile": "content/voice-profiles/selected-default.json",
+    "presentationFile": "content/production/default.json",
+    "noMusic": false,
+    "model": "gpt-6-luna",
+    "maxOutputTokens": 12000
+  },
+  "state": "complete",
+  "stages": {
+    "generation": {
+      "status": "complete",
+      "inputHash": "62ba9133d56b06cccd8ecedf4d478f29049dc137780115f50b029bd13cd21854",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\generated\\a5fae1db35113462af0f82b2dff4c4b485d35debe1ed01b4fcf11b5249917204\\draft.json",
+          "sha256": "a5600d7dae0f57ce2bee5a6966e93026ef2b6cdd0390b93c6a977eab72441e5b"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\generated\\a5fae1db35113462af0f82b2dff4c4b485d35debe1ed01b4fcf11b5249917204\\answer-key.json",
+          "sha256": "1dbf9fd466c21e8abdbab534e6bb9c25f5d035be6cb7bac587fb62b66771a3ff"
+        }
+      ]
+    },
+    "import": {
+      "status": "planned",
+      "inputHash": "44c4be29b9feffd8b0bc49fe3263a77ce60c5db5c8e153cafceabde3c177f3cc",
+      "outputs": [],
+      "details": {}
+    },
+    "validation": {
+      "status": "complete",
+      "inputHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+      "outputs": [],
+      "details": {
+        "structural": "PASS",
+        "background": {
+          "id": "korean-hotel-illustrated-v1",
+          "sha256": "8b58c68bb61b3480461764b1ba403069723300e087c725b3da7809cf04d0d9f8",
+          "selection": "developer-selected",
+          "file": "backgrounds/korean-hotel-illustrated-v1.png"
+        },
+        "acceptance": {
+          "valid": true,
+          "kind": "automated"
+        }
+      }
+    },
+    "review": {
+      "status": "complete",
+      "inputHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-acceptances\\c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d.json",
+          "sha256": "4800a6375baccfb8b8e44479a08d25a30b5ebadd4426931bee53198d01652655"
+        }
+      ],
+      "details": {
+        "reusedAcceptance": true,
+        "humanReviewed": false
+      }
+    },
+    "audio": {
+      "status": "complete",
+      "inputHash": "34e5a18f345818c42016b435b8337616a7b0f0b6845df69e0dcce529c482ddaa",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\public\\audio\\production\\hotel-01\\34e5a18f345818c42016b435b8337616a7b0f0b6845df69e0dcce529c482ddaa.json",
+          "sha256": "d4d8938348aeab54417786f28b4625ed8f30708f7727624fe1c9e8386155e57f"
+        }
+      ],
+      "details": {
+        "cacheHits": 19,
+        "recoveredOriginals": 0,
+        "localPrepared": 0,
+        "newSynthesisRequests": 0,
+        "newSynthesisCharacters": 0
+      }
+    },
+    "alignment": {
+      "status": "complete",
+      "inputHash": "829433894d3ce2f465bea08e6f3e4b1b6c01eb92eeeb3a8a2ccaeec20687c72a",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\730c2711c776bad33d84535b4182d90390bb7ff98d18430ffae0c92a57488773.json",
+          "sha256": "83c6d4cbdc0ba60af3f4cd57132aa1c203e3654f918859056afc8812d32f0373"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\3f51c099ef71a1aa769e854c1dd5f4e082925679a8f328aa13646f340bda2ff0.json",
+          "sha256": "757d70032ec59d94bb4da3c845511770a5e3e92a32c7233513d0ac9e1e90d789"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\e6175a190a14834635671dc86442d3a83ac24a33cb907be83a0c0a142d99369c.json",
+          "sha256": "ad7b8cfdf41a5e4c1534187f783b2b3b918ac00ca785d53fef5b44e76ba7b99d"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\46ff78c046b0352b8a1bd5def16c41458556b655af37fa577d4497be5a06ed5e.json",
+          "sha256": "fea5e5a2f62959ea831fce6b934c34c2ec99f201f8de6a1fa81f2fad7b121aa3"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\a4d19e72ca3e8cc8de61ccadd93c9274ec4bb4317259e314fa799d8fd1904502.json",
+          "sha256": "1eba525df0fe5be4d612eaf258e08fe64a039aaabc86d43453572e7d28ee48aa"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\33a0fe8e8de68c86e643dd6de4c8097dd3ea22ed7bc2ca5462f430ff213ce80b.json",
+          "sha256": "d963d17b08771508a96bc4773b3f20f85d4414d47b5ea7c0a62389fa4a5c892e"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\6315f297246add2066874a64ba49dfb84488bdfd807ca4cd2be69f6c95b6e5c1.json",
+          "sha256": "b1763cb51fe9aadd500f2f5510824f981637260011c609b8823a4f7b2847ff70"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\da9a8add9bb347424b2d4ed837bf4a8dcb81104e7874454ac8c22854d498e4da.json",
+          "sha256": "76e4c9b42eeaf66eb7d6c180f714891b178a49d51a1a6a49cce4b100e3b7b668"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\d9baaa012fdc2514a7761ab7c24fee2e7c85143de1514b43aaa56fb4cf6f8ab9.json",
+          "sha256": "39c4a3a94302684409f34d1e5f915262eaa7f364acfbca32d51f099cb8872e38"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\8c92d83209ca8bfe564a7ecf1aa8ec5925ec13dd15063cd0a82f741066228829.json",
+          "sha256": "136f3081c3d6fe7687e3e21a4b38026122706abf693d831bf11ce1620b679eda"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\d762da86c1313409d841886f8c71fc1c53d2495fdce482216eca05399ce2cdd4.json",
+          "sha256": "437cbe574905514b080c0d35014fe4135290a423fb399e3a8a02dee90f5eb80f"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\01692e1ea9581e680a531bf2fe3d698c3add282e738056f1da97b5522e787be3.json",
+          "sha256": "a5e0286a5aa310b730267dd7e744898c8ffa3f3897fc993966cd6262f8a2db67"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\e68cce63fd707b96f9ac94c71a23f449f297bd5ede0607c8d3527eb00351f288.json",
+          "sha256": "c3d2409ec81db8628a4c78e2084984c7666efae9f3f3f2f9ddc53df8935f320d"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\21e2d99fa28a51b173780bb1521da14916d341c3cb2d13af133aae2d007d905c.json",
+          "sha256": "84404d1efbef1e0de7eaac75a2721db03b6d524da463e26ae059084cb58d2a6d"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\c59cd25edae11c5ae644497e0f659a8e92d6a8610f4583e9400e6605bc7544c9.json",
+          "sha256": "d82489e29a0ac6e1fbe49011eacf41e843d18ecba0301d40455344f85cfdd11a"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\0d4daadd48d49eaf8947f3bd7734141fee6b6859c4b840c20c0f9ff5421cfb8c.json",
+          "sha256": "ba90799cb0fb9d33c68dc4c7fcafb4c0fc471b8188807e12f4e69ee70f874c0d"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\100e0d13194b766872a2b19dd730a6f6b90a34ba47b23eb2431b5271e435874d.json",
+          "sha256": "82ba6dde0a6ebfe2190f93bb8549081301fcdd1618bdbe43c7e43be1fe3701b2"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\5c50280c30a64910357484ceef8f1a6dbd7c919e2987593084e93d6aec16ca58.json",
+          "sha256": "27eef3bcdf2330f3555eac1f60d8c362620c1bdc61fff8b94faacb8c3a3e38fb"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\33966cd15617f5d9ba55a29200730bac3b000b07bdd102ba2f5a31bec73c1fd5.json",
+          "sha256": "c4d317945bb0a7778aad5dbc4b962f5d406170f87350fa989557b62a528ea4cf"
+        }
+      ],
+      "details": {
+        "cacheHits": 19,
+        "newLocalAlignments": 0,
+        "providerCalls": 0
+      }
+    },
+    "captions": {
+      "status": "complete",
+      "inputHash": "8084c909b75052fe26cfc616404da69cbbe961e29ce0b796596bda3115c1e4f7",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\artifacts\\8084c909b75052fe26cfc616404da69cbbe961e29ce0b796596bda3115c1e4f7.captions.json",
+          "sha256": "4857a89b162c21dbe557322f45e70bb72b13503bb68b104d589d90cfe6eee16a"
+        }
+      ]
+    },
+    "render": {
+      "status": "complete",
+      "inputHash": "9a36c6922042ab32d2b912c39961feff5bbaa370e478206c5eaf34e4236fdc00",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\out\\hotel-01.mp4",
+          "sha256": "ddeac381ecf54172543ef7f24e13cbfd93e8d60cedc0893c5c4460729cf8312e"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\artifacts\\9a36c6922042ab32d2b912c39961feff5bbaa370e478206c5eaf34e4236fdc00.props.json",
+          "sha256": "ff57b32b08cecb2cb19e94ca341583828dd759917c69ce9404e111f8746896fa"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\artifacts\\9a36c6922042ab32d2b912c39961feff5bbaa370e478206c5eaf34e4236fdc00.verified.json",
+          "sha256": "e1475494cabf6a55eb24930871bde626ec06bae2c89142e28c5a1e56634ace04"
+        }
+      ],
+      "details": {
+        "metadata": {
+          "frames": 3462,
+          "duration": 115.4,
+          "width": 1080,
+          "height": 1920,
+          "fps": 30
+        },
+        "fullDecode": "PASS",
+        "rawMixedAudio": {
+          "integratedLUFS": -18.12,
+          "truePeakDbTP": -4,
+          "loudnessRangeLU": 17.8,
+          "raw": {
+            "input_i": "-18.12",
+            "input_tp": "-4.00",
+            "input_lra": "17.80",
+            "input_thresh": "-30.71",
+            "output_i": "-16.43",
+            "output_tp": "-2.00",
+            "output_lra": "13.40",
+            "output_thresh": "-28.27",
+            "normalization_type": "dynamic",
+            "target_offset": "0.43"
+          }
+        },
+        "finalMixedAudio": {
+          "integratedLUFS": -16.08,
+          "truePeakDbTP": -1.46,
+          "loudnessRangeLU": 13.2,
+          "raw": {
+            "input_i": "-16.08",
+            "input_tp": "-1.46",
+            "input_lra": "13.20",
+            "input_thresh": "-27.94",
+            "output_i": "-16.34",
+            "output_tp": "-2.00",
+            "output_lra": "9.50",
+            "output_thresh": "-27.70",
+            "normalization_type": "dynamic",
+            "target_offset": "0.34"
+          }
+        },
+        "zeroProviderCallsDuringRender": true
+      }
+    },
+    "verification": {
+      "status": "complete",
+      "inputHash": "9a36c6922042ab32d2b912c39961feff5bbaa370e478206c5eaf34e4236fdc00",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\out\\hotel-01.verification.json",
+          "sha256": "1f5449e3d9994e6e373ddd777cd39c864e1e7b05e246c5d1565b6c1ce4303727"
+        }
+      ],
+      "details": {
+        "metadata": {
+          "frames": 3462,
+          "duration": 115.4,
+          "width": 1080,
+          "height": 1920,
+          "fps": 30
+        },
+        "fullDecode": "PASS",
+        "rawMixedAudio": {
+          "integratedLUFS": -18.12,
+          "truePeakDbTP": -4,
+          "loudnessRangeLU": 17.8,
+          "raw": {
+            "input_i": "-18.12",
+            "input_tp": "-4.00",
+            "input_lra": "17.80",
+            "input_thresh": "-30.71",
+            "output_i": "-16.43",
+            "output_tp": "-2.00",
+            "output_lra": "13.40",
+            "output_thresh": "-28.27",
+            "normalization_type": "dynamic",
+            "target_offset": "0.43"
+          }
+        },
+        "finalMixedAudio": {
+          "integratedLUFS": -16.08,
+          "truePeakDbTP": -1.46,
+          "loudnessRangeLU": 13.2,
+          "raw": {
+            "input_i": "-16.08",
+            "input_tp": "-1.46",
+            "input_lra": "13.20",
+            "input_thresh": "-27.94",
+            "output_i": "-16.34",
+            "output_tp": "-2.00",
+            "output_lra": "9.50",
+            "output_thresh": "-27.70",
+            "normalization_type": "dynamic",
+            "target_offset": "0.34"
+          }
+        },
+        "zeroProviderCallsDuringRender": true
+      }
+    }
+  },
+  "history": [
+    {
+      "stage": "validation",
+      "previous": {
+        "status": "planned",
+        "inputHash": "44c4be29b9feffd8b0bc49fe3263a77ce60c5db5c8e153cafceabde3c177f3cc",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-11T09:03:55.229Z"
+    },
+    {
+      "stage": "generation",
+      "previous": {
+        "status": "planned",
+        "inputHash": "44c4be29b9feffd8b0bc49fe3263a77ce60c5db5c8e153cafceabde3c177f3cc",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-11T09:03:55.236Z"
+    },
+    {
+      "stage": "review",
+      "previous": {
+        "status": "planned",
+        "inputHash": "44c4be29b9feffd8b0bc49fe3263a77ce60c5db5c8e153cafceabde3c177f3cc",
+        "outputs": [],
+        "details": {
+          "wouldRun": true
+        }
+      },
+      "invalidatedAt": "2026-11-11T09:04:49.809Z"
+    },
+    {
+      "stage": "review",
+      "previous": {
+        "status": "complete",
+        "inputHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+        "outputs": [
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-acceptances\\c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d.json",
+            "sha256": "4800a6375baccfb8b8e44479a08d25a30b5ebadd4426931bee53198d01652655"
+          }
+        ]
+      },
+      "invalidatedAt": "2026-11-11T09:05:22.458Z"
+    },
+    {
+      "stage": "audio",
+      "previous": {
+        "status": "planned",
+        "inputHash": "44c4be29b9feffd8b0bc49fe3263a77ce60c5db5c8e153cafceabde3c177f3cc",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-11T09:05:22.464Z"
+    },
+    {
+      "stage": "alignment",
+      "previous": {
+        "status": "planned",
+        "inputHash": "44c4be29b9feffd8b0bc49fe3263a77ce60c5db5c8e153cafceabde3c177f3cc",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-11T09:08:34.806Z"
+    },
+    {
+      "stage": "captions",
+      "previous": {
+        "status": "planned",
+        "inputHash": "44c4be29b9feffd8b0bc49fe3263a77ce60c5db5c8e153cafceabde3c177f3cc",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-11T09:08:54.654Z"
+    },
+    {
+      "stage": "render",
+      "previous": {
+        "status": "planned",
+        "inputHash": "44c4be29b9feffd8b0bc49fe3263a77ce60c5db5c8e153cafceabde3c177f3cc",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-11T09:08:54.662Z"
+    },
+    {
+      "stage": "render",
+      "error": "Remotion render failed (exit 1): Error  production-hotel-01-q1.prompt: text does not fit at 48px; shorten this field",
+      "at": "2026-11-11T09:09:08.116Z"
+    },
+    {
+      "stage": "validation",
+      "previous": {
+        "status": "complete",
+        "inputHash": "a5fae1db35113462af0f82b2dff4c4b485d35debe1ed01b4fcf11b5249917204",
+        "outputs": [],
+        "details": {
+          "structural": "PASS",
+          "background": {
+            "id": "korean-hotel-illustrated-v1",
+            "sha256": "8b58c68bb61b3480461764b1ba403069723300e087c725b3da7809cf04d0d9f8",
+            "selection": "developer-selected",
+            "file": "backgrounds/korean-hotel-illustrated-v1.png"
+          },
+          "acceptance": {
+            "valid": false,
+            "kind": "automated"
+          }
+        }
+      },
+      "invalidatedAt": "2026-11-11T09:30:38.806Z"
+    },
+    {
+      "stage": "review",
+      "previous": {
+        "status": "complete",
+        "inputHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+        "outputs": [
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-acceptances\\c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d.json",
+            "sha256": "4800a6375baccfb8b8e44479a08d25a30b5ebadd4426931bee53198d01652655"
+          }
+        ],
+        "details": {
+          "reusedAcceptance": true,
+          "humanReviewed": false
+        }
+      },
+      "invalidatedAt": "2026-11-11T09:32:06.275Z"
+    },
+    {
+      "stage": "audio",
+      "previous": {
+        "status": "complete",
+        "inputHash": "34e5a18f345818c42016b435b8337616a7b0f0b6845df69e0dcce529c482ddaa",
+        "outputs": [
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\public\\audio\\production\\hotel-01\\34e5a18f345818c42016b435b8337616a7b0f0b6845df69e0dcce529c482ddaa.json",
+            "sha256": "d4d8938348aeab54417786f28b4625ed8f30708f7727624fe1c9e8386155e57f"
+          }
+        ],
+        "details": {
+          "cacheHits": 3,
+          "recoveredOriginals": 0,
+          "localPrepared": 0,
+          "newSynthesisRequests": 16,
+          "newSynthesisCharacters": 923
+        }
+      },
+      "invalidatedAt": "2026-11-11T09:32:06.282Z"
+    },
+    {
+      "stage": "alignment",
+      "previous": {
+        "status": "complete",
+        "inputHash": "829433894d3ce2f465bea08e6f3e4b1b6c01eb92eeeb3a8a2ccaeec20687c72a",
+        "outputs": [
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\730c2711c776bad33d84535b4182d90390bb7ff98d18430ffae0c92a57488773.json",
+            "sha256": "83c6d4cbdc0ba60af3f4cd57132aa1c203e3654f918859056afc8812d32f0373"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\3f51c099ef71a1aa769e854c1dd5f4e082925679a8f328aa13646f340bda2ff0.json",
+            "sha256": "757d70032ec59d94bb4da3c845511770a5e3e92a32c7233513d0ac9e1e90d789"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\e6175a190a14834635671dc86442d3a83ac24a33cb907be83a0c0a142d99369c.json",
+            "sha256": "ad7b8cfdf41a5e4c1534187f783b2b3b918ac00ca785d53fef5b44e76ba7b99d"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\46ff78c046b0352b8a1bd5def16c41458556b655af37fa577d4497be5a06ed5e.json",
+            "sha256": "fea5e5a2f62959ea831fce6b934c34c2ec99f201f8de6a1fa81f2fad7b121aa3"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\a4d19e72ca3e8cc8de61ccadd93c9274ec4bb4317259e314fa799d8fd1904502.json",
+            "sha256": "1eba525df0fe5be4d612eaf258e08fe64a039aaabc86d43453572e7d28ee48aa"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\33a0fe8e8de68c86e643dd6de4c8097dd3ea22ed7bc2ca5462f430ff213ce80b.json",
+            "sha256": "d963d17b08771508a96bc4773b3f20f85d4414d47b5ea7c0a62389fa4a5c892e"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\6315f297246add2066874a64ba49dfb84488bdfd807ca4cd2be69f6c95b6e5c1.json",
+            "sha256": "b1763cb51fe9aadd500f2f5510824f981637260011c609b8823a4f7b2847ff70"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\da9a8add9bb347424b2d4ed837bf4a8dcb81104e7874454ac8c22854d498e4da.json",
+            "sha256": "76e4c9b42eeaf66eb7d6c180f714891b178a49d51a1a6a49cce4b100e3b7b668"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\d9baaa012fdc2514a7761ab7c24fee2e7c85143de1514b43aaa56fb4cf6f8ab9.json",
+            "sha256": "39c4a3a94302684409f34d1e5f915262eaa7f364acfbca32d51f099cb8872e38"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\8c92d83209ca8bfe564a7ecf1aa8ec5925ec13dd15063cd0a82f741066228829.json",
+            "sha256": "136f3081c3d6fe7687e3e21a4b38026122706abf693d831bf11ce1620b679eda"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\d762da86c1313409d841886f8c71fc1c53d2495fdce482216eca05399ce2cdd4.json",
+            "sha256": "437cbe574905514b080c0d35014fe4135290a423fb399e3a8a02dee90f5eb80f"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\01692e1ea9581e680a531bf2fe3d698c3add282e738056f1da97b5522e787be3.json",
+            "sha256": "a5e0286a5aa310b730267dd7e744898c8ffa3f3897fc993966cd6262f8a2db67"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\e68cce63fd707b96f9ac94c71a23f449f297bd5ede0607c8d3527eb00351f288.json",
+            "sha256": "c3d2409ec81db8628a4c78e2084984c7666efae9f3f3f2f9ddc53df8935f320d"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\21e2d99fa28a51b173780bb1521da14916d341c3cb2d13af133aae2d007d905c.json",
+            "sha256": "84404d1efbef1e0de7eaac75a2721db03b6d524da463e26ae059084cb58d2a6d"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\c59cd25edae11c5ae644497e0f659a8e92d6a8610f4583e9400e6605bc7544c9.json",
+            "sha256": "d82489e29a0ac6e1fbe49011eacf41e843d18ecba0301d40455344f85cfdd11a"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\0d4daadd48d49eaf8947f3bd7734141fee6b6859c4b840c20c0f9ff5421cfb8c.json",
+            "sha256": "ba90799cb0fb9d33c68dc4c7fcafb4c0fc471b8188807e12f4e69ee70f874c0d"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\100e0d13194b766872a2b19dd730a6f6b90a34ba47b23eb2431b5271e435874d.json",
+            "sha256": "82ba6dde0a6ebfe2190f93bb8549081301fcdd1618bdbe43c7e43be1fe3701b2"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\5c50280c30a64910357484ceef8f1a6dbd7c919e2987593084e93d6aec16ca58.json",
+            "sha256": "27eef3bcdf2330f3555eac1f60d8c362620c1bdc61fff8b94faacb8c3a3e38fb"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\33966cd15617f5d9ba55a29200730bac3b000b07bdd102ba2f5a31bec73c1fd5.json",
+            "sha256": "c4d317945bb0a7778aad5dbc4b962f5d406170f87350fa989557b62a528ea4cf"
+          }
+        ],
+        "details": {
+          "cacheHits": 3,
+          "newLocalAlignments": 16,
+          "providerCalls": 0
+        }
+      },
+      "invalidatedAt": "2026-11-11T09:33:10.104Z"
+    },
+    {
+      "stage": "captions",
+      "previous": {
+        "status": "complete",
+        "inputHash": "8084c909b75052fe26cfc616404da69cbbe961e29ce0b796596bda3115c1e4f7",
+        "outputs": [
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\artifacts\\8084c909b75052fe26cfc616404da69cbbe961e29ce0b796596bda3115c1e4f7.captions.json",
+            "sha256": "4857a89b162c21dbe557322f45e70bb72b13503bb68b104d589d90cfe6eee16a"
+          }
+        ]
+      },
+      "invalidatedAt": "2026-11-11T09:33:10.187Z"
+    },
+    {
+      "stage": "render",
+      "previous": {
+        "status": "failed",
+        "inputHash": "be8c4970c532f2e89d4bb1b5014bba8f550ad481abd87b7712450980f8eac77c",
+        "outputs": [],
+        "error": "Remotion render failed (exit 1): Error  production-hotel-01-q1.prompt: text does not fit at 48px; shorten this field"
+      },
+      "invalidatedAt": "2026-11-11T09:33:10.200Z"
+    },
+    {
+      "stage": "verification",
+      "previous": {
+        "status": "planned",
+        "inputHash": "44c4be29b9feffd8b0bc49fe3263a77ce60c5db5c8e153cafceabde3c177f3cc",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-11T09:38:38.712Z"
+    },
+    {
+      "stage": "validation",
+      "previous": {
+        "status": "complete",
+        "inputHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+        "outputs": [],
+        "details": {
+          "structural": "PASS",
+          "background": {
+            "id": "korean-hotel-illustrated-v1",
+            "sha256": "8b58c68bb61b3480461764b1ba403069723300e087c725b3da7809cf04d0d9f8",
+            "selection": "developer-selected",
+            "file": "backgrounds/korean-hotel-illustrated-v1.png"
+          },
+          "acceptance": {
+            "valid": true,
+            "kind": "automated"
+          }
+        }
+      },
+      "invalidatedAt": "2026-11-12T04:39:07.012Z"
+    },
+    {
+      "stage": "render",
+      "previous": {
+        "status": "complete",
+        "inputHash": "9a36c6922042ab32d2b912c39961feff5bbaa370e478206c5eaf34e4236fdc00",
+        "outputs": [
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\out\\hotel-01.mp4",
+            "sha256": "ddeac381ecf54172543ef7f24e13cbfd93e8d60cedc0893c5c4460729cf8312e"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\artifacts\\9a36c6922042ab32d2b912c39961feff5bbaa370e478206c5eaf34e4236fdc00.props.json",
+            "sha256": "ff57b32b08cecb2cb19e94ca341583828dd759917c69ce9404e111f8746896fa"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\artifacts\\9a36c6922042ab32d2b912c39961feff5bbaa370e478206c5eaf34e4236fdc00.verified.json",
+            "sha256": "e1475494cabf6a55eb24930871bde626ec06bae2c89142e28c5a1e56634ace04"
+          }
+        ],
+        "details": {
+          "metadata": {
+            "frames": 3462,
+            "duration": 115.4,
+            "width": 1080,
+            "height": 1920,
+            "fps": 30
+          },
+          "fullDecode": "PASS",
+          "rawMixedAudio": {
+            "integratedLUFS": -18.12,
+            "truePeakDbTP": -4,
+            "loudnessRangeLU": 17.8,
+            "raw": {
+              "input_i": "-18.12",
+              "input_tp": "-4.00",
+              "input_lra": "17.80",
+              "input_thresh": "-30.71",
+              "output_i": "-16.43",
+              "output_tp": "-2.00",
+              "output_lra": "13.40",
+              "output_thresh": "-28.27",
+              "normalization_type": "dynamic",
+              "target_offset": "0.43"
+            }
+          },
+          "finalMixedAudio": {
+            "integratedLUFS": -16.08,
+            "truePeakDbTP": -1.46,
+            "loudnessRangeLU": 13.2,
+            "raw": {
+              "input_i": "-16.08",
+              "input_tp": "-1.46",
+              "input_lra": "13.20",
+              "input_thresh": "-27.94",
+              "output_i": "-16.34",
+              "output_tp": "-2.00",
+              "output_lra": "9.50",
+              "output_thresh": "-27.70",
+              "normalization_type": "dynamic",
+              "target_offset": "0.34"
+            }
+          },
+          "zeroProviderCallsDuringRender": true
+        }
+      },
+      "invalidatedAt": "2026-11-12T04:39:09.553Z"
+    }
+  ],
+  "revisions": [
+    {
+      "hash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+      "directory": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\revisions\\c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+      "sourceIdentity": "a5fae1db35113462af0f82b2dff4c4b485d35debe1ed01b4fcf11b5249917204"
+    }
+  ],
+  "paidOptIn": true,
+  "createdAt": "2026-11-11T08:43:31.281Z",
+  "updatedAt": "2026-11-12T04:39:42.468Z",
+  "sourceIdentity": "a5fae1db35113462af0f82b2dff4c4b485d35debe1ed01b4fcf11b5249917204",
+  "configuration": {
+    "voice": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Achird",
+        "ko-KR": "ko-KR-Chirp3-HD-Achird"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "presentation": {
+      "compactSpacing": true,
+      "synchronizedCaptions": true,
+      "backgroundAudio": true,
+      "musicGain": 1.25,
+      "captionStyle": "phrases",
+      "bookendStyle": "display"
+    },
+    "alignment": {
+      "version": "phrase-alignment-v1",
+      "engine": "stable-ts",
+      "engineVersion": "2.19.1",
+      "whisperVersion": "20250625",
+      "torchVersion": "2.8.0+cpu",
+      "model": "base",
+      "modelSha256": "ed3a0b6b1c0edf879ad9b11b1af5a0e6ab5db9205f891f668f8b0e6c6326e34e",
+      "device": "cpu",
+      "sampleRate": 16000,
+      "threads": 4,
+      "fp16": false,
+      "regroup": false,
+      "suppressSilence": true,
+      "vad": false,
+      "fastMode": false
+    },
+    "grouping": {
+      "version": "automatic-phrases-v1",
+      "englishWords": 4,
+      "maximumWords": 5,
+      "maximumCharacters": 36,
+      "koreanWholeUtterance": true
+    },
+    "audioProcessing": "loudnorm-I-16-TP-1.5-LRA-11-mono-24000-v1"
+  },
+  "narration": {
+    "version": 1,
+    "profile": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Achird",
+        "ko-KR": "ko-KR-Chirp3-HD-Achird"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "segments": [
+      {
+        "id": "production-hotel-01-hook",
+        "contentId": "production-hotel-01",
+        "role": "hook",
+        "language": "en-US",
+        "text": "Can you say it in Korean?"
+      },
+      {
+        "id": "production-hotel-01-q1-question",
+        "contentId": "production-hotel-01-q1",
+        "role": "question",
+        "language": "en-US",
+        "text": "What could you say to let the front desk know you’re ready to start your stay?"
+      },
+      {
+        "id": "production-hotel-01-q1-answer",
+        "contentId": "production-hotel-01-q1",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "체크인하고 싶어요."
+      },
+      {
+        "id": "production-hotel-01-q1-explanation",
+        "contentId": "production-hotel-01-q1",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "I'd like to check in. This is a polite way to tell someone what you want to do."
+      },
+      {
+        "id": "production-hotel-01-q2-question",
+        "contentId": "production-hotel-01-q2",
+        "role": "question",
+        "language": "en-US",
+        "text": "How would you politely ask for an extra towel?"
+      },
+      {
+        "id": "production-hotel-01-q2-answer",
+        "contentId": "production-hotel-01-q2",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "수건 하나 더 주세요."
+      },
+      {
+        "id": "production-hotel-01-q2-explanation",
+        "contentId": "production-hotel-01-q2",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "One more towel, please. The phrase for “one more” specifies that you need an additional towel."
+      },
+      {
+        "id": "production-hotel-01-q3-question",
+        "contentId": "production-hotel-01-q3",
+        "role": "question",
+        "language": "en-US",
+        "text": "What would you ask when you need the password to get online?"
+      },
+      {
+        "id": "production-hotel-01-q3-answer",
+        "contentId": "production-hotel-01-q3",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "와이파이 비밀번호가 뭐예요?"
+      },
+      {
+        "id": "production-hotel-01-q3-explanation",
+        "contentId": "production-hotel-01-q3",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "What is the Wi-Fi password? This question asks for the password, rather than the network name."
+      },
+      {
+        "id": "production-hotel-01-q4-question",
+        "contentId": "production-hotel-01-q4",
+        "role": "question",
+        "language": "en-US",
+        "text": "How would you ask someone to point you to the elevator?"
+      },
+      {
+        "id": "production-hotel-01-q4-answer",
+        "contentId": "production-hotel-01-q4",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "엘리베이터가 어디예요?"
+      },
+      {
+        "id": "production-hotel-01-q4-explanation",
+        "contentId": "production-hotel-01-q4",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "Where is the elevator? The question ending turns a location phrase into a polite question."
+      },
+      {
+        "id": "production-hotel-01-q5-question",
+        "contentId": "production-hotel-01-q5",
+        "role": "question",
+        "language": "en-US",
+        "text": "What could you say to report the card problem and ask staff to check it?"
+      },
+      {
+        "id": "production-hotel-01-q5-answer",
+        "contentId": "production-hotel-01-q5",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "카드키가 안 돼요. 확인해 주세요."
+      },
+      {
+        "id": "production-hotel-01-q5-explanation",
+        "contentId": "production-hotel-01-q5",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "The key card doesn't work. Please check it. This combines a polite problem report with a request for help."
+      },
+      {
+        "id": "production-hotel-01-q6-question",
+        "contentId": "production-hotel-01-q6",
+        "role": "question",
+        "language": "en-US",
+        "text": "How would you ask the front desk if you may leave your bags there after checkout?"
+      },
+      {
+        "id": "production-hotel-01-q6-comment",
+        "contentId": "production-hotel-01-q6",
+        "role": "comment",
+        "language": "en-US",
+        "text": "What do you think? Comment your answer!"
+      },
+      {
+        "id": "production-hotel-01-q6-follow",
+        "contentId": "production-hotel-01-q6",
+        "role": "follow",
+        "language": "en-US",
+        "text": "Follow for more Korean!"
+      }
+    ]
+  },
+  "assets": {
+    "background": {
+      "id": "korean-hotel-illustrated-v1",
+      "sha256": "8b58c68bb61b3480461764b1ba403069723300e087c725b3da7809cf04d0d9f8",
+      "selection": "developer-selected",
+      "file": "backgrounds/korean-hotel-illustrated-v1.png"
+    },
+    "music": {
+      "file": "audio/music/subtle-bass-loop.wav",
+      "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+      "durationSeconds": 60.390375
+    }
+  },
+  "maxCostUSD": 0.23,
+  "contentHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+  "workDirectory": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\generated\\a5fae1db35113462af0f82b2dff4c4b485d35debe1ed01b4fcf11b5249917204",
+  "budget": {
+    "ledger": "C:\\Users\\david\\Documents\\kor-vids\\data\\generation-budgets\\produce-hotel-01.json",
+    "version": 2,
+    "kind": "production-budget",
+    "jobId": "hotel-01",
+    "capUnits": 230000000,
+    "authorization": "Explicit --allow-paid and total --max-cost-usd for this production job",
+    "allocations": {
+      "generation-62ba9133d56b06cccd8ecedf": {
+        "stage": "generation",
+        "inputHash": "62ba9133d56b06cccd8ecedf4d478f29049dc137780115f50b029bd13cd21854",
+        "allocatedUnits": 37600000,
+        "chargedUnits": 2473625,
+        "state": "settled",
+        "childBudgetId": "p6-cb438007b8bb72aaf0c5-generation",
+        "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\generation-budgets\\p6-cb438007b8bb72aaf0c5-generation.json",
+        "requests": [],
+        "usage": [
+          {
+            "state": "valid",
+            "usage": {
+              "inputTokens": 2317,
+              "outputTokens": 4368,
+              "totalTokens": 6685,
+              "reasoningTokens": 2545,
+              "cachedInputTokens": 0
+            }
+          }
+        ]
+      },
+      "review-c519daeaf626938596b94890": {
+        "stage": "review",
+        "inputHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+        "allocatedUnits": 56400000,
+        "chargedUnits": 960875,
+        "state": "settled",
+        "childBudgetId": "p6-fa079361c74d8914feff-review",
+        "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-review-budgets\\p6-fa079361c74d8914feff-review.json",
+        "requests": [],
+        "usage": [
+          {
+            "state": "complete",
+            "usage": {
+              "inputTokens": 2951,
+              "outputTokens": 1184,
+              "totalTokens": 4135,
+              "reasoningTokens": 862,
+              "cachedInputTokens": 0
+            }
+          }
+        ]
+      },
+      "tts-34e5a18f345818c42016b435": {
+        "stage": "tts",
+        "inputHash": "34e5a18f345818c42016b435b8337616a7b0f0b6845df69e0dcce529c482ddaa",
+        "allocatedUnits": 55380000,
+        "chargedUnits": 27690000,
+        "state": "settled",
+        "childBudgetId": "p6-a1e169f550f8fbb5353b-tts",
+        "requests": [
+          {
+            "key": "3582c25883f850f6f24d2f266c9f8594d5cb3985ccb3aa21af550f26ec1d163b",
+            "state": "received",
+            "units": 2340000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\3582c25883f850f6f24d2f266c9f8594d5cb3985ccb3aa21af550f26ec1d163b.wav",
+            "sha256": "3580c7919f27b11026926f8ba92961895a60a8d6894ab4b4470fce93857d6fc8"
+          },
+          {
+            "key": "9717129477089ecbb94f72d8450cf45a511284321161883e1c7afb5b60b4abec",
+            "state": "received",
+            "units": 300000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\9717129477089ecbb94f72d8450cf45a511284321161883e1c7afb5b60b4abec.wav",
+            "sha256": "ab2f5a74a907d26cb784f223dc9513519f66aeb0f39bf09ea850164823543adb"
+          },
+          {
+            "key": "1da491a360acb43d0d9e5704d1ec3324d821877544b848b917bdef790b8dd3df",
+            "state": "received",
+            "units": 2370000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\1da491a360acb43d0d9e5704d1ec3324d821877544b848b917bdef790b8dd3df.wav",
+            "sha256": "3a4c4cd7f5ea740825d0d05c1be0fe363224cf996f42eb2d29588f0aafab0b29"
+          },
+          {
+            "key": "d96a77d9602818d52165625b80b698b713c7e1e1be05f540b07f1f3b6caa583d",
+            "state": "received",
+            "units": 1380000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\d96a77d9602818d52165625b80b698b713c7e1e1be05f540b07f1f3b6caa583d.wav",
+            "sha256": "89612831369566ffe5deed59e0bcf1e50d6ee9d8434e503167cf0a99ef916c47"
+          },
+          {
+            "key": "d92ffd0adb938e1ef822a7b48e523033b9e788ee0ee047438e2275b6d4d93ea2",
+            "state": "received",
+            "units": 360000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\d92ffd0adb938e1ef822a7b48e523033b9e788ee0ee047438e2275b6d4d93ea2.wav",
+            "sha256": "a27d5a61823087d20ac7dd6357630e2796e419bc247c963c8467699a8e4525fe"
+          },
+          {
+            "key": "c7aeead22785bc6aaf82c418c88a6092edaf0003d4ceddc5ec868843ab543542",
+            "state": "received",
+            "units": 2820000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\c7aeead22785bc6aaf82c418c88a6092edaf0003d4ceddc5ec868843ab543542.wav",
+            "sha256": "94429aead1bb1a6a18b7e423157ee75f0e7aea163a6c184b29f959f4e7ab0579"
+          },
+          {
+            "key": "f1291f79cbc69bb42fb2cea9040d917b7936eb11bc81ac8974896ac39d3b8f3b",
+            "state": "received",
+            "units": 1800000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\f1291f79cbc69bb42fb2cea9040d917b7936eb11bc81ac8974896ac39d3b8f3b.wav",
+            "sha256": "628e8079cbbc1f69dc75912b7ba5239624aa8c2170a8eefeb21a0ba1a5281380"
+          },
+          {
+            "key": "ce28522e2324085e2ef8e531ba67275fa67d6ae580bde0bde909f6f915b576bf",
+            "state": "received",
+            "units": 450000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\ce28522e2324085e2ef8e531ba67275fa67d6ae580bde0bde909f6f915b576bf.wav",
+            "sha256": "039bd46a6e490b2eb609c891536714048c7de4b85ffc0c718a8e3cc8e91fd9bf"
+          },
+          {
+            "key": "19bd1e6216ffd69f36e6bcdb54a2c83fa701588d7c172259d1649bf7ab0507fa",
+            "state": "received",
+            "units": 2820000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\19bd1e6216ffd69f36e6bcdb54a2c83fa701588d7c172259d1649bf7ab0507fa.wav",
+            "sha256": "b29ddf00e086915f4711ea60f712e8fa279b4e67c879ad5043e437ce1d275445"
+          },
+          {
+            "key": "413e47558a72e99c56ee06642139de5f6d6e62d34fc37248e75beb08dcc607f1",
+            "state": "received",
+            "units": 1650000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\413e47558a72e99c56ee06642139de5f6d6e62d34fc37248e75beb08dcc607f1.wav",
+            "sha256": "af56a4c7664517323b34fe1be28f90d0bdefb0d246ec7b069027b82e8f351c11"
+          },
+          {
+            "key": "1e3a3b2d410334cdee6111f02dcaa78784618de88a988a87b49248ca8d5c9c2b",
+            "state": "received",
+            "units": 360000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\1e3a3b2d410334cdee6111f02dcaa78784618de88a988a87b49248ca8d5c9c2b.wav",
+            "sha256": "34f86c984fd857c7a85e4033fb29755ffd9183bd5b49e5abf5039dbb549e2d59"
+          },
+          {
+            "key": "52b52bc02546851a6640f935f3e17b2ee0da41246b8300ae3683dffcf7605ae3",
+            "state": "received",
+            "units": 2700000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\52b52bc02546851a6640f935f3e17b2ee0da41246b8300ae3683dffcf7605ae3.wav",
+            "sha256": "97a4ef574155cae0c2976893dd96b4f9deebf40b0a721b366ad9269fa6b16fbe"
+          },
+          {
+            "key": "d9c17b440d63744a8d90bc1aa77aa46b43ba94510cf6f5e9524c9b2fb95f1015",
+            "state": "received",
+            "units": 2160000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\d9c17b440d63744a8d90bc1aa77aa46b43ba94510cf6f5e9524c9b2fb95f1015.wav",
+            "sha256": "f61d39d1797760e3f5319af43bfed07d16c063fa4c2ed1aa229e3f75e89a460d"
+          },
+          {
+            "key": "ccd3f80aec6971e41a87215c98a9a9166abd591867b5810f713c75900f3d7771",
+            "state": "received",
+            "units": 570000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\ccd3f80aec6971e41a87215c98a9a9166abd591867b5810f713c75900f3d7771.wav",
+            "sha256": "f9427b2fed9379c076cd7d2db2ddde4acaccd96da04e920fd0f135ebcb466a4b"
+          },
+          {
+            "key": "6956f362c4cc2baf0cddde93e211a6207d0a3014293e358e2d85e59e89a5fc2f",
+            "state": "received",
+            "units": 3180000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\6956f362c4cc2baf0cddde93e211a6207d0a3014293e358e2d85e59e89a5fc2f.wav",
+            "sha256": "a1958d81fa84f2f90880f9ba8841e9b2c761ce1077b6869b7ad0e23c779a92ea"
+          },
+          {
+            "key": "c06f8d6985e2f61b043e8cd95b6d486ddb4970e660d2c1c3c94481fa9a133d11",
+            "state": "received",
+            "units": 2430000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\tts-responses\\c06f8d6985e2f61b043e8cd95b6d486ddb4970e660d2c1c3c94481fa9a133d11.wav",
+            "sha256": "6237f915e475abb5faf4a3e1a2ceb80f12a9c1a77b44c3d4bbe1a10cd47fb72d"
+          }
+        ],
+        "usage": {
+          "cacheHits": 19,
+          "recoveredOriginals": 0,
+          "localPrepared": 0,
+          "newSynthesisRequests": 0,
+          "newSynthesisCharacters": 0,
+          "estimated": true
+        }
+      }
+    }
+  },
+  "renderCertificate": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\hotel-01\\artifacts\\9a36c6922042ab32d2b912c39961feff5bbaa370e478206c5eaf34e4236fdc00.verified.json",
+  "lastRenderHash": "9a36c6922042ab32d2b912c39961feff5bbaa370e478206c5eaf34e4236fdc00",
+  "lastPlanHash": "edd774bfcdd98f6d4874d1c7fd7a7db2d7d18041c340aa7c43e87ba8dbd3556a"
+}

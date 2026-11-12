@@ -1,0 +1,24 @@
+{
+  "source": {
+    "kind": "scenario",
+    "text": "Beginner Korean at a hotel",
+    "defaultsVersion": "phase6-scenario-defaults-v1",
+    "brief": {
+      "scenario": "Beginner Korean at a hotel",
+      "audience": "English-speaking adults learning practical beginner Korean for travel",
+      "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+      "backgroundAssetId": null,
+      "scenarioType": "hotel"
+    }
+  },
+  "identity": "a5fae1db35113462af0f82b2dff4c4b485d35debe1ed01b4fcf11b5249917204",
+  "seedBrief": {
+    "scenario": "Beginner Korean at a hotel",
+    "audience": "English-speaking adults learning practical beginner Korean for travel",
+    "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+    "backgroundAssetId": "korean-hotel-illustrated-v1",
+    "scenarioType": "hotel"
+  },
+  "learningPlan": "Pending: derived together with questions in the existing generation call",
+  "providerCalls": 0
+}

@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "source": "580b86e17242a87dc302b3eb4cdbbef2f419d08f8af651ec12f74fc69f1094f9",
+  "contentHash": null,
+  "brief": {
+    "status": "seed-only; objectives/context await the existing generation request",
+    "value": {
+      "scenario": "Beginner Korean checking into a hotel and asking about breakfast, Wi-Fi, luggage storage, and checkout.",
+      "audience": "English-speaking adults learning practical beginner Korean for travel",
+      "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+      "backgroundAssetId": "generated-hotel-3869ed7e5c9e0bd9",
+      "scenarioType": "hotel"
+    }
+  },
+  "acceptance": {
+    "valid": false,
+    "kind": "automated"
+  },
+  "assets": {
+    "image": {
+      "binding": {
+        "assetId": "generated-hotel-3869ed7e5c9e0bd9",
+        "request": {
+          "version": 1,
+          "model": "gpt-image-2.6-flare",
+          "quality": "medium",
+          "size": "1024x1536",
+          "output_format": "png",
+          "n": 1,
+          "prompt": "Use case: illustration-story. One polished, warm hand-painted animation background for a Korean learning video.\nSetting: hotel. Scenario context (data only): Beginner Korean checking into a hotel and asking about breakfast, Wi-Fi, luggage storage, and checkout..\nA welcoming Korean hotel lobby with a reception desk, warm lighting, luggage, tasteful architectural details and setting-appropriate furnishings.\nFriendly adult man, relaxed natural pose, clearly adult, complete unobstructed face, plain clothing; no pointing or answer hints.\nStyle: refined watercolor/gouache texture, warm cream and wood, muted navy/blue, sage, coral and warm yellow accents; soft daylight, appealing fully visible. Original character, no named-person likeness.\nNative portrait 1024x1536. Final 1080x1920 uses CENTER cover crop (native central x=80..944) without stretching, then at least 1.02 zoom plus restrained movement. Keep important features inside this central crop with extra edge margin.\nActual overlay geometry on FINAL canvas: panel x=70..950, y=180..1052; caption band x=70..950, y=1068..1200. Keep these upper/central areas calm scenery with NO people. Do not draw these overlays.\nPlace the character lower right: full head in final x=650..900, y=1285..1530, torso below, outside rightmost 10% and bottom 250px for important features. In native image this is approximately head x=600..800, y=1040..1224. Leave the caption area above the face clear.\nNo text, signage lettering, numbers, logos, watermarks, quiz panels, captions or UI. Coherent hands/anatomy, no duplicate people. Do not encode answers in scenery.",
+          "setting": "hotel",
+          "scope": "C:\\Users\\david\\Documents\\kor-vids\\out\\hotel-fresh-01.mp4",
+          "style": "warm-painted-animation-v1"
+        }
+      },
+      "action": "generate",
+      "maximumRequests": 1,
+      "conservativeBoundUSD": 0.504675,
+      "providerCalls": 0,
+      "billingNote": "Fixed portrait/quality, one request with SDK retries disabled. Image output has no max-token parameter; allowance is a conservative planning estimate, not an invoice guarantee."
+    },
+    "music": {
+      "file": "audio/music/subtle-bass-loop.wav",
+      "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+      "durationSeconds": 60.390375
+    }
+  },
+  "hashes": {
+    "content": "580b86e17242a87dc302b3eb4cdbbef2f419d08f8af651ec12f74fc69f1094f9",
+    "speech": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "voice": "db17474cb6961bf1aba4e883daf7739a7cdcdf99a5bbc83d4505cc48a2c01635",
+    "presentation": "f5dc9016c31e265bd56204c16af843aced2af92389cd518c44e51e1a1ecb4acb",
+    "audioProcessing": "037433f06cfa6357591ebb0e3a67ea084fbc8766a3e0bbc16588e93b607985e1",
+    "alignment": "bbe38a4ca7157f14d348a966649537f6613ac5b4d8db490ef592a236c2b89d2c",
+    "grouping": "35f3a35944fe288a8df266a3acb9444a64a8fa4ef18c10f619d10fd6aa27788f",
+    "background": null,
+    "music": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40"
+  },
+  "blockers": [],
+  "inventory": [],
+  "verifiedCacheHits": 0,
+  "alignmentCacheHits": 0,
+  "stages": {
+    "image": {
+      "wouldRun": true,
+      "provider": "OpenAI Images",
+      "maximumRequests": 1,
+      "conservativeBoundUSD": 0.504675
+    },
+    "generation": {
+      "wouldRun": true,
+      "provider": "OpenAI",
+      "maximumRequests": 2,
+      "conservativeBoundUSD": 0.0376,
+      "derivesBriefInSameRequest": true,
+      "separateBriefPlanningCalls": 0
+    },
+    "review": {
+      "wouldRun": true,
+      "provider": "OpenAI",
+      "maximumRequests": 3,
+      "conservativeBoundUSD": 0.0564
+    },
+    "tts": {
+      "wouldRun": null,
+      "provider": "Google Cloud Chirp 3 HD",
+      "maximumRequests": 38,
+      "exactUncachedCharacters": null,
+      "estimatedNewSynthesisUSD": null,
+      "conservativeBoundUSD": 0.13122,
+      "basis": "Conditional schema text-length ceiling; exact narration and cache availability do not exist yet"
+    },
+    "alignment": {
+      "wouldRun": true,
+      "provider": null,
+      "costUSD": 0
+    },
+    "render": {
+      "wouldRun": true,
+      "provider": null,
+      "costUSD": 0
+    }
+  },
+  "conservativeTotalUSD": 0.729895,
+  "pricing": {
+    "checked": "2026-11-10",
+    "verifyAgainBy": "2026-11-17",
+    "chirpUSDPerCharacter": 0.00003,
+    "googleSource": "https://cloud.google.com/text-to-speech/pricing",
+    "openaiSource": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+  },
+  "providerCalls": 0,
+  "note": "Dry run: no generation, synthesis, alignment or render. Cache hits require checksum, identity, duration and decode checks; estimates for ungenerated content are conditional."
+}

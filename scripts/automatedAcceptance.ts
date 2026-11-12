@@ -1,11 +1,11 @@
 import {readFile} from 'node:fs/promises';
 import {join} from 'node:path';
 import {z} from 'zod';
-import {getBackgroundAsset} from '../src/assets/backgrounds.ts';
 import type {Draft} from '../src/draftSchema.ts';
 import type {QuizInput} from '../src/quizSchema.ts';
 import {readJsonFile, sha256} from './narrationFiles.ts';
 import {validateBackgroundAsset} from './assets.ts';
+import {catalogAsset} from './backgroundCatalog.ts';
 
 export const REVIEW_CATEGORIES = ['naturalKorean', 'uniqueAnswer', 'romanization', 'meaningExplanation', 'englishNarration', 'bonusIsolation'] as const;
 const outcome = z.enum(['pass', 'warning', 'blocking']);
@@ -52,7 +52,7 @@ export const automatedAcceptanceSchema = z.strictObject({version: z.literal(1), 
   revisions: z.array(z.unknown()), asset: z.strictObject({id: z.string(), sha256: z.string(), selection: z.enum(['human-approved', 'developer-selected'])}),
 });
 export const backgroundFingerprint = async (quiz: QuizInput, root: string) => {
-  const asset = getBackgroundAsset(quiz.backgroundAssetId);
+  const asset = await catalogAsset(quiz.backgroundAssetId,root);
   if (!asset || !quiz.backgroundAssetId) throw new Error('Matching registered background is required for automated render readiness');
   await validateBackgroundAsset(quiz, join(root, 'public'));
   return {id: quiz.backgroundAssetId, sha256: sha256(await readFile(join(root, 'public', asset.file))), selection: asset.selection};

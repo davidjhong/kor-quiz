@@ -1,0 +1,86 @@
+{
+  "key": "ac22eaf618bfa5e63d1c511ed5548d1d567fba86f5e4335df5414efdce28679e",
+  "audioSha256": "10dc9d1f6c301ea200757d84a672a1471e3cf2c3c9c078f3bb075757f81d6d68",
+  "transcript": "You’ve chosen bibimbap for dinner. How would you order it?",
+  "language": "en-US",
+  "configuration": {
+    "version": "phrase-alignment-v1",
+    "engine": "stable-ts",
+    "engineVersion": "2.19.1",
+    "whisperVersion": "20250625",
+    "torchVersion": "2.8.0+cpu",
+    "model": "base",
+    "modelSha256": "ed3a0b6b1c0edf879ad9b11b1af5a0e6ab5db9205f891f668f8b0e6c6326e34e",
+    "device": "cpu",
+    "sampleRate": 16000,
+    "threads": 4,
+    "fp16": false,
+    "regroup": false,
+    "suppressSilence": true,
+    "vad": false,
+    "fastMode": false
+  },
+  "durationSeconds": 3.16,
+  "words": [
+    {
+      "text": " You’ve",
+      "start": 0.36,
+      "end": 0.78,
+      "probability": 0.029148657273999845
+    },
+    {
+      "text": " chosen",
+      "start": 0.78,
+      "end": 0.78,
+      "probability": 0.9933651089668274
+    },
+    {
+      "text": " bibimbap",
+      "start": 0.78,
+      "end": 1.18,
+      "probability": 0.21532856207340956
+    },
+    {
+      "text": " for",
+      "start": 1.18,
+      "end": 1.46,
+      "probability": 0.9921444654464722
+    },
+    {
+      "text": " dinner.",
+      "start": 1.46,
+      "end": 1.74,
+      "probability": 0.8508690595626831
+    },
+    {
+      "text": " How",
+      "start": 2.12,
+      "end": 2.22,
+      "probability": 0.7506160736083984
+    },
+    {
+      "text": " would",
+      "start": 2.22,
+      "end": 2.32,
+      "probability": 0.9789783358573914
+    },
+    {
+      "text": " you",
+      "start": 2.32,
+      "end": 2.4,
+      "probability": 0.9932118654251099
+    },
+    {
+      "text": " order",
+      "start": 2.4,
+      "end": 2.6,
+      "probability": 0.9980584979057312
+    },
+    {
+      "text": " it?",
+      "start": 2.6,
+      "end": 2.78,
+      "probability": 0.980997771024704
+    }
+  ]
+}

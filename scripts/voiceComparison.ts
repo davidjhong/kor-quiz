@@ -4,7 +4,7 @@ import {loadComparison, estimateComparison, prepareComparison, renderComparison,
 import {loadEnvFile} from 'node:process';
 const main = async () => {
   const [command, ...rest] = process.argv.slice(2);
-  const args = namedArguments(rest, ['--config', '--profile'], ['--synthesize', '--overwrite']);
+  const args = namedArguments(rest, ['--config', '--profile', '--output'], ['--synthesize', '--overwrite']);
   if (command === 'prepare' && args.flags.has('--synthesize')) {
     try {loadEnvFile('.env');} catch (error) {if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;}
   }
@@ -16,7 +16,8 @@ const main = async () => {
   } else if (command === 'prepare') await prepareComparison(input, args.flags.has('--synthesize'));
   else if (command === 'render') {
     const selected = args.values.get('--profile');
-    for (const profile of input.profiles.filter((p) => !selected || selected === p.id)) await renderComparison(input, profile.id, args.flags.has('--overwrite'));
+    if (args.values.has('--output') && !selected) throw new Error('--output requires one --profile');
+    for (const profile of input.profiles.filter((p) => !selected || selected === p.id)) await renderComparison(input, profile.id, args.flags.has('--overwrite'), undefined, args.values.get('--output'));
     if (selected && !input.profiles.some((p) => p.id === selected)) throw new Error('Unknown --profile');
   } else throw new Error('Use voice:compare -- estimate | prepare [--synthesize] | render [--profile a-baseline|b-puck|c-achird]');
 };

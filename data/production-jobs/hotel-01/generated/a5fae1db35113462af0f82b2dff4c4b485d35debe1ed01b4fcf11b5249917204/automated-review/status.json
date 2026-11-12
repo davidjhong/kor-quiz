@@ -1,0 +1,103 @@
+{
+  "status": "accepted",
+  "contentHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+  "model": "gpt-6-luna",
+  "promptVersion": "phase5b-automated-review-v1",
+  "findings": {
+    "questions": [
+      {
+        "questionId": "production-hotel-01-q1",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-hotel-01-q2",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-hotel-01-q3",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-hotel-01-q4",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-hotel-01-q5",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-hotel-01-q6",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      }
+    ],
+    "resolutions": []
+  },
+  "estimatedCostUSD": 0.000960875,
+  "calls": 1,
+  "usage": [
+    {
+      "phase": "review",
+      "state": "complete",
+      "reservedUnits": 18800000,
+      "chargedUnits": 960875,
+      "usage": {
+        "inputTokens": 2951,
+        "outputTokens": 1184,
+        "totalTokens": 4135,
+        "reasoningTokens": 862,
+        "cachedInputTokens": 0
+      },
+      "requestId": "req_dccb30d4d9d24bfa915f0910ead92bd2",
+      "returnedModel": "gpt-6-luna",
+      "startedAt": "2026-11-11T09:04:49.855Z"
+    }
+  ]
+}

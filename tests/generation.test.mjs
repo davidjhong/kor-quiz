@@ -6,6 +6,7 @@ import {join} from 'node:path';
 import test from 'node:test';
 import {DEFAULT_DRAFT_MODEL, generateDraft, generationCostBound} from '../scripts/openaiGeneration.ts';
 import {approveDraft, contentHash, loadProductionDraft, readDraft, writeReview} from '../scripts/draftWorkflow.ts';
+import {assembleGeneratedDraft, defaultVoiceProfile,scenarioGenerationOutputSchema,generationPrompt,SCENARIO_PLANNING_INSTRUCTION} from '../scripts/generationContent.ts';
 
 // Manually authored material is used ONLY as a deterministic mock fixture, never as a live generated draft.
 const source = JSON.parse(readFileSync(new URL('../content/authored/cafe-friends-02.json', import.meta.url), 'utf8'));
@@ -74,7 +75,7 @@ test('valid Structured Output enters existing private review, key, fixed voices/
   assert.equal(bundle.draft.provenance.provider, 'openai');
   assert.equal(bundle.draft.provenance.requestedModel, DEFAULT_DRAFT_MODEL);
   assert.equal(bundle.draft.provenance.returnedModel, DEFAULT_DRAFT_MODEL);
-  assert.equal(bundle.draft.narration.profile.voices['ko-KR'], 'ko-KR-Chirp3-HD-Kore');
+  assert.deepEqual(bundle.draft.narration.profile, defaultVoiceProfile);
   assert.equal(bundle.draft.narration.segments.length, 19);
   assert.equal(bundle.draft.narration.segments.at(-2).text, 'What do you think? Comment your answer!');
   assert.equal(bundle.draft.narration.segments.at(-1).text, 'Follow for more Korean!');
@@ -87,6 +88,31 @@ test('valid Structured Output enters existing private review, key, fixed voices/
   await assert.rejects(loadProductionDraft(directory, true, root), /Unapproved/u);
   assert.ok(existsSync(join(directory, 'generation/attempt-1.response.json')));
   assert.equal(existsSync(join(root, 'data/approvals')), false);
+});
+
+test('selected Achird default remains overridable by an explicit validated voice profile', () => {
+  assert.equal(defaultVoiceProfile.voices['ko-KR'],'ko-KR-Chirp3-HD-Achird');
+  const result=assembleGeneratedDraft(education(),baseBrief,'manual-voice-override',source.provenance,source.narration.profile);
+  assert.deepEqual(result.draft.narration.profile,source.narration.profile);
+  assert.notDeepEqual(result.draft.narration.profile,defaultVoiceProfile);
+});
+
+test('scenario learning plan validates six useful nonblank fields and cannot supply operational settings',()=>{
+  const derivedBrief={context:'Order and customize drinks while visiting a café with a friend.',learningObjectives:[
+    'Greet staff','Order one drink','Choose a temperature','Add milk','Return the cup','Request charging permission']};
+  const raw={...education(),derivedBrief};
+  assert.equal(scenarioGenerationOutputSchema.safeParse(raw).success,true);
+  for(const invalid of [{...derivedBrief,learningObjectives:[]},{...derivedBrief,context:' '},{...derivedBrief,learningObjectives:[' ',...derivedBrief.learningObjectives.slice(1)]},
+    {...derivedBrief,backgroundAssetId:'fake'},{...derivedBrief,voices:{}}])assert.equal(scenarioGenerationOutputSchema.safeParse({...raw,derivedBrief:invalid}).success,false);
+  const result=assembleGeneratedDraft(raw,baseBrief,'scenario-fixture',source.provenance,defaultVoiceProfile,true);
+  assert.deepEqual(result.draft.brief.learningObjectives,derivedBrief.learningObjectives);assert.equal(result.draft.brief.context,derivedBrief.context);
+  assert.equal(result.draft.brief.backgroundAssetId,baseBrief.backgroundAssetId);assert.equal(result.draft.quiz.questions[5].correctAnswerIndex,undefined);
+});
+test('scenario planning instruction rides in the existing generation prompt and advanced brief fields remain available',async()=>{
+  const plan={...baseBrief,context:'Meet a friend at the café.',learningObjectives:['Greet','Order','Customize','Pay','Clear up','Ask permission']};
+  const plain=await generationPrompt(plan);assert.equal(JSON.parse(plain.user).brief.context,plan.context);assert.equal(plain.system.includes(SCENARIO_PLANNING_INSTRUCTION),false);
+  const scenario=await generationPrompt(baseBrief,undefined,true);assert(scenario.system.includes(SCENARIO_PLANNING_INSTRUCTION));
+  assert.match(JSON.parse(scenario.user).briefExpansion,/no separate planning call/u);
 });
 
 test('invalid references, Unicode duplicates, schema approval injection and bonus hints get one repair at most', async (t) => {

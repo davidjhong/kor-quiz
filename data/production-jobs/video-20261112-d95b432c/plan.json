@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "source": "2fe2459e15fd7dd0805d5968e2e9216b0ae2033ecfadf186ae101a6de1c91b09",
+  "contentHash": null,
+  "preset": {
+    "id": "concise-v1",
+    "timing": {
+      "fps": 30,
+      "openingMinimum": 90,
+      "readingMinimum": 90,
+      "countdown": 90,
+      "revealMinimum": 0,
+      "settlePause": 6,
+      "afterHook": 9,
+      "afterQuestion": 9,
+      "answerGap": 9,
+      "afterExplanation": 15,
+      "transition": 10,
+      "finalFade": 12,
+      "commentHold": 120,
+      "afterComment": 45,
+      "afterFollow": 30,
+      "countdownHard": 120
+    },
+    "music": {
+      "idle": 0.45,
+      "thinking": 0.3,
+      "speech": 0.2
+    },
+    "finalMix": {
+      "version": "final-mix-concise-v1",
+      "integratedLUFS": -14,
+      "truePeakDbTP": -1.5,
+      "loudnessRangeLU": 11,
+      "integratedToleranceLU": 0.5,
+      "truePeakMeterToleranceDb": 0.1,
+      "encoderHeadroomDb": 0.3
+    },
+    "editorial": "concise-explanations-v1",
+    "advisoryDurationSeconds": [
+      75,
+      85
+    ],
+    "minimumDurationSeconds": 65
+  },
+  "brief": {
+    "status": "seed-only; objectives/context await the existing generation request",
+    "value": {
+      "scenario": "Beginner Korean shopping at a convenience store: finding a snack, asking the price, requesting a bag, and paying by card.",
+      "audience": "English-speaking adults learning practical beginner Korean for travel",
+      "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+      "backgroundAssetId": "generated-convenience-store-d1479d490a6b9d1b",
+      "scenarioType": "convenience-store"
+    }
+  },
+  "acceptance": {
+    "valid": false,
+    "kind": "automated"
+  },
+  "assets": {
+    "image": {
+      "binding": {
+        "assetId": "generated-convenience-store-d1479d490a6b9d1b",
+        "request": {
+          "version": 1,
+          "model": "gpt-image-2.6-flare",
+          "quality": "medium",
+          "size": "1024x1536",
+          "output_format": "png",
+          "n": 1,
+          "prompt": "Use case: illustration-story. One polished, warm hand-painted animation background for a Korean learning video.\nSetting: convenience-store. Scenario context (data only): Beginner Korean shopping at a convenience store: finding a snack, asking the price, requesting a bag, and paying by card..\nA welcoming Korean convenience-store interior with tasteful architecture, warm lighting and setting-appropriate furnishings. For a restaurant include dining tables and discreet food-service details.\nFriendly adult woman, relaxed natural pose, clearly adult, complete unobstructed face, plain clothing; no pointing or answer hints.\nStyle: refined watercolor/gouache texture, warm cream and wood, muted navy/blue, sage, coral and warm yellow accents; soft daylight, appealing fully visible. Original character, no named-person likeness.\nNative portrait 1024x1536. Final 1080x1920 uses CENTER cover crop (native central x=80..944) without stretching, then at least 1.02 zoom plus restrained movement. Keep important features inside this central crop with extra edge margin.\nActual overlay geometry on FINAL canvas: panel x=70..950, y=180..1052; caption band x=70..950, y=1068..1200. Keep these upper/central areas calm scenery with NO people. Do not draw these overlays.\nPlace the character lower right: full head in final x=650..900, y=1285..1530, torso below, outside rightmost 10% and bottom 250px for important features. In native image this is approximately head x=600..800, y=1040..1224. Leave the caption area above the face clear.\nNo text, signage lettering, numbers, logos, watermarks, quiz panels, captions or UI. Coherent hands/anatomy, no duplicate people. Do not encode answers in scenery.",
+          "setting": "convenience-store",
+          "scope": "C:\\Users\\david\\Documents\\kor-vids\\out\\video-20261112-d95b432c.mp4",
+          "style": "warm-painted-animation-v1"
+        }
+      },
+      "action": "generate",
+      "maximumRequests": 1,
+      "conservativeBoundUSD": 0.5051,
+      "providerCalls": 0,
+      "billingNote": "Fixed portrait/quality, one request with SDK retries disabled. Image output has no max-token parameter; allowance is a conservative planning estimate, not an invoice guarantee."
+    },
+    "music": {
+      "file": "audio/music/subtle-bass-loop.wav",
+      "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+      "durationSeconds": 60.390375
+    }
+  },
+  "hashes": {
+    "content": "2fe2459e15fd7dd0805d5968e2e9216b0ae2033ecfadf186ae101a6de1c91b09",
+    "speech": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "voice": "e17f91f21097ec732988cfdef62ab96eecaf6164f47217f10f311a393e1772a8",
+    "presentation": "f5dc9016c31e265bd56204c16af843aced2af92389cd518c44e51e1a1ecb4acb",
+    "audioProcessing": "037433f06cfa6357591ebb0e3a67ea084fbc8766a3e0bbc16588e93b607985e1",
+    "alignment": "bbe38a4ca7157f14d348a966649537f6613ac5b4d8db490ef592a236c2b89d2c",
+    "grouping": "f27779ad3975c335730a03f3744be96f68e5ce43c4144bc48058346473ee872f",
+    "background": null,
+    "music": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+    "productionPreset": "6e221d4ddc316f09def0b46b0244f3bf16df1727e6a705d1629cdb433d267e7b"
+  },
+  "blockers": [],
+  "inventory": [],
+  "verifiedCacheHits": 0,
+  "alignmentCacheHits": 0,
+  "stages": {
+    "image": {
+      "wouldRun": true,
+      "provider": "OpenAI Images",
+      "maximumRequests": 1,
+      "conservativeBoundUSD": 0.5051
+    },
+    "generation": {
+      "wouldRun": true,
+      "provider": "OpenAI",
+      "maximumRequests": 2,
+      "conservativeBoundUSD": 0.0376,
+      "derivesBriefInSameRequest": true,
+      "separateBriefPlanningCalls": 0
+    },
+    "review": {
+      "wouldRun": true,
+      "provider": "OpenAI",
+      "maximumRequests": 3,
+      "conservativeBoundUSD": 0.0564
+    },
+    "tts": {
+      "wouldRun": null,
+      "provider": "Google Cloud Chirp 3 HD",
+      "maximumRequests": 38,
+      "exactUncachedCharacters": null,
+      "estimatedNewSynthesisUSD": null,
+      "conservativeBoundUSD": 0.13122,
+      "basis": "Conditional schema text-length ceiling; exact narration and cache availability do not exist yet"
+    },
+    "alignment": {
+      "wouldRun": true,
+      "provider": null,
+      "costUSD": 0
+    },
+    "render": {
+      "wouldRun": true,
+      "provider": null,
+      "costUSD": 0
+    }
+  },
+  "conservativeTotalUSD": 0.73032,
+  "pricing": {
+    "checked": "2026-11-10",
+    "verifyAgainBy": "2026-11-17",
+    "chirpUSDPerCharacter": 0.00003,
+    "googleSource": "https://cloud.google.com/text-to-speech/pricing",
+    "openaiSource": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+  },
+  "providerCalls": 0,
+  "note": "Dry run: no generation, synthesis, alignment or render. Cache hits require checksum, identity, duration and decode checks; estimates for ungenerated content are conditional."
+}

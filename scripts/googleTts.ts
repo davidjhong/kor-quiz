@@ -1,5 +1,6 @@
 import {TextToSpeechClient} from '@google-cloud/text-to-speech';
 import type {NarrationScript, NarrationSegment} from '../src/narration.ts';
+import {checkCancellation} from './cancellation.ts';
 
 export class UncertainSynthesisError extends Error {}
 export const synthesizeGoogle = async (segment: NarrationSegment, profile: NarrationScript['profile'],
@@ -17,6 +18,7 @@ export const synthesizeGoogle = async (segment: NarrationSegment, profile: Narra
       ...(!gemini ? {speakingRate: profile.speakingRate} : {})}};
   try {
     for (let attempt = 0; attempt < 2; attempt++) {
+      checkCancellation();
       let audioContent: Uint8Array | string | null | undefined;
       configuration.onRequest?.();
       try {

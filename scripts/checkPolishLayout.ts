@@ -5,7 +5,7 @@ import {atomicJson} from './draftWorkflow.ts';
 import {PROJECT_ROOT, runRemotion} from './remotionCommand.ts';
 import {readJsonFile} from './narrationFiles.ts';
 import {draftToQuiz, draftSchema} from '../src/draftSchema.ts';
-import {parseQuizInput, type QuizInput} from '../src/quizSchema.ts';
+import {parseQuizInput} from '../src/quizSchema.ts';
 const folder = join(PROJECT_ROOT, 'out/phase5c/layout'); await mkdir(folder, {recursive: true});
 await writeFile(join(folder, 'empty.env'), '');
 await writeFile(join(folder, 'index.tsx'), `import {Composition,registerRoot,useCurrentFrame} from 'remotion';

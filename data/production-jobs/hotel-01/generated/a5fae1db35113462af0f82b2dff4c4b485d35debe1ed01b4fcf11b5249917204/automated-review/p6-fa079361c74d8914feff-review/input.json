@@ -1,0 +1,375 @@
+{
+  "draft": {
+    "version": 1,
+    "brief": {
+      "scenario": "Beginner Korean at a hotel",
+      "audience": "English-speaking adults learning practical beginner Korean for travel",
+      "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+      "backgroundAssetId": "korean-hotel-illustrated-v1",
+      "scenarioType": "hotel",
+      "context": "A traveler with a reservation checks in, makes simple requests, gets help with hotel facilities, and asks staff about a checkout-related need.",
+      "learningObjectives": [
+        "Tell hotel staff politely that you would like to check in.",
+        "Request one additional towel.",
+        "Ask for the hotel Wi-Fi password.",
+        "Ask where the elevator is.",
+        "Report a key card problem and ask staff to check it.",
+        "Ask permission to leave luggage after checking out."
+      ]
+    },
+    "provenance": {
+      "method": "openai-responses",
+      "provider": "openai",
+      "model": "gpt-6-luna",
+      "requestedModel": "gpt-6-luna",
+      "returnedModel": "gpt-6-luna",
+      "promptVersion": "phase6-scenario-generation-v1",
+      "schemaVersion": "phase6-scenario-education-v1",
+      "generatedAt": "2026-11-11T09:03:55.276Z",
+      "sourceHash": "38e0e6b2f80f0eea5c75bcbaec5ffb06f567f99c4d2d9c433ee60c52fff0a049",
+      "requestId": "req_f9cf48477d654cdca72b551b96a1e0d4",
+      "responseId": "resp_0ed45d73f1de5140016af42f7c13fc87d1b4f73aec906a9fd9",
+      "reportedUsage": {
+        "inputTokens": 2317,
+        "outputTokens": 4368,
+        "totalTokens": 6685,
+        "reasoningTokens": 2545,
+        "cachedInputTokens": 0
+      },
+      "estimatedCostUSD": 0.002473625,
+      "attempts": 1,
+      "pricingSource": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+      "pricingDate": "2026-11-10",
+      "generationId": "p6-cb438007b8bb72aaf0c5-generation"
+    },
+    "quiz": {
+      "videoId": "production-hotel-01",
+      "episodeTitle": "Can you say it in Korean?",
+      "openingSubtitle": "Easy to hard",
+      "endingMode": "comment-challenge",
+      "minimumDurationSeconds": 65,
+      "backgroundAssetId": "korean-hotel-illustrated-v1",
+      "showRomanization": true,
+      "questions": [
+        {
+          "id": "production-hotel-01-q1",
+          "difficulty": "easy",
+          "scenario": "At hotel check-in",
+          "prompt": "Tell the front desk you want to begin your stay. What would you say?",
+          "context": "You have a reservation and are speaking to the front desk on arrival.",
+          "spokenPrompt": "What could you say to let the front desk know you’re ready to start your stay?",
+          "choices": [
+            {
+              "hangul": "체크인하고 싶어요.",
+              "romanization": "chekeuinhago sipeoyo."
+            },
+            {
+              "hangul": "체크아웃하고 싶어요.",
+              "romanization": "chekeuaut hago sipeoyo."
+            },
+            {
+              "hangul": "엘리베이터가 어디예요?",
+              "romanization": "ellibeiteoga eodiyeyo?"
+            }
+          ],
+          "correctAnswerIndex": 0,
+          "explanation": "This politely expresses that you want to check in. 싶어요 means “want to” or “would like to.”",
+          "reveal": {
+            "translation": "I'd like to check in.",
+            "teachingPoint": "체크인하고 싶어요 = I'd like to check in. 싶어요 = would like to"
+          }
+        },
+        {
+          "id": "production-hotel-01-q2",
+          "difficulty": "easy",
+          "scenario": "In your room",
+          "prompt": "Ask hotel staff for one additional towel.",
+          "context": "You are in your room and need one more towel.",
+          "spokenPrompt": "How would you politely ask for an extra towel?",
+          "choices": [
+            {
+              "hangul": "수건 하나 더 주세요.",
+              "romanization": "sugeon hana deo juseyo."
+            },
+            {
+              "hangul": "물 하나 더 주세요.",
+              "romanization": "mul hana deo juseyo."
+            },
+            {
+              "hangul": "담요 하나 더 주세요.",
+              "romanization": "damyo hana deo juseyo."
+            }
+          ],
+          "correctAnswerIndex": 0,
+          "explanation": "This asks politely for an additional towel. 더 means “more,” and 주세요 makes it a polite request.",
+          "reveal": {
+            "translation": "One more towel, please.",
+            "teachingPoint": "수건 = towel; 하나 더 = one more; 주세요 = please give me"
+          }
+        },
+        {
+          "id": "production-hotel-01-q3",
+          "difficulty": "medium",
+          "scenario": "Connecting to Wi-Fi",
+          "prompt": "Ask for the Wi-Fi password.",
+          "context": "You want to connect your phone to the hotel Wi-Fi but need its password.",
+          "spokenPrompt": "What would you ask when you need the password to get online?",
+          "choices": [
+            {
+              "hangul": "와이파이 비밀번호가 뭐예요?",
+              "romanization": "waipai bimilbeonhoga mwoyeyo?"
+            },
+            {
+              "hangul": "조식은 몇 시예요?",
+              "romanization": "josigeun myeot siyeyo?"
+            },
+            {
+              "hangul": "엘리베이터는 어디예요?",
+              "romanization": "ellibeiteoneun eodiyeyo?"
+            }
+          ],
+          "correctAnswerIndex": 0,
+          "explanation": "This asks for the Wi-Fi password. 뭐예요 means “what is it?” and 비밀번호 means “password.”",
+          "reveal": {
+            "translation": "What is the Wi-Fi password?",
+            "teachingPoint": "와이파이 비밀번호 = Wi-Fi password; 뭐예요? = What is it?"
+          }
+        },
+        {
+          "id": "production-hotel-01-q4",
+          "difficulty": "medium",
+          "scenario": "Finding the elevator",
+          "prompt": "Ask where the elevator is.",
+          "context": "You are leaving your room and need to find the elevator.",
+          "spokenPrompt": "How would you ask someone to point you to the elevator?",
+          "choices": [
+            {
+              "hangul": "엘리베이터가 어디예요?",
+              "romanization": "ellibeiteoga eodiyeyo?"
+            },
+            {
+              "hangul": "식당이 어디예요?",
+              "romanization": "sigdangi eodiyeyo?"
+            },
+            {
+              "hangul": "방이 몇 층이에요?",
+              "romanization": "bangi myeot cheungieyo?"
+            }
+          ],
+          "correctAnswerIndex": 0,
+          "explanation": "This asks for the elevator's location. 어디예요 means “where is it?”",
+          "reveal": {
+            "translation": "Where is the elevator?",
+            "teachingPoint": "엘리베이터 = elevator; 어디예요? = Where is it?"
+          }
+        },
+        {
+          "id": "production-hotel-01-q5",
+          "difficulty": "hard",
+          "scenario": "A key card problem",
+          "prompt": "Tell the front desk your key card won't open the door and ask for help.",
+          "context": "Your room door will not unlock with your key card.",
+          "spokenPrompt": "What could you say to report the card problem and ask staff to check it?",
+          "choices": [
+            {
+              "hangul": "카드키가 안 돼요. 확인해 주세요.",
+              "romanization": "kadeukiga an dwaeyo. hwaginhae juseyo."
+            },
+            {
+              "hangul": "카드키를 잃어버렸어요.",
+              "romanization": "kadeukireul ireobeoryeosseoyo."
+            },
+            {
+              "hangul": "수건을 더 주세요.",
+              "romanization": "sugeoneul deo juseyo."
+            }
+          ],
+          "correctAnswerIndex": 0,
+          "explanation": "This reports that the key card is not working and politely asks staff to check it. 확인해 주세요 means “please check.”",
+          "reveal": {
+            "translation": "The key card doesn't work. Please check it.",
+            "teachingPoint": "안 돼요 = doesn't work; 확인해 주세요 = please check"
+          }
+        },
+        {
+          "id": "production-hotel-01-q6",
+          "difficulty": "hard",
+          "scenario": "After checkout",
+          "prompt": "Ask whether you may leave your luggage at the hotel after checking out.",
+          "context": "You have checked out and want to ask the front desk about leaving your luggage.",
+          "spokenPrompt": "How would you ask the front desk if you may leave your bags there after checkout?",
+          "choices": [
+            {
+              "hangul": "체크아웃 후에 짐을 맡겨도 돼요?",
+              "romanization": "chekeuaut hue jimeul matgyeodo dwaeyo?"
+            },
+            {
+              "hangul": "체크아웃 시간을 바꿔도 돼요?",
+              "romanization": "chekeuaut siganeul bakkwodo dwaeyo?"
+            },
+            {
+              "hangul": "짐을 방으로 옮겨 주세요.",
+              "romanization": "jimeul bang-euro omgyeo juseyo."
+            }
+          ]
+        }
+      ]
+    },
+    "narration": {
+      "version": 1,
+      "profile": {
+        "provider": "google-cloud-tts",
+        "model": "chirp3-hd",
+        "voices": {
+          "en-US": "en-US-Chirp3-HD-Achird",
+          "ko-KR": "ko-KR-Chirp3-HD-Achird"
+        },
+        "outputFormat": "LINEAR16",
+        "sampleRateHertz": 24000,
+        "speakingRate": 1
+      },
+      "segments": [
+        {
+          "id": "production-hotel-01-hook",
+          "contentId": "production-hotel-01",
+          "role": "hook",
+          "language": "en-US",
+          "text": "Can you say it in Korean?"
+        },
+        {
+          "id": "production-hotel-01-q1-question",
+          "contentId": "production-hotel-01-q1",
+          "role": "question",
+          "language": "en-US",
+          "text": "What could you say to let the front desk know you’re ready to start your stay?"
+        },
+        {
+          "id": "production-hotel-01-q1-answer",
+          "contentId": "production-hotel-01-q1",
+          "role": "answer",
+          "language": "ko-KR",
+          "text": "체크인하고 싶어요."
+        },
+        {
+          "id": "production-hotel-01-q1-explanation",
+          "contentId": "production-hotel-01-q1",
+          "role": "explanation",
+          "language": "en-US",
+          "text": "I'd like to check in. This is a polite way to tell someone what you want to do."
+        },
+        {
+          "id": "production-hotel-01-q2-question",
+          "contentId": "production-hotel-01-q2",
+          "role": "question",
+          "language": "en-US",
+          "text": "How would you politely ask for an extra towel?"
+        },
+        {
+          "id": "production-hotel-01-q2-answer",
+          "contentId": "production-hotel-01-q2",
+          "role": "answer",
+          "language": "ko-KR",
+          "text": "수건 하나 더 주세요."
+        },
+        {
+          "id": "production-hotel-01-q2-explanation",
+          "contentId": "production-hotel-01-q2",
+          "role": "explanation",
+          "language": "en-US",
+          "text": "One more towel, please. The phrase for “one more” specifies that you need an additional towel."
+        },
+        {
+          "id": "production-hotel-01-q3-question",
+          "contentId": "production-hotel-01-q3",
+          "role": "question",
+          "language": "en-US",
+          "text": "What would you ask when you need the password to get online?"
+        },
+        {
+          "id": "production-hotel-01-q3-answer",
+          "contentId": "production-hotel-01-q3",
+          "role": "answer",
+          "language": "ko-KR",
+          "text": "와이파이 비밀번호가 뭐예요?"
+        },
+        {
+          "id": "production-hotel-01-q3-explanation",
+          "contentId": "production-hotel-01-q3",
+          "role": "explanation",
+          "language": "en-US",
+          "text": "What is the Wi-Fi password? This question asks for the password, rather than the network name."
+        },
+        {
+          "id": "production-hotel-01-q4-question",
+          "contentId": "production-hotel-01-q4",
+          "role": "question",
+          "language": "en-US",
+          "text": "How would you ask someone to point you to the elevator?"
+        },
+        {
+          "id": "production-hotel-01-q4-answer",
+          "contentId": "production-hotel-01-q4",
+          "role": "answer",
+          "language": "ko-KR",
+          "text": "엘리베이터가 어디예요?"
+        },
+        {
+          "id": "production-hotel-01-q4-explanation",
+          "contentId": "production-hotel-01-q4",
+          "role": "explanation",
+          "language": "en-US",
+          "text": "Where is the elevator? The question ending turns a location phrase into a polite question."
+        },
+        {
+          "id": "production-hotel-01-q5-question",
+          "contentId": "production-hotel-01-q5",
+          "role": "question",
+          "language": "en-US",
+          "text": "What could you say to report the card problem and ask staff to check it?"
+        },
+        {
+          "id": "production-hotel-01-q5-answer",
+          "contentId": "production-hotel-01-q5",
+          "role": "answer",
+          "language": "ko-KR",
+          "text": "카드키가 안 돼요. 확인해 주세요."
+        },
+        {
+          "id": "production-hotel-01-q5-explanation",
+          "contentId": "production-hotel-01-q5",
+          "role": "explanation",
+          "language": "en-US",
+          "text": "The key card doesn't work. Please check it. This combines a polite problem report with a request for help."
+        },
+        {
+          "id": "production-hotel-01-q6-question",
+          "contentId": "production-hotel-01-q6",
+          "role": "question",
+          "language": "en-US",
+          "text": "How would you ask the front desk if you may leave your bags there after checkout?"
+        },
+        {
+          "id": "production-hotel-01-q6-comment",
+          "contentId": "production-hotel-01-q6",
+          "role": "comment",
+          "language": "en-US",
+          "text": "What do you think? Comment your answer!"
+        },
+        {
+          "id": "production-hotel-01-q6-follow",
+          "contentId": "production-hotel-01-q6",
+          "role": "follow",
+          "language": "en-US",
+          "text": "Follow for more Korean!"
+        }
+      ]
+    }
+  },
+  "key": {
+    "questionId": "production-hotel-01-q6",
+    "correctAnswerIndex": 0,
+    "explanation": "This asks permission to leave luggage after checkout. 맡겨도 돼요? means “May I leave it?”",
+    "translation": "May I leave my luggage after checkout?",
+    "teachingPoint": "체크아웃 후에 = after checkout; 짐을 맡겨도 돼요? = May I leave my luggage?"
+  }
+}

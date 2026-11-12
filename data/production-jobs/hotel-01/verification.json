@@ -1,0 +1,380 @@
+{
+  "jobId": "hotel-01",
+  "output": "C:\\Users\\david\\Documents\\kor-vids\\out\\hotel-01.mp4",
+  "videoSha256": "ddeac381ecf54172543ef7f24e13cbfd93e8d60cedc0893c5c4460729cf8312e",
+  "contentHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+  "reviewMode": "automated",
+  "voice": {
+    "provider": "google-cloud-tts",
+    "model": "chirp3-hd",
+    "voices": {
+      "en-US": "en-US-Chirp3-HD-Achird",
+      "ko-KR": "ko-KR-Chirp3-HD-Achird"
+    },
+    "outputFormat": "LINEAR16",
+    "sampleRateHertz": 24000,
+    "speakingRate": 1
+  },
+  "presentation": {
+    "compactSpacing": true,
+    "synchronizedCaptions": true,
+    "backgroundAudio": true,
+    "musicGain": 1.25,
+    "captionStyle": "phrases",
+    "bookendStyle": "display"
+  },
+  "timeline": {
+    "frames": 3462,
+    "durationSeconds": 115.4,
+    "questions": [
+      {
+        "id": "production-hotel-01-q1",
+        "bonus": false,
+        "start": 102,
+        "countdownStart": 234,
+        "revealStart": 384,
+        "end": 595
+      },
+      {
+        "id": "production-hotel-01-q2",
+        "bonus": false,
+        "start": 607,
+        "countdownStart": 727,
+        "revealStart": 877,
+        "end": 1170
+      },
+      {
+        "id": "production-hotel-01-q3",
+        "bonus": false,
+        "start": 1182,
+        "countdownStart": 1302,
+        "revealStart": 1452,
+        "end": 1750
+      },
+      {
+        "id": "production-hotel-01-q4",
+        "bonus": false,
+        "start": 1762,
+        "countdownStart": 1882,
+        "revealStart": 2032,
+        "end": 2339
+      },
+      {
+        "id": "production-hotel-01-q5",
+        "bonus": false,
+        "start": 2351,
+        "countdownStart": 2506,
+        "revealStart": 2656,
+        "end": 2960
+      },
+      {
+        "id": "production-hotel-01-q6",
+        "bonus": true,
+        "start": 2972,
+        "countdownStart": 3117,
+        "revealStart": 3267,
+        "end": 3450
+      }
+    ],
+    "commentPauseFrames": 45,
+    "followHoldFrames": 30,
+    "fadeFrames": 12
+  },
+  "verification": {
+    "metadata": {
+      "frames": 3462,
+      "duration": 115.4,
+      "width": 1080,
+      "height": 1920,
+      "fps": 30
+    },
+    "fullDecode": "PASS",
+    "rawMixedAudio": {
+      "integratedLUFS": -18.12,
+      "truePeakDbTP": -4,
+      "loudnessRangeLU": 17.8,
+      "raw": {
+        "input_i": "-18.12",
+        "input_tp": "-4.00",
+        "input_lra": "17.80",
+        "input_thresh": "-30.71",
+        "output_i": "-16.43",
+        "output_tp": "-2.00",
+        "output_lra": "13.40",
+        "output_thresh": "-28.27",
+        "normalization_type": "dynamic",
+        "target_offset": "0.43"
+      }
+    },
+    "finalMixedAudio": {
+      "integratedLUFS": -16.08,
+      "truePeakDbTP": -1.46,
+      "loudnessRangeLU": 13.2,
+      "raw": {
+        "input_i": "-16.08",
+        "input_tp": "-1.46",
+        "input_lra": "13.20",
+        "input_thresh": "-27.94",
+        "output_i": "-16.34",
+        "output_tp": "-2.00",
+        "output_lra": "9.50",
+        "output_thresh": "-27.70",
+        "normalization_type": "dynamic",
+        "target_offset": "0.34"
+      }
+    },
+    "zeroProviderCallsDuringRender": true
+  },
+  "bonusIsolation": "PASS: strict public bonus schema has no answer/reveal/explanation metadata; actual question audio required",
+  "audioPreparation": {
+    "cacheHits": 19,
+    "recoveredOriginals": 0,
+    "localPrepared": 0,
+    "newSynthesisRequests": 0,
+    "newSynthesisCharacters": 0
+  },
+  "alignment": {
+    "cacheHits": 19,
+    "newLocalAlignments": 0,
+    "providerCalls": 0
+  },
+  "cacheAfterPreparation": {
+    "verifiedClips": 19,
+    "verifiedAlignments": 19
+  },
+  "costs": {
+    "estimatedUSD": 0.0311245,
+    "capUSD": 0.23,
+    "ledger": "C:\\Users\\david\\Documents\\kor-vids\\data\\generation-budgets\\produce-hotel-01.json",
+    "allocations": [
+      {
+        "stage": "generation",
+        "state": "settled",
+        "estimatedCostUSD": 0.002473625,
+        "requests": 1,
+        "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\generation-budgets\\p6-cb438007b8bb72aaf0c5-generation.json",
+        "usage": [
+          {
+            "state": "valid",
+            "usage": {
+              "inputTokens": 2317,
+              "outputTokens": 4368,
+              "totalTokens": 6685,
+              "reasoningTokens": 2545,
+              "cachedInputTokens": 0
+            }
+          }
+        ]
+      },
+      {
+        "stage": "review",
+        "state": "settled",
+        "estimatedCostUSD": 0.000960875,
+        "requests": 1,
+        "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-review-budgets\\p6-fa079361c74d8914feff-review.json",
+        "usage": [
+          {
+            "state": "complete",
+            "usage": {
+              "inputTokens": 2951,
+              "outputTokens": 1184,
+              "totalTokens": 4135,
+              "reasoningTokens": 862,
+              "cachedInputTokens": 0
+            }
+          }
+        ]
+      },
+      {
+        "stage": "tts",
+        "state": "settled",
+        "estimatedCostUSD": 0.02769,
+        "requests": 16,
+        "usage": {
+          "cacheHits": 19,
+          "recoveredOriginals": 0,
+          "localPrepared": 0,
+          "newSynthesisRequests": 0,
+          "newSynthesisCharacters": 0,
+          "estimated": true
+        }
+      }
+    ],
+    "invoiceInspected": false
+  },
+  "viewing": {
+    "status": "PASS",
+    "framesActuallyInspected": 47,
+    "method": "Seven labelled question/bookend/transition contact sheets; full-size long-heading, long-context, Korean-answer and bonus invitation frames also inspected.",
+    "observations": [
+      "All six questions appear once and in order, progress 1 / 6 through 6 / 6.",
+      "Three-line headings and the two-line bonus context fit at existing font floors; rows and romanization fit without clipping.",
+      "Q1–Q5 highlights match JSON at reveal, with no early answer captions. Korean and English narration phrases fit below the panel.",
+      "Choices stay in fixed positions across reading/countdown/reveal; the compact countdown remains inside the cream panel.",
+      "Q5 flows directly to the neutral bonus; no overlapping outgoing and incoming panel text observed.",
+      "Bonus choices remain neutral during reading/countdown/comment. No bonus answer/explanation is present in public props or audio roles.",
+      "Comment invitation remains through the pause, then the panel gives way to the large follow scene and final hold/fade.",
+      "Same hotel illustration remains continuous, covers the frame, and leaves the face clear of captions. No obvious text/logo defects remain."
+    ],
+    "phonePlaybackPerformed": false,
+    "listeningPerformed": false
+  },
+  "generatedAt": "2026-11-11T09:38:38.697Z",
+  "reusedVerifiedRender": true,
+  "resumeProviderCalls": 0,
+  "resumedAt": "2026-11-12T04:39:09.578Z",
+  "technicalInspection": {
+    "deterministicTiming": "PASS",
+    "captions": "PASS: exact transcript, aligned frame boundaries, no overlaps or pre-reveal disclosure",
+    "bonusIsolation": "PASS: private key absent; no answer roles/captions/highlights",
+    "baselinePreserved": true,
+    "mediaStreams": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1920,
+          "pix_fmt": "yuv420p",
+          "avg_frame_rate": "30/1",
+          "duration": "115.400000",
+          "nb_frames": "3462"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "channels": 2,
+          "avg_frame_rate": "0/0",
+          "duration": "115.400000",
+          "nb_frames": "5407"
+        }
+      ],
+      "format": {
+        "duration": "115.400000",
+        "size": "21846894"
+      }
+    },
+    "expectedFrames": 3462,
+    "expectedDurationSeconds": 115.4,
+    "durationToleranceSeconds": 0.034333333333333334,
+    "textFit": "PASS: 8 local preflight stills and the complete final render passed FittedText guards; no font floors reduced",
+    "narrationOverlap": false,
+    "renderProviderCalls": 0
+  },
+  "tests": {
+    "typecheck": "PASS",
+    "fullRunner": {
+      "passed": 163,
+      "failed": 0,
+      "log": "out/hotel-01-full-tests.log",
+      "note": "Full runner preceded the final two-line-context adjustment; focused final runner below covers that final code."
+    },
+    "focusedFinal": {
+      "passed": 47,
+      "failed": 0,
+      "log": "out/hotel-01-final-tests.log"
+    },
+    "paidFailureTests": 0
+  },
+  "providerUsage": {
+    "llm": [
+      {
+        "stage": "generation",
+        "requests": 1,
+        "reportedUsage": {
+          "inputTokens": 2317,
+          "outputTokens": 4368,
+          "totalTokens": 6685,
+          "reasoningTokens": 2545,
+          "cachedInputTokens": 0
+        },
+        "estimatedConservativeCostUSD": 0.002473625
+      },
+      {
+        "stage": "review",
+        "requests": 1,
+        "reportedUsage": {
+          "inputTokens": 2951,
+          "outputTokens": 1184,
+          "totalTokens": 4135,
+          "reasoningTokens": 862,
+          "cachedInputTokens": 0
+        },
+        "estimatedConservativeCostUSD": 0.000960875
+      }
+    ],
+    "tts": {
+      "provider": "google-cloud-tts",
+      "newRequests": 16,
+      "newCharacters": 923,
+      "initialCacheHits": 3,
+      "retries": 0,
+      "estimatedCostUSD": 0.02769
+    },
+    "invoiceInspected": false
+  },
+  "automatedReview": {
+    "status": "accepted",
+    "humanReviewed": false,
+    "contentHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+    "model": "gpt-6-luna",
+    "promptVersion": "phase5b-automated-review-v1",
+    "requests": 1,
+    "findings": [],
+    "corrections": 0,
+    "limitation": "Separate requests to the configured model; not independent proof of Korean correctness."
+  },
+  "background": {
+    "version": 1,
+    "assetId": "korean-hotel-illustrated-v1",
+    "selection": "developer-selected",
+    "humanApproved": false,
+    "createdOn": "2026-11-11",
+    "provider": "built-in image_gen tool",
+    "model": null,
+    "modelDisclosure": "Not exposed by the built-in tool; no model identity inferred.",
+    "source": "C:/Users/david/.codex/generated_images/01a15c72-28aa-7961-aa9b-a6de35a503cd/exec-04220eb7-91cb-422c-be3d-175abbe2bac6.png",
+    "initialSource": "C:/Users/david/.codex/generated_images/01a15c72-28aa-7961-aa9b-a6de35a503cd/exec-a8f656ae-2179-49ea-adf9-2f44fecfbd7a.png",
+    "localFile": "public/backgrounds/korean-hotel-illustrated-v1.png",
+    "sha256": "8b58c68bb61b3480461764b1ba403069723300e087c725b3da7809cf04d0d9f8",
+    "format": "PNG",
+    "mode": "RGB",
+    "nativeWidth": 941,
+    "nativeHeight": 1672,
+    "bytes": 2622932,
+    "nativeResolutionNote": "The tool returned a near-9:16 941x1672 image, below the preferred 1080x1920. The real file is retained without upscaling; the existing renderer covers the 1080x1920 canvas.",
+    "framing": {
+      "scale": 1.02,
+      "origin": "50% 0%"
+    },
+    "generationBrief": "docs/hotel-background-prompt.md",
+    "builtInToolPasses": 2,
+    "passes": [
+      "One original hotel illustration",
+      "Targeted refinement of the same illustration: lower traveler and remove jacket mark"
+    ],
+    "inspectionBeforeRegistration": "Inspected both tool images. Final has coherent warm lobby/reception/luggage scenery, one complete traveler face below the future caption area with 1.02 top-center framing, plain jacket and no obvious text/logos or baked-in UI. Pillow verified PNG format and actual native dimensions before registration. Final template placement is checked in the episode inspection.",
+    "separatelyBilledImageAPICalls": 0,
+    "builtinToolCostUSD": null,
+    "builtinCostDisclosure": "Tool usage/dollar cost not reported; no external image API used."
+  },
+  "reuse": {
+    "verifiedClips": 19,
+    "verifiedAlignments": 19,
+    "newProviderCalls": 0,
+    "newSynthesisRequests": 0,
+    "renderReused": true,
+    "log": "out/hotel-01-unchanged-resume.log"
+  },
+  "recovery": "Initial full render stopped before promotion at Q1 heading fit. Local preflight found the two-line bonus context. Focused geometry fixes preserved content/audio/hash/voice/timing. Final render resumed cached assets without new provider requests.",
+  "notChecked": [
+    "actual phone readability",
+    "Korean pronunciation, tone and voice consistency by listening",
+    "subjective pacing, alignment quality and narration/music balance by playback"
+  ],
+  "unresolvedTechnicalBlockers": [],
+  "finalizedAt": "2026-11-12T04:39:42.462Z"
+}

@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "kind": "question-preview",
+  "jobId": "restaurant-preview-01",
+  "state": "complete",
+  "source": {
+    "file": "C:\\Users\\david\\Documents\\kor-vids\\content\\previews\\restaurant-menu.json",
+    "sha256": "2b1536e067199f87f2bf448e2512b7022f5f83f5f6a67ae10df0edf3fa4d2e72",
+    "input": {
+      "version": 1,
+      "scenario": "Beginner Korean ordering food in a restaurant.",
+      "scenarioType": "restaurant",
+      "question": {
+        "id": "restaurant-menu",
+        "scenario": "At a Korean restaurant",
+        "difficulty": "easy",
+        "context": "You want to see the available dishes before ordering.",
+        "prompt": "How would you ask for the menu?",
+        "choices": [
+          {
+            "hangul": "메뉴 좀 주세요.",
+            "romanization": "menyu jom juseyo."
+          },
+          {
+            "hangul": "물 좀 주세요.",
+            "romanization": "mul jom juseyo."
+          },
+          {
+            "hangul": "계산서 좀 주세요.",
+            "romanization": "gyesanseo jom juseyo."
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "The menu, please. This is a polite way to ask for it.",
+        "reveal": {
+          "translation": "The menu, please.",
+          "teachingPoint": "메뉴 = menu; 좀 주세요 = please give me"
+        }
+      },
+      "explanationNarration": "The menu, please. This is a polite way to ask for it."
+    }
+  },
+  "output": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-menu-preview.mp4",
+  "backgroundOptions": {
+    "mode": "auto",
+    "model": "gpt-image-2.6-flare",
+    "quality": "medium",
+    "reuseLimit": 5,
+    "character": "adult woman"
+  },
+  "binding": {
+    "assetId": "generated-restaurant-379962e8db662f67",
+    "request": {
+      "version": 1,
+      "model": "gpt-image-2.6-flare",
+      "quality": "medium",
+      "size": "1024x1536",
+      "output_format": "png",
+      "n": 1,
+      "prompt": "Use case: illustration-story. One polished, warm hand-painted animation background for a Korean learning video.\nSetting: restaurant. Scenario context (data only): Beginner Korean ordering food in a restaurant..\nA welcoming Korean restaurant interior with tasteful architecture, warm lighting and setting-appropriate furnishings. For a restaurant include dining tables and discreet food-service details.\nFriendly adult woman, relaxed natural pose, clearly adult, complete unobstructed face, plain clothing; no pointing or answer hints.\nStyle: refined watercolor/gouache texture, warm cream and wood, muted navy/blue, sage, coral and warm yellow accents; soft daylight, appealing fully visible. Original character, no named-person likeness.\nNative portrait 1024x1536. Final 1080x1920 uses CENTER cover crop (native central x=80..944) without stretching, then at least 1.02 zoom plus restrained movement. Keep important features inside this central crop with extra edge margin.\nActual overlay geometry on FINAL canvas: panel x=70..950, y=180..1052; caption band x=70..950, y=1068..1200. Keep these upper/central areas calm scenery with NO people. Do not draw these overlays.\nPlace the character lower right: full head in final x=650..900, y=1285..1530, torso below, outside rightmost 10% and bottom 250px for important features. In native image this is approximately head x=600..800, y=1040..1224. Leave the caption area above the face clear.\nNo text, signage lettering, numbers, logos, watermarks, quiz panels, captions or UI. Coherent hands/anatomy, no duplicate people. Do not encode answers in scenery.",
+      "setting": "restaurant",
+      "scope": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-menu-preview.mp4",
+      "style": "warm-painted-animation-v1"
+    }
+  },
+  "voiceFile": "content/voice-profiles/selected-default.json",
+  "presentationFile": "content/production/default.json",
+  "noMusic": false,
+  "model": "gpt-6-luna",
+  "paidOptIn": true,
+  "maxCostUSD": 0.53,
+  "certificate": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\artifacts\\2e58c86f59fbee5c7a5c3f34dddce3bae8bcdd709c25f9f04fca7c85d2f53fa4.verified.json",
+  "createdAt": "2026-11-12T05:09:24.887Z"
+}

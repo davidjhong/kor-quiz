@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "source": "e24246d4cfe4c900b12c619ab2eacb932ff440e7c71f79ca51a5ab4aaee128cf",
+  "contentHash": null,
+  "brief": {
+    "status": "seed-only; objectives/context await the existing generation request",
+    "value": {
+      "scenario": "Beginner Korean ordering dinner at a restaurant, including choosing a dish, ordering a drink, adjusting an order, and asking for the bill.",
+      "audience": "English-speaking adults learning practical beginner Korean for travel",
+      "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+      "backgroundAssetId": "generated-restaurant-5cbd8216bb56fdd7",
+      "scenarioType": "restaurant"
+    }
+  },
+  "acceptance": {
+    "valid": false,
+    "kind": "automated"
+  },
+  "assets": {
+    "image": {
+      "binding": {
+        "assetId": "generated-restaurant-5cbd8216bb56fdd7",
+        "request": {
+          "version": 1,
+          "model": "gpt-image-2.6-flare",
+          "quality": "medium",
+          "size": "1024x1536",
+          "output_format": "png",
+          "n": 1,
+          "prompt": "Use case: illustration-story. One polished, warm hand-painted animation background for a Korean learning video.\nSetting: restaurant. Scenario context (data only): Beginner Korean ordering dinner at a restaurant, including choosing a dish, ordering a drink, adjusting an order, and asking for the bill..\nA welcoming Korean restaurant interior with tasteful architecture, warm lighting and setting-appropriate furnishings. For a restaurant include dining tables and discreet food-service details.\nFriendly adult woman, relaxed natural pose, clearly adult, complete unobstructed face, plain clothing; no pointing or answer hints.\nStyle: refined watercolor/gouache texture, warm cream and wood, muted navy/blue, sage, coral and warm yellow accents; soft daylight, appealing fully visible. Original character, no named-person likeness.\nNative portrait 1024x1536. Final 1080x1920 uses CENTER cover crop (native central x=80..944) without stretching, then at least 1.02 zoom plus restrained movement. Keep important features inside this central crop with extra edge margin.\nActual overlay geometry on FINAL canvas: panel x=70..950, y=180..1052; caption band x=70..950, y=1068..1200. Keep these upper/central areas calm scenery with NO people. Do not draw these overlays.\nPlace the character lower right: full head in final x=650..900, y=1285..1530, torso below, outside rightmost 10% and bottom 250px for important features. In native image this is approximately head x=600..800, y=1040..1224. Leave the caption area above the face clear.\nNo text, signage lettering, numbers, logos, watermarks, quiz panels, captions or UI. Coherent hands/anatomy, no duplicate people. Do not encode answers in scenery.",
+          "setting": "restaurant",
+          "scope": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-fresh-01.mp4",
+          "style": "warm-painted-animation-v1"
+        }
+      },
+      "action": "generate",
+      "maximumRequests": 1,
+      "conservativeBoundUSD": 0.505115,
+      "providerCalls": 0,
+      "billingNote": "Fixed portrait/quality, one request with SDK retries disabled. Image output has no max-token parameter; allowance is a conservative planning estimate, not an invoice guarantee."
+    },
+    "music": {
+      "file": "audio/music/subtle-bass-loop.wav",
+      "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+      "durationSeconds": 60.390375
+    }
+  },
+  "hashes": {
+    "content": "e24246d4cfe4c900b12c619ab2eacb932ff440e7c71f79ca51a5ab4aaee128cf",
+    "speech": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "voice": "e17f91f21097ec732988cfdef62ab96eecaf6164f47217f10f311a393e1772a8",
+    "presentation": "f5dc9016c31e265bd56204c16af843aced2af92389cd518c44e51e1a1ecb4acb",
+    "audioProcessing": "037433f06cfa6357591ebb0e3a67ea084fbc8766a3e0bbc16588e93b607985e1",
+    "alignment": "bbe38a4ca7157f14d348a966649537f6613ac5b4d8db490ef592a236c2b89d2c",
+    "grouping": "35f3a35944fe288a8df266a3acb9444a64a8fa4ef18c10f619d10fd6aa27788f",
+    "background": null,
+    "music": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40"
+  },
+  "blockers": [],
+  "inventory": [],
+  "verifiedCacheHits": 0,
+  "alignmentCacheHits": 0,
+  "stages": {
+    "image": {
+      "wouldRun": true,
+      "provider": "OpenAI Images",
+      "maximumRequests": 1,
+      "conservativeBoundUSD": 0.505115
+    },
+    "generation": {
+      "wouldRun": true,
+      "provider": "OpenAI",
+      "maximumRequests": 2,
+      "conservativeBoundUSD": 0.0376,
+      "derivesBriefInSameRequest": true,
+      "separateBriefPlanningCalls": 0
+    },
+    "review": {
+      "wouldRun": true,
+      "provider": "OpenAI",
+      "maximumRequests": 3,
+      "conservativeBoundUSD": 0.0564
+    },
+    "tts": {
+      "wouldRun": null,
+      "provider": "Google Cloud Chirp 3 HD",
+      "maximumRequests": 38,
+      "exactUncachedCharacters": null,
+      "estimatedNewSynthesisUSD": null,
+      "conservativeBoundUSD": 0.13122,
+      "basis": "Conditional schema text-length ceiling; exact narration and cache availability do not exist yet"
+    },
+    "alignment": {
+      "wouldRun": true,
+      "provider": null,
+      "costUSD": 0
+    },
+    "render": {
+      "wouldRun": true,
+      "provider": null,
+      "costUSD": 0
+    }
+  },
+  "conservativeTotalUSD": 0.730335,
+  "pricing": {
+    "checked": "2026-11-10",
+    "verifyAgainBy": "2026-11-17",
+    "chirpUSDPerCharacter": 0.00003,
+    "googleSource": "https://cloud.google.com/text-to-speech/pricing",
+    "openaiSource": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+  },
+  "providerCalls": 0,
+  "note": "Dry run: no generation, synthesis, alignment or render. Cache hits require checksum, identity, duration and decode checks; estimates for ungenerated content are conditional."
+}

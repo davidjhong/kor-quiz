@@ -1,0 +1,24 @@
+{
+  "kind": "explicit-user-authorization",
+  "jobId": "restaurant-preview-01",
+  "capUSD": 0.53,
+  "scope": {
+    "imageRequests": 1,
+    "imageModel": "gpt-image-2.6-flare",
+    "quality": "medium",
+    "size": "1024x1536",
+    "generationRequests": 0,
+    "reviewRequests": 1,
+    "reviewModel": "gpt-6-luna",
+    "newTtsCharacters": 93,
+    "maximumTtsRequests": 6
+  },
+  "source": "User approved restaurant preview, up to .53 in this session",
+  "excludes": [
+    "full episode",
+    "additional images",
+    "publishing",
+    "paid failure tests"
+  ],
+  "recordedAt": "2026-11-12T05:15:08.911Z"
+}

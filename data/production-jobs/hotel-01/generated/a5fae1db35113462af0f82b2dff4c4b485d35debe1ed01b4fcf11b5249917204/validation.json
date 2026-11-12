@@ -1,0 +1,19 @@
+{
+  "valid": true,
+  "contentHash": "c519daeaf626938596b948906210b50527fd074af6e94f4969d7eab9f25caa4d",
+  "errors": [],
+  "warnings": [
+    "Structural validation does not establish Korean accuracy, naturalness, difficulty or semantic answer uniqueness. A separate manual or automated linguistic review is required."
+  ],
+  "linguisticReviewRequired": true,
+  "generationEstimatedCostUSD": 0.002473625,
+  "reportedGenerationUsage": {
+    "inputTokens": 2317,
+    "outputTokens": 4368,
+    "totalTokens": 6685,
+    "reasoningTokens": 2545,
+    "cachedInputTokens": 0
+  },
+  "renderReady": true,
+  "renderBlockers": []
+}

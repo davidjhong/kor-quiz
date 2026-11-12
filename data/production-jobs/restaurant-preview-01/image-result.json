@@ -1,0 +1,30 @@
+{
+  "asset": {
+    "id": "generated-restaurant-379962e8db662f67",
+    "file": "backgrounds/generated-restaurant-379962e8db662f67.png",
+    "sha256": "a9405bcdcc310ef167f3918ff66282cc308c4b5cc59c61303e3a0933e0b3aa7b",
+    "scenarioType": "restaurant",
+    "selection": "developer-selected",
+    "scenarioLabel": "AT A KOREAN RESTAURANT",
+    "framing": {
+      "scale": 1.02,
+      "origin": "50% 0%"
+    }
+  },
+  "newImageRequests": 0,
+  "receipt": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-preview-01\\image\\379962e8db662f6788de64dd9b2b63286f0a88c5a39bbe6f35d6246885ceb3ff\\receipt.json",
+  "usage": {
+    "input_tokens": 362,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 362
+    },
+    "output_tokens": 1132,
+    "output_tokens_details": {
+      "image_tokens": 1132,
+      "text_tokens": 0
+    },
+    "total_tokens": 1494
+  },
+  "estimatedCostUSD": 0.03577
+}

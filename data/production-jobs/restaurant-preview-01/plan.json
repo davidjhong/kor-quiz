@@ -1,0 +1,94 @@
+{
+  "kind": "question-preview",
+  "jobId": "restaurant-preview-01",
+  "contentHash": "a66dcf6ad2538e9ff4d517474a765bf3116d0e665a0f7246e443e89cba48535a",
+  "providerCalls": 0,
+  "image": {
+    "binding": {
+      "assetId": "generated-restaurant-379962e8db662f67",
+      "request": {
+        "version": 1,
+        "model": "gpt-image-2.6-flare",
+        "quality": "medium",
+        "size": "1024x1536",
+        "output_format": "png",
+        "n": 1,
+        "prompt": "Use case: illustration-story. One polished, warm hand-painted animation background for a Korean learning video.\nSetting: restaurant. Scenario context (data only): Beginner Korean ordering food in a restaurant..\nA welcoming Korean restaurant interior with tasteful architecture, warm lighting and setting-appropriate furnishings. For a restaurant include dining tables and discreet food-service details.\nFriendly adult woman, relaxed natural pose, clearly adult, complete unobstructed face, plain clothing; no pointing or answer hints.\nStyle: refined watercolor/gouache texture, warm cream and wood, muted navy/blue, sage, coral and warm yellow accents; soft daylight, appealing fully visible. Original character, no named-person likeness.\nNative portrait 1024x1536. Final 1080x1920 uses CENTER cover crop (native central x=80..944) without stretching, then at least 1.02 zoom plus restrained movement. Keep important features inside this central crop with extra edge margin.\nActual overlay geometry on FINAL canvas: panel x=70..950, y=180..1052; caption band x=70..950, y=1068..1200. Keep these upper/central areas calm scenery with NO people. Do not draw these overlays.\nPlace the character lower right: full head in final x=650..900, y=1285..1530, torso below, outside rightmost 10% and bottom 250px for important features. In native image this is approximately head x=600..800, y=1040..1224. Leave the caption area above the face clear.\nNo text, signage lettering, numbers, logos, watermarks, quiz panels, captions or UI. Coherent hands/anatomy, no duplicate people. Do not encode answers in scenery.",
+        "setting": "restaurant",
+        "scope": "C:\\Users\\david\\Documents\\kor-vids\\out\\restaurant-menu-preview.mp4",
+        "style": "warm-painted-animation-v1"
+      }
+    },
+    "asset": {
+      "id": "generated-restaurant-379962e8db662f67",
+      "file": "backgrounds/generated-restaurant-379962e8db662f67.png",
+      "sha256": "a9405bcdcc310ef167f3918ff66282cc308c4b5cc59c61303e3a0933e0b3aa7b",
+      "scenarioType": "restaurant",
+      "selection": "developer-selected",
+      "scenarioLabel": "AT A KOREAN RESTAURANT",
+      "framing": {
+        "scale": 1.02,
+        "origin": "50% 0%"
+      }
+    },
+    "action": "reuse",
+    "maximumRequests": 0,
+    "conservativeBoundUSD": 0,
+    "providerCalls": 0,
+    "billingNote": "Fixed portrait/quality, one request with SDK retries disabled. Image output has no max-token parameter; allowance is a conservative planning estimate, not an invoice guarantee."
+  },
+  "conditionalBoundsUSD": {
+    "image": 0,
+    "generation": 0,
+    "review": 0,
+    "tts": 0
+  },
+  "conservativeTotalUSD": 0,
+  "narration": {
+    "version": 1,
+    "profile": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Achird",
+        "ko-KR": "ko-KR-Chirp3-HD-Achird"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "segments": [
+      {
+        "id": "restaurant-menu-question",
+        "contentId": "restaurant-menu",
+        "role": "question",
+        "language": "en-US",
+        "text": "How would you ask for the menu?"
+      },
+      {
+        "id": "restaurant-menu-answer",
+        "contentId": "restaurant-menu",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "메뉴 좀 주세요."
+      },
+      {
+        "id": "restaurant-menu-explanation",
+        "contentId": "restaurant-menu",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "The menu, please. This is a polite way to ask for it."
+      }
+    ]
+  },
+  "cacheHits": 3,
+  "missingTtsCharacters": 0,
+  "maximumNewRequests": {
+    "image": 0,
+    "generation": 0,
+    "review": 0,
+    "tts": 0
+  },
+  "productionUsageConsumed": 0,
+  "blockers": []
+}

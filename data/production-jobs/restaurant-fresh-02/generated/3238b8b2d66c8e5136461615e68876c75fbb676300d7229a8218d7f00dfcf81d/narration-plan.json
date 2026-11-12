@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "kind": "narration-review-plan",
+  "valid": true,
+  "contentHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+  "profile": {
+    "provider": "google-cloud-tts",
+    "model": "chirp3-hd",
+    "voices": {
+      "en-US": "en-US-Chirp3-HD-Achird",
+      "ko-KR": "ko-KR-Chirp3-HD-Achird"
+    },
+    "outputFormat": "LINEAR16",
+    "sampleRateHertz": 24000,
+    "speakingRate": 1
+  },
+  "timingRules": {
+    "fps": 30,
+    "openingMinimum": 90,
+    "readingMinimum": 120,
+    "countdown": 150,
+    "revealMinimum": 120,
+    "settlePause": 6,
+    "afterHook": 15,
+    "afterQuestion": 15,
+    "answerGap": 10,
+    "afterExplanation": 30,
+    "transition": 12,
+    "finalFade": 12,
+    "commentHold": 120,
+    "afterComment": 45,
+    "afterFollow": 30
+  },
+  "endingDisplay": {
+    "comment": "Comment your answer 💬",
+    "follow": "Follow for more Korean ✨"
+  },
+  "timingStatus": "Absolute frames require measured audio; this is not a prepared render manifest.",
+  "segments": [
+    {
+      "id": "production-restaurant-fresh-02-hook",
+      "contentId": "production-restaurant-fresh-02",
+      "role": "hook",
+      "language": "en-US",
+      "text": "Can you say it in Korean?",
+      "cacheKey": "b03314a1a056b827307ce797080d4b15544d9502a7f510a176d151da28c98eb8",
+      "file": "audio/cache/b03314a1a056b827307ce797080d4b15544d9502a7f510a176d151da28c98eb8.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q1-question",
+      "contentId": "production-restaurant-fresh-02-q1",
+      "role": "question",
+      "language": "en-US",
+      "text": "You’ve chosen bibimbap for dinner. How would you order it?",
+      "cacheKey": "d1b33f141adc00b5b5e8c96136048c7da43fa682a566b8c06b69d41af3e62b37",
+      "file": "audio/cache/d1b33f141adc00b5b5e8c96136048c7da43fa682a566b8c06b69d41af3e62b37.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q1-answer",
+      "contentId": "production-restaurant-fresh-02-q1",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "비빔밥 주세요.",
+      "cacheKey": "05d58cd8a3d3b4c0c9678b7abbeafe280df9affccf93d14631da6601c1467a91",
+      "file": "audio/cache/05d58cd8a3d3b4c0c9678b7abbeafe280df9affccf93d14631da6601c1467a91.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q1-explanation",
+      "contentId": "production-restaurant-fresh-02-q1",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Bibimbap, please. Put the dish you want before the polite phrase used to ask for something.",
+      "cacheKey": "28d07a84595e6b572eb57e19a176d4a22636fdbed7ae0e51418fee83babe3b4b",
+      "file": "audio/cache/28d07a84595e6b572eb57e19a176d4a22636fdbed7ae0e51418fee83babe3b4b.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q2-question",
+      "contentId": "production-restaurant-fresh-02-q2",
+      "role": "question",
+      "language": "en-US",
+      "text": "You’d like a cup of barley tea with your meal. How do you order it?",
+      "cacheKey": "f55ba766b65b45b24259148b4c22918a0b66719bd6847515e88f05e9885f6f7a",
+      "file": "audio/cache/f55ba766b65b45b24259148b4c22918a0b66719bd6847515e88f05e9885f6f7a.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q2-answer",
+      "contentId": "production-restaurant-fresh-02-q2",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "보리차 한 잔 주세요.",
+      "cacheKey": "23d051dbc3cf90aa9c5e0b08d1d9fdeeb91bf95470eec59828522bf241d65974",
+      "file": "audio/cache/23d051dbc3cf90aa9c5e0b08d1d9fdeeb91bf95470eec59828522bf241d65974.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q2-explanation",
+      "contentId": "production-restaurant-fresh-02-q2",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "One cup of barley tea, please. The phrase for one cup or glass comes after the drink name.",
+      "cacheKey": "85283f6b335cb14fddfd58d3eff9956fc790e691b8ab41370d6aeeadf737b2a7",
+      "file": "audio/cache/85283f6b335cb14fddfd58d3eff9956fc790e691b8ab41370d6aeeadf737b2a7.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q3-question",
+      "contentId": "production-restaurant-fresh-02-q3",
+      "role": "question",
+      "language": "en-US",
+      "text": "You enjoy the dish, but want less heat. How would you ask?",
+      "cacheKey": "207f48acfc04baf05f9a8a9375eb973aaf3e5cedf678344dad4eeaa22d9e9dae",
+      "file": "audio/cache/207f48acfc04baf05f9a8a9375eb973aaf3e5cedf678344dad4eeaa22d9e9dae.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q3-answer",
+      "contentId": "production-restaurant-fresh-02-q3",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "덜 맵게 해 주세요.",
+      "cacheKey": "42ade4a21acec7d9888c746e49b8e137447b846e8274be2d1cf7f04c63cc6b46",
+      "file": "audio/cache/42ade4a21acec7d9888c746e49b8e137447b846e8274be2d1cf7f04c63cc6b46.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q3-explanation",
+      "contentId": "production-restaurant-fresh-02-q3",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Please make it less spicy. The word for less can also be used with other descriptions, such as salty.",
+      "cacheKey": "2e50b03f202ba3117e4caa268bb677915b0fbde407c6e987cdaf3d69b0509eda",
+      "file": "audio/cache/2e50b03f202ba3117e4caa268bb677915b0fbde407c6e987cdaf3d69b0509eda.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q4-question",
+      "contentId": "production-restaurant-fresh-02-q4",
+      "role": "question",
+      "language": "en-US",
+      "text": "Your meal comes with onions, but you’d prefer none. What would you ask?",
+      "cacheKey": "fc3b8ad09775a54ccc0d27e769f92eb6fad29b4c6c038b7cac0d198349798005",
+      "file": "audio/cache/fc3b8ad09775a54ccc0d27e769f92eb6fad29b4c6c038b7cac0d198349798005.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q4-answer",
+      "contentId": "production-restaurant-fresh-02-q4",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "양파 빼 주세요.",
+      "cacheKey": "f6a413e8e4c916df6d7250c330fb7846fbe381a535d826e6643bb8595c4184a7",
+      "file": "audio/cache/f6a413e8e4c916df6d7250c330fb7846fbe381a535d826e6643bb8595c4184a7.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q4-explanation",
+      "contentId": "production-restaurant-fresh-02-q4",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Please leave out the onions. The verb in this request means to remove something or leave it out.",
+      "cacheKey": "162d2278cd97dbe629562bf1d14c4684dc9f5ee4d167d098a5d689eafa246f08",
+      "file": "audio/cache/162d2278cd97dbe629562bf1d14c4684dc9f5ee4d167d098a5d689eafa246f08.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q5-question",
+      "contentId": "production-restaurant-fresh-02-q5",
+      "role": "question",
+      "language": "en-US",
+      "text": "You’ve finished eating and are ready to settle up. What would you ask for?",
+      "cacheKey": "2ff6997c4cd889ab35551dcf144dd299335d4658c820a520c62c345b273c0180",
+      "file": "audio/cache/2ff6997c4cd889ab35551dcf144dd299335d4658c820a520c62c345b273c0180.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q5-answer",
+      "contentId": "production-restaurant-fresh-02-q5",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "계산서 주세요.",
+      "cacheKey": "9a5b64d8db1b98d7938b78c41488b515401c61c52b01079030eb64142c20ffcd",
+      "file": "audio/cache/9a5b64d8db1b98d7938b78c41488b515401c61c52b01079030eb64142c20ffcd.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q5-explanation",
+      "contentId": "production-restaurant-fresh-02-q5",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "The bill, please. The first word means bill, and the ending turns it into a polite request.",
+      "cacheKey": "00aac9c752c5974583833bc8c245472052e11e9408701de30690ab2434d09522",
+      "file": "audio/cache/00aac9c752c5974583833bc8c245472052e11e9408701de30690ab2434d09522.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q6-question",
+      "contentId": "production-restaurant-fresh-02-q6",
+      "role": "question",
+      "language": "en-US",
+      "text": "You and your friend are paying for your own meals. How would you ask to handle the bill?",
+      "cacheKey": "fa3387cee6e8f64ca0076b7a51f267d0af327e0bed2dfedd7f1d687400011865",
+      "file": "audio/cache/fa3387cee6e8f64ca0076b7a51f267d0af327e0bed2dfedd7f1d687400011865.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q6-comment",
+      "contentId": "production-restaurant-fresh-02-q6",
+      "role": "comment",
+      "language": "en-US",
+      "text": "What do you think? Comment your answer!",
+      "cacheKey": "06907980bfef420ffd5fd752cb4b2dfb593bf7c3dfe3c18f58e475b76b2b3e29",
+      "file": "audio/cache/06907980bfef420ffd5fd752cb4b2dfb593bf7c3dfe3c18f58e475b76b2b3e29.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-restaurant-fresh-02-q6-follow",
+      "contentId": "production-restaurant-fresh-02-q6",
+      "role": "follow",
+      "language": "en-US",
+      "text": "Follow for more Korean!",
+      "cacheKey": "b74615011f68405c3b6b89258ba612b99feea34931e3f82d1544b981836fe18a",
+      "file": "audio/cache/b74615011f68405c3b6b89258ba612b99feea34931e3f82d1544b981836fe18a.wav",
+      "durationSeconds": null
+    }
+  ]
+}

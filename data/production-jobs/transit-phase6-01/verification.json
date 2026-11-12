@@ -1,0 +1,256 @@
+{
+  "jobId": "transit-phase6-01",
+  "output": "C:\\Users\\david\\Documents\\kor-vids\\out\\public-transit-02-production.mp4",
+  "videoSha256": "38cfcb9d7417ae3c71c00a1341693c7dbad42f31cf3118823f8cda9782e78b11",
+  "contentHash": "194914b5a3f37cae33226de035954d6cc6a4bab831c4b5e6eb5b96bc3546fdd0",
+  "reviewMode": "automated",
+  "voice": {
+    "provider": "google-cloud-tts",
+    "model": "chirp3-hd",
+    "voices": {
+      "en-US": "en-US-Chirp3-HD-Achird",
+      "ko-KR": "ko-KR-Chirp3-HD-Achird"
+    },
+    "outputFormat": "LINEAR16",
+    "sampleRateHertz": 24000,
+    "speakingRate": 1
+  },
+  "presentation": {
+    "compactSpacing": true,
+    "synchronizedCaptions": true,
+    "backgroundAudio": true,
+    "musicGain": 1.25,
+    "captionStyle": "phrases",
+    "bookendStyle": "display"
+  },
+  "timeline": {
+    "frames": 3603,
+    "durationSeconds": 120.1,
+    "questions": [
+      {
+        "id": "public-transit-02-q1",
+        "bonus": false,
+        "start": 102,
+        "countdownStart": 229,
+        "revealStart": 379,
+        "end": 677
+      },
+      {
+        "id": "public-transit-02-q2",
+        "bonus": false,
+        "start": 689,
+        "countdownStart": 809,
+        "revealStart": 959,
+        "end": 1233
+      },
+      {
+        "id": "public-transit-02-q3",
+        "bonus": false,
+        "start": 1245,
+        "countdownStart": 1394,
+        "revealStart": 1544,
+        "end": 1879
+      },
+      {
+        "id": "public-transit-02-q4",
+        "bonus": false,
+        "start": 1891,
+        "countdownStart": 2042,
+        "revealStart": 2192,
+        "end": 2504
+      },
+      {
+        "id": "public-transit-02-q5",
+        "bonus": false,
+        "start": 2516,
+        "countdownStart": 2657,
+        "revealStart": 2807,
+        "end": 3109
+      },
+      {
+        "id": "public-transit-02-q6",
+        "bonus": true,
+        "start": 3121,
+        "countdownStart": 3258,
+        "revealStart": 3408,
+        "end": 3591
+      }
+    ],
+    "commentPauseFrames": 45,
+    "followHoldFrames": 30,
+    "fadeFrames": 12
+  },
+  "verification": {
+    "metadata": {
+      "frames": 3603,
+      "duration": 120.1,
+      "width": 1080,
+      "height": 1920,
+      "fps": 30
+    },
+    "fullDecode": "PASS",
+    "rawMixedAudio": {
+      "integratedLUFS": -17.26,
+      "truePeakDbTP": -3.95,
+      "loudnessRangeLU": 19.2,
+      "raw": {
+        "input_i": "-17.26",
+        "input_tp": "-3.95",
+        "input_lra": "19.20",
+        "input_thresh": "-29.71",
+        "output_i": "-16.33",
+        "output_tp": "-2.00",
+        "output_lra": "13.70",
+        "output_thresh": "-28.27",
+        "normalization_type": "dynamic",
+        "target_offset": "0.33"
+      }
+    },
+    "finalMixedAudio": {
+      "integratedLUFS": -16.02,
+      "truePeakDbTP": -2,
+      "loudnessRangeLU": 13.7,
+      "raw": {
+        "input_i": "-16.02",
+        "input_tp": "-2.00",
+        "input_lra": "13.70",
+        "input_thresh": "-27.99",
+        "output_i": "-16.76",
+        "output_tp": "-2.00",
+        "output_lra": "8.70",
+        "output_thresh": "-28.20",
+        "normalization_type": "dynamic",
+        "target_offset": "0.76"
+      }
+    },
+    "zeroProviderCallsDuringRender": true
+  },
+  "bonusIsolation": "PASS: strict public bonus schema has no answer/reveal/explanation metadata; actual question audio required",
+  "audioPreparation": {
+    "cacheHits": 6,
+    "recoveredOriginals": 0,
+    "localPrepared": 0,
+    "newSynthesisRequests": 13,
+    "newSynthesisCharacters": 815
+  },
+  "alignment": {
+    "cacheHits": 6,
+    "newLocalAlignments": 13,
+    "providerCalls": 0
+  },
+  "cacheAfterPreparation": {
+    "verifiedClips": 19,
+    "verifiedAlignments": 19
+  },
+  "costs": {
+    "estimatedUSD": 0.024450002,
+    "capUSD": 0.05,
+    "ledger": "C:\\Users\\david\\Documents\\kor-vids\\data\\generation-budgets\\produce-transit-phase6-01.json",
+    "allocations": [
+      {
+        "stage": "tts",
+        "state": "settled",
+        "reservedUSD": 0.0489,
+        "chargedEstimateUSD": 0.024450002,
+        "requests": 13,
+        "usage": {
+          "cacheHits": 6,
+          "recoveredOriginals": 0,
+          "localPrepared": 0,
+          "newSynthesisRequests": 13,
+          "newSynthesisCharacters": 815,
+          "estimated": true
+        }
+      }
+    ],
+    "invoiceInspected": false
+  },
+  "viewing": {
+    "status": "PASS",
+    "framesActuallyInspected": 47,
+    "method": "Seven labelled contact sheets covering every question, countdown/reveal boundary, transition and bookend; also full-size Q4 Korean answer, bonus comment, and Q2 short-heading frames.",
+    "observations": [
+      "All six questions appear once and in order, with progress 1 / 6 through 6 / 6.",
+      "Hangul and romanization fit; sampled short/long headings and phrase captions show no clipping or choice overlap.",
+      "Q1–Q5 reveal B, C, A, B, A matching JSON. No highlights before reveal; Korean answer captions and English explanation captions occur after reveal.",
+      "Choice placement stays stable across reading, countdown and reveal within each question.",
+      "Transitions show no overlapping outgoing/incoming text; Q5 flows directly to the neutral bonus.",
+      "Actual Achird bonus question narration is present; bonus choices stay neutral through countdown and comment. No bonus answer/explanation caption appears.",
+      "Opening has meaningful first-frame text and no duplicate captions; the dedicated follow scene replaces the panel and ends with the existing hold/fade.",
+      "Same background remains continuous and covers the frame; sampled captions/CTAs avoid the character face and bottom edge."
+    ],
+    "phonePlaybackPerformed": false,
+    "listeningPerformed": false
+  },
+  "generatedAt": "2026-11-11T07:21:21.913Z",
+  "reusedVerifiedRender": true,
+  "resumeProviderCalls": 0,
+  "resumedAt": "2026-11-11T08:19:49.950Z",
+  "technicalInspection": {
+    "deterministicTiming": "PASS",
+    "captions": "PASS: exact transcript, aligned frame boundaries, no overlaps or pre-reveal disclosure",
+    "bonusIsolation": "PASS: private key absent; no answer roles/captions/highlights",
+    "baselinePreserved": true,
+    "mediaStreams": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1920,
+          "pix_fmt": "yuv420p",
+          "avg_frame_rate": "30/1",
+          "duration": "120.100000",
+          "nb_frames": "3603"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "channels": 2,
+          "avg_frame_rate": "0/0",
+          "duration": "120.100000",
+          "nb_frames": "5627"
+        }
+      ],
+      "format": {
+        "duration": "120.100000",
+        "size": "21758995"
+      }
+    },
+    "expectedFrames": 3603,
+    "expectedDurationSeconds": 120.1,
+    "durationToleranceSeconds": 0.034333333333333334,
+    "textFit": "PASS: complete Remotion render returned without FittedText overflow errors",
+    "narrationOverlap": false,
+    "renderProviderCalls": 0
+  },
+  "tests": {
+    "typecheck": "PASS",
+    "fullRunner": {
+      "passed": 154,
+      "failed": 0,
+      "skipped": 0,
+      "log": "out/phase6-tests.log"
+    },
+    "newFocusedTests": 16,
+    "paidFailureTests": 0
+  },
+  "reuse": {
+    "verifiedClips": 19,
+    "verifiedAlignments": 19,
+    "newProviderCalls": 0,
+    "newSynthesisRequests": 0,
+    "renderReused": true,
+    "log": "out/phase6-resume.log"
+  },
+  "notChecked": [
+    "actual phone readability",
+    "Korean pronunciation, tone and voice consistency by listening",
+    "subjective pacing, phrase/audio alignment quality and mix balance by playback"
+  ],
+  "unresolvedTechnicalBlockers": [],
+  "finalizedAt": "2026-11-11T08:21:04.503Z"
+}

@@ -1,0 +1,98 @@
+{
+  "key": "edc479448c1923fa820624a575630700ef36f72e242ef0edcf7c45ff8372039c",
+  "audioSha256": "ee32a123c78b4776af24956bb85c00970fca4cd5ceea360d1ff56e2e92ff581e",
+  "transcript": "You enjoy the dish, but want less heat. How would you ask?",
+  "language": "en-US",
+  "configuration": {
+    "version": "phrase-alignment-v1",
+    "engine": "stable-ts",
+    "engineVersion": "2.19.1",
+    "whisperVersion": "20250625",
+    "torchVersion": "2.8.0+cpu",
+    "model": "base",
+    "modelSha256": "ed3a0b6b1c0edf879ad9b11b1af5a0e6ab5db9205f891f668f8b0e6c6326e34e",
+    "device": "cpu",
+    "sampleRate": 16000,
+    "threads": 4,
+    "fp16": false,
+    "regroup": false,
+    "suppressSilence": true,
+    "vad": false,
+    "fastMode": false
+  },
+  "durationSeconds": 3.48,
+  "words": [
+    {
+      "text": " You",
+      "start": 0.4,
+      "end": 0.48,
+      "probability": 0.14953649044036865
+    },
+    {
+      "text": " enjoy",
+      "start": 0.48,
+      "end": 0.78,
+      "probability": 0.974108099937439
+    },
+    {
+      "text": " the",
+      "start": 0.78,
+      "end": 0.94,
+      "probability": 0.995745837688446
+    },
+    {
+      "text": " dish,",
+      "start": 0.94,
+      "end": 1.3,
+      "probability": 0.5470404289662838
+    },
+    {
+      "text": " but",
+      "start": 1.34,
+      "end": 1.34,
+      "probability": 0.5015836358070374
+    },
+    {
+      "text": " want",
+      "start": 1.34,
+      "end": 1.52,
+      "probability": 0.9690552353858948
+    },
+    {
+      "text": " less",
+      "start": 1.52,
+      "end": 1.74,
+      "probability": 0.9994833469390869
+    },
+    {
+      "text": " heat.",
+      "start": 1.74,
+      "end": 2.06,
+      "probability": 0.8854521811008453
+    },
+    {
+      "text": " How",
+      "start": 2.58,
+      "end": 2.68,
+      "probability": 0.8881585597991943
+    },
+    {
+      "text": " would",
+      "start": 2.68,
+      "end": 2.8,
+      "probability": 0.9922160506248474
+    },
+    {
+      "text": " you",
+      "start": 2.8,
+      "end": 2.94,
+      "probability": 0.9925203323364258
+    },
+    {
+      "text": " ask?",
+      "start": 2.94,
+      "end": 3.24,
+      "probability": 0.9598117172718048
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "transit-01",
+  "draftDirectory": "drafts/public-transit-02-candidate",
+  "expectedContentHash": "194914b5a3f37cae33226de035954d6cc6a4bab831c4b5e6eb5b96bc3546fdd0",
+  "questionId": "public-transit-02-q3",
+  "profiles": ["content/voice-profiles/a-baseline.json", "content/voice-profiles/b-puck.json", "content/voice-profiles/c-achird.json"],
+  "captionPhrases": "content/caption-phrases/transit-c-achird.json",
+  "presentation": {"compactSpacing": true, "synchronizedCaptions": true, "backgroundAudio": true, "musicGain": 1.25, "captionStyle": "phrases"}
+}

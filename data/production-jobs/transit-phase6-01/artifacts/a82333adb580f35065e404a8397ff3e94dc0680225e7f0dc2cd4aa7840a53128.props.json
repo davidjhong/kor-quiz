@@ -1,0 +1,1132 @@
+{
+  "quiz": {
+    "videoId": "public-transit-02",
+    "episodeTitle": "Can you say it in Korean?",
+    "openingSubtitle": "Easy to hard",
+    "endingMode": "comment-challenge",
+    "minimumDurationSeconds": 65,
+    "showRomanization": true,
+    "backgroundAssetId": "korean-transit-illustrated-dev-v1",
+    "questions": [
+      {
+        "id": "public-transit-02-q1",
+        "scenario": "At the subway entrance",
+        "difficulty": "easy",
+        "context": "You are at the station and need to enter the subway.",
+        "prompt": "Ask where the subway entrance is.",
+        "spokenPrompt": "You’re at the station. How would you ask where to enter the subway?",
+        "choices": [
+          {
+            "hangul": "화장실은 어디예요?",
+            "romanization": "hwajangsireun eodiyeyo?"
+          },
+          {
+            "hangul": "지하철 입구가 어디예요?",
+            "romanization": "jihacheol ipguga eodiyeyo?"
+          },
+          {
+            "hangul": "출구는 어디예요?",
+            "romanization": "chulguneun eodiyeyo?"
+          }
+        ],
+        "correctAnswerIndex": 1,
+        "explanation": "This asks where the subway entrance is. 어디예요? is a polite way to ask where something is.",
+        "reveal": {
+          "translation": "Where is the subway entrance?",
+          "teachingPoint": "지하철 입구 = subway entrance; 어디예요? = where is it?"
+        }
+      },
+      {
+        "id": "public-transit-02-q2",
+        "scenario": "Finding the platform",
+        "difficulty": "easy",
+        "context": "You need to find the platform before boarding.",
+        "prompt": "Ask where the platform is.",
+        "spokenPrompt": "You’re ready to board, but need directions. What would you ask?",
+        "choices": [
+          {
+            "hangul": "출구는 어디예요?",
+            "romanization": "chulguneun eodiyeyo?"
+          },
+          {
+            "hangul": "매표소는 어디예요?",
+            "romanization": "maepyosoneun eodiyeyo?"
+          },
+          {
+            "hangul": "승강장은 어디예요?",
+            "romanization": "seunggangjangeun eodiyeyo?"
+          }
+        ],
+        "correctAnswerIndex": 2,
+        "explanation": "This asks where the platform is. The topic marker 은 introduces the platform as the topic of the question.",
+        "reveal": {
+          "translation": "Where is the platform?",
+          "teachingPoint": "승강장 = platform; 은 어디예요? = where is it?"
+        }
+      },
+      {
+        "id": "public-transit-02-q3",
+        "scenario": "Buying a ticket",
+        "difficulty": "medium",
+        "context": "You need to buy a ticket at the station.",
+        "prompt": "Ask where you can buy a ticket.",
+        "spokenPrompt": "You need a ticket before traveling. What would you ask the station worker?",
+        "choices": [
+          {
+            "hangul": "표는 어디에서 사요?",
+            "romanization": "pyoneun eodieseo sayo?"
+          },
+          {
+            "hangul": "표는 어디에서 받아요?",
+            "romanization": "pyoneun eodieseo badayo?"
+          },
+          {
+            "hangul": "표는 어디에서 확인해요?",
+            "romanization": "pyoneun eodieseo hwaginhaeyo?"
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "This asks where to buy a ticket. 사요 means “buy,” while 받아요 means “receive.”",
+        "reveal": {
+          "translation": "Where can I buy a ticket?",
+          "teachingPoint": "표 = ticket; 어디에서 = where; 사요 = buy"
+        }
+      },
+      {
+        "id": "public-transit-02-q4",
+        "scenario": "Checking a train's destination",
+        "difficulty": "medium",
+        "context": "You need to confirm whether this train goes to Seoul Station.",
+        "prompt": "Ask if this train goes to Seoul Station.",
+        "spokenPrompt": "You’re not sure about the destination. How would you check where this train goes?",
+        "choices": [
+          {
+            "hangul": "이 열차는 공항에 가요?",
+            "romanization": "i yeolchaneun gonghange gayo?"
+          },
+          {
+            "hangul": "이 열차는 서울역에 가요?",
+            "romanization": "i yeolchaneun seoullyeoge gayo?"
+          },
+          {
+            "hangul": "이 열차는 부산에 가요?",
+            "romanization": "i yeolchaneun busane gayo?"
+          }
+        ],
+        "correctAnswerIndex": 1,
+        "explanation": "This asks whether the train goes to Seoul Station. 에 marks the destination in this sentence.",
+        "reveal": {
+          "translation": "Does this train go to Seoul Station?",
+          "teachingPoint": "서울역에 = to Seoul Station; 가요? = does it go?"
+        }
+      },
+      {
+        "id": "public-transit-02-q5",
+        "scenario": "Changing trains",
+        "difficulty": "hard",
+        "context": "Your route requires a train change, and you need the station name.",
+        "prompt": "Ask which station to transfer at.",
+        "spokenPrompt": "You need to change trains along the way. How would you ask which station to use?",
+        "choices": [
+          {
+            "hangul": "어느 역에서 갈아타요?",
+            "romanization": "eoneu yeogeseo garatayo?"
+          },
+          {
+            "hangul": "어느 역에서 내려요?",
+            "romanization": "eoneu yeogeseo naeryeoyo?"
+          },
+          {
+            "hangul": "어느 역에서 타요?",
+            "romanization": "eoneu yeogeseo tayo?"
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "This asks which station to transfer at. 갈아타요 means to change or transfer to another train.",
+        "reveal": {
+          "translation": "Which station do I transfer at?",
+          "teachingPoint": "어느 역에서 = at which station; 갈아타요 = transfer"
+        }
+      },
+      {
+        "id": "public-transit-02-q6",
+        "scenario": "Choosing a station exit",
+        "difficulty": "hard",
+        "context": "You are going to City Hall and want to know which exit to use.",
+        "prompt": "Ask which exit to use for City Hall.",
+        "spokenPrompt": "You’re heading to City Hall. How would you ask which exit to take?",
+        "choices": [
+          {
+            "hangul": "공원은 몇 번 출구예요?",
+            "romanization": "gongwoneun myeot beon chulguyeyo?"
+          },
+          {
+            "hangul": "은행은 몇 번 출구예요?",
+            "romanization": "eunhaengeun myeot beon chulguyeyo?"
+          },
+          {
+            "hangul": "시청은 몇 번 출구예요?",
+            "romanization": "sicheongeun myeot beon chulguyeyo?"
+          }
+        ]
+      }
+    ]
+  },
+  "narration": {
+    "version": 1,
+    "quizFingerprint": "7eb244e2b6977eade708f9f14424562f93a3fdcce338da554d50f6229405a855",
+    "profile": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Achird",
+        "ko-KR": "ko-KR-Chirp3-HD-Achird"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "processing": "loudnorm-I-16-TP-1.5-LRA-11-mono-24000-v1",
+    "clips": [
+      {
+        "id": "public-transit-02-hook",
+        "contentId": "public-transit-02",
+        "role": "hook",
+        "language": "en-US",
+        "text": "Can you say it in Korean?",
+        "cacheKey": "b03314a1a056b827307ce797080d4b15544d9502a7f510a176d151da28c98eb8",
+        "file": "audio/cache/b03314a1a056b827307ce797080d4b15544d9502a7f510a176d151da28c98eb8.wav",
+        "sha256": "f8ce1b50333e31bd9c5ff42ef5dd307a7530cb93ecef3d47ed748bfcf601c5e0",
+        "durationSeconds": 2.04,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "99b8db0cf0e76714f5c30068afd66ee5c37de4f641680491d53fafb1275aff56",
+        "peakDbFS": -1.5002633770788842
+      },
+      {
+        "id": "public-transit-02-q1-question",
+        "contentId": "public-transit-02-q1",
+        "role": "question",
+        "language": "en-US",
+        "text": "You’re at the station. How would you ask where to enter the subway?",
+        "cacheKey": "0e86d8df7aaf48e06d5b6408f50ecfa2830248a50045e65491253de008ab306c",
+        "file": "audio/cache/0e86d8df7aaf48e06d5b6408f50ecfa2830248a50045e65491253de008ab306c.wav",
+        "sha256": "71779e9a1942ef29bc6a0b3847e251532afbf7a9bc6d5bc2d3b05ffe1bbe28ef",
+        "durationSeconds": 3.52,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "9ca94cedecd811660e107ecbafe510bcd1a0160b660bd93741cec093d746eafc",
+        "peakDbFS": -1.4949092015971608
+      },
+      {
+        "id": "public-transit-02-q1-answer",
+        "contentId": "public-transit-02-q1",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "지하철 입구가 어디예요?",
+        "cacheKey": "ff2d3743114f80cdc5212a543e9fc23041434a0c88fed169e0899173837b9df3",
+        "file": "audio/cache/ff2d3743114f80cdc5212a543e9fc23041434a0c88fed169e0899173837b9df3.wav",
+        "sha256": "155c9d15154a158aca190931704358f88e532b40b0c6d611d893be0e322d9edb",
+        "durationSeconds": 2.2,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "ab4ff013c294e3094476c5c0f06b7743a27e4a4186bd0e915d5067835e923ee6",
+        "peakDbFS": -1.5635027509918857
+      },
+      {
+        "id": "public-transit-02-q1-explanation",
+        "contentId": "public-transit-02-q1",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "This asks where the subway entrance is. Use this polite question pattern when you need to locate a place.",
+        "cacheKey": "50396ecdd5d09ca6120f02fd609c34c7cb3ac9e0f523b2ee38103d43b7a0d3ec",
+        "file": "audio/cache/50396ecdd5d09ca6120f02fd609c34c7cb3ac9e0f523b2ee38103d43b7a0d3ec.wav",
+        "sha256": "700ee2816921ba6ab915858013039f1584a1250471a41edff783f158563ace21",
+        "durationSeconds": 6.2,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "7d559d1f2fb40602ff1cda1ef7d346a0f90b97878068cfeea912a5fbe2028eac",
+        "peakDbFS": -1.4955389333191844
+      },
+      {
+        "id": "public-transit-02-q2-question",
+        "contentId": "public-transit-02-q2",
+        "role": "question",
+        "language": "en-US",
+        "text": "You’re ready to board, but need directions. What would you ask?",
+        "cacheKey": "14ae967bc5c1550faf58426139d357c88652c671077aad4defb2b5530bbb9575",
+        "file": "audio/cache/14ae967bc5c1550faf58426139d357c88652c671077aad4defb2b5530bbb9575.wav",
+        "sha256": "981e7b28c4e62bac334dcb060ba3410869b29b0b6f161045f5b0193a065044f5",
+        "durationSeconds": 3.08,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "7f4c788e0a324bb9714c4c02a275a3784fd6e8a9250a0934dac6e8ab6e6a4338",
+        "peakDbFS": -1.4964836165152935
+      },
+      {
+        "id": "public-transit-02-q2-answer",
+        "contentId": "public-transit-02-q2",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "승강장은 어디예요?",
+        "cacheKey": "774c2ff6c361736b987bb8127d6d3c109f35ecde6cc45de36fdc23350e75cb0c",
+        "file": "audio/cache/774c2ff6c361736b987bb8127d6d3c109f35ecde6cc45de36fdc23350e75cb0c.wav",
+        "sha256": "11936a6627a77e73392e889ee53fa39f1de4e3c01dc296731d44ce344397177f",
+        "durationSeconds": 2,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "b81c1664dc022fb69a10193a7a56a381f08cc3d6e77580a872a35bbf749158a1",
+        "peakDbFS": -1.6118745043868534
+      },
+      {
+        "id": "public-transit-02-q2-explanation",
+        "contentId": "public-transit-02-q2",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "This asks where the platform is. The ending is a polite way to ask about the location of a place.",
+        "cacheKey": "b9c0d31b279e02f48bab3abf1607b45efbcec77432d28b3438c927cc89ca861a",
+        "file": "audio/cache/b9c0d31b279e02f48bab3abf1607b45efbcec77432d28b3438c927cc89ca861a.wav",
+        "sha256": "62a4a9e737a49f6547e82cab58eb50c91e4bfaaa1563428832d7bf118e51dff9",
+        "durationSeconds": 5.6,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "c40a84f518fa781cfd45f882fc0312c69bafcdd7f1accdde00add9efbdb7d6ad",
+        "peakDbFS": -1.5034144344825946
+      },
+      {
+        "id": "public-transit-02-q3-question",
+        "contentId": "public-transit-02-q3",
+        "role": "question",
+        "language": "en-US",
+        "text": "You need a ticket before traveling. What would you ask the station worker?",
+        "cacheKey": "d4be89e3a0bd26b17aef4a80c7a02e70208a81122f5a56a16603ef5d8436af8a",
+        "file": "audio/cache/d4be89e3a0bd26b17aef4a80c7a02e70208a81122f5a56a16603ef5d8436af8a.wav",
+        "sha256": "2553b7f8d4208b82a18d30e8284279a3b9a7442cb6f6d46cd7721e96846c88f4",
+        "durationSeconds": 4.24,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "2074889150c13050ecc2d616ff9a12c7679f82f9d61841cf02f87d653e9169d3",
+        "peakDbFS": -1.5018387628886019
+      },
+      {
+        "id": "public-transit-02-q3-answer",
+        "contentId": "public-transit-02-q3",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "표는 어디에서 사요?",
+        "cacheKey": "b2b779c9430701e127b6ae35e2b8d4d4ea93a898edfb25f31c420234028f5f03",
+        "file": "audio/cache/b2b779c9430701e127b6ae35e2b8d4d4ea93a898edfb25f31c420234028f5f03.wav",
+        "sha256": "8446aa982727ee5c42ebf6e5a136fb6829fb444da21cab842a35ead8342e490e",
+        "durationSeconds": 2.08,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "9256d5f64fd17c88d43f888dc1e5a9b963266868b89e87800cfce48bb51fa679",
+        "peakDbFS": -1.7330248579350973
+      },
+      {
+        "id": "public-transit-02-q3-explanation",
+        "contentId": "public-transit-02-q3",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "This asks where you can buy a ticket. The verb here means “buy,” so it’s useful when asking where to purchase something.",
+        "cacheKey": "2ccd5ee90c2ca567e3583f3dc0a67fb753b41d379b890760c8d2b565954f0412",
+        "file": "audio/cache/2ccd5ee90c2ca567e3583f3dc0a67fb753b41d379b890760c8d2b565954f0412.wav",
+        "sha256": "3196fa23cd9d8135198e748077f3d517d3312acdad046da48184690c12d8e5b5",
+        "durationSeconds": 7.52,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "28377751a7c0a0bcd1151eda611d636368bd18a1ed7e771cce14a0d80458b8af",
+        "peakDbFS": -1.4990032741261357
+      },
+      {
+        "id": "public-transit-02-q4-question",
+        "contentId": "public-transit-02-q4",
+        "role": "question",
+        "language": "en-US",
+        "text": "You’re not sure about the destination. How would you check where this train goes?",
+        "cacheKey": "96a6813671167b6775b859514d5108470c27f1f81fa6dde386ac7ffb504e5024",
+        "file": "audio/cache/96a6813671167b6775b859514d5108470c27f1f81fa6dde386ac7ffb504e5024.wav",
+        "sha256": "6ed192580dfd7f555bc2b107ec313225ebcd094304b27766730d1b3fcee15f36",
+        "durationSeconds": 4.32,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "97f0461645a2a60efb49334f73129fc9daad911cf99c86433615fcbd55e72e28",
+        "peakDbFS": -1.48829977352575
+      },
+      {
+        "id": "public-transit-02-q4-answer",
+        "contentId": "public-transit-02-q4",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "이 열차는 서울역에 가요?",
+        "cacheKey": "49dccb942a0340a48fb85eca7b238702a0229b47f74539253537f34cf8c40338",
+        "file": "audio/cache/49dccb942a0340a48fb85eca7b238702a0229b47f74539253537f34cf8c40338.wav",
+        "sha256": "3fe39bfc54406a050f48ba92c1638b705ee29385dffa532872cb38eedfcb326c",
+        "durationSeconds": 2.48,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "5edc5db0bd78b93e36e81464d63bdf596de8836a85bcb34ba6d7ae0bd6ca9d74",
+        "peakDbFS": -1.5008934971152932
+      },
+      {
+        "id": "public-transit-02-q4-explanation",
+        "contentId": "public-transit-02-q4",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "This asks whether the train goes to Seoul Station. The particle after a place name can mark the destination.",
+        "cacheKey": "cece8b7d829b2ee63df5cd3aedea9100cae4720f2b92fef189ec6d89bbfbfc60",
+        "file": "audio/cache/cece8b7d829b2ee63df5cd3aedea9100cae4720f2b92fef189ec6d89bbfbfc60.wav",
+        "sha256": "5a5936d3b6d6ab24cb095bc9f7609efab1e8b1c21b29eaa196c3ffdf65773f51",
+        "durationSeconds": 6.36,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "3ac6cd57b2ab0bae4a4aa2ce535e8dd384959a0cf979ca9a8f14bfb10ad2364a",
+        "peakDbFS": -1.4961687107004105
+      },
+      {
+        "id": "public-transit-02-q5-question",
+        "contentId": "public-transit-02-q5",
+        "role": "question",
+        "language": "en-US",
+        "text": "You need to change trains along the way. How would you ask which station to use?",
+        "cacheKey": "ed546c2d9cf861ed3718b7021d9123265c294e40d0fdc529510dcbd831b8335d",
+        "file": "audio/cache/ed546c2d9cf861ed3718b7021d9123265c294e40d0fdc529510dcbd831b8335d.wav",
+        "sha256": "6b74cc901cb01d7888f4b61a22297333073a64420f998023cc902a81c8839fb2",
+        "durationSeconds": 4,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "b8afa8e81ef3e8e0388c353dd7a6c37a35589d20729b2e3cc7d945ba151b2e8e",
+        "peakDbFS": -1.5119280038653928
+      },
+      {
+        "id": "public-transit-02-q5-answer",
+        "contentId": "public-transit-02-q5",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "어느 역에서 갈아타요?",
+        "cacheKey": "6ad9123553fbf831eccf0c1ed7301463376edb2a5905c23d49628dfc7898e23e",
+        "file": "audio/cache/6ad9123553fbf831eccf0c1ed7301463376edb2a5905c23d49628dfc7898e23e.wav",
+        "sha256": "efcb3128ffb2b7f6848d4de266faee8d861a512ee9f12140a6ef6ea1cda6b086",
+        "durationSeconds": 1.6,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "118c7a1e14605399acd4ffa5867786034fa96a494053d4863f54967175f7c1c4",
+        "peakDbFS": -1.5018387628886019
+      },
+      {
+        "id": "public-transit-02-q5-explanation",
+        "contentId": "public-transit-02-q5",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "This asks which station you should transfer at. The verb means to change from one train to another.",
+        "cacheKey": "4cd9a427533a3e94d920149c242cb270e844ea08e0934a4081d6d352cf9f097a",
+        "file": "audio/cache/4cd9a427533a3e94d920149c242cb270e844ea08e0934a4081d6d352cf9f097a.wav",
+        "sha256": "e0934d9bb90b5bf41a0c05f280d3fa4ecb9588ba157225b60f0ca3470bba9730",
+        "durationSeconds": 6.92,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "b7412cf5c7289009075484590c9d4886523b5f1c6e62926fb1f8604348b743f5",
+        "peakDbFS": -1.4315403237735513
+      },
+      {
+        "id": "public-transit-02-q6-question",
+        "contentId": "public-transit-02-q6",
+        "role": "question",
+        "language": "en-US",
+        "text": "You’re heading to City Hall. How would you ask which exit to take?",
+        "cacheKey": "70c11f31cb4a30671c753d7372a4767a3fba41975e0f948f4148e5fb79040802",
+        "file": "audio/cache/70c11f31cb4a30671c753d7372a4767a3fba41975e0f948f4148e5fb79040802.wav",
+        "sha256": "4e96fabbdce4c95dcf32d74fe8a58f5838ef6188811ff5fa026d4395de23dddc",
+        "durationSeconds": 3.84,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "6c0386d7c6f10623b0e68bf7c97ec789beffd467e70ac2a222bd52eee90ae931",
+        "peakDbFS": -1.4942795155277198
+      },
+      {
+        "id": "public-transit-02-q6-comment",
+        "contentId": "public-transit-02-q6",
+        "role": "comment",
+        "language": "en-US",
+        "text": "What do you think? Comment your answer!",
+        "cacheKey": "06907980bfef420ffd5fd752cb4b2dfb593bf7c3dfe3c18f58e475b76b2b3e29",
+        "file": "audio/cache/06907980bfef420ffd5fd752cb4b2dfb593bf7c3dfe3c18f58e475b76b2b3e29.wav",
+        "sha256": "621ff14a1a69ebbf9d1ac9a09ea2a1eb022b5d76f300258de3f05d83203de9b2",
+        "durationSeconds": 2.2,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "c6a5de9563f4869116cff2649b6bac91fe5575112dc18e70453ee9f07dd8b42d",
+        "peakDbFS": -1.5647722467027196
+      },
+      {
+        "id": "public-transit-02-q6-follow",
+        "contentId": "public-transit-02-q6",
+        "role": "follow",
+        "language": "en-US",
+        "text": "Follow for more Korean!",
+        "cacheKey": "b74615011f68405c3b6b89258ba612b99feea34931e3f82d1544b981836fe18a",
+        "file": "audio/cache/b74615011f68405c3b6b89258ba612b99feea34931e3f82d1544b981836fe18a.wav",
+        "sha256": "5daaed3b2bf5e19ae7fe9bd854c6a38c294413fc8b38c315cd2b09e4acd38338",
+        "durationSeconds": 1.2,
+        "sourceKind": "google-cloud-tts",
+        "sourceChecksum": "e5fe01dc4f10b80e27e524680645a10dc6cb13cb318a574a7321bfa03a4290b8",
+        "peakDbFS": -1.5141365883944995
+      }
+    ]
+  },
+  "presentation": {
+    "compactSpacing": true,
+    "synchronizedCaptions": true,
+    "backgroundAudio": true,
+    "musicGain": 1.25,
+    "captionStyle": "phrases",
+    "bookendStyle": "display"
+  },
+  "phraseCaptions": [
+    {
+      "clipId": "public-transit-02-hook",
+      "contentId": "public-transit-02",
+      "role": "hook",
+      "language": "en-US",
+      "text": "Can you say it",
+      "start": 18,
+      "end": 38,
+      "emphasis": false,
+      "alignmentKey": "730c2711c776bad33d84535b4182d90390bb7ff98d18430ffae0c92a57488773"
+    },
+    {
+      "clipId": "public-transit-02-hook",
+      "contentId": "public-transit-02",
+      "role": "hook",
+      "language": "en-US",
+      "text": "in Korean?",
+      "start": 38,
+      "end": 57,
+      "emphasis": true,
+      "alignmentKey": "730c2711c776bad33d84535b4182d90390bb7ff98d18430ffae0c92a57488773"
+    },
+    {
+      "clipId": "public-transit-02-q1-question",
+      "contentId": "public-transit-02-q1",
+      "role": "question",
+      "language": "en-US",
+      "text": "You’re at the station.",
+      "start": 111,
+      "end": 134,
+      "emphasis": false,
+      "alignmentKey": "f5f807267db50d6dce0d45277fda0520c944c3b58829791dadcf12e187bbf287"
+    },
+    {
+      "clipId": "public-transit-02-q1-question",
+      "contentId": "public-transit-02-q1",
+      "role": "question",
+      "language": "en-US",
+      "text": "How would you ask",
+      "start": 147,
+      "end": 168,
+      "emphasis": true,
+      "alignmentKey": "f5f807267db50d6dce0d45277fda0520c944c3b58829791dadcf12e187bbf287"
+    },
+    {
+      "clipId": "public-transit-02-q1-question",
+      "contentId": "public-transit-02-q1",
+      "role": "question",
+      "language": "en-US",
+      "text": "where to enter the subway?",
+      "start": 171,
+      "end": 212,
+      "emphasis": false,
+      "alignmentKey": "f5f807267db50d6dce0d45277fda0520c944c3b58829791dadcf12e187bbf287"
+    },
+    {
+      "clipId": "public-transit-02-q1-answer",
+      "contentId": "public-transit-02-q1",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "지하철 입구가 어디예요?",
+      "start": 408,
+      "end": 447,
+      "emphasis": false,
+      "alignmentKey": "afdc229b02122324c79107beadf6d1377cc55bd19847e96fa9ea7b1a14ed93c7"
+    },
+    {
+      "clipId": "public-transit-02-q1-explanation",
+      "contentId": "public-transit-02-q1",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This asks where",
+      "start": 464,
+      "end": 486,
+      "emphasis": false,
+      "alignmentKey": "56de0cd685da4ca8becf64c83259e015ec930b7765f2146c42ef099b87325ee0"
+    },
+    {
+      "clipId": "public-transit-02-q1-explanation",
+      "contentId": "public-transit-02-q1",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "the subway entrance is.",
+      "start": 486,
+      "end": 522,
+      "emphasis": true,
+      "alignmentKey": "56de0cd685da4ca8becf64c83259e015ec930b7765f2146c42ef099b87325ee0"
+    },
+    {
+      "clipId": "public-transit-02-q1-explanation",
+      "contentId": "public-transit-02-q1",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "Use this polite question",
+      "start": 550,
+      "end": 586,
+      "emphasis": false,
+      "alignmentKey": "56de0cd685da4ca8becf64c83259e015ec930b7765f2146c42ef099b87325ee0"
+    },
+    {
+      "clipId": "public-transit-02-q1-explanation",
+      "contentId": "public-transit-02-q1",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "pattern when you need",
+      "start": 586,
+      "end": 613,
+      "emphasis": false,
+      "alignmentKey": "56de0cd685da4ca8becf64c83259e015ec930b7765f2146c42ef099b87325ee0"
+    },
+    {
+      "clipId": "public-transit-02-q1-explanation",
+      "contentId": "public-transit-02-q1",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "to locate a place.",
+      "start": 613,
+      "end": 643,
+      "emphasis": true,
+      "alignmentKey": "56de0cd685da4ca8becf64c83259e015ec930b7765f2146c42ef099b87325ee0"
+    },
+    {
+      "clipId": "public-transit-02-q2-question",
+      "contentId": "public-transit-02-q2",
+      "role": "question",
+      "language": "en-US",
+      "text": "You’re ready to board,",
+      "start": 697,
+      "end": 722,
+      "emphasis": false,
+      "alignmentKey": "91e3fdd04cc15f827318fe441c85f8e72b5973d42a9e8d196a8336c19984f532"
+    },
+    {
+      "clipId": "public-transit-02-q2-question",
+      "contentId": "public-transit-02-q2",
+      "role": "question",
+      "language": "en-US",
+      "text": "but need directions.",
+      "start": 724,
+      "end": 748,
+      "emphasis": true,
+      "alignmentKey": "91e3fdd04cc15f827318fe441c85f8e72b5973d42a9e8d196a8336c19984f532"
+    },
+    {
+      "clipId": "public-transit-02-q2-question",
+      "contentId": "public-transit-02-q2",
+      "role": "question",
+      "language": "en-US",
+      "text": "What would you ask?",
+      "start": 761,
+      "end": 780,
+      "emphasis": false,
+      "alignmentKey": "91e3fdd04cc15f827318fe441c85f8e72b5973d42a9e8d196a8336c19984f532"
+    },
+    {
+      "clipId": "public-transit-02-q2-answer",
+      "contentId": "public-transit-02-q2",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "승강장은 어디예요?",
+      "start": 989,
+      "end": 1021,
+      "emphasis": false,
+      "alignmentKey": "6c0e267927c863e59d70ee42ea57d01c721bf956e7ae3346aa508c5d46b36934"
+    },
+    {
+      "clipId": "public-transit-02-q2-explanation",
+      "contentId": "public-transit-02-q2",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This asks where",
+      "start": 1039,
+      "end": 1059,
+      "emphasis": false,
+      "alignmentKey": "5139eb643eee6e2301da74d0a36195b08d59232b7e25a924fe644485c07979a9"
+    },
+    {
+      "clipId": "public-transit-02-q2-explanation",
+      "contentId": "public-transit-02-q2",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "the platform is.",
+      "start": 1059,
+      "end": 1085,
+      "emphasis": true,
+      "alignmentKey": "5139eb643eee6e2301da74d0a36195b08d59232b7e25a924fe644485c07979a9"
+    },
+    {
+      "clipId": "public-transit-02-q2-explanation",
+      "contentId": "public-transit-02-q2",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "The ending is",
+      "start": 1109,
+      "end": 1125,
+      "emphasis": false,
+      "alignmentKey": "5139eb643eee6e2301da74d0a36195b08d59232b7e25a924fe644485c07979a9"
+    },
+    {
+      "clipId": "public-transit-02-q2-explanation",
+      "contentId": "public-transit-02-q2",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "a polite way",
+      "start": 1125,
+      "end": 1145,
+      "emphasis": false,
+      "alignmentKey": "5139eb643eee6e2301da74d0a36195b08d59232b7e25a924fe644485c07979a9"
+    },
+    {
+      "clipId": "public-transit-02-q2-explanation",
+      "contentId": "public-transit-02-q2",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "to ask about",
+      "start": 1145,
+      "end": 1161,
+      "emphasis": true,
+      "alignmentKey": "5139eb643eee6e2301da74d0a36195b08d59232b7e25a924fe644485c07979a9"
+    },
+    {
+      "clipId": "public-transit-02-q2-explanation",
+      "contentId": "public-transit-02-q2",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "the location of a place.",
+      "start": 1161,
+      "end": 1197,
+      "emphasis": false,
+      "alignmentKey": "5139eb643eee6e2301da74d0a36195b08d59232b7e25a924fe644485c07979a9"
+    },
+    {
+      "clipId": "public-transit-02-q3-question",
+      "contentId": "public-transit-02-q3",
+      "role": "question",
+      "language": "en-US",
+      "text": "You need a ticket",
+      "start": 1253,
+      "end": 1271,
+      "emphasis": false,
+      "alignmentKey": "4e0740de308b05c4845c78e82e3665b77f7c6a931bfda2597a40f33c62c1471c"
+    },
+    {
+      "clipId": "public-transit-02-q3-question",
+      "contentId": "public-transit-02-q3",
+      "role": "question",
+      "language": "en-US",
+      "text": "before traveling.",
+      "start": 1271,
+      "end": 1295,
+      "emphasis": true,
+      "alignmentKey": "4e0740de308b05c4845c78e82e3665b77f7c6a931bfda2597a40f33c62c1471c"
+    },
+    {
+      "clipId": "public-transit-02-q3-question",
+      "contentId": "public-transit-02-q3",
+      "role": "question",
+      "language": "en-US",
+      "text": "What would you ask",
+      "start": 1325,
+      "end": 1346,
+      "emphasis": false,
+      "alignmentKey": "4e0740de308b05c4845c78e82e3665b77f7c6a931bfda2597a40f33c62c1471c"
+    },
+    {
+      "clipId": "public-transit-02-q3-question",
+      "contentId": "public-transit-02-q3",
+      "role": "question",
+      "language": "en-US",
+      "text": "the station worker?",
+      "start": 1349,
+      "end": 1376,
+      "emphasis": false,
+      "alignmentKey": "4e0740de308b05c4845c78e82e3665b77f7c6a931bfda2597a40f33c62c1471c"
+    },
+    {
+      "clipId": "public-transit-02-q3-answer",
+      "contentId": "public-transit-02-q3",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "표는 어디에서 사요?",
+      "start": 1572,
+      "end": 1607,
+      "emphasis": false,
+      "alignmentKey": "6e01529584e2b66396be83e12932b2ca163ed12583c4f3de1c2bef35c1c25a2f"
+    },
+    {
+      "clipId": "public-transit-02-q3-explanation",
+      "contentId": "public-transit-02-q3",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This asks where",
+      "start": 1628,
+      "end": 1655,
+      "emphasis": false,
+      "alignmentKey": "51619b187a6b4d7bbdefaa49f4457376827abf4744ad82aeaa02df6a3c412433"
+    },
+    {
+      "clipId": "public-transit-02-q3-explanation",
+      "contentId": "public-transit-02-q3",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "you can buy a ticket.",
+      "start": 1655,
+      "end": 1683,
+      "emphasis": true,
+      "alignmentKey": "51619b187a6b4d7bbdefaa49f4457376827abf4744ad82aeaa02df6a3c412433"
+    },
+    {
+      "clipId": "public-transit-02-q3-explanation",
+      "contentId": "public-transit-02-q3",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "The verb here means “buy,”",
+      "start": 1706,
+      "end": 1759,
+      "emphasis": false,
+      "alignmentKey": "51619b187a6b4d7bbdefaa49f4457376827abf4744ad82aeaa02df6a3c412433"
+    },
+    {
+      "clipId": "public-transit-02-q3-explanation",
+      "contentId": "public-transit-02-q3",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "so it’s useful",
+      "start": 1772,
+      "end": 1793,
+      "emphasis": false,
+      "alignmentKey": "51619b187a6b4d7bbdefaa49f4457376827abf4744ad82aeaa02df6a3c412433"
+    },
+    {
+      "clipId": "public-transit-02-q3-explanation",
+      "contentId": "public-transit-02-q3",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "when asking where",
+      "start": 1793,
+      "end": 1817,
+      "emphasis": true,
+      "alignmentKey": "51619b187a6b4d7bbdefaa49f4457376827abf4744ad82aeaa02df6a3c412433"
+    },
+    {
+      "clipId": "public-transit-02-q3-explanation",
+      "contentId": "public-transit-02-q3",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "to purchase something.",
+      "start": 1817,
+      "end": 1845,
+      "emphasis": false,
+      "alignmentKey": "51619b187a6b4d7bbdefaa49f4457376827abf4744ad82aeaa02df6a3c412433"
+    },
+    {
+      "clipId": "public-transit-02-q4-question",
+      "contentId": "public-transit-02-q4",
+      "role": "question",
+      "language": "en-US",
+      "text": "You’re not sure about",
+      "start": 1905,
+      "end": 1925,
+      "emphasis": false,
+      "alignmentKey": "746ce90b3e1df1f4270f1943e199fbaeca0010ab7bf4d19b49411171a269dfb0"
+    },
+    {
+      "clipId": "public-transit-02-q4-question",
+      "contentId": "public-transit-02-q4",
+      "role": "question",
+      "language": "en-US",
+      "text": "the destination.",
+      "start": 1925,
+      "end": 1951,
+      "emphasis": true,
+      "alignmentKey": "746ce90b3e1df1f4270f1943e199fbaeca0010ab7bf4d19b49411171a269dfb0"
+    },
+    {
+      "clipId": "public-transit-02-q4-question",
+      "contentId": "public-transit-02-q4",
+      "role": "question",
+      "language": "en-US",
+      "text": "How would you check",
+      "start": 1969,
+      "end": 1989,
+      "emphasis": false,
+      "alignmentKey": "746ce90b3e1df1f4270f1943e199fbaeca0010ab7bf4d19b49411171a269dfb0"
+    },
+    {
+      "clipId": "public-transit-02-q4-question",
+      "contentId": "public-transit-02-q4",
+      "role": "question",
+      "language": "en-US",
+      "text": "where this train goes?",
+      "start": 1989,
+      "end": 2020,
+      "emphasis": false,
+      "alignmentKey": "746ce90b3e1df1f4270f1943e199fbaeca0010ab7bf4d19b49411171a269dfb0"
+    },
+    {
+      "clipId": "public-transit-02-q4-answer",
+      "contentId": "public-transit-02-q4",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "이 열차는 서울역에 가요?",
+      "start": 2210,
+      "end": 2266,
+      "emphasis": false,
+      "alignmentKey": "d83676d7a937a4c0ac4f2f155d907f488f916e21b478bbef7b371d382e76c307"
+    },
+    {
+      "clipId": "public-transit-02-q4-explanation",
+      "contentId": "public-transit-02-q4",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This asks whether",
+      "start": 2287,
+      "end": 2313,
+      "emphasis": false,
+      "alignmentKey": "3d424b44c85a39b16f19c82e3b9a0156faa319922f6751d17334f480afd292f9"
+    },
+    {
+      "clipId": "public-transit-02-q4-explanation",
+      "contentId": "public-transit-02-q4",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "the train goes",
+      "start": 2313,
+      "end": 2333,
+      "emphasis": true,
+      "alignmentKey": "3d424b44c85a39b16f19c82e3b9a0156faa319922f6751d17334f480afd292f9"
+    },
+    {
+      "clipId": "public-transit-02-q4-explanation",
+      "contentId": "public-transit-02-q4",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "to Seoul Station.",
+      "start": 2333,
+      "end": 2364,
+      "emphasis": false,
+      "alignmentKey": "3d424b44c85a39b16f19c82e3b9a0156faa319922f6751d17334f480afd292f9"
+    },
+    {
+      "clipId": "public-transit-02-q4-explanation",
+      "contentId": "public-transit-02-q4",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "The particle after",
+      "start": 2385,
+      "end": 2411,
+      "emphasis": false,
+      "alignmentKey": "3d424b44c85a39b16f19c82e3b9a0156faa319922f6751d17334f480afd292f9"
+    },
+    {
+      "clipId": "public-transit-02-q4-explanation",
+      "contentId": "public-transit-02-q4",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "a place name can",
+      "start": 2411,
+      "end": 2439,
+      "emphasis": true,
+      "alignmentKey": "3d424b44c85a39b16f19c82e3b9a0156faa319922f6751d17334f480afd292f9"
+    },
+    {
+      "clipId": "public-transit-02-q4-explanation",
+      "contentId": "public-transit-02-q4",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "mark the destination.",
+      "start": 2439,
+      "end": 2471,
+      "emphasis": false,
+      "alignmentKey": "3d424b44c85a39b16f19c82e3b9a0156faa319922f6751d17334f480afd292f9"
+    },
+    {
+      "clipId": "public-transit-02-q5-question",
+      "contentId": "public-transit-02-q5",
+      "role": "question",
+      "language": "en-US",
+      "text": "You need to change",
+      "start": 2530,
+      "end": 2546,
+      "emphasis": false,
+      "alignmentKey": "938208232c08697c2ddbb7fbf1ef7aa5c41ad72bd528f672e2d86f840adcab96"
+    },
+    {
+      "clipId": "public-transit-02-q5-question",
+      "contentId": "public-transit-02-q5",
+      "role": "question",
+      "language": "en-US",
+      "text": "trains along the way.",
+      "start": 2546,
+      "end": 2578,
+      "emphasis": true,
+      "alignmentKey": "938208232c08697c2ddbb7fbf1ef7aa5c41ad72bd528f672e2d86f840adcab96"
+    },
+    {
+      "clipId": "public-transit-02-q5-question",
+      "contentId": "public-transit-02-q5",
+      "role": "question",
+      "language": "en-US",
+      "text": "How would you ask",
+      "start": 2590,
+      "end": 2606,
+      "emphasis": false,
+      "alignmentKey": "938208232c08697c2ddbb7fbf1ef7aa5c41ad72bd528f672e2d86f840adcab96"
+    },
+    {
+      "clipId": "public-transit-02-q5-question",
+      "contentId": "public-transit-02-q5",
+      "role": "question",
+      "language": "en-US",
+      "text": "which station to use?",
+      "start": 2606,
+      "end": 2639,
+      "emphasis": false,
+      "alignmentKey": "938208232c08697c2ddbb7fbf1ef7aa5c41ad72bd528f672e2d86f840adcab96"
+    },
+    {
+      "clipId": "public-transit-02-q5-answer",
+      "contentId": "public-transit-02-q5",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "어느 역에서 갈아타요?",
+      "start": 2824,
+      "end": 2857,
+      "emphasis": false,
+      "alignmentKey": "2ea377ce88619e60f9c3dba13160978c6ebc05a30c3a4bc64ba10e1ef0450f0a"
+    },
+    {
+      "clipId": "public-transit-02-q5-explanation",
+      "contentId": "public-transit-02-q5",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "This asks which station",
+      "start": 2875,
+      "end": 2918,
+      "emphasis": false,
+      "alignmentKey": "8a9719c1d3c6c30663564070a14458419db2c72df6587e3ef216ffc1afe12bca"
+    },
+    {
+      "clipId": "public-transit-02-q5-explanation",
+      "contentId": "public-transit-02-q5",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "you should transfer at.",
+      "start": 2918,
+      "end": 2960,
+      "emphasis": true,
+      "alignmentKey": "8a9719c1d3c6c30663564070a14458419db2c72df6587e3ef216ffc1afe12bca"
+    },
+    {
+      "clipId": "public-transit-02-q5-explanation",
+      "contentId": "public-transit-02-q5",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "The verb means",
+      "start": 2983,
+      "end": 3006,
+      "emphasis": false,
+      "alignmentKey": "8a9719c1d3c6c30663564070a14458419db2c72df6587e3ef216ffc1afe12bca"
+    },
+    {
+      "clipId": "public-transit-02-q5-explanation",
+      "contentId": "public-transit-02-q5",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "to change from one",
+      "start": 3006,
+      "end": 3046,
+      "emphasis": false,
+      "alignmentKey": "8a9719c1d3c6c30663564070a14458419db2c72df6587e3ef216ffc1afe12bca"
+    },
+    {
+      "clipId": "public-transit-02-q5-explanation",
+      "contentId": "public-transit-02-q5",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "train to another.",
+      "start": 3046,
+      "end": 3078,
+      "emphasis": true,
+      "alignmentKey": "8a9719c1d3c6c30663564070a14458419db2c72df6587e3ef216ffc1afe12bca"
+    },
+    {
+      "clipId": "public-transit-02-q6-question",
+      "contentId": "public-transit-02-q6",
+      "role": "question",
+      "language": "en-US",
+      "text": "You’re heading to City Hall.",
+      "start": 3130,
+      "end": 3168,
+      "emphasis": false,
+      "alignmentKey": "b700576da288061e1fb97f816557c976f79a517cded7824266c8619886b41dac"
+    },
+    {
+      "clipId": "public-transit-02-q6-question",
+      "contentId": "public-transit-02-q6",
+      "role": "question",
+      "language": "en-US",
+      "text": "How would you ask",
+      "start": 3185,
+      "end": 3205,
+      "emphasis": true,
+      "alignmentKey": "b700576da288061e1fb97f816557c976f79a517cded7824266c8619886b41dac"
+    },
+    {
+      "clipId": "public-transit-02-q6-question",
+      "contentId": "public-transit-02-q6",
+      "role": "question",
+      "language": "en-US",
+      "text": "which exit to take?",
+      "start": 3205,
+      "end": 3237,
+      "emphasis": false,
+      "alignmentKey": "b700576da288061e1fb97f816557c976f79a517cded7824266c8619886b41dac"
+    },
+    {
+      "clipId": "public-transit-02-q6-comment",
+      "contentId": "public-transit-02-q6",
+      "role": "comment",
+      "language": "en-US",
+      "text": "What do you think?",
+      "start": 3416,
+      "end": 3431,
+      "emphasis": false,
+      "alignmentKey": "5c50280c30a64910357484ceef8f1a6dbd7c919e2987593084e93d6aec16ca58"
+    },
+    {
+      "clipId": "public-transit-02-q6-comment",
+      "contentId": "public-transit-02-q6",
+      "role": "comment",
+      "language": "en-US",
+      "text": "Comment your answer!",
+      "start": 3454,
+      "end": 3477,
+      "emphasis": true,
+      "alignmentKey": "5c50280c30a64910357484ceef8f1a6dbd7c919e2987593084e93d6aec16ca58"
+    },
+    {
+      "clipId": "public-transit-02-q6-follow",
+      "contentId": "public-transit-02-q6",
+      "role": "follow",
+      "language": "en-US",
+      "text": "Follow for more Korean!",
+      "start": 3528,
+      "end": 3557,
+      "emphasis": false,
+      "alignmentKey": "33966cd15617f5d9ba55a29200730bac3b000b07bdd102ba2f5a31bec73c1fd5"
+    }
+  ],
+  "displayCues": {
+    "sayItStart": 26,
+    "inStart": 38,
+    "koreanStart": 41,
+    "commentPromptStart": 3416,
+    "commentInvitationStart": 3454,
+    "followMoreStart": 3539,
+    "followKoreanStart": 3544
+  },
+  "music": {
+    "file": "audio/music/subtle-bass-loop.wav",
+    "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+    "durationSeconds": 60.390375
+  }
+}

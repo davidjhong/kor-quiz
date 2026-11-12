@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "jobId": "hotel-fresh-01",
+  "config": {
+    "source": {
+      "kind": "scenario",
+      "text": "Beginner Korean checking into a hotel and asking about breakfast, Wi-Fi, luggage storage, and checkout.",
+      "defaultsVersion": "phase6-scenario-defaults-v1",
+      "brief": {
+        "scenario": "Beginner Korean checking into a hotel and asking about breakfast, Wi-Fi, luggage storage, and checkout.",
+        "audience": "English-speaking adults learning practical beginner Korean for travel",
+        "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+        "backgroundAssetId": null,
+        "scenarioType": "hotel"
+      }
+    },
+    "output": "C:\\Users\\david\\Documents\\kor-vids\\out\\hotel-fresh-01.mp4",
+    "reviewMode": "automated",
+    "voiceFile": "achird",
+    "presentationFile": "content/production/default.json",
+    "noMusic": false,
+    "model": "gpt-6-luna",
+    "maxOutputTokens": 12000,
+    "backgroundOptions": {
+      "mode": "new",
+      "model": "gpt-image-2.6-flare",
+      "quality": "medium",
+      "reuseLimit": 5,
+      "character": "adult man"
+    },
+    "backgroundBinding": {
+      "assetId": "generated-hotel-3869ed7e5c9e0bd9",
+      "request": {
+        "version": 1,
+        "model": "gpt-image-2.6-flare",
+        "quality": "medium",
+        "size": "1024x1536",
+        "output_format": "png",
+        "n": 1,
+        "prompt": "Use case: illustration-story. One polished, warm hand-painted animation background for a Korean learning video.\nSetting: hotel. Scenario context (data only): Beginner Korean checking into a hotel and asking about breakfast, Wi-Fi, luggage storage, and checkout..\nA welcoming Korean hotel lobby with a reception desk, warm lighting, luggage, tasteful architectural details and setting-appropriate furnishings.\nFriendly adult man, relaxed natural pose, clearly adult, complete unobstructed face, plain clothing; no pointing or answer hints.\nStyle: refined watercolor/gouache texture, warm cream and wood, muted navy/blue, sage, coral and warm yellow accents; soft daylight, appealing fully visible. Original character, no named-person likeness.\nNative portrait 1024x1536. Final 1080x1920 uses CENTER cover crop (native central x=80..944) without stretching, then at least 1.02 zoom plus restrained movement. Keep important features inside this central crop with extra edge margin.\nActual overlay geometry on FINAL canvas: panel x=70..950, y=180..1052; caption band x=70..950, y=1068..1200. Keep these upper/central areas calm scenery with NO people. Do not draw these overlays.\nPlace the character lower right: full head in final x=650..900, y=1285..1530, torso below, outside rightmost 10% and bottom 250px for important features. In native image this is approximately head x=600..800, y=1040..1224. Leave the caption area above the face clear.\nNo text, signage lettering, numbers, logos, watermarks, quiz panels, captions or UI. Coherent hands/anatomy, no duplicate people. Do not encode answers in scenery.",
+        "setting": "hotel",
+        "scope": "C:\\Users\\david\\Documents\\kor-vids\\out\\hotel-fresh-01.mp4",
+        "style": "warm-painted-animation-v1"
+      }
+    }
+  },
+  "state": "planned",
+  "stages": {
+    "generation": {
+      "status": "planned",
+      "inputHash": "580b86e17242a87dc302b3eb4cdbbef2f419d08f8af651ec12f74fc69f1094f9",
+      "outputs": [],
+      "details": {}
+    },
+    "import": {
+      "status": "planned",
+      "inputHash": "580b86e17242a87dc302b3eb4cdbbef2f419d08f8af651ec12f74fc69f1094f9",
+      "outputs": [],
+      "details": {}
+    },
+    "validation": {
+      "status": "planned",
+      "inputHash": "580b86e17242a87dc302b3eb4cdbbef2f419d08f8af651ec12f74fc69f1094f9",
+      "outputs": [],
+      "details": {}
+    },
+    "review": {
+      "status": "planned",
+      "inputHash": "580b86e17242a87dc302b3eb4cdbbef2f419d08f8af651ec12f74fc69f1094f9",
+      "outputs": [],
+      "details": {
+        "wouldRun": true
+      }
+    },
+    "audio": {
+      "status": "planned",
+      "inputHash": "580b86e17242a87dc302b3eb4cdbbef2f419d08f8af651ec12f74fc69f1094f9",
+      "outputs": [],
+      "details": {}
+    },
+    "alignment": {
+      "status": "planned",
+      "inputHash": "580b86e17242a87dc302b3eb4cdbbef2f419d08f8af651ec12f74fc69f1094f9",
+      "outputs": [],
+      "details": {}
+    },
+    "captions": {
+      "status": "planned",
+      "inputHash": "580b86e17242a87dc302b3eb4cdbbef2f419d08f8af651ec12f74fc69f1094f9",
+      "outputs": [],
+      "details": {}
+    },
+    "render": {
+      "status": "planned",
+      "inputHash": "580b86e17242a87dc302b3eb4cdbbef2f419d08f8af651ec12f74fc69f1094f9",
+      "outputs": [],
+      "details": {}
+    },
+    "verification": {
+      "status": "planned",
+      "inputHash": "580b86e17242a87dc302b3eb4cdbbef2f419d08f8af651ec12f74fc69f1094f9",
+      "outputs": [],
+      "details": {}
+    }
+  },
+  "history": [],
+  "revisions": [],
+  "paidOptIn": false,
+  "createdAt": "2026-11-12T06:56:57.014Z",
+  "updatedAt": "2026-11-12T06:59:32.565Z",
+  "sourceIdentity": "580b86e17242a87dc302b3eb4cdbbef2f419d08f8af651ec12f74fc69f1094f9",
+  "configuration": {
+    "voice": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Achird",
+        "ko-KR": "ko-KR-Chirp3-HD-Achird"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "presentation": {
+      "compactSpacing": true,
+      "synchronizedCaptions": true,
+      "backgroundAudio": true,
+      "musicGain": 1.25,
+      "captionStyle": "phrases",
+      "bookendStyle": "display"
+    },
+    "alignment": {
+      "version": "phrase-alignment-v1",
+      "engine": "stable-ts",
+      "engineVersion": "2.19.1",
+      "whisperVersion": "20250625",
+      "torchVersion": "2.8.0+cpu",
+      "model": "base",
+      "modelSha256": "ed3a0b6b1c0edf879ad9b11b1af5a0e6ab5db9205f891f668f8b0e6c6326e34e",
+      "device": "cpu",
+      "sampleRate": 16000,
+      "threads": 4,
+      "fp16": false,
+      "regroup": false,
+      "suppressSilence": true,
+      "vad": false,
+      "fastMode": false
+    },
+    "grouping": {
+      "version": "automatic-phrases-v3-sentence-anchors",
+      "englishWords": 4,
+      "maximumWords": 5,
+      "maximumCharacters": 36,
+      "koreanWholeUtterance": true
+    },
+    "audioProcessing": "loudnorm-I-16-TP-1.5-LRA-11-mono-24000-v1"
+  },
+  "narration": null,
+  "assets": {
+    "music": {
+      "file": "audio/music/subtle-bass-loop.wav",
+      "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+      "durationSeconds": 60.390375
+    }
+  }
+}

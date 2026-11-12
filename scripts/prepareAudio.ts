@@ -1,4 +1,4 @@
-import {access, mkdir, readFile, rename, writeFile} from 'node:fs/promises';
+import {access, mkdir, rename, writeFile} from 'node:fs/promises';
 import {dirname, join, resolve} from 'node:path';
 import {namedArguments} from './audioArguments.ts';
 import {loadQuizFile} from './input.ts';

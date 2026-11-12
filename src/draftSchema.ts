@@ -1,18 +1,21 @@
 import {z} from 'zod';
 import {CONTENT_LIMITS, quizInputSchema, quizQuestionSchema, parseQuizInput, type QuizInput} from './quizSchema.ts';
-import {BACKGROUND_ASSET_IDS, SCENARIO_TYPES} from './assets/backgrounds.ts';
+import {SCENARIO_TYPES} from './assets/backgrounds.ts';
+import {backgroundIdSchema} from './assets/backgroundSchema.ts';
 import {BONUS_CTA_TEXT, buildNarrationPlan, narrationScriptSchema} from './narration.ts';
 
 const text = (max: number) => z.string().min(1).max(max).refine((s) => s.trim().length > 0, 'Must not be blank');
 export const ENGLISH_NARRATION_PATTERN = /^[^가-힣]*$/u;
+export const briefLearningSchema = z.strictObject({context: text(1000), learningObjectives: z.array(text(160)).length(6)});
 export const briefSchema = z.strictObject({scenario: text(1000), audience: text(240), level: text(240),
-  backgroundAssetId: z.enum(BACKGROUND_ASSET_IDS).nullable(), scenarioType: z.enum(SCENARIO_TYPES).optional()});
+  backgroundAssetId: backgroundIdSchema.nullable(), scenarioType: z.enum(SCENARIO_TYPES).optional(),
+  context: briefLearningSchema.shape.context.optional(), learningObjectives: briefLearningSchema.shape.learningObjectives.optional()});
 export const bonusAnswerKeySchema = z.strictObject({questionId: quizQuestionSchema.shape.id,
   correctAnswerIndex: quizQuestionSchema.shape.correctAnswerIndex,
   explanation: quizQuestionSchema.shape.explanation, translation: text(CONTENT_LIMITS.translation), teachingPoint: text(CONTENT_LIMITS.teachingPoint)});
 const bonusQuestionSchema = quizQuestionSchema.omit({correctAnswerIndex: true, explanation: true, reveal: true, suggestedComment: true});
 export const draftQuizSchema = z.strictObject({...quizInputSchema.shape,
-  backgroundAssetId: z.enum(BACKGROUND_ASSET_IDS).nullable().optional(), questions: z.tuple([
+  backgroundAssetId: backgroundIdSchema.nullable().optional(), questions: z.tuple([
   quizQuestionSchema, quizQuestionSchema, quizQuestionSchema, quizQuestionSchema, quizQuestionSchema, bonusQuestionSchema,
 ])});
 export const draftSourceSchema = z.strictObject({quiz: draftQuizSchema, narration: narrationScriptSchema,

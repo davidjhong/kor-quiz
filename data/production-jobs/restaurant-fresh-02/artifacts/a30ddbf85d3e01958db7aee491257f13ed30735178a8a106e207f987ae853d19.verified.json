@@ -1,0 +1,52 @@
+{
+  "renderHash": "a30ddbf85d3e01958db7aee491257f13ed30735178a8a106e207f987ae853d19",
+  "sha256": "49f54d91f759a33d955f4e74dc3aa0215e4eccfa00f37a74c871a4ec7f36b2ad",
+  "temporary": "C:\\Users\\david\\Documents\\kor-vids\\out\\.production-render-3mR9ws\\normalized.mp4",
+  "verification": {
+    "metadata": {
+      "frames": 3582,
+      "duration": 119.4,
+      "width": 1080,
+      "height": 1920,
+      "fps": 30
+    },
+    "fullDecode": "PASS",
+    "rawMixedAudio": {
+      "integratedLUFS": -17.21,
+      "truePeakDbTP": -3.93,
+      "loudnessRangeLU": 19.1,
+      "raw": {
+        "input_i": "-17.21",
+        "input_tp": "-3.93",
+        "input_lra": "19.10",
+        "input_thresh": "-29.97",
+        "output_i": "-16.46",
+        "output_tp": "-2.00",
+        "output_lra": "14.30",
+        "output_thresh": "-28.76",
+        "normalization_type": "dynamic",
+        "target_offset": "0.46"
+      }
+    },
+    "finalMixedAudio": {
+      "integratedLUFS": -16.07,
+      "truePeakDbTP": -2,
+      "loudnessRangeLU": 14.2,
+      "raw": {
+        "input_i": "-16.07",
+        "input_tp": "-2.00",
+        "input_lra": "14.20",
+        "input_thresh": "-28.35",
+        "output_i": "-16.47",
+        "output_tp": "-2.00",
+        "output_lra": "10.20",
+        "output_thresh": "-28.43",
+        "normalization_type": "dynamic",
+        "target_offset": "0.47"
+      }
+    },
+    "zeroProviderCallsDuringRender": true
+  },
+  "propsFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\restaurant-fresh-02\\artifacts\\a30ddbf85d3e01958db7aee491257f13ed30735178a8a106e207f987ae853d19.props.json",
+  "audioFile": "C:\\Users\\david\\Documents\\kor-vids\\public\\audio\\production\\restaurant-fresh-02\\98fd94697f6e79238534606cd1d8f32634b7d420d9a6fdca0faa3a6bc90f163d.json"
+}

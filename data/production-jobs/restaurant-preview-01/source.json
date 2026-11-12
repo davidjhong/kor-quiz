@@ -1,0 +1,37 @@
+{
+  "file": "C:\\Users\\david\\Documents\\kor-vids\\content\\previews\\restaurant-menu.json",
+  "sha256": "2b1536e067199f87f2bf448e2512b7022f5f83f5f6a67ae10df0edf3fa4d2e72",
+  "input": {
+    "version": 1,
+    "scenario": "Beginner Korean ordering food in a restaurant.",
+    "scenarioType": "restaurant",
+    "question": {
+      "id": "restaurant-menu",
+      "scenario": "At a Korean restaurant",
+      "difficulty": "easy",
+      "context": "You want to see the available dishes before ordering.",
+      "prompt": "How would you ask for the menu?",
+      "choices": [
+        {
+          "hangul": "메뉴 좀 주세요.",
+          "romanization": "menyu jom juseyo."
+        },
+        {
+          "hangul": "물 좀 주세요.",
+          "romanization": "mul jom juseyo."
+        },
+        {
+          "hangul": "계산서 좀 주세요.",
+          "romanization": "gyesanseo jom juseyo."
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The menu, please. This is a polite way to ask for it.",
+      "reveal": {
+        "translation": "The menu, please.",
+        "teachingPoint": "메뉴 = menu; 좀 주세요 = please give me"
+      }
+    },
+    "explanationNarration": "The menu, please. This is a polite way to ask for it."
+  }
+}

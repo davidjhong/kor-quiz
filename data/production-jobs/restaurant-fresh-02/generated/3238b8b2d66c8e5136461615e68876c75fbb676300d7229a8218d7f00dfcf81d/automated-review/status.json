@@ -1,0 +1,103 @@
+{
+  "status": "accepted",
+  "contentHash": "98659d8c82e7ca00834d3212fbf3df5fe6462b34de7c7b980e6e1f3dc2eb6bc0",
+  "model": "gpt-6-luna",
+  "promptVersion": "phase5b-automated-review-v1",
+  "findings": {
+    "questions": [
+      {
+        "questionId": "production-restaurant-fresh-02-q1",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-restaurant-fresh-02-q2",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-restaurant-fresh-02-q3",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-restaurant-fresh-02-q4",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-restaurant-fresh-02-q5",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-restaurant-fresh-02-q6",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      }
+    ],
+    "resolutions": []
+  },
+  "estimatedCostUSD": 0.00165075,
+  "calls": 1,
+  "usage": [
+    {
+      "phase": "review",
+      "state": "complete",
+      "reservedUnits": 18800000,
+      "chargedUnits": 1650750,
+      "usage": {
+        "inputTokens": 2938,
+        "outputTokens": 2567,
+        "totalTokens": 5505,
+        "reasoningTokens": 2233,
+        "cachedInputTokens": 0
+      },
+      "requestId": "req_e4d3eac4485d4ecca5fe048a78a0d0c9",
+      "returnedModel": "gpt-6-luna",
+      "startedAt": "2026-11-12T07:25:13.673Z"
+    }
+  ]
+}

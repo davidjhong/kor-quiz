@@ -1,0 +1,16 @@
+{
+  "scenario": "Beginner Korean at a hotel",
+  "audience": "English-speaking adults learning practical beginner Korean for travel",
+  "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+  "backgroundAssetId": "korean-hotel-illustrated-v1",
+  "scenarioType": "hotel",
+  "context": "A traveler with a reservation checks in, makes simple requests, gets help with hotel facilities, and asks staff about a checkout-related need.",
+  "learningObjectives": [
+    "Tell hotel staff politely that you would like to check in.",
+    "Request one additional towel.",
+    "Ask for the hotel Wi-Fi password.",
+    "Ask where the elevator is.",
+    "Report a key card problem and ask staff to check it.",
+    "Ask permission to leave luggage after checking out."
+  ]
+}
