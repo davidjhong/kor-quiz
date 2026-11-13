@@ -184,7 +184,7 @@
       }
     }
   },
-  "state": "render",
+  "state": "failed",
   "stages": {
     "generation": {
       "status": "complete",
@@ -368,9 +368,10 @@
       ]
     },
     "render": {
-      "status": "running",
+      "status": "failed",
       "inputHash": "01cbbca555896b8cd6ec8cbcd369dad0e8f5bfca627cade604e8f332ee760bdc",
-      "outputs": []
+      "outputs": [],
+      "error": "Encoded final mix fails final-mix-concise-v1: I=-14.5 LUFS, TP=-1.39 dBTP; target -14 ±0.5 LU, ceiling -1.5 +0.1 dB meter tolerance. Previous output preserved."
     },
     "verification": {
       "status": "planned",
@@ -485,6 +486,11 @@
         "details": {}
       },
       "invalidatedAt": "2026-11-13T00:02:33.184Z"
+    },
+    {
+      "stage": "render",
+      "error": "Encoded final mix fails final-mix-concise-v1: I=-14.5 LUFS, TP=-1.39 dBTP; target -14 ±0.5 LU, ceiling -1.5 +0.1 dB meter tolerance. Previous output preserved.",
+      "at": "2026-11-13T00:06:07.528Z"
     }
   ],
   "revisions": [
@@ -496,7 +502,7 @@
   ],
   "paidOptIn": true,
   "createdAt": "2026-11-12T23:57:32.800Z",
-  "updatedAt": "2026-11-13T00:02:33.184Z",
+  "updatedAt": "2026-11-13T00:06:07.528Z",
   "sourceIdentity": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
   "workDirectory": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\generated\\7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
   "configuration": {
