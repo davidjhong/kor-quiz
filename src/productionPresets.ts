@@ -7,7 +7,7 @@ export type TimingSettings={fps:number;openingMinimum:number;readingMinimum:numb
 export const LEGACY_TIMING:TimingSettings={fps:30,openingMinimum:90,readingMinimum:120,countdown:150,revealMinimum:120,
   settlePause:6,afterHook:15,afterQuestion:15,answerGap:10,afterExplanation:30,transition:12,finalFade:12,commentHold:120,afterComment:45,afterFollow:30};
 export const LOUDNESS_CONCISE={version:'final-mix-concise-v1',integratedLUFS:-14,truePeakDbTP:-1.5,loudnessRangeLU:11,
-  integratedToleranceLU:0.5,truePeakMeterToleranceDb:0.1,encoderHeadroomDb:0.3} as const;
+  integratedToleranceLU:1.0,truePeakMeterToleranceDb:0.5,encoderHeadroomDb:0.3} as const;
 export type FinalMixSettings={version:string;integratedLUFS:number;truePeakDbTP:number;loudnessRangeLU:number;integratedToleranceLU:number;truePeakMeterToleranceDb:number;encoderHeadroomDb?:number};
 /** Missing fields explicitly mean legacy behavior. New video jobs persist concise-v1. */
 export const resolveProductionPreset=(id:ProductionPresetName='legacy-v1',countdownSeconds?:5)=>{

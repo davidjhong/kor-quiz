@@ -17,8 +17,8 @@
           "key": "65e1f2f0e192749fbf4e97b85c4ebe38de27466198ec6ec815cf47fb700fbf5a",
           "state": "received",
           "units": 507115000,
-          "sha256": "c7a8d2c236cc06cb1cf69376374c37fb0d79fdebf539598a6c4552696568421a",
-          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\image\\65e1f2f0e192749fbf4e97b85c4ebe38de27466198ec6ec815cf47fb700fbf5a\\original.png"
+          "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\image\\65e1f2f0e192749fbf4e97b85c4ebe38de27466198ec6ec815cf47fb700fbf5a\\original.png",
+          "sha256": "c7a8d2c236cc06cb1cf69376374c37fb0d79fdebf539598a6c4552696568421a"
         }
       ],
       "usage": {
@@ -47,8 +47,8 @@
       "chargedUnits": 3085375,
       "state": "settled",
       "childBudgetId": "p6-fe9dfad80d55827b8167-generation",
-      "requests": [],
       "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\generation-budgets\\p6-fe9dfad80d55827b8167-generation.json",
+      "requests": [],
       "usage": [
         {
           "state": "valid",
@@ -69,8 +69,8 @@
       "chargedUnits": 826750,
       "state": "settled",
       "childBudgetId": "p6-71cdfb20fd21e04678a1-review",
-      "requests": [],
       "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-review-budgets\\p6-71cdfb20fd21e04678a1-review.json",
+      "requests": [],
       "usage": [
         {
           "state": "complete",
@@ -206,11 +206,11 @@
         }
       ],
       "usage": {
-        "cacheHits": 3,
+        "cacheHits": 19,
         "recoveredOriginals": 0,
         "localPrepared": 0,
-        "newSynthesisRequests": 16,
-        "newSynthesisCharacters": 730,
+        "newSynthesisRequests": 0,
+        "newSynthesisCharacters": 0,
         "estimated": true
       }
     }

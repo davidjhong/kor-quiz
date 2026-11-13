@@ -144,7 +144,9 @@
         "total_tokens": 1595
       },
       "estimatedCostUSD": 0.036275,
-      "completedEpisodeIds": [],
+      "completedEpisodeIds": [
+        "production-video-20261112-bf4b8311"
+      ],
       "createdAt": "2026-11-12T23:57:54.000Z",
       "variety": {
         "composition": "quiz-safe-v1",
@@ -182,6 +184,13 @@
       "palette": "cream-navy",
       "motion": "legacy-display",
       "music": "subtle-bass"
+    },
+    {
+      "episodeId": "production-video-20261112-bf4b8311",
+      "background": "generated-convenience-store-65e1f2f0e192749f",
+      "palette": "sage-coral",
+      "motion": "slow-push",
+      "music": "warm-pluck-groove"
     }
   ]
 }

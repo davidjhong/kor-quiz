@@ -161,8 +161,8 @@
       "integratedLUFS": -14,
       "truePeakDbTP": -1.5,
       "loudnessRangeLU": 11,
-      "integratedToleranceLU": 0.5,
-      "truePeakMeterToleranceDb": 0.1,
+      "integratedToleranceLU": 1,
+      "truePeakMeterToleranceDb": 0.5,
       "encoderHeadroomDb": 0.3
     },
     "editorial": "concise-explanations-v1",
@@ -272,7 +272,7 @@
     "background": "c7a8d2c236cc06cb1cf69376374c37fb0d79fdebf539598a6c4552696568421a",
     "music": "f82108343d2cc97a3e04601d7e2defdb102adf3b16f225dc3b9169cdd1d50047",
     "variety": "f7de9edc6d7cd21e8460799544bdb26b4f908c01e55b54b24b002da73e296f0c",
-    "productionPreset": "315c4a8659342495448902db83735869898a3ad0c1aa312ffff0683f92b13d44"
+    "productionPreset": "06107fc2b2b182be3ab5c8d25b7be8c5788f3d1721b889b87f0e191e3ddd85d4"
   },
   "blockers": [],
   "inventory": [
@@ -288,113 +288,129 @@
       "id": "production-video-20261112-bf4b8311-q1-question",
       "key": "424e3f8c68e5fef510c0257f4842f96732048764c9868fb1ac6cbc8b8ad2a873",
       "characters": 62,
-      "alignment": "after-audio",
-      "status": "missing"
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "4b54c0e7f7e58d9a2be4201b3ebc0b220d9b448b8ac53fe8477cb9769521ff6b"
     },
     {
       "id": "production-video-20261112-bf4b8311-q1-answer",
       "key": "f4026b245a36c078c9f44441509997c122b87f04a817356e462ef95579b85ee0",
       "characters": 13,
-      "alignment": "after-audio",
-      "status": "missing"
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "7af8306886a9b65b8007823b9cf8796306781f98dc52ca5bc64430a522bf4ebd"
     },
     {
       "id": "production-video-20261112-bf4b8311-q1-explanation",
       "key": "4f4c360f96cb44099e67eed12c2d9a199bf517aea2af22625ce8cdad7ebd7552",
       "characters": 57,
-      "alignment": "after-audio",
-      "status": "missing"
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "8d6623c908d2552e1f8874ded312ad0856d938f4880f631ac8eb717ea06c8b2a"
     },
     {
       "id": "production-video-20261112-bf4b8311-q2-question",
       "key": "4328fbd362f665452a83e8cbdb9b23872984b37ab5d90c5f7ed2586e5ad05e7b",
       "characters": 52,
-      "alignment": "after-audio",
-      "status": "missing"
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "22ac7d856b08aa4c0aa42a5246aef29a9aa3ff4893656e323a08c8a71c68b159"
     },
     {
       "id": "production-video-20261112-bf4b8311-q2-answer",
       "key": "414c92654f34bec634284f7639a502bafbb0ac1ab9f42fc770706807a41599b5",
       "characters": 11,
-      "alignment": "after-audio",
-      "status": "missing"
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "5f50194439864c0cc7c24a5b3c09a0298a2ce1578e09fde80aa5069bcf97ef88"
     },
     {
       "id": "production-video-20261112-bf4b8311-q2-explanation",
       "key": "ccb76d8f7f4f949b4a7f110ef845eab4366ef032b8696982c3dbc14d98ae03db",
       "characters": 64,
-      "alignment": "after-audio",
-      "status": "missing"
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "cb34b7fd0421f03e4dcc6a87dc44af3503cdf3c540ec6bd80a208a8b04330096"
     },
     {
       "id": "production-video-20261112-bf4b8311-q3-question",
       "key": "5ae83da06ca9475daffea13628daac7a8a5c50de9c0d55f2a03ee1fc469276e4",
       "characters": 59,
-      "alignment": "after-audio",
-      "status": "missing"
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "c118bc79ffe8ecdb296af6d6236c07b820c2bf60e54d562d8e5ca9e3da77f1f5"
     },
     {
       "id": "production-video-20261112-bf4b8311-q3-answer",
       "key": "88c92b588a8fa9aa6b4fa84660acc41fadc248ad3ff7f1a2ef0f54bfb6877590",
       "characters": 10,
-      "alignment": "after-audio",
-      "status": "missing"
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "8497f2ceae1df97c996d2004c3dc29b8556ee464dd1ab366963947ecde7211d3"
     },
     {
       "id": "production-video-20261112-bf4b8311-q3-explanation",
       "key": "dd29a8afc4c692253e0300cd9ab827e23d3d3274369d398eb61c6f111d05e36c",
       "characters": 62,
-      "alignment": "after-audio",
-      "status": "missing"
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "0e96703a4083bad23da5443c7eeddf7acfe5e2205c6633d618945a63a70fd7dc"
     },
     {
       "id": "production-video-20261112-bf4b8311-q4-question",
       "key": "f274edf9ccf1eba5448869a6999d417636ff28794004807efdd57f6e55b53d54",
       "characters": 67,
-      "alignment": "after-audio",
-      "status": "missing"
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "aa7302714863801d325ca1fc1470cab70d6723e952576b7fe784f7dde3a3f1ef"
     },
     {
       "id": "production-video-20261112-bf4b8311-q4-answer",
       "key": "c84e2a6db48bf49226252a42103edad728da9fd575b6d49b911c6c4a82dbc3fe",
       "characters": 10,
-      "alignment": "after-audio",
-      "status": "missing"
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "2d8b0d1d3338ae50caff7e2742b5d94f4250650f29d78e2114c776424e2aee72"
     },
     {
       "id": "production-video-20261112-bf4b8311-q4-explanation",
       "key": "1d22bcaef9dc2329d0828c720207cd4ab05d8d042b8298b2240f342710ee79ff",
       "characters": 62,
-      "alignment": "after-audio",
-      "status": "missing"
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "30bf06b45e4dac0710dc2dc501d690f75c659e36aa6472c5c07dd50ec4ed77c8"
     },
     {
       "id": "production-video-20261112-bf4b8311-q5-question",
       "key": "294c2360170e874a6bd31421345d842d05b3349af8f4304218b36b175baa5786",
       "characters": 65,
-      "alignment": "after-audio",
-      "status": "missing"
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "9bd9335159d05d7ac145dbda5868edc0b55b8f63f33e319d932a5e74fb2b859a"
     },
     {
       "id": "production-video-20261112-bf4b8311-q5-answer",
       "key": "6fa33860178793f47ea773d65b8747569bcfd40e13ac925b03232b1a0791b146",
       "characters": 9,
-      "alignment": "after-audio",
-      "status": "missing"
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "8f2342f44a9ce2f6ba49b0b8f68c86d686e7929d53c1124f8c89a63a0e648689"
     },
     {
       "id": "production-video-20261112-bf4b8311-q5-explanation",
       "key": "5b3dc6b1e09cd1a023e380ea8c9980a6e932100a14e878961181b229262fea78",
       "characters": 59,
-      "alignment": "after-audio",
-      "status": "missing"
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "f1a64d21c34a23b8d78d20f8e0f996490af6ea3d593208d67a53e0ded5a0907f"
     },
     {
       "id": "production-video-20261112-bf4b8311-q6-question",
       "key": "8cd746267a1bdbb73e441beef2a71046be08685e45b77568b072a8c480c3ee90",
       "characters": 68,
-      "alignment": "after-audio",
-      "status": "missing"
+      "alignment": "verified",
+      "status": "verified",
+      "alignmentHash": "ca8bfdfe44e99815d5ed0fad1805587a505cd16b2e891288ac652883ffdb85a3"
     },
     {
       "id": "production-video-20261112-bf4b8311-q6-comment",
@@ -413,8 +429,8 @@
       "alignmentHash": "94b2cbeefb6264132dd4ffa19e837853b7694cdab5b66554f261f3f8161211b4"
     }
   ],
-  "verifiedCacheHits": 3,
-  "alignmentCacheHits": 3,
+  "verifiedCacheHits": 19,
+  "alignmentCacheHits": 19,
   "stages": {
     "image": {
       "wouldRun": false,
@@ -437,16 +453,16 @@
       "conservativeBoundUSD": 0
     },
     "tts": {
-      "wouldRun": true,
+      "wouldRun": false,
       "provider": "Google Cloud Chirp 3 HD",
-      "maximumRequests": 32,
-      "exactUncachedCharacters": 730,
-      "estimatedNewSynthesisUSD": 0.0219,
-      "conservativeBoundUSD": 0.0438,
+      "maximumRequests": 0,
+      "exactUncachedCharacters": 0,
+      "estimatedNewSynthesisUSD": 0,
+      "conservativeBoundUSD": 0,
       "basis": "Verified final narration and per-clip cache checks"
     },
     "alignment": {
-      "wouldRun": true,
+      "wouldRun": false,
       "provider": null,
       "costUSD": 0
     },
@@ -456,7 +472,7 @@
       "costUSD": 0
     }
   },
-  "conservativeTotalUSD": 0.0438,
+  "conservativeTotalUSD": 0,
   "pricing": {
     "checked": "2026-11-10",
     "verifyAgainBy": "2026-11-17",

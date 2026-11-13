@@ -1,0 +1,486 @@
+{
+  "variety": {
+    "version": "variety-v2",
+    "seed": "store-release-test-01",
+    "requested": {
+      "palette": "auto",
+      "motion": "auto",
+      "music": "warm-pluck-groove",
+      "ambience": "soft-room-tone",
+      "ambienceGain": 1,
+      "seed": "store-release-test-01"
+    },
+    "palette": {
+      "candidates": [
+        "blush-plum",
+        "cream-navy",
+        "midnight-gold",
+        "sage-coral"
+      ],
+      "excluded": [
+        "cream-navy"
+      ],
+      "selected": "sage-coral",
+      "historyHash": "4037aa4d0474b1c1d7f0885f39ce7874d5b24d737840eee7927216d0669a8a50",
+      "recentChoices": [
+        "cream-navy",
+        "cream-navy",
+        "cream-navy"
+      ],
+      "reason": "seeded after recent exclusion"
+    },
+    "motion": {
+      "candidates": [
+        "slow-pan-left",
+        "slow-pan-right",
+        "slow-pull",
+        "slow-push"
+      ],
+      "excluded": [],
+      "selected": "slow-push",
+      "historyHash": "0f739d4b3b1e45694201d41c1d000c324426444dd7566c6a140176dd6d0ed93c",
+      "recentChoices": [],
+      "reason": "seeded after recent exclusion"
+    },
+    "music": {
+      "candidates": [
+        "airy-pad-drift",
+        "soft-lofi-keys",
+        "subtle-bass",
+        "warm-pluck-groove"
+      ],
+      "excluded": [
+        "subtle-bass"
+      ],
+      "selected": "warm-pluck-groove",
+      "historyHash": "f3a0cb382114a6c8d81fb21d3abb13fad429bde0c2d7098031a727b6d8c7215f",
+      "recentChoices": [
+        "subtle-bass",
+        "subtle-bass",
+        "subtle-bass"
+      ],
+      "reason": "explicit"
+    },
+    "audio": {
+      "music": {
+        "file": "audio/music/warm-pluck-groove-b992ec53fe43.wav",
+        "sha256": "f82108343d2cc97a3e04601d7e2defdb102adf3b16f225dc3b9169cdd1d50047",
+        "durationSeconds": 50,
+        "mixTrimDb": -3,
+        "mixVersion": "local-bed-trim-v1"
+      },
+      "ambience": {
+        "asset": {
+          "file": "audio/music/soft-room-tone-99c949555e65.wav",
+          "sha256": "c2960daef46488a7e8e1ae078238b39dcd03172185e56e2376797c25020e6957",
+          "durationSeconds": 48,
+          "mixTrimDb": -7,
+          "mixVersion": "local-bed-trim-v1"
+        },
+        "gain": 1,
+        "mixVersion": "ambience-mix-v1"
+      }
+    },
+    "background": {
+      "candidates": [],
+      "excluded": [],
+      "selected": "generated-convenience-store-65e1f2f0e192749f",
+      "historyHash": "0b017b13c523c613782f61984bc26c403e22c5aad5c9574a547f50eda2aad6cd",
+      "recentChoices": [
+        "korean-transit-illustrated-dev-v1",
+        "korean-hotel-illustrated-v1",
+        "generated-restaurant-d5fea9be8c6e28a8"
+      ],
+      "reason": "explicit new image once",
+      "action": "generate",
+      "eligibleCount": 0,
+      "target": 3
+    },
+    "checksums": {
+      "palette": "7c89bdf3f7219d5210999b0005269d22a07131d5d74e5b6f5df8299c15ba7ea2",
+      "motion": "00c32e82cfd19054f7a6b12f8f95a67fc71db41708110361b01b72997bad686a",
+      "music": "f82108343d2cc97a3e04601d7e2defdb102adf3b16f225dc3b9169cdd1d50047",
+      "background": "c7a8d2c236cc06cb1cf69376374c37fb0d79fdebf539598a6c4552696568421a",
+      "request": "65e1f2f0e192749fbf4e97b85c4ebe38de27466198ec6ec815cf47fb700fbf5a",
+      "mix": "4c7fef049a2ff228ed51c495ed7822b58d0fc5434fb33232add29486f30b4f79"
+    },
+    "visual": {
+      "version": "visual-variety-v2",
+      "palette": "sage-coral",
+      "motion": "slow-push",
+      "width": 1024,
+      "height": 1536,
+      "motionConfig": {
+        "version": "motion-v2",
+        "zoomTravel": 0.05,
+        "panTravel": 26,
+        "panScale": 1.025,
+        "topInset": 8,
+        "declaredRegion": {
+          "left": 650,
+          "right": 930,
+          "top": 1210,
+          "bottom": 1580
+        },
+        "regionSource": "declared-generic-features-not-face-detection"
+      }
+    }
+  },
+  "jobId": "video-20261112-bf4b8311",
+  "output": "C:\\Users\\david\\Documents\\kor-vids\\out\\video-20261112-bf4b8311.mp4",
+  "videoSha256": "7e86ca8d3d932175588e34447afd303cb8e4b3dbf1f6eee92a162f85cbf51a78",
+  "contentHash": "12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4",
+  "reviewMode": "automated",
+  "voice": {
+    "provider": "google-cloud-tts",
+    "model": "chirp3-hd",
+    "voices": {
+      "en-US": "en-US-Chirp3-HD-Kore",
+      "ko-KR": "ko-KR-Chirp3-HD-Kore"
+    },
+    "outputFormat": "LINEAR16",
+    "sampleRateHertz": 24000,
+    "speakingRate": 1
+  },
+  "presentation": {
+    "compactSpacing": true,
+    "synchronizedCaptions": true,
+    "backgroundAudio": true,
+    "musicGain": 1.25,
+    "captionStyle": "phrases",
+    "bookendStyle": "display"
+  },
+  "productionPreset": {
+    "id": "concise-v2",
+    "timing": {
+      "fps": 30,
+      "openingMinimum": 90,
+      "readingMinimum": 90,
+      "countdown": 90,
+      "revealMinimum": 0,
+      "settlePause": 6,
+      "afterHook": 9,
+      "afterQuestion": 9,
+      "answerGap": 9,
+      "afterExplanation": 15,
+      "transition": 10,
+      "finalFade": 12,
+      "commentHold": 120,
+      "afterComment": 45,
+      "afterFollow": 30,
+      "countdownHard": 120
+    },
+    "music": {
+      "idle": 0.6356418950802395,
+      "thinking": 0.4237612633868263,
+      "speech": 0.2825075089245509
+    },
+    "mixVersion": "source-music-plus3-v1",
+    "relativeMusicDb": 3,
+    "finalMix": {
+      "version": "final-mix-concise-v1",
+      "integratedLUFS": -14,
+      "truePeakDbTP": -1.5,
+      "loudnessRangeLU": 11,
+      "integratedToleranceLU": 1,
+      "truePeakMeterToleranceDb": 0.5,
+      "encoderHeadroomDb": 0.3
+    },
+    "editorial": "concise-explanations-v1",
+    "advisoryDurationSeconds": [
+      75,
+      85
+    ],
+    "minimumDurationSeconds": 65
+  },
+  "timingBreakdown": {
+    "frames": {
+      "hookSpeech": 60,
+      "hookHold": 30,
+      "questionSpeech": 764,
+      "readingOnly": 90,
+      "countdown": 600,
+      "answerSpeech": 217,
+      "explanationSpeech": 648,
+      "transitions": 60,
+      "revealGapsAndHolds": 150,
+      "ctaSpeech": 110,
+      "ctaPauseAndHold": 81,
+      "fade": 12
+    },
+    "seconds": {
+      "hookSpeech": 2,
+      "hookHold": 1,
+      "questionSpeech": 25.466666666666665,
+      "readingOnly": 3,
+      "countdown": 20,
+      "answerSpeech": 7.233333333333333,
+      "explanationSpeech": 21.6,
+      "transitions": 2,
+      "revealGapsAndHolds": 5,
+      "ctaSpeech": 3.6666666666666665,
+      "ctaPauseAndHold": 2.7,
+      "fade": 0.4
+    },
+    "totalFrames": 2822,
+    "totalSeconds": 94.06666666666666,
+    "minimumSeconds": 65,
+    "minimumConflict": false,
+    "advisory": [
+      75,
+      85
+    ],
+    "advisoryConflict": true
+  },
+  "timeline": {
+    "frames": 2822,
+    "durationSeconds": 94.06666666666666,
+    "questions": [
+      {
+        "id": "production-video-20261112-bf4b8311-q1",
+        "bonus": false,
+        "start": 100,
+        "countdownStart": 223,
+        "revealStart": 313,
+        "end": 501
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q2",
+        "bonus": false,
+        "start": 511,
+        "countdownStart": 643,
+        "revealStart": 733,
+        "end": 939
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q3",
+        "bonus": false,
+        "start": 949,
+        "countdownStart": 1098,
+        "revealStart": 1188,
+        "end": 1406
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q4",
+        "bonus": false,
+        "start": 1416,
+        "countdownStart": 1567,
+        "revealStart": 1657,
+        "end": 1856
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q5",
+        "bonus": false,
+        "start": 1866,
+        "countdownStart": 2015,
+        "revealStart": 2135,
+        "end": 2339
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q6",
+        "bonus": true,
+        "start": 2349,
+        "countdownStart": 2499,
+        "revealStart": 2619,
+        "end": 2810
+      }
+    ],
+    "commentPauseFrames": 45,
+    "followHoldFrames": 30,
+    "fadeFrames": 12
+  },
+  "verification": {
+    "metadata": {
+      "frames": 2822,
+      "duration": 94.066667,
+      "width": 1080,
+      "height": 1920,
+      "fps": 30
+    },
+    "fullDecode": "PASS",
+    "rawMixedAudio": {
+      "integratedLUFS": -17.79,
+      "truePeakDbTP": -3.43,
+      "loudnessRangeLU": 11.1,
+      "raw": {
+        "input_i": "-17.79",
+        "input_tp": "-3.43",
+        "input_lra": "11.10",
+        "input_thresh": "-29.32",
+        "output_i": "-14.88",
+        "output_tp": "-1.80",
+        "output_lra": "7.10",
+        "output_thresh": "-25.97",
+        "normalization_type": "dynamic",
+        "target_offset": "0.88"
+      }
+    },
+    "finalMixedAudio": {
+      "integratedLUFS": -14.5,
+      "truePeakDbTP": -1.39,
+      "loudnessRangeLU": 7,
+      "raw": {
+        "input_i": "-14.50",
+        "input_tp": "-1.39",
+        "input_lra": "7.00",
+        "input_thresh": "-25.53",
+        "output_i": "-14.50",
+        "output_tp": "-1.50",
+        "output_lra": "6.40",
+        "output_thresh": "-25.44",
+        "normalization_type": "dynamic",
+        "target_offset": "0.50"
+      }
+    },
+    "finalMixSettings": {
+      "version": "final-mix-concise-v1",
+      "integratedLUFS": -14,
+      "truePeakDbTP": -1.5,
+      "loudnessRangeLU": 11,
+      "integratedToleranceLU": 1,
+      "truePeakMeterToleranceDb": 0.5,
+      "encoderHeadroomDb": 0.3
+    },
+    "finalMixProcessing": {
+      "calibrationGainDb": 0,
+      "initialEncodedMeasurement": {
+        "integratedLUFS": -14.5,
+        "truePeakDbTP": -1.39,
+        "loudnessRangeLU": 7,
+        "raw": {
+          "input_i": "-14.50",
+          "input_tp": "-1.39",
+          "input_lra": "7.00",
+          "input_thresh": "-25.53",
+          "output_i": "-14.50",
+          "output_tp": "-1.50",
+          "output_lra": "6.40",
+          "output_thresh": "-25.44",
+          "normalization_type": "dynamic",
+          "target_offset": "0.50"
+        }
+      }
+    },
+    "zeroProviderCallsDuringRender": true
+  },
+  "bonusIsolation": "PASS: strict public bonus schema has no answer/reveal/explanation metadata; actual question audio required",
+  "audioPreparation": {
+    "cacheHits": 19,
+    "recoveredOriginals": 0,
+    "localPrepared": 0,
+    "newSynthesisRequests": 0,
+    "newSynthesisCharacters": 0
+  },
+  "alignment": {
+    "cacheHits": 19,
+    "newLocalAlignments": 0,
+    "providerCalls": 0,
+    "phraseAnchoredArticles": [],
+    "unlocatedWords": [
+      {
+        "clipId": "production-video-20261112-bf4b8311-q5-question",
+        "text": "how",
+        "boundarySeconds": 1.86,
+        "individualTimingMeasured": false
+      }
+    ]
+  },
+  "cacheAfterPreparation": {
+    "verifiedClips": 19,
+    "verifiedAlignments": 19
+  },
+  "costs": {
+    "estimatedUSD": 0.062087128,
+    "capUSD": 0.75,
+    "ledger": "C:\\Users\\david\\Documents\\kor-vids\\data\\generation-budgets\\produce-video-20261112-bf4b8311.json",
+    "allocations": [
+      {
+        "stage": "image",
+        "state": "settled",
+        "reservedUSD": 0.507115,
+        "chargedEstimateUSD": 0.036275,
+        "requests": 1,
+        "usage": {
+          "providerRequests": 1,
+          "usage": {
+            "input_tokens": 463,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 463
+            },
+            "output_tokens": 1132,
+            "output_tokens_details": {
+              "image_tokens": 1132,
+              "text_tokens": 0
+            },
+            "total_tokens": 1595
+          },
+          "costKnown": true,
+          "receipt": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\image\\65e1f2f0e192749fbf4e97b85c4ebe38de27466198ec6ec815cf47fb700fbf5a\\receipt.json"
+        }
+      },
+      {
+        "stage": "generation",
+        "state": "settled",
+        "reservedUSD": 0.0376,
+        "chargedEstimateUSD": 0.003085375,
+        "requests": 1,
+        "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\generation-budgets\\p6-fe9dfad80d55827b8167-generation.json",
+        "usage": [
+          {
+            "state": "valid",
+            "usage": {
+              "inputTokens": 2475,
+              "outputTokens": 5552,
+              "totalTokens": 8027,
+              "reasoningTokens": 3827,
+              "cachedInputTokens": 0
+            }
+          }
+        ]
+      },
+      {
+        "stage": "review",
+        "state": "settled",
+        "reservedUSD": 0.0564,
+        "chargedEstimateUSD": 0.00082675,
+        "requests": 1,
+        "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-review-budgets\\p6-71cdfb20fd21e04678a1-review.json",
+        "usage": [
+          {
+            "state": "complete",
+            "usage": {
+              "inputTokens": 3182,
+              "outputTokens": 858,
+              "totalTokens": 4040,
+              "reasoningTokens": 494,
+              "cachedInputTokens": 0
+            }
+          }
+        ]
+      },
+      {
+        "stage": "tts",
+        "state": "settled",
+        "reservedUSD": 0.0438,
+        "chargedEstimateUSD": 0.021900003,
+        "requests": 16,
+        "usage": {
+          "cacheHits": 19,
+          "recoveredOriginals": 0,
+          "localPrepared": 0,
+          "newSynthesisRequests": 0,
+          "newSynthesisCharacters": 0,
+          "estimated": true
+        }
+      }
+    ],
+    "invoiceInspected": false
+  },
+  "viewing": {
+    "visualInspection": "not yet performed",
+    "listeningPerformed": false,
+    "phonePlaybackPerformed": false
+  },
+  "generatedAt": "2026-11-13T00:21:46.130Z"
+}

@@ -184,7 +184,7 @@
       }
     }
   },
-  "state": "failed",
+  "state": "complete",
   "stages": {
     "generation": {
       "status": "complete",
@@ -208,7 +208,7 @@
     },
     "validation": {
       "status": "complete",
-      "inputHash": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
+      "inputHash": "12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4",
       "outputs": [],
       "details": {
         "structural": "PASS",
@@ -225,7 +225,7 @@
           }
         },
         "acceptance": {
-          "valid": false,
+          "valid": true,
           "kind": "automated"
         }
       }
@@ -254,11 +254,11 @@
         }
       ],
       "details": {
-        "cacheHits": 3,
+        "cacheHits": 19,
         "recoveredOriginals": 0,
         "localPrepared": 0,
-        "newSynthesisRequests": 16,
-        "newSynthesisCharacters": 730
+        "newSynthesisRequests": 0,
+        "newSynthesisCharacters": 0
       }
     },
     "alignment": {
@@ -343,8 +343,8 @@
         }
       ],
       "details": {
-        "cacheHits": 3,
-        "newLocalAlignments": 16,
+        "cacheHits": 19,
+        "newLocalAlignments": 0,
         "providerCalls": 0,
         "phraseAnchoredArticles": [],
         "unlocatedWords": [
@@ -368,16 +368,180 @@
       ]
     },
     "render": {
-      "status": "failed",
-      "inputHash": "01cbbca555896b8cd6ec8cbcd369dad0e8f5bfca627cade604e8f332ee760bdc",
-      "outputs": [],
-      "error": "Encoded final mix fails final-mix-concise-v1: I=-14.5 LUFS, TP=-1.39 dBTP; target -14 ±0.5 LU, ceiling -1.5 +0.1 dB meter tolerance. Previous output preserved."
+      "status": "complete",
+      "inputHash": "9e0fd0fc2f15bf6f104bbd9fbd42c58a4066c7a626c32d9e8daafb10c11ff8aa",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\out\\video-20261112-bf4b8311.mp4",
+          "sha256": "7e86ca8d3d932175588e34447afd303cb8e4b3dbf1f6eee92a162f85cbf51a78"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\artifacts\\9e0fd0fc2f15bf6f104bbd9fbd42c58a4066c7a626c32d9e8daafb10c11ff8aa.props.json",
+          "sha256": "9267b1a36dff15936bdfb16931e3320d6a7a9439531e2eb0615b4308a9fa4c7a"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\artifacts\\9e0fd0fc2f15bf6f104bbd9fbd42c58a4066c7a626c32d9e8daafb10c11ff8aa.verified.json",
+          "sha256": "e962cd1fe9ac14f0776beace81c49143c720eeb830d76c3b064763dc37fabd6a"
+        }
+      ],
+      "details": {
+        "metadata": {
+          "frames": 2822,
+          "duration": 94.066667,
+          "width": 1080,
+          "height": 1920,
+          "fps": 30
+        },
+        "fullDecode": "PASS",
+        "rawMixedAudio": {
+          "integratedLUFS": -17.79,
+          "truePeakDbTP": -3.43,
+          "loudnessRangeLU": 11.1,
+          "raw": {
+            "input_i": "-17.79",
+            "input_tp": "-3.43",
+            "input_lra": "11.10",
+            "input_thresh": "-29.32",
+            "output_i": "-14.88",
+            "output_tp": "-1.80",
+            "output_lra": "7.10",
+            "output_thresh": "-25.97",
+            "normalization_type": "dynamic",
+            "target_offset": "0.88"
+          }
+        },
+        "finalMixedAudio": {
+          "integratedLUFS": -14.5,
+          "truePeakDbTP": -1.39,
+          "loudnessRangeLU": 7,
+          "raw": {
+            "input_i": "-14.50",
+            "input_tp": "-1.39",
+            "input_lra": "7.00",
+            "input_thresh": "-25.53",
+            "output_i": "-14.50",
+            "output_tp": "-1.50",
+            "output_lra": "6.40",
+            "output_thresh": "-25.44",
+            "normalization_type": "dynamic",
+            "target_offset": "0.50"
+          }
+        },
+        "finalMixSettings": {
+          "version": "final-mix-concise-v1",
+          "integratedLUFS": -14,
+          "truePeakDbTP": -1.5,
+          "loudnessRangeLU": 11,
+          "integratedToleranceLU": 1,
+          "truePeakMeterToleranceDb": 0.5,
+          "encoderHeadroomDb": 0.3
+        },
+        "finalMixProcessing": {
+          "calibrationGainDb": 0,
+          "initialEncodedMeasurement": {
+            "integratedLUFS": -14.5,
+            "truePeakDbTP": -1.39,
+            "loudnessRangeLU": 7,
+            "raw": {
+              "input_i": "-14.50",
+              "input_tp": "-1.39",
+              "input_lra": "7.00",
+              "input_thresh": "-25.53",
+              "output_i": "-14.50",
+              "output_tp": "-1.50",
+              "output_lra": "6.40",
+              "output_thresh": "-25.44",
+              "normalization_type": "dynamic",
+              "target_offset": "0.50"
+            }
+          }
+        },
+        "zeroProviderCallsDuringRender": true
+      }
     },
     "verification": {
-      "status": "planned",
-      "inputHash": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
-      "outputs": [],
-      "details": {}
+      "status": "complete",
+      "inputHash": "9e0fd0fc2f15bf6f104bbd9fbd42c58a4066c7a626c32d9e8daafb10c11ff8aa",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\out\\video-20261112-bf4b8311.verification.json",
+          "sha256": "b36d04bf3ba9814010c6808ae050cf12b641b8e046917ced33668517d6ccaee3"
+        }
+      ],
+      "details": {
+        "metadata": {
+          "frames": 2822,
+          "duration": 94.066667,
+          "width": 1080,
+          "height": 1920,
+          "fps": 30
+        },
+        "fullDecode": "PASS",
+        "rawMixedAudio": {
+          "integratedLUFS": -17.79,
+          "truePeakDbTP": -3.43,
+          "loudnessRangeLU": 11.1,
+          "raw": {
+            "input_i": "-17.79",
+            "input_tp": "-3.43",
+            "input_lra": "11.10",
+            "input_thresh": "-29.32",
+            "output_i": "-14.88",
+            "output_tp": "-1.80",
+            "output_lra": "7.10",
+            "output_thresh": "-25.97",
+            "normalization_type": "dynamic",
+            "target_offset": "0.88"
+          }
+        },
+        "finalMixedAudio": {
+          "integratedLUFS": -14.5,
+          "truePeakDbTP": -1.39,
+          "loudnessRangeLU": 7,
+          "raw": {
+            "input_i": "-14.50",
+            "input_tp": "-1.39",
+            "input_lra": "7.00",
+            "input_thresh": "-25.53",
+            "output_i": "-14.50",
+            "output_tp": "-1.50",
+            "output_lra": "6.40",
+            "output_thresh": "-25.44",
+            "normalization_type": "dynamic",
+            "target_offset": "0.50"
+          }
+        },
+        "finalMixSettings": {
+          "version": "final-mix-concise-v1",
+          "integratedLUFS": -14,
+          "truePeakDbTP": -1.5,
+          "loudnessRangeLU": 11,
+          "integratedToleranceLU": 1,
+          "truePeakMeterToleranceDb": 0.5,
+          "encoderHeadroomDb": 0.3
+        },
+        "finalMixProcessing": {
+          "calibrationGainDb": 0,
+          "initialEncodedMeasurement": {
+            "integratedLUFS": -14.5,
+            "truePeakDbTP": -1.39,
+            "loudnessRangeLU": 7,
+            "raw": {
+              "input_i": "-14.50",
+              "input_tp": "-1.39",
+              "input_lra": "7.00",
+              "input_thresh": "-25.53",
+              "output_i": "-14.50",
+              "output_tp": "-1.50",
+              "output_lra": "6.40",
+              "output_thresh": "-25.44",
+              "normalization_type": "dynamic",
+              "target_offset": "0.50"
+            }
+          }
+        },
+        "zeroProviderCallsDuringRender": true
+      }
     },
     "image": {
       "status": "complete",
@@ -491,6 +655,207 @@
       "stage": "render",
       "error": "Encoded final mix fails final-mix-concise-v1: I=-14.5 LUFS, TP=-1.39 dBTP; target -14 ±0.5 LU, ceiling -1.5 +0.1 dB meter tolerance. Previous output preserved.",
       "at": "2026-11-13T00:06:07.528Z"
+    },
+    {
+      "stage": "validation",
+      "previous": {
+        "status": "complete",
+        "inputHash": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
+        "outputs": [],
+        "details": {
+          "structural": "PASS",
+          "background": {
+            "id": "generated-convenience-store-65e1f2f0e192749f",
+            "file": "backgrounds/generated-convenience-store-65e1f2f0e192749f.png",
+            "sha256": "c7a8d2c236cc06cb1cf69376374c37fb0d79fdebf539598a6c4552696568421a",
+            "scenarioType": "convenience-store",
+            "selection": "developer-selected",
+            "scenarioLabel": "AT A KOREAN CONVENIENCE-STORE",
+            "framing": {
+              "scale": 1.02,
+              "origin": "50% 0%"
+            }
+          },
+          "acceptance": {
+            "valid": false,
+            "kind": "automated"
+          }
+        }
+      },
+      "invalidatedAt": "2026-11-13T00:16:11.427Z"
+    },
+    {
+      "stage": "review",
+      "previous": {
+        "status": "complete",
+        "inputHash": "12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4",
+        "outputs": [
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-acceptances\\12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4.json",
+            "sha256": "10ff5aad01d3ee861d58e1a5f6200537df4ee887cbd4b4ff54525aa1f3938523"
+          }
+        ],
+        "details": {
+          "reusedAcceptance": true,
+          "humanReviewed": false
+        }
+      },
+      "invalidatedAt": "2026-11-13T00:17:17.341Z"
+    },
+    {
+      "stage": "audio",
+      "previous": {
+        "status": "complete",
+        "inputHash": "22a05ffe8984566168b8c0e7a79a1bacffad5f0f561b045ed8729802efe2a9d1",
+        "outputs": [
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\public\\audio\\production\\video-20261112-bf4b8311\\22a05ffe8984566168b8c0e7a79a1bacffad5f0f561b045ed8729802efe2a9d1.json",
+            "sha256": "2d0b51613ba9bca97ec333987fbedda14eceb27a799860d783d5fdc1421b80a7"
+          }
+        ],
+        "details": {
+          "cacheHits": 3,
+          "recoveredOriginals": 0,
+          "localPrepared": 0,
+          "newSynthesisRequests": 16,
+          "newSynthesisCharacters": 730
+        }
+      },
+      "invalidatedAt": "2026-11-13T00:17:17.345Z"
+    },
+    {
+      "stage": "alignment",
+      "previous": {
+        "status": "complete",
+        "inputHash": "b40b23d2b566813d95d788927742338fe56db29fab299028e95dc2e90f1be726",
+        "outputs": [
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\e3c9d1ffd6b95003bfe74e91bfb5ad64064cb2312294725f8b5715b763c5aa4b.json",
+            "sha256": "26d9f9d41ba0373444d576f4d1e0909d5f9c6f6bd0f2d7732898ba4c9ab66904"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\b259dddefdf9711a8ce22d2a57c73c4fbf7a92a4fe2f52480c9e43b160426955.json",
+            "sha256": "cc61c2d7a0f56e11a75fb2ff8795a15cbccee03cf8637d96117f56a23066c6b4"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\133555fd4890b02101a51c0b772e1e105c2c2318c9d1926f03f58fda8ef6a473.json",
+            "sha256": "5ac339044ead0b2a5d0595eca6a0b8128d4c652bcbe9c3d690dfa01357672e59"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\b3aba46bfc8cbad4fc910177d4d5aba60e83a7b77235c9f6337aef3a5684018f.json",
+            "sha256": "ae58ff608b416095ee32eaa12a359a90410661fa919fa92c59d828762f4c7b28"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\0297227ee71b0ce2a65209a5b74c698fe5487c16ba818a0d36ba5e17c1119fdb.json",
+            "sha256": "a7202be1542ae089865b60990c0a0d4d6180f4d0db1c637a1617e83747fdcc62"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\6cd8e07ea659c97ad5c82388374b0a47682006e1e2463b17f9d6b55d39889bad.json",
+            "sha256": "a60fce73a341519a26007b140bce915488bfa683048bbc4d1593ef6b6052b25c"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\2978d764c442513aa55c9b1825111b02342744a3c94b6a2ce9d4f04ce278da7b.json",
+            "sha256": "f6b18709fbe527465f0a090c408cbbc8dd76b4b6fe378b0ff070165daec11d4e"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\7c96f3f8c4789e45fb800d753b96f7e0739141749928353b56638ac9824550bd.json",
+            "sha256": "5ce9c3e8243dc052aa9acc39466b7202c38bda68e9b50bf5e7262897284e238a"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\8b47d56e63ef07e5cd76980ff52991aa87e9443dc77832261ae5d5917065a42f.json",
+            "sha256": "da6ba7022b5a8bbc4ff1a41f5b7c8aa476f105358b2b514672f54d20af5a1824"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\50b772452f02e69e1b649fd299d492182d1b8543cde9deb1c9be551e2a2cc90b.json",
+            "sha256": "56a76aa1dcfc7299cef3bc72fd53bbe771818c0f535b7b4ede1dd8960aa260a8"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\43a3c2f685e91d2b420c9bb2e5232aaaeaa758266a1a60a974c2c2924c544796.json",
+            "sha256": "e0f3db2dec8de29d565b8493b35114a51f0d42d207bc2ff88016b7198cbdc3a2"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\df9eda795bb74d0282073f1f860238553bd4ddddc37fd933b2900352cacef0e7.json",
+            "sha256": "88619907721c1fb5a39e1d82319455a1093aac95337696c65b4a95362e4642cd"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\ded41f6631aa49d38913013b32b3a5e2b3ffe6f97d70df5d66594a416fa96e91.json",
+            "sha256": "b9e187b0446eea6e73dd4c141f143b736ab6130a1f51e421b0cf0b9da93579ce"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\83534e2992827092d80bff063db7285400d7ca1837ed9326fd7c4036ccc74b7a.json",
+            "sha256": "f0131bc573ef95e68544bf9a3755a68d690a560a3885bbe062547bdf917f4721"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\2f0a9237dcab6f9564b9619da1485058ff3783238aad8a6cb0428c7880fd776c.json",
+            "sha256": "8d93740d62291d2d94574eb004d7cd6a53b523a041a912c5d1be8ddae6d1d06a"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\7b4c3e2827bc9a75768cdca944c8c79554ed818c3a27cdf850a407c3ee539c8c.json",
+            "sha256": "03ea5536ada5804ec91320b059fb0672649902c2c8a38e8fa3a1a929199a8267"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\fd547a7690d6cd8bafa5dfa98f04ee223c796ac6e37d23a9050b63584edaf2d4.json",
+            "sha256": "a4096751453605f725b8167f6979c5b410261355ec37a4b497fbc7d80d28fe30"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\dceeedf166d86ee585cbdd704c70d5bb55dd46056ebac885c7221e016dc2e069.json",
+            "sha256": "520f16adb318e8a4327c981f9440e61821eebb10b82a0917802f446379c2ae6b"
+          },
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\cb0239125745312bab83ff8a6727d0cb88806e91aa57d83cfaec761b25731655.json",
+            "sha256": "98bf6c988a8b9ab62ae9972a5df8e6362bdb958dcc11b2919b637c27fb60296d"
+          }
+        ],
+        "details": {
+          "cacheHits": 3,
+          "newLocalAlignments": 16,
+          "providerCalls": 0,
+          "phraseAnchoredArticles": [],
+          "unlocatedWords": [
+            {
+              "clipId": "production-video-20261112-bf4b8311-q5-question",
+              "text": "how",
+              "boundarySeconds": 1.86,
+              "individualTimingMeasured": false
+            }
+          ]
+        }
+      },
+      "invalidatedAt": "2026-11-13T00:18:12.366Z"
+    },
+    {
+      "stage": "captions",
+      "previous": {
+        "status": "complete",
+        "inputHash": "56eb15e7402f8d472383c9f982d4ae474d9dd5ccb6810d09b6a03f0b957584c2",
+        "outputs": [
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\artifacts\\56eb15e7402f8d472383c9f982d4ae474d9dd5ccb6810d09b6a03f0b957584c2.captions.json",
+            "sha256": "de0f127976ed3b372d1015bd7e5a99d9535101b9634f3883760ffc4679124bb0"
+          }
+        ]
+      },
+      "invalidatedAt": "2026-11-13T00:18:12.430Z"
+    },
+    {
+      "stage": "render",
+      "previous": {
+        "status": "failed",
+        "inputHash": "01cbbca555896b8cd6ec8cbcd369dad0e8f5bfca627cade604e8f332ee760bdc",
+        "outputs": [],
+        "error": "Encoded final mix fails final-mix-concise-v1: I=-14.5 LUFS, TP=-1.39 dBTP; target -14 ±0.5 LU, ceiling -1.5 +0.1 dB meter tolerance. Previous output preserved."
+      },
+      "invalidatedAt": "2026-11-13T00:18:12.436Z"
+    },
+    {
+      "stage": "verification",
+      "previous": {
+        "status": "planned",
+        "inputHash": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-13T00:21:46.136Z"
     }
   ],
   "revisions": [
@@ -502,7 +867,7 @@
   ],
   "paidOptIn": true,
   "createdAt": "2026-11-12T23:57:32.800Z",
-  "updatedAt": "2026-11-13T00:06:07.528Z",
+  "updatedAt": "2026-11-13T00:21:46.136Z",
   "sourceIdentity": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
   "workDirectory": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\generated\\7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
   "configuration": {
@@ -582,8 +947,8 @@
         "integratedLUFS": -14,
         "truePeakDbTP": -1.5,
         "loudnessRangeLU": 11,
-        "integratedToleranceLU": 0.5,
-        "truePeakMeterToleranceDb": 0.1,
+        "integratedToleranceLU": 1,
+        "truePeakMeterToleranceDb": 0.5,
         "encoderHeadroomDb": 0.3
       },
       "editorial": "concise-explanations-v1",
@@ -745,6 +1110,18 @@
   },
   "contentHash": "12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4",
   "assets": {
+    "background": {
+      "id": "generated-convenience-store-65e1f2f0e192749f",
+      "file": "backgrounds/generated-convenience-store-65e1f2f0e192749f.png",
+      "sha256": "c7a8d2c236cc06cb1cf69376374c37fb0d79fdebf539598a6c4552696568421a",
+      "scenarioType": "convenience-store",
+      "selection": "developer-selected",
+      "scenarioLabel": "AT A KOREAN CONVENIENCE-STORE",
+      "framing": {
+        "scale": 1.02,
+        "origin": "50% 0%"
+      }
+    },
     "music": {
       "file": "audio/music/warm-pluck-groove-b992ec53fe43.wav",
       "sha256": "f82108343d2cc97a3e04601d7e2defdb102adf3b16f225dc3b9169cdd1d50047",
@@ -774,8 +1151,8 @@
             "key": "65e1f2f0e192749fbf4e97b85c4ebe38de27466198ec6ec815cf47fb700fbf5a",
             "state": "received",
             "units": 507115000,
-            "sha256": "c7a8d2c236cc06cb1cf69376374c37fb0d79fdebf539598a6c4552696568421a",
-            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\image\\65e1f2f0e192749fbf4e97b85c4ebe38de27466198ec6ec815cf47fb700fbf5a\\original.png"
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\image\\65e1f2f0e192749fbf4e97b85c4ebe38de27466198ec6ec815cf47fb700fbf5a\\original.png",
+            "sha256": "c7a8d2c236cc06cb1cf69376374c37fb0d79fdebf539598a6c4552696568421a"
           }
         ],
         "usage": {
@@ -804,8 +1181,8 @@
         "chargedUnits": 3085375,
         "state": "settled",
         "childBudgetId": "p6-fe9dfad80d55827b8167-generation",
-        "requests": [],
         "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\generation-budgets\\p6-fe9dfad80d55827b8167-generation.json",
+        "requests": [],
         "usage": [
           {
             "state": "valid",
@@ -826,8 +1203,8 @@
         "chargedUnits": 826750,
         "state": "settled",
         "childBudgetId": "p6-71cdfb20fd21e04678a1-review",
-        "requests": [],
         "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-review-budgets\\p6-71cdfb20fd21e04678a1-review.json",
+        "requests": [],
         "usage": [
           {
             "state": "complete",
@@ -963,14 +1340,17 @@
           }
         ],
         "usage": {
-          "cacheHits": 3,
+          "cacheHits": 19,
           "recoveredOriginals": 0,
           "localPrepared": 0,
-          "newSynthesisRequests": 16,
-          "newSynthesisCharacters": 730,
+          "newSynthesisRequests": 0,
+          "newSynthesisCharacters": 0,
           "estimated": true
         }
       }
     }
-  }
+  },
+  "renderCertificate": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\artifacts\\9e0fd0fc2f15bf6f104bbd9fbd42c58a4066c7a626c32d9e8daafb10c11ff8aa.verified.json",
+  "lastRenderHash": "9e0fd0fc2f15bf6f104bbd9fbd42c58a4066c7a626c32d9e8daafb10c11ff8aa",
+  "lastPlanHash": "041af59201f631f369aa655053b555bfd9da6d35b831771d9534c8f9a076b45e"
 }

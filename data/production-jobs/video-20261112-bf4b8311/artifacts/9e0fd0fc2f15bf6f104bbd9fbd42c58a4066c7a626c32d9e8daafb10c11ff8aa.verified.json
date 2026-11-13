@@ -1,0 +1,81 @@
+{
+  "renderHash": "9e0fd0fc2f15bf6f104bbd9fbd42c58a4066c7a626c32d9e8daafb10c11ff8aa",
+  "sha256": "7e86ca8d3d932175588e34447afd303cb8e4b3dbf1f6eee92a162f85cbf51a78",
+  "temporary": "C:\\Users\\david\\Documents\\kor-vids\\out\\.production-render-PUBfwk\\normalized.mp4",
+  "verification": {
+    "metadata": {
+      "frames": 2822,
+      "duration": 94.066667,
+      "width": 1080,
+      "height": 1920,
+      "fps": 30
+    },
+    "fullDecode": "PASS",
+    "rawMixedAudio": {
+      "integratedLUFS": -17.79,
+      "truePeakDbTP": -3.43,
+      "loudnessRangeLU": 11.1,
+      "raw": {
+        "input_i": "-17.79",
+        "input_tp": "-3.43",
+        "input_lra": "11.10",
+        "input_thresh": "-29.32",
+        "output_i": "-14.88",
+        "output_tp": "-1.80",
+        "output_lra": "7.10",
+        "output_thresh": "-25.97",
+        "normalization_type": "dynamic",
+        "target_offset": "0.88"
+      }
+    },
+    "finalMixedAudio": {
+      "integratedLUFS": -14.5,
+      "truePeakDbTP": -1.39,
+      "loudnessRangeLU": 7,
+      "raw": {
+        "input_i": "-14.50",
+        "input_tp": "-1.39",
+        "input_lra": "7.00",
+        "input_thresh": "-25.53",
+        "output_i": "-14.50",
+        "output_tp": "-1.50",
+        "output_lra": "6.40",
+        "output_thresh": "-25.44",
+        "normalization_type": "dynamic",
+        "target_offset": "0.50"
+      }
+    },
+    "finalMixSettings": {
+      "version": "final-mix-concise-v1",
+      "integratedLUFS": -14,
+      "truePeakDbTP": -1.5,
+      "loudnessRangeLU": 11,
+      "integratedToleranceLU": 1,
+      "truePeakMeterToleranceDb": 0.5,
+      "encoderHeadroomDb": 0.3
+    },
+    "finalMixProcessing": {
+      "calibrationGainDb": 0,
+      "initialEncodedMeasurement": {
+        "integratedLUFS": -14.5,
+        "truePeakDbTP": -1.39,
+        "loudnessRangeLU": 7,
+        "raw": {
+          "input_i": "-14.50",
+          "input_tp": "-1.39",
+          "input_lra": "7.00",
+          "input_thresh": "-25.53",
+          "output_i": "-14.50",
+          "output_tp": "-1.50",
+          "output_lra": "6.40",
+          "output_thresh": "-25.44",
+          "normalization_type": "dynamic",
+          "target_offset": "0.50"
+        }
+      }
+    },
+    "zeroProviderCallsDuringRender": true
+  },
+  "propsFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\artifacts\\9e0fd0fc2f15bf6f104bbd9fbd42c58a4066c7a626c32d9e8daafb10c11ff8aa.props.json",
+  "audioFile": "C:\\Users\\david\\Documents\\kor-vids\\public\\audio\\production\\video-20261112-bf4b8311\\22a05ffe8984566168b8c0e7a79a1bacffad5f0f561b045ed8729802efe2a9d1.json"
+}
