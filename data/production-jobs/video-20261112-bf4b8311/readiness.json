@@ -1,0 +1,12 @@
+{
+  "ready": true,
+  "blockers": [],
+  "checks": {
+    "alignment": "PASS: executable, imports, pinned versions and cached model checksum",
+    "renderer": "PASS: managed browser, FFmpeg and FFprobe",
+    "imagePricing": "PASS",
+    "textPricing": "PASS",
+    "ttsPricing": "PASS"
+  },
+  "providerCalls": 0
+}

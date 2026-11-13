@@ -1,0 +1,20 @@
+{
+  "valid": true,
+  "contentHash": "12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4",
+  "errors": [],
+  "warnings": [
+    "Structural validation does not establish Korean accuracy, naturalness, difficulty or semantic answer uniqueness. A separate manual or automated linguistic review is required.",
+    "Question 6: similar/contained choice text; a human must check distractor ambiguity"
+  ],
+  "linguisticReviewRequired": true,
+  "generationEstimatedCostUSD": 0.003085375,
+  "reportedGenerationUsage": {
+    "inputTokens": 2475,
+    "outputTokens": 5552,
+    "totalTokens": 8027,
+    "reasoningTokens": 3827,
+    "cachedInputTokens": 0
+  },
+  "renderReady": true,
+  "renderBlockers": []
+}

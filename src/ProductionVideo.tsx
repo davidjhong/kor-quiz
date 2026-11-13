@@ -1,3 +1,6 @@
+import {Palette} from './Palette';
+import {getVarietyMotion} from './variety';
+import {AMBIENCE_MIX} from './musicLibrary';
 import {Html5Audio,Sequence,staticFile,useCurrentFrame} from 'remotion';
 import {IllustratedBackground,IllustratedBookend,IllustratedPanel} from './IllustratedFrame';
 import {IllustratedQuestionScene} from './IllustratedQuestionScene';
@@ -12,7 +15,7 @@ import {BackgroundAudio} from './BackgroundAudio';
 import {getSynchronizedCta} from './presentation';
 import {BONUS_CTA_LABELS} from './narration';
 import {resolveProductionPreset} from './productionPresets';
-export const ProductionVideo=({quiz,narration,presentation,phraseCaptions,displayCues,music,background,productionPreset,countdownSeconds}:ProductionProps)=>{
+export const ProductionVideo=({quiz,narration,presentation,phraseCaptions,displayCues,music,background,productionPreset,countdownSeconds,variety,ambience}:ProductionProps)=>{
   const preset=resolveProductionPreset(productionPreset,countdownSeconds);
   const frame=useCurrentFrame(),t=getNarratedTimeline(narration,runtimeQuiz(quiz),preset.timing),opening=t.scenes[0],bonus=t.questions.at(-1)!;
   const followStart=bonus.followStart!,display=presentation.bookendStyle==='display'&&!!displayCues;
@@ -21,8 +24,8 @@ export const ProductionVideo=({quiz,narration,presentation,phraseCaptions,displa
   const cta=getSynchronizedCta(frame,t.audio,bonus.id);
   const visiblePhrases=phraseCaptions.filter(c=>(!display||!['hook','comment','follow'].includes(c.role))
     &&(!['answer','explanation'].includes(c.role)||frame>=t.questions.find(q=>q.id===c.contentId)!.revealStart));
-  return <>
-    <IllustratedBackground assetId={quiz.backgroundAssetId??undefined} assetOverride={background} motion={getDisplayBackgroundMotion(frame,opening.end,bonus.commentStart!,t.durationInFrames)}/>
+  return <Palette id={variety?.palette??'cream-navy'}>
+    <IllustratedBackground assetId={quiz.backgroundAssetId??undefined} assetOverride={background} motion={variety?getVarietyMotion(variety,frame,t.durationInFrames):getDisplayBackgroundMotion(frame,opening.end,bonus.commentStart!,t.durationInFrames)}/>
     {frame<opening.sequenceEnd?(display?<OpeningHook frame={frame} cues={displayCues} end={opening.end} sequenceEnd={opening.sequenceEnd}/>
       :<IllustratedBookend title={quiz.episodeTitle!}/>):null}
     {panelVisible?<IllustratedPanel height={CAPTION_BAND.panelHeight} opacity={panelOpacity}>
@@ -37,6 +40,7 @@ export const ProductionVideo=({quiz,narration,presentation,phraseCaptions,displa
       :<IllustratedBookend title={BONUS_CTA_LABELS[cta==='follow'?'follow':'comment']}/>):null}
     {presentation.synchronizedCaptions?<PhraseCaption phrases={visiblePhrases} bonusIds={[bonus.id]} revealStart={0}/>:null}
     {t.audio.map(c=><Sequence key={c.id} from={c.start} durationInFrames={c.end-c.start} layout="none"><Html5Audio src={staticFile(c.file)} volume={1}/></Sequence>)}
-    {presentation.backgroundAudio&&music?<BackgroundAudio file={music.file} duration={t.durationInFrames} audio={t.audio} countdowns={t.questions} gain={presentation.musicGain} levels={preset.music}/>:null}
-  </>;
+    {presentation.backgroundAudio&&music?<BackgroundAudio file={music.file} duration={t.durationInFrames} audio={t.audio} countdowns={t.questions} gain={presentation.musicGain} levels={preset.music} trimDb={music.mixTrimDb}/>:null}
+    {ambience?<BackgroundAudio file={ambience.asset.file} duration={t.durationInFrames} audio={t.audio} countdowns={t.questions} gain={ambience.gain} levels={AMBIENCE_MIX} trimDb={ambience.asset.mixTrimDb}/>:null}
+  </Palette>;
 };

@@ -1,0 +1,7 @@
+{
+  "questionId": "production-video-20261112-bf4b8311-q6",
+  "correctAnswerIndex": 0,
+  "explanation": "안 매운 과자 추천해 주세요 asks for a non-spicy snack recommendation. 안 before 매운 negates the description.",
+  "translation": "Please recommend a non-spicy snack.",
+  "teachingPoint": "안 매운 = not spicy; 추천해 주세요 = please recommend"
+}

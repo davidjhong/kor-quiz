@@ -1,3 +1,5 @@
+import {resolveVariety,type VarietyOptions} from './varietySelection.ts';
+import {withCatalogLock,recordCompletedVarietyUse} from './backgroundCatalog.ts';
 import {access,mkdir,copyFile} from 'node:fs/promises';
 import {join,resolve,dirname,extname} from 'node:path';
 import {loadEnvFile} from 'node:process';
@@ -11,7 +13,7 @@ import {runAutomatedReview} from './automatedReview.ts';
 import {generateDraft} from './openaiGeneration.ts';
 import {QUALITY_DRAFT_MODEL} from './generationModels.ts';
 import {canonical,sha256,readJsonFile,requireWithin,AUDIO_PROCESSING,quizSpeechFingerprint} from './narrationFiles.ts';
-import {planProduction,publicProductionPlan,readProductionSource,type ProduceConfig} from './productionPlan.ts';
+import {planProduction,publicProductionPlan,readProductionSource,productionSettings,type ProduceConfig} from './productionPlan.ts';
 import {acquireJobLock,loadJobBudget,allocateBudget,saveBudget,settleAllocation,assertProductionPricing,chargedUnits,type ProductionReservation} from './productionBudget.ts';
 import {readJob,saveJob,startStage,completeStage,fileHash,codeFingerprint,outputExists,type ProductionJob} from './productionJobs.ts';
 import {prepareProductionAudio,recoverTtsArtifacts} from './productionAudio.ts';
@@ -32,7 +34,7 @@ import type {ProductionPresetName} from '../src/productionPresets.ts';
 import type {ProductionMusicId} from './productionMusic.ts';
 import {assertConciseNarration} from '../src/editorialPolicy.ts';
 import {timingReport} from './timingReport.ts';
-export type ProduceOptions={draft?:string;brief?:string;scenario?:string;output?:string;resume?:string;jobId?:string;reviewMode?:'automated'|'manual';
+export type ProduceOptions={varietyOptions?:VarietyOptions;characterExplicit?:boolean;draft?:string;brief?:string;scenario?:string;output?:string;resume?:string;jobId?:string;reviewMode?:'automated'|'manual';
   voiceFile?:string;presentationFile?:string;noMusic?:boolean;model?:string;maxOutputTokens?:number;dryRun?:boolean;allowPaid?:boolean;
   maxCostUSD?:number;overwrite?:boolean;recoverLock?:boolean;backgroundOptions?:Partial<BackgroundOptions>;
   productionPreset?:ProductionPresetName;countdownSeconds?:5;musicTrackId?:ProductionMusicId};
@@ -65,6 +67,9 @@ export const produce=async(options:ProduceOptions,deps:ProductionDependencies={}
     output:resolve(root,options.output!),reviewMode:options.reviewMode??'automated',voiceFile:'content/voice-profiles/selected-default.json',
     presentationFile:'content/production/default.json',noMusic:false,model:QUALITY_DRAFT_MODEL,maxOutputTokens:12000,
     ...(!options.draft?{backgroundOptions:backgroundOptionsSchema.parse(options.backgroundOptions??{})}:{})};
+  if(prior?.config.variety&&(options.musicTrackId||options.noMusic!==undefined))throw new Error('Resume keeps persisted variety/music; use a new job');
+  if(prior&&options.varietyOptions)throw new Error('Resume keeps persisted variety; select new variety in a new job');
+  if(!prior&&options.varietyOptions){config.varietyOptions=options.varietyOptions;config.varietyVersion='variety-v2';config.characterExplicit=options.characterExplicit??false;}
   if(prior&&options.backgroundOptions)throw new Error('Resume keeps its bound background/settings; use a new job for explicit image changes');
   if(options.draft&&options.backgroundOptions)throw new Error('Draft backgrounds are content-hash bound; supply a separate brief/scenario revision for image selection');
   if(options.output&&resolve(root,options.output)!==config.output)throw new Error('Resume keeps the original output path; use a new job to change the destination');
@@ -75,10 +80,10 @@ export const produce=async(options:ProduceOptions,deps:ProductionDependencies={}
   if(options.countdownSeconds)config.countdownSeconds=options.countdownSeconds;
   if(options.musicTrackId)config.musicTrackId=options.musicTrackId;
   // Freeze the NEW generation contract before its first authorization; never retrofit accepted drafts.
-  if((!prior||(!prior.paidOptIn&&!prior.workDirectory))&&config.source.kind!=='draft'&&config.productionPreset==='concise-v1')config.contentPolicy='concise-explanations-v1';
+  if((!prior||(!prior.paidOptIn&&!prior.workDirectory))&&config.source.kind!=='draft'&&['concise-v1','concise-v2'].includes(config.productionPreset??''))config.contentPolicy='concise-explanations-v1';
   if(options.maxCostUSD!==undefined&&(!Number.isFinite(options.maxCostUSD)||options.maxCostUSD<=0))throw new Error('--max-cost-usd must be finite and positive');
   requireWithin(root,config.output);if(extname(config.output).toLowerCase()!=='.mp4')throw new Error('Production output must be a local MP4');
-  const presetProps={...(config.productionPreset?{productionPreset:config.productionPreset}:{}),...(config.countdownSeconds?{countdownSeconds:config.countdownSeconds}:{})};
+  const presetProps:Record<string,unknown>={...(config.productionPreset?{productionPreset:config.productionPreset}:{}),...(config.countdownSeconds?{countdownSeconds:config.countdownSeconds}:{})};
   const release=await acquireJobLock(folder,options.recoverLock);
   const lockedPrior=await exists(jobFile)?await readJob(jobFile):null;
   if(canonical(lockedPrior)!==canonical(prior)){await release();throw new Error('Stored job changed before lock acquisition; no authorization committed. Inspect stored job and resume with the intended configuration.');}
@@ -93,6 +98,7 @@ export const produce=async(options:ProduceOptions,deps:ProductionDependencies={}
     if(!job.revisions.some(r=>r.hash===bundle.contentHash))job.revisions.push({hash:bundle.contentHash,directory,sourceIdentity:job.sourceIdentity!});
     job.contentHash=bundle.contentHash;return directory;
   };
+  const recordUse=async(episodeId:string,background:string)=>config.variety?recordCompletedVarietyUse(root,{episodeId,background,palette:config.variety.palette.selected,motion:config.variety.motion.selected,music:config.variety.music.selected}):recordCompletedBackgroundUse(root,background,episodeId);
   const authorize=async()=>{
     if(!job.paidOptIn)throw new Error('Additional production spending authorization is required. Inspect plan.json; then resume with --allow-paid --max-cost-usd <approved-total>');
     checkCancellation();budgetHandle??=await loadJobBudget(root,id,job.maxCostUSD,true);return budgetHandle;
@@ -120,6 +126,15 @@ export const produce=async(options:ProduceOptions,deps:ProductionDependencies={}
       }
     }
     let source=await readProductionSource(config,root);
+    if(config.varietyOptions&&!config.variety){
+      const enabled=(await productionSettings(config,root)).presentation.backgroundAudio;
+      const requested={...config.varietyOptions,...(!enabled?{music:'none' as const}:{})};
+      const resolved=await withCatalogLock(root,()=>resolveVariety(root,source.brief,id,requested,config.backgroundOptions??backgroundOptionsSchema.parse({assetId:source.brief.backgroundAssetId??undefined}),config.characterExplicit,undefined,config.varietyVersion??'variety-v1'));
+      config.variety=resolved.selection;config.backgroundBinding=resolved.binding;config.musicTrackId=resolved.selection.music.selected as ProductionMusicId;
+      if(config.musicTrackId==='none')config.noMusic=true;
+      await persist();source=await readProductionSource(config,root);
+    }
+    if(config.variety){presetProps.variety=config.variety.visual;if(config.variety.audio?.ambience)presetProps.ambience=config.variety.audio.ambience;}
     if(config.backgroundOptions&&!config.backgroundBinding){
       config.backgroundBinding=(await planBackground(root,source.brief,config.output,config.backgroundOptions)).binding;
       await persist();source=await readProductionSource(config,root);
@@ -192,10 +207,12 @@ export const produce=async(options:ProduceOptions,deps:ProductionDependencies={}
       activeStage='image';startStage(job,'image',sha256(canonical(config.backgroundBinding)));await persist();
       (deps.loadPaidConfig??loadPaidEnv)();
       const preparedImage=await prepareBackground({root,folder,binding:config.backgroundBinding!,budget:await authorize(),client:deps.imageClient});
+      if(config.variety){config.variety.checksums.background=preparedImage.asset.sha256;}
       await completeStage(job,'image',[join(root,'public',preparedImage.asset.file),preparedImage.receipt]);await persist();
       plan=await planProduction(config,root,working,deps.checkAudio);
       if(plan.blockers.length)throw new Error(plan.blockers.join('; '));
     }
+    if(config.variety&&plan.background){if(config.variety.checksums.background&&config.variety.checksums.background!==plan.background.sha256)throw new Error('Persisted variety background checksum changed');config.variety.checksums.background=plan.background.sha256;await persist();}
     startStage(job,'validation',plan.hashes.content);await completeStage(job,'validation',[],{structural:'PASS',background:plan.background,acceptance:plan.acceptance});await persist();
     const currentCode=await (deps.codeHash??(()=>codeFingerprint(root)))();
     const verifyCertificate=async(renderHash:string)=>{
@@ -229,7 +246,7 @@ export const produce=async(options:ProduceOptions,deps:ProductionDependencies={}
           reviewMode:config.reviewMode,voice:plan.settings.voice,presentation:plan.settings.presentation,
           viewing:report.viewing??{visualInspection:'not yet performed',listeningPerformed:false,phonePlaybackPerformed:false},resumedAt:new Date().toISOString()};
         await atomicJson(reportFile,refreshed);await atomicJson(join(folder,'verification.json'),refreshed);
-        job.state='complete';await persist();await recordCompletedBackgroundUse(root,plan.background!.id,plan.bundle.quiz.videoId);return {jobId:id,output:config.output,report:reportFile,reusedVerifiedRender:true,providerCalls:0,cacheHits:19,alignmentCacheHits:19};}
+        job.state='complete';await persist();await recordUse(plan.bundle.quiz.videoId,plan.background!.id);return {jobId:id,output:config.output,report:reportFile,reusedVerifiedRender:true,providerCalls:0,cacheHits:19,alignmentCacheHits:19};}
     }
     if(await outputExists(config.output)&&!options.overwrite)throw new Error('Output exists but its current dependencies are not verified unchanged; use --overwrite for an authorized replacement, or choose a new job/output');
     if(!working){
@@ -321,7 +338,7 @@ export const produce=async(options:ProduceOptions,deps:ProductionDependencies={}
     job.lastRenderHash=renderHash;
     const finalPlan=await planProduction(config,root,working,deps.checkAudio);job.lastPlanHash=fingerprint(finalPlan);job.state='complete';
     const budget=budgetHandle?.budget;
-    const report={jobId:id,output:config.output,videoSha256:await fileHash(config.output),contentHash:working.contentHash,reviewMode:config.reviewMode,
+    const report={...(config.variety?{variety:config.variety}:{}),jobId:id,output:config.output,videoSha256:await fileHash(config.output),contentHash:working.contentHash,reviewMode:config.reviewMode,
       voice:plan.settings.voice,presentation:plan.settings.presentation,productionPreset:plan.settings.preset,timingBreakdown:breakdown,timeline:{frames:t.durationInFrames,durationSeconds:t.durationInFrames/30,
         questions:t.questions.map(q=>({id:q.id,bonus:q.bonus,start:q.start,countdownStart:q.countdownStart,revealStart:q.revealStart,end:q.end})),
         commentPauseFrames:45,followHoldFrames:30,fadeFrames:12},verification,bonusIsolation:'PASS: strict public bonus schema has no answer/reveal/explanation metadata; actual question audio required',
@@ -332,7 +349,7 @@ export const produce=async(options:ProduceOptions,deps:ProductionDependencies={}
       viewing:{visualInspection:'not yet performed',listeningPerformed:false,phonePlaybackPerformed:false},generatedAt:new Date().toISOString()};
     const reportFile=config.output.slice(0,-4)+'.verification.json';await atomicJson(reportFile,report);await atomicJson(join(folder,'verification.json'),report);await persist();
     startStage(job,'verification',renderHash);await completeStage(job,'verification',[reportFile],verification);job.state='complete';await persist();
-    await recordCompletedBackgroundUse(root,plan.background!.id,working.quiz.videoId);
+    await recordUse(working.quiz.videoId,plan.background!.id);
     return {jobId:id,output:config.output,report:reportFile,reusedVerifiedRender:!!certificate,...report.costs};
   }catch(error){const e=cancellationRequested()?new ProductionCancelled():error;job.state=e instanceof ProductionCancelled?'cancelled':/authorization|required.*budget|budget exhausted|unauthorised/iu.test(sanitize(e))?'awaiting-authorization':'failed';
     if(job.stages[activeStage]?.status==='running'){job.stages[activeStage].status='failed';job.stages[activeStage].error=sanitize(e);}job.history.push({stage:activeStage,error:sanitize(e),at:new Date().toISOString()});

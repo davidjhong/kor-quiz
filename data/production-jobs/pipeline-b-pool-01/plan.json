@@ -1,0 +1,257 @@
+{
+  "version": 1,
+  "source": "f133141433cffe2be715e42ad87e6f5a7e9e6330a619052708f1f72d4be4bbff",
+  "contentHash": null,
+  "variety": {
+    "version": "variety-v1",
+    "seed": "b-pool-audition",
+    "requested": {
+      "palette": "auto",
+      "motion": "auto",
+      "music": "auto",
+      "seed": "b-pool-audition"
+    },
+    "palette": {
+      "candidates": [
+        "blush-plum",
+        "cream-navy",
+        "midnight-gold",
+        "sage-coral"
+      ],
+      "excluded": [
+        "cream-navy"
+      ],
+      "selected": "midnight-gold",
+      "historyHash": "4037aa4d0474b1c1d7f0885f39ce7874d5b24d737840eee7927216d0669a8a50",
+      "recentChoices": [
+        "cream-navy",
+        "cream-navy",
+        "cream-navy"
+      ],
+      "reason": "seeded after recent exclusion"
+    },
+    "motion": {
+      "candidates": [
+        "slow-pan-left",
+        "slow-pan-right",
+        "slow-pull",
+        "slow-push"
+      ],
+      "excluded": [],
+      "selected": "slow-push",
+      "historyHash": "0f739d4b3b1e45694201d41c1d000c324426444dd7566c6a140176dd6d0ed93c",
+      "recentChoices": [],
+      "reason": "seeded after recent exclusion"
+    },
+    "music": {
+      "candidates": [
+        "subtle-bass"
+      ],
+      "excluded": [],
+      "selected": "subtle-bass",
+      "historyHash": "f3a0cb382114a6c8d81fb21d3abb13fad429bde0c2d7098031a727b6d8c7215f",
+      "recentChoices": [
+        "subtle-bass",
+        "subtle-bass",
+        "subtle-bass"
+      ],
+      "reason": "one-item pool necessarily repeats"
+    },
+    "background": {
+      "candidates": [
+        "generated-restaurant-379962e8db662f67",
+        "generated-restaurant-d5fea9be8c6e28a8"
+      ],
+      "excluded": [
+        "generated-restaurant-d5fea9be8c6e28a8"
+      ],
+      "selected": "generated-restaurant-379962e8db662f67",
+      "historyHash": "7fbb63a61afa676889c78ff8e2cab81c487a3646642a7acf42480b16d93f11f4",
+      "recentChoices": [
+        "generated-restaurant-d5fea9be8c6e28a8"
+      ],
+      "reason": "seeded after recent exclusion",
+      "action": "reuse",
+      "eligibleCount": 2,
+      "target": 3
+    },
+    "checksums": {
+      "palette": "ae11ae256a0c14e5e37769f9dec32f88945d815274231cd73eb9dbf57a905bca",
+      "motion": "c531ce177aa7e7fb88ea74126eed13a9173603b42cbacbdf80b65717664591c8",
+      "music": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+      "background": "a9405bcdcc310ef167f3918ff66282cc308c4b5cc59c61303e3a0933e0b3aa7b",
+      "request": null
+    },
+    "visual": {
+      "version": "visual-variety-v1",
+      "palette": "midnight-gold",
+      "motion": "slow-push",
+      "width": 1024,
+      "height": 1536
+    }
+  },
+  "preset": {
+    "id": "concise-v1",
+    "timing": {
+      "fps": 30,
+      "openingMinimum": 90,
+      "readingMinimum": 90,
+      "countdown": 90,
+      "revealMinimum": 0,
+      "settlePause": 6,
+      "afterHook": 9,
+      "afterQuestion": 9,
+      "answerGap": 9,
+      "afterExplanation": 15,
+      "transition": 10,
+      "finalFade": 12,
+      "commentHold": 120,
+      "afterComment": 45,
+      "afterFollow": 30,
+      "countdownHard": 120
+    },
+    "music": {
+      "idle": 0.45,
+      "thinking": 0.3,
+      "speech": 0.2
+    },
+    "finalMix": {
+      "version": "final-mix-concise-v1",
+      "integratedLUFS": -14,
+      "truePeakDbTP": -1.5,
+      "loudnessRangeLU": 11,
+      "integratedToleranceLU": 0.5,
+      "truePeakMeterToleranceDb": 0.1,
+      "encoderHeadroomDb": 0.3
+    },
+    "editorial": "concise-explanations-v1",
+    "advisoryDurationSeconds": [
+      75,
+      85
+    ],
+    "minimumDurationSeconds": 65
+  },
+  "brief": {
+    "status": "seed-only; objectives/context await the existing generation request",
+    "value": {
+      "scenario": "Beginner Korean ordering dinner at a restaurant",
+      "audience": "English-speaking adults learning practical beginner Korean for travel",
+      "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+      "backgroundAssetId": "generated-restaurant-379962e8db662f67",
+      "scenarioType": "restaurant"
+    }
+  },
+  "acceptance": {
+    "valid": false,
+    "kind": "automated"
+  },
+  "assets": {
+    "background": {
+      "id": "generated-restaurant-379962e8db662f67",
+      "file": "backgrounds/generated-restaurant-379962e8db662f67.png",
+      "sha256": "a9405bcdcc310ef167f3918ff66282cc308c4b5cc59c61303e3a0933e0b3aa7b",
+      "scenarioType": "restaurant",
+      "selection": "developer-selected",
+      "scenarioLabel": "AT A KOREAN RESTAURANT",
+      "framing": {
+        "scale": 1.02,
+        "origin": "50% 0%"
+      }
+    },
+    "image": {
+      "binding": {
+        "assetId": "generated-restaurant-379962e8db662f67"
+      },
+      "asset": {
+        "id": "generated-restaurant-379962e8db662f67",
+        "file": "backgrounds/generated-restaurant-379962e8db662f67.png",
+        "sha256": "a9405bcdcc310ef167f3918ff66282cc308c4b5cc59c61303e3a0933e0b3aa7b",
+        "scenarioType": "restaurant",
+        "selection": "developer-selected",
+        "scenarioLabel": "AT A KOREAN RESTAURANT",
+        "framing": {
+          "scale": 1.02,
+          "origin": "50% 0%"
+        }
+      },
+      "action": "reuse",
+      "maximumRequests": 0,
+      "conservativeBoundUSD": 0,
+      "providerCalls": 0,
+      "billingNote": "Fixed portrait/quality, one request with SDK retries disabled. Image output has no max-token parameter; allowance is a conservative planning estimate, not an invoice guarantee."
+    },
+    "music": {
+      "file": "audio/music/subtle-bass-loop.wav",
+      "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+      "durationSeconds": 60.390375
+    }
+  },
+  "hashes": {
+    "content": "f133141433cffe2be715e42ad87e6f5a7e9e6330a619052708f1f72d4be4bbff",
+    "speech": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "voice": "e17f91f21097ec732988cfdef62ab96eecaf6164f47217f10f311a393e1772a8",
+    "presentation": "f5dc9016c31e265bd56204c16af843aced2af92389cd518c44e51e1a1ecb4acb",
+    "audioProcessing": "037433f06cfa6357591ebb0e3a67ea084fbc8766a3e0bbc16588e93b607985e1",
+    "alignment": "bbe38a4ca7157f14d348a966649537f6613ac5b4d8db490ef592a236c2b89d2c",
+    "grouping": "f27779ad3975c335730a03f3744be96f68e5ce43c4144bc48058346473ee872f",
+    "background": "a9405bcdcc310ef167f3918ff66282cc308c4b5cc59c61303e3a0933e0b3aa7b",
+    "music": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+    "variety": "a1148b7ee4d0d1b3ef777f85619ba4cea33b33c655973f73076ef2b3a9666c2d",
+    "productionPreset": "6e221d4ddc316f09def0b46b0244f3bf16df1727e6a705d1629cdb433d267e7b"
+  },
+  "blockers": [],
+  "inventory": [],
+  "verifiedCacheHits": 0,
+  "alignmentCacheHits": 0,
+  "stages": {
+    "image": {
+      "wouldRun": false,
+      "provider": "OpenAI Images",
+      "maximumRequests": 0,
+      "conservativeBoundUSD": 0
+    },
+    "generation": {
+      "wouldRun": true,
+      "provider": "OpenAI",
+      "maximumRequests": 2,
+      "conservativeBoundUSD": 0.0376,
+      "derivesBriefInSameRequest": true,
+      "separateBriefPlanningCalls": 0
+    },
+    "review": {
+      "wouldRun": true,
+      "provider": "OpenAI",
+      "maximumRequests": 3,
+      "conservativeBoundUSD": 0.0564
+    },
+    "tts": {
+      "wouldRun": null,
+      "provider": "Google Cloud Chirp 3 HD",
+      "maximumRequests": 38,
+      "exactUncachedCharacters": null,
+      "estimatedNewSynthesisUSD": null,
+      "conservativeBoundUSD": 0.13122,
+      "basis": "Conditional schema text-length ceiling; exact narration and cache availability do not exist yet"
+    },
+    "alignment": {
+      "wouldRun": true,
+      "provider": null,
+      "costUSD": 0
+    },
+    "render": {
+      "wouldRun": true,
+      "provider": null,
+      "costUSD": 0
+    }
+  },
+  "conservativeTotalUSD": 0.22522,
+  "pricing": {
+    "checked": "2026-11-10",
+    "verifyAgainBy": "2026-11-17",
+    "chirpUSDPerCharacter": 0.00003,
+    "googleSource": "https://cloud.google.com/text-to-speech/pricing",
+    "openaiSource": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+  },
+  "providerCalls": 0,
+  "note": "Dry run: no generation, synthesis, alignment or render. Cache hits require checksum, identity, duration and decode checks; estimates for ungenerated content are conditional."
+}

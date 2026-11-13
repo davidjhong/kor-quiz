@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "budgetId": "p6-fe9dfad80d55827b8167-generation",
+  "capUnits": 37600000,
+  "createdAt": "2026-11-12T23:58:00.831Z",
+  "pricing": "gpt-6-luna-2026-11-04",
+  "scenarios": {
+    "production-video-20261112-bf4b8311": {
+      "intentHash": "e83829e972cc3c5683677b8313a81812c76dfc50025011fd0d9ea03f90b1947f",
+      "directory": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\generated\\7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
+      "attempts": [
+        {
+          "number": 1,
+          "state": "valid",
+          "reservedUnits": 18800000,
+          "chargedUnits": 3085375,
+          "startedAt": "2026-11-12T23:58:00.837Z",
+          "usage": {
+            "inputTokens": 2475,
+            "outputTokens": 5552,
+            "totalTokens": 8027,
+            "reasoningTokens": 3827,
+            "cachedInputTokens": 0
+          },
+          "requestId": "req_a109b296123e4dfaaf070197cb047441",
+          "returnedModel": "gpt-6-luna",
+          "errors": []
+        }
+      ]
+    }
+  }
+}

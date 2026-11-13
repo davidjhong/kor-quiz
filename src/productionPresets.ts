@@ -1,5 +1,5 @@
 import {z} from 'zod';
-export const productionPresetName=z.enum(['legacy-v1','concise-v1']);
+export const productionPresetName=z.enum(['legacy-v1','concise-v1','concise-v2']);
 export type ProductionPresetName=z.infer<typeof productionPresetName>;
 export type TimingSettings={fps:number;openingMinimum:number;readingMinimum:number;countdown:number;countdownHard?:number;
   revealMinimum:number;settlePause:number;afterHook:number;afterQuestion:number;answerGap:number;afterExplanation:number;
@@ -12,11 +12,12 @@ export type FinalMixSettings={version:string;integratedLUFS:number;truePeakDbTP:
 /** Missing fields explicitly mean legacy behavior. New video jobs persist concise-v1. */
 export const resolveProductionPreset=(id:ProductionPresetName='legacy-v1',countdownSeconds?:5)=>{
   productionPresetName.parse(id);if(countdownSeconds!==undefined&&countdownSeconds!==5)throw new Error('Explicit countdown override must be 5 seconds');
-  const concise=id==='concise-v1';
+  const concise=id!=='legacy-v1',boost=id==='concise-v2'?10**(3/20):1;
   return {id,timing:{...LEGACY_TIMING,...(concise?{readingMinimum:90,countdown:90,countdownHard:120,revealMinimum:0,
       afterHook:9,afterQuestion:9,answerGap:9,afterExplanation:15,transition:10}:{}),
       ...(countdownSeconds?{countdown:150,countdownHard:150}:{})},
-    music:{idle:concise?0.45:0.25,thinking:concise?0.30:0.14,speech:concise?0.20:0.10},
+    music:{idle:(concise?0.45:0.25)*boost,thinking:(concise?0.30:0.14)*boost,speech:(concise?0.20:0.10)*boost},
+    ...(id==='concise-v2'?{mixVersion:'source-music-plus3-v1',relativeMusicDb:3}:{}),
     finalMix:concise?LOUDNESS_CONCISE:null,editorial:concise?'concise-explanations-v1' as const:null,
     advisoryDurationSeconds:concise?[75,85]:null,minimumDurationSeconds:65};
 };

@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "intentHash": "e83829e972cc3c5683677b8313a81812c76dfc50025011fd0d9ea03f90b1947f",
+  "inputsHash": "b2b20b1961232cbc2ed72af8bcaa9fb60bf9331059dfa9c8f487efeeb8b6130e",
+  "budgetId": "p6-fe9dfad80d55827b8167-generation",
+  "episodeId": "production-video-20261112-bf4b8311",
+  "promptVersion": "pipeline-concise-generation-v1-scenario",
+  "schemaVersion": "pipeline-concise-education-v1-scenario",
+  "deriveBrief": true,
+  "initialContentHash": "12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4",
+  "status": "valid",
+  "requestedModel": "gpt-6-luna",
+  "returnedModel": "gpt-6-luna",
+  "attempts": 1
+}

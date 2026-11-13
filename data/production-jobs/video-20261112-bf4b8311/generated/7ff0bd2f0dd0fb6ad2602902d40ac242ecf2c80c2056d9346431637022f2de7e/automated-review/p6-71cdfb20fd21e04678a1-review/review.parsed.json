@@ -1,0 +1,77 @@
+{
+  "questions": [
+    {
+      "questionId": "production-video-20261112-bf4b8311-q1",
+      "checks": {
+        "naturalKorean": "pass",
+        "uniqueAnswer": "pass",
+        "romanization": "pass",
+        "meaningExplanation": "pass",
+        "englishNarration": "pass",
+        "bonusIsolation": "pass"
+      },
+      "findings": []
+    },
+    {
+      "questionId": "production-video-20261112-bf4b8311-q2",
+      "checks": {
+        "naturalKorean": "pass",
+        "uniqueAnswer": "pass",
+        "romanization": "pass",
+        "meaningExplanation": "pass",
+        "englishNarration": "pass",
+        "bonusIsolation": "pass"
+      },
+      "findings": []
+    },
+    {
+      "questionId": "production-video-20261112-bf4b8311-q3",
+      "checks": {
+        "naturalKorean": "pass",
+        "uniqueAnswer": "pass",
+        "romanization": "pass",
+        "meaningExplanation": "pass",
+        "englishNarration": "pass",
+        "bonusIsolation": "pass"
+      },
+      "findings": []
+    },
+    {
+      "questionId": "production-video-20261112-bf4b8311-q4",
+      "checks": {
+        "naturalKorean": "pass",
+        "uniqueAnswer": "pass",
+        "romanization": "pass",
+        "meaningExplanation": "pass",
+        "englishNarration": "pass",
+        "bonusIsolation": "pass"
+      },
+      "findings": []
+    },
+    {
+      "questionId": "production-video-20261112-bf4b8311-q5",
+      "checks": {
+        "naturalKorean": "pass",
+        "uniqueAnswer": "pass",
+        "romanization": "pass",
+        "meaningExplanation": "pass",
+        "englishNarration": "pass",
+        "bonusIsolation": "pass"
+      },
+      "findings": []
+    },
+    {
+      "questionId": "production-video-20261112-bf4b8311-q6",
+      "checks": {
+        "naturalKorean": "pass",
+        "uniqueAnswer": "pass",
+        "romanization": "pass",
+        "meaningExplanation": "pass",
+        "englishNarration": "pass",
+        "bonusIsolation": "pass"
+      },
+      "findings": []
+    }
+  ],
+  "resolutions": []
+}

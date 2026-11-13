@@ -1,3 +1,5 @@
+import {visualVarietySchema} from './variety.ts';
+import {renderMusicSchema,renderAmbienceSchema} from './musicLibrary.ts';
 import {z} from 'zod';
 import {draftQuizSchema} from './draftSchema.ts';
 import {preparedNarrationSchema,validatePreparedNarrationPlan} from './narration.ts';
@@ -13,9 +15,9 @@ export const runtimeQuiz=(quiz:z.infer<typeof draftQuizSchema>):QuizInput=>({...
   backgroundAssetId:quiz.backgroundAssetId??undefined,questions:quiz.questions.map((q,i)=>i<5?q:{...q,correctAnswerIndex:0,explanation:'Withheld'})} as QuizInput);
 export const productionPropsSchema=z.strictObject({quiz:draftQuizSchema,narration:preparedNarrationSchema,
   productionPreset:productionPresetName.optional(),countdownSeconds:z.literal(5).optional(),
-  background:renderBackgroundSchema.optional(),
+  background:renderBackgroundSchema.optional(),variety:visualVarietySchema.optional(),
   presentation:presentationSchema,phraseCaptions:z.array(phraseSchema),displayCues:displayCuesSchema.optional(),
-  music:z.strictObject({file:z.string(),sha256:z.string(),durationSeconds:z.number().positive()}).nullable()}).superRefine((p,ctx)=>{
+  music:renderMusicSchema.nullable(),ambience:renderAmbienceSchema.optional()}).superRefine((p,ctx)=>{
   try{
     if(p.background&&p.background.id!==p.quiz.backgroundAssetId)throw new Error('Background props do not match the content binding');
     const quiz=runtimeQuiz(p.quiz);validatePreparedNarrationPlan(quiz,p.narration);

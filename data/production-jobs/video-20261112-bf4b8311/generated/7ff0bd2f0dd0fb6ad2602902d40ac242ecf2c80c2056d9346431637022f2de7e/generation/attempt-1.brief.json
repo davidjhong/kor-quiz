@@ -1,0 +1,16 @@
+{
+  "scenario": "Beginner Korean shopping at a convenience store: finding a snack, asking the price, requesting a bag, and paying by card.",
+  "audience": "English-speaking adults learning practical beginner Korean for travel",
+  "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+  "backgroundAssetId": "generated-convenience-store-65e1f2f0e192749f",
+  "scenarioType": "convenience-store",
+  "context": "A beginner traveler shops at a convenience store, finds and checks snacks, requests a bag, and pays at checkout.",
+  "learningObjectives": [
+    "Ask a clerk where a specific snack is.",
+    "Ask the price of a snack you are holding.",
+    "Request exactly one shopping bag.",
+    "Tell the cashier you will pay by card.",
+    "Ask whether a snack is spicy.",
+    "Request a recommendation for a non-spicy snack."
+  ]
+}

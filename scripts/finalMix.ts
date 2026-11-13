@@ -8,12 +8,12 @@ export const assertFinalMix=(m:{integratedLUFS:number;truePeakDbTP:number},setti
     ||m.truePeakDbTP>settings.truePeakDbTP+settings.truePeakMeterToleranceDb)
     throw new Error(`Encoded final mix fails ${settings.version}: I=${m.integratedLUFS} LUFS, TP=${m.truePeakDbTP} dBTP; target ${settings.integratedLUFS} ±${settings.integratedToleranceLU} LU, ceiling ${settings.truePeakDbTP} +${settings.truePeakMeterToleranceDb} dB meter tolerance. Previous output preserved.`);
 };
-export const normalizeFinalMix=async(input:string,output:string,duration:number,settings?:FinalMixSettings)=>{
+export const normalizeFinalMix=async(input:string,output:string,duration:number,settings?:FinalMixSettings,inputFilter='')=>{
   const target=settings??{version:'legacy-final-mix-v1',integratedLUFS:-16,truePeakDbTP:-2,loudnessRangeLU:11,integratedToleranceLU:0.5,truePeakMeterToleranceDb:0};
   // Leave documented AAC encoder headroom while enforcing the named final ceiling.
   const processingTarget={...target,truePeakDbTP:target.truePeakDbTP-(settings?.encoderHeadroomDb??0)};
-  const before=await measureAudio(input,processingTarget),m=before.raw;
-  const filter=`loudnorm=I=${processingTarget.integratedLUFS}:TP=${processingTarget.truePeakDbTP}:LRA=${processingTarget.loudnessRangeLU}:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true`;
+  const before=await measureAudio(input,processingTarget,inputFilter),m=before.raw;
+  const filter=(inputFilter?inputFilter+',':'')+`loudnorm=I=${processingTarget.integratedLUFS}:TP=${processingTarget.truePeakDbTP}:LRA=${processingTarget.loudnessRangeLU}:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true`;
   const encode=(file:string,gain=0)=>runRemotion(['ffmpeg','-v','error','-xerror','-i',input,'-map','0:v:0?','-map','0:a:0','-c:v','copy',
     '-af',filter+(gain?`,volume=${gain}dB`:''),'-c:a','aac','-b:a','192k','-ar','48000','-t',String(duration),file],true,120000);
   await encode(output);let after=await measureAudio(output,target),calibrationGainDb=0;

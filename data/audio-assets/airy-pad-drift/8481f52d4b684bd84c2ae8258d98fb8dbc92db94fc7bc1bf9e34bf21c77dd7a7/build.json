@@ -1,0 +1,107 @@
+{
+  "entry": {
+    "id": "airy-pad-drift",
+    "title": "Airy Pad Drift",
+    "kind": "music",
+    "asset": {
+      "file": "audio/music/airy-pad-drift-8481f52d4b68.wav",
+      "sha256": "98097906870ba2a629c3df9993e235bb0a0b7b2b0cd6ac4f1840d27d53c8ea68",
+      "durationSeconds": 54.857145833333334,
+      "mixTrimDb": -2.5,
+      "mixVersion": "local-bed-trim-v1"
+    },
+    "frames": 2633143,
+    "sampleRate": 48000,
+    "channels": 2,
+    "bits": 16,
+    "tempoBPM": 70,
+    "bars": 16,
+    "key": "C major",
+    "mood": "spacious, calm pads",
+    "seed": "korean-quiz-local-library-v1",
+    "generationVersion": "local-instrumentals-v1",
+    "rawSha256": "554f1e9dd21ee0b1b99947522764c8f1dcc64b644b66f949fd774661f88c5f37",
+    "synthesis": {
+      "version": "local-instrumentals-v1",
+      "id": "airy-pad-drift",
+      "seed": "korean-quiz-local-library-v1",
+      "recipe": {
+        "title": "Airy Pad Drift",
+        "kind": "music",
+        "bpm": 70,
+        "bars": 16,
+        "key": "C major",
+        "mood": "spacious, calm pads",
+        "trimDb": -2.5
+      },
+      "sampleRate": 48000,
+      "channels": 2,
+      "bits": 16,
+      "loop": "circular tails; periodic noise overlap, duration retained; music phase offset 0.75 beat"
+    },
+    "processing": {
+      "version": "loop-static-lufs-v1",
+      "targetLUFS": -20,
+      "toleranceLU": 0.6,
+      "ceilingDbTP": -3,
+      "meterToleranceDb": 0.05,
+      "rate": 48000,
+      "channels": 2,
+      "bits": 16,
+      "gainDb": -6.630000000000001,
+      "before": {
+        "integratedLUFS": -13.37,
+        "truePeakDbTP": -2.85,
+        "loudnessRangeLU": 1,
+        "raw": {
+          "input_i": "-13.37",
+          "input_tp": "-2.85",
+          "input_lra": "1.00",
+          "input_thresh": "-23.37",
+          "output_i": "-16.10",
+          "output_tp": "-5.77",
+          "output_lra": "0.90",
+          "output_thresh": "-26.10",
+          "normalization_type": "dynamic",
+          "target_offset": "0.10"
+        }
+      },
+      "seamStrategy": "circular note tails; duration-preserving periodic noise overlap; static gain; no temporal compression"
+    },
+    "runtime": {
+      "node": "v22.13.1",
+      "ffmpeg": "ffmpeg version n7.1 Copyright (c) 2000-2024 the FFmpeg developers",
+      "platform": "win32"
+    },
+    "measurements": {
+      "integratedLUFS": -20.01,
+      "truePeakDbTP": -9.48,
+      "loudnessRangeLU": 1
+    },
+    "seam": {
+      "wrapJump": 0.000946044921875,
+      "derivativeChange": 0.001068115234375,
+      "nearbyMaxDerivative": 0.021453857421875,
+      "edgeEnergyDifferenceDb": -0.3546655712213137
+    },
+    "spectral": {
+      "method": "96-window Hann Welch, 2048 points, stereo mid",
+      "below200HzFraction": 0.17131834615874775,
+      "between200And4000HzFraction": 0.8286816473218944,
+      "lowPhoneBandFlag": false,
+      "limitation": "Energy heuristic only; no listening, speaker response, masking or quality assessment."
+    },
+    "provenance": {
+      "method": "repository-procedural-synthesis",
+      "sourceCode": "scripts/localMusicSynthesis.ts",
+      "samples": "none",
+      "paidServices": 0,
+      "rightsStatus": "Repository-generated procedural asset. No third-party samples or rights clearance claimed; copyright and Content ID risk are not guaranteed absent.",
+      "attribution": "No third-party attribution requirement identified; retain this generation provenance."
+    }
+  },
+  "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\audio-assets\\airy-pad-drift\\8481f52d4b684bd84c2ae8258d98fb8dbc92db94fc7bc1bf9e34bf21c77dd7a7\\raw.wav",
+  "rawSha256": "554f1e9dd21ee0b1b99947522764c8f1dcc64b644b66f949fd774661f88c5f37",
+  "processedSha256": "98097906870ba2a629c3df9993e235bb0a0b7b2b0cd6ac4f1840d27d53c8ea68",
+  "providerCalls": 0
+}

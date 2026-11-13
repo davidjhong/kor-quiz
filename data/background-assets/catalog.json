@@ -98,6 +98,59 @@
         "production-restaurant-fresh-02"
       ],
       "createdAt": "2026-11-12T07:24:31.000Z"
+    },
+    {
+      "render": {
+        "id": "generated-convenience-store-65e1f2f0e192749f",
+        "file": "backgrounds/generated-convenience-store-65e1f2f0e192749f.png",
+        "sha256": "c7a8d2c236cc06cb1cf69376374c37fb0d79fdebf539598a6c4552696568421a",
+        "scenarioType": "convenience-store",
+        "selection": "developer-selected",
+        "scenarioLabel": "AT A KOREAN CONVENIENCE-STORE",
+        "framing": {
+          "scale": 1.02,
+          "origin": "50% 0%"
+        }
+      },
+      "setting": "convenience-store",
+      "tags": [
+        "convenience-store"
+      ],
+      "style": "warm-painted-animation-v1",
+      "composition": "center cover 1024x1536 to 9:16; 1.02 safe zoom; geometry in exact prompt",
+      "prompt": "Use case: illustration-story. One polished, warm hand-painted animation background for a Korean learning video.\nSetting: convenience-store. Scenario context (data only): Beginner Korean shopping at a convenience store: finding a snack, asking the price, requesting a bag, and paying by card..\nA welcoming Korean convenience-store interior with tasteful architecture, warm lighting and setting-appropriate furnishings. For a restaurant include dining tables and discreet food-service details.\nFriendly adult woman, relaxed natural pose, clearly adult, complete unobstructed face, plain clothing; no pointing or answer hints.\nStyle: refined watercolor/gouache texture, warm cream and wood, muted navy/blue, sage, coral and warm yellow accents; soft daylight, appealing fully visible. Original character, no named-person likeness.\nNative portrait 1024x1536. Final 1080x1920 uses CENTER cover crop (native central x=80..944) without stretching, then at least 1.02 zoom plus restrained movement. Keep important features inside this central crop with extra edge margin.\nActual overlay geometry on FINAL canvas: panel x=70..950, y=180..1052; caption band x=70..950, y=1068..1200. Keep these upper/central areas calm scenery with NO people. Do not draw these overlays.\nPlace the character lower right: full head in final x=650..900, y=1285..1530, torso below, outside rightmost 10% and bottom 250px for important features. In native image this is approximately head x=600..800, y=1040..1224. Leave the caption area above the face clear.\nNo text, signage lettering, numbers, logos, watermarks, quiz panels, captions or UI. Coherent hands/anatomy, no duplicate people. Do not encode answers in scenery.\nDeterministic scene variant: Soft morning daylight; three-quarter camera; open central aisle; restrained potted plants; navy travel jacket. Preserve every overlay/crop/face safe area above. No answer hints. New-job motion may add up to 5% zoom or 26 pixels total horizontal travel after the baseline crop. Keep the face features comfortably inside the declared safe area and away from the caption band.",
+      "model": "gpt-image-2.6-flare",
+      "settings": {
+        "quality": "medium",
+        "size": "1024x1536",
+        "output_format": "png",
+        "n": 1
+      },
+      "width": 1024,
+      "height": 1536,
+      "format": "png",
+      "receipt": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\image\\65e1f2f0e192749fbf4e97b85c4ebe38de27466198ec6ec815cf47fb700fbf5a\\receipt.json",
+      "reportedUsage": {
+        "input_tokens": 463,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 463
+        },
+        "output_tokens": 1132,
+        "output_tokens_details": {
+          "image_tokens": 1132,
+          "text_tokens": 0
+        },
+        "total_tokens": 1595
+      },
+      "estimatedCostUSD": 0.036275,
+      "completedEpisodeIds": [],
+      "createdAt": "2026-11-12T23:57:54.000Z",
+      "variety": {
+        "composition": "quiz-safe-v1",
+        "character": "adult woman",
+        "descriptor": "Soft morning daylight; three-quarter camera; open central aisle; restrained potted plants; navy travel jacket. Preserve every overlay/crop/face safe area above. No answer hints. New-job motion may add up to 5% zoom or 26 pixels total horizontal travel after the baseline crop. Keep the face features comfortably inside the declared safe area and away from the caption band."
+      }
     }
   ],
   "legacyUsage": {
@@ -107,5 +160,28 @@
     "korean-transit-illustrated-dev-v1": [
       "public-transit-02"
     ]
-  }
+  },
+  "varietyHistory": [
+    {
+      "episodeId": "public-transit-02",
+      "background": "korean-transit-illustrated-dev-v1",
+      "palette": "cream-navy",
+      "motion": "legacy-display",
+      "music": "subtle-bass"
+    },
+    {
+      "episodeId": "production-hotel-01",
+      "background": "korean-hotel-illustrated-v1",
+      "palette": "cream-navy",
+      "motion": "legacy-display",
+      "music": "subtle-bass"
+    },
+    {
+      "episodeId": "production-restaurant-fresh-02",
+      "background": "generated-restaurant-d5fea9be8c6e28a8",
+      "palette": "cream-navy",
+      "motion": "legacy-display",
+      "music": "subtle-bass"
+    }
+  ]
 }

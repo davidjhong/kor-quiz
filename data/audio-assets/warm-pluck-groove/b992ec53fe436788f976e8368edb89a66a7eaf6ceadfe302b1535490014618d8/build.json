@@ -1,0 +1,107 @@
+{
+  "entry": {
+    "id": "warm-pluck-groove",
+    "title": "Warm Pluck Groove",
+    "kind": "music",
+    "asset": {
+      "file": "audio/music/warm-pluck-groove-b992ec53fe43.wav",
+      "sha256": "f82108343d2cc97a3e04601d7e2defdb102adf3b16f225dc3b9169cdd1d50047",
+      "durationSeconds": 50,
+      "mixTrimDb": -3,
+      "mixVersion": "local-bed-trim-v1"
+    },
+    "frames": 2400000,
+    "sampleRate": 48000,
+    "channels": 2,
+    "bits": 16,
+    "tempoBPM": 96,
+    "bars": 20,
+    "key": "C major",
+    "mood": "light, friendly plucks",
+    "seed": "korean-quiz-local-library-v1",
+    "generationVersion": "local-instrumentals-v1",
+    "rawSha256": "1586b70140399f95f917079568320650812cc7e54d2f370584ac6c62aa60def7",
+    "synthesis": {
+      "version": "local-instrumentals-v1",
+      "id": "warm-pluck-groove",
+      "seed": "korean-quiz-local-library-v1",
+      "recipe": {
+        "title": "Warm Pluck Groove",
+        "kind": "music",
+        "bpm": 96,
+        "bars": 20,
+        "key": "C major",
+        "mood": "light, friendly plucks",
+        "trimDb": -3
+      },
+      "sampleRate": 48000,
+      "channels": 2,
+      "bits": 16,
+      "loop": "circular tails; periodic noise overlap, duration retained; music phase offset 0.75 beat"
+    },
+    "processing": {
+      "version": "loop-static-lufs-v1",
+      "targetLUFS": -20,
+      "toleranceLU": 0.6,
+      "ceilingDbTP": -3,
+      "meterToleranceDb": 0.05,
+      "rate": 48000,
+      "channels": 2,
+      "bits": 16,
+      "gainDb": -0.19999999999999973,
+      "before": {
+        "integratedLUFS": -20.04,
+        "truePeakDbTP": -2.85,
+        "loudnessRangeLU": 2.2,
+        "raw": {
+          "input_i": "-20.04",
+          "input_tp": "-2.85",
+          "input_lra": "2.20",
+          "input_thresh": "-30.06",
+          "output_i": "-16.07",
+          "output_tp": "-2.00",
+          "output_lra": "2.00",
+          "output_thresh": "-26.08",
+          "normalization_type": "dynamic",
+          "target_offset": "0.07"
+        }
+      },
+      "seamStrategy": "circular note tails; duration-preserving periodic noise overlap; static gain; no temporal compression"
+    },
+    "runtime": {
+      "node": "v22.13.1",
+      "ffmpeg": "ffmpeg version n7.1 Copyright (c) 2000-2024 the FFmpeg developers",
+      "platform": "win32"
+    },
+    "measurements": {
+      "integratedLUFS": -20.24,
+      "truePeakDbTP": -3.05,
+      "loudnessRangeLU": 2.2
+    },
+    "seam": {
+      "wrapJump": 0.005615234375,
+      "derivativeChange": 0.000152587890625,
+      "nearbyMaxDerivative": 0.007598876953125,
+      "edgeEnergyDifferenceDb": 0.6402762352343447
+    },
+    "spectral": {
+      "method": "96-window Hann Welch, 2048 points, stereo mid",
+      "below200HzFraction": 0.5056822926922308,
+      "between200And4000HzFraction": 0.4942414831671861,
+      "lowPhoneBandFlag": false,
+      "limitation": "Energy heuristic only; no listening, speaker response, masking or quality assessment."
+    },
+    "provenance": {
+      "method": "repository-procedural-synthesis",
+      "sourceCode": "scripts/localMusicSynthesis.ts",
+      "samples": "none",
+      "paidServices": 0,
+      "rightsStatus": "Repository-generated procedural asset. No third-party samples or rights clearance claimed; copyright and Content ID risk are not guaranteed absent.",
+      "attribution": "No third-party attribution requirement identified; retain this generation provenance."
+    }
+  },
+  "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\audio-assets\\warm-pluck-groove\\b992ec53fe436788f976e8368edb89a66a7eaf6ceadfe302b1535490014618d8\\raw.wav",
+  "rawSha256": "1586b70140399f95f917079568320650812cc7e54d2f370584ac6c62aa60def7",
+  "processedSha256": "f82108343d2cc97a3e04601d7e2defdb102adf3b16f225dc3b9169cdd1d50047",
+  "providerCalls": 0
+}

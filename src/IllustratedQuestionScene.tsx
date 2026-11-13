@@ -1,6 +1,6 @@
 import {interpolateColors, useCurrentFrame} from 'remotion';
 import {FittedText} from './FittedText';
-import {ILLUSTRATED_THEME} from './illustratedTheme';
+import {useIllustratedTheme} from './Palette';
 import {getIllustratedQuestionState, PREVIEW_QUESTION_TIMELINE} from './questionTiming';
 import {getChoiceHangul, getChoiceRomanization, type QuizQuestion} from './quizSchema';
 import {IllustratedPanel} from './IllustratedFrame';
@@ -40,7 +40,7 @@ export const IllustratedQuestionScene = ({question, questionIndex, questionCount
   const frame = useCurrentFrame();
   const state = getIllustratedQuestionState(frame - settleFrames, bonus, questionTimeline);
   const revealed = state.phase === 'reveal';
-  const {colors, panel, slots, answers} = ILLUSTRATED_THEME;
+  const {colors, panel, slots, answers} = useIllustratedTheme();
   const [promptHeight, setPromptHeight] = useState(150);
   const [contextHeight, setContextHeight] = useState(question.context ? 36 : 0);
   const measuredPrompt = useCallback((height: number) => setPromptHeight(height), []);

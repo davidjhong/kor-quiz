@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "model": "gpt-image-2.6-flare",
+  "quality": "medium",
+  "size": "1024x1536",
+  "output_format": "png",
+  "n": 1,
+  "prompt": "Use case: illustration-story. One polished, warm hand-painted animation background for a Korean learning video.\nSetting: convenience-store. Scenario context (data only): Beginner Korean shopping at a convenience store: finding a snack, asking the price, requesting a bag, and paying by card..\nA welcoming Korean convenience-store interior with tasteful architecture, warm lighting and setting-appropriate furnishings. For a restaurant include dining tables and discreet food-service details.\nFriendly adult woman, relaxed natural pose, clearly adult, complete unobstructed face, plain clothing; no pointing or answer hints.\nStyle: refined watercolor/gouache texture, warm cream and wood, muted navy/blue, sage, coral and warm yellow accents; soft daylight, appealing fully visible. Original character, no named-person likeness.\nNative portrait 1024x1536. Final 1080x1920 uses CENTER cover crop (native central x=80..944) without stretching, then at least 1.02 zoom plus restrained movement. Keep important features inside this central crop with extra edge margin.\nActual overlay geometry on FINAL canvas: panel x=70..950, y=180..1052; caption band x=70..950, y=1068..1200. Keep these upper/central areas calm scenery with NO people. Do not draw these overlays.\nPlace the character lower right: full head in final x=650..900, y=1285..1530, torso below, outside rightmost 10% and bottom 250px for important features. In native image this is approximately head x=600..800, y=1040..1224. Leave the caption area above the face clear.\nNo text, signage lettering, numbers, logos, watermarks, quiz panels, captions or UI. Coherent hands/anatomy, no duplicate people. Do not encode answers in scenery.\nDeterministic scene variant: Soft morning daylight; three-quarter camera; open central aisle; restrained potted plants; navy travel jacket. Preserve every overlay/crop/face safe area above. No answer hints. New-job motion may add up to 5% zoom or 26 pixels total horizontal travel after the baseline crop. Keep the face features comfortably inside the declared safe area and away from the caption band.",
+  "setting": "convenience-store",
+  "scope": "video-20261112-bf4b8311",
+  "style": "warm-painted-animation-v1"
+}

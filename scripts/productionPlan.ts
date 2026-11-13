@@ -1,3 +1,5 @@
+import {validateLocalBed} from './audioLibrary.ts';
+import {assertVarietyConfiguration,type VarietyOptions,type VarietySelection} from './varietySelection.ts';
 import {readFile,stat,access,realpath} from 'node:fs/promises';
 import {join,resolve} from 'node:path';
 import {z} from 'zod';
@@ -20,10 +22,11 @@ import {planBackground,type BackgroundOptions,type BackgroundBinding} from './ba
 import {catalogAsset} from './backgroundCatalog.ts';
 import {resolveVoiceProfileFile} from './voiceProfiles.ts';
 export type SourceBundle=Awaited<ReturnType<typeof readDraft>>;
-export type ProduceConfig={source:{kind:'draft'|'brief';path:string}|ScenarioSource;output:string;reviewMode:'automated'|'manual';
+export type ProduceConfig={varietyOptions?:VarietyOptions;varietyVersion?:'variety-v2';variety?:VarietySelection;characterExplicit?:boolean;source:{kind:'draft'|'brief';path:string}|ScenarioSource;output:string;reviewMode:'automated'|'manual';
   voiceFile:string;presentationFile:string;noMusic:boolean;model:string;maxOutputTokens:number;
   backgroundOptions?:BackgroundOptions;backgroundBinding?:BackgroundBinding;productionPreset?:ProductionPresetName;countdownSeconds?:5;musicTrackId?:ProductionMusicId;contentPolicy?:'concise-explanations-v1'};
 export const productionSettings=async(config:ProduceConfig,root:string)=>{
+  if(config.variety)assertVarietyConfiguration(config.variety);
   const raw=await readJsonFile(resolve(root,resolveVoiceProfileFile(config.voiceFile))) as {profile?:unknown};
   const voice=voiceProfileSchema.parse(raw.profile??raw);
   if(voice.model!=='chirp3-hd')throw new Error('Production supports the verified Chirp EN/KO profiles; Gemini audition access/reservations are separate');
@@ -93,7 +96,11 @@ export const planProduction=async(config:ProduceConfig,root:string,override?:Sou
   const image=config.backgroundOptions?await planBackground(root,bundle?.draft.brief??source.brief,config.output,config.backgroundOptions,config.backgroundBinding):undefined;
   try{background=await checkMatchingBackground(bundle?.draft.brief??source.brief,root);}catch(e){
     if(image?.action!=='generate')blockers.push(source.deriveBrief?scenarioBackgroundRequirement(bundle?.draft.brief??source.brief)??(e as Error).message:(e as Error).message);}
-  let music=null;try{music=await loadProductionMusic(config.musicTrackId,settings.presentation.backgroundAudio,root);}catch(e){blockers.push((e as Error).message);}
+  if(config.variety?.checksums.background&&background?.sha256!==config.variety.checksums.background)blockers.push('Persisted variety background checksum changed; restore the selected asset');
+  let music=null;try{music=await loadProductionMusic(config.musicTrackId,settings.presentation.backgroundAudio,root,config.variety?.audio?.music);}catch(e){blockers.push((e as Error).message);}
+  const ambience=config.variety?.audio?.ambience??undefined;
+  if(ambience)try{await validateLocalBed(ambience.asset,root);}catch(e){blockers.push((e as Error).message);}
+  if(config.variety?.checksums.music&&music?.sha256!==config.variety.checksums.music)blockers.push('Persisted variety music checksum changed; restore the selected track');
   if(bundle){try{if(config.reviewMode==='automated')await assertAutomatedAcceptance(bundle,root);else{await assertHumanApproval(bundle,root);if(background?.selection!=='human-approved')throw new Error('Manual review mode requires a human-approved background');}acceptance.valid=true;}
     catch(e){acceptance.error=(e as Error).message;if(config.reviewMode==='manual')blockers.push(acceptance.error);}}
   const script=bundle?{...bundle.draft.narration,profile:settings.voice}:null;
@@ -122,16 +129,17 @@ export const planProduction=async(config:ProduceConfig,root:string,override?:Sou
   const hashes={content:bundle?.contentHash??source.identity,speech:sha256(canonical(script)),voice:sha256(canonical(settings.voice)),
     presentation:sha256(canonical(settings.presentation)),audioProcessing:sha256(AUDIO_PROCESSING),alignment:sha256(canonical(ALIGNMENT_CONFIG)),
     grouping:sha256(canonical(GROUPING_CONFIG)),background:background?.sha256??null,music:music?.sha256??null,
+    ...(config.variety?{variety:sha256(canonical(config.variety))}:{}),
     ...(config.productionPreset||config.countdownSeconds?{productionPreset:sha256(canonical(settings.preset))}:{})};
-  return {version:1 as const,source,bundle,settings,script,segments,inventory,background,image,music,acceptance,blockers,hashes,stages,
+  return {version:1 as const,variety:config.variety,ambience,source,bundle,settings,script,segments,inventory,background,image,music,acceptance,blockers,hashes,stages,
     conservativeTotalUSD:stages.image.conservativeBoundUSD+stages.generation.conservativeBoundUSD+stages.review.conservativeBoundUSD+stages.tts.conservativeBoundUSD,
     verifiedCacheHits:inventory.filter(c=>c.status==='verified').length,alignmentCacheHits:inventory.filter(c=>c.alignment==='verified').length,
     newSynthesisRequests:missing.length,pricing:PRODUCTION_PRICING,providerCalls:0};
 };
 export const publicProductionPlan=(p:Awaited<ReturnType<typeof planProduction>>)=>({version:p.version,source:p.source.identity,contentHash:p.bundle?.contentHash??null,
-  preset:p.settings.preset,brief:{status:p.bundle?'validated-content':p.source.deriveBrief?'seed-only; objectives/context await the existing generation request':'supplied',
+  variety:p.variety,preset:p.settings.preset,brief:{status:p.bundle?'validated-content':p.source.deriveBrief?'seed-only; objectives/context await the existing generation request':'supplied',
     value:p.bundle?.draft.brief??p.source.brief},
-  acceptance:p.acceptance,assets:{background:p.background,image:p.image,music:p.music},hashes:p.hashes,blockers:p.blockers,
+  acceptance:p.acceptance,assets:{background:p.background,image:p.image,music:p.music,...(p.ambience?{ambience:p.ambience}:{})},hashes:p.hashes,blockers:p.blockers,
   inventory:p.inventory.map(({clip,...row})=>row),verifiedCacheHits:p.verifiedCacheHits,alignmentCacheHits:p.alignmentCacheHits,stages:p.stages,
   conservativeTotalUSD:p.conservativeTotalUSD,pricing:p.pricing,providerCalls:0,
   note:'Dry run: no generation, synthesis, alignment or render. Cache hits require checksum, identity, duration and decode checks; estimates for ungenerated content are conditional.'});

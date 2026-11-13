@@ -1,0 +1,107 @@
+{
+  "entry": {
+    "id": "gentle-rain",
+    "title": "Gentle Rain",
+    "kind": "ambience",
+    "asset": {
+      "file": "audio/music/gentle-rain-a39c30f6b957.wav",
+      "sha256": "4abd9581c80e5918d65cc1c3795e5f601758efb6040d691ce0d6e1bafe44b0a9",
+      "durationSeconds": 48,
+      "mixTrimDb": -9,
+      "mixVersion": "local-bed-trim-v1"
+    },
+    "frames": 2304000,
+    "sampleRate": 48000,
+    "channels": 2,
+    "bits": 16,
+    "tempoBPM": null,
+    "bars": null,
+    "key": null,
+    "mood": "synthetic rain-like texture",
+    "seed": "korean-quiz-local-library-v1",
+    "generationVersion": "local-instrumentals-v1",
+    "rawSha256": "efaba2e41cad4f230d0b45915e7c6e5d1fc0cdec060bdf45236b690830695517",
+    "synthesis": {
+      "version": "local-instrumentals-v1",
+      "id": "gentle-rain",
+      "seed": "korean-quiz-local-library-v1",
+      "recipe": {
+        "title": "Gentle Rain",
+        "kind": "ambience",
+        "bpm": null,
+        "bars": null,
+        "key": null,
+        "mood": "synthetic rain-like texture",
+        "trimDb": -9
+      },
+      "sampleRate": 48000,
+      "channels": 2,
+      "bits": 16,
+      "loop": "circular tails; periodic noise overlap, duration retained; music phase offset 0.75 beat"
+    },
+    "processing": {
+      "version": "loop-static-lufs-v1",
+      "targetLUFS": -20,
+      "toleranceLU": 0.6,
+      "ceilingDbTP": -3,
+      "meterToleranceDb": 0.05,
+      "rate": 48000,
+      "channels": 2,
+      "bits": 16,
+      "gainDb": -11.1,
+      "before": {
+        "integratedLUFS": -8.9,
+        "truePeakDbTP": -2.72,
+        "loudnessRangeLU": 0,
+        "raw": {
+          "input_i": "-8.90",
+          "input_tp": "-2.72",
+          "input_lra": "0.00",
+          "input_thresh": "-18.90",
+          "output_i": "-16.02",
+          "output_tp": "-9.86",
+          "output_lra": "0.10",
+          "output_thresh": "-26.02",
+          "normalization_type": "dynamic",
+          "target_offset": "0.02"
+        }
+      },
+      "seamStrategy": "circular note tails; duration-preserving periodic noise overlap; static gain; no temporal compression"
+    },
+    "runtime": {
+      "node": "v22.13.1",
+      "ffmpeg": "ffmpeg version n7.1 Copyright (c) 2000-2024 the FFmpeg developers",
+      "platform": "win32"
+    },
+    "measurements": {
+      "integratedLUFS": -20,
+      "truePeakDbTP": -13.82,
+      "loudnessRangeLU": 0
+    },
+    "seam": {
+      "wrapJump": 0.019317626953125,
+      "derivativeChange": 0.094757080078125,
+      "nearbyMaxDerivative": 0.10321044921875,
+      "edgeEnergyDifferenceDb": 0.4788837562266434
+    },
+    "spectral": {
+      "method": "96-window Hann Welch, 2048 points, stereo mid",
+      "below200HzFraction": 0.04017804753363895,
+      "between200And4000HzFraction": 0.6148848727346452,
+      "lowPhoneBandFlag": false,
+      "limitation": "Energy heuristic only; no listening, speaker response, masking or quality assessment."
+    },
+    "provenance": {
+      "method": "repository-procedural-synthesis",
+      "sourceCode": "scripts/localMusicSynthesis.ts",
+      "samples": "none",
+      "paidServices": 0,
+      "rightsStatus": "Repository-generated procedural asset. No third-party samples or rights clearance claimed; copyright and Content ID risk are not guaranteed absent.",
+      "attribution": "No third-party attribution requirement identified; retain this generation provenance."
+    }
+  },
+  "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\audio-assets\\gentle-rain\\a39c30f6b957594d858cb9ea2e51924ec3113098bf9994cc3fbc5ce7287b3710\\raw.wav",
+  "rawSha256": "efaba2e41cad4f230d0b45915e7c6e5d1fc0cdec060bdf45236b690830695517",
+  "processedSha256": "4abd9581c80e5918d65cc1c3795e5f601758efb6040d691ce0d6e1bafe44b0a9",
+  "providerCalls": 0
+}

@@ -1,0 +1,39 @@
+{
+  "frames": {
+    "hookSpeech": 60,
+    "hookHold": 30,
+    "questionSpeech": 764,
+    "readingOnly": 90,
+    "countdown": 600,
+    "answerSpeech": 217,
+    "explanationSpeech": 648,
+    "transitions": 60,
+    "revealGapsAndHolds": 150,
+    "ctaSpeech": 110,
+    "ctaPauseAndHold": 81,
+    "fade": 12
+  },
+  "seconds": {
+    "hookSpeech": 2,
+    "hookHold": 1,
+    "questionSpeech": 25.466666666666665,
+    "readingOnly": 3,
+    "countdown": 20,
+    "answerSpeech": 7.233333333333333,
+    "explanationSpeech": 21.6,
+    "transitions": 2,
+    "revealGapsAndHolds": 5,
+    "ctaSpeech": 3.6666666666666665,
+    "ctaPauseAndHold": 2.7,
+    "fade": 0.4
+  },
+  "totalFrames": 2822,
+  "totalSeconds": 94.06666666666666,
+  "minimumSeconds": 65,
+  "minimumConflict": false,
+  "advisory": [
+    75,
+    85
+  ],
+  "advisoryConflict": true
+}

@@ -1,0 +1,107 @@
+{
+  "entry": {
+    "id": "soft-room-tone",
+    "title": "Soft Room Tone",
+    "kind": "ambience",
+    "asset": {
+      "file": "audio/music/soft-room-tone-99c949555e65.wav",
+      "sha256": "c2960daef46488a7e8e1ae078238b39dcd03172185e56e2376797c25020e6957",
+      "durationSeconds": 48,
+      "mixTrimDb": -7,
+      "mixVersion": "local-bed-trim-v1"
+    },
+    "frames": 2304000,
+    "sampleRate": 48000,
+    "channels": 2,
+    "bits": 16,
+    "tempoBPM": null,
+    "bars": null,
+    "key": null,
+    "mood": "synthetic soft ventilation texture",
+    "seed": "korean-quiz-local-library-v1",
+    "generationVersion": "local-instrumentals-v1",
+    "rawSha256": "45781e0884c1cbe303e6cb690aa233c5cfaa708508f7d0a2e88d4fcdc5608a0e",
+    "synthesis": {
+      "version": "local-instrumentals-v1",
+      "id": "soft-room-tone",
+      "seed": "korean-quiz-local-library-v1",
+      "recipe": {
+        "title": "Soft Room Tone",
+        "kind": "ambience",
+        "bpm": null,
+        "bars": null,
+        "key": null,
+        "mood": "synthetic soft ventilation texture",
+        "trimDb": -7
+      },
+      "sampleRate": 48000,
+      "channels": 2,
+      "bits": 16,
+      "loop": "circular tails; periodic noise overlap, duration retained; music phase offset 0.75 beat"
+    },
+    "processing": {
+      "version": "loop-static-lufs-v1",
+      "targetLUFS": -20,
+      "toleranceLU": 0.6,
+      "ceilingDbTP": -3,
+      "meterToleranceDb": 0.05,
+      "rate": 48000,
+      "channels": 2,
+      "bits": 16,
+      "gainDb": -4.66,
+      "before": {
+        "integratedLUFS": -15.34,
+        "truePeakDbTP": -2.68,
+        "loudnessRangeLU": 0.1,
+        "raw": {
+          "input_i": "-15.34",
+          "input_tp": "-2.68",
+          "input_lra": "0.10",
+          "input_thresh": "-25.34",
+          "output_i": "-16.02",
+          "output_tp": "-3.38",
+          "output_lra": "0.10",
+          "output_thresh": "-26.02",
+          "normalization_type": "dynamic",
+          "target_offset": "0.02"
+        }
+      },
+      "seamStrategy": "circular note tails; duration-preserving periodic noise overlap; static gain; no temporal compression"
+    },
+    "runtime": {
+      "node": "v22.13.1",
+      "ffmpeg": "ffmpeg version n7.1 Copyright (c) 2000-2024 the FFmpeg developers",
+      "platform": "win32"
+    },
+    "measurements": {
+      "integratedLUFS": -20,
+      "truePeakDbTP": -7.34,
+      "loudnessRangeLU": 0.2
+    },
+    "seam": {
+      "wrapJump": 0.0313720703125,
+      "derivativeChange": 0.108489990234375,
+      "nearbyMaxDerivative": 0.077239990234375,
+      "edgeEnergyDifferenceDb": -2.590882412411611
+    },
+    "spectral": {
+      "method": "96-window Hann Welch, 2048 points, stereo mid",
+      "below200HzFraction": 0.6097254291763583,
+      "between200And4000HzFraction": 0.27927569472893016,
+      "lowPhoneBandFlag": false,
+      "limitation": "Energy heuristic only; no listening, speaker response, masking or quality assessment."
+    },
+    "provenance": {
+      "method": "repository-procedural-synthesis",
+      "sourceCode": "scripts/localMusicSynthesis.ts",
+      "samples": "none",
+      "paidServices": 0,
+      "rightsStatus": "Repository-generated procedural asset. No third-party samples or rights clearance claimed; copyright and Content ID risk are not guaranteed absent.",
+      "attribution": "No third-party attribution requirement identified; retain this generation provenance."
+    }
+  },
+  "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\audio-assets\\soft-room-tone\\99c949555e6566249b68a2c6f944d9852c55fb17b3fb7bb323401e57729f536d\\raw.wav",
+  "rawSha256": "45781e0884c1cbe303e6cb690aa233c5cfaa708508f7d0a2e88d4fcdc5608a0e",
+  "processedSha256": "c2960daef46488a7e8e1ae078238b39dcd03172185e56e2376797c25020e6957",
+  "providerCalls": 0
+}

@@ -30,8 +30,8 @@ export const readJob=async(file:string)=>{
 };
 export const planFingerprint=(p:{hashes:unknown;inventory:unknown})=>sha256(canonical(p));
 export const codeFingerprint=async(root:string)=>sha256(canonical(await Promise.all([
-  'src/ProductionVideo.tsx','src/production.ts','src/BookendDisplays.tsx','src/displayBookends.ts','src/IllustratedFrame.tsx',
+  'src/musicLibrary.ts','src/Palette.tsx','src/variety.ts','src/ProductionVideo.tsx','src/production.ts','src/BookendDisplays.tsx','src/displayBookends.ts','src/IllustratedFrame.tsx',
   'src/IllustratedQuestionScene.tsx','src/CountdownRow.tsx','src/FittedText.tsx','src/PhraseCaption.tsx','src/phraseCaptions.ts','src/presentation.ts',
-  'src/narrationTiming.ts','src/productionPresets.ts','src/alignmentValidation.ts','src/BackgroundAudio.tsx','src/illustratedTheme.ts','scripts/renderLocalVideo.ts','scripts/finalMix.ts','scripts/productionCaptions.ts',
+  'src/narrationTiming.ts','src/productionPresets.ts','src/alignmentValidation.ts','src/BackgroundAudio.tsx','src/illustratedTheme.ts','scripts/renderLocalVideo.ts','scripts/finalMix.ts','scripts/audioMeter.ts','scripts/productionCaptions.ts',
 ].map(async file=>({file,sha256:await fileHash(join(root,file))})))));
 export const outputExists=(file:string)=>stat(file).then(s=>s.isFile(),()=>false);

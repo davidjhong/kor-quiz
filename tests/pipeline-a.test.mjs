@@ -30,17 +30,17 @@ test('money suggestions round UP in integer cents plus one cent; explicit yes ne
  assert.equal(moneyUnits('0.73'),730000000);assert.equal(suggestedCap(.730335),.75);assert.equal(suggestedCap(.729895),.74);
  for(const v of ['NaN','Infinity','1e9','-1','0.0000000001'])assert.throws(()=>moneyUnits(v));
  assert.throws(()=>parseVideoArguments(['--scenario','Hotel','--yes']),/explicit numeric/u);
- assert.throws(()=>parseVideoArguments(['--scenario','Hotel','--music','auto']),/Checkpoint A/u);
- assert.throws(()=>parseVideoArguments(['--scenario','Hotel','--palette','auto']),/Unknown/u);
+ assert.equal(parseVideoArguments(['--scenario','Hotel','--music','auto']).options.varietyOptions.music,'auto');
+ assert.throws(()=>parseVideoArguments(['--scenario','Hotel','--palette','invalid']),/Invalid/u);
 });
 test('help succeeds with no setup, credentials, job or provider activity; automatic ID handles collisions',async t=>{
  const root=await temporary(t);assert.equal((await runVideo(['--help'],{root,log:()=>{}})).help,true);assert.equal(await exists(join(root,'data')),false);
  await mkdir(join(root,'data/production-jobs/collision'),{recursive:true});let n=0;
- const options=await resolveVideoDestination({scenario:'Hotel'},root,()=>n++?'unique':'collision');assert.equal(options.jobId,'unique');assert.equal(options.output,'out/unique.mp4');assert.equal(options.productionPreset,'concise-v1');
+ const options=await resolveVideoDestination({scenario:'Hotel'},root,()=>n++?'unique':'collision');assert.equal(options.jobId,'unique');assert.equal(options.output,'out/unique.mp4');assert.equal(options.productionPreset,'concise-v2');
 });
 test('zero-call dry run creates an unauthorised concise job; read-only resume preserves its bytes',async t=>{
  const f=await fixture(t),p=await runVideo([...f.args,'--dry-run','--yes','--max-cost-usd','0.80'],f.deps),before=await readFile(f.job);
- assert.equal(p.providerCalls,0);assert.equal(f.calls,0);assert.equal((await json(f.job)).paidOptIn,false);assert.equal((await json(f.job)).config.productionPreset,'concise-v1');
+ assert.equal(p.providerCalls,0);assert.equal(f.calls,0);assert.equal((await json(f.job)).paidOptIn,false);assert.equal((await json(f.job)).config.productionPreset,'concise-v2');
  assert.equal((await json(f.job)).config.contentPolicy,'concise-explanations-v1');
  assert.equal(p.assets.image.action,'generate');assert.match(p.resumeCommand,/--resume planned/u);
  await runVideo(['--resume','planned','--dry-run'],f.deps);assert.deepEqual(await readFile(f.job),before);

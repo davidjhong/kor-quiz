@@ -1,0 +1,107 @@
+{
+  "entry": {
+    "id": "soft-lofi-keys",
+    "title": "Soft Lofi Keys",
+    "kind": "music",
+    "asset": {
+      "file": "audio/music/soft-lofi-keys-611ed6264145.wav",
+      "sha256": "0a1300f86aaae85d07e0876b764be5cb07c0aa90f87ad66ba393a252f781eb07",
+      "durationSeconds": 49.23077083333333,
+      "mixTrimDb": -2,
+      "mixVersion": "local-bed-trim-v1"
+    },
+    "frames": 2363077,
+    "sampleRate": 48000,
+    "channels": 2,
+    "bits": 16,
+    "tempoBPM": 78,
+    "bars": 16,
+    "key": "C major",
+    "mood": "gentle, warm keys",
+    "seed": "korean-quiz-local-library-v1",
+    "generationVersion": "local-instrumentals-v1",
+    "rawSha256": "1d3bac98403413036f739e2934b7c9904d795856e8ad58c1aa099bc624268b1d",
+    "synthesis": {
+      "version": "local-instrumentals-v1",
+      "id": "soft-lofi-keys",
+      "seed": "korean-quiz-local-library-v1",
+      "recipe": {
+        "title": "Soft Lofi Keys",
+        "kind": "music",
+        "bpm": 78,
+        "bars": 16,
+        "key": "C major",
+        "mood": "gentle, warm keys",
+        "trimDb": -2
+      },
+      "sampleRate": 48000,
+      "channels": 2,
+      "bits": 16,
+      "loop": "circular tails; periodic noise overlap, duration retained; music phase offset 0.75 beat"
+    },
+    "processing": {
+      "version": "loop-static-lufs-v1",
+      "targetLUFS": -20,
+      "toleranceLU": 0.6,
+      "ceilingDbTP": -3,
+      "meterToleranceDb": 0.05,
+      "rate": 48000,
+      "channels": 2,
+      "bits": 16,
+      "gainDb": -1.5300000000000011,
+      "before": {
+        "integratedLUFS": -18.47,
+        "truePeakDbTP": -2.85,
+        "loudnessRangeLU": 0.8,
+        "raw": {
+          "input_i": "-18.47",
+          "input_tp": "-2.85",
+          "input_lra": "0.80",
+          "input_thresh": "-28.47",
+          "output_i": "-15.96",
+          "output_tp": "-2.00",
+          "output_lra": "0.80",
+          "output_thresh": "-25.96",
+          "normalization_type": "dynamic",
+          "target_offset": "-0.04"
+        }
+      },
+      "seamStrategy": "circular note tails; duration-preserving periodic noise overlap; static gain; no temporal compression"
+    },
+    "runtime": {
+      "node": "v22.13.1",
+      "ffmpeg": "ffmpeg version n7.1 Copyright (c) 2000-2024 the FFmpeg developers",
+      "platform": "win32"
+    },
+    "measurements": {
+      "integratedLUFS": -19.99,
+      "truePeakDbTP": -4.38,
+      "loudnessRangeLU": 0.9
+    },
+    "seam": {
+      "wrapJump": 0.00177001953125,
+      "derivativeChange": 0.000244140625,
+      "nearbyMaxDerivative": 0.009185791015625,
+      "edgeEnergyDifferenceDb": -1.3721643454222296
+    },
+    "spectral": {
+      "method": "96-window Hann Welch, 2048 points, stereo mid",
+      "below200HzFraction": 0.7110201812553185,
+      "between200And4000HzFraction": 0.2889166623069943,
+      "lowPhoneBandFlag": false,
+      "limitation": "Energy heuristic only; no listening, speaker response, masking or quality assessment."
+    },
+    "provenance": {
+      "method": "repository-procedural-synthesis",
+      "sourceCode": "scripts/localMusicSynthesis.ts",
+      "samples": "none",
+      "paidServices": 0,
+      "rightsStatus": "Repository-generated procedural asset. No third-party samples or rights clearance claimed; copyright and Content ID risk are not guaranteed absent.",
+      "attribution": "No third-party attribution requirement identified; retain this generation provenance."
+    }
+  },
+  "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\audio-assets\\soft-lofi-keys\\611ed6264145abd18fc29083c650f990690637c40d85b75dca1bde1390d53df2\\raw.wav",
+  "rawSha256": "1d3bac98403413036f739e2934b7c9904d795856e8ad58c1aa099bc624268b1d",
+  "processedSha256": "0a1300f86aaae85d07e0876b764be5cb07c0aa90f87ad66ba393a252f781eb07",
+  "providerCalls": 0
+}

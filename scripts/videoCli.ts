@@ -1,3 +1,4 @@
+import {varietyOptionsSchema} from './varietySelection.ts';
 import {randomUUID} from 'node:crypto';
 import {access} from 'node:fs/promises';
 import {join,resolve} from 'node:path';
@@ -17,20 +18,25 @@ export const VIDEO_HELP=`Usage: npm run video -- (--scenario TEXT | --brief FILE
   --dry-run                  Zero provider calls; create a planned job or inspect resume read-only
   --job-id ID --output FILE   Optional for a new job; unique values are generated when omitted
   --voice achird|kore|FILE    Independent of artwork; Achird default
-  --background auto|new|ID   Existing A behavior, no background pool policy
+  --background auto|pool|new|ID   B: target 3 compatible images; pool never generates
   --background-character "adult woman"|"adult man"|"adult traveler"
   --image-model MODEL --image-quality low|medium|high --background-reuse-limit 1..10
-  --preset concise-v1|legacy-v1   NEW video default concise-v1; resumes keep stored settings
+  --preset concise-v2|concise-v1|legacy-v1   NEW video default concise-v2; resumes keep stored settings
   --countdown 5               Explicit five-second override (default concise: 3 easy/medium, 4 hard)
-  --music subtle-bass|none    Existing licensed bed only; --no-music also supported
+  --palette auto|cream-navy|sage-coral|midnight-gold|blush-plum
+  --motion auto|slow-push|slow-pull|slow-pan-left|slow-pan-right
+  --seed TEXT                Persisted deterministic selection (default job ID)
+  --music auto|subtle-bass|soft-lofi-keys|warm-pluck-groove|airy-pad-drift|none
+  --ambience none|soft-room-tone|gentle-rain   Default off; synthetic textures
+  --ambience-gain 0..1        Independent texture gain, default 1
   --presentation FILE --review-mode automated|manual --model MODEL --max-output-tokens N
   --max-cost-usd DECIMAL --yes   Authorize exactly that total for unattended execution
   --overwrite --recover-lock  Explicit replacement; recovery never overrides ambiguous owners
   --help                     No credentials, jobs or provider calls
 Interactive runs ask for a displayed total cap. Noninteractive paid work requires BOTH cap and --yes.
-Checkpoint A only: --palette, --motion, --seed, --background pool and --music auto are not implemented.`;
+New jobs use versioned C mix/motion/library defaults; resumes retain exact selected settings.`;
 const valueFlags=['--scenario','--brief','--draft','--resume','--job-id','--output','--voice','--background','--background-character','--image-model','--image-quality','--background-reuse-limit',
-  '--preset','--countdown','--music','--presentation','--review-mode','--model','--max-output-tokens','--max-cost-usd'];
+  '--ambience','--ambience-gain','--palette','--motion','--seed','--preset','--countdown','--music','--presentation','--review-mode','--model','--max-output-tokens','--max-cost-usd'];
 export const parseVideoArguments=(args:string[])=>{
   if(args.includes('--help'))return {help:true as const};
   const a=namedArguments(args,valueFlags,['--dry-run','--yes','--no-music','--overwrite','--recover-lock']);
@@ -38,15 +44,17 @@ export const parseVideoArguments=(args:string[])=>{
   if(cap!==undefined&&cap<=0)throw new Error('--max-cost-usd must be positive');
   if(a.flags.has('--yes')&&cap===undefined)throw new Error('--yes requires an explicit numeric --max-cost-usd; no job or authorization created');
   const preset=a.values.get('--preset'),music=a.values.get('--music'),review=a.values.get('--review-mode');
-  if(preset)productionPresetName.parse(preset);if(music&&!PRODUCTION_MUSIC_IDS.includes(music as ProductionMusicId))throw new Error('--music must be subtle-bass or none at Checkpoint A');
+  if(preset)productionPresetName.parse(preset);if(music&&!['auto',...PRODUCTION_MUSIC_IDS].includes(music as ProductionMusicId))throw new Error('--music must be auto, none or a registered library ID');
   if(review&&!['automated','manual'].includes(review))throw new Error('--review-mode must be automated or manual');
   if(a.values.has('--countdown')&&a.values.get('--countdown')!=='5')throw new Error('--countdown supports the explicit value 5; concise defaults are difficulty-based');
   const bg=a.values.get('--background'),backgroundFlags=['--background','--background-character','--image-model','--image-quality','--background-reuse-limit'];
-  if(bg==='pool')throw new Error('--background pool belongs to Checkpoint B, not A');
-  const backgroundOptions=backgroundFlags.some(f=>a.values.has(f))?backgroundOptionsSchema.parse({mode:bg==='new'?'new':'auto',assetId:bg&&!['new','auto'].includes(bg)?bg:undefined,
+  const varietyFlags=['--ambience','--ambience-gain','--palette','--motion','--seed'];
+  const variety=varietyOptionsSchema.parse({palette:a.values.get('--palette'),motion:a.values.get('--motion'),seed:a.values.get('--seed'),music:a.flags.has('--no-music')?'none':music,ambience:a.values.get('--ambience'),ambienceGain:a.values.has('--ambience-gain')?Number(a.values.get('--ambience-gain')):undefined});
+  const backgroundOptions=backgroundFlags.some(f=>a.values.has(f))?backgroundOptionsSchema.parse({mode:bg==='new'?'new':bg==='pool'?'pool':'auto',assetId:bg&&!['new','auto','pool'].includes(bg)?bg:undefined,
     character:a.values.get('--background-character'),model:a.values.get('--image-model'),quality:a.values.get('--image-quality'),reuseLimit:a.values.has('--background-reuse-limit')?Number(a.values.get('--background-reuse-limit')):undefined}):undefined;
   const options:ProduceOptions={scenario:a.values.get('--scenario'),brief:a.values.get('--brief'),draft:a.values.get('--draft'),resume:a.values.get('--resume'),jobId:a.values.get('--job-id'),output:a.values.get('--output'),
-    voiceFile:a.values.get('--voice'),backgroundOptions,productionPreset:preset as ProduceOptions['productionPreset'],countdownSeconds:a.values.has('--countdown')?5:undefined,musicTrackId:music as ProductionMusicId|undefined,
+    voiceFile:a.values.get('--voice'),backgroundOptions,characterExplicit:a.values.has('--background-character'),
+    ...(!a.values.has('--resume')||varietyFlags.some(f=>a.values.has(f))||music==='auto'?{varietyOptions:variety}:{}),productionPreset:preset as ProduceOptions['productionPreset'],countdownSeconds:a.values.has('--countdown')?5:undefined,musicTrackId:(music==='auto'?undefined:music) as ProductionMusicId|undefined,
     presentationFile:a.values.get('--presentation'),reviewMode:review as ProduceOptions['reviewMode'],model:a.values.get('--model'),maxOutputTokens:a.values.has('--max-output-tokens')?Number(a.values.get('--max-output-tokens')):undefined,
     dryRun:a.flags.has('--dry-run'),noMusic:a.flags.has('--no-music')?true:undefined,overwrite:a.flags.has('--overwrite'),recoverLock:a.flags.has('--recover-lock')};
   const sources=[options.scenario,options.brief,options.draft].filter(x=>x!==undefined).length;
@@ -58,7 +66,7 @@ const exists=(p:string)=>access(p).then(()=>true,()=>false);
 export const resolveVideoDestination=async(options:ProduceOptions,root:string,idFactory=()=>`video-${new Date().toISOString().slice(0,10).replaceAll('-','')}-${randomUUID().slice(0,8)}`)=>{
   if(options.resume)return options;
   for(let i=0;i<16;i++){const id=options.jobId??idFactory(),output=options.output??`out/${id}.mp4`;
-    if(!await exists(join(root,'data/production-jobs',id))&&!await exists(resolve(root,output)))return {...options,jobId:id,output,productionPreset:options.productionPreset??'concise-v1'};
+    if(!await exists(join(root,'data/production-jobs',id))&&!await exists(resolve(root,output)))return {...options,jobId:id,output,productionPreset:options.productionPreset??'concise-v2'};
     if(options.jobId||options.output)throw new Error(`Job/output already exists; preserve it and use --resume ${id} or a distinct new job/output`);
   }throw new Error('Could not allocate a unique job/output; no existing files replaced');
 };
@@ -73,7 +81,7 @@ export const runVideo=async(args:string[],deps:VideoDependencies={})=>{
     log(JSON.stringify({stageReservationBounds:p.stages,conservativeTotalUSD:p.conservativeTotalUSD,suggestedTotalCapUSD:suggestedCap(p.conservativeTotalUSD),storedAuthorizationUSD:job.maxCostUSD,blockers:p.blockers},null,2));
     log('Reservation bounds are not historical actual estimates. Image allowances are not provider-enforced maximum bills.');
     log(JSON.stringify({selection:{background:p.assets.background?.id??p.assets.image?.binding.assetId,
-      voiceProfile:job.config?.voiceFile,preset:p.preset.id,palette:'legacy cream-navy (unchanged)',motion:'existing restrained display motion (unchanged)',
+      voiceProfile:job.config?.voiceFile,preset:p.preset.id,palette:p.variety?.palette.selected??'legacy cream-navy (unchanged)',motion:p.variety?.motion.selected??'legacy restrained display motion (unchanged)',seed:p.variety?.seed,selectionContext:p.variety,
       music:p.assets.music?{id:job.config?.musicTrackId??'subtle-bass',...p.assets.music}:null}},null,2));
   };
   if(options.resume&&options.dryRun){const p=await inspectVideoJob(id,root,deps,options);show(p,{jobId:id,maxCostUSD:p.storedCapUSD,config:{voiceFile:p.voiceProfileId,musicTrackId:p.musicTrackId as ProductionMusicId}});log(JSON.stringify({readiness:p.readiness,renderStatus:p.renderStatus,timing:p.timing},null,2));return {...p,dryRun:true,resumeCommand};}

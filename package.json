@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "remotion studio src/index.ts",
     "typecheck": "tsc --noEmit",
-    "test": "node --experimental-strip-types --test tests/question-timing.test.mjs tests/quiz-schema.test.mjs tests/quiz-timeline.test.mjs tests/render-cli.test.mjs tests/media-inspection.test.mjs tests/assets-preview.test.mjs tests/romanization.test.mjs tests/ending-modes.test.mjs tests/narration.test.mjs tests/draft-workflow.test.mjs tests/generation.test.mjs tests/generation-experiment.test.mjs tests/automated-review.test.mjs tests/presentation-polish.test.mjs tests/phrase-captions.test.mjs tests/display-bookends.test.mjs tests/production.test.mjs tests/background-generation.test.mjs tests/alignment-reliability.test.mjs tests/pipeline-a.test.mjs",
+    "test": "node --experimental-strip-types --test tests/question-timing.test.mjs tests/quiz-schema.test.mjs tests/quiz-timeline.test.mjs tests/render-cli.test.mjs tests/media-inspection.test.mjs tests/assets-preview.test.mjs tests/romanization.test.mjs tests/ending-modes.test.mjs tests/narration.test.mjs tests/draft-workflow.test.mjs tests/generation.test.mjs tests/generation-experiment.test.mjs tests/automated-review.test.mjs tests/presentation-polish.test.mjs tests/phrase-captions.test.mjs tests/display-bookends.test.mjs tests/production.test.mjs tests/background-generation.test.mjs tests/alignment-reliability.test.mjs tests/pipeline-a.test.mjs tests/pipeline-b.test.mjs tests/pipeline-c.test.mjs",
     "build": "npm run typecheck && remotion bundle src/index.ts build",
     "browser:ensure": "remotion browser ensure",
     "render": "node --experimental-strip-types scripts/render.ts",
@@ -18,6 +18,7 @@
     "render:illustrated-preview": "node --experimental-strip-types scripts/render.ts --illustrated-preview",
     "render:cafe": "node --experimental-strip-types scripts/render.ts --illustrated",
     "audio:prepare": "node --env-file-if-exists=.env --experimental-strip-types scripts/prepareAudio.ts",
+    "music:generate": "node --experimental-strip-types scripts/generateMusic.ts",
     "music:prepare": "node --experimental-strip-types scripts/prepareMusic.ts",
     "voice:compare": "node --experimental-strip-types scripts/voiceComparison.ts",
     "voice:inspect": "node --experimental-strip-types scripts/inspectVoiceComparison.ts",

@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "kind": "automated-content-acceptance",
+  "status": "accepted",
+  "humanReviewed": false,
+  "contentHash": "12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4",
+  "sourceContentHash": "12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4",
+  "episodeId": "production-video-20261112-bf4b8311",
+  "acceptedAt": "2026-11-12T23:59:09.769Z",
+  "reviewerModel": "gpt-6-luna",
+  "reviewPromptVersion": "phase5b-automated-review-v1",
+  "verificationPromptVersion": null,
+  "correctionPromptVersion": null,
+  "reviewRequestIds": [
+    "req_9ffc55e9a35649988bd10ac65f0ded88"
+  ],
+  "independence": "Separate requests to the configured model; not independent proof of Korean correctness.",
+  "finalFindings": {
+    "questions": [
+      {
+        "questionId": "production-video-20261112-bf4b8311-q1",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-video-20261112-bf4b8311-q2",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-video-20261112-bf4b8311-q3",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-video-20261112-bf4b8311-q4",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-video-20261112-bf4b8311-q5",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-video-20261112-bf4b8311-q6",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      }
+    ],
+    "resolutions": []
+  },
+  "verifiedFindingIds": [],
+  "revisions": [],
+  "asset": {
+    "id": "generated-convenience-store-65e1f2f0e192749f",
+    "sha256": "c7a8d2c236cc06cb1cf69376374c37fb0d79fdebf539598a6c4552696568421a",
+    "selection": "developer-selected"
+  }
+}

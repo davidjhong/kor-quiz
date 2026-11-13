@@ -1,0 +1,344 @@
+{
+  "version": 1,
+  "jobId": "pipeline-c-pool-01",
+  "config": {
+    "source": {
+      "kind": "scenario",
+      "text": "Beginner Korean at a restaurant",
+      "defaultsVersion": "phase6-scenario-defaults-v1",
+      "brief": {
+        "scenario": "Beginner Korean at a restaurant",
+        "audience": "English-speaking adults learning practical beginner Korean for travel",
+        "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+        "backgroundAssetId": null,
+        "scenarioType": "restaurant"
+      }
+    },
+    "output": "C:\\Users\\david\\Documents\\kor-vids\\out\\pipeline-c-pool-01.mp4",
+    "reviewMode": "automated",
+    "voiceFile": "kore",
+    "presentationFile": "content/production/default.json",
+    "noMusic": false,
+    "model": "gpt-6-luna",
+    "maxOutputTokens": 12000,
+    "backgroundOptions": {
+      "mode": "pool",
+      "model": "gpt-image-2.6-flare",
+      "quality": "medium",
+      "reuseLimit": 5,
+      "character": "adult traveler"
+    },
+    "varietyOptions": {
+      "palette": "auto",
+      "motion": "auto",
+      "music": "auto",
+      "ambience": "none",
+      "ambienceGain": 1,
+      "seed": "c-pool-audition"
+    },
+    "varietyVersion": "variety-v2",
+    "characterExplicit": false,
+    "productionPreset": "concise-v2",
+    "contentPolicy": "concise-explanations-v1",
+    "variety": {
+      "version": "variety-v2",
+      "seed": "c-pool-audition",
+      "requested": {
+        "palette": "auto",
+        "motion": "auto",
+        "music": "auto",
+        "ambience": "none",
+        "ambienceGain": 1,
+        "seed": "c-pool-audition"
+      },
+      "palette": {
+        "candidates": [
+          "blush-plum",
+          "cream-navy",
+          "midnight-gold",
+          "sage-coral"
+        ],
+        "excluded": [
+          "cream-navy"
+        ],
+        "selected": "midnight-gold",
+        "historyHash": "4037aa4d0474b1c1d7f0885f39ce7874d5b24d737840eee7927216d0669a8a50",
+        "recentChoices": [
+          "cream-navy",
+          "cream-navy",
+          "cream-navy"
+        ],
+        "reason": "seeded after recent exclusion"
+      },
+      "motion": {
+        "candidates": [
+          "slow-pan-left",
+          "slow-pan-right",
+          "slow-pull",
+          "slow-push"
+        ],
+        "excluded": [],
+        "selected": "slow-pan-left",
+        "historyHash": "0f739d4b3b1e45694201d41c1d000c324426444dd7566c6a140176dd6d0ed93c",
+        "recentChoices": [],
+        "reason": "seeded after recent exclusion"
+      },
+      "music": {
+        "candidates": [
+          "airy-pad-drift",
+          "soft-lofi-keys",
+          "subtle-bass",
+          "warm-pluck-groove"
+        ],
+        "excluded": [
+          "subtle-bass"
+        ],
+        "selected": "warm-pluck-groove",
+        "historyHash": "f3a0cb382114a6c8d81fb21d3abb13fad429bde0c2d7098031a727b6d8c7215f",
+        "recentChoices": [
+          "subtle-bass",
+          "subtle-bass",
+          "subtle-bass"
+        ],
+        "reason": "seeded after recent exclusion"
+      },
+      "audio": {
+        "music": {
+          "file": "audio/music/warm-pluck-groove-b992ec53fe43.wav",
+          "sha256": "f82108343d2cc97a3e04601d7e2defdb102adf3b16f225dc3b9169cdd1d50047",
+          "durationSeconds": 50,
+          "mixTrimDb": -3,
+          "mixVersion": "local-bed-trim-v1"
+        },
+        "ambience": null
+      },
+      "background": {
+        "candidates": [
+          "generated-restaurant-379962e8db662f67",
+          "generated-restaurant-d5fea9be8c6e28a8"
+        ],
+        "excluded": [
+          "generated-restaurant-d5fea9be8c6e28a8"
+        ],
+        "selected": "generated-restaurant-379962e8db662f67",
+        "historyHash": "7fbb63a61afa676889c78ff8e2cab81c487a3646642a7acf42480b16d93f11f4",
+        "recentChoices": [
+          "generated-restaurant-d5fea9be8c6e28a8"
+        ],
+        "reason": "seeded after recent exclusion",
+        "action": "reuse",
+        "eligibleCount": 2,
+        "target": 3
+      },
+      "checksums": {
+        "palette": "ae11ae256a0c14e5e37769f9dec32f88945d815274231cd73eb9dbf57a905bca",
+        "motion": "4757118cb0fd079805d14b6628523f31bdcf7a84fc069d0c0b48419ddfb15318",
+        "music": "f82108343d2cc97a3e04601d7e2defdb102adf3b16f225dc3b9169cdd1d50047",
+        "background": "a9405bcdcc310ef167f3918ff66282cc308c4b5cc59c61303e3a0933e0b3aa7b",
+        "request": null,
+        "mix": "84340bbd32efb8ad7f24ef2af39ba3fd6880738df35e9e8e5c940a0aa59b9d39"
+      },
+      "visual": {
+        "version": "visual-variety-v2",
+        "palette": "midnight-gold",
+        "motion": "slow-pan-left",
+        "width": 1024,
+        "height": 1536,
+        "motionConfig": {
+          "version": "motion-v2",
+          "zoomTravel": 0.05,
+          "panTravel": 26,
+          "panScale": 1.025,
+          "topInset": 8,
+          "declaredRegion": {
+            "left": 650,
+            "right": 930,
+            "top": 1210,
+            "bottom": 1580
+          },
+          "regionSource": "declared-generic-features-not-face-detection"
+        }
+      }
+    },
+    "backgroundBinding": {
+      "assetId": "generated-restaurant-379962e8db662f67"
+    },
+    "musicTrackId": "warm-pluck-groove"
+  },
+  "state": "planned",
+  "stages": {
+    "generation": {
+      "status": "planned",
+      "inputHash": "8636f607afb179fc99954dfd6363fc50f35e40cc6cd1289a2084e5acc3e90e1d",
+      "outputs": [],
+      "details": {}
+    },
+    "import": {
+      "status": "planned",
+      "inputHash": "8636f607afb179fc99954dfd6363fc50f35e40cc6cd1289a2084e5acc3e90e1d",
+      "outputs": [],
+      "details": {}
+    },
+    "validation": {
+      "status": "planned",
+      "inputHash": "8636f607afb179fc99954dfd6363fc50f35e40cc6cd1289a2084e5acc3e90e1d",
+      "outputs": [],
+      "details": {}
+    },
+    "review": {
+      "status": "planned",
+      "inputHash": "8636f607afb179fc99954dfd6363fc50f35e40cc6cd1289a2084e5acc3e90e1d",
+      "outputs": [],
+      "details": {
+        "wouldRun": true
+      }
+    },
+    "audio": {
+      "status": "planned",
+      "inputHash": "8636f607afb179fc99954dfd6363fc50f35e40cc6cd1289a2084e5acc3e90e1d",
+      "outputs": [],
+      "details": {}
+    },
+    "alignment": {
+      "status": "planned",
+      "inputHash": "8636f607afb179fc99954dfd6363fc50f35e40cc6cd1289a2084e5acc3e90e1d",
+      "outputs": [],
+      "details": {}
+    },
+    "captions": {
+      "status": "planned",
+      "inputHash": "8636f607afb179fc99954dfd6363fc50f35e40cc6cd1289a2084e5acc3e90e1d",
+      "outputs": [],
+      "details": {}
+    },
+    "render": {
+      "status": "planned",
+      "inputHash": "8636f607afb179fc99954dfd6363fc50f35e40cc6cd1289a2084e5acc3e90e1d",
+      "outputs": [],
+      "details": {}
+    },
+    "verification": {
+      "status": "planned",
+      "inputHash": "8636f607afb179fc99954dfd6363fc50f35e40cc6cd1289a2084e5acc3e90e1d",
+      "outputs": [],
+      "details": {}
+    }
+  },
+  "history": [],
+  "revisions": [],
+  "paidOptIn": false,
+  "createdAt": "2026-11-12T23:42:56.354Z",
+  "updatedAt": "2026-11-12T23:43:00.392Z",
+  "sourceIdentity": "8636f607afb179fc99954dfd6363fc50f35e40cc6cd1289a2084e5acc3e90e1d",
+  "configuration": {
+    "voice": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Kore",
+        "ko-KR": "ko-KR-Chirp3-HD-Kore"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "presentation": {
+      "compactSpacing": true,
+      "synchronizedCaptions": true,
+      "backgroundAudio": true,
+      "musicGain": 1.25,
+      "captionStyle": "phrases",
+      "bookendStyle": "display"
+    },
+    "alignment": {
+      "version": "phrase-alignment-v1",
+      "engine": "stable-ts",
+      "engineVersion": "2.19.1",
+      "whisperVersion": "20250625",
+      "torchVersion": "2.8.0+cpu",
+      "model": "base",
+      "modelSha256": "ed3a0b6b1c0edf879ad9b11b1af5a0e6ab5db9205f891f668f8b0e6c6326e34e",
+      "device": "cpu",
+      "sampleRate": 16000,
+      "threads": 4,
+      "fp16": false,
+      "regroup": false,
+      "suppressSilence": true,
+      "vad": false,
+      "fastMode": false
+    },
+    "grouping": {
+      "version": "automatic-phrases-v4-acoustic-groups",
+      "englishWords": 4,
+      "maximumWords": 5,
+      "maximumCharacters": 36,
+      "koreanWholeUtterance": true
+    },
+    "audioProcessing": "loudnorm-I-16-TP-1.5-LRA-11-mono-24000-v1",
+    "productionPreset": {
+      "id": "concise-v2",
+      "timing": {
+        "fps": 30,
+        "openingMinimum": 90,
+        "readingMinimum": 90,
+        "countdown": 90,
+        "revealMinimum": 0,
+        "settlePause": 6,
+        "afterHook": 9,
+        "afterQuestion": 9,
+        "answerGap": 9,
+        "afterExplanation": 15,
+        "transition": 10,
+        "finalFade": 12,
+        "commentHold": 120,
+        "afterComment": 45,
+        "afterFollow": 30,
+        "countdownHard": 120
+      },
+      "music": {
+        "idle": 0.6356418950802395,
+        "thinking": 0.4237612633868263,
+        "speech": 0.2825075089245509
+      },
+      "mixVersion": "source-music-plus3-v1",
+      "relativeMusicDb": 3,
+      "finalMix": {
+        "version": "final-mix-concise-v1",
+        "integratedLUFS": -14,
+        "truePeakDbTP": -1.5,
+        "loudnessRangeLU": 11,
+        "integratedToleranceLU": 0.5,
+        "truePeakMeterToleranceDb": 0.1,
+        "encoderHeadroomDb": 0.3
+      },
+      "editorial": "concise-explanations-v1",
+      "advisoryDurationSeconds": [
+        75,
+        85
+      ],
+      "minimumDurationSeconds": 65
+    }
+  },
+  "narration": null,
+  "assets": {
+    "background": {
+      "id": "generated-restaurant-379962e8db662f67",
+      "file": "backgrounds/generated-restaurant-379962e8db662f67.png",
+      "sha256": "a9405bcdcc310ef167f3918ff66282cc308c4b5cc59c61303e3a0933e0b3aa7b",
+      "scenarioType": "restaurant",
+      "selection": "developer-selected",
+      "scenarioLabel": "AT A KOREAN RESTAURANT",
+      "framing": {
+        "scale": 1.02,
+        "origin": "50% 0%"
+      }
+    },
+    "music": {
+      "file": "audio/music/warm-pluck-groove-b992ec53fe43.wav",
+      "sha256": "f82108343d2cc97a3e04601d7e2defdb102adf3b16f225dc3b9169cdd1d50047",
+      "durationSeconds": 50,
+      "mixTrimDb": -3,
+      "mixVersion": "local-bed-trim-v1"
+    }
+  }
+}

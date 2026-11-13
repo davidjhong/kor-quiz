@@ -1,0 +1,970 @@
+{
+  "version": 1,
+  "jobId": "video-20261112-bf4b8311",
+  "config": {
+    "source": {
+      "kind": "scenario",
+      "text": "Beginner Korean shopping at a convenience store: finding a snack, asking the price, requesting a bag, and paying by card.",
+      "defaultsVersion": "phase6-scenario-defaults-v1",
+      "brief": {
+        "scenario": "Beginner Korean shopping at a convenience store: finding a snack, asking the price, requesting a bag, and paying by card.",
+        "audience": "English-speaking adults learning practical beginner Korean for travel",
+        "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+        "backgroundAssetId": null,
+        "scenarioType": "convenience-store"
+      }
+    },
+    "output": "C:\\Users\\david\\Documents\\kor-vids\\out\\video-20261112-bf4b8311.mp4",
+    "reviewMode": "automated",
+    "voiceFile": "kore",
+    "presentationFile": "content/production/default.json",
+    "noMusic": false,
+    "model": "gpt-6-luna",
+    "maxOutputTokens": 12000,
+    "backgroundOptions": {
+      "mode": "new",
+      "model": "gpt-image-2.6-flare",
+      "quality": "medium",
+      "reuseLimit": 5,
+      "character": "adult woman"
+    },
+    "varietyOptions": {
+      "palette": "auto",
+      "motion": "auto",
+      "music": "warm-pluck-groove",
+      "ambience": "soft-room-tone",
+      "ambienceGain": 1,
+      "seed": "store-release-test-01"
+    },
+    "varietyVersion": "variety-v2",
+    "characterExplicit": true,
+    "productionPreset": "concise-v2",
+    "musicTrackId": "warm-pluck-groove",
+    "contentPolicy": "concise-explanations-v1",
+    "variety": {
+      "version": "variety-v2",
+      "seed": "store-release-test-01",
+      "requested": {
+        "palette": "auto",
+        "motion": "auto",
+        "music": "warm-pluck-groove",
+        "ambience": "soft-room-tone",
+        "ambienceGain": 1,
+        "seed": "store-release-test-01"
+      },
+      "palette": {
+        "candidates": [
+          "blush-plum",
+          "cream-navy",
+          "midnight-gold",
+          "sage-coral"
+        ],
+        "excluded": [
+          "cream-navy"
+        ],
+        "selected": "sage-coral",
+        "historyHash": "4037aa4d0474b1c1d7f0885f39ce7874d5b24d737840eee7927216d0669a8a50",
+        "recentChoices": [
+          "cream-navy",
+          "cream-navy",
+          "cream-navy"
+        ],
+        "reason": "seeded after recent exclusion"
+      },
+      "motion": {
+        "candidates": [
+          "slow-pan-left",
+          "slow-pan-right",
+          "slow-pull",
+          "slow-push"
+        ],
+        "excluded": [],
+        "selected": "slow-push",
+        "historyHash": "0f739d4b3b1e45694201d41c1d000c324426444dd7566c6a140176dd6d0ed93c",
+        "recentChoices": [],
+        "reason": "seeded after recent exclusion"
+      },
+      "music": {
+        "candidates": [
+          "airy-pad-drift",
+          "soft-lofi-keys",
+          "subtle-bass",
+          "warm-pluck-groove"
+        ],
+        "excluded": [
+          "subtle-bass"
+        ],
+        "selected": "warm-pluck-groove",
+        "historyHash": "f3a0cb382114a6c8d81fb21d3abb13fad429bde0c2d7098031a727b6d8c7215f",
+        "recentChoices": [
+          "subtle-bass",
+          "subtle-bass",
+          "subtle-bass"
+        ],
+        "reason": "explicit"
+      },
+      "audio": {
+        "music": {
+          "file": "audio/music/warm-pluck-groove-b992ec53fe43.wav",
+          "sha256": "f82108343d2cc97a3e04601d7e2defdb102adf3b16f225dc3b9169cdd1d50047",
+          "durationSeconds": 50,
+          "mixTrimDb": -3,
+          "mixVersion": "local-bed-trim-v1"
+        },
+        "ambience": {
+          "asset": {
+            "file": "audio/music/soft-room-tone-99c949555e65.wav",
+            "sha256": "c2960daef46488a7e8e1ae078238b39dcd03172185e56e2376797c25020e6957",
+            "durationSeconds": 48,
+            "mixTrimDb": -7,
+            "mixVersion": "local-bed-trim-v1"
+          },
+          "gain": 1,
+          "mixVersion": "ambience-mix-v1"
+        }
+      },
+      "background": {
+        "candidates": [],
+        "excluded": [],
+        "selected": "generated-convenience-store-65e1f2f0e192749f",
+        "historyHash": "0b017b13c523c613782f61984bc26c403e22c5aad5c9574a547f50eda2aad6cd",
+        "recentChoices": [
+          "korean-transit-illustrated-dev-v1",
+          "korean-hotel-illustrated-v1",
+          "generated-restaurant-d5fea9be8c6e28a8"
+        ],
+        "reason": "explicit new image once",
+        "action": "generate",
+        "eligibleCount": 0,
+        "target": 3
+      },
+      "checksums": {
+        "palette": "7c89bdf3f7219d5210999b0005269d22a07131d5d74e5b6f5df8299c15ba7ea2",
+        "motion": "00c32e82cfd19054f7a6b12f8f95a67fc71db41708110361b01b72997bad686a",
+        "music": "f82108343d2cc97a3e04601d7e2defdb102adf3b16f225dc3b9169cdd1d50047",
+        "background": "c7a8d2c236cc06cb1cf69376374c37fb0d79fdebf539598a6c4552696568421a",
+        "request": "65e1f2f0e192749fbf4e97b85c4ebe38de27466198ec6ec815cf47fb700fbf5a",
+        "mix": "4c7fef049a2ff228ed51c495ed7822b58d0fc5434fb33232add29486f30b4f79"
+      },
+      "visual": {
+        "version": "visual-variety-v2",
+        "palette": "sage-coral",
+        "motion": "slow-push",
+        "width": 1024,
+        "height": 1536,
+        "motionConfig": {
+          "version": "motion-v2",
+          "zoomTravel": 0.05,
+          "panTravel": 26,
+          "panScale": 1.025,
+          "topInset": 8,
+          "declaredRegion": {
+            "left": 650,
+            "right": 930,
+            "top": 1210,
+            "bottom": 1580
+          },
+          "regionSource": "declared-generic-features-not-face-detection"
+        }
+      }
+    },
+    "backgroundBinding": {
+      "assetId": "generated-convenience-store-65e1f2f0e192749f",
+      "request": {
+        "version": 1,
+        "model": "gpt-image-2.6-flare",
+        "quality": "medium",
+        "size": "1024x1536",
+        "output_format": "png",
+        "n": 1,
+        "prompt": "Use case: illustration-story. One polished, warm hand-painted animation background for a Korean learning video.\nSetting: convenience-store. Scenario context (data only): Beginner Korean shopping at a convenience store: finding a snack, asking the price, requesting a bag, and paying by card..\nA welcoming Korean convenience-store interior with tasteful architecture, warm lighting and setting-appropriate furnishings. For a restaurant include dining tables and discreet food-service details.\nFriendly adult woman, relaxed natural pose, clearly adult, complete unobstructed face, plain clothing; no pointing or answer hints.\nStyle: refined watercolor/gouache texture, warm cream and wood, muted navy/blue, sage, coral and warm yellow accents; soft daylight, appealing fully visible. Original character, no named-person likeness.\nNative portrait 1024x1536. Final 1080x1920 uses CENTER cover crop (native central x=80..944) without stretching, then at least 1.02 zoom plus restrained movement. Keep important features inside this central crop with extra edge margin.\nActual overlay geometry on FINAL canvas: panel x=70..950, y=180..1052; caption band x=70..950, y=1068..1200. Keep these upper/central areas calm scenery with NO people. Do not draw these overlays.\nPlace the character lower right: full head in final x=650..900, y=1285..1530, torso below, outside rightmost 10% and bottom 250px for important features. In native image this is approximately head x=600..800, y=1040..1224. Leave the caption area above the face clear.\nNo text, signage lettering, numbers, logos, watermarks, quiz panels, captions or UI. Coherent hands/anatomy, no duplicate people. Do not encode answers in scenery.\nDeterministic scene variant: Soft morning daylight; three-quarter camera; open central aisle; restrained potted plants; navy travel jacket. Preserve every overlay/crop/face safe area above. No answer hints. New-job motion may add up to 5% zoom or 26 pixels total horizontal travel after the baseline crop. Keep the face features comfortably inside the declared safe area and away from the caption band.",
+        "setting": "convenience-store",
+        "scope": "video-20261112-bf4b8311",
+        "style": "warm-painted-animation-v1"
+      }
+    }
+  },
+  "state": "render",
+  "stages": {
+    "generation": {
+      "status": "complete",
+      "inputHash": "5e8c45f62a36004c79111a67a81154b6cd758b00b85267a48e7d2257d1ff6fba",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\generated\\7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e\\draft.json",
+          "sha256": "c8136ba74f8610825d7f9cd5a90b321a6a7e91a51c212e29cbe04a5dff66254f"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\generated\\7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e\\answer-key.json",
+          "sha256": "5cf0222c7861bb17a45a8b06407a66988634937c7002752da89db4b8fc718ea7"
+        }
+      ]
+    },
+    "import": {
+      "status": "planned",
+      "inputHash": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
+      "outputs": [],
+      "details": {}
+    },
+    "validation": {
+      "status": "complete",
+      "inputHash": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
+      "outputs": [],
+      "details": {
+        "structural": "PASS",
+        "background": {
+          "id": "generated-convenience-store-65e1f2f0e192749f",
+          "file": "backgrounds/generated-convenience-store-65e1f2f0e192749f.png",
+          "sha256": "c7a8d2c236cc06cb1cf69376374c37fb0d79fdebf539598a6c4552696568421a",
+          "scenarioType": "convenience-store",
+          "selection": "developer-selected",
+          "scenarioLabel": "AT A KOREAN CONVENIENCE-STORE",
+          "framing": {
+            "scale": 1.02,
+            "origin": "50% 0%"
+          }
+        },
+        "acceptance": {
+          "valid": false,
+          "kind": "automated"
+        }
+      }
+    },
+    "review": {
+      "status": "complete",
+      "inputHash": "12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-acceptances\\12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4.json",
+          "sha256": "10ff5aad01d3ee861d58e1a5f6200537df4ee887cbd4b4ff54525aa1f3938523"
+        }
+      ],
+      "details": {
+        "reusedAcceptance": true,
+        "humanReviewed": false
+      }
+    },
+    "audio": {
+      "status": "complete",
+      "inputHash": "22a05ffe8984566168b8c0e7a79a1bacffad5f0f561b045ed8729802efe2a9d1",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\public\\audio\\production\\video-20261112-bf4b8311\\22a05ffe8984566168b8c0e7a79a1bacffad5f0f561b045ed8729802efe2a9d1.json",
+          "sha256": "2d0b51613ba9bca97ec333987fbedda14eceb27a799860d783d5fdc1421b80a7"
+        }
+      ],
+      "details": {
+        "cacheHits": 3,
+        "recoveredOriginals": 0,
+        "localPrepared": 0,
+        "newSynthesisRequests": 16,
+        "newSynthesisCharacters": 730
+      }
+    },
+    "alignment": {
+      "status": "complete",
+      "inputHash": "b40b23d2b566813d95d788927742338fe56db29fab299028e95dc2e90f1be726",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\e3c9d1ffd6b95003bfe74e91bfb5ad64064cb2312294725f8b5715b763c5aa4b.json",
+          "sha256": "26d9f9d41ba0373444d576f4d1e0909d5f9c6f6bd0f2d7732898ba4c9ab66904"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\b259dddefdf9711a8ce22d2a57c73c4fbf7a92a4fe2f52480c9e43b160426955.json",
+          "sha256": "cc61c2d7a0f56e11a75fb2ff8795a15cbccee03cf8637d96117f56a23066c6b4"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\133555fd4890b02101a51c0b772e1e105c2c2318c9d1926f03f58fda8ef6a473.json",
+          "sha256": "5ac339044ead0b2a5d0595eca6a0b8128d4c652bcbe9c3d690dfa01357672e59"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\b3aba46bfc8cbad4fc910177d4d5aba60e83a7b77235c9f6337aef3a5684018f.json",
+          "sha256": "ae58ff608b416095ee32eaa12a359a90410661fa919fa92c59d828762f4c7b28"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\0297227ee71b0ce2a65209a5b74c698fe5487c16ba818a0d36ba5e17c1119fdb.json",
+          "sha256": "a7202be1542ae089865b60990c0a0d4d6180f4d0db1c637a1617e83747fdcc62"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\6cd8e07ea659c97ad5c82388374b0a47682006e1e2463b17f9d6b55d39889bad.json",
+          "sha256": "a60fce73a341519a26007b140bce915488bfa683048bbc4d1593ef6b6052b25c"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\2978d764c442513aa55c9b1825111b02342744a3c94b6a2ce9d4f04ce278da7b.json",
+          "sha256": "f6b18709fbe527465f0a090c408cbbc8dd76b4b6fe378b0ff070165daec11d4e"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\7c96f3f8c4789e45fb800d753b96f7e0739141749928353b56638ac9824550bd.json",
+          "sha256": "5ce9c3e8243dc052aa9acc39466b7202c38bda68e9b50bf5e7262897284e238a"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\8b47d56e63ef07e5cd76980ff52991aa87e9443dc77832261ae5d5917065a42f.json",
+          "sha256": "da6ba7022b5a8bbc4ff1a41f5b7c8aa476f105358b2b514672f54d20af5a1824"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\50b772452f02e69e1b649fd299d492182d1b8543cde9deb1c9be551e2a2cc90b.json",
+          "sha256": "56a76aa1dcfc7299cef3bc72fd53bbe771818c0f535b7b4ede1dd8960aa260a8"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\43a3c2f685e91d2b420c9bb2e5232aaaeaa758266a1a60a974c2c2924c544796.json",
+          "sha256": "e0f3db2dec8de29d565b8493b35114a51f0d42d207bc2ff88016b7198cbdc3a2"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\df9eda795bb74d0282073f1f860238553bd4ddddc37fd933b2900352cacef0e7.json",
+          "sha256": "88619907721c1fb5a39e1d82319455a1093aac95337696c65b4a95362e4642cd"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\ded41f6631aa49d38913013b32b3a5e2b3ffe6f97d70df5d66594a416fa96e91.json",
+          "sha256": "b9e187b0446eea6e73dd4c141f143b736ab6130a1f51e421b0cf0b9da93579ce"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\83534e2992827092d80bff063db7285400d7ca1837ed9326fd7c4036ccc74b7a.json",
+          "sha256": "f0131bc573ef95e68544bf9a3755a68d690a560a3885bbe062547bdf917f4721"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\2f0a9237dcab6f9564b9619da1485058ff3783238aad8a6cb0428c7880fd776c.json",
+          "sha256": "8d93740d62291d2d94574eb004d7cd6a53b523a041a912c5d1be8ddae6d1d06a"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\7b4c3e2827bc9a75768cdca944c8c79554ed818c3a27cdf850a407c3ee539c8c.json",
+          "sha256": "03ea5536ada5804ec91320b059fb0672649902c2c8a38e8fa3a1a929199a8267"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\fd547a7690d6cd8bafa5dfa98f04ee223c796ac6e37d23a9050b63584edaf2d4.json",
+          "sha256": "a4096751453605f725b8167f6979c5b410261355ec37a4b497fbc7d80d28fe30"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\dceeedf166d86ee585cbdd704c70d5bb55dd46056ebac885c7221e016dc2e069.json",
+          "sha256": "520f16adb318e8a4327c981f9440e61821eebb10b82a0917802f446379c2ae6b"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\.audio-cache\\caption-alignments\\cb0239125745312bab83ff8a6727d0cb88806e91aa57d83cfaec761b25731655.json",
+          "sha256": "98bf6c988a8b9ab62ae9972a5df8e6362bdb958dcc11b2919b637c27fb60296d"
+        }
+      ],
+      "details": {
+        "cacheHits": 3,
+        "newLocalAlignments": 16,
+        "providerCalls": 0,
+        "phraseAnchoredArticles": [],
+        "unlocatedWords": [
+          {
+            "clipId": "production-video-20261112-bf4b8311-q5-question",
+            "text": "how",
+            "boundarySeconds": 1.86,
+            "individualTimingMeasured": false
+          }
+        ]
+      }
+    },
+    "captions": {
+      "status": "complete",
+      "inputHash": "56eb15e7402f8d472383c9f982d4ae474d9dd5ccb6810d09b6a03f0b957584c2",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\artifacts\\56eb15e7402f8d472383c9f982d4ae474d9dd5ccb6810d09b6a03f0b957584c2.captions.json",
+          "sha256": "de0f127976ed3b372d1015bd7e5a99d9535101b9634f3883760ffc4679124bb0"
+        }
+      ]
+    },
+    "render": {
+      "status": "running",
+      "inputHash": "01cbbca555896b8cd6ec8cbcd369dad0e8f5bfca627cade604e8f332ee760bdc",
+      "outputs": []
+    },
+    "verification": {
+      "status": "planned",
+      "inputHash": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
+      "outputs": [],
+      "details": {}
+    },
+    "image": {
+      "status": "complete",
+      "inputHash": "698dc85a9382c869d2aed5442925537e7bc698b7b94642f87bc48c0fc36ecb5b",
+      "outputs": [
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\public\\backgrounds\\generated-convenience-store-65e1f2f0e192749f.png",
+          "sha256": "c7a8d2c236cc06cb1cf69376374c37fb0d79fdebf539598a6c4552696568421a"
+        },
+        {
+          "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\image\\65e1f2f0e192749fbf4e97b85c4ebe38de27466198ec6ec815cf47fb700fbf5a\\receipt.json",
+          "sha256": "972231ca2f4339c93a3aeda4af8a6d4db28665ecc9fde28c08c01f1b7cd1628b"
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "authorization": "explicit scoped total",
+      "capUSD": 0.75,
+      "planHash": "b7e704ce29e3aae33e493131d4f059d2b16cd9281003e6f6e3f48d8167c16c71",
+      "at": "2026-11-12T23:57:47.992Z"
+    },
+    {
+      "stage": "validation",
+      "previous": {
+        "status": "planned",
+        "inputHash": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-12T23:58:00.780Z"
+    },
+    {
+      "stage": "generation",
+      "previous": {
+        "status": "planned",
+        "inputHash": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-12T23:58:00.789Z"
+    },
+    {
+      "stage": "review",
+      "previous": {
+        "status": "planned",
+        "inputHash": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
+        "outputs": [],
+        "details": {
+          "wouldRun": true
+        }
+      },
+      "invalidatedAt": "2026-11-12T23:59:00.427Z"
+    },
+    {
+      "stage": "review",
+      "previous": {
+        "status": "complete",
+        "inputHash": "12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4",
+        "outputs": [
+          {
+            "path": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-acceptances\\12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4.json",
+            "sha256": "10ff5aad01d3ee861d58e1a5f6200537df4ee887cbd4b4ff54525aa1f3938523"
+          }
+        ]
+      },
+      "invalidatedAt": "2026-11-12T23:59:22.569Z"
+    },
+    {
+      "stage": "audio",
+      "previous": {
+        "status": "planned",
+        "inputHash": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-12T23:59:22.580Z"
+    },
+    {
+      "stage": "alignment",
+      "previous": {
+        "status": "planned",
+        "inputHash": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-13T00:02:15.679Z"
+    },
+    {
+      "stage": "captions",
+      "previous": {
+        "status": "planned",
+        "inputHash": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-13T00:02:33.179Z"
+    },
+    {
+      "stage": "render",
+      "previous": {
+        "status": "planned",
+        "inputHash": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
+        "outputs": [],
+        "details": {}
+      },
+      "invalidatedAt": "2026-11-13T00:02:33.184Z"
+    }
+  ],
+  "revisions": [
+    {
+      "hash": "12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4",
+      "directory": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\revisions\\12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4",
+      "sourceIdentity": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e"
+    }
+  ],
+  "paidOptIn": true,
+  "createdAt": "2026-11-12T23:57:32.800Z",
+  "updatedAt": "2026-11-13T00:02:33.184Z",
+  "sourceIdentity": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
+  "workDirectory": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\generated\\7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
+  "configuration": {
+    "voice": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Kore",
+        "ko-KR": "ko-KR-Chirp3-HD-Kore"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "presentation": {
+      "compactSpacing": true,
+      "synchronizedCaptions": true,
+      "backgroundAudio": true,
+      "musicGain": 1.25,
+      "captionStyle": "phrases",
+      "bookendStyle": "display"
+    },
+    "alignment": {
+      "version": "phrase-alignment-v1",
+      "engine": "stable-ts",
+      "engineVersion": "2.19.1",
+      "whisperVersion": "20250625",
+      "torchVersion": "2.8.0+cpu",
+      "model": "base",
+      "modelSha256": "ed3a0b6b1c0edf879ad9b11b1af5a0e6ab5db9205f891f668f8b0e6c6326e34e",
+      "device": "cpu",
+      "sampleRate": 16000,
+      "threads": 4,
+      "fp16": false,
+      "regroup": false,
+      "suppressSilence": true,
+      "vad": false,
+      "fastMode": false
+    },
+    "grouping": {
+      "version": "automatic-phrases-v4-acoustic-groups",
+      "englishWords": 4,
+      "maximumWords": 5,
+      "maximumCharacters": 36,
+      "koreanWholeUtterance": true
+    },
+    "audioProcessing": "loudnorm-I-16-TP-1.5-LRA-11-mono-24000-v1",
+    "productionPreset": {
+      "id": "concise-v2",
+      "timing": {
+        "fps": 30,
+        "openingMinimum": 90,
+        "readingMinimum": 90,
+        "countdown": 90,
+        "revealMinimum": 0,
+        "settlePause": 6,
+        "afterHook": 9,
+        "afterQuestion": 9,
+        "answerGap": 9,
+        "afterExplanation": 15,
+        "transition": 10,
+        "finalFade": 12,
+        "commentHold": 120,
+        "afterComment": 45,
+        "afterFollow": 30,
+        "countdownHard": 120
+      },
+      "music": {
+        "idle": 0.6356418950802395,
+        "thinking": 0.4237612633868263,
+        "speech": 0.2825075089245509
+      },
+      "mixVersion": "source-music-plus3-v1",
+      "relativeMusicDb": 3,
+      "finalMix": {
+        "version": "final-mix-concise-v1",
+        "integratedLUFS": -14,
+        "truePeakDbTP": -1.5,
+        "loudnessRangeLU": 11,
+        "integratedToleranceLU": 0.5,
+        "truePeakMeterToleranceDb": 0.1,
+        "encoderHeadroomDb": 0.3
+      },
+      "editorial": "concise-explanations-v1",
+      "advisoryDurationSeconds": [
+        75,
+        85
+      ],
+      "minimumDurationSeconds": 65
+    }
+  },
+  "narration": {
+    "version": 1,
+    "profile": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Kore",
+        "ko-KR": "ko-KR-Chirp3-HD-Kore"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "segments": [
+      {
+        "id": "production-video-20261112-bf4b8311-hook",
+        "contentId": "production-video-20261112-bf4b8311",
+        "role": "hook",
+        "language": "en-US",
+        "text": "Can you say it in Korean?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q1-question",
+        "contentId": "production-video-20261112-bf4b8311-q1",
+        "role": "question",
+        "language": "en-US",
+        "text": "You’re looking for potato chips. What could you ask the clerk?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q1-answer",
+        "contentId": "production-video-20261112-bf4b8311-q1",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "감자칩은 어디에 있어요?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q1-explanation",
+        "contentId": "production-video-20261112-bf4b8311-q1",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "It asks where potato chips are; use it to locate an item."
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q2-question",
+        "contentId": "production-video-20261112-bf4b8311-q2",
+        "role": "question",
+        "language": "en-US",
+        "text": "You have a snack in hand. How can you ask its price?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q2-answer",
+        "contentId": "production-video-20261112-bf4b8311-q2",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "이 과자는 얼마예요?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q2-explanation",
+        "contentId": "production-video-20261112-bf4b8311-q2",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "It asks the snack’s price; use this polite question when buying."
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q3-question",
+        "contentId": "production-video-20261112-bf4b8311-q3",
+        "role": "question",
+        "language": "en-US",
+        "text": "You’ve picked your items and need one bag. What do you say?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q3-answer",
+        "contentId": "production-video-20261112-bf4b8311-q3",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "봉투 하나 주세요."
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q3-explanation",
+        "contentId": "production-video-20261112-bf4b8311-q3",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "It requests one bag; the number word makes the quantity clear."
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q4-question",
+        "contentId": "production-video-20261112-bf4b8311-q4",
+        "role": "question",
+        "language": "en-US",
+        "text": "The cashier is ready. How will you say you’re using your bank card?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q4-answer",
+        "contentId": "production-video-20261112-bf4b8311-q4",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "카드로 결제할게요."
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q4-explanation",
+        "contentId": "production-video-20261112-bf4b8311-q4",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "You’ll pay by card; the ending politely states your intention."
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q5-question",
+        "contentId": "production-video-20261112-bf4b8311-q5",
+        "role": "question",
+        "language": "en-US",
+        "text": "Before choosing it, how can you check whether the snack is spicy?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q5-answer",
+        "contentId": "production-video-20261112-bf4b8311-q5",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "이 과자 매워요?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q5-explanation",
+        "contentId": "production-video-20261112-bf4b8311-q5",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "It asks whether the snack is spicy; this checks its flavor."
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q6-question",
+        "contentId": "production-video-20261112-bf4b8311-q6",
+        "role": "question",
+        "language": "en-US",
+        "text": "You want a mild snack. How would you ask the clerk for a suggestion?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q6-comment",
+        "contentId": "production-video-20261112-bf4b8311-q6",
+        "role": "comment",
+        "language": "en-US",
+        "text": "What do you think? Comment your answer!"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q6-follow",
+        "contentId": "production-video-20261112-bf4b8311-q6",
+        "role": "follow",
+        "language": "en-US",
+        "text": "Follow for more Korean!"
+      }
+    ]
+  },
+  "contentHash": "12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4",
+  "assets": {
+    "music": {
+      "file": "audio/music/warm-pluck-groove-b992ec53fe43.wav",
+      "sha256": "f82108343d2cc97a3e04601d7e2defdb102adf3b16f225dc3b9169cdd1d50047",
+      "durationSeconds": 50,
+      "mixTrimDb": -3,
+      "mixVersion": "local-bed-trim-v1"
+    }
+  },
+  "maxCostUSD": 0.75,
+  "budget": {
+    "ledger": "C:\\Users\\david\\Documents\\kor-vids\\data\\generation-budgets\\produce-video-20261112-bf4b8311.json",
+    "version": 2,
+    "kind": "production-budget",
+    "jobId": "video-20261112-bf4b8311",
+    "capUnits": 750000000,
+    "authorization": "Explicit --allow-paid and total --max-cost-usd for this production job",
+    "allocations": {
+      "image-65e1f2f0e192749fbf4e97b8": {
+        "stage": "image",
+        "inputHash": "65e1f2f0e192749fbf4e97b85c4ebe38de27466198ec6ec815cf47fb700fbf5a",
+        "allocatedUnits": 507115000,
+        "chargedUnits": 36275000,
+        "state": "settled",
+        "childBudgetId": "p6-e1a5660957fe1c536254-image",
+        "requests": [
+          {
+            "key": "65e1f2f0e192749fbf4e97b85c4ebe38de27466198ec6ec815cf47fb700fbf5a",
+            "state": "received",
+            "units": 507115000,
+            "sha256": "c7a8d2c236cc06cb1cf69376374c37fb0d79fdebf539598a6c4552696568421a",
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\image\\65e1f2f0e192749fbf4e97b85c4ebe38de27466198ec6ec815cf47fb700fbf5a\\original.png"
+          }
+        ],
+        "usage": {
+          "providerRequests": 1,
+          "usage": {
+            "input_tokens": 463,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 463
+            },
+            "output_tokens": 1132,
+            "output_tokens_details": {
+              "image_tokens": 1132,
+              "text_tokens": 0
+            },
+            "total_tokens": 1595
+          },
+          "costKnown": true,
+          "receipt": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\image\\65e1f2f0e192749fbf4e97b85c4ebe38de27466198ec6ec815cf47fb700fbf5a\\receipt.json"
+        }
+      },
+      "generation-5e8c45f62a36004c79111a67": {
+        "stage": "generation",
+        "inputHash": "5e8c45f62a36004c79111a67a81154b6cd758b00b85267a48e7d2257d1ff6fba",
+        "allocatedUnits": 37600000,
+        "chargedUnits": 3085375,
+        "state": "settled",
+        "childBudgetId": "p6-fe9dfad80d55827b8167-generation",
+        "requests": [],
+        "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\generation-budgets\\p6-fe9dfad80d55827b8167-generation.json",
+        "usage": [
+          {
+            "state": "valid",
+            "usage": {
+              "inputTokens": 2475,
+              "outputTokens": 5552,
+              "totalTokens": 8027,
+              "reasoningTokens": 3827,
+              "cachedInputTokens": 0
+            }
+          }
+        ]
+      },
+      "review-12ea1aa86028ed6cd17b7d0d": {
+        "stage": "review",
+        "inputHash": "12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4",
+        "allocatedUnits": 56400000,
+        "chargedUnits": 826750,
+        "state": "settled",
+        "childBudgetId": "p6-71cdfb20fd21e04678a1-review",
+        "requests": [],
+        "childLedger": "C:\\Users\\david\\Documents\\kor-vids\\data\\automated-review-budgets\\p6-71cdfb20fd21e04678a1-review.json",
+        "usage": [
+          {
+            "state": "complete",
+            "usage": {
+              "inputTokens": 3182,
+              "outputTokens": 858,
+              "totalTokens": 4040,
+              "reasoningTokens": 494,
+              "cachedInputTokens": 0
+            }
+          }
+        ]
+      },
+      "tts-22a05ffe8984566168b8c0e7": {
+        "stage": "tts",
+        "inputHash": "22a05ffe8984566168b8c0e7a79a1bacffad5f0f561b045ed8729802efe2a9d1",
+        "allocatedUnits": 43800000,
+        "chargedUnits": 21900003,
+        "state": "settled",
+        "childBudgetId": "p6-588f489a1a12d5432601-tts",
+        "requests": [
+          {
+            "key": "424e3f8c68e5fef510c0257f4842f96732048764c9868fb1ac6cbc8b8ad2a873",
+            "state": "received",
+            "units": 1860000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\tts-responses\\424e3f8c68e5fef510c0257f4842f96732048764c9868fb1ac6cbc8b8ad2a873.wav",
+            "sha256": "a0c03197d4dec046e89982b988e70fa02e7c075f7fbd0ee4681648fe95941b30"
+          },
+          {
+            "key": "f4026b245a36c078c9f44441509997c122b87f04a817356e462ef95579b85ee0",
+            "state": "received",
+            "units": 390000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\tts-responses\\f4026b245a36c078c9f44441509997c122b87f04a817356e462ef95579b85ee0.wav",
+            "sha256": "aab036aac6f26636588f732f679d4fff2d127f61468e17f10e233bdbcf6342db"
+          },
+          {
+            "key": "4f4c360f96cb44099e67eed12c2d9a199bf517aea2af22625ce8cdad7ebd7552",
+            "state": "received",
+            "units": 1710001,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\tts-responses\\4f4c360f96cb44099e67eed12c2d9a199bf517aea2af22625ce8cdad7ebd7552.wav",
+            "sha256": "2c9432f2d2a2a63de01d78b7813f7ba2f8e171b9d06a43e772bc4ab4592e8f10"
+          },
+          {
+            "key": "4328fbd362f665452a83e8cbdb9b23872984b37ab5d90c5f7ed2586e5ad05e7b",
+            "state": "received",
+            "units": 1560000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\tts-responses\\4328fbd362f665452a83e8cbdb9b23872984b37ab5d90c5f7ed2586e5ad05e7b.wav",
+            "sha256": "4154be775700bc9ed9528a985fba5800a4813f8e4d4b96972a851077b5e05619"
+          },
+          {
+            "key": "414c92654f34bec634284f7639a502bafbb0ac1ab9f42fc770706807a41599b5",
+            "state": "received",
+            "units": 330000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\tts-responses\\414c92654f34bec634284f7639a502bafbb0ac1ab9f42fc770706807a41599b5.wav",
+            "sha256": "770bf76bdcfdb0b180d341a4f7f35b26ec74aa9d6fea8ad5343e0957139cb923"
+          },
+          {
+            "key": "ccb76d8f7f4f949b4a7f110ef845eab4366ef032b8696982c3dbc14d98ae03db",
+            "state": "received",
+            "units": 1920000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\tts-responses\\ccb76d8f7f4f949b4a7f110ef845eab4366ef032b8696982c3dbc14d98ae03db.wav",
+            "sha256": "970930d42d2933327631b9152e70b7b9f829be95f8c0bf9dad01cc56b9bb14c5"
+          },
+          {
+            "key": "5ae83da06ca9475daffea13628daac7a8a5c50de9c0d55f2a03ee1fc469276e4",
+            "state": "received",
+            "units": 1770000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\tts-responses\\5ae83da06ca9475daffea13628daac7a8a5c50de9c0d55f2a03ee1fc469276e4.wav",
+            "sha256": "1d43b391a3480bfd741b1962d642a11c703e6d808b77b17a33d55b9f5c7b3e22"
+          },
+          {
+            "key": "88c92b588a8fa9aa6b4fa84660acc41fadc248ad3ff7f1a2ef0f54bfb6877590",
+            "state": "received",
+            "units": 300000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\tts-responses\\88c92b588a8fa9aa6b4fa84660acc41fadc248ad3ff7f1a2ef0f54bfb6877590.wav",
+            "sha256": "8dd70ebeea2e4317e0a84302126882e9d2f3cca2e65ea6b8e47b784dfd1f39a4"
+          },
+          {
+            "key": "dd29a8afc4c692253e0300cd9ab827e23d3d3274369d398eb61c6f111d05e36c",
+            "state": "received",
+            "units": 1860000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\tts-responses\\dd29a8afc4c692253e0300cd9ab827e23d3d3274369d398eb61c6f111d05e36c.wav",
+            "sha256": "f8c396cb86105fec2458f279e9e63a85d72512af21d677535e2c5244b19c3365"
+          },
+          {
+            "key": "f274edf9ccf1eba5448869a6999d417636ff28794004807efdd57f6e55b53d54",
+            "state": "received",
+            "units": 2010000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\tts-responses\\f274edf9ccf1eba5448869a6999d417636ff28794004807efdd57f6e55b53d54.wav",
+            "sha256": "77beb4d4f7d21f3dbbd2412b26146ac9dc1b0ed6b0ba293902a91770501a7233"
+          },
+          {
+            "key": "c84e2a6db48bf49226252a42103edad728da9fd575b6d49b911c6c4a82dbc3fe",
+            "state": "received",
+            "units": 300000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\tts-responses\\c84e2a6db48bf49226252a42103edad728da9fd575b6d49b911c6c4a82dbc3fe.wav",
+            "sha256": "0d160dff21b8b08b73ee3879360c3dd8cf1e946fa5f8a0561e5b10b45032d1a4"
+          },
+          {
+            "key": "1d22bcaef9dc2329d0828c720207cd4ab05d8d042b8298b2240f342710ee79ff",
+            "state": "received",
+            "units": 1860000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\tts-responses\\1d22bcaef9dc2329d0828c720207cd4ab05d8d042b8298b2240f342710ee79ff.wav",
+            "sha256": "5b074b6c386d57a2fd55b0664fd2a3e43953524c4e2e0cfefdc83d607f88e3f6"
+          },
+          {
+            "key": "294c2360170e874a6bd31421345d842d05b3349af8f4304218b36b175baa5786",
+            "state": "received",
+            "units": 1950001,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\tts-responses\\294c2360170e874a6bd31421345d842d05b3349af8f4304218b36b175baa5786.wav",
+            "sha256": "2a3b8b6b877bcc0b9f349a379b96804acfd2859c5c36cebf410396eb4ac15e7f"
+          },
+          {
+            "key": "6fa33860178793f47ea773d65b8747569bcfd40e13ac925b03232b1a0791b146",
+            "state": "received",
+            "units": 270000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\tts-responses\\6fa33860178793f47ea773d65b8747569bcfd40e13ac925b03232b1a0791b146.wav",
+            "sha256": "0994c87111ff47fc1efd2424e62807b6d4bc84d6597dab1b9a49db209f06c5dd"
+          },
+          {
+            "key": "5b3dc6b1e09cd1a023e380ea8c9980a6e932100a14e878961181b229262fea78",
+            "state": "received",
+            "units": 1770000,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\tts-responses\\5b3dc6b1e09cd1a023e380ea8c9980a6e932100a14e878961181b229262fea78.wav",
+            "sha256": "17740386a0594a9e3a0ea97d51dbf4c456f31b85160936ca00a966da5314442b"
+          },
+          {
+            "key": "8cd746267a1bdbb73e441beef2a71046be08685e45b77568b072a8c480c3ee90",
+            "state": "received",
+            "units": 2040001,
+            "rawFile": "C:\\Users\\david\\Documents\\kor-vids\\data\\production-jobs\\video-20261112-bf4b8311\\tts-responses\\8cd746267a1bdbb73e441beef2a71046be08685e45b77568b072a8c480c3ee90.wav",
+            "sha256": "64d5f3d3b30935fee6d5e32926934ffc9ae04b44cd0b36403cb7bda4cbaeef2e"
+          }
+        ],
+        "usage": {
+          "cacheHits": 3,
+          "recoveredOriginals": 0,
+          "localPrepared": 0,
+          "newSynthesisRequests": 16,
+          "newSynthesisCharacters": 730,
+          "estimated": true
+        }
+      }
+    }
+  }
+}

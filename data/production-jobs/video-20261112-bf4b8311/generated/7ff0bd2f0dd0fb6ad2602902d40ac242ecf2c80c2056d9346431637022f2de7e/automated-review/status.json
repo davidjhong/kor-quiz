@@ -1,0 +1,103 @@
+{
+  "status": "accepted",
+  "contentHash": "12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4",
+  "model": "gpt-6-luna",
+  "promptVersion": "phase5b-automated-review-v1",
+  "findings": {
+    "questions": [
+      {
+        "questionId": "production-video-20261112-bf4b8311-q1",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-video-20261112-bf4b8311-q2",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-video-20261112-bf4b8311-q3",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-video-20261112-bf4b8311-q4",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-video-20261112-bf4b8311-q5",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      },
+      {
+        "questionId": "production-video-20261112-bf4b8311-q6",
+        "checks": {
+          "naturalKorean": "pass",
+          "uniqueAnswer": "pass",
+          "romanization": "pass",
+          "meaningExplanation": "pass",
+          "englishNarration": "pass",
+          "bonusIsolation": "pass"
+        },
+        "findings": []
+      }
+    ],
+    "resolutions": []
+  },
+  "estimatedCostUSD": 0.00082675,
+  "calls": 1,
+  "usage": [
+    {
+      "phase": "review",
+      "state": "complete",
+      "reservedUnits": 18800000,
+      "chargedUnits": 826750,
+      "usage": {
+        "inputTokens": 3182,
+        "outputTokens": 858,
+        "totalTokens": 4040,
+        "reasoningTokens": 494,
+        "cachedInputTokens": 0
+      },
+      "requestId": "req_9ffc55e9a35649988bd10ac65f0ded88",
+      "returnedModel": "gpt-6-luna",
+      "startedAt": "2026-11-12T23:59:00.518Z"
+    }
+  ]
+}

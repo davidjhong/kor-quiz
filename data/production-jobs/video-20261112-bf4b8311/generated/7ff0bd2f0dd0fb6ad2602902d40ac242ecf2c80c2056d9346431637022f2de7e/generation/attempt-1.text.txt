@@ -1,0 +1,164 @@
+{
+  "questions": [
+    {
+      "scenario": "Finding potato chips",
+      "prompt": "Ask where the potato chips are.",
+      "context": "You cannot find the potato chips and want to ask a clerk.",
+      "spokenPrompt": "You’re looking for potato chips. What could you ask the clerk?",
+      "choices": [
+        {
+          "hangul": "감자칩은 어디에 있어요?",
+          "romanization": "gamjachibeun eodie isseoyo?"
+        },
+        {
+          "hangul": "음료수는 어디에 있어요?",
+          "romanization": "eumnyosuneun eodie isseoyo?"
+        },
+        {
+          "hangul": "과자는 얼마예요?",
+          "romanization": "gwajaneun eolmayeyo?"
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "Where are the potato chips?",
+      "explanation": "감자칩은 어디에 있어요? asks where the potato chips are; 은 marks 감자칩 as the topic.",
+      "teachingPoint": "감자칩은 = potato chips (topic); 어디에 있어요? = where are they?",
+      "explanationNarration": "It asks where potato chips are; use it to locate an item."
+    },
+    {
+      "scenario": "Checking the price",
+      "prompt": "Ask how much this snack costs.",
+      "context": "You are holding a packaged snack and want to know its price.",
+      "spokenPrompt": "You have a snack in hand. How can you ask its price?",
+      "choices": [
+        {
+          "hangul": "이 과자는 얼마예요?",
+          "romanization": "i gwajaneun eolmayeyo?"
+        },
+        {
+          "hangul": "이 과자는 어디에 있어요?",
+          "romanization": "i gwajaneun eodie isseoyo?"
+        },
+        {
+          "hangul": "이 음료는 얼마예요?",
+          "romanization": "i eumnyoneun eolmayeyo?"
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "How much is this snack?",
+      "explanation": "이 과자는 얼마예요? asks the price of this snack. 얼마예요? is a polite way to ask how much something costs.",
+      "teachingPoint": "이 과자는 = this snack; 얼마예요? = how much is it?",
+      "explanationNarration": "It asks the snack’s price; use this polite question when buying."
+    },
+    {
+      "scenario": "Requesting a bag",
+      "prompt": "Ask for exactly one shopping bag.",
+      "context": "You have several items and need one bag for them.",
+      "spokenPrompt": "You’ve picked your items and need one bag. What do you say?",
+      "choices": [
+        {
+          "hangul": "봉투 하나 주세요.",
+          "romanization": "beontu hana juseyo."
+        },
+        {
+          "hangul": "봉투 두 개 주세요.",
+          "romanization": "beontu du gae juseyo."
+        },
+        {
+          "hangul": "영수증 하나 주세요.",
+          "romanization": "yeongsujeung hana juseyo."
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "One bag, please.",
+      "explanation": "봉투 하나 주세요 means “One bag, please.” 하나 specifies one item in this polite request.",
+      "teachingPoint": "봉투 = bag; 하나 주세요 = one, please",
+      "explanationNarration": "It requests one bag; the number word makes the quantity clear."
+    },
+    {
+      "scenario": "Paying at checkout",
+      "prompt": "Tell the cashier you will pay by card.",
+      "context": "You have your bank card ready and want to use it at checkout.",
+      "spokenPrompt": "The cashier is ready. How will you say you’re using your bank card?",
+      "choices": [
+        {
+          "hangul": "카드로 결제할게요.",
+          "romanization": "kadeuro gyeoljehalgeyo."
+        },
+        {
+          "hangul": "현금으로 결제할게요.",
+          "romanization": "hyeongeumeuro gyeoljehalgeyo."
+        },
+        {
+          "hangul": "봉투에 담아 주세요.",
+          "romanization": "beontue dama juseyo."
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "I’ll pay by card.",
+      "explanation": "카드로 결제할게요 means “I’ll pay by card.” 로 marks the payment method, and 할게요 expresses intention.",
+      "teachingPoint": "카드로 = by card; 결제할게요 = I’ll pay",
+      "explanationNarration": "You’ll pay by card; the ending politely states your intention."
+    },
+    {
+      "scenario": "Choosing a snack",
+      "prompt": "Ask whether this snack is spicy.",
+      "context": "You want to check the taste of a snack before choosing it.",
+      "spokenPrompt": "Before choosing it, how can you check whether the snack is spicy?",
+      "choices": [
+        {
+          "hangul": "이 과자 매워요?",
+          "romanization": "i gwaja maewoyo?"
+        },
+        {
+          "hangul": "이 과자 달아요?",
+          "romanization": "i gwaja dalayo?"
+        },
+        {
+          "hangul": "이 과자 짜요?",
+          "romanization": "i gwaja jjayo?"
+        }
+      ],
+      "correctAnswerIndex": 0,
+      "translation": "Is this snack spicy?",
+      "explanation": "이 과자 매워요? asks whether this snack is spicy. 매워요 describes a spicy taste.",
+      "teachingPoint": "이 과자 = this snack; 매워요? = is it spicy?",
+      "explanationNarration": "It asks whether the snack is spicy; this checks its flavor."
+    }
+  ],
+  "bonus": {
+    "scenario": "Asking for a recommendation",
+    "prompt": "Ask the clerk to recommend a snack that is not spicy.",
+    "context": "You want a non-spicy snack and would like the clerk to suggest one.",
+    "spokenPrompt": "You want a mild snack. How would you ask the clerk for a suggestion?",
+    "choices": [
+      {
+        "hangul": "안 매운 과자 추천해 주세요.",
+        "romanization": "an maeun gwaja chucheonhae juseyo."
+      },
+      {
+        "hangul": "매운 과자 추천해 주세요.",
+        "romanization": "maeun gwaja chucheonhae juseyo."
+      },
+      {
+        "hangul": "안 단 과자 추천해 주세요.",
+        "romanization": "an dan gwaja chucheonhae juseyo."
+      }
+    ],
+    "correctAnswerIndex": 0,
+    "translation": "Please recommend a non-spicy snack.",
+    "explanation": "안 매운 과자 추천해 주세요 asks for a non-spicy snack recommendation. 안 before 매운 negates the description.",
+    "teachingPoint": "안 매운 = not spicy; 추천해 주세요 = please recommend"
+  },
+  "derivedBrief": {
+    "context": "A beginner traveler shops at a convenience store, finds and checks snacks, requests a bag, and pays at checkout.",
+    "learningObjectives": [
+      "Ask a clerk where a specific snack is.",
+      "Ask the price of a snack you are holding.",
+      "Request exactly one shopping bag.",
+      "Tell the cashier you will pay by card.",
+      "Ask whether a snack is spicy.",
+      "Request a recommendation for a non-spicy snack."
+    ]
+  }
+}

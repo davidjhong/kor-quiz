@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "kind": "narration-review-plan",
+  "valid": true,
+  "contentHash": "12ea1aa86028ed6cd17b7d0df4471e0567410e2297ffbf46a483eca7289e1af4",
+  "profile": {
+    "provider": "google-cloud-tts",
+    "model": "chirp3-hd",
+    "voices": {
+      "en-US": "en-US-Chirp3-HD-Achird",
+      "ko-KR": "ko-KR-Chirp3-HD-Achird"
+    },
+    "outputFormat": "LINEAR16",
+    "sampleRateHertz": 24000,
+    "speakingRate": 1
+  },
+  "timingRules": {
+    "fps": 30,
+    "openingMinimum": 90,
+    "readingMinimum": 120,
+    "countdown": 150,
+    "revealMinimum": 120,
+    "settlePause": 6,
+    "afterHook": 15,
+    "afterQuestion": 15,
+    "answerGap": 10,
+    "afterExplanation": 30,
+    "transition": 12,
+    "finalFade": 12,
+    "commentHold": 120,
+    "afterComment": 45,
+    "afterFollow": 30
+  },
+  "endingDisplay": {
+    "comment": "Comment your answer 💬",
+    "follow": "Follow for more Korean ✨"
+  },
+  "timingStatus": "Absolute frames require measured audio; this is not a prepared render manifest.",
+  "segments": [
+    {
+      "id": "production-video-20261112-bf4b8311-hook",
+      "contentId": "production-video-20261112-bf4b8311",
+      "role": "hook",
+      "language": "en-US",
+      "text": "Can you say it in Korean?",
+      "cacheKey": "b03314a1a056b827307ce797080d4b15544d9502a7f510a176d151da28c98eb8",
+      "file": "audio/cache/b03314a1a056b827307ce797080d4b15544d9502a7f510a176d151da28c98eb8.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q1-question",
+      "contentId": "production-video-20261112-bf4b8311-q1",
+      "role": "question",
+      "language": "en-US",
+      "text": "You’re looking for potato chips. What could you ask the clerk?",
+      "cacheKey": "bbbe3bf47646afa9bd4791c5655919932c76f0d671006372e459121838bba886",
+      "file": "audio/cache/bbbe3bf47646afa9bd4791c5655919932c76f0d671006372e459121838bba886.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q1-answer",
+      "contentId": "production-video-20261112-bf4b8311-q1",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "감자칩은 어디에 있어요?",
+      "cacheKey": "32a10717a081ffa371b849f9a65a801c8b57caeca1827e8be9c5e3644cd11f3e",
+      "file": "audio/cache/32a10717a081ffa371b849f9a65a801c8b57caeca1827e8be9c5e3644cd11f3e.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q1-explanation",
+      "contentId": "production-video-20261112-bf4b8311-q1",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "It asks where potato chips are; use it to locate an item.",
+      "cacheKey": "b6ede010ec4b38f17532e39b553477f8e1cea61a1030d0f0d35a91a5e158f9a1",
+      "file": "audio/cache/b6ede010ec4b38f17532e39b553477f8e1cea61a1030d0f0d35a91a5e158f9a1.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q2-question",
+      "contentId": "production-video-20261112-bf4b8311-q2",
+      "role": "question",
+      "language": "en-US",
+      "text": "You have a snack in hand. How can you ask its price?",
+      "cacheKey": "53bc2783b22b6a45d1b626d4abc8d9174e667d5660886f9c9b0104ed6fac5dfe",
+      "file": "audio/cache/53bc2783b22b6a45d1b626d4abc8d9174e667d5660886f9c9b0104ed6fac5dfe.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q2-answer",
+      "contentId": "production-video-20261112-bf4b8311-q2",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "이 과자는 얼마예요?",
+      "cacheKey": "eba82bb7278f2308052b7f12fbe97751c13da24745ea2b0bb622e84d7b089105",
+      "file": "audio/cache/eba82bb7278f2308052b7f12fbe97751c13da24745ea2b0bb622e84d7b089105.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q2-explanation",
+      "contentId": "production-video-20261112-bf4b8311-q2",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "It asks the snack’s price; use this polite question when buying.",
+      "cacheKey": "f2034be0987c664d0088ea16a60f48e00218299bbdbab0debc3d0df2f556292c",
+      "file": "audio/cache/f2034be0987c664d0088ea16a60f48e00218299bbdbab0debc3d0df2f556292c.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q3-question",
+      "contentId": "production-video-20261112-bf4b8311-q3",
+      "role": "question",
+      "language": "en-US",
+      "text": "You’ve picked your items and need one bag. What do you say?",
+      "cacheKey": "b47de1e86e4c61496fa83086566d2f7c1e9bb656221b92e5967d5e444f1ea11e",
+      "file": "audio/cache/b47de1e86e4c61496fa83086566d2f7c1e9bb656221b92e5967d5e444f1ea11e.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q3-answer",
+      "contentId": "production-video-20261112-bf4b8311-q3",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "봉투 하나 주세요.",
+      "cacheKey": "87f387aa40b43ef5f3488c6d0f9c926e850b5cf90fd4bbdedfc7c8b8a635fcf9",
+      "file": "audio/cache/87f387aa40b43ef5f3488c6d0f9c926e850b5cf90fd4bbdedfc7c8b8a635fcf9.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q3-explanation",
+      "contentId": "production-video-20261112-bf4b8311-q3",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "It requests one bag; the number word makes the quantity clear.",
+      "cacheKey": "0e5cbce87f90d537115c61e192cfff0c9067c4af88833251f8aef0040b438735",
+      "file": "audio/cache/0e5cbce87f90d537115c61e192cfff0c9067c4af88833251f8aef0040b438735.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q4-question",
+      "contentId": "production-video-20261112-bf4b8311-q4",
+      "role": "question",
+      "language": "en-US",
+      "text": "The cashier is ready. How will you say you’re using your bank card?",
+      "cacheKey": "b90474e3962d4b0c37b79c410fcca0f3f1168bddde4c6974146a076abe5fe112",
+      "file": "audio/cache/b90474e3962d4b0c37b79c410fcca0f3f1168bddde4c6974146a076abe5fe112.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q4-answer",
+      "contentId": "production-video-20261112-bf4b8311-q4",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "카드로 결제할게요.",
+      "cacheKey": "e7e7ef42e5188c230b071dcf0c472574c2fabac95f0deaebbedaa4b697d571fd",
+      "file": "audio/cache/e7e7ef42e5188c230b071dcf0c472574c2fabac95f0deaebbedaa4b697d571fd.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q4-explanation",
+      "contentId": "production-video-20261112-bf4b8311-q4",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "You’ll pay by card; the ending politely states your intention.",
+      "cacheKey": "f3c9e422093f243ac99823fd28be5f9e5342a06ec9aa7ce620bb0992ea7840d7",
+      "file": "audio/cache/f3c9e422093f243ac99823fd28be5f9e5342a06ec9aa7ce620bb0992ea7840d7.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q5-question",
+      "contentId": "production-video-20261112-bf4b8311-q5",
+      "role": "question",
+      "language": "en-US",
+      "text": "Before choosing it, how can you check whether the snack is spicy?",
+      "cacheKey": "8ed016d1fb933c2992f7ae24bb44a3a9da77577d032eb9f44b416d92ba7182d5",
+      "file": "audio/cache/8ed016d1fb933c2992f7ae24bb44a3a9da77577d032eb9f44b416d92ba7182d5.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q5-answer",
+      "contentId": "production-video-20261112-bf4b8311-q5",
+      "role": "answer",
+      "language": "ko-KR",
+      "text": "이 과자 매워요?",
+      "cacheKey": "3238feeccdec1dde014daa6b28dc0041f6e283a1a9ea1880af06d9336c585751",
+      "file": "audio/cache/3238feeccdec1dde014daa6b28dc0041f6e283a1a9ea1880af06d9336c585751.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q5-explanation",
+      "contentId": "production-video-20261112-bf4b8311-q5",
+      "role": "explanation",
+      "language": "en-US",
+      "text": "It asks whether the snack is spicy; this checks its flavor.",
+      "cacheKey": "c0faa67a0a9dd9f4d601084d1c86a20e80a1be3c136ee0b4e26fb728a7c30759",
+      "file": "audio/cache/c0faa67a0a9dd9f4d601084d1c86a20e80a1be3c136ee0b4e26fb728a7c30759.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q6-question",
+      "contentId": "production-video-20261112-bf4b8311-q6",
+      "role": "question",
+      "language": "en-US",
+      "text": "You want a mild snack. How would you ask the clerk for a suggestion?",
+      "cacheKey": "4d13720dc69b470e6ccc7b6dd5cbddb40dab70606efcb0eb4636c00589adc1b3",
+      "file": "audio/cache/4d13720dc69b470e6ccc7b6dd5cbddb40dab70606efcb0eb4636c00589adc1b3.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q6-comment",
+      "contentId": "production-video-20261112-bf4b8311-q6",
+      "role": "comment",
+      "language": "en-US",
+      "text": "What do you think? Comment your answer!",
+      "cacheKey": "06907980bfef420ffd5fd752cb4b2dfb593bf7c3dfe3c18f58e475b76b2b3e29",
+      "file": "audio/cache/06907980bfef420ffd5fd752cb4b2dfb593bf7c3dfe3c18f58e475b76b2b3e29.wav",
+      "durationSeconds": null
+    },
+    {
+      "id": "production-video-20261112-bf4b8311-q6-follow",
+      "contentId": "production-video-20261112-bf4b8311-q6",
+      "role": "follow",
+      "language": "en-US",
+      "text": "Follow for more Korean!",
+      "cacheKey": "b74615011f68405c3b6b89258ba612b99feea34931e3f82d1544b981836fe18a",
+      "file": "audio/cache/b74615011f68405c3b6b89258ba612b99feea34931e3f82d1544b981836fe18a.wav",
+      "durationSeconds": null
+    }
+  ]
+}

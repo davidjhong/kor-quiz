@@ -15,7 +15,7 @@ export const IMAGE_PROFILES={
   'gpt-image-2.6-flare':{checked:'2026-11-11',verifyAgainBy:'2026-11-18',textUSDPerMillion:5,outputUSDPerMillion:30},
   'gpt-image-2.5-flare-2026-09-08':{checked:'2026-11-11',verifyAgainBy:'2026-11-18',textUSDPerMillion:5,outputUSDPerMillion:30},
 } as const;
-export const backgroundOptionsSchema=z.strictObject({mode:z.enum(['auto','new']).default('auto'),assetId:backgroundIdSchema.optional(),
+export const backgroundOptionsSchema=z.strictObject({mode:z.enum(['auto','pool','new']).default('auto'),assetId:backgroundIdSchema.optional(),
   model:z.enum(['gpt-image-2.6-flare','gpt-image-2.5-flare-2026-09-08']).default('gpt-image-2.6-flare'),
   quality:z.enum(['low','medium','high']).default('medium'),reuseLimit:z.number().int().min(1).max(10).default(5),
   character:z.enum(['adult woman','adult man','adult traveler']).default('adult traveler')});
@@ -46,6 +46,7 @@ export const planBackground=async(root:string,brief:{scenario:string;scenarioTyp
   const id=bound?.assetId??selectCatalogAsset(catalog,brief.scenarioType,{limit:options.reuseLimit,explicit:options.assetId,fresh:options.mode==='new'});
   let binding=bound;
   if(!binding&&id)binding={assetId:id};
+  if(!binding&&options.mode==='pool')throw new Error('Background pool has no eligible assets; pool forbids generation');
   if(!binding){const request=imageRequestSchema.parse({version:1,model:options.model,quality:options.quality,size:'1024x1536',output_format:'png',n:1,
     setting:brief.scenarioType,scope,style:BACKGROUND_STYLE,prompt:makeBackgroundPrompt(brief.scenarioType,brief.scenario,options.character)});
     binding={assetId:`generated-${brief.scenarioType}-${imageRequestHash(request).slice(0,16)}`,request};}
@@ -103,6 +104,7 @@ export const prepareBackground=async(o:{root:string;folder:string;binding:Backgr
     scenarioLabel:`AT A KOREAN ${r.setting.toUpperCase()}`,framing:{scale:1.02,origin:'50% 0%' as const}};
   await registerGeneratedBackground(o.root,{render,setting:r.setting,tags:[r.setting],style:BACKGROUND_STYLE,composition:'center cover 1024x1536 to 9:16; 1.02 safe zoom; geometry in exact prompt',
     prompt:r.prompt,model:r.model,settings:{quality:r.quality,size:r.size,output_format:r.output_format,n:1},width:actual.width,height:actual.height,format:actual.format,receipt,reportedUsage:usage,
+    ...(r.prompt.includes('Deterministic scene variant:')?{variety:{composition:'quiz-safe-v1' as const,character:r.prompt.match(/Friendly (adult woman|adult man|adult traveler),/u)?.[1]??'unknown',descriptor:r.prompt.split('Deterministic scene variant: ')[1]}}:{}),
     estimatedCostUSD:cost,completedEpisodeIds:[],createdAt:new Date(response.created*1000).toISOString()});
   a.requests[0].state='received';a.requests[0].sha256=actual.sha256;a.requests[0].rawFile=original;
   settleAllocation(o.budget.budget,key,cost===null?a.allocatedUnits:Math.ceil(cost*1e9),{providerRequests:1,usage,costKnown:cost!==null,receipt});await saveBudget(o.budget.file,o.budget.budget);

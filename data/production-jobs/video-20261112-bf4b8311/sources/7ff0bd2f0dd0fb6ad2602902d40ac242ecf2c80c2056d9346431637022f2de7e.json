@@ -1,0 +1,24 @@
+{
+  "source": {
+    "kind": "scenario",
+    "text": "Beginner Korean shopping at a convenience store: finding a snack, asking the price, requesting a bag, and paying by card.",
+    "defaultsVersion": "phase6-scenario-defaults-v1",
+    "brief": {
+      "scenario": "Beginner Korean shopping at a convenience store: finding a snack, asking the price, requesting a bag, and paying by card.",
+      "audience": "English-speaking adults learning practical beginner Korean for travel",
+      "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+      "backgroundAssetId": null,
+      "scenarioType": "convenience-store"
+    }
+  },
+  "identity": "7ff0bd2f0dd0fb6ad2602902d40ac242ecf2c80c2056d9346431637022f2de7e",
+  "seedBrief": {
+    "scenario": "Beginner Korean shopping at a convenience store: finding a snack, asking the price, requesting a bag, and paying by card.",
+    "audience": "English-speaking adults learning practical beginner Korean for travel",
+    "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+    "backgroundAssetId": "generated-convenience-store-65e1f2f0e192749f",
+    "scenarioType": "convenience-store"
+  },
+  "learningPlan": "Pending: derived together with questions in the existing generation call",
+  "providerCalls": 0
+}

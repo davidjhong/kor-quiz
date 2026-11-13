@@ -1,0 +1,366 @@
+{
+  "version": 1,
+  "brief": {
+    "scenario": "Beginner Korean shopping at a convenience store: finding a snack, asking the price, requesting a bag, and paying by card.",
+    "audience": "English-speaking adults learning practical beginner Korean for travel",
+    "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+    "backgroundAssetId": "generated-convenience-store-65e1f2f0e192749f",
+    "scenarioType": "convenience-store",
+    "context": "A beginner traveler shops at a convenience store, finds and checks snacks, requests a bag, and pays at checkout.",
+    "learningObjectives": [
+      "Ask a clerk where a specific snack is.",
+      "Ask the price of a snack you are holding.",
+      "Request exactly one shopping bag.",
+      "Tell the cashier you will pay by card.",
+      "Ask whether a snack is spicy.",
+      "Request a recommendation for a non-spicy snack."
+    ]
+  },
+  "provenance": {
+    "method": "openai-responses",
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "requestedModel": "gpt-6-luna",
+    "returnedModel": "gpt-6-luna",
+    "promptVersion": "pipeline-concise-generation-v1-scenario",
+    "schemaVersion": "pipeline-concise-education-v1-scenario",
+    "generatedAt": "2026-11-12T23:58:00.837Z",
+    "sourceHash": "cbce593426aa29249b5b89a9a29cac136cd9904e8e8334ce9fbfba9ae44c9279",
+    "requestId": "req_a109b296123e4dfaaf070197cb047441",
+    "responseId": "resp_011eea3828a141f9016af652874adc87d0a13aaa047b1dffa4",
+    "reportedUsage": {
+      "inputTokens": 2475,
+      "outputTokens": 5552,
+      "totalTokens": 8027,
+      "reasoningTokens": 3827,
+      "cachedInputTokens": 0
+    },
+    "estimatedCostUSD": 0.003085375,
+    "attempts": 1,
+    "pricingSource": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+    "pricingDate": "2026-11-10",
+    "generationId": "p6-fe9dfad80d55827b8167-generation"
+  },
+  "quiz": {
+    "videoId": "production-video-20261112-bf4b8311",
+    "episodeTitle": "Can you say it in Korean?",
+    "openingSubtitle": "Easy to hard",
+    "endingMode": "comment-challenge",
+    "minimumDurationSeconds": 65,
+    "backgroundAssetId": "generated-convenience-store-65e1f2f0e192749f",
+    "showRomanization": true,
+    "questions": [
+      {
+        "id": "production-video-20261112-bf4b8311-q1",
+        "difficulty": "easy",
+        "scenario": "Finding potato chips",
+        "prompt": "Ask where the potato chips are.",
+        "context": "You cannot find the potato chips and want to ask a clerk.",
+        "spokenPrompt": "You’re looking for potato chips. What could you ask the clerk?",
+        "choices": [
+          {
+            "hangul": "감자칩은 어디에 있어요?",
+            "romanization": "gamjachibeun eodie isseoyo?"
+          },
+          {
+            "hangul": "음료수는 어디에 있어요?",
+            "romanization": "eumnyosuneun eodie isseoyo?"
+          },
+          {
+            "hangul": "과자는 얼마예요?",
+            "romanization": "gwajaneun eolmayeyo?"
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "감자칩은 어디에 있어요? asks where the potato chips are; 은 marks 감자칩 as the topic.",
+        "reveal": {
+          "translation": "Where are the potato chips?",
+          "teachingPoint": "감자칩은 = potato chips (topic); 어디에 있어요? = where are they?"
+        }
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q2",
+        "difficulty": "easy",
+        "scenario": "Checking the price",
+        "prompt": "Ask how much this snack costs.",
+        "context": "You are holding a packaged snack and want to know its price.",
+        "spokenPrompt": "You have a snack in hand. How can you ask its price?",
+        "choices": [
+          {
+            "hangul": "이 과자는 얼마예요?",
+            "romanization": "i gwajaneun eolmayeyo?"
+          },
+          {
+            "hangul": "이 과자는 어디에 있어요?",
+            "romanization": "i gwajaneun eodie isseoyo?"
+          },
+          {
+            "hangul": "이 음료는 얼마예요?",
+            "romanization": "i eumnyoneun eolmayeyo?"
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "이 과자는 얼마예요? asks the price of this snack. 얼마예요? is a polite way to ask how much something costs.",
+        "reveal": {
+          "translation": "How much is this snack?",
+          "teachingPoint": "이 과자는 = this snack; 얼마예요? = how much is it?"
+        }
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q3",
+        "difficulty": "medium",
+        "scenario": "Requesting a bag",
+        "prompt": "Ask for exactly one shopping bag.",
+        "context": "You have several items and need one bag for them.",
+        "spokenPrompt": "You’ve picked your items and need one bag. What do you say?",
+        "choices": [
+          {
+            "hangul": "봉투 하나 주세요.",
+            "romanization": "beontu hana juseyo."
+          },
+          {
+            "hangul": "봉투 두 개 주세요.",
+            "romanization": "beontu du gae juseyo."
+          },
+          {
+            "hangul": "영수증 하나 주세요.",
+            "romanization": "yeongsujeung hana juseyo."
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "봉투 하나 주세요 means “One bag, please.” 하나 specifies one item in this polite request.",
+        "reveal": {
+          "translation": "One bag, please.",
+          "teachingPoint": "봉투 = bag; 하나 주세요 = one, please"
+        }
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q4",
+        "difficulty": "medium",
+        "scenario": "Paying at checkout",
+        "prompt": "Tell the cashier you will pay by card.",
+        "context": "You have your bank card ready and want to use it at checkout.",
+        "spokenPrompt": "The cashier is ready. How will you say you’re using your bank card?",
+        "choices": [
+          {
+            "hangul": "카드로 결제할게요.",
+            "romanization": "kadeuro gyeoljehalgeyo."
+          },
+          {
+            "hangul": "현금으로 결제할게요.",
+            "romanization": "hyeongeumeuro gyeoljehalgeyo."
+          },
+          {
+            "hangul": "봉투에 담아 주세요.",
+            "romanization": "beontue dama juseyo."
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "카드로 결제할게요 means “I’ll pay by card.” 로 marks the payment method, and 할게요 expresses intention.",
+        "reveal": {
+          "translation": "I’ll pay by card.",
+          "teachingPoint": "카드로 = by card; 결제할게요 = I’ll pay"
+        }
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q5",
+        "difficulty": "hard",
+        "scenario": "Choosing a snack",
+        "prompt": "Ask whether this snack is spicy.",
+        "context": "You want to check the taste of a snack before choosing it.",
+        "spokenPrompt": "Before choosing it, how can you check whether the snack is spicy?",
+        "choices": [
+          {
+            "hangul": "이 과자 매워요?",
+            "romanization": "i gwaja maewoyo?"
+          },
+          {
+            "hangul": "이 과자 달아요?",
+            "romanization": "i gwaja dalayo?"
+          },
+          {
+            "hangul": "이 과자 짜요?",
+            "romanization": "i gwaja jjayo?"
+          }
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "이 과자 매워요? asks whether this snack is spicy. 매워요 describes a spicy taste.",
+        "reveal": {
+          "translation": "Is this snack spicy?",
+          "teachingPoint": "이 과자 = this snack; 매워요? = is it spicy?"
+        }
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q6",
+        "difficulty": "hard",
+        "scenario": "Asking for a recommendation",
+        "prompt": "Ask the clerk to recommend a snack that is not spicy.",
+        "context": "You want a non-spicy snack and would like the clerk to suggest one.",
+        "spokenPrompt": "You want a mild snack. How would you ask the clerk for a suggestion?",
+        "choices": [
+          {
+            "hangul": "안 매운 과자 추천해 주세요.",
+            "romanization": "an maeun gwaja chucheonhae juseyo."
+          },
+          {
+            "hangul": "매운 과자 추천해 주세요.",
+            "romanization": "maeun gwaja chucheonhae juseyo."
+          },
+          {
+            "hangul": "안 단 과자 추천해 주세요.",
+            "romanization": "an dan gwaja chucheonhae juseyo."
+          }
+        ]
+      }
+    ]
+  },
+  "narration": {
+    "version": 1,
+    "profile": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Achird",
+        "ko-KR": "ko-KR-Chirp3-HD-Achird"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "segments": [
+      {
+        "id": "production-video-20261112-bf4b8311-hook",
+        "contentId": "production-video-20261112-bf4b8311",
+        "role": "hook",
+        "language": "en-US",
+        "text": "Can you say it in Korean?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q1-question",
+        "contentId": "production-video-20261112-bf4b8311-q1",
+        "role": "question",
+        "language": "en-US",
+        "text": "You’re looking for potato chips. What could you ask the clerk?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q1-answer",
+        "contentId": "production-video-20261112-bf4b8311-q1",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "감자칩은 어디에 있어요?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q1-explanation",
+        "contentId": "production-video-20261112-bf4b8311-q1",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "It asks where potato chips are; use it to locate an item."
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q2-question",
+        "contentId": "production-video-20261112-bf4b8311-q2",
+        "role": "question",
+        "language": "en-US",
+        "text": "You have a snack in hand. How can you ask its price?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q2-answer",
+        "contentId": "production-video-20261112-bf4b8311-q2",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "이 과자는 얼마예요?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q2-explanation",
+        "contentId": "production-video-20261112-bf4b8311-q2",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "It asks the snack’s price; use this polite question when buying."
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q3-question",
+        "contentId": "production-video-20261112-bf4b8311-q3",
+        "role": "question",
+        "language": "en-US",
+        "text": "You’ve picked your items and need one bag. What do you say?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q3-answer",
+        "contentId": "production-video-20261112-bf4b8311-q3",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "봉투 하나 주세요."
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q3-explanation",
+        "contentId": "production-video-20261112-bf4b8311-q3",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "It requests one bag; the number word makes the quantity clear."
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q4-question",
+        "contentId": "production-video-20261112-bf4b8311-q4",
+        "role": "question",
+        "language": "en-US",
+        "text": "The cashier is ready. How will you say you’re using your bank card?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q4-answer",
+        "contentId": "production-video-20261112-bf4b8311-q4",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "카드로 결제할게요."
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q4-explanation",
+        "contentId": "production-video-20261112-bf4b8311-q4",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "You’ll pay by card; the ending politely states your intention."
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q5-question",
+        "contentId": "production-video-20261112-bf4b8311-q5",
+        "role": "question",
+        "language": "en-US",
+        "text": "Before choosing it, how can you check whether the snack is spicy?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q5-answer",
+        "contentId": "production-video-20261112-bf4b8311-q5",
+        "role": "answer",
+        "language": "ko-KR",
+        "text": "이 과자 매워요?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q5-explanation",
+        "contentId": "production-video-20261112-bf4b8311-q5",
+        "role": "explanation",
+        "language": "en-US",
+        "text": "It asks whether the snack is spicy; this checks its flavor."
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q6-question",
+        "contentId": "production-video-20261112-bf4b8311-q6",
+        "role": "question",
+        "language": "en-US",
+        "text": "You want a mild snack. How would you ask the clerk for a suggestion?"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q6-comment",
+        "contentId": "production-video-20261112-bf4b8311-q6",
+        "role": "comment",
+        "language": "en-US",
+        "text": "What do you think? Comment your answer!"
+      },
+      {
+        "id": "production-video-20261112-bf4b8311-q6-follow",
+        "contentId": "production-video-20261112-bf4b8311-q6",
+        "role": "follow",
+        "language": "en-US",
+        "text": "Follow for more Korean!"
+      }
+    ]
+  }
+}

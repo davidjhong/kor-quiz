@@ -1,0 +1,510 @@
+{
+  "version": "local-audio-library-v1",
+  "entries": [
+    {
+      "id": "soft-lofi-keys",
+      "title": "Soft Lofi Keys",
+      "kind": "music",
+      "asset": {
+        "file": "audio/music/soft-lofi-keys-611ed6264145.wav",
+        "sha256": "0a1300f86aaae85d07e0876b764be5cb07c0aa90f87ad66ba393a252f781eb07",
+        "durationSeconds": 49.23077083333333,
+        "mixTrimDb": -2,
+        "mixVersion": "local-bed-trim-v1"
+      },
+      "frames": 2363077,
+      "sampleRate": 48000,
+      "channels": 2,
+      "bits": 16,
+      "tempoBPM": 78,
+      "bars": 16,
+      "key": "C major",
+      "mood": "gentle, warm keys",
+      "seed": "korean-quiz-local-library-v1",
+      "generationVersion": "local-instrumentals-v1",
+      "rawSha256": "1d3bac98403413036f739e2934b7c9904d795856e8ad58c1aa099bc624268b1d",
+      "synthesis": {
+        "version": "local-instrumentals-v1",
+        "id": "soft-lofi-keys",
+        "seed": "korean-quiz-local-library-v1",
+        "recipe": {
+          "title": "Soft Lofi Keys",
+          "kind": "music",
+          "bpm": 78,
+          "bars": 16,
+          "key": "C major",
+          "mood": "gentle, warm keys",
+          "trimDb": -2
+        },
+        "sampleRate": 48000,
+        "channels": 2,
+        "bits": 16,
+        "loop": "circular tails; periodic noise overlap, duration retained; music phase offset 0.75 beat"
+      },
+      "processing": {
+        "version": "loop-static-lufs-v1",
+        "targetLUFS": -20,
+        "toleranceLU": 0.6,
+        "ceilingDbTP": -3,
+        "meterToleranceDb": 0.05,
+        "rate": 48000,
+        "channels": 2,
+        "bits": 16,
+        "gainDb": -1.5300000000000011,
+        "before": {
+          "integratedLUFS": -18.47,
+          "truePeakDbTP": -2.85,
+          "loudnessRangeLU": 0.8,
+          "raw": {
+            "input_i": "-18.47",
+            "input_tp": "-2.85",
+            "input_lra": "0.80",
+            "input_thresh": "-28.47",
+            "output_i": "-15.96",
+            "output_tp": "-2.00",
+            "output_lra": "0.80",
+            "output_thresh": "-25.96",
+            "normalization_type": "dynamic",
+            "target_offset": "-0.04"
+          }
+        },
+        "seamStrategy": "circular note tails; duration-preserving periodic noise overlap; static gain; no temporal compression"
+      },
+      "runtime": {
+        "node": "v22.13.1",
+        "ffmpeg": "ffmpeg version n7.1 Copyright (c) 2000-2024 the FFmpeg developers",
+        "platform": "win32"
+      },
+      "measurements": {
+        "integratedLUFS": -19.99,
+        "truePeakDbTP": -4.38,
+        "loudnessRangeLU": 0.9
+      },
+      "seam": {
+        "wrapJump": 0.00177001953125,
+        "derivativeChange": 0.000244140625,
+        "nearbyMaxDerivative": 0.009185791015625,
+        "edgeEnergyDifferenceDb": -1.3721643454222296
+      },
+      "spectral": {
+        "method": "96-window Hann Welch, 2048 points, stereo mid",
+        "below200HzFraction": 0.7110201812553185,
+        "between200And4000HzFraction": 0.2889166623069943,
+        "lowPhoneBandFlag": false,
+        "limitation": "Energy heuristic only; no listening, speaker response, masking or quality assessment."
+      },
+      "provenance": {
+        "method": "repository-procedural-synthesis",
+        "sourceCode": "scripts/localMusicSynthesis.ts",
+        "samples": "none",
+        "paidServices": 0,
+        "rightsStatus": "Repository-generated procedural asset. No third-party samples or rights clearance claimed; copyright and Content ID risk are not guaranteed absent.",
+        "attribution": "No third-party attribution requirement identified; retain this generation provenance."
+      }
+    },
+    {
+      "id": "warm-pluck-groove",
+      "title": "Warm Pluck Groove",
+      "kind": "music",
+      "asset": {
+        "file": "audio/music/warm-pluck-groove-b992ec53fe43.wav",
+        "sha256": "f82108343d2cc97a3e04601d7e2defdb102adf3b16f225dc3b9169cdd1d50047",
+        "durationSeconds": 50,
+        "mixTrimDb": -3,
+        "mixVersion": "local-bed-trim-v1"
+      },
+      "frames": 2400000,
+      "sampleRate": 48000,
+      "channels": 2,
+      "bits": 16,
+      "tempoBPM": 96,
+      "bars": 20,
+      "key": "C major",
+      "mood": "light, friendly plucks",
+      "seed": "korean-quiz-local-library-v1",
+      "generationVersion": "local-instrumentals-v1",
+      "rawSha256": "1586b70140399f95f917079568320650812cc7e54d2f370584ac6c62aa60def7",
+      "synthesis": {
+        "version": "local-instrumentals-v1",
+        "id": "warm-pluck-groove",
+        "seed": "korean-quiz-local-library-v1",
+        "recipe": {
+          "title": "Warm Pluck Groove",
+          "kind": "music",
+          "bpm": 96,
+          "bars": 20,
+          "key": "C major",
+          "mood": "light, friendly plucks",
+          "trimDb": -3
+        },
+        "sampleRate": 48000,
+        "channels": 2,
+        "bits": 16,
+        "loop": "circular tails; periodic noise overlap, duration retained; music phase offset 0.75 beat"
+      },
+      "processing": {
+        "version": "loop-static-lufs-v1",
+        "targetLUFS": -20,
+        "toleranceLU": 0.6,
+        "ceilingDbTP": -3,
+        "meterToleranceDb": 0.05,
+        "rate": 48000,
+        "channels": 2,
+        "bits": 16,
+        "gainDb": -0.19999999999999973,
+        "before": {
+          "integratedLUFS": -20.04,
+          "truePeakDbTP": -2.85,
+          "loudnessRangeLU": 2.2,
+          "raw": {
+            "input_i": "-20.04",
+            "input_tp": "-2.85",
+            "input_lra": "2.20",
+            "input_thresh": "-30.06",
+            "output_i": "-16.07",
+            "output_tp": "-2.00",
+            "output_lra": "2.00",
+            "output_thresh": "-26.08",
+            "normalization_type": "dynamic",
+            "target_offset": "0.07"
+          }
+        },
+        "seamStrategy": "circular note tails; duration-preserving periodic noise overlap; static gain; no temporal compression"
+      },
+      "runtime": {
+        "node": "v22.13.1",
+        "ffmpeg": "ffmpeg version n7.1 Copyright (c) 2000-2024 the FFmpeg developers",
+        "platform": "win32"
+      },
+      "measurements": {
+        "integratedLUFS": -20.24,
+        "truePeakDbTP": -3.05,
+        "loudnessRangeLU": 2.2
+      },
+      "seam": {
+        "wrapJump": 0.005615234375,
+        "derivativeChange": 0.000152587890625,
+        "nearbyMaxDerivative": 0.007598876953125,
+        "edgeEnergyDifferenceDb": 0.6402762352343447
+      },
+      "spectral": {
+        "method": "96-window Hann Welch, 2048 points, stereo mid",
+        "below200HzFraction": 0.5056822926922308,
+        "between200And4000HzFraction": 0.4942414831671861,
+        "lowPhoneBandFlag": false,
+        "limitation": "Energy heuristic only; no listening, speaker response, masking or quality assessment."
+      },
+      "provenance": {
+        "method": "repository-procedural-synthesis",
+        "sourceCode": "scripts/localMusicSynthesis.ts",
+        "samples": "none",
+        "paidServices": 0,
+        "rightsStatus": "Repository-generated procedural asset. No third-party samples or rights clearance claimed; copyright and Content ID risk are not guaranteed absent.",
+        "attribution": "No third-party attribution requirement identified; retain this generation provenance."
+      }
+    },
+    {
+      "id": "airy-pad-drift",
+      "title": "Airy Pad Drift",
+      "kind": "music",
+      "asset": {
+        "file": "audio/music/airy-pad-drift-8481f52d4b68.wav",
+        "sha256": "98097906870ba2a629c3df9993e235bb0a0b7b2b0cd6ac4f1840d27d53c8ea68",
+        "durationSeconds": 54.857145833333334,
+        "mixTrimDb": -2.5,
+        "mixVersion": "local-bed-trim-v1"
+      },
+      "frames": 2633143,
+      "sampleRate": 48000,
+      "channels": 2,
+      "bits": 16,
+      "tempoBPM": 70,
+      "bars": 16,
+      "key": "C major",
+      "mood": "spacious, calm pads",
+      "seed": "korean-quiz-local-library-v1",
+      "generationVersion": "local-instrumentals-v1",
+      "rawSha256": "554f1e9dd21ee0b1b99947522764c8f1dcc64b644b66f949fd774661f88c5f37",
+      "synthesis": {
+        "version": "local-instrumentals-v1",
+        "id": "airy-pad-drift",
+        "seed": "korean-quiz-local-library-v1",
+        "recipe": {
+          "title": "Airy Pad Drift",
+          "kind": "music",
+          "bpm": 70,
+          "bars": 16,
+          "key": "C major",
+          "mood": "spacious, calm pads",
+          "trimDb": -2.5
+        },
+        "sampleRate": 48000,
+        "channels": 2,
+        "bits": 16,
+        "loop": "circular tails; periodic noise overlap, duration retained; music phase offset 0.75 beat"
+      },
+      "processing": {
+        "version": "loop-static-lufs-v1",
+        "targetLUFS": -20,
+        "toleranceLU": 0.6,
+        "ceilingDbTP": -3,
+        "meterToleranceDb": 0.05,
+        "rate": 48000,
+        "channels": 2,
+        "bits": 16,
+        "gainDb": -6.630000000000001,
+        "before": {
+          "integratedLUFS": -13.37,
+          "truePeakDbTP": -2.85,
+          "loudnessRangeLU": 1,
+          "raw": {
+            "input_i": "-13.37",
+            "input_tp": "-2.85",
+            "input_lra": "1.00",
+            "input_thresh": "-23.37",
+            "output_i": "-16.10",
+            "output_tp": "-5.77",
+            "output_lra": "0.90",
+            "output_thresh": "-26.10",
+            "normalization_type": "dynamic",
+            "target_offset": "0.10"
+          }
+        },
+        "seamStrategy": "circular note tails; duration-preserving periodic noise overlap; static gain; no temporal compression"
+      },
+      "runtime": {
+        "node": "v22.13.1",
+        "ffmpeg": "ffmpeg version n7.1 Copyright (c) 2000-2024 the FFmpeg developers",
+        "platform": "win32"
+      },
+      "measurements": {
+        "integratedLUFS": -20.01,
+        "truePeakDbTP": -9.48,
+        "loudnessRangeLU": 1
+      },
+      "seam": {
+        "wrapJump": 0.000946044921875,
+        "derivativeChange": 0.001068115234375,
+        "nearbyMaxDerivative": 0.021453857421875,
+        "edgeEnergyDifferenceDb": -0.3546655712213137
+      },
+      "spectral": {
+        "method": "96-window Hann Welch, 2048 points, stereo mid",
+        "below200HzFraction": 0.17131834615874775,
+        "between200And4000HzFraction": 0.8286816473218944,
+        "lowPhoneBandFlag": false,
+        "limitation": "Energy heuristic only; no listening, speaker response, masking or quality assessment."
+      },
+      "provenance": {
+        "method": "repository-procedural-synthesis",
+        "sourceCode": "scripts/localMusicSynthesis.ts",
+        "samples": "none",
+        "paidServices": 0,
+        "rightsStatus": "Repository-generated procedural asset. No third-party samples or rights clearance claimed; copyright and Content ID risk are not guaranteed absent.",
+        "attribution": "No third-party attribution requirement identified; retain this generation provenance."
+      }
+    },
+    {
+      "id": "soft-room-tone",
+      "title": "Soft Room Tone",
+      "kind": "ambience",
+      "asset": {
+        "file": "audio/music/soft-room-tone-99c949555e65.wav",
+        "sha256": "c2960daef46488a7e8e1ae078238b39dcd03172185e56e2376797c25020e6957",
+        "durationSeconds": 48,
+        "mixTrimDb": -7,
+        "mixVersion": "local-bed-trim-v1"
+      },
+      "frames": 2304000,
+      "sampleRate": 48000,
+      "channels": 2,
+      "bits": 16,
+      "tempoBPM": null,
+      "bars": null,
+      "key": null,
+      "mood": "synthetic soft ventilation texture",
+      "seed": "korean-quiz-local-library-v1",
+      "generationVersion": "local-instrumentals-v1",
+      "rawSha256": "45781e0884c1cbe303e6cb690aa233c5cfaa708508f7d0a2e88d4fcdc5608a0e",
+      "synthesis": {
+        "version": "local-instrumentals-v1",
+        "id": "soft-room-tone",
+        "seed": "korean-quiz-local-library-v1",
+        "recipe": {
+          "title": "Soft Room Tone",
+          "kind": "ambience",
+          "bpm": null,
+          "bars": null,
+          "key": null,
+          "mood": "synthetic soft ventilation texture",
+          "trimDb": -7
+        },
+        "sampleRate": 48000,
+        "channels": 2,
+        "bits": 16,
+        "loop": "circular tails; periodic noise overlap, duration retained; music phase offset 0.75 beat"
+      },
+      "processing": {
+        "version": "loop-static-lufs-v1",
+        "targetLUFS": -20,
+        "toleranceLU": 0.6,
+        "ceilingDbTP": -3,
+        "meterToleranceDb": 0.05,
+        "rate": 48000,
+        "channels": 2,
+        "bits": 16,
+        "gainDb": -4.66,
+        "before": {
+          "integratedLUFS": -15.34,
+          "truePeakDbTP": -2.68,
+          "loudnessRangeLU": 0.1,
+          "raw": {
+            "input_i": "-15.34",
+            "input_tp": "-2.68",
+            "input_lra": "0.10",
+            "input_thresh": "-25.34",
+            "output_i": "-16.02",
+            "output_tp": "-3.38",
+            "output_lra": "0.10",
+            "output_thresh": "-26.02",
+            "normalization_type": "dynamic",
+            "target_offset": "0.02"
+          }
+        },
+        "seamStrategy": "circular note tails; duration-preserving periodic noise overlap; static gain; no temporal compression"
+      },
+      "runtime": {
+        "node": "v22.13.1",
+        "ffmpeg": "ffmpeg version n7.1 Copyright (c) 2000-2024 the FFmpeg developers",
+        "platform": "win32"
+      },
+      "measurements": {
+        "integratedLUFS": -20,
+        "truePeakDbTP": -7.34,
+        "loudnessRangeLU": 0.2
+      },
+      "seam": {
+        "wrapJump": 0.0313720703125,
+        "derivativeChange": 0.108489990234375,
+        "nearbyMaxDerivative": 0.077239990234375,
+        "edgeEnergyDifferenceDb": -2.590882412411611
+      },
+      "spectral": {
+        "method": "96-window Hann Welch, 2048 points, stereo mid",
+        "below200HzFraction": 0.6097254291763583,
+        "between200And4000HzFraction": 0.27927569472893016,
+        "lowPhoneBandFlag": false,
+        "limitation": "Energy heuristic only; no listening, speaker response, masking or quality assessment."
+      },
+      "provenance": {
+        "method": "repository-procedural-synthesis",
+        "sourceCode": "scripts/localMusicSynthesis.ts",
+        "samples": "none",
+        "paidServices": 0,
+        "rightsStatus": "Repository-generated procedural asset. No third-party samples or rights clearance claimed; copyright and Content ID risk are not guaranteed absent.",
+        "attribution": "No third-party attribution requirement identified; retain this generation provenance."
+      }
+    },
+    {
+      "id": "gentle-rain",
+      "title": "Gentle Rain",
+      "kind": "ambience",
+      "asset": {
+        "file": "audio/music/gentle-rain-a39c30f6b957.wav",
+        "sha256": "4abd9581c80e5918d65cc1c3795e5f601758efb6040d691ce0d6e1bafe44b0a9",
+        "durationSeconds": 48,
+        "mixTrimDb": -9,
+        "mixVersion": "local-bed-trim-v1"
+      },
+      "frames": 2304000,
+      "sampleRate": 48000,
+      "channels": 2,
+      "bits": 16,
+      "tempoBPM": null,
+      "bars": null,
+      "key": null,
+      "mood": "synthetic rain-like texture",
+      "seed": "korean-quiz-local-library-v1",
+      "generationVersion": "local-instrumentals-v1",
+      "rawSha256": "efaba2e41cad4f230d0b45915e7c6e5d1fc0cdec060bdf45236b690830695517",
+      "synthesis": {
+        "version": "local-instrumentals-v1",
+        "id": "gentle-rain",
+        "seed": "korean-quiz-local-library-v1",
+        "recipe": {
+          "title": "Gentle Rain",
+          "kind": "ambience",
+          "bpm": null,
+          "bars": null,
+          "key": null,
+          "mood": "synthetic rain-like texture",
+          "trimDb": -9
+        },
+        "sampleRate": 48000,
+        "channels": 2,
+        "bits": 16,
+        "loop": "circular tails; periodic noise overlap, duration retained; music phase offset 0.75 beat"
+      },
+      "processing": {
+        "version": "loop-static-lufs-v1",
+        "targetLUFS": -20,
+        "toleranceLU": 0.6,
+        "ceilingDbTP": -3,
+        "meterToleranceDb": 0.05,
+        "rate": 48000,
+        "channels": 2,
+        "bits": 16,
+        "gainDb": -11.1,
+        "before": {
+          "integratedLUFS": -8.9,
+          "truePeakDbTP": -2.72,
+          "loudnessRangeLU": 0,
+          "raw": {
+            "input_i": "-8.90",
+            "input_tp": "-2.72",
+            "input_lra": "0.00",
+            "input_thresh": "-18.90",
+            "output_i": "-16.02",
+            "output_tp": "-9.86",
+            "output_lra": "0.10",
+            "output_thresh": "-26.02",
+            "normalization_type": "dynamic",
+            "target_offset": "0.02"
+          }
+        },
+        "seamStrategy": "circular note tails; duration-preserving periodic noise overlap; static gain; no temporal compression"
+      },
+      "runtime": {
+        "node": "v22.13.1",
+        "ffmpeg": "ffmpeg version n7.1 Copyright (c) 2000-2024 the FFmpeg developers",
+        "platform": "win32"
+      },
+      "measurements": {
+        "integratedLUFS": -20,
+        "truePeakDbTP": -13.82,
+        "loudnessRangeLU": 0
+      },
+      "seam": {
+        "wrapJump": 0.019317626953125,
+        "derivativeChange": 0.094757080078125,
+        "nearbyMaxDerivative": 0.10321044921875,
+        "edgeEnergyDifferenceDb": 0.4788837562266434
+      },
+      "spectral": {
+        "method": "96-window Hann Welch, 2048 points, stereo mid",
+        "below200HzFraction": 0.04017804753363895,
+        "between200And4000HzFraction": 0.6148848727346452,
+        "lowPhoneBandFlag": false,
+        "limitation": "Energy heuristic only; no listening, speaker response, masking or quality assessment."
+      },
+      "provenance": {
+        "method": "repository-procedural-synthesis",
+        "sourceCode": "scripts/localMusicSynthesis.ts",
+        "samples": "none",
+        "paidServices": 0,
+        "rightsStatus": "Repository-generated procedural asset. No third-party samples or rights clearance claimed; copyright and Content ID risk are not guaranteed absent.",
+        "attribution": "No third-party attribution requirement identified; retain this generation provenance."
+      }
+    }
+  ]
+}

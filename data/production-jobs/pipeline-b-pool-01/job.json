@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "jobId": "pipeline-b-pool-01",
+  "config": {
+    "source": {
+      "kind": "scenario",
+      "text": "Beginner Korean ordering dinner at a restaurant",
+      "defaultsVersion": "phase6-scenario-defaults-v1",
+      "brief": {
+        "scenario": "Beginner Korean ordering dinner at a restaurant",
+        "audience": "English-speaking adults learning practical beginner Korean for travel",
+        "level": "Beginner: two easy, two medium and two hard questions, with the sixth as the unanswered comment bonus",
+        "backgroundAssetId": null,
+        "scenarioType": "restaurant"
+      }
+    },
+    "output": "C:\\Users\\david\\Documents\\kor-vids\\out\\pipeline-b-pool-01.mp4",
+    "reviewMode": "automated",
+    "voiceFile": "kore",
+    "presentationFile": "content/production/default.json",
+    "noMusic": false,
+    "model": "gpt-6-luna",
+    "maxOutputTokens": 12000,
+    "backgroundOptions": {
+      "mode": "pool",
+      "model": "gpt-image-2.6-flare",
+      "quality": "medium",
+      "reuseLimit": 5,
+      "character": "adult traveler"
+    },
+    "varietyOptions": {
+      "palette": "auto",
+      "motion": "auto",
+      "music": "auto",
+      "seed": "b-pool-audition"
+    },
+    "characterExplicit": false,
+    "productionPreset": "concise-v1",
+    "contentPolicy": "concise-explanations-v1",
+    "variety": {
+      "version": "variety-v1",
+      "seed": "b-pool-audition",
+      "requested": {
+        "palette": "auto",
+        "motion": "auto",
+        "music": "auto",
+        "seed": "b-pool-audition"
+      },
+      "palette": {
+        "candidates": [
+          "blush-plum",
+          "cream-navy",
+          "midnight-gold",
+          "sage-coral"
+        ],
+        "excluded": [
+          "cream-navy"
+        ],
+        "selected": "midnight-gold",
+        "historyHash": "4037aa4d0474b1c1d7f0885f39ce7874d5b24d737840eee7927216d0669a8a50",
+        "recentChoices": [
+          "cream-navy",
+          "cream-navy",
+          "cream-navy"
+        ],
+        "reason": "seeded after recent exclusion"
+      },
+      "motion": {
+        "candidates": [
+          "slow-pan-left",
+          "slow-pan-right",
+          "slow-pull",
+          "slow-push"
+        ],
+        "excluded": [],
+        "selected": "slow-push",
+        "historyHash": "0f739d4b3b1e45694201d41c1d000c324426444dd7566c6a140176dd6d0ed93c",
+        "recentChoices": [],
+        "reason": "seeded after recent exclusion"
+      },
+      "music": {
+        "candidates": [
+          "subtle-bass"
+        ],
+        "excluded": [],
+        "selected": "subtle-bass",
+        "historyHash": "f3a0cb382114a6c8d81fb21d3abb13fad429bde0c2d7098031a727b6d8c7215f",
+        "recentChoices": [
+          "subtle-bass",
+          "subtle-bass",
+          "subtle-bass"
+        ],
+        "reason": "one-item pool necessarily repeats"
+      },
+      "background": {
+        "candidates": [
+          "generated-restaurant-379962e8db662f67",
+          "generated-restaurant-d5fea9be8c6e28a8"
+        ],
+        "excluded": [
+          "generated-restaurant-d5fea9be8c6e28a8"
+        ],
+        "selected": "generated-restaurant-379962e8db662f67",
+        "historyHash": "7fbb63a61afa676889c78ff8e2cab81c487a3646642a7acf42480b16d93f11f4",
+        "recentChoices": [
+          "generated-restaurant-d5fea9be8c6e28a8"
+        ],
+        "reason": "seeded after recent exclusion",
+        "action": "reuse",
+        "eligibleCount": 2,
+        "target": 3
+      },
+      "checksums": {
+        "palette": "ae11ae256a0c14e5e37769f9dec32f88945d815274231cd73eb9dbf57a905bca",
+        "motion": "c531ce177aa7e7fb88ea74126eed13a9173603b42cbacbdf80b65717664591c8",
+        "music": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+        "background": "a9405bcdcc310ef167f3918ff66282cc308c4b5cc59c61303e3a0933e0b3aa7b",
+        "request": null
+      },
+      "visual": {
+        "version": "visual-variety-v1",
+        "palette": "midnight-gold",
+        "motion": "slow-push",
+        "width": 1024,
+        "height": 1536
+      }
+    },
+    "backgroundBinding": {
+      "assetId": "generated-restaurant-379962e8db662f67"
+    },
+    "musicTrackId": "subtle-bass"
+  },
+  "state": "planned",
+  "stages": {
+    "generation": {
+      "status": "planned",
+      "inputHash": "f133141433cffe2be715e42ad87e6f5a7e9e6330a619052708f1f72d4be4bbff",
+      "outputs": [],
+      "details": {}
+    },
+    "import": {
+      "status": "planned",
+      "inputHash": "f133141433cffe2be715e42ad87e6f5a7e9e6330a619052708f1f72d4be4bbff",
+      "outputs": [],
+      "details": {}
+    },
+    "validation": {
+      "status": "planned",
+      "inputHash": "f133141433cffe2be715e42ad87e6f5a7e9e6330a619052708f1f72d4be4bbff",
+      "outputs": [],
+      "details": {}
+    },
+    "review": {
+      "status": "planned",
+      "inputHash": "f133141433cffe2be715e42ad87e6f5a7e9e6330a619052708f1f72d4be4bbff",
+      "outputs": [],
+      "details": {
+        "wouldRun": true
+      }
+    },
+    "audio": {
+      "status": "planned",
+      "inputHash": "f133141433cffe2be715e42ad87e6f5a7e9e6330a619052708f1f72d4be4bbff",
+      "outputs": [],
+      "details": {}
+    },
+    "alignment": {
+      "status": "planned",
+      "inputHash": "f133141433cffe2be715e42ad87e6f5a7e9e6330a619052708f1f72d4be4bbff",
+      "outputs": [],
+      "details": {}
+    },
+    "captions": {
+      "status": "planned",
+      "inputHash": "f133141433cffe2be715e42ad87e6f5a7e9e6330a619052708f1f72d4be4bbff",
+      "outputs": [],
+      "details": {}
+    },
+    "render": {
+      "status": "planned",
+      "inputHash": "f133141433cffe2be715e42ad87e6f5a7e9e6330a619052708f1f72d4be4bbff",
+      "outputs": [],
+      "details": {}
+    },
+    "verification": {
+      "status": "planned",
+      "inputHash": "f133141433cffe2be715e42ad87e6f5a7e9e6330a619052708f1f72d4be4bbff",
+      "outputs": [],
+      "details": {}
+    }
+  },
+  "history": [],
+  "revisions": [],
+  "paidOptIn": false,
+  "createdAt": "2026-11-12T23:01:43.891Z",
+  "updatedAt": "2026-11-12T23:01:48.163Z",
+  "sourceIdentity": "f133141433cffe2be715e42ad87e6f5a7e9e6330a619052708f1f72d4be4bbff",
+  "configuration": {
+    "voice": {
+      "provider": "google-cloud-tts",
+      "model": "chirp3-hd",
+      "voices": {
+        "en-US": "en-US-Chirp3-HD-Kore",
+        "ko-KR": "ko-KR-Chirp3-HD-Kore"
+      },
+      "outputFormat": "LINEAR16",
+      "sampleRateHertz": 24000,
+      "speakingRate": 1
+    },
+    "presentation": {
+      "compactSpacing": true,
+      "synchronizedCaptions": true,
+      "backgroundAudio": true,
+      "musicGain": 1.25,
+      "captionStyle": "phrases",
+      "bookendStyle": "display"
+    },
+    "alignment": {
+      "version": "phrase-alignment-v1",
+      "engine": "stable-ts",
+      "engineVersion": "2.19.1",
+      "whisperVersion": "20250625",
+      "torchVersion": "2.8.0+cpu",
+      "model": "base",
+      "modelSha256": "ed3a0b6b1c0edf879ad9b11b1af5a0e6ab5db9205f891f668f8b0e6c6326e34e",
+      "device": "cpu",
+      "sampleRate": 16000,
+      "threads": 4,
+      "fp16": false,
+      "regroup": false,
+      "suppressSilence": true,
+      "vad": false,
+      "fastMode": false
+    },
+    "grouping": {
+      "version": "automatic-phrases-v4-acoustic-groups",
+      "englishWords": 4,
+      "maximumWords": 5,
+      "maximumCharacters": 36,
+      "koreanWholeUtterance": true
+    },
+    "audioProcessing": "loudnorm-I-16-TP-1.5-LRA-11-mono-24000-v1",
+    "productionPreset": {
+      "id": "concise-v1",
+      "timing": {
+        "fps": 30,
+        "openingMinimum": 90,
+        "readingMinimum": 90,
+        "countdown": 90,
+        "revealMinimum": 0,
+        "settlePause": 6,
+        "afterHook": 9,
+        "afterQuestion": 9,
+        "answerGap": 9,
+        "afterExplanation": 15,
+        "transition": 10,
+        "finalFade": 12,
+        "commentHold": 120,
+        "afterComment": 45,
+        "afterFollow": 30,
+        "countdownHard": 120
+      },
+      "music": {
+        "idle": 0.45,
+        "thinking": 0.3,
+        "speech": 0.2
+      },
+      "finalMix": {
+        "version": "final-mix-concise-v1",
+        "integratedLUFS": -14,
+        "truePeakDbTP": -1.5,
+        "loudnessRangeLU": 11,
+        "integratedToleranceLU": 0.5,
+        "truePeakMeterToleranceDb": 0.1,
+        "encoderHeadroomDb": 0.3
+      },
+      "editorial": "concise-explanations-v1",
+      "advisoryDurationSeconds": [
+        75,
+        85
+      ],
+      "minimumDurationSeconds": 65
+    }
+  },
+  "narration": null,
+  "assets": {
+    "background": {
+      "id": "generated-restaurant-379962e8db662f67",
+      "file": "backgrounds/generated-restaurant-379962e8db662f67.png",
+      "sha256": "a9405bcdcc310ef167f3918ff66282cc308c4b5cc59c61303e3a0933e0b3aa7b",
+      "scenarioType": "restaurant",
+      "selection": "developer-selected",
+      "scenarioLabel": "AT A KOREAN RESTAURANT",
+      "framing": {
+        "scale": 1.02,
+        "origin": "50% 0%"
+      }
+    },
+    "music": {
+      "file": "audio/music/subtle-bass-loop.wav",
+      "sha256": "f1f66a863175480d5216286c6b7a13949044df37280515118cb75e7618572a40",
+      "durationSeconds": 60.390375
+    }
+  }
+}

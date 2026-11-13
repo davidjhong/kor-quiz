@@ -19,6 +19,8 @@ export const inspectVideoJob=async(id:string,root:string,deps:ProductionDependen
   const folder=join(root,'data/production-jobs',id);await access(join(folder,'job.json')).catch(()=>{throw new Error(`Unknown production job ${id}; no job created`);});
   const release=await acquireJobLock(folder,overrides.recoverLock);
   try{const job=await readJob(join(folder,'job.json')),config=structuredClone(job.config);
+    if(config.variety&&(overrides.musicTrackId||overrides.noMusic!==undefined))throw new Error('Resume keeps persisted variety/music; use a new job');
+    if(overrides.varietyOptions)throw new Error('Resume keeps persisted variety; use a new job');
     if(overrides.backgroundOptions)throw new Error('Resume keeps its bound background/settings; use a new job for explicit image changes');
     if(overrides.output&&resolve(root,overrides.output)!==config.output)throw new Error('Resume keeps the original output path');
     if(overrides.maxCostUSD!==undefined&&job.maxCostUSD!==undefined&&overrides.maxCostUSD!==job.maxCostUSD)throw new Error(`Stored total cap $${job.maxCostUSD}; requested $${overrides.maxCostUSD}. Existing authorization cannot be changed.`);
@@ -34,7 +36,7 @@ export const inspectVideoJob=async(id:string,root:string,deps:ProductionDependen
       const timeline=getNarratedTimeline(narration,plan.bundle.quiz,plan.settings.preset.timing),bonus=timeline.questions.at(-1)!;timing=timingReport(timeline,plan.settings.preset.advisoryDurationSeconds);
       const phrases=await productionPhrases(narration.clips,timeline.audio,Object.fromEntries(timeline.questions.map(q=>[q.id,q.revealStart])),bonus.id,root);
       const cues=plan.settings.presentation.bookendStyle==='display'?await loadDisplayCues(narration.clips,timeline.audio,root):undefined;
-      const props=productionPropsSchema.parse({...(config.productionPreset?{productionPreset:config.productionPreset}:{}),...(config.countdownSeconds?{countdownSeconds:config.countdownSeconds}:{}),
+      const props=productionPropsSchema.parse({...(config.variety?{variety:config.variety.visual,...(config.variety.audio?.ambience?{ambience:config.variety.audio.ambience}:{})}:{}),...(config.productionPreset?{productionPreset:config.productionPreset}:{}),...(config.countdownSeconds?{countdownSeconds:config.countdownSeconds}:{}),
         quiz:plan.bundle.draft.quiz,narration,presentation:plan.settings.presentation,music:plan.music,phraseCaptions:phrases,displayCues:cues,
         ...(plan.background?.id.startsWith('generated-')?{background:plan.background}:{})});
       const currentHash=sha256(canonical({props,code:await (deps.codeHash??(()=>codeFingerprint(root)))(),grouping:GROUPING_CONFIG}));

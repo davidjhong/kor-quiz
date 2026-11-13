@@ -1,9 +1,10 @@
 # Korean quiz videos
 
-The separate [Pipeline Checkpoint A guide](docs/pipeline-checkpoint-a.md) documents
-the new `npm.cmd run video` entry point, safe authorization, concise new-job preset
-and cached mix audition. Existing `produce` commands below remain supported with
-legacy defaults; this checkpoint does not implement B/C or publishing.
+The [Pipeline Checkpoint C guide](docs/pipeline-checkpoint-c.md) documents the
+current `npm.cmd run video` interface, approved stronger mix, local music library,
+versioned motion and the fresh convenience-store command. [B](docs/pipeline-checkpoint-b.md)
+and [A](docs/pipeline-checkpoint-a.md) record earlier checkpoints. Existing jobs
+and low-level `produce` defaults stay pinned. Publishing is not implemented.
 
 Create a local six-question Korean quiz from a plain-language scenario. `produce`
 plans, generates content and objectives, validates, reviews automatically, prepares
